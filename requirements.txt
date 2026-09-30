@@ -1,0 +1,6 @@
+pandas
+requests
+LightGBM
+scikit-learn
+matplotlib
+joblib
