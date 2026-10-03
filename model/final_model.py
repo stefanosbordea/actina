@@ -36,3 +36,8 @@ test_mae = mean_absolute_error(test_y,test_pred)
 print(f"MAE test: {test_mae:.2f}")
 
 joblib.dump(final_model,"model/lgbm_radiation.pkl")
+
+results = pd.DataFrame({ "actual":test_y, "predicted":test_pred,"baseline":test_x["shortwave_radiation"]},index=test_x.index)
+print(results.head())
+
+results.to_csv("eval/test_predictions.csv")

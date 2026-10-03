@@ -35,3 +35,8 @@ cv_pred =np.clip(model.predict(cv_x),0,None)
 
 cv_mae = mean_absolute_error(cv_y,cv_pred)
 print(f"MAE CV: {cv_mae:.2f}")
+
+results = pd.DataFrame({ "actual":cv_y, "predicted":cv_pred,"baseline":cv_x["shortwave_radiation"]},index=cv_x.index)
+print(results.head())
+
+results.to_csv("eval/cv_predictions.csv")
