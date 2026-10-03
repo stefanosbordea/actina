@@ -1,0 +1,12 @@
+import pandas as pd 
+
+df = pd.read_csv("data/paphos_weather_data.csv", index_col=0, parse_dates=True)
+
+df["radiation_yesterday"] = df["shortwave_radiation"].shift(24) # radiation yesterday
+df["target"] = df["shortwave_radiation"].shift(-24)#radiation levels tommorow
+df["hour"] = df.index.hour
+df["month"] = df.index.month
+df = df.dropna()
+
+print(df.head())
+print(df.tail())
