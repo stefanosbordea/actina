@@ -2,7 +2,7 @@
 
 **4 October 2026. Research results. No model replacement.** Stefanos's original `model/`, `data/` and `eval/` remain unchanged. The website still presents the supplied demonstration. These experiments are separate and retain unsuccessful candidates.
 
-**Version note:** Stefanos announced another v2 around 15:00 on 4 October and will send it for F1 evaluation. The retained experiments use the earlier supplied files. They do not assess that newly announced model. Its unchanged prediction evaluation is the immediate priority.
+**Version note:** The experiments below use the earlier supplied files. Stefanos's new `nwp-features` v2 was separately evaluated on 4 October across all 3,566 validation hours. F1 is **88.364%**, versus **85.329%** for the raw forecast in his new CSV and **80.066%** for the original model. The earlier pinned ECMWF day2 control is a different forecast and scores **90.084%**. [Full validation comparison](../handoff/v2-validation-2026-10-04/README.md). No source substitution or model replacement was made.
 
 ## What improved
 

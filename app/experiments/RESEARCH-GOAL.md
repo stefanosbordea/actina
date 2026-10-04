@@ -31,9 +31,11 @@ Selective prediction, ensemble disagreement, noisy-label learning and safe polic
 
 ## Immediate team priority
 
-Stefanos announced a newly completed v2 on 4 October around 15:00 and said he would send it for F1 evaluation. This is newer than the 3 October prediction CSVs used in the retained experiments. At the subsequent Gmail and branch check the new package was not yet present. Do not call any existing experiment an evaluation of that new v2.
+Stefanos supplied the new validation file on `nwp-features` at commit `85097a560769ad8a1459ce55f0b3a4c301202405` on 4 October. Its unchanged predictions have now been evaluated on all 3,566 shared validation hours. [Results and reproduction](../handoff/v2-validation-2026-10-04/README.md).
 
-The immediate task is to receive and identify the new v2 files, evaluate its unchanged predictions on exact matched hours, and report precision, recall and F1 against the prior supplied model and persistence. Preserve its model ownership and code. Separate forecasting experiments overlap with modelling and remain secondary to this team handoff. No new alternative-policy implementation is running. The pooled-event review below is a proposal only.
+V2 precision / recall / F1 are 91.289% / 85.621% / 88.364%. It improves all three against the original model, yesterday and the raw forecast supplied in its own CSV. That raw forecast scores 85.329% F1. The earlier pinned ECMWF day2 archive is a different input and scores 90.084%. V2 does not clear that stronger comparison. The saved validation-selected 008 correction scores 90.635% F1, with its selection caveat retained. These raw sources must not be conflated. The results and distinction were sent to Stefanos at 15:22.
+
+The immediate next modelling decision belongs to Stefanos: reconcile his unpinned day1 input with the earlier pinned day2 comparison before interpreting his approximately 0.90 gate. His final-model run and test file were conditional on validation. Do not execute his training or silently substitute a forecast source. Evaluate any new supplied file with explicit identity and then support the scheduler comparison. Separate forecasting experiments remain secondary. No new alternative-policy implementation is running. The pooled-event review below is a proposal only.
 
 ## Next open mechanism question
 

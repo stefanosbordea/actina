@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/tools",
+    "-p",
+    "test_compare_prediction_versions.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.30224537499998405,
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "file_sha256": {
+    "app/tools/compare_prediction_versions.py": "68e2d4114c8cb542deb4521d382416090ccbee582dc56f94b5768db653351139",
+    "app/tools/test_compare_prediction_versions.py": "08bcf54260ccbaa4ab5da5334418c6b62e7978525675fc3fa40a8defb6b47c3a",
+    "app/tools/benchmark_predictions.py": "2c9a0069582233d9fa8b1a9ea800bc0ad02b5839a041aca6ff76faeef0bf0bfd"
+  }
+}

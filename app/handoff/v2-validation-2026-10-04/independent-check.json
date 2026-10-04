@@ -1,0 +1,438 @@
+{
+  "status": "PASS_WITH_DISTINCT_RAW_FORECASTS",
+  "revision": "85097a560769ad8a1459ce55f0b3a4c301202405",
+  "scope": "Portable independent weather-reference validation check. Reads retained inputs only, without Git, network, training or comparator imports.",
+  "first_origin": "2025-12-04 19:00:00",
+  "last_origin": "2026-05-02 08:00:00",
+  "first_target": "2025-12-05 19:00:00",
+  "last_target": "2026-05-03 08:00:00",
+  "threshold": "strictly greater than600 W/m2",
+  "checks": {
+    "same_3566_original_validation_origins": true,
+    "hourly_validation_origins": true,
+    "same_original_actuals_and_persistence": true,
+    "exact_plus24h_target_identity": true,
+    "same_saved_target_reference": true,
+    "archived_raw_event_identity": true,
+    "frozen008_selected_arm": true,
+    "frozen008_unchanged_cutoffs": true,
+    "frozen008_decisions_reconstructed": true
+  },
+  "methods": {
+    "stefanos_v2": {
+      "hours": 3566,
+      "tp": 262,
+      "fp": 25,
+      "fn": 44,
+      "tn": 3235,
+      "positive_calls": 287,
+      "precision": {
+        "numerator": 262,
+        "denominator": 287,
+        "value": 0.9128919860627178
+      },
+      "recall": {
+        "numerator": 262,
+        "denominator": 306,
+        "value": 0.8562091503267973
+      },
+      "f1": {
+        "numerator": 524,
+        "denominator": 593,
+        "value": 0.8836424957841484
+      },
+      "mae_w_m2": 18.69734271860889,
+      "mae_w_m2_decimal": "18.697342718608888775249579360628154795288839035334"
+    },
+    "supplied_raw_day1": {
+      "hours": 3566,
+      "tp": 253,
+      "fp": 34,
+      "fn": 53,
+      "tn": 3226,
+      "positive_calls": 287,
+      "precision": {
+        "numerator": 253,
+        "denominator": 287,
+        "value": 0.8815331010452961
+      },
+      "recall": {
+        "numerator": 253,
+        "denominator": 306,
+        "value": 0.826797385620915
+      },
+      "f1": {
+        "numerator": 506,
+        "denominator": 593,
+        "value": 0.8532883642495784
+      },
+      "mae_w_m2": 21.55804823331464,
+      "mae_w_m2_decimal": "21.558048233314638250140213123948401570386988222098"
+    },
+    "yesterday": {
+      "hours": 3566,
+      "tp": 244,
+      "fp": 62,
+      "fn": 62,
+      "tn": 3198,
+      "positive_calls": 306,
+      "precision": {
+        "numerator": 244,
+        "denominator": 306,
+        "value": 0.7973856209150327
+      },
+      "recall": {
+        "numerator": 244,
+        "denominator": 306,
+        "value": 0.7973856209150327
+      },
+      "f1": {
+        "numerator": 488,
+        "denominator": 612,
+        "value": 0.7973856209150327
+      },
+      "mae_w_m2": 32.469433538979246,
+      "mae_w_m2_decimal": "32.469433538979248457655636567582725743129556926528"
+    },
+    "original_v1": {
+      "hours": 3566,
+      "tp": 241,
+      "fp": 55,
+      "fn": 65,
+      "tn": 3205,
+      "positive_calls": 296,
+      "precision": {
+        "numerator": 241,
+        "denominator": 296,
+        "value": 0.8141891891891891
+      },
+      "recall": {
+        "numerator": 241,
+        "denominator": 306,
+        "value": 0.7875816993464052
+      },
+      "f1": {
+        "numerator": 482,
+        "denominator": 602,
+        "value": 0.8006644518272426
+      },
+      "mae_w_m2": 29.337468619375883,
+      "mae_w_m2_decimal": "29.337468619375881933062254627033090297251822770611"
+    },
+    "retained_raw_day2": {
+      "hours": 3566,
+      "tp": 268,
+      "fp": 21,
+      "fn": 38,
+      "tn": 3239,
+      "positive_calls": 289,
+      "precision": {
+        "numerator": 268,
+        "denominator": 289,
+        "value": 0.9273356401384083
+      },
+      "recall": {
+        "numerator": 268,
+        "denominator": 306,
+        "value": 0.8758169934640523
+      },
+      "f1": {
+        "numerator": 536,
+        "denominator": 595,
+        "value": 0.9008403361344538
+      },
+      "mae_w_m2": 17.692933258553,
+      "mae_w_m2_decimal": "17.692933258553000560852495793606281547952888390353"
+    },
+    "f1_008_validation_selected": {
+      "hours": 3566,
+      "tp": 271,
+      "fp": 21,
+      "fn": 35,
+      "tn": 3239,
+      "positive_calls": 292,
+      "precision": {
+        "numerator": 271,
+        "denominator": 292,
+        "value": 0.928082191780822
+      },
+      "recall": {
+        "numerator": 271,
+        "denominator": 306,
+        "value": 0.8856209150326797
+      },
+      "f1": {
+        "numerator": 542,
+        "denominator": 598,
+        "value": 0.9063545150501672
+      },
+      "mae_w_m2": null
+    }
+  },
+  "raw_source_provenance": {
+    "raw_source_identity": false,
+    "supplied": {
+      "request_url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-01-01&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1&timezone=auto",
+      "field": [
+        "shortwave_radiation_previous_day1",
+        "cloud_cover_previous_day1"
+      ],
+      "timezone": [
+        "auto"
+      ],
+      "model_parameter": null,
+      "target_shift": "features_v2.py shifts nwp_radiation and target by -24 rows. CSV origins exactly match the existing hourly validation set.",
+      "publication_time_verified": false
+    },
+    "retained": {
+      "request_url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+      "selected_field": "shortwave_radiation_previous_day2",
+      "model": "ecmwf_ifs025",
+      "fixed_source_clock_offset_seconds": 10800,
+      "publication_time_verified": false
+    },
+    "interpretation": "Distinct raw forecasts, not interchangeable controls. The supplied request names previous_day1 and timezone=auto without a models parameter. The retained intake pins ECMWF IFS025 and uses UTC epoch joins. Filenames and equal target rows do not prove equal issue times, practical lead times or historical publication availability.",
+    "different_radiation_rows": 1721,
+    "different_event_rows": 70,
+    "maximum_absolute_radiation_difference": "555.0"
+  },
+  "caveats": [
+    "V2 uses this validation interval for early stopping. These are not untouched test metrics.",
+    "008 threshold and arm selection used this validation period, so that comparison is selection-conditioned.",
+    "008 event bits have no radiation MAE.",
+    "The initial Git-blob check additionally verified v2 feature values against the fetched weather and NWP CSVs at origin+24h. That executed evidence is retained separately inside this JSON. The portable rerun checks retained source declarations and exact existing target identities, without requiring those large upstream CSVs.",
+    "No test, satellite, live, water, energy or physical-curtailment improvement is established by this check."
+  ],
+  "source_sha256": {
+    "app/handoff/v2-validation-2026-10-04/inputs/manifest.json": "ca4a999c1391b2306767703fe92eacade2eb64f3635d90e36cfca7c322d82d8a",
+    "app/handoff/v2-validation-2026-10-04/inputs/cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "app/handoff/v2-validation-2026-10-04/inputs/train_modelv2.py": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+    "app/handoff/v2-validation-2026-10-04/inputs/features_v2.py": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+    "app/handoff/v2-validation-2026-10-04/inputs/download_nwp.py": "4ee8a336a3dfcaa1c2cfecdb933cefe598e5b0e43a84052a8dada9e8a54863a6",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "app/experiments/f1-006/result/predictions/validation-nwp_day2.csv": "e9ed7ac490fa05679e8fe04ba7b48f5a9bffb639163fead1d8523b570c6d2b52",
+    "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+    "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+    "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "app/experiments/f1-008/result/validation-selection.json": "2e09ea387909cf3c26b145e61089b6142351cda4c1a8ffa7a0f01ff021525c6c",
+    "app/experiments/nwp-archive-001/protocol.json": "18837ed385cce4323f9dd7ba78ab030541af579adc4367cc6dc44085c1dd7916",
+    "app/experiments/nwp-archive-001/requests.json": "02648d9f186c3141c79c54f3805f779cc12df31bebfbf6d3626fb35e878075e2",
+    "app/experiments/nwp-archive-001/fetch.py": "f1de8e13566b28abfd3afdaf2621a4f15af955696a0d33afc64529fc04820bf9",
+    "app/experiments/f1-006/run.py": "bf2656bf1c301d815a4096b650b5d6e8afa6a437391a8b60f996b52016fe899d"
+  },
+  "checker_sha256": "5cb1e1fb3c195885638c5827c32c7e71f8f188283e6ae51c0966e075898191cb",
+  "initial_git_blob_check": {
+    "status": "INCONSISTENCY",
+    "revision": "85097a560769ad8a1459ce55f0b3a4c301202405",
+    "scope": "Independent validation-only reconstruction. No training, new comparator imports or policy selection.",
+    "clock": "CSV time is feature/origin time. Scored radiation endpoint is origin plus24h. Source publication availability is not independently proved.",
+    "first_origin": "2025-12-04 19:00:00",
+    "last_origin": "2026-05-02 08:00:00",
+    "first_target": "2025-12-05 19:00:00",
+    "last_target": "2026-05-03 08:00:00",
+    "threshold": "strictly greater than600 W/m2",
+    "checks": {
+      "same_3566_validation_origins": true,
+      "hourly_validation_origins": true,
+      "weather_index_hourly": true,
+      "nwp_index_hourly": true,
+      "actual_matches_old": true,
+      "baseline_matches_old": true,
+      "forecast_matches_archived_nwp_values": false,
+      "raw_control_same_target_plus_24h": true,
+      "actual_matches_archived_target_reference": true,
+      "forecast_event_matches_saved_raw_control": false,
+      "v2_feature_rows_present": true,
+      "v2_export_matches_features": true,
+      "v2_target_is_weather_plus_24h": true,
+      "v2_baseline_is_weather_at_origin": true,
+      "v2_forecast_is_nwp_target_plus_24h": true,
+      "training_source_uses_validation_early_stopping": true,
+      "feature_builder_shifts_target_and_nwp_minus24": true
+    },
+    "inconsistencies": [
+      "forecast_matches_archived_nwp_values",
+      "forecast_event_matches_saved_raw_control"
+    ],
+    "methods": {
+      "stefanos_v2": {
+        "hours": 3566,
+        "tp": 262,
+        "fp": 25,
+        "fn": 44,
+        "tn": 3235,
+        "positive_calls": 287,
+        "precision": {
+          "numerator": 262,
+          "denominator": 287,
+          "value": 0.9128919860627178
+        },
+        "recall": {
+          "numerator": 262,
+          "denominator": 306,
+          "value": 0.8562091503267973
+        },
+        "f1": {
+          "numerator": 524,
+          "denominator": 593,
+          "value": 0.8836424957841484
+        },
+        "mae_w_m2_decimal": "18.697342718608888775249579360628154795288839035334",
+        "mae_w_m2": 18.69734271860889
+      },
+      "raw_forecast": {
+        "hours": 3566,
+        "tp": 253,
+        "fp": 34,
+        "fn": 53,
+        "tn": 3226,
+        "positive_calls": 287,
+        "precision": {
+          "numerator": 253,
+          "denominator": 287,
+          "value": 0.8815331010452961
+        },
+        "recall": {
+          "numerator": 253,
+          "denominator": 306,
+          "value": 0.826797385620915
+        },
+        "f1": {
+          "numerator": 506,
+          "denominator": 593,
+          "value": 0.8532883642495784
+        },
+        "mae_w_m2_decimal": "21.558048233314638250140213123948401570386988222098",
+        "mae_w_m2": 21.55804823331464
+      },
+      "yesterday": {
+        "hours": 3566,
+        "tp": 244,
+        "fp": 62,
+        "fn": 62,
+        "tn": 3198,
+        "positive_calls": 306,
+        "precision": {
+          "numerator": 244,
+          "denominator": 306,
+          "value": 0.7973856209150327
+        },
+        "recall": {
+          "numerator": 244,
+          "denominator": 306,
+          "value": 0.7973856209150327
+        },
+        "f1": {
+          "numerator": 488,
+          "denominator": 612,
+          "value": 0.7973856209150327
+        },
+        "mae_w_m2_decimal": "32.469433538979248457655636567582725743129556926528",
+        "mae_w_m2": 32.469433538979246
+      },
+      "original_v1": {
+        "hours": 3566,
+        "tp": 241,
+        "fp": 55,
+        "fn": 65,
+        "tn": 3205,
+        "positive_calls": 296,
+        "precision": {
+          "numerator": 241,
+          "denominator": 296,
+          "value": 0.8141891891891891
+        },
+        "recall": {
+          "numerator": 241,
+          "denominator": 306,
+          "value": 0.7875816993464052
+        },
+        "f1": {
+          "numerator": 482,
+          "denominator": 602,
+          "value": 0.8006644518272426
+        },
+        "mae_w_m2_decimal": "29.337468619375881933062254627033090297251822770611",
+        "mae_w_m2": 29.337468619375883
+      },
+      "f1_008_validation_selected": {
+        "hours": 3566,
+        "tp": 271,
+        "fp": 21,
+        "fn": 35,
+        "tn": 3239,
+        "positive_calls": 292,
+        "precision": {
+          "numerator": 271,
+          "denominator": 292,
+          "value": 0.928082191780822
+        },
+        "recall": {
+          "numerator": 271,
+          "denominator": 306,
+          "value": 0.8856209150326797
+        },
+        "f1": {
+          "numerator": 542,
+          "denominator": 598,
+          "value": 0.9063545150501672
+        },
+        "mae_w_m2": null
+      }
+    },
+    "decision_comparisons": {
+      "raw_forecast": {
+        "changed_hours": 38,
+        "v2_additions": 19,
+        "v2_removals": 19
+      },
+      "f1_008_validation_selected": {
+        "changed_hours": 65,
+        "v2_additions": 30,
+        "v2_removals": 35
+      }
+    },
+    "caveats": [
+      "V2 uses this validation interval for early stopping, so its validation metrics are not untouched test evidence.",
+      "008 cutoffs and consensus_two_source selection used this same validation period. Its comparison is descriptive and selection-conditioned.",
+      "008 exports decisions/probabilities rather than a radiation point forecast, so radiation MAE is not defined for its event bits.",
+      "This check covers weather-reference validation only. It does not establish test, satellite, live, curtailment or water value."
+    ],
+    "source_sha256": {
+      "85097a560769ad8a1459ce55f0b3a4c301202405:model/train_modelv2.py": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+      "85097a560769ad8a1459ce55f0b3a4c301202405:data/features_v2.py": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+      "85097a560769ad8a1459ce55f0b3a4c301202405:eval/cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+      "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+      "app/experiments/f1-006/result/predictions/validation-nwp_day2.csv": "e9ed7ac490fa05679e8fe04ba7b48f5a9bffb639163fead1d8523b570c6d2b52",
+      "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+      "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+      "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+      "85097a560769ad8a1459ce55f0b3a4c301202405:data/featuresv2.csv": "df9a38fa7c17ab7021c4560de77a72a6d5e9914f982739997634726414d863d9",
+      "85097a560769ad8a1459ce55f0b3a4c301202405:data/paphos_weather_datav2.csv": "fddc4a130f6c4a701521cacd6c60b4603785c335278e339a67060eff7ef14cf2",
+      "85097a560769ad8a1459ce55f0b3a4c301202405:data/paphos_nwp_data.csv": "ce05eb96179b4d037f82d87ceda47b9221b302f1b681096f5ef4d6523855d96b"
+    },
+    "checker_sha256": "ff3abf420fefd688a4c4ee17892990cd7951af00ae4f0f21b36ffc353628cbfb",
+    "wall_seconds": 0.43506641699968895,
+    "completed_at_utc": "2026-10-04T12:22:11.668612+00:00",
+    "checker_source_at_initial_execution": "\"\"\"Read-only v2 validation reconstruction, without training or comparator imports.\"\"\"\nimport csv\nfrom datetime import datetime, timedelta, timezone\nfrom decimal import Decimal, localcontext\nfrom fractions import Fraction\nimport hashlib\nimport io\nimport json\nfrom pathlib import Path\nimport subprocess\nimport time\n\nHERE = Path(__file__).resolve().parent\nROOT = HERE.parents[2]\nREVISION = '85097a560769ad8a1459ce55f0b3a4c301202405'\nINPUTS = {}\n\n\ndef git_text(name):\n    raw = subprocess.check_output(['git', 'show', REVISION + ':' + name], cwd=ROOT)\n    INPUTS[REVISION + ':' + name] = hashlib.sha256(raw).hexdigest()\n    return raw.decode()\n\n\ndef local_text(name):\n    raw = (ROOT / name).read_bytes()\n    INPUTS[name] = hashlib.sha256(raw).hexdigest()\n    return raw.decode()\n\n\ndef table(text):\n    return list(csv.DictReader(io.StringIO(text)))\n\n\ndef keyed(records, column):\n    result = {}\n    for row in records:\n        key = datetime.fromisoformat(row[column])\n        if key.tzinfo is not None or key in result:\n            raise AssertionError('Duplicate or timezone-aware identity')\n        result[key] = row\n    if list(result) != sorted(result):\n        raise AssertionError('Unordered times')\n    return result\n\n\ndef number(value):\n    answer = Decimal(value)\n    if not answer.is_finite():\n        raise AssertionError('Nonfinite value')\n    return answer\n\n\ndef ratio(a, b):\n    return dict(numerator=a, denominator=b, value=a/b) if b else None\n\n\ndef metrics(actual, predicted=None, decisions=None):\n    truth = [a > 600 for a in actual]\n    bits = [p > 600 for p in predicted] if decisions is None else decisions\n    if len(bits) != len(truth):\n        raise AssertionError('Row count mismatch')\n    tp = sum(t and p for t,p in zip(truth,bits))\n    fp = sum(not t and p for t,p in zip(truth,bits))\n    fn = sum(t and not p for t,p in zip(truth,bits))\n    tn = len(bits)-tp-fp-fn\n    answer = dict(hours=len(bits),tp=tp,fp=fp,fn=fn,tn=tn,positive_calls=tp+fp,\n        precision=ratio(tp,tp+fp),recall=ratio(tp,tp+fn),f1=ratio(2*tp,2*tp+fp+fn))\n    if predicted is not None:\n        with localcontext() as context:\n            context.prec=50\n            mae=sum((abs(a-p) for a,p in zip(actual,predicted)),Decimal())/len(actual)\n        answer['mae_w_m2_decimal']=str(mae)\n        answer['mae_w_m2']=float(mae)\n    else:\n        answer['mae_w_m2']=None\n    return answer\n\n\ndef main():\n    start=time.perf_counter()\n    training=git_text('model/train_modelv2.py')\n    builder=git_text('data/features_v2.py')\n    new=keyed(table(git_text('eval/cv_predictions_v2.csv')),'time')\n    old=keyed(table(local_text('eval/cv_predictions.csv')),'time')\n    raw=keyed(table(local_text('app/experiments/f1-006/result/predictions/validation-nwp_day2.csv')),'feature_time')\n    features=keyed(table(local_text('app/experiments/f1-008/result/features.csv')),'feature_time')\n    targets=keyed(table(local_text('app/experiments/f1-006/result/feature-targets.csv')),'feature_time')\n    frozen008=keyed(table(local_text('app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv')),'feature_time')\n    v2_features_records=table(git_text('data/featuresv2.csv'))\n    v2_features=keyed(v2_features_records,next(iter(v2_features_records[0])))\n    weather_records=table(git_text('data/paphos_weather_datav2.csv'))\n    weather=keyed(weather_records,next(iter(weather_records[0])))\n    nwp_records=table(git_text('data/paphos_nwp_data.csv'))\n    nwp=keyed(nwp_records,next(iter(nwp_records[0])))\n    checks={}\n    def check(name,condition):\n        checks[name]=bool(condition)\n    check('same_3566_validation_origins',len(new)==3566 and list(new)==list(old)==list(raw)==list(frozen008))\n    check('hourly_validation_origins',all(b-a==timedelta(hours=1) for a,b in zip(new,list(new)[1:])))\n    check('weather_index_hourly',all(b-a==timedelta(hours=1) for a,b in zip(weather,list(weather)[1:])))\n    check('nwp_index_hourly',all(b-a==timedelta(hours=1) for a,b in zip(nwp,list(nwp)[1:])))\n    check('actual_matches_old',all(number(r['actual'])==number(old[t]['actual']) for t,r in new.items()))\n    check('baseline_matches_old',all(number(r['baseline'])==number(old[t]['baseline']) for t,r in new.items()))\n    check('forecast_matches_archived_nwp_values',all(number(r['forecast'])==number(features[t]['nwp_day2_radiation']) for t,r in new.items()))\n    check('raw_control_same_target_plus_24h',all(datetime.fromisoformat(raw[t]['target_time'])==t+timedelta(hours=24)==datetime.fromisoformat(targets[t]['target_time'])==datetime.fromisoformat(frozen008[t]['target_time']) for t in new))\n    check('actual_matches_archived_target_reference',all(number(r['actual'])==number(targets[t]['actual'])==number(raw[t]['actual_w_m2'])==number(frozen008[t]['weather_actual_w_m2']) for t,r in new.items()))\n    check('forecast_event_matches_saved_raw_control',all(int(number(r['forecast'])>600)==int(raw[t]['predicted_positive'])==int(frozen008[t]['nwp_positive']) for t,r in new.items()))\n    check('v2_feature_rows_present',all(t in v2_features for t in new))\n    check('v2_export_matches_features',all(number(r['actual'])==number(v2_features[t]['target']) and number(r['baseline'])==number(v2_features[t]['shortwave_radiation']) and number(r['forecast'])==number(v2_features[t]['nwp_radiation']) for t,r in new.items()))\n    check('v2_target_is_weather_plus_24h',all(number(r['actual'])==number(weather[t+timedelta(hours=24)]['shortwave_radiation']) for t,r in new.items()))\n    check('v2_baseline_is_weather_at_origin',all(number(r['baseline'])==number(weather[t]['shortwave_radiation']) for t,r in new.items()))\n    check('v2_forecast_is_nwp_target_plus_24h',all(number(r['forecast'])==number(nwp[t+timedelta(hours=24)]['nwp_radiation']) for t,r in new.items()))\n    check('training_source_uses_validation_early_stopping', 'eval_set=[(cv_x,cv_y)]' in training and 'early_stopping(50)' in training)\n    check('feature_builder_shifts_target_and_nwp_minus24', 'full_df[\"target\"] = full_df[\"shortwave_radiation\"].shift(-24)' in builder and 'full_df[\"nwp_radiation\"] = full_df[\"nwp_radiation\"].shift(-24)' in builder)\n    actual=[number(r['actual']) for r in new.values()]\n    methods={name:metrics(actual,[number(r[field]) for r in new.values()]) for name,field in (('stefanos_v2','predicted'),('raw_forecast','forecast'),('yesterday','baseline'))}\n    methods['original_v1']=metrics(actual,[number(old[t]['predicted']) for t in new])\n    bits008=[int(frozen008[t]['predicted_positive'])==1 for t in new]\n    methods['f1_008_validation_selected']=metrics(actual,decisions=bits008)\n    v2bits=[number(r['predicted'])>600 for r in new.values()]\n    comparisons={}\n    for name,bits in [('raw_forecast',[number(r['forecast'])>600 for r in new.values()]),('f1_008_validation_selected',bits008)]:\n        comparisons[name]=dict(changed_hours=sum(a!=b for a,b in zip(v2bits,bits)),v2_additions=sum(a and not b for a,b in zip(v2bits,bits)),v2_removals=sum(b and not a for a,b in zip(v2bits,bits)))\n    result=dict(status='PASS' if all(checks.values()) else 'INCONSISTENCY',revision=REVISION,\n        scope='Independent validation-only reconstruction. No training, new comparator imports or policy selection.',\n        clock='CSV time is feature/origin time. Scored radiation endpoint is origin plus24h. Source publication availability is not independently proved.',\n        first_origin=str(next(iter(new))),last_origin=str(next(reversed(new))),first_target=str(next(iter(new))+timedelta(hours=24)),last_target=str(next(reversed(new))+timedelta(hours=24)),\n        threshold='strictly greater than600 W/m2',checks=checks,inconsistencies=[k for k,v in checks.items() if not v],methods=methods,\n        decision_comparisons=comparisons,caveats=['V2 uses this validation interval for early stopping, so its validation metrics are not untouched test evidence.','008 cutoffs and consensus_two_source selection used this same validation period. Its comparison is descriptive and selection-conditioned.','008 exports decisions/probabilities rather than a radiation point forecast, so radiation MAE is not defined for its event bits.','This check covers weather-reference validation only. It does not establish test, satellite, live, curtailment or water value.'],\n        source_sha256=INPUTS,checker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),wall_seconds=time.perf_counter()-start,\n        completed_at_utc=datetime.now(timezone.utc).isoformat())\n    destination=HERE/'independent-check.json'\n    with destination.open('x') as stream:json.dump(result,stream,indent=2,allow_nan=False);stream.write('\\n')\n    print(json.dumps(dict(status=result['status'],checks=checks,methods=methods,decision_comparisons=comparisons),indent=2))\n    if not all(checks.values()):raise SystemExit(1)\n\n\nif __name__=='__main__':main()\n"
+  },
+  "execution": {
+    "command": [
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+      "app/handoff/v2-validation-2026-10-04/independent-check.py"
+    ],
+    "actual_api": "compute() via importlib, followed by independent-check.py --check",
+    "elapsed_seconds": 0.21378975000015998,
+    "exit_code": 0
+  },
+  "delivery_check_fixtures": {
+    "status": "PASS",
+    "valid_report_fields_checked": 54,
+    "corrupt_fields_rejected": [
+      "true_positive",
+      "f1",
+      "mae_w_m2"
+    ],
+    "mae_absolute_tolerance": 1e-10
+  }
+}
