@@ -288,10 +288,11 @@
   },
   "demo_sha256": {
     "site/data.js": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5",
+    "site/favicon.svg": "f5a9140d131be4fe48e83ebfa18f98304d7200582de5841f35d535e822a579ca",
     "site/fonts/IBMPlexSans-Medium.woff2": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
     "site/fonts/IBMPlexSans-Regular.woff2": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
     "site/fonts/LICENSE.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
-    "site/index.html": "8ee4e9394cc2029fd91f06cfe43b1846d50051899fae177ff93367bf4c5dcc5c",
+    "site/index.html": "b1ad03a4d0f63982a071e7956b7820855411f18014d94be53d62d0669dc3e56f",
     "site/schedule_hourly.csv": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
     "site/site.css": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b",
     "site/site.mjs": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a"
@@ -309,5 +310,12 @@
       "2026-03-16"
     ],
     "findings": "No page-level horizontal overflow at 320 or 390. Three charts, date selection, shared hour slider, cost values and source disclosure checked."
+  },
+  "verified_source_commit": "65ab0c1b2676d30d550741491b321fd3ad7b5d0c",
+  "github_check": {
+    "conclusion": "success",
+    "headSha": "65ab0c1b2676d30d550741491b321fd3ad7b5d0c",
+    "status": "completed",
+    "url": "https://github.com/stefanosbordea/actina/actions/runs/37184247802"
   }
 }

@@ -1,0 +1,40 @@
+{
+  "commit": "65ab0c1b2676d30d550741491b321fd3ad7b5d0c",
+  "deployment": "dpl_4TXxMW6J1pwYG7b4899Raz87gpCL",
+  "url": "https://aquashift-pafos-2026.vercel.app/",
+  "public_files_match_source": true,
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "b1ad03a4d0f63982a071e7956b7820855411f18014d94be53d62d0669dc3e56f"
+    },
+    {
+      "path": "site.css",
+      "sha256": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b"
+    },
+    {
+      "path": "site.mjs",
+      "sha256": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a"
+    },
+    {
+      "path": "data.js",
+      "sha256": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "f5a9140d131be4fe48e83ebfa18f98304d7200582de5841f35d535e822a579ca"
+    },
+    {
+      "path": "schedule_hourly.csv",
+      "sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20"
+    }
+  ],
+  "github_workflow": "https://github.com/stefanosbordea/actina/actions/runs/37184247802",
+  "github_check": {
+    "conclusion": "success",
+    "headSha": "65ab0c1b2676d30d550741491b321fd3ad7b5d0c",
+    "status": "completed",
+    "url": "https://github.com/stefanosbordea/actina/actions/runs/37184247802"
+  },
+  "model_data_unchanged": true
+}
