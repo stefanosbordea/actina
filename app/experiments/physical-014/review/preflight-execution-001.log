@@ -1,0 +1,17 @@
+test_aggregate_gate_cannot_hide_daily_regret (test_link.LinkFixtures.test_aggregate_gate_cannot_hide_daily_regret) ... ok
+test_analytical_water_solve_and_fixed_plan_bounds (test_link.LinkFixtures.test_analytical_water_solve_and_fixed_plan_bounds) ... ok
+test_consistent_raw_is_bitwise_unchanged (test_link.LinkFixtures.test_consistent_raw_is_bitwise_unchanged) ... ok
+test_event_counts_keep_strict_threshold_and_nulls (test_link.LinkFixtures.test_event_counts_keep_strict_threshold_and_nulls) ... ok
+test_exact_water_replay_retains_tiny_residual (test_link.LinkFixtures.test_exact_water_replay_retains_tiny_residual) ... ok
+test_fractional_tail_negative_values_and_ties (test_link.LinkFixtures.test_fractional_tail_negative_values_and_ties) ... ok
+test_invalid_mapping_inputs_are_refused (test_link.LinkFixtures.test_invalid_mapping_inputs_are_refused) ... ok
+test_npz_roundtrip_preserves_all_boundary_bits (test_link.LinkFixtures.test_npz_roundtrip_preserves_all_boundary_bits) ... ok
+test_reference_missingness_and_all_clocks (test_link.LinkFixtures.test_reference_missingness_and_all_clocks) ... ok
+test_source_hash_change_and_escape_refusal (test_link.LinkFixtures.test_source_hash_change_and_escape_refusal) ... ok
+test_strict_boundary_and_smallest_representable_projection (test_link.LinkFixtures.test_strict_boundary_and_smallest_representable_projection) ... ok
+test_unchanged_candidate_is_not_an_upgrade (test_link.LinkFixtures.test_unchanged_candidate_is_not_an_upgrade) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.026s
+
+OK

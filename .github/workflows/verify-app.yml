@@ -158,6 +158,31 @@ jobs:
           Path('app/build/release-check/model013-fixtures.json').write_text(json.dumps(result, indent=2))
           print(json.dumps(result))
           PY
+      - name: Check event-to-water fixtures and retained evidence
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s app/experiments/physical-014 -p 'test_*.py' -v
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          experiment = Path('app/experiments/physical-014')
+          source_pins = json.loads((experiment / 'inputs.json').read_text())['files_sha256']
+          output_pins = json.loads((experiment / 'result/outputs.json').read_text())
+          checked = 0
+          for base, pins in [(Path('.'), source_pins), (experiment / 'result', output_pins)]:
+              for name, digest in pins.items():
+                  assert hashlib.sha256((base / name).read_bytes()).hexdigest() == digest, name
+                  checked += 1
+          result = dict(status='PASS', retained_file_hashes=checked,
+                        scope='Event interface and physical fixtures plus retained evidence identity, not a new historical run.')
+          Path('app/build/release-check/physical014-fixtures.json').write_text(json.dumps(result, indent=2))
+          print(json.dumps(result))
+          PY
       - name: Preserve verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

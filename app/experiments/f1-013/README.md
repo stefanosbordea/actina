@@ -30,7 +30,7 @@ Validation remains harder. Conditional robust equals raw at weather F1 90.084% a
 
 The [forecast-only diagnostic](diagnostic/result/summary.json) identifies the obstruction. Raw is the sole feasible retained action on all 299 conditional-bank days. Before safeguards, the robust objective offers strict gains on seven validation days and three test days. The precision safeguard alone rejects all ten opportunities. This describes the retained empirical scenarios and does not justify relaxing precision on observed outcomes.
 
-A water scheduling interface is also being tested separately, with identical plant assumptions and service. No event metric is presented as recovered electricity or additional water.
+The separate [014 water scheduling interface](../physical-014/README.md) has completed with identical plant assumptions and service. Its primary plans exactly equal raw, so it adds no physical benefit. No event metric is presented as recovered electricity or additional water.
 
 ## Reproduce
 

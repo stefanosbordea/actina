@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-10-04T11:57:24.716512+00:00",
+  "command": [
+    "app/experiments/physical-014/run.py",
+    "--execute-historical",
+    "--out",
+    "app/experiments/physical-014/result"
+  ],
+  "status": "VERIFYING_INPUTS",
+  "outcome_scoring_started": false,
+  "total_runtime_budget_seconds": 1800,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

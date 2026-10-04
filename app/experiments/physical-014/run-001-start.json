@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/physical-014/run.py",
+    "--execute-historical",
+    "--out",
+    "app/experiments/physical-014/result"
+  ],
+  "started_at_utc": "2026-10-04T11:57:23.466702+00:00",
+  "status": "RUNNING",
+  "input_lock_sha256": "f206f24740bd76b02c7803f28f0e657ee2494bfdb8b53433ba22cf391052f6f5",
+  "protocol_sha256": "1cd6eab547127056b7af0e97d30d45e004d499f3cc36b4ae7abcc82e8d718bfe"
+}

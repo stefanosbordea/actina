@@ -1,0 +1,20 @@
+{
+  "frozen_at_utc": "2026-10-04T11:57:28.132377+00:00",
+  "files_sha256": {
+    "execution-start.json": "03955727128939d7a50091263a42b108d783bf1116a3d3d8798f239567e7ef72",
+    "solver-records.jsonl": "10197ec03b4dffc1bce19fb926f7beccce9ea431c246516c5cb44c9529882c51",
+    "test/interface.csv": "870464f0999d676b95e4240d07a4a8bd28fca3189584e62dffb214924ef271ba",
+    "test/plan-metadata.csv": "085c6b891f1a398f79998568bfaf15d30f6b59bac405634f893a270af8aee3de",
+    "test/plans.npz": "a5b0f16739b310bad9bfb83569d153f5627a55d930470944330db78127d1c3ed",
+    "test/raw-reproduction.csv": "707f1ebec36be8291b8b650ccf655b471a8747e8b8f1a1f26251e007de0772ce",
+    "test/schedules.csv": "32c0ac5c2892aa4ed577f49a1171bb70b2357952b3aaa12382388f30b7cb0aab",
+    "test/water-audits.json": "257ed528c60a1e1e4dcc3bc382f2a24bdd1de0791f4e5eceefe95803f8222712",
+    "validation/interface.csv": "f0944637dbc5f2dce04e9356f9a8f7e7e813193bfae464516ebed10e1f4ff7fb",
+    "validation/plan-metadata.csv": "850946c1b3312a12e8aa1dd7aca6d0543dc0c772a2edf3f6620b82e1d2b39d1c",
+    "validation/plans.npz": "32c240af318b64e3cf7e2d9e7d43ea0c1fd7ce88d4e675bfd5d812ea31995395",
+    "validation/raw-reproduction.csv": "63930dee686a7b6f23685f337cff4ebac68af0c2d20402e358c993ee8f090824",
+    "validation/schedules.csv": "7baa1fcdefb9802fbbdcec388c39974fa6897a009bf0a9917398f2e6865eb5ca",
+    "validation/water-audits.json": "076ca4c9bddf53fbe6364e995f1cfc834b50eadc801f8b40053d0bc195d22c3c"
+  },
+  "statement": "All 299 horizons and 2990 plans retained before scoring references or masks were opened."
+}

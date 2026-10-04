@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "retained_file_hashes": 92,
+  "scope": "CI manifest path and content check before publication"
+}

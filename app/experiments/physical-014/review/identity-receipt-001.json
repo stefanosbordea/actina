@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-014/review/identity-check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "exit_code": 0,
+  "elapsed_seconds": 0.2736798330001875,
+  "completed_at_utc": "2026-10-04T12:01:04.749000+00:00",
+  "log_sha256": "18ba5700005503353bcb2c5caeac9826886402337ee39f5001a8c030026ee88d",
+  "checker_sha256": "9405067de2e8de448085aefc9af98598f39119f44f71b2eeb6372839de139ce3"
+}
