@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-04T09:18:26.776978+00:00",
+  "checks": [
+    {
+      "command": "python3 app/scripts/check_deck_notes.py --receipt app/results/current-deck-native-notes.json",
+      "exit_code": 0,
+      "result": "All 12 exact native notes and visible titles, four native charts/workbooks, four equal team credits verified."
+    },
+    {
+      "command": "python3 -m unittest discover -s app/tests -p test_deck_notes.py -v > app/results/current-deck-notes-tests.log 2>&1",
+      "exit_code": 0,
+      "tests": 5,
+      "result": "Corrupted native notes, source notes, wrapper, title, chart count, duplicate name, name typography and notes relationship rejected; historical mode requires an explicit pair."
+    },
+    {
+      "operation": "Imported verify_release.identity(), asserted current deck/source/test membership and new HELPERS entry; saved current-deck-release-identity.json",
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "scripts/check_deck_notes.py": "6c99ed89c53ff1e3d22a1dd652ff70d9b3fab2fccd3fa338c98dc1f6ada0da1c",
+    "scripts/verify_release.py": "b5ef5105e3e65d0a00448ca7cec7c475cff29874b4b80f5af4f978aa8e3897be",
+    "tests/test_deck_notes.py": "3de4670f04967a7d4947418297bceaa0cd2bfe3543afd26514ada45afa835577",
+    "results/current-deck-native-notes.json": "7030b5df299727cb1bf7efe3e4703cd7be3d691ea7b2ac543bff3fbe0950018b",
+    "results/current-deck-notes-tests.log": "684b882895a327ff6705bba678e380ef8aeaaff95f2aee75e550a02d43719946",
+    "results/current-deck-release-identity.json": "734b2ec0d4f2804c546d9c023d61271b7221441a1348dbbc45a997318603fd63",
+    "delivery/Aktina-Pafos-2026.pptx": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
+    "delivery/Aktina-Deck-Source/Speaker-Notes.md": "51802957b30c19c9ae16616e544c0b3e9fd03e78b352b906765c4bbfd876ecf2",
+    "delivery/Aktina-Deck-Source/build.mjs": "1bf4752b2b6c43f4ed0d39a509bf3c6755de28c2cf22a21d5668ba44d3e6de16"
+  },
+  "notes": [
+    "PPTX, source notes and deck build were not edited.",
+    "Current notes do not specify final timing or presenter assignment; the validator does not invent them.",
+    "Historical timing and optional visual regression checks remain available through --mode historical with explicit matching --deck and --notes inputs.",
+    "During development, two initial checks exposed absolute package relationship paths and the cover lacking a named heading. The validator was corrected for the actual package; no deck content was changed. These initial failures are recorded here as notes, not reconstructed run logs."
+  ]
+}

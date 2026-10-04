@@ -17,7 +17,7 @@ import threading
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
-HELPERS = ("test_forecast_capture.py", "test_issued_weather.py", "test_handoff_check.py", "test_serve_workspace.py")
+HELPERS = ("test_forecast_capture.py", "test_issued_weather.py", "test_handoff_check.py", "test_serve_workspace.py", "test_deck_notes.py")
 PILOT_FILES = (
     "web/check_pilot_cli.mjs", "web/review_pilot.mjs", "web/public/pilot.mjs",
     "web/public/vendor/papaparse.min.js", "web/vendor/provenance.json",
@@ -31,7 +31,8 @@ def identity():
         ".github/workflows/verify.yml", "scripts/verify_release.py", "scripts/serve_workspace.py", "scripts/record_forecast_handoff.py",
         "scripts/capture_issued_weather.py", "scripts/check_handoff.py", "scripts/check_deck_notes.py", "web/check_public.py", "web/review_roadmap.mjs",
         "web/package.json", "web/package-lock.json", "web/vercel.json",
-        "delivery/AquaShift-Pafos-2026.pptx", "delivery/AquaShift-Speaker-Notes.md", "delivery/AquaShift-Roadmap-Handoff-Example.json", "delivery/AquaShift-Paired-Service-Example.json")}
+        "delivery/Aktina-Pafos-2026.pptx", "delivery/Aktina-Deck-Source/Speaker-Notes.md", "delivery/Aktina-Deck-Source/build.mjs",
+        "delivery/AquaShift-Roadmap-Handoff-Example.json", "delivery/AquaShift-Paired-Service-Example.json")}
     files.update(ROOT / "tests" / name for name in HELPERS)
     files.update((ROOT / "web").glob("test_*.mjs"))
     files.update(path for path in (ROOT / "web/public").rglob("*") if path.is_file())
