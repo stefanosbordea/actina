@@ -1,0 +1,91 @@
+.forecast-page select{font:inherit;color:inherit;background:#000;border:1px solid #555;border-radius:3px;min-height:44px;padding:9px 32px 9px 12px;max-width:100%}
+.forecast-page :where(select):focus-visible{outline:2px solid #fff;outline-offset:5px}
+.forecast-page .site-header nav a[aria-current=page]{color:#fff;text-decoration:underline;text-underline-offset:7px}
+.forecast-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:46px 0 37px}
+.forecast-intro h1{font-size:clamp(36px,4.5vw,54px);letter-spacing:-1.9px;line-height:1.1}
+.forecast-intro p{font-size:16px;color:#aaa;margin-top:14px}
+.forecast-intro .forecast-context{font-size:13px;text-align:right;line-height:1.8}
+.forecast-loading{padding-block:80px;color:#aaa}
+.forecast-controls{display:flex;justify-content:space-between;gap:24px;padding-block:24px;border-block:1px solid #333}
+.forecast-controls label{display:block;font-size:12px;color:#aaa;margin-bottom:7px}
+.forecast-date-control>div{display:flex;align-items:center;gap:10px}
+.forecast-date-control input{min-width:0;width:170px;padding:9px 12px;border:1px solid #555;background:#000;border-radius:3px;min-height:44px}
+.forecast-date-control button{border:1px solid #555;background:#000;border-radius:3px;width:44px;min-height:44px;font-size:18px}
+.forecast-controls .forecast-source-control{margin:0}
+.forecast-source-control select{display:block;margin-top:7px;min-width:240px;font-size:14px;color:#fff}
+.forecast-date-error{font-size:13px;margin-top:15px}
+.forecast-plot-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:25px 0 15px}
+.forecast-page h2{font-size:17px;letter-spacing:-.2px}
+.forecast-plot-heading h2 span{font-size:12px;color:#aaa;margin-left:8px;font-weight:400}
+.forecast-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:#bbb}
+.forecast-legend>span{display:flex;align-items:center;gap:7px}
+.forecast-legend>span::before{content:'';width:20px;border-top:2px solid #fff}
+.forecast-legend .legend-v2::before{border-top:2px dashed #ccc}
+.forecast-legend .legend-weather::before{border-top:2px dotted #999}
+.forecast-plot{width:100%;touch-action:pan-y;cursor:crosshair}
+.forecast-plot svg{display:block;width:100%;height:auto;overflow:visible}
+.forecast-plot text{font-family:inherit;fill:#aaa;font-size:12px}
+.forecast-plot .forecast-grid{stroke:#333;stroke-width:1}
+.forecast-plot .forecast-threshold{stroke:#666;stroke-width:1;stroke-dasharray:3 5}
+.forecast-plot .forecast-line{fill:none;stroke-linejoin:round;stroke-linecap:round;stroke-width:2.3}
+.forecast-plot .line-actual{stroke:#fff}
+.forecast-plot .line-v2{stroke:#ccc;stroke-dasharray:7 5}
+.forecast-plot .line-weather{stroke:#999;stroke-dasharray:1 5}
+.forecast-plot .forecast-cursor{stroke:#999;stroke-width:1}
+.forecast-plot .forecast-point{fill:#000;stroke-width:2}
+.forecast-plot .forecast-point.actual{stroke:#fff}.forecast-plot .forecast-point.v2{stroke:#ccc}.forecast-plot .forecast-point.weather{stroke:#999}
+.forecast-hour-control{display:grid;grid-template-columns:180px minmax(0,1fr) 170px;align-items:center;gap:28px;margin-top:5px;padding-block:10px 22px}
+.forecast-hour-control label{display:flex;gap:12px;align-items:baseline;color:#aaa;font-size:12px}
+.forecast-hour-control output{color:#fff;font-variant-numeric:tabular-nums;font-size:15px}
+.forecast-hour-control input{width:100%;height:44px;margin:0;accent-color:#fff;cursor:pointer}
+.forecast-hour-control>span{color:#aaa;font-size:12px;text-align:right}
+.forecast-readings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:21px 0 27px;border-top:1px solid #333;gap:24px}
+.forecast-readings dt{color:#aaa;font-size:12px;min-height:20px}
+.forecast-readings dd{font-size:27px;letter-spacing:-.5px;line-height:1.3;margin-top:7px;font-variant-numeric:tabular-nums}
+.forecast-readings small{font-size:12px;color:#aaa;letter-spacing:0;margin-left:6px}
+.forecast-cloud-reading{display:flex;gap:24px;justify-content:space-between;color:#aaa;font-size:12px;padding-bottom:20px;margin-top:-8px}
+.forecast-cloud-reading strong{font-weight:400;color:#fff;margin-left:8px;font-variant-numeric:tabular-nums}
+.forecast-events{padding:24px 0;border-top:1px solid #333}
+.forecast-event-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.forecast-event-heading p,.forecast-note,.forecast-event-reading{color:#aaa;font-size:12px;line-height:1.65}
+.forecast-event-heading p{margin-top:4px}
+.forecast-event-heading select{font-size:13px}
+.forecast-strips{display:grid;gap:8px;margin-top:22px}
+.forecast-strips>div{display:grid;grid-template-columns:78px minmax(0,1fr);align-items:center;gap:16px}
+.forecast-strips>div>span{font-size:12px;color:#aaa}
+.event-strip{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));gap:4px;min-width:0}
+.event-hour{height:23px;border:1px solid #555;background:#111;border-radius:1px;min-width:0}
+.event-hour[data-positive=true]{background:#fff;border-color:#fff}
+.event-hour[data-missing=true]{background:none;border:1px dashed #333}
+.event-hour[data-selected=true]{outline:1px solid #aaa;outline-offset:3px}
+.forecast-event-reading{margin:14px 0 7px;color:#ccc}
+.forecast-note{max-width:85ch}
+.forecast-score-section{display:flex;justify-content:space-between;align-items:center;gap:30px;border-top:1px solid #333;padding:26px 0}
+.forecast-score-section>div>p{margin-top:5px;font-size:12px;color:#aaa}
+.forecast-scores{display:flex;gap:50px}
+.forecast-scores dt{font-size:12px;color:#aaa}
+.forecast-scores dd{font-size:26px;letter-spacing:-.6px;line-height:1.2;margin-top:6px;font-variant-numeric:tabular-nums}
+.forecast-detail{border-top:1px solid #333}
+.forecast-detail:last-child{border-bottom:1px solid #333}
+.forecast-detail>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;min-height:64px;font-size:14px;list-style:none}
+.forecast-detail>summary::-webkit-details-marker{display:none}
+.forecast-detail>summary::after{content:'+';font-size:23px;color:#aaa}
+.forecast-detail[open]>summary::after{content:'−'}
+.forecast-detail-content{padding:0 0 25px}
+.forecast-detail-content p{color:#aaa;font-size:13px;line-height:1.7;max-width:90ch}
+.forecast-detail-content p+p{margin-top:12px}
+.forecast-table-scroll{overflow:auto;margin:20px 0;scrollbar-width:thin;scrollbar-color:#555 transparent}
+.forecast-table-scroll td:first-child{min-width:240px}
+.forecast-table-scroll td small{display:block;font-size:11px;color:#999;white-space:normal;max-width:250px;margin-top:3px}
+.forecast-table-scroll tr[aria-current=true] td{background:#151515}
+.forecast-table-scroll th:first-child,.forecast-table-scroll td:first-child{padding-left:10px}
+.forecast-source-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px}
+.forecast-source-grid h2{font-size:15px;margin-bottom:10px}
+.forecast-source-grid code{font-size:11px;overflow-wrap:anywhere}
+.forecast-hashes{grid-column:1/-1}
+.forecast-hashes dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 24px;font-size:11px;color:#aaa}
+.forecast-hashes dt,.forecast-hashes dd{overflow-wrap:anywhere}
+@media(max-width:900px){.forecast-plot-heading{display:block}.forecast-legend{margin-top:14px}.forecast-hour-control{grid-template-columns:160px minmax(0,1fr);gap:20px}.forecast-hour-control>span{grid-column:2;margin-top:-18px}.forecast-scores{gap:28px}}
+@media(max-width:700px){.forecast-page .site-header{flex-wrap:wrap;gap:10px;padding:20px 0 12px}.forecast-page .site-header nav{gap:20px}.forecast-page .site-header nav a:first-child{display:flex}.forecast-page .site-header nav a{font-size:12px}.forecast-intro{padding:26px 0}.forecast-intro h1{font-size:38px;letter-spacing:-1.3px}.forecast-intro p{font-size:14px;margin-top:10px}.forecast-intro .forecast-context{font-size:11px}.forecast-controls{display:grid;grid-template-columns:1fr;gap:18px;padding-block:20px}.forecast-date-control>div{display:grid;grid-template-columns:44px minmax(0,1fr) 44px}.forecast-date-control input{width:100%;text-align:center}.forecast-source-control select{width:100%;min-width:0}.forecast-plot-heading{padding-top:22px}.forecast-legend{gap:12px;font-size:11px}.forecast-legend>span{gap:5px}.forecast-legend>span::before{width:16px}.forecast-hour-control{grid-template-columns:1fr;gap:0;padding-block:4px 19px}.forecast-hour-control label{justify-content:space-between}.forecast-hour-control>span{grid-column:1;margin:0;font-size:11px}.forecast-readings{gap:10px;padding-block:17px 23px}.forecast-readings dt{font-size:11px;line-height:1.4;min-height:32px}.forecast-readings dd{font-size:23px;margin-top:2px}.forecast-readings small{display:block;font-size:10px;margin:3px 0 0}.forecast-event-heading{display:block}.forecast-event-heading select{width:100%;margin-top:15px;font-size:13px}.forecast-strips>div{grid-template-columns:55px minmax(0,1fr);gap:9px}.forecast-strips>div>span{font-size:11px}.event-strip{gap:3px}.event-hour{height:18px}.event-hour[data-selected=true]{outline-offset:2px}.forecast-note,.forecast-event-reading{font-size:11px}.forecast-score-section{display:block;padding-block:22px}.forecast-scores{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}.forecast-scores dd{font-size:24px}.forecast-scores dt{font-size:11px}.forecast-source-grid{grid-template-columns:1fr;gap:25px}.forecast-hashes{grid-column:1}.forecast-hashes dl{grid-template-columns:1fr;gap:4px}.forecast-hashes dd{margin-bottom:10px}.forecast-detail-content p{font-size:12px}.forecast-table-scroll td:first-child{min-width:190px}.forecast-table-scroll td small{font-size:10px;max-width:185px}.forecast-detail>summary{min-height:60px;font-size:13px}}
+@media(max-width:400px){.forecast-page .site-header nav{gap:16px}.forecast-page .site-header{gap:6px}.forecast-page .brand{font-size:22px}.forecast-page .brand>svg{width:25px;height:25px}.forecast-intro .forecast-context{max-width:90px}.forecast-legend{gap:10px}.forecast-scores dd{font-size:22px}}
+@media print{.forecast-controls,.forecast-hour-control,.forecast-event-heading select,.forecast-detail>summary{display:none}.forecast-page .forecast-line,.forecast-page .forecast-point{stroke:#000}.forecast-page .event-hour[data-positive=true]{background:#000}.forecast-page .forecast-plot text{fill:#000}}

@@ -1,0 +1,207 @@
+{
+  "kind": "retained_weather_availability_only",
+  "status": "PASS",
+  "check_sha256": "825305d0ebed845e75ea5415cbb9566967c97f7f0b65eaf55b02b292825ac266",
+  "reproduce": "python3 app/handoff/v2-validation-2026-10-04/weather-source/check.py --check",
+  "input_sha256": {
+    "app/experiments/nwp-archive-001/archive.json": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+    "app/experiments/nwp-archive-001/protocol.json": "18837ed385cce4323f9dd7ba78ab030541af579adc4367cc6dc44085c1dd7916",
+    "app/experiments/nwp-archive-001/requests.json": "02648d9f186c3141c79c54f3805f779cc12df31bebfbf6d3626fb35e878075e2",
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+    "model/model.py": "c738fd96f2b8fc4ca84edecef4f7b641c9ea10411eecefbb4fe6b2fd596a48a2",
+    "model/final_model.py": "94b2f332bca4e8c5e748e8ebfe3ea1be28e2492f4d5298d6359bc05312016ef7"
+  },
+  "request": {
+    "label": "archive",
+    "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+    "started_at_utc": "2026-10-04T08:42:17.585394+00:00",
+    "finished_at_utc": "2026-10-04T08:42:19.212122+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "archive.json",
+    "sha256": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+    "headers": "archive.headers.txt",
+    "headers_sha256": "445a3d4977b36cf3d00a73c3c9e346c45d8ee07d30ca5c585f2eda272513abc4"
+  },
+  "model_pin": "ecmwf_ifs025",
+  "returned_metadata": {
+    "latitude": 34.75,
+    "longitude": 32.5,
+    "elevation": 71.0,
+    "timezone": "GMT",
+    "utc_offset_seconds": 0
+  },
+  "units": {
+    "time": "unixtime",
+    "shortwave_radiation_previous_day1": "W/m\u00b2",
+    "cloud_cover_previous_day1": "%",
+    "shortwave_radiation_previous_day2": "W/m\u00b2",
+    "cloud_cover_previous_day2": "%"
+  },
+  "raw_hours": 17904,
+  "raw_coverage": {
+    "shortwave_radiation_previous_day1": {
+      "available": 17904,
+      "null": 0
+    },
+    "cloud_cover_previous_day1": {
+      "available": 17904,
+      "null": 0
+    },
+    "shortwave_radiation_previous_day2": {
+      "available": 17904,
+      "null": 0
+    },
+    "cloud_cover_previous_day2": {
+      "available": 17775,
+      "null": 129
+    }
+  },
+  "raw_null_ranges": {
+    "shortwave_radiation_previous_day1": {
+      "hours": 0,
+      "first_fixed_plus03": null,
+      "last_fixed_plus03": null
+    },
+    "cloud_cover_previous_day1": {
+      "hours": 0,
+      "first_fixed_plus03": null,
+      "last_fixed_plus03": null
+    },
+    "shortwave_radiation_previous_day2": {
+      "hours": 0,
+      "first_fixed_plus03": null,
+      "last_fixed_plus03": null
+    },
+    "cloud_cover_previous_day2": {
+      "hours": 129,
+      "first_fixed_plus03": "2026-04-17T18:00:00+03:00",
+      "last_fixed_plus03": "2026-04-23T02:00:00+03:00"
+    }
+  },
+  "periods": {
+    "original_training": {
+      "hours": 10699,
+      "matched_archive_hours": 10699,
+      "missing_archive_hours": 0,
+      "origin_first_naive": "2024-09-15T00:00:00",
+      "origin_last_naive": "2025-12-04T18:00:00",
+      "target_first_fixed_plus03": "2024-09-16T00:00:00+03:00",
+      "target_last_fixed_plus03": "2025-12-05T18:00:00+03:00",
+      "target_first_utc": "2024-09-15T21:00:00+00:00",
+      "target_last_utc": "2025-12-05T15:00:00+00:00",
+      "fields": {
+        "shortwave_radiation_previous_day1": {
+          "available": 10699,
+          "null": 0
+        },
+        "cloud_cover_previous_day1": {
+          "available": 10699,
+          "null": 0
+        },
+        "shortwave_radiation_previous_day2": {
+          "available": 10699,
+          "null": 0
+        },
+        "cloud_cover_previous_day2": {
+          "available": 10699,
+          "null": 0
+        }
+      }
+    },
+    "original_validation": {
+      "hours": 3566,
+      "matched_archive_hours": 3566,
+      "missing_archive_hours": 0,
+      "origin_first_naive": "2025-12-04T19:00:00",
+      "origin_last_naive": "2026-05-02T08:00:00",
+      "target_first_fixed_plus03": "2025-12-05T19:00:00+03:00",
+      "target_last_fixed_plus03": "2026-05-03T08:00:00+03:00",
+      "target_first_utc": "2025-12-05T16:00:00+00:00",
+      "target_last_utc": "2026-05-03T05:00:00+00:00",
+      "fields": {
+        "shortwave_radiation_previous_day1": {
+          "available": 3566,
+          "null": 0
+        },
+        "cloud_cover_previous_day1": {
+          "available": 3566,
+          "null": 0
+        },
+        "shortwave_radiation_previous_day2": {
+          "available": 3566,
+          "null": 0
+        },
+        "cloud_cover_previous_day2": {
+          "available": 3437,
+          "null": 129
+        }
+      }
+    },
+    "original_test": {
+      "hours": 3567,
+      "matched_archive_hours": 3567,
+      "missing_archive_hours": 0,
+      "origin_first_naive": "2026-05-02T09:00:00",
+      "origin_last_naive": "2026-09-27T23:00:00",
+      "target_first_fixed_plus03": "2026-05-03T09:00:00+03:00",
+      "target_last_fixed_plus03": "2026-09-28T23:00:00+03:00",
+      "target_first_utc": "2026-05-03T06:00:00+00:00",
+      "target_last_utc": "2026-09-28T20:00:00+00:00",
+      "fields": {
+        "shortwave_radiation_previous_day1": {
+          "available": 3567,
+          "null": 0
+        },
+        "cloud_cover_previous_day1": {
+          "available": 3567,
+          "null": 0
+        },
+        "shortwave_radiation_previous_day2": {
+          "available": 3567,
+          "null": 0
+        },
+        "cloud_cover_previous_day2": {
+          "available": 3567,
+          "null": 0
+        }
+      }
+    },
+    "original_final_training": {
+      "hours": 14265,
+      "matched_archive_hours": 14265,
+      "missing_archive_hours": 0,
+      "origin_first_naive": "2024-09-15T00:00:00",
+      "origin_last_naive": "2026-05-02T08:00:00",
+      "target_first_fixed_plus03": "2024-09-16T00:00:00+03:00",
+      "target_last_fixed_plus03": "2026-05-03T08:00:00+03:00",
+      "target_first_utc": "2024-09-15T21:00:00+00:00",
+      "target_last_utc": "2026-05-03T05:00:00+00:00",
+      "fields": {
+        "shortwave_radiation_previous_day1": {
+          "available": 14265,
+          "null": 0
+        },
+        "cloud_cover_previous_day1": {
+          "available": 14265,
+          "null": 0
+        },
+        "shortwave_radiation_previous_day2": {
+          "available": 14265,
+          "null": 0
+        },
+        "cloud_cover_previous_day2": {
+          "available": 14136,
+          "null": 129
+        }
+      }
+    }
+  },
+  "split_definition": "Original chronological 60/20/20 split, checked against both saved evaluation timestamp sets. Final training is train plus validation. No 24-hour purge is applied in these original split counts.",
+  "clock": "Archive UTC epoch seconds. Original naive CSV origin labels are interpreted at recovered fixed +03:00, not Europe/Nicosia DST. Target = origin + 24 hours.",
+  "availability_limit": "day1/day2 are provider-declared nominal previous-day offsets, not verified issuance or publication times. At target = origin +24h, day1 is nominally at origin and day2 nominally 24h before origin. Saved coverage does not prove live availability or original operational vintages.",
+  "work_performed": "Only timestamps and weather fields were inspected. No outcome values, predictions, training or skill metrics were used. No network requests made."
+}

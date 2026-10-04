@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "commit": "85097a560769ad8a1459ce55f0b3a4c301202405",
+  "source_sha256": {
+    "data/paphos_weather_datav2.csv": "fddc4a130f6c4a701521cacd6c60b4603785c335278e339a67060eff7ef14cf2",
+    "data/paphos_nwp_data.csv": "ce05eb96179b4d037f82d87ceda47b9221b302f1b681096f5ef4d6523855d96b",
+    "data/featuresv2.csv": "df9a38fa7c17ab7021c4560de77a72a6d5e9914f982739997634726414d863d9"
+  },
+  "script_sha256": "953b8fadc0ccd9d27d2f4b1e8b68044129030dd22fe973ffc7735832a2516749",
+  "raw_grids": {
+    "weather": {
+      "rows": 24048,
+      "first": "2024-01-01 00:00:00",
+      "last": "2026-09-28 23:00:00",
+      "non_hourly_gaps": []
+    },
+    "nwp": {
+      "rows": 24048,
+      "first": "2024-01-01 00:00:00",
+      "last": "2026-09-28 23:00:00",
+      "non_hourly_gaps": []
+    },
+    "union": {
+      "rows": 24048,
+      "first": "2024-01-01 00:00:00",
+      "last": "2026-09-28 23:00:00",
+      "non_hourly_gaps": []
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 16444,
+      "first": "2024-01-18 15:00:00",
+      "last": "2025-12-03 18:00:00",
+      "target_shift_not_24h": [],
+      "lag_shift_not_24h": [],
+      "training_rows_excluded": 0,
+      "both_nwp_values_match_shifted_raw": true,
+      "past_radiation_matches_raw": true,
+      "target_values_checked": true
+    },
+    "validation": {
+      "rows": 3566,
+      "first": "2025-12-04 19:00:00",
+      "last": "2026-05-02 08:00:00",
+      "target_shift_not_24h": [],
+      "lag_shift_not_24h": [],
+      "training_rows_excluded": 0,
+      "both_nwp_values_match_shifted_raw": true,
+      "past_radiation_matches_raw": true,
+      "target_values_checked": false
+    }
+  },
+  "note": "Source union grids are hourly. All retained train and validation row shifts equal 24 physical clock hours. No rows need alignment exclusion. Validation target values and all test metrics were not used."
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "Post-run user criterion, not a frozen selection rule",
+  "rule": "Strictly higher validation F1 than fixed008 and no additional false positives, with precision and recall reported.",
+  "summary_sha256": "ed8fd68bba300260e948eb7602ef9a5aa684e01c4bd2946533a251173789a7a4",
+  "script_sha256": "0eec557d28d43116d7f5a9a349d5876f5263d6b4fec7cc54b72aa04ce0d0168a",
+  "results": {
+    "logistic": {
+      "passes": false,
+      "delta_tp": -3,
+      "delta_fp": 5,
+      "delta_f1_exact": "-292/22425",
+      "precision": 0.9115646258503401,
+      "recall": 0.8758169934640523
+    },
+    "boosted": {
+      "passes": false,
+      "delta_tp": -1,
+      "delta_fp": 12,
+      "delta_f1_exact": "-1193/60697",
+      "precision": 0.8910891089108911,
+      "recall": 0.8823529411764706
+    }
+  },
+  "action": "Neither head qualifies. No threshold change, new fit or model promotion."
+}

@@ -1,0 +1,273 @@
+{
+  "frozen_at_utc": "2026-10-04T13:06:38.013168+00:00",
+  "lock_sha256": "979a3ad8381496671a77c140168a62bbab86d967fa85c91481c2f469dac163dd",
+  "selected_training_thresholds": {
+    "logistic": {
+      "tick": 85,
+      "threshold": 0.425,
+      "tp": 1348,
+      "fp": 86,
+      "fn": 76,
+      "tn": 6573,
+      "precision": 0.9400278940027894,
+      "recall": 0.9466292134831461,
+      "f1": 0.9433170048985304,
+      "f1_exact": "1348/1429"
+    },
+    "boosted": {
+      "tick": 77,
+      "threshold": 0.385,
+      "tp": 1350,
+      "fp": 81,
+      "fn": 74,
+      "tn": 6578,
+      "precision": 0.9433962264150944,
+      "recall": 0.9480337078651685,
+      "f1": 0.9457092819614711,
+      "f1_exact": "540/571"
+    }
+  },
+  "base_fits": [
+    {
+      "label": "fold1",
+      "outer_rows": 3921,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2024-06-29 23:00:00",
+      "outer_target_last": "2024-06-30 23:00:00",
+      "inner_fit_rows": 3225,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2024-06-01 23:00:00",
+      "inner_stop_origin_first": "2024-06-02 00:00:00",
+      "selected_trees": 121,
+      "held_origin_first": "2024-07-01 00:00:00",
+      "held_origin_last": "2024-09-30 23:00:00",
+      "held_rows": 2208
+    },
+    {
+      "label": "fold2",
+      "outer_rows": 6129,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2024-09-29 23:00:00",
+      "outer_target_last": "2024-09-30 23:00:00",
+      "inner_fit_rows": 5433,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2024-09-01 23:00:00",
+      "inner_stop_origin_first": "2024-09-02 00:00:00",
+      "selected_trees": 187,
+      "held_origin_first": "2024-10-01 00:00:00",
+      "held_origin_last": "2024-12-31 23:00:00",
+      "held_rows": 2208
+    },
+    {
+      "label": "fold3",
+      "outer_rows": 8337,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2024-12-30 23:00:00",
+      "outer_target_last": "2024-12-31 23:00:00",
+      "inner_fit_rows": 7641,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2024-12-02 23:00:00",
+      "inner_stop_origin_first": "2024-12-03 00:00:00",
+      "selected_trees": 142,
+      "held_origin_first": "2025-01-01 00:00:00",
+      "held_origin_last": "2025-03-31 23:00:00",
+      "held_rows": 2160
+    },
+    {
+      "label": "fold4",
+      "outer_rows": 10497,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2025-03-30 23:00:00",
+      "outer_target_last": "2025-03-31 23:00:00",
+      "inner_fit_rows": 9801,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2025-03-02 23:00:00",
+      "inner_stop_origin_first": "2025-03-03 00:00:00",
+      "selected_trees": 137,
+      "held_origin_first": "2025-04-01 00:00:00",
+      "held_origin_last": "2025-06-30 23:00:00",
+      "held_rows": 2184
+    },
+    {
+      "label": "fold5",
+      "outer_rows": 12681,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2025-06-29 23:00:00",
+      "outer_target_last": "2025-06-30 23:00:00",
+      "inner_fit_rows": 11985,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2025-06-01 23:00:00",
+      "inner_stop_origin_first": "2025-06-02 00:00:00",
+      "selected_trees": 145,
+      "held_origin_first": "2025-07-01 00:00:00",
+      "held_origin_last": "2025-09-30 23:00:00",
+      "held_rows": 2208
+    },
+    {
+      "label": "fold6",
+      "outer_rows": 14889,
+      "outer_origin_first": "2024-01-18 15:00:00",
+      "outer_origin_last": "2025-09-29 23:00:00",
+      "outer_target_last": "2025-09-30 23:00:00",
+      "inner_fit_rows": 14193,
+      "inner_stop_rows": 672,
+      "inner_fit_target_last": "2025-09-01 23:00:00",
+      "inner_stop_origin_first": "2025-09-02 00:00:00",
+      "selected_trees": 153,
+      "held_origin_first": "2025-10-01 00:00:00",
+      "held_origin_last": "2025-12-03 18:00:00",
+      "held_rows": 1531
+    }
+  ],
+  "final_base": {
+    "label": "final",
+    "outer_rows": 16444,
+    "outer_origin_first": "2024-01-18 15:00:00",
+    "outer_origin_last": "2025-12-03 18:00:00",
+    "outer_target_last": "2025-12-04 18:00:00",
+    "inner_fit_rows": 15748,
+    "inner_stop_rows": 672,
+    "inner_fit_target_last": "2025-11-05 18:00:00",
+    "inner_stop_origin_first": "2025-11-05 19:00:00",
+    "selected_trees": 159
+  },
+  "head_fits": [
+    {
+      "arm": "logistic",
+      "held_fold": 3,
+      "fit_rows": 4392,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00",
+      "held_rows": 2160
+    },
+    {
+      "arm": "logistic",
+      "held_fold": 4,
+      "fit_rows": 6552,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00",
+      "held_rows": 2184
+    },
+    {
+      "arm": "logistic",
+      "held_fold": 5,
+      "fit_rows": 8736,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00",
+      "held_rows": 2208
+    },
+    {
+      "arm": "logistic",
+      "held_fold": 6,
+      "fit_rows": 10944,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00",
+      "held_rows": 1531
+    },
+    {
+      "arm": "boosted",
+      "held_fold": 3,
+      "fit_rows": 4392,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00",
+      "held_rows": 2160
+    },
+    {
+      "arm": "boosted",
+      "held_fold": 4,
+      "fit_rows": 6552,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00",
+      "held_rows": 2184
+    },
+    {
+      "arm": "boosted",
+      "held_fold": 5,
+      "fit_rows": 8736,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00",
+      "held_rows": 2208
+    },
+    {
+      "arm": "boosted",
+      "held_fold": 6,
+      "fit_rows": 10944,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00",
+      "held_rows": 1531
+    }
+  ],
+  "heads": {
+    "logistic": {
+      "features": [
+        "base_margin",
+        "nwp_minus_base",
+        "nwp_cloud",
+        "margin_cloud",
+        "hour_sin",
+        "hour_cos",
+        "month_sin",
+        "month_cos"
+      ],
+      "coefficients": [
+        4.3210594513275105,
+        1.1267576623868454,
+        0.2926237337639182,
+        -2.679481307877689,
+        -0.8063852611997013,
+        -2.7228879014533494,
+        0.24151294144416838,
+        -1.2355860788469393
+      ],
+      "intercept": -2.4610133472120688,
+      "classes": [
+        false,
+        true
+      ]
+    },
+    "boosted": {
+      "features": [
+        "base_margin",
+        "nwp_minus_base",
+        "nwp_cloud",
+        "margin_cloud",
+        "hour_sin",
+        "hour_cos",
+        "month_sin",
+        "month_cos"
+      ],
+      "parameters": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.03,
+        "max_depth": 3,
+        "min_child_samples": 100,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 150,
+        "n_jobs": 2,
+        "num_leaves": 7,
+        "objective": "binary",
+        "random_state": 0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    }
+  },
+  "frozen_prediction_files_sha256": {
+    "final-base.txt": "c96cdeb8cedaf4a41ba37311423d735cccd610cd4026bedaf0003170404e3997",
+    "logistic-model.json": "6b99b1e6b3399d889693449d7259c6707753d0ff2687e1ac34aed35b9a1615cd",
+    "boosted-head.txt": "47958231601bacbb75f330c32d9ad5fe6dc9df46766e25afc9b9bf958c731fe0",
+    "validation-decisions.csv": "731012afe968e520071ebfc5c5d054316874d9ec85940e0dee3b7a16c536154f"
+  },
+  "validation_decisions_sha256": "731012afe968e520071ebfc5c5d054316874d9ec85940e0dee3b7a16c536154f",
+  "statement": "All fits, thresholds, radiation predictions and event decisions frozen before parsing validation outcomes."
+}

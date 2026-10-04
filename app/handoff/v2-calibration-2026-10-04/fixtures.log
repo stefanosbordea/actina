@@ -1,0 +1,9 @@
+test_exact_ranking_does_not_round_close_ratios (test_threshold.ThresholdTests.test_exact_ranking_does_not_round_close_ratios) ... ok
+test_grid_tie_prefers_nearest_600_then_higher (test_threshold.ThresholdTests.test_grid_tie_prefers_nearest_600_then_higher) ... ok
+test_strict_truth_and_prediction_boundaries (test_threshold.ThresholdTests.test_strict_truth_and_prediction_boundaries) ... ok
+test_undefined_and_unpaired_inputs_fail_closed (test_threshold.ThresholdTests.test_undefined_and_unpaired_inputs_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

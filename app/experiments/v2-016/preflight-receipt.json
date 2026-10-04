@@ -1,0 +1,35 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/v2-016",
+    "-p",
+    "test_run.py",
+    "-v"
+  ],
+  "attempts": [
+    {
+      "log": "preflight-tests-001.log",
+      "exit_code": 1,
+      "note": "Synthetic fixture used mixed timestamp text formats. No historical model was fitted."
+    },
+    {
+      "log": "preflight-tests-002.log",
+      "exit_code": 0,
+      "tests": 6
+    },
+    {
+      "log": "preflight-tests-003.log",
+      "exit_code": 0,
+      "tests": 8
+    }
+  ],
+  "log_sha256": {
+    "preflight-tests-003.log": "1628c61b9782e8410353e2a1f662c95b0076a0893d611893ebcc3b238faababb",
+    "preflight-tests-002.log": "8a210b5a296823ec23c52080b4ab37446114e55344abbe9dab352ebb4555c34c",
+    "preflight-tests-001.log": "08b27fd65528f00c13a8efcb3103ceee41c2a41dd87bd19df823e7090344d015"
+  }
+}

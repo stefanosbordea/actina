@@ -23,6 +23,8 @@ The incoming `forecast` column differs from the retained day2 control in 1,721 h
 
 V2 therefore passes a comparison against **its supplied raw forecast**. It does not meet the **earlier approximately 0.90 control**. Reconcile the intended forecast source with Stefanos before calling that gate passed. This report does not choose or train his next model.
 
+[Exact ECMWF request and field availability](weather-source/ecmwf-source.md) identifies `models=ecmwf_ifs025`, the original URL and timestamp convention. The retained day1 radiation and cloud fields cover every original train, validation and test target. Day2 cloud has 129 missing validation hours. The source check does not score a new model or imply that swapping weather inputs will preserve the same gain.
+
 The 008 row is the previously selected `consensus_two_source` event correction, with fixed retain probability >0.50 and add probability >0.60. That policy was selected on this validation set. It is shown because the handoff requested the saved classifier, not as an untouched validation estimate. V2 also uses validation for early stopping. Weather-model radiation is a proxy reference, not a field sensor or observed curtailment. Archive files do not establish live issuance availability.
 
 ## Evidence and reproduction

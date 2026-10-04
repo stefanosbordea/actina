@@ -1,51 +1,52 @@
 # Aktina application
 
-Website, review tools, evaluation fixtures and editable presentation materials by Loukas Louka.
+The site presents Stefanos's retained forecasts and schedule. Evaluation, separate research, review tools and delivery materials are kept alongside it. See the [model map](../docs/MODEL-MAP.md) before comparing v1, v2 or experiment 008.
 
-Stefanos's authoritative model, predictions and scheduler remain at the repository root in `model/`, `eval/` and `data/`. The earlier AquaShift reference experiment is retained separately inside this application directory; it is not Stefanos's model.
+## Open the demo
 
-## Current model demo
-
-[Open Aktina](https://aktina-pafos-2026.vercel.app/).
+From the repository root:
 
 ```sh
-cd app
-node build.mjs
-python3 -m http.server 8527 --bind 127.0.0.1 --directory dist
+node app/build.mjs
+python3 -m http.server 8527 --bind 127.0.0.1 --directory app/dist
 ```
 
-Open `http://127.0.0.1:8527/` in a browser. All charts, fonts and input files are local; the demo needs no internet connection or external API. Deploy `app/` with its included Vercel configuration.
+Open `http://127.0.0.1:8527/`, or the [published demo](https://aktina-pafos-2026.vercel.app/). The build copies `site/` to `dist/` and the earlier review workspace to `dist/workspace/`. Fonts, charts and data are bundled locally. No training, model dependencies or external API calls are required. [Vercel configuration](vercel.json) uses this same build.
 
-`site/` presents the supplied schedule and the separately retained LightGBM predictions. `tools/prepare_demo.py` packages the source CSVs without fitting a model or changing a schedule.
+Open `/forecast.html` for the [v2 forecast view](site/forecast.html). It displays Stefanos's retained radiation curve, actual values and the two distinct weather controls. Event calls default to >600, with the retained validation-selected 562 threshold and 008 calls available for comparison. Changing the event view leaves the radiation curve and supplied schedule unchanged. [The packager](tools/prepare_forecast_demo.py) verifies source identities and matched hours before writing `site/forecast-data.js`. It does not train or select a model.
 
-The supplied `eval/schedule_hourly.csv` at commit `2a093ab` is reproduced byte for byte by selecting persistence in the scheduler. The unchanged model-driven scheduler has also been run separately: it changes 469 production hours. See [the reproduction and both outputs](handoff/scheduler-reproduction/README.md). The website keeps the supplied plans unchanged and distinguishes them from the LightGBM forecast; confirmation of the intended export is pending.
+The supplied schedule matches a persistence-driven scheduler export. A separate run of the unchanged model-driven scheduler changes 469 production hours. The site preserves the supplied schedule and shows the model forecast separately. [Reproduction and both outputs](handoff/scheduler-reproduction/README.md) explain the difference.
 
-## AktinaBench
+## Where work belongs
 
-Open `/benchmark.html` for the full original forecast comparison and six fixed improvement experiments, including a neural classifier. Both periods, all monthly/hourly errors and downloadable slide figures are included. No candidate improves F1, precision and recall together over test persistence. Original model files remain untouched.
+| Path | Purpose |
+|---|---|
+| [site/](site/) | Current demo, AktinaBench and packaged assets |
+| [build.mjs](build.mjs), `dist/` | Static build and generated output |
+| [tools/](tools/) | Data packaging, hour-membership checks, forecast comparison and delivery packaging |
+| [experiments/](experiments/README.md) | Separate research models, frozen protocols, retained results and independent reviews |
+| [handoff/](handoff/) | Received files, comparisons, provenance, execution receipts and draft status |
+| [delivery/](delivery/) | Presentation, silent video and editable sources, including older versions |
+| [web/](web/) | Earlier review workspace, retained at `/workspace/` in the build |
+| [scripts/](scripts/) | Workspace, document and video utilities. Individual scripts may write outputs |
+| [model/](model/), [data/](data/), [eval/](eval/), [results/](results/) | Earlier reference prototype and its evidence, separate from Stefanos's root directories |
 
-See [the experiment](experiments/f1-001/README.md) and [remaining delivery work](handoff/DELIVERY-STATUS.md). Repackage retained results with `python3 app/tools/package_benchmark.py` from the repository root.
+[prepare_demo.py](tools/prepare_demo.py) checks target-hour joins, complete days and water balance before packaging the original CSVs. [package_benchmark.py](tools/package_benchmark.py) checks retained evaluation membership before copying benchmark results. Both write site assets, so rebuilding the existing site does not require running them. [compare_prediction_versions.py](tools/compare_prediction_versions.py) scores supplied files without fitting and refuses changed truth on shared hours.
 
-Further [forecast research](experiments/README.md) covers purged models, archived ECMWF/GFS inputs, conditional residual scenarios and joint weather/satellite supervision. These results are separate from the website's original comparison. No learned candidate has passed the stronger weather-forecast control on all required metrics under both references; all unsuccessful results remain available.
+## Evaluation and research
 
-The [silent 60-second Aktina backup, version 2](delivery/Aktina-Backup-v2.mp4) shows the supplied demo and rebuilt benchmark, including the original forecast and direct classifier against the previous-day reference. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-v2-Source/README.md) are included. The [first walkthrough](delivery/Aktina-Backup.mp4) and [its source](delivery/Aktina-Backup-Source/README.md) remain unchanged. The video retains the benchmark name visible when its screenshots were captured; a final-name refresh is pending.
+`/benchmark.html` presents the original supplied forecast comparison and retained early experiments. It is not a live v2 model service. The [new v2 validation report](handoff/v2-validation-2026-10-04/README.md) records the separately received 4 October handoff at the fixed >600 W/m² threshold. [Version and calibration status](../docs/MODEL-MAP.md#current-evaluation-status) distinguishes that published result from the later threshold scan and newly resumed extension work.
 
-## Existing review workspace
+[008](experiments/f1-008/README.md) is a separate event model trained from scratch. It improves five of six historical test event metrics against the archived ECMWF control, with a weather-precision regression. [009](experiments/f1-009/README.md) narrowly improves all six against raw NWP, but weather median MAE worsens and five event metrics regress against 008. Neither result establishes a general replacement or live superiority. [All research and retained failures](experiments/README.md) remain available.
+
+## Delivery and earlier workspace
+
+The retained [competition pack](delivery/Aktina-Competition-Pack.zip) predates the latest v2 forecast view and needs repackaging to include it. The [PowerPoint](delivery/Aktina-Pafos-2026.pptx) and [silent final video](delivery/Aktina-Backup-Final.mp4) remain available with their sources. Use the [delivery status](handoff/DELIVERY-STATUS.md) and [packaging guide](tools/PACKAGING.md) to identify reviewed versions. Older AquaShift files remain historical evidence.
+
+To open the earlier review workspace directly without opening a browser automatically:
 
 ```sh
-cd app
-python3 scripts/serve_workspace.py --no-browser
+python3 app/scripts/serve_workspace.py --no-browser
 ```
 
-Open the printed localhost address. The workspace needs only Python 3; no model packages or internet connection are required. It contains plan reviews, water accounting, prediction intake, supplied-file validation and observation review.
-
-Run its full release checks with Node 24 and Python 3:
-
-```sh
-cd app
-python3 scripts/verify_release.py --install --output build/release-check
-```
-
-`web/` contains the website and tests. `delivery/` contains the earlier AquaShift slides, PDFs, video, editable LaTeX and Blender sources. These retain their original dates and reference-data basis; they are not the updated Aktina submission. `results/` contains retained reference results and independent test inputs. Third-party licenses remain alongside their assets.
-
-The application is a historical, illustrative demonstration. It has no plant control connection. Imported review files stay in the browser unless a user exports and shares them.
+It contains plan, prediction and water-accounting reviews. Imported files stay in the browser unless exported. The application uses historical data and illustrative assumptions. It has no plant-control connection or measured-savings claim.

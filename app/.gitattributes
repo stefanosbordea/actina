@@ -9,3 +9,6 @@ experiments/prospective-001/capture-*/capture/payloads/*.bin binary
 # Matplotlib emits spaces in multiline SVG path coordinates.
 experiments/f1-001/*.svg -whitespace
 site/figures/*.svg -whitespace
+# Retained upstream source snapshots preserve their original bytes and spacing.
+handoff/v2-validation-2026-10-04/inputs/*.py -text -whitespace
+experiments/v2-016/inputs/*.py -text -whitespace

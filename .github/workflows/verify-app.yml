@@ -34,6 +34,10 @@ jobs:
         run: |
           python -m unittest discover -s app/tools -p "test_*.py" -v
           python app/handoff/v2-validation-2026-10-04/independent-check.py --check
+          python app/handoff/v2-validation-2026-10-04/weather-source/check.py --check
+          python app/handoff/v2-calibration-2026-10-04/review.py --check
+          python -m unittest discover -s app/experiments/v2-016 -p test_run.py -v
+          python -c "import json, runpy; from pathlib import Path; audit = runpy.run_path('app/experiments/v2-016/review/review.py'); result = audit['audit'](); Path('app/build/release-check/model016-replay.json').write_text(json.dumps(result, indent=2)); print(result['status'])"
           python -m unittest discover -s app/tests -p test_review_pack.py -v
           python app/experiments/f1-001/check_audit.py
           python -m unittest discover -s app/experiments/prospective-001 -p test_capture.py -v
@@ -52,6 +56,7 @@ jobs:
           python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-005/review/paired-bootstrap-review.py'); print(json.dumps(audit['main']()['checks']))"
           node app/tools/test_demo.mjs
           node app/tools/test_benchmark_ui.mjs
+          node app/tools/test_forecast_demo.mjs
           node app/build.mjs
       - name: Replay saved neural and daily forecasts
         env:

@@ -11,6 +11,8 @@
 
 ## Mechanism and result
 
+008 is a separate experimental event predictor for the same Aktina project. It reuses the project's weather data and evaluation periods, adds archived ECMWF/GFS information and trains fresh LightGBM models. It does not load or continue Stefanos's trained weights, and his model's predictions are comparison controls rather than input features. The selected arm fits a cross-entropy LightGBM regressor to weather/satellite event targets, then applies the saved correction rule. This is research modelling alongside the evaluation work, not merely a tool that calculates F1. It uses an established learning method informed by academic research, not a new learning algorithm invented from scratch.
+
 NOAA GFS radiation adds target-day information to the existing ECMWF-based features. The learner also sees the difference between the forecasts and its magnitude. A second decision rule permits separate score thresholds for adding and removing ECMWF's high-solar calls. These scores are not proven calibrated confidence estimates.
 
 Four fixed arms distinguish information from decision policy: weather-only or joint-reference training, each with and without GFS. The two no-GFS arms reuse saved models' probabilities. Every arm receives the same 121-pair validation policy search. Only four new fits were needed. No source, configuration, seed or cutoff was changed after the test.
