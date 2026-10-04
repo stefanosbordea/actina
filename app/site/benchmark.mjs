@@ -35,15 +35,15 @@ function scatter() {
   const left=42,right=width-15,top=24,bottom=height-42;
   const x=v=>left+(100*v-low)/(high-low)*(right-left),y=v=>bottom-(100*v-low)/(high-low)*(bottom-top);
   let drawing='<title>Precision and recall for current comparisons</title><desc>Higher values are better. Earlier experiments remain available in the method selector and full table.</desc>';
-  for(let t=low;t<=high;t+=step){const px=x(t/100),py=y(t/100);drawing+=`<path d="M${px} ${top}V${bottom}M${left} ${py}H${right}" stroke="#29313e" fill="none"/><text x="${px}" y="${bottom+19}" text-anchor="middle">${t}%</text><text x="${left-10}" y="${py+4}" text-anchor="end">${t}%</text>`;}
+  for(let t=low;t<=high;t+=step){const px=x(t/100),py=y(t/100);drawing+=`<path d="M${px} ${top}V${bottom}M${left} ${py}H${right}" stroke="#303030" fill="none"/><text x="${px}" y="${bottom+19}" text-anchor="middle">${t}%</text><text x="${left-10}" y="${py+4}" text-anchor="end">${t}%</text>`;}
   drawing+=`<text x="${left}" y="11">Recall</text><text x="${right}" y="${height-2}" text-anchor="end">Precision</text>`;
   const chosen=rows.find(r=>r.key===selected);
-  if(chosen)drawing+=`<path d="M${left} ${y(chosen.recall)}H${x(chosen.precision)}V${bottom}" stroke="#69d7eb" opacity=".28" stroke-dasharray="3 4" fill="none"/>`;
+  if(chosen)drawing+=`<path d="M${left} ${y(chosen.recall)}H${x(chosen.precision)}V${bottom}" stroke="#ffffff" opacity=".28" stroke-dasharray="3 4" fill="none"/>`;
   for(const r of rows.sort((a,b)=>(a.key===selected)-(b.key===selected))){
     const px=x(r.precision),py=y(r.recall),active=r.key===selected,baseline=r.key==='persistence';
-    const marker=baseline?`<path d="m0 -6 6 6 -6 6 -6-6Z" fill="#eef2f8"/>`:`<circle r="${active?6:4.5}" fill="${active?'#69d7eb':'#6682a6'}"/>`;
-    drawing+=`<g class="plot-point" data-point="${r.key}" role="button" tabindex="0" aria-label="${escape(methods[r.key][0])}, precision ${percent(r.precision)}, recall ${percent(r.recall)}" aria-pressed="${active}" transform="translate(${px} ${py})"><title>${escape(methods[r.key][0])}: precision ${percent(r.precision)}, recall ${percent(r.recall)}</title><circle class="point-halo" r="17"/>${active?'<circle r="12" fill="#69d7eb12" stroke="#69d7eb" stroke-opacity=".45"/>':''}${marker}</g>`;
-    if(active||baseline){const anchor=px>width*.64?'end':'start',dx=anchor==='end'?-10:10;drawing+=`<text x="${px+dx}" y="${py-13}" text-anchor="${anchor}" style="fill:${active?'#d7f7fc':'#d7dfeb'};font-size:10px">${baseline?'Previous day':'Selected'}</text>`;}
+    const marker=baseline?`<path d="m0 -6 6 6 -6 6 -6-6Z" fill="#aaaaaa"/>`:`<circle r="${active?6:4.5}" fill="${active?'#ffffff':'#6b6b6b'}"/>`;
+    drawing+=`<g class="plot-point" data-point="${r.key}" role="button" tabindex="0" aria-label="${escape(methods[r.key][0])}, precision ${percent(r.precision)}, recall ${percent(r.recall)}" aria-pressed="${active}" transform="translate(${px} ${py})"><title>${escape(methods[r.key][0])}: precision ${percent(r.precision)}, recall ${percent(r.recall)}</title><circle class="point-halo" r="17"/>${active?'<circle r="12" fill="#ffffff14" stroke="#ffffff" stroke-opacity=".45"/>':''}${marker}</g>`;
+    if(active||baseline){const anchor=px>width*.64?'end':'start',dx=anchor==='end'?-10:10;drawing+=`<text x="${px+dx}" y="${py-13}" text-anchor="${anchor}" style="fill:${active?'#ffffff':'#bbbbbb'};font-size:10px">${baseline?'Previous day':'Selected'}</text>`;}
   }
   $('tradeoff-chart').innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="group" aria-label="Interactive precision and recall comparison">${drawing}</svg>`;
 }
@@ -59,10 +59,10 @@ function renderComparison() {
   });
   $('metric-comparison').innerHTML=[['precision','Precision'],['recall','Recall'],['f1','F1']].map(([key,label])=>`<section class="metric"><h3>${label}</h3><div class="metric-values"><strong>${percent(m[key])}</strong><span aria-label="Previous-day ${label}: ${percent(b[key])}">${percent(b[key])}</span></div>${delta(m[key],b[key])}</section>`).join('');
   const all=['precision','recall','f1'];
-  $('verdict').textContent=selected==='persistence'?'Reference method: repeat the previous day’s radiation at the same hour.':all.some(k=>m[k]==null||b[k]==null)?'One or more scores are undefined for these observations.':all.every(k=>m[k]>b[k])?'Higher precision, recall and F1 than the previous-day forecast for this period.':all.every(k=>m[k]<b[k])?'The previous-day forecast leads on all three scores for this period.':'A tradeoff against the previous-day forecast; no improvement across all three scores.';
+  $('verdict').textContent=selected==='persistence'?'Reference method: repeat the previous day’s radiation at the same hour.':all.some(k=>m[k]==null||b[k]==null)?'One or more scores are undefined for these observations.':all.every(k=>m[k]>b[k])?'Higher precision, recall and F1 than the previous-day forecast for this period.':all.every(k=>m[k]<b[k])?'The previous-day forecast leads on all three scores for this period.':'A tradeoff against the previous-day forecast. No improvement across all three scores.';
   $('outcome-summary').innerHTML=`<div><strong>${m.fp}</strong><span>false calls<small>${b.fp} with the previous-day forecast</small></span></div><div><strong>${m.fn}</strong><span>missed hours<small>${b.fn} with the previous-day forecast</small></span></div>`;
   $('confusion').innerHTML=[[methods[selected][0],m],['Previous-day forecast',b]].map(([name,r])=>`<section><h3>${escape(name)}</h3><dl><dt>Correct positive predictions</dt><dd>${r.tp}</dd><dt>False positive predictions</dt><dd>${r.fp}</dd><dt>Missed positive hours</dt><dd>${r.fn}</dd><dt>Correct negative predictions</dt><dd>${r.tn}</dd></dl></section>`).join('');
-  $('selection-note').textContent=data.research?.methods[selected]?(selected==='analogue_raw'?'Research prototype; did not pass the stronger weather-forecast control for release.':'Fixed archived forecast; historical publication timing is unverified. No live-accuracy claim.'):selected===data.experiment.selected_on_validation?'Selected by validation F1; this does not establish lower operating costs.':stage==='test'?'Retrospective test against model-derived weather values.':'Validation informed model and cutoff selection; it is not an untouched test.';
+  $('selection-note').textContent=data.research?.methods[selected]?(selected==='analogue_raw'?'Research prototype. It did not pass the stronger weather-forecast control for release.':'Fixed archived forecast. Historical publication timing is unverified. No live-accuracy claim.'):selected===data.experiment.selected_on_validation?'Selected by validation F1. This does not establish lower operating costs.':stage==='test'?'Retrospective test against model-derived weather values.':'Validation informed model and cutoff selection. It is not an untouched test.';
   scatter();
 }
 function renderErrors() {
@@ -75,22 +75,22 @@ function renderErrors() {
   const width=Math.max(230,$('error-chart').getBoundingClientRect().width||640),height=monthly?rows.length*42+35:285;
   const max=Math.max(1,...rows.flatMap(r=>[r.model.mae_w_m2,r.persistence.mae_w_m2]));
   let drawing='';
-  if(monthly){const plot=width-116;drawing=rows.map((r,i)=>{const y=i*42+8;return `<text x="0" y="${y+14}" style="font-size:10px">${new Date(r.month+'-01T12:00:00').toLocaleDateString('en-GB',{month:'short'})}</text><rect x="49" y="${y}" width="${plot*r.model.mae_w_m2/max}" height="7" rx="2" fill="#69d7eb"/><rect x="49" y="${y+12}" width="${plot*r.persistence.mae_w_m2/max}" height="7" rx="2" fill="#9cacc3"/><text x="${width-2}" y="${y+8}" text-anchor="end">${r.model.mae_w_m2.toFixed(1)}</text><text x="${width-2}" y="${y+22}" text-anchor="end">${r.persistence.mae_w_m2.toFixed(1)}</text>`}).join('');}
+  if(monthly){const plot=width-116;drawing=rows.map((r,i)=>{const y=i*42+8;return `<text x="0" y="${y+14}" style="font-size:10px">${new Date(r.month+'-01T12:00:00').toLocaleDateString('en-GB',{month:'short'})}</text><rect x="49" y="${y}" width="${plot*r.model.mae_w_m2/max}" height="7" rx="2" fill="#ffffff"/><rect x="49" y="${y+12}" width="${plot*r.persistence.mae_w_m2/max}" height="7" rx="2" fill="#888888"/><text x="${width-2}" y="${y+8}" text-anchor="end">${r.model.mae_w_m2.toFixed(1)}</text><text x="${width-2}" y="${y+22}" text-anchor="end">${r.persistence.mae_w_m2.toFixed(1)}</text>`}).join('');}
   else{const x=i=>34+i*(width-49)/23,y=v=>245-v/max*215;
-    drawing=[0,.25,.5,.75,1].map(k=>`<path d="M34 ${y(max*k)}H${width-15}" stroke="#29313e"/><text x="26" y="${y(max*k)+4}" text-anchor="end">${(max*k).toFixed(0)}</text>`).join('');
-    drawing+=['model','persistence'].map((key,i)=>`<polyline points="${rows.map((r,j)=>`${x(j)},${y(r[key].mae_w_m2)}`).join(' ')}" fill="none" stroke="${i?'#9cacc3':'#69d7eb'}" stroke-width="2" ${i?'stroke-dasharray="5 4"':''}/>`).join('');
+    drawing=[0,.25,.5,.75,1].map(k=>`<path d="M34 ${y(max*k)}H${width-15}" stroke="#303030"/><text x="26" y="${y(max*k)+4}" text-anchor="end">${(max*k).toFixed(0)}</text>`).join('');
+    drawing+=['model','persistence'].map((key,i)=>`<polyline points="${rows.map((r,j)=>`${x(j)},${y(r[key].mae_w_m2)}`).join(' ')}" fill="none" stroke="${i?'#888888':'#ffffff'}" stroke-width="2" ${i?'stroke-dasharray="5 4"':''}/>`).join('');
     drawing+=[0,6,12,18,23].map(i=>`<text x="${x(i)}" y="268" text-anchor="middle">${String(i).padStart(2,'0')}</text>`).join('');
   }
-  $('error-chart').innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Original forecast and previous-day mean absolute error by ${monthly?'month':'hour'}; exact values in the table below">${drawing}</svg>`;
+  $('error-chart').innerHTML=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Original forecast and previous-day mean absolute error by ${monthly?'month':'hour'}. Exact values in the table below">${drawing}</svg>`;
 }
 function render() {
   const s=split();
   document.querySelectorAll('[data-split]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.split===stage)));
   const date=value=>new Date(value.replace(' ','T')).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-  $('period').textContent=`${date(s.target_start)} – ${date(s.target_end)} / ${s.model.hours.toLocaleString('en')} hours`;
-  $('experiment-caption').textContent=`${stage==='test'?'Test':'Validation'} period; all ${s.model.hours.toLocaleString('en')} retained hours for every method.`;
+  $('period').innerHTML=`<span>${escape(date(s.target_start))} – ${escape(date(s.target_end))}</span> <span>${s.model.hours.toLocaleString('en')} hours</span>`;
+  $('experiment-caption').textContent=`${stage==='test'?'Test':'Validation'} period. All ${s.model.hours.toLocaleString('en')} retained hours for every method.`;
   $('experiment-rows').innerHTML=Object.keys(methods).map(key=>{const r=results(key);return `<tr data-method-result="${key}"><th scope="row">${escape(methods[key][0])}</th><td>${percent(r.precision)}</td><td>${percent(r.recall)}</td><td>${percent(r.f1)}</td><td>${r.fp}</td><td>${r.fn}</td></tr>`}).join('');
-  $('coverage').innerHTML=[['Active period',stage==='test'?'Test':'Validation'],['First target hour',s.target_start],['Last target hour',s.target_end],['Retained hours',s.model.hours.toLocaleString('en')],['Actual positive hours',(s.model.true_positive+s.model.false_negative).toLocaleString('en')],['Clock','Source labels resolve to fixed UTC+03; not a daylight-saving clock']].map(([k,v])=>`<div><dt>${k}</dt><dd>${escape(v)}</dd></div>`).join('');
+  $('coverage').innerHTML=[['Active period',stage==='test'?'Test':'Validation'],['First target hour',s.target_start],['Last target hour',s.target_end],['Retained hours',s.model.hours.toLocaleString('en')],['Actual positive hours',(s.model.true_positive+s.model.false_negative).toLocaleString('en')],['Clock','Source labels resolve to fixed UTC+03. Not a daylight-saving clock']].map(([k,v])=>`<div><dt>${k}</dt><dd>${escape(v)}</dd></div>`).join('');
   renderComparison();renderErrors();
 }
 function choose(key){if(!methods[key])return;selected=key;renderComparison();}
@@ -102,7 +102,7 @@ function showView(next) {
 try {
   if(!data?.original?.splits?.length||data?.experiment?.status!=='COMPLETE')throw Error('Missing report');
   for(const period of ['test','validation'])for(const key of Object.keys(methods)){const s=data.original.splits.find(r=>r.split===period),r=key==='original'?s.model:data.research?.methods[key]?.[period]||data.experiment.methods[key]?.[period]?.selected;if(!r||!Number.isInteger(r.hours)||r.hours<1||r.hours!==s.model.hours||['precision','recall','f1'].some(k=>r[k]!=null&&(!Number.isFinite(r[k])||r[k]<0||r[k]>1)))throw Error('Invalid report');}
-  const option=key=>`<button class="model-option" data-method="${key}" aria-pressed="false"><span>${methods[key][0]}<small>${methods[key][1]}</small></span><strong></strong></button>`;
+  const option=key=>`<button class="model-option" data-method="${key}" aria-pressed="false"><span>${methods[key][0]}</span><strong></strong></button>`;
   $('model-list').innerHTML=currentMethods.map(option).join('')+'<details class="detail-disclosure"><summary>Earlier experiments</summary>'+Object.keys(methods).filter(key=>!currentMethods.includes(key)).map(option).join('')+'</details>';
   $('model-select').innerHTML=Object.entries(methods).map(([key,[name]])=>`<option value="${key}">${name}</option>`).join('');
   $('model-list').addEventListener('click',event=>{const button=event.target.closest('[data-method]');if(button)choose(button.dataset.method);});

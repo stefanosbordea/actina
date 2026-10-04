@@ -29,12 +29,12 @@ function sourceDetails() {
   const a = data.assumptions;
   const forecastStatus = data.source?.schedule_forecast_status;
   $('schedule-status').textContent = forecastStatus === 'matches_persistence'
-    ? 'Schedule forecast matches yesterday’s weather; model-to-plan connection awaiting confirmation.'
+    ? 'Schedule forecast matches yesterday’s weather. Model-to-plan connection awaiting confirmation.'
     : forecastStatus === 'matches_model'
       ? 'The supplied plan’s forecast matches the LightGBM output.'
       : 'The supplied plan’s forecast source is awaiting confirmation.';
   $('forecast-provenance').textContent = forecastStatus === 'matches_persistence'
-    ? 'The sun chart shows the LightGBM predictions. The supplied schedule’s forecast column matches yesterday’s radiation. This does not establish which forecast generated the plan. Production, tank levels and costs are shown unchanged; the model-to-plan connection is awaiting confirmation.'
+    ? 'The sun chart shows the LightGBM predictions. The supplied schedule’s forecast column matches yesterday’s radiation. This does not establish which forecast generated the plan. Production, tank levels and costs are shown unchanged. The model-to-plan connection is awaiting confirmation.'
     : forecastStatus === 'matches_model'
       ? 'The supplied schedule’s forecast column matches the LightGBM predictions. Production and tank levels are shown unchanged from the supplied schedule.'
       : 'The sun chart shows the LightGBM predictions. The supplied schedule’s forecast column has not been confirmed to match those predictions. Production and tank levels are shown unchanged.';
@@ -80,7 +80,7 @@ function renderDay() {
   const surplus = rows.filter((row) => row.actual > a.threshold).length;
   $('surplus-summary').textContent = `${surplus} ${surplus === 1 ? 'hour' : 'hours'} above ${number(a.threshold)} W/m²`;
   const error = (field) => rows.reduce((total, row) => total + Math.abs(row[field] - row.actual), 0) / rows.length;
-  $('forecast-error').textContent = `Average absolute error over 24 hours: LightGBM ${number(error('model_forecast'))} W/m²; yesterday’s weather ${number(error('baseline'))} W/m².`;
+  $('forecast-error').textContent = `Average absolute error over 24 hours: LightGBM ${number(error('model_forecast'))} W/m². Yesterday’s weather ${number(error('baseline'))} W/m².`;
   const changeText = (value) => `${value > 0 ? '+' : ''}${number(value, 1)} m³`;
   $('comparison-note').textContent = productionDifference === 0 && tankChange === 0
     ? 'Same water production and ending storage.'
