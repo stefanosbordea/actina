@@ -127,7 +127,7 @@ export function setupPlanRevision({$,fmt,text,facts,table,reviewTrace,reviewEner
  async function freeze(assessment,token){
   const valueCase=makeRevisionCase({assessment,unit_capacity_m3_h:value('revision-unit'),specific_energy_kwh_m3:value('revision-sec')});sameSource(valueCase);
   const raw=JSON.stringify(valueCase,null,2)+'\n',hash=await sha256(raw);if(token!==generation)return;
-  current={value:valueCase,text:raw,identity:{name:`aquashift-revision-case-${assessment.date??'saved'}.json`,sha256:hash}};showCase();text('revision-proposal-status','');
+  current={value:valueCase,text:raw,identity:{name:`aktina-revision-case-${assessment.date??'saved'}.json`,sha256:hash}};showCase();text('revision-proposal-status','');
  }
  function showInventory(){
   if(!comparison)return;const old=comparison.original.result,next=comparison.revised.result,index=Number($('revision-inspect-hour').value),start=old.start_hour;
@@ -212,8 +212,8 @@ export function setupPlanRevision({$,fmt,text,facts,table,reviewTrace,reviewEner
  $('revision-example').onclick=()=>openCase(async()=>{const response=await fetch('./data/returned-water-example.json');if(!response.ok)throw Error('The illustrative example could not be opened. Try again or open a saved review.');const bytes=await response.arrayBuffer();return readFile({name:'returned-water-example.json',size:bytes.byteLength,arrayBuffer:async()=>bytes},32);});
  $('revision-proposal-file').onchange=async()=>{const token=++generation;clearResult('Checking returned production…');try{if(!current)throw Error('Open a case first.');const file=await readFile($('revision-proposal-file').files[0]);if(token===generation)applyProposal(file);}catch(error){if(token===generation)clearResult(error.message);}};
  $('revision-case-export').onclick=()=>{if(current)download(current.identity.name,current.text,'application/json');};
- $('revision-template').onclick=()=>{if(current)csv('aquashift-return-production.csv',revisionTemplate(current.value,current.identity.sha256));};
- $('revision-solar-template').onclick=()=>{try{if(!comparison)throw Error('Import a valid returned plan first.');sameSource(current.value);json('aquashift-solar-profile.json',solarAllocationTemplate(comparison,$('revision-solar-format').value));}catch(error){$('revision-solar').open=true;$('revision-solar-profile').open=true;text('revision-solar-status',error.message);}};
+ $('revision-template').onclick=()=>{if(current)csv('aktina-return-production.csv',revisionTemplate(current.value,current.identity.sha256));};
+ $('revision-solar-template').onclick=()=>{try{if(!comparison)throw Error('Import a valid returned plan first.');sameSource(current.value);json('aktina-solar-profile.json',solarAllocationTemplate(comparison,$('revision-solar-format').value));}catch(error){$('revision-solar').open=true;$('revision-solar-profile').open=true;text('revision-solar-status',error.message);}};
  $('revision-solar-file').onchange=async()=>{
   const selectedFile=$('revision-solar-file').files[0],parentGeneration=generation,changed=Boolean(solarFile);clearSolar('Checking solar profile…');solarDecisionChanged();
   const token=solarGeneration;solarPending=true;solarControls();
@@ -222,7 +222,7 @@ export function setupPlanRevision({$,fmt,text,facts,table,reviewTrace,reviewEner
   finally{if(token===solarGeneration&&parentGeneration===generation){solarPending=false;solarControls();}}
  };
  $('revision-solar-remove').onclick=()=>{clearSolar();solarDecisionChanged();};
- $('revision-evidence-export').onclick=()=>{try{if(!solarComparison||solarPending)return;const request=solarEvidenceRequest(solarComparison,{case_file:current.identity,proposal_file:proposal.identity,solar_file:solarFile.identity,specific_energy_kwh_m3:current.value.specific_energy_kwh_m3,horizon:{start:comparison.original.result.rows[0].time,end:comparison.original.result.rows.at(-1).end_time}}),raw=JSON.stringify(request,null,2)+'\n';if(new TextEncoder().encode(raw).length>32*1024*1024)throw Error('Evidence request exceeds 32 MiB.');download('aquashift-solar-evidence-request.json',raw,'application/json');}catch(error){$('revision-solar').open=true;$('revision-solar-evidence').open=true;text('revision-evidence-summary',error.message);$('revision-evidence-export').focus();}};
+ $('revision-evidence-export').onclick=()=>{try{if(!solarComparison||solarPending)return;const request=solarEvidenceRequest(solarComparison,{case_file:current.identity,proposal_file:proposal.identity,solar_file:solarFile.identity,specific_energy_kwh_m3:current.value.specific_energy_kwh_m3,horizon:{start:comparison.original.result.rows[0].time,end:comparison.original.result.rows.at(-1).end_time}}),raw=JSON.stringify(request,null,2)+'\n';if(new TextEncoder().encode(raw).length>32*1024*1024)throw Error('Evidence request exceeds 32 MiB.');download('aktina-solar-evidence-request.json',raw,'application/json');}catch(error){$('revision-solar').open=true;$('revision-solar-evidence').open=true;text('revision-evidence-summary',error.message);$('revision-evidence-export').focus();}};
  for(const id of ['revision-author','revision-authority','revision-reviewer','revision-decision','revision-note'])$(id).addEventListener('input',()=>text('revision-review-status',comparison?'Review draft changed. Export records the current statements.':'A matched comparison is required.'));
  $('revision-review-form').onsubmit=e=>{
   e.preventDefault();try{
@@ -233,7 +233,7 @@ export function setupPlanRevision({$,fmt,text,facts,table,reviewTrace,reviewEner
    if(solarFile){record.solar_file={...solarFile.identity,text:solarFile.text};record.solar_comparison=structuredClone(solarComparison);delete record.solar_comparison.difference_envelope.contributions;}
    const raw=JSON.stringify(record,null,2)+'\n';
    if(new TextEncoder().encode(raw).length>32*1024*1024)throw Error('Review exceeds the 32 MiB reopening limit. Use a smaller source file.');
-   download('aquashift-returned-plan-review.json',raw,'application/json');text('revision-decision-label','Record decision');text('revision-review-status','Review exported with the exact case, returned file and recalculated outcomes.');
+   download('aktina-returned-plan-review.json',raw,'application/json');text('revision-decision-label','Record decision');text('revision-review-status','Review exported with the exact case, returned file and recalculated outcomes.');
   }catch(error){$('revision-decision-panel').open=true;if(!$('revision-reviewer').value.trim()){$('revision-inputs').open=true;$('revision-assumptions').open=true;$('revision-reviewer').focus();}else if(!$('revision-note').value.trim()){$('revision-decision-panel').open=true;$('revision-note').focus();}text('revision-review-status',error.message);}
  };
  const currentAction=()=>{const available=Boolean(getAssessment());$('revision-current').hidden=!available;$('revision-test-plan').hidden=available;};currentAction();

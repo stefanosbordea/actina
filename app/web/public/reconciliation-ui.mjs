@@ -90,7 +90,7 @@ export function setupReconciliation({$,fmt,text,facts,table,json,getContext,getR
  $('reconciliation-filter').onchange=()=>{page=0;ledger();};
  $('reconciliation-previous').onclick=()=>{page--;ledger();};$('reconciliation-next').onclick=()=>{page++;ledger();};
  $('reconciliation-day').onclick=()=>{const source=getRecord()?.sourceDeclaration;if(source){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Nicosia',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(source.window.start));if(!selectDay(parts))text('reconciliation-error','No retained plan is available for the observation start day.');render();}};
- $('reconciliation-export').onclick=()=>{if(snapshot())json('aquashift-observed-departures.json',result);};
+ $('reconciliation-export').onclick=()=>{if(snapshot())json('aktina-observed-departures.json',result);};
  function snapshot(){return result&&inputKey===signature()?JSON.parse(JSON.stringify(result)):null;}
  return {render,snapshot,isRestartCurrent};
 }

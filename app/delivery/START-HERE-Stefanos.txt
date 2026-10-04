@@ -1,44 +1,35 @@
-AquaShift — team review
+Aktina — team review
 
-Open: https://aquashift-pafos-2026.vercel.app
-Watch: AquaShift-Concept-and-Prototype.mp4
-Read: AquaShift-Executive-Summary.pdf
+Demo: https://aktina-pafos-2026.vercel.app/
+Evaluation: https://aktina-pafos-2026.vercel.app/benchmark.html
+Review tools: https://aktina-pafos-2026.vercel.app/workspace/#reviews
+Silent backup: Aktina-Backup-v2.mp4
+Current files and remaining work: ../handoff/DELIVERY-STATUS.md
 
-The idea: make drinking water with electricity that would otherwise be curtailed,
-then store water for later. Loucas's original concept and philosophy; Stefanos's
-AquaShift roadmap and pitch develop the team plan.
+The idea: use available solar electricity to make drinking water earlier,
+then store the water for later demand. Weather alone does not establish
+recoverable curtailment or permission to operate a plant.
 
-STORAGE UPDATE
-Scenarios now compares all five tanks across the same 62 report days.
-At 4,000→8,000 m³: +2,652 kWh of retrospective timing overlap, €0 tariff change.
-Open the daily differences to inspect the source evidence. September is unknown.
-The export includes every paired case and source-file identity.
+The demo presents your supplied schedule and separate model predictions.
+AktinaBench covers the full validation and test periods, all months and hours,
+with persistence and six separate prediction experiments. The original test
+baseline loss remains visible; no candidate wins F1, precision and recall
+simultaneously over persistence. Higher recall with more false surplus calls
+is a tradeoff, especially under the roadmap's priority on precision.
 
-TRY THIS
-Choose July 15 and a 4,000 m³ tank. Inspect midday production and evening storage.
-Compare 500 versus 8,000 m³ tanks. Check Evaluation, then Evidence. The EAC report
-window is sourced context; overlap is not a claim of recovered electricity.
-Pilot inputs separately checks declared observation files, units and gaps;
-the example is invented, and an earlier review time withholds later readings.
+The supplied schedule is reproduced byte for byte using persistence. Running
+the unchanged scheduler with model predictions changes 469 production hours.
+Both reproductions are retained in ../handoff/scheduler-reproduction/.
+The demo keeps the supplied export pending confirmation of its replacement.
 
-HANDOFF
-Your primary forecast and scheduler are still yours. The included model and
-plans are independent references. Bring your CSV to Data & model handoff;
-keep model timing and source provenance with it. Loucas's workspace checks
-performance, controls and water constraints, then retains a review record.
+Aktina v2 is in preparation; no replacement model files have been received.
+Your model and scheduler remain at the repository root. Loukas handles
+feature/filter feedback, evaluation and product integration; the separate
+experiments preserve those original files. Andreas Nikolaides and Cleopas
+Cleopa contribute the business case and pitch.
 
-THE RESULT
-The reference has lower RMSE but higher MAE than safe persistence. Assumed
-clock prices account for the scheduling cost difference; no additional AI
-tariff saving is established. Plant/grid recovery and customer savings need
-a pilot with spare plant capacity and usable storage.
-
-FILES
-Technical brief: 3 pages. Business canvas: 1 page. Editable deck: 12 slides.
-Blender-Scene-Source/: three packed editable scenes and reproduction notes.
-Research-for-Stefanos.txt: four focused reads; full references in data/.
-README.md: setup and reproduction. results/: executed checks and limits.
-
-Andreas Nikolaides and Cleopas Cleopa handle the business case and pitch.
-Loucas and Stefanos review technical material. AI assistance is disclosed.
-No contacts, signatures or submission declarations have been filled in.
+The 60-second v2 backup uses actual screenshots and has no audio. Its captures
+retain the benchmark spelling displayed when recorded; a final-name refresh
+is pending. Earlier videos, results and source packs remain historical.
+Review the final submission documents and rehearse the demo together.
+No competition upload, consent, signature or team rehearsal is claimed.

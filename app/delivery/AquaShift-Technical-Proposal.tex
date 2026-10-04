@@ -7,137 +7,131 @@
 \pgfplotsset{compat=1.18}
 \definecolor{navy}{HTML}{171717}\definecolor{teal}{HTML}{242424}
 \definecolor{gold}{HTML}{A0A0A0}\definecolor{pale}{HTML}{F2F2F2}\definecolor{muted}{HTML}{626262}
-\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={AquaShift technical brief},pdfauthor={Loucas Louka; AquaShift team}}
-\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\color{teal} AQUASHIFT}
+\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={Aktina technical brief},pdfauthor={Loukas Louka; Aktina team}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\color{teal} AKTINA}
 \fancyhead[R]{\small TEAM REVIEW DRAFT}\fancyfoot[R]{\small\thepage}
-\fancyfoot[L]{\scriptsize Historical experiment / scenario plant}
+\fancyfoot[L]{\scriptsize Historical weather; illustrative plant}
 \renewcommand{\headrulewidth}{.3pt}\setlength{\headheight}{15pt}
 \setlength{\parindent}{0pt}\setlength{\parskip}{7pt}\color{navy}
 \newcommand{\titleline}[2]{{\small\color{teal} #1}\par\vspace{3mm}{\fontsize{29}{33}\selectfont\bfseries #2}\par\vspace{4mm}}
 \newcommand{\smallhead}[1]{\vspace{3mm}{\large\bfseries #1}\par}
 \begin{document}
-\titleline{01 / SOLUTION DESCRIPTION}{Schedule around storage.}
-Use electricity that would otherwise be curtailed to produce drinking water. Store water for evening demand. This requires spare production capacity, usable tank storage and coordination with the grid operator.
+\titleline{SOLUTION}{Make water. Store it for later.}
+Aktina tests whether a desalination unit and water tank can shift production toward available solar. Recovering electricity that would otherwise be curtailed requires spare plant capacity, usable storage and grid coordination. The demonstration does not measure that recovery.
 
 \begin{center}
-\begin{tikzpicture}[>=Latex,node distance=7mm,box/.style={draw=teal,rounded corners=0mm,fill=pale,align=center,text width=3.3cm,minimum height=1.2cm,font=\small}]
-\node[box] (weather) {Weather + grid signals};
+\begin{tikzpicture}[>=Latex,node distance=7mm,box/.style={draw=teal,fill=pale,align=center,text width=3.3cm,minimum height=1.2cm,font=\small}]
+\node[box] (weather) {Historical weather};
 \node[box,right=of weather] (forecast) {Next-day forecast};
-\node[box,right=of forecast] (schedule) {Production schedule};
-\node[box,below=12mm of schedule] (plant) {Plant + tank limits};
-\node[box,left=of plant] (operator) {Operator review};
-\node[box,left=of operator] (water) {Water supply};
-\draw[->,thick,teal] (weather)--(forecast);\draw[->,thick,teal] (forecast)--(schedule);
-\draw[->,thick,teal] (plant)--(schedule);\draw[->,thick,teal] (schedule.south west)--(operator.north east);
+\node[box,right=of forecast] (schedule) {Supplied schedule};
+\node[box,below=12mm of schedule] (plant) {Declared plant + tank};
+\node[box,left=of plant] (operator) {Review evidence};
+\node[box,left=of operator] (water) {Water + cost checks};
+\draw[->,thick,teal] (weather)--(forecast);
+\draw[->,thick,teal,dashed] (forecast)--(schedule);
+\draw[->,thick,teal] (plant)--(schedule);
+\draw[->,thick,teal] (schedule.south west)--(operator.north east);
 \draw[->,thick,teal] (operator)--(water);
-\draw[->,thick,teal,dashed] (water.west)--++(-.65,0)|-(weather.west);
 \end{tikzpicture}
-\par{\small\color{muted} Proposed pilot loop. Planning uses weather; grid reports are retrospective context.}
+\par{\small\color{muted} Dashed link: the supplied schedule uses persistence, not the displayed LightGBM forecast.}
 \end{center}
 
-\smallhead{Current implementation}
-Historical Paphos weather feeds a LightGBM radiation reference. A constrained scheduler plans one unit and one tank. The workspace connects assets, plans, evaluation, grid evidence and review records. Pilot inputs checks declared observation files, units, gaps and first-available times separately from planning. Streamlit retains the local experiment. No controller or live plant is connected.
+\smallhead{What runs now}
+The demo loads Stefanos's retained files locally: 7,104 hourly schedule rows across 296 complete days, 6 December 2025--28 September 2026. It shows sun, production, tank inventory and illustrative cost. AktinaBench compares every retained validation and test prediction, plus six separate experiments. No model is fitted and no external API is called during the demo.
 
 \begin{center}
 \begin{tabular}{@{}ll@{}}\toprule
-Plant scenario & Fixed setting \\\midrule
-Production limit & $500\ \mathrm{m^3/h}$ \\
-Hourly demand & $120\ \mathrm{m^3/h}$ at the default temperature \\
-Tank & $4{,}000\ \mathrm{m^3}$; safety minimum $20\%$ \\
-Start / end storage & $50\%$ / $50\%$ \\
+Supplied scheduler & Illustrative setting \\\midrule
+Production range & $100$--$400\ \mathrm{m^3/h}$ \\
+Demand & Hourly shape; summer and recorded-temperature factors \\
+Tank / minimum & $4{,}000\ \mathrm{m^3}$ / $800\ \mathrm{m^3}$ \\
+Starting stock & $2{,}000\ \mathrm{m^3}$ at each retained period's start \\
 Specific electricity & $3.4\ \mathrm{kWh/m^3}$ \\
-Assumed tariff & \texteuro101/MWh midday; \texteuro183 evening; \texteuro130 otherwise \\\bottomrule
+Price rule & \texteuro101/MWh if actual radiation $>600\ \mathrm{W/m^2}$; else \texteuro183 \\\bottomrule
 \end{tabular}
 \end{center}
 
-\smallhead{The water balance}
+\smallhead{Keep the water accounting visible}
 \[
-S_{h+1}=S_h+q_h-d_h,\qquad S_{\min}\le S_h\le S_{\max},\qquad 0\le q_h\le q_{\max}.
+S_{h+1}=S_h+q_h-d_h.
 \]
-$S$ is stored water, $q$ production and $d$ demand. The current solver minimises the assumed tariff cost; forecast sunshine breaks ties between equally priced hours. Both schedules finish with the same water and storage. Ramp rates, maintenance and minimum run times need operator data.
+$S$ is stored water, $q$ hourly production and $d$ hourly demand. Stock carries between days within each period; the validation/test simulations restart separately. Equal daily ending stock is not enforced. Inspect production and stock change alongside cost: a cheaper day may draw down the tank. Hourly tank samples cannot establish between-hour or physical plant safety.
 
-\smallhead{Why test machine learning}
-Weather changes the useful production windows. Machine learning combines weather and calendar signals to test whether that timing can be anticipated. Superiority is unproven: the current reference loses on MAE and adds no tariff saving over price-only scheduling. Retain AI only if a new pilot beats competent controls on matched water service, cost or measured renewable absorption. Sunshine itself is not a curtailment measurement.
+\smallhead{Which forecast made the plan?}
+The supplied export is reproduced byte for byte by selecting persistence in the original scheduler. Running Stefanos's unchanged model-driven scheduler separately changes 469 production hours. Both outputs are retained; the website keeps the supplied export unchanged. Stefanos must confirm which schedule is intended for submission. Demand uses recorded target-day temperature, so this remains a retrospective scenario.
 
 \newpage
-\titleline{02 / EVIDENCE}{Inspect one day.}
-15 July 2026 / 4,000 m\textsuperscript{3} tank. The existing scenario moves production into midday and draws stored water later. The shaded band is EAC's reported Group 1 curtailment window, 10:00--14:15.
+\titleline{EVIDENCE}{Show the result and the control.}
+3 July 2026: the supplied plan and flat production each make 5,658 m\textsuperscript{3}. The supplied tank starts and ends at 966 m\textsuperscript{3}. Shading marks actual radiation above 600 W/m\textsuperscript{2}, which triggers the illustrative discount; it is not a curtailment measurement.
 
 \begin{center}
 \begin{tikzpicture}
-\begin{axis}[name=load,width=.47\linewidth,height=5.6cm,xmin=0,xmax=24,ymin=0,ymax=2000,
-xtick={0,6,12,18,24},ylabel={Plant load (kW)},xlabel={Cyprus civil hour},
+\begin{axis}[name=load,width=.47\linewidth,height=5.1cm,xmin=0,xmax=24,ymin=0,ymax=1500,
+xtick={0,6,12,18,24},ylabel={Plant load (kW)},xlabel={Supplied local hour},
 axis line style={muted},tick style={muted},ymajorgrids=true,grid style={muted!15},
 legend style={draw=none,at={(.5,1.02)},anchor=south,legend columns=2,font=\scriptsize}]
-\path[fill=muted!12] (axis cs:10,0) rectangle (axis cs:14.25,2000);
-\addplot[const plot,teal,very thick] coordinates {(0,0)(1,0)(2,0)(3,0)(4,0)(5,0)(6,0)(7,0)(8,0)(9,0)(10,408)(11,884)(12,1700)(13,1700)(14,1700)(15,1700)(16,1700)(17,0)(18,0)(19,0)(20,0)(21,0)(22,0)(23,0)(24,0)};
-\addplot[navy,dashed,thick] coordinates {(0,408)(24,408)};
-\legend{Planned,Flat}
+\path[fill=muted!12] (axis cs:10,0) rectangle (axis cs:18,1500);
+\addplot[const plot,teal,very thick] coordinates {(0,550.8)(1,340)(2,340)(3,340)(4,340)(5,340)(6,1016.6)(7,1016.6)(8,1016.6)(9,1016.6)(10,1360)(11,1360)(12,1360)(13,1360)(14,1360)(15,1360)(16,1360)(17,1360)(18,340)(19,340)(20,340)(21,340)(22,340)(23,340)(24,340)};
+\addplot[navy,dashed,thick] coordinates {(0,801.55)(24,801.55)};
+\legend{Supplied,Flat}
 \end{axis}
-\begin{axis}[at={(load.south east)},anchor=south west,xshift=14mm,width=.47\linewidth,height=5.6cm,xmin=0,xmax=24,ymin=0,ymax=4000,
-xtick={0,6,12,18,24},ylabel={Stored water ($\mathrm{m^3}$)},xlabel={Cyprus civil hour},
+\begin{axis}[at={(load.south east)},anchor=south west,xshift=14mm,width=.47\linewidth,height=5.1cm,xmin=0,xmax=24,ymin=0,ymax=4000,
+xtick={0,6,12,18,24},ylabel={Stored water ($\mathrm{m^3}$)},xlabel={Supplied local hour},
 axis line style={muted},tick style={muted},ymajorgrids=true,grid style={muted!15},
 legend style={draw=none,at={(.5,1.02)},anchor=south,legend columns=2,font=\scriptsize}]
-\path[fill=muted!12] (axis cs:10,0) rectangle (axis cs:14.25,4000);
-\addplot[teal,very thick] coordinates {(0,2000)(1,1880)(2,1760)(3,1640)(4,1520)(5,1400)(6,1280)(7,1160)(8,1040)(9,920)(10,800)(11,800)(12,940)(13,1320)(14,1700)(15,2080)(16,2460)(17,2840)(18,2720)(19,2600)(20,2480)(21,2360)(22,2240)(23,2120)(24,2000)};
-\addplot[navy,dashed,thick] coordinates {(0,2000)(24,2000)};
+\path[fill=muted!12] (axis cs:10,0) rectangle (axis cs:18,4000);
+\addplot[teal,very thick] coordinates {(0,966)(1,990)(2,952)(3,914)(4,876)(5,838)(6,800)(7,800)(8,800)(9,800)(10,800)(11,970)(12,1140)(13,1310)(14,1480)(15,1650)(16,1820)(17,1990)(18,2160)(19,1938)(20,1716)(21,1494)(22,1272)(23,1050)(24,966)};
 \addplot[muted,densely dotted] coordinates {(0,800)(24,800)};
-\legend{Planned,Flat,Reserve}
+\legend{Supplied,Minimum}
 \end{axis}
 \end{tikzpicture}
-\par{\scriptsize\color{muted} Scenario output; reported window interpreted as Cyprus civil time. EAC July report, page 15.}
 \end{center}
-During that window, planned load is 5,117 kWh; flat load is 1,734 kWh. The price-only control also gives 5,117 kWh. This is timing overlap, not recovered solar energy. The grid report never enters the scheduler. Across 62 reported days and five tank sizes, 310 matched cases were checked; September coverage is unknown.
+Illustrative cost: \texteuro2,628.25 supplied versus \texteuro2,994.59 flat, a 12.23\% reduction. Both use 19,237.2 kWh. This establishes neither a model-specific gain nor recovered solar. The original model-driven scheduler reports unit-cost reductions of 3.6\% in winter--spring and 10.0\% in summer; persistence reports 3.6\% and 10.2\%.
 
-\smallhead{Forecast control}
-The independent reference is not Stefanos's model. Training ends before July; July--September contains 2,208 hours. MAE: 8.812 model / 7.638 safe persistence. RMSE: 17.942 / 19.433 W/m\textsuperscript{2}. Issue time is previous-day 18:00; persistence uses yesterday through hour 18 and two days earlier after that. The $600\ \mathrm{W/m^2}$ threshold was selected in June.
-
-\smallhead{Matched scheduling result}
+\smallhead{Original forecast: full retained periods}
 \begin{center}
-\begin{tabular}{@{}lrr@{}}\toprule
-Default fixture & Flat schedule & Planned schedule \\\midrule
-Water produced ($\mathrm{m^3}$) & 2,880 & 2,880 \\
-Electricity (kWh) & 9,792 & 9,792 \\
-Scenario cost (\texteuro) & 1,319.88 & 988.99 \\
-Tank safety violations & 0 & 0 \\\bottomrule
+\begin{tabular}{@{}llrrrr@{}}\toprule
+Period & Method & MAE & Precision & Recall & F1 \\\midrule
+Validation & LightGBM & 29.34 & .8142 & .7876 & .8007 \\
+3,566 hours & Persistence & 32.47 & .7974 & .7974 & .7974 \\
+Test & LightGBM & 14.27 & .9757 & .9554 & .9655 \\
+3,567 hours & Persistence & 12.26 & .9801 & .9752 & .9777 \\\bottomrule
 \end{tabular}
+\par{\small\color{muted} MAE in W/m\textsuperscript{2}; positive label: actual radiation strictly above 600 W/m\textsuperscript{2}.}
 \end{center}
-The lower cost comes from assumed clock prices. Across 92 matched days, the model added \texteuro0 tariff saving over a price-only schedule. Equal energy at a constant carbon factor saves zero carbon.
+The test model loses on all displayed measures. Validation informed early stopping; the two periods use different fitted models. The original adjacent splits lack a 24-hour boundary purge. All retained rows, including partial boundary days, remain in the benchmark.
 
-\smallhead{Checks and limits}
-Reconstruction weather is not sensor truth or an archived issued forecast. EAC's Group 1 fields are not national totals. Published percentages are retained; 11 daily reports have arithmetic discrepancies beyond displayed rounding. The synthetic garden and leak checks are demonstrations, not field validation.
+\smallhead{Candidate: a tradeoff, not a replacement}
+The validation-selected direct classifier reaches test F1 .9745, precision .9641 and recall .9851. It misses 15 positive hours versus persistence's 25, but raises false alarms from 20 to 37. The roadmap prioritises precision. No candidate improves F1, precision and recall together; the neural candidate also loses. Experiments purge 24 hours, but the test was already inspected: further gains require a fresh holdout.
 
 \newpage
-\titleline{03 / HANDOFF}{Review the handoff.}
-\smallhead{Files and roles}
+\titleline{HANDOFF}{Keep ownership and evidence clear.}
+\smallhead{Roles}
 \begin{center}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.68\linewidth}@{}}\toprule
-Stefanos & Primary model, plant/tank assumptions and scheduler, following his roadmap. Supply weather, predictions, model metadata and schedule CSVs. \\
-Loucas Louka & Original concept and philosophy; evaluation, dashboard, integration and prediction experiments. Recheck the incoming model against the same safe controls. \\
-Andreas Nikolaides / Cleopas Cleopa & Business case, customer evidence and pitch. Technical review stays with Loucas and Stefanos. \\\bottomrule
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.26\linewidth}>{\raggedright\arraybackslash}p{.67\linewidth}@{}}\toprule
+Stefanos & Original LightGBM model, plant assumptions, scheduler and roadmap. Confirm the intended schedule and next model version. \\
+Loukas Louka & Original concept; application, integration, evaluation and separate improvement experiments. Original model files remain unchanged. \\
+Andreas Nikolaides / Cleopas Cleopa & Business case and pitch. No technical model ownership assigned. \\\bottomrule
 \end{tabular}
 \end{center}
 
-\smallhead{Run and inspect}
-Open \href{https://aquashift-pafos-2026.vercel.app}{the online operations workspace}, or \texttt{Start AquaShift.command} for the same interface locally. Change the date and tank size, inspect production and storage, compare forecasts and record a review. The package retains code, input data, model text, results and editable Blender scenes.
+\smallhead{Demo and backup}
+Open \href{https://aktina-pafos-2026.vercel.app}{Aktina}, then choose 3 July, 10 December and 16 March. Inspect sun, supplied production and ending tank stock before cost. On 16 March the model's MAE is 48.48 versus 156.33 W/m\textsuperscript{2} for persistence; this selected day does not replace the full test. Open \href{https://aktina-pafos-2026.vercel.app/benchmark.html}{AktinaBench} for both periods and every candidate.
 
-{\small\ttfamily
-python -m unittest model.test\_scheduler model.test\_sites\\
-python -m unittest eval.test\_evaluation\\
-python results/independent-review.py
-}
-Use the tested environment in \texttt{README.md}. Evaluate Stefanos's aligned hourly CSV in a separate result directory; retain both models' provenance.
+The packaged site needs no internet. \texttt{Aktina-Backup-v2.mp4} is a silent 60-second screenshot walkthrough, not a live interaction recording. Two team rehearsals remain.
 
-\smallhead{Next evidence}
-Obtain one operator's capacity, storage, demand and constraints. Connect available curtailment signals and billed tariffs. Save forecasts before a new test period, then compare equal water service against current operation and a competent simple scheduler. The June residual experiment remains exploratory.
+\smallhead{Next model evidence}
+Test target-time solar geometry, clear-sky normalisation and weather forecasts available at the decision time. Compare feature groups through controlled removal, with chronological validation and a 24-hour gap. Do not remove difficult test hours or replace future cloud forecasts with realised weather. Pin weather source, forecast lead, training cutoff and prediction timestamps. These are proposals for Stefanos's v2; no v2 gain is established.
 
-\smallhead{Submission review}
-The dashboard, video and documents are starting points. Confirm names, contact details, declarations and signatures; understand the results and rehearse before submission. No teammate's completed model or unaided coding is claimed.
+\smallhead{Pilot and business scope}
+Grid needs operator-confirmed demand, plant limits, meter data, tariffs and usable curtailment signals. Pressure, flushing, water quality, ramps and maintenance remain outside the supplied scheduler. Sites remains a separate garden/leak prototype; its synthetic checks are not field validation. Pricing, customer agreements and savings are unverified.
+
+\smallhead{Submission checks}
+Confirm the intended schedule with Stefanos, reconcile the slides with this evidence, and rehearse the offline demo. Confirm the team contact and required declarations before submission. Do not present the earlier reference experiment as Stefanos's model.
 
 \vfill
 \hrule height .5pt\vspace{3mm}
-{\footnotesize Sources: Stefanos's 30 September AquaShift pitch and work split.\par
-Evidence: \texttt{results/metrics.json}, \texttt{curtailment-overlap.json}, \texttt{curtailment-independent-review.json}.\par
-Grid context: \href{https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx}{EAC distribution curtailment reports}; dated page references and source hashes retained in the package.\par
-\href{https://open-meteo.com/en/docs/historical-weather-api}{Open-Meteo / ECMWF IFS} supplies the weather. Adopted software: LightGBM, SciPy/HiGHS, scikit-learn, Streamlit and Plotly. Codex assisted code, tests, graphics and draft materials. Concept attribution follows Loucas's clarification and is not a claim of exclusive invention of solar desalination.}
+{\footnotesize Evidence, 4 October 2026: \href{https://github.com/stefanosbordea/actina/tree/stefanos-model}{Stefanos's repository}, model source at \texttt{2a093ab}.\par
+Retained checks: \texttt{app/handoff/ACTINABENCH.md}, \texttt{scheduler-reproduction/README.md}, \texttt{MODEL-V2-FEEDBACK.md}; candidate results: \texttt{app/experiments/f1-001/README.md}.\par
+Historical Open-Meteo weather; supplied local labels lack UTC offsets. The scheduler has already shifted prediction-origin timestamps by 24 hours; the demo does not shift them again. No plant operating authority is claimed.}
 \end{document}

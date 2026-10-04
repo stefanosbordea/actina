@@ -1,156 +1,110 @@
-# AquaShift speaker notes
+# Aktina speaker notes
 
-Target 13 minutes 50 seconds, including a 90-second live demo or video fallback. This leaves 1 minute 10 seconds within the 15-minute limit. Read the spoken text; cues and sources are for preparation. Presenter assignments can be adjusted by the team.
+Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections follow the earlier deck: reconcile its titles, figures and claims before presenting. Use the silent 60-second backup only if the live demo is unavailable.
 
-## 1. AquaShift
+## 1. Aktina
 
-SLIDE 1: AquaShift
-Timing: 45 seconds. Presenter: Στέφανος Μπορτέας.
+Presenter: Stefanos.
 
-Preparation note (not spoken): AI tools assisted implementation, drafting and review. These artifacts are a starting point for the team to check and rehearse.
+Aktina starts with a simple idea: use solar electricity that would otherwise be curtailed to make drinking water, then store the water for later. Loukas proposed the concept; Stefanos developed the roadmap, original model and scheduler. Our current demonstration shows their retained output and the evidence behind it. Recovering curtailed solar still needs a suitable plant, storage and grid coordination.
 
-Spoken text:
-AquaShift starts with a simple idea: use solar power that would otherwise be curtailed to make drinking water, then store that water for later. Loucas proposed the core idea; Stefanos developed the roadmap. We are testing how it could work with a desalination unit, a tank and a useful planning tool. The draft already lets us compare schedules and inspect the forecast evidence. Recovering curtailed solar will still need a plant with spare capacity, usable storage and permission from the grid operator. Today we will show the concept, the prototype and the evidence we need for a pilot in Paphos.
+## 2. Why storage matters
 
-Sources (not spoken):
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
-Team contribution credit: Loucas proposed the core idea; Stefanos developed the roadmap.
+Presenter: Andreas Nikolaides.
 
-## 2. Paphos needs water resilience
-
-SLIDE 2: Paphos needs water resilience
-Timing: 65 seconds. Presenter: Andreas Nikolaides.
-
-Spoken text:
-Paphos has good reasons to plan its water supply carefully. Cyprus Mail reported that its three main dams were around nine percent full in January 2026, using Water Development Department figures. By September, conditions had improved: Asprokremmos was reported at 37.6 percent. The January number on this slide is dated context, rather than today's reservoir level. On the electricity side, a CyprusGrid industry estimate put curtailed distributed renewable generation at roughly 306 gigawatt-hours across Cyprus in 2025. That national estimate cannot tell us how much a particular plant could use. It does show why flexible demand deserves investigation. A desalination operator needs to produce enough water every day. If some of that production can move into otherwise curtailed solar hours, a tank could help carry the supply into later demand.
-
-Sources (not spoken):
-Cyprus Mail, 14 January 2026, reports WDD figures: https://cyprus-mail.com/2026/01/14/paphos-water-supply-at-amid-critically-low-dam-levels
-Cyprus Mail, 23 September 2026, reports WDD/CNA: https://cyprus-mail.com/2026/09/23/pomos-has-highest-water-level-in-paphos-reservoirs
-pv magazine, 13 January 2026, citing CyprusGrid industry analysis: https://www.pv-magazine.com/2026/01/13/cyprus-solar-curtailment-hits-47-in-2025/
-Cyprus Mail guest analysis, 19 March 2026: https://cyprus-mail.com/2026/03/19/why-cyprus-wastes-nearly-half-its-solar-energy-and-what-battery-storage-could-fix
+Water demand and available solar do not arrive at the same time. A tank lets an operator move some water production between hours while keeping water available. We need to check both sides: whether the plan supplies water, and whether its electricity use actually helps the grid. Radiation is useful context, but a sunny hour is not proof of curtailed electricity available to a particular plant.
 
 ## 3. Grid and Sites
 
-SLIDE 3: Grid and Sites
-Timing: 55 seconds. Presenter: Στέφανος Μπορτέας.
+Presenter: Stefanos.
 
-Spoken text:
-Stefanos's roadmap develops the idea into Grid and Sites. Grid helps a water operator compare production schedules for a desalination unit and its tank. Sites helps a hotel or garden operator review an irrigation budget and unusual overnight meter readings. We propose starting with a small site because it gives us a manageable place to collect data and work with an operator. Grid would need more work on operating limits, electricity arrangements and procurement. Both parts currently give advice. They send no command to a plant or irrigation controller. The operator can inspect the inputs, compare the suggestion with a baseline and decide whether the recommendation makes sense.
+The roadmap has two parts. Grid compares production for a desalination unit and its tank. Sites explores garden water budgets and unusual overnight meter readings. Today's supplied model and schedule cover Grid. Sites remains a separate prototype; its synthetic examples are not field results. Neither part controls equipment.
 
-Sources (not spoken):
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
+## 4. What the demonstration loads
 
-## 4. A working planning loop
+Presenter: Loukas Louka.
 
-SLIDE 4: A working planning loop
-Timing: 70 seconds. Presenter: Loucas Louka.
+The demo loads 7,104 supplied schedule rows, covering 296 complete days from 6 December 2025 to 28 September 2026. Each day shows radiation, production, tank level and illustrative cost. The data, scripts and fonts are local, so the presentation does not need an API or internet connection.
 
-Spoken text:
-The planning loop starts with saved historical weather for Paphos. We keep its source and timestamps, estimate the following day's solar radiation, then compare the prediction with simple controls. The weather is a gridded reconstruction, so this test cannot establish how an operational forecast would have performed at the time. Radiation tells us about sunny hours; an actual curtailment signal has to come from the grid. Historical EAC reports now give the workspace dated grid context. The planner uses assumed hourly electricity prices and limits on production and storage. The forecast orders production within hours that have the same price. The dashboard then shows the plan, the tank trajectory and the evidence behind them. Saved rows can be exported for review. If the scheduler has no usable forecast, it retains the flat baseline. If production capacity cannot meet demand, it reports that the scenario is infeasible.
+We checked which forecast generated the supplied export. Its forecast column matches persistence in every row, and that version reproduces byte for byte. Stefanos's LightGBM forecast appears separately. His unchanged model-driven scheduler also runs, but produces a different schedule. We have kept both outputs and are awaiting his confirmation of the intended submission version.
 
-Sources (not spoken):
-results/metrics.json; results/independent-review.json. Open-Meteo ECMWF IFS historical reconstruction. Training targets before 1 July; test July to September 2026. Nominal previous-day 18:00 cutoff; original publication vintages uncertified.
-model/scheduler.py; build/deck-data.json, 15 July. Unit 500 m³/h, tank 4,000 m³, demand 120 m³/h, energy 3.4 kWh/m³, reserve 800 m³. Assumed prices €101/MWh at hours 10-16, €183 at 17-22, €130 otherwise. Uniform hourly flows; real ramp/minimum-run/maintenance constraints absent.
-Implementation: model/train.py, eval/evaluate.py, model/scheduler.py, model/sites.py; web/public. Grid context: data/eac_curtailment_days.json, 62 July/August EAC daily reports; main report fields only, not plant allocation.
+Source cue: `app/handoff/README.md` and `app/handoff/scheduler-reproduction/README.md`. Do not call the displayed schedule a demonstrated LightGBM saving.
 
-## 5. Same water and energy, different hours
+## 5. A matched day
 
-SLIDE 5: Same water and energy, different hours
-Timing: 80 seconds. Presenter: Στέφανος Μπορτέας.
+Presenter: Stefanos.
 
-Spoken text:
-This example uses 15 July. Both plans make 2,880 cubic metres of water and use 9,792 kilowatt-hours. The tank starts and finishes with 2,000 cubic metres. That prevents a cheaper plan from borrowing water from the following day. With the assumed hourly prices, the flat plan costs about 1,320 euros and the shifted plan about 989 euros: a 25.1 percent scenario reduction. The reduction comes from cheaper production hours and enough storage to use them. We checked the contribution of forecasting across all 92 test days. The reference model, strong persistence, climatology and a price-only plan produced exactly the same water, energy and tariff cost. Added AI cost benefit was zero euros. Equal energy at a constant carbon factor also gives zero modeled carbon saving. A real pilot must measure whether the changed production uses solar that would otherwise be curtailed before we can claim that benefit.
+On 3 July, flat and supplied production both make 5,658 cubic metres of water and use 19,237.2 kilowatt-hours. The supplied tank starts and ends at 966 cubic metres. Under the illustrative prices, the supplied plan costs about 2,628 euros versus 2,995 euros for flat production: 12.23 percent less. The comparison moves electricity use between differently priced hours; it does not demonstrate lower energy use or recovered solar.
 
-Sources (not spoken):
-model/scheduler.py; build/deck-data.json, 15 July. Unit 500 m³/h, tank 4,000 m³, demand 120 m³/h, energy 3.4 kWh/m³, reserve 800 m³. Assumed prices €101/MWh at hours 10-16, €183 at 17-22, €130 otherwise. Uniform hourly flows; real ramp/minimum-run/maintenance constraints absent.
-Attribution source: results/independent-review.json. Four forecast strategies have equal 92-day cost, water and energy.
+This equal-stock result is specific to the day. The scheduler carries water between days and does not enforce equal daily ending stock. A cost comparison must retain production and stock change, especially at the separate validation/test resets.
 
-## 6. The demo and its fallback
+Source cue: original `eval/schedule_hourly.csv`, 3 July 2026. Discount is €101/MWh when actual radiation is strictly above 600 W/m²; otherwise €183/MWh. Specific electricity is 3.4 kWh/m³. These are assumptions, not bills or a market tariff.
 
-SLIDE 6: The demo and its fallback
-Timing: 120 seconds. Presenter: Loucas Louka.
+## 6. Demo and fallback
 
-Spoken text:
-We will spend ninety seconds in the workspace. Start with one saved day, then compare tank sizes. The water total stays fixed while the production plan changes. We will check the forecast comparison and switch the simulated meter anomaly off and on. If the browser fails, the ninety-second film shows the concept and the working draft.
+Presenter: Loukas Louka.
 
-Presenter cues (not spoken): 0-20 s: Overview, 1 July, tank 4,000 m³, inspect hour 13. 20-45 s: Scenarios, compare 500 and 8,000 m³; point to equal water and assumed tariffs. 45-65 s: Evaluation, MAE 8.81 versus 7.64. 65-85 s: Alerts & Sites, switch the synthetic anomaly off and on. 85-90 s: return to Overview. Fallback: play AquaShift-Concept-and-Prototype.mp4 instead of the live sequence; do not play both.
+We will show three days, then the full benchmark. July 3 shows midday production and the matched daily cost. December 10 has no high-radiation hours; the retained tank still stays at or above its declared minimum. March 16 shows a day when the original model predicts better than persistence. We then return to all test hours so that one good day does not become the headline result.
 
-Sources (not spoken):
-model/scheduler.py; build/deck-data.json, 15 July. Unit 500 m³/h, tank 4,000 m³, demand 120 m³/h, energy 3.4 kWh/m³, reserve 800 m³. Assumed prices €101/MWh at hours 10-16, €183 at 17-22, €130 otherwise. Uniform hourly flows; real ramp/minimum-run/maintenance constraints absent.
-Workspace: https://aquashift-pafos-2026.vercel.app. Fallback: delivery/AquaShift-Concept-and-Prototype.mp4. The July 1 demo date differs from the July 15 numerical example on slides 5 and 8.
+Live cues:
 
-## 7. The stronger control wins on MAE
+- Open Aktina locally. Choose **3 July 2026**; inspect sun, production, tank and cost.
+- Choose **10 December 2025**; point to low radiation and the tank minimum.
+- Choose **16 March 2026**; MAE is 48.48 W/m² for the original model versus 156.33 for persistence.
+- Open **AktinaBench**; show the original test comparison, then the direct classifier's precision/recall tradeoff.
 
-SLIDE 7: The stronger control wins on MAE
-Timing: 100 seconds. Presenter: Loucas Louka.
+Fallback: `Aktina-Backup-v2.mp4`, 60 seconds, no audio. It is a screenshot walkthrough, not a live interaction recording. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
 
-Spoken text:
-We evaluated an independent reference while waiting for Stefanos's model handoff. The test covers 2,208 hours over 92 days, from July through September. For the control, we assume same-hour readings through six p.m. are available at the previous day's issue time. We have not verified publication delays or the original data vintages. The rule uses the preceding day through six p.m., and the day before that for later hours. On mean absolute error, the reference scores 8.81 watts per square metre; stronger persistence scores 7.64. The reference is about 15.4 percent worse on that measure. Its lower root mean square error suggests fewer large errors, so the measures need to be read together. The paired-day interval for the MAE difference is about plus 0.18 to plus 2.07. Sunny-hour precision is close: 98.20 percent for the model and 98.36 for persistence. Those flags describe radiation, not measured surplus electricity. Added AI forecasting value remains unproven. Next we should freeze Stefanos's model and Loucas's prediction experiments and compare them with this control, without tuning on the test quarter.
+## 7. What the original model achieves
 
-Sources (not spoken):
-results/metrics.json; results/independent-review.json. Open-Meteo ECMWF IFS historical reconstruction. Training targets before 1 July; test July to September 2026. Nominal previous-day 18:00 cutoff; original publication vintages uncertified.
-Strong baseline nominal rule: day−1 same local hour for target 00–18, day−2 for 19–23. Paired-day bootstrap 2,000 repeats, seed 20261002. Seasonal dependence remains.
+Presenter: Loukas Louka.
 
-## 8. Sites: irrigation and an overnight fixture
+We evaluated every retained prediction: 3,566 validation hours and 3,567 test hours. Validation MAE is 29.34 watts per square metre for LightGBM versus 32.47 for persistence. On the test period, that reverses: 14.27 versus 12.26. Test precision, recall and F1 also favour persistence. The model's test F1 is 0.9655; persistence reaches 0.9777.
 
-SLIDE 8: Sites: irrigation and an overnight fixture
-Timing: 70 seconds. Presenter: Loucas Louka.
+Validation informed early stopping, and the original validation and test files come from different model fits. The adjacent original splits also lack a 24-hour prediction-horizon purge. These limits stay in the benchmark. Radiation above 600 watts per square metre defines the label; it is not observed grid curtailment.
 
-Spoken text:
-Sites applies the same approach to a garden and a meter. For 15 July, the saved weather gives evapotranspiration of about 6.32 millimetres. With an assumed 5,000-square-metre garden, crop coefficient and irrigation efficiency, the suggested amount is about 26 cubic metres. A six-millimetre timer would apply 30. The 13.3 percent difference is a scenario comparison; a hotter day or a different timer can change its direction. We also generate normal meter history and keep the query day out of training. Adding 0.3 cubic metres per hour over four night hours gives four flagged fixture hours, compared with none in the matched no-leak control. That tests the review workflow. Field detection accuracy still needs real meter histories, faults and seasonal patterns. In a pilot, the operator should help choose and review the alert threshold.
+Source cue: `app/handoff/ACTINABENCH.md`; full MAE, RMSE, precision, recall, F1, confusion counts and month/hour breakdowns are retained. Partial boundary days remain in full-period results.
 
-Sources (not spoken):
-Source: model/sites.py and build/deck-data.json. ET0 and rainfall sum over 15 July 2026 local time. Area 5,000 m², crop coefficient 0.70, efficiency 0.85, effective rain 80%, assumed soil reserve 0 mm, timer 6 mm/day.
-Meter history and query are synthetic. IsolationForest trains only on 28 generated normal days. Injected event: 0.3 m³/h in hours 01–04, 1.2 m³ total. Fixture labels never enter fitting.
+## 8. Helping improve the predictor
 
-## 9. The business model hypotheses
+Presenter: Loukas Louka.
 
-SLIDE 9: The business model hypotheses
-Timing: 80 seconds. Presenter: Cleopas Cleopa.
+We ran six separate fixed experiments while preserving Stefanos's original model. The validation-selected direct classifier misses 15 positive test hours instead of persistence's 25. But it raises false alarms from 20 to 37, lowering precision from 98.01 to 96.41 percent. Its F1 remains lower than persistence. The neural candidate also loses.
 
-Spoken text:
-I'll show our one-page business model canvas now. Our first customer segment is a hotel or municipal garden with a usable meter. The value proposition is practical water advice whose benefit we can measure. Direct operator contacts and irrigation installers are the proposed channels. Customer relationships would start with a hands-on pilot and regular review. The revenue hypothesis is a monthly Sites fee of 99 to 299 euros or a share of verified savings; Grid could later use a licence or the proposed twenty-percent savings share. We still need to test those prices, and we have no signed customer or revenue. Our resources are the team's skills, meter access and weather data. The activities are evaluating forecasts, reviewing plans and supporting the site. Partners would include the site operator, an installer and a water or plant operator for Grid. The main costs are team time, meter integration and support. Andreas and Cleopas will test these assumptions in customer interviews.
+The roadmap prioritises precision because a false surplus prediction can be costly. Higher recall alone is not enough to promote this candidate. The experiments purge 24 hours at the training boundary, but this test period was already inspected. We need fresh held-out evidence before claiming a better next model.
 
-Presenter cue (not spoken): Open delivery/AquaShift-Business-Model-Canvas.pdf and keep its one-page nine-block canvas visible while presenting this slide. Return to slide 10 afterwards. Allow the switch within this slide slot.
+Source cue: `app/experiments/f1-001/README.md`. Direct classifier: F1 0.974535, precision 0.964147, recall 0.985149; persistence: 0.977667, 0.980100, 0.975248. No candidate wins all three.
 
-Sources (not spoken):
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
-delivery/AquaShift-Business-Model-Canvas.pdf: all nine canvas blocks presented alongside slide 9.
+## 9. Business hypotheses
 
-## 10. Safety, privacy and AI disclosure
+Presenter: Cleopas Cleopa.
 
-SLIDE 10: Safety, privacy and AI disclosure
-Timing: 55 seconds. Presenter: Στέφανος Μπορτέας.
+The canvas separates potential Grid customers from Sites customers. Water operators would need integration and evidence that a plan fits their operations. Hotels or managed gardens would need usable meters and a measurable water-management problem. Setup fees, subscriptions and support are revenue hypotheses. We have not established pricing, willingness to pay, margins or customer agreements. Andreas and Cleopas's role is to test those assumptions with prospective users.
 
-Spoken text:
-An operator must approve any action in a real pilot. The model checks water balance, storage limits and production capacity, but equipment also has ramp rates, maintenance needs, salinity limits and other constraints. Those need to be added with the plant operator. The scheduler retains a flat baseline when the forecast is missing and blocks an infeasible plan. For site data, we would agree access, purpose, retention and deletion with the owner, keep private readings separate and record approvals. AI tools assisted the coding, drafting and review of this starting point. We will disclose that assistance, credit the software we used and have the team review the submission. The draft has not undergone field safety testing or a legal compliance assessment.
+Presenter cue: show the updated one-page business model canvas; older PDF exports are excluded from the current review pack.
 
-Sources (not spoken):
-model/scheduler.py; build/deck-data.json, 15 July. Unit 500 m³/h, tank 4,000 m³, demand 120 m³/h, energy 3.4 kWh/m³, reserve 800 m³. Assumed prices €101/MWh at hours 10-16, €183 at 17-22, €130 otherwise. Uniform hourly flows; real ramp/minimum-run/maintenance constraints absent.
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
-Competition source: supplied Official rules.pdf. AI assistance includes OpenAI Codex for implementation, evaluation review, artifact preparation and editing. Team members must review and confirm the final submission and tool disclosure.
+## 10. What remains outside the model
 
-## 11. A 30 / 60 / 90 day pilot path
+Presenter: Stefanos.
 
-SLIDE 11: A 30 / 60 / 90 day pilot path
-Timing: 55 seconds. Presenter: Andreas Nikolaides.
+The supplied scheduler uses illustrative production, demand, tank and electricity assumptions. Demand includes the target day's recorded temperature, so this is a retrospective scenario. Pressure, flushing, water quality, ramps and maintenance are not established by these charts. A real operator would need to supply those constraints and approve any trial. There is no plant control connection, and no measured electricity-bill saving or solar recovery is claimed.
 
-Spoken text:
-We propose three pilot stages. In the first thirty days, agree one site, a data contact and a measurement plan. Check the meter units, missing data, operating limits and who approves actions. Continue only with a usable baseline and an agreed scope. By sixty days, run suggestions in shadow mode. Compare the simple control, Stefanos's model and Loucas's prediction experiments on fresh data, and record false alerts and operator feedback. If prediction adds no value, simplify it. By ninety days, consider a small controlled trial with the operator's approval. Compare equal water supply, storage, costs and any measured renewable displacement. The business team will use the results to test payment and support costs. If a plant has no spare capacity, Sites remains a smaller pilot option.
+Source cue: original `model/scheduler.py`; production 100–400 m³/h, tank 4,000 m³, minimum 800 m³, start 2,000 m³ at each period. Keep hourly endpoints distinct from continuous physical safety.
 
-Sources (not spoken):
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
-Proposed pilot stages; site approval and fresh measurements required.
+## 11. Next evidence
 
-## 12. The team and the pilot ask
+Presenter: Andreas Nikolaides.
 
-SLIDE 12: The team and the pilot ask
-Timing: 35 seconds. Presenter: Cleopas Cleopa.
+First, confirm which retained schedule should be submitted and rehearse the offline demo together. For the next model, Stefanos can test solar geometry, clear-sky normalisation and forecasts of tomorrow's cloud that were available today. Each addition needs a controlled comparison, fixed time boundaries and a fresh holdout. Difficult test hours must stay in the evaluation.
 
-Spoken text:
-Loucas proposed the core idea and will work on evaluation, the dashboard and prediction experiments. Stefanos developed the roadmap and leads the model and scheduler work. Andreas Nikolaides and Cleopas Cleopa are business students working on the business case and pitch. Our ask is one Paphos pilot site and one data contact. A hotel garden could start Sites; a plant or water operator could help test Grid. We would agree the baseline, begin in advice mode and measure the result. Thank you.
+For a pilot, we need an operator, a data contact and an agreed measurement plan. We would check plant constraints, demand, tariffs and available curtailment signals before considering an operational trial. The business case should follow measured results rather than assumed savings.
 
-Sources (not spoken):
-AquaShift Pitch.pdf, 30 September 2026: roadmap and proposed business terms.
-Team roles confirmed by Loucas. Greek name retained as supplied; no overall team lead assigned.
+Source cue: `app/handoff/MODEL-V2-FEEDBACK.md`. These are proposed v2 directions, not a completed v2 model or guaranteed gains. Two team rehearsals remain uncompleted.
+
+## 12. Team and ask
+
+Presenter: Cleopas Cleopa.
+
+Loukas Louka proposed the concept and built the application, integration, evaluation and separate experiments. Stefanos owns the original model, scheduler and roadmap. Andreas Nikolaides and Cleopas Cleopa handle the business case and pitch. We are asking for a Paphos operator and a data contact to help test the idea against real operating needs. The current evidence gives us a reviewable starting point, with its limits visible.
+
+Preparation checks: confirm the team contact, final slide alignment, required competition declarations and intended schedule before submission. Keep the original source credits and third-party licences. Keep the earlier reference experiment distinct from Stefanos's model.

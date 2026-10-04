@@ -91,11 +91,11 @@ def main():
     except OSError as error:
         if not matching_workspace(url, assets):
             raise SystemExit(f"Port {args.port} is in use. Choose another port with --port. No running service was changed.") from error
-        print(f"AquaShift is already available: {url}", flush=True)
+        print(f"Aktina is already available: {url}", flush=True)
         if not args.no_browser:
             webbrowser.open(url)
         return
-    print(f"AquaShift operations workspace: {url}\nFiles and review records stay in this browser. Press Ctrl+C to stop.", flush=True)
+    print(f"Aktina operations workspace: {url}\nFiles and review records stay in this browser. Press Ctrl+C to stop.", flush=True)
     if not args.no_browser:
         webbrowser.open(url)
     try:

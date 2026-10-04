@@ -1,0 +1,31 @@
+{
+  "product": "Aktina",
+  "benchmark": "AktinaBench",
+  "canonical_url": "https://aktina-pafos-2026.vercel.app",
+  "date": "2026-10-04",
+  "scope": "Visible names, download labels, current guidance and document contents; saved-state keys and original model/data/eval preserved.",
+  "checks": {
+    "workspace_cases_passed": 191,
+    "companion_ui_passed": 38,
+    "demo_and_benchmark_passed": 10,
+    "launcher_passed": 13,
+    "build": "passed",
+    "diff_check": "passed",
+    "note": "One old filename expectation failed initially, was corrected, and its full seven-test suite passed on rerun."
+  },
+  "documents": {
+    "native_compilation": "success for each of three saved standalone sources",
+    "sha256": {
+      "AquaShift-Business-Model-Canvas.tex": "1ee19307e1cb5118e741567e45998f6abee2abe50b8a3d6fa616e844500e6688",
+      "AquaShift-Executive-Summary.tex": "1a762fe6a867d0a77f9aa7531112617bee55ea4682241f9db8e42251112ecc5a",
+      "AquaShift-Technical-Proposal.tex": "757d90b51396b1d4aa70a71035096e048bef6023f80bf110e17f9a8c637b2514"
+    },
+    "pdf_export": "Native compiler exposes no export; historical PDF files remain excluded from current delivery."
+  },
+  "outstanding": [
+    "Final-name video refresh",
+    "Current deck visual verification",
+    "Stefanos v2 handoff and intended schedule confirmation",
+    "Team contact, declarations and rehearsals"
+  ]
+}

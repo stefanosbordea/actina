@@ -94,7 +94,7 @@ export function setupExecutionReview({$,text,table,facts,json,sha256,freezeSelec
  async function exportInput(template){
   const token=generation;try{
    pending=true;render();const candidate=record&&prepared?prepared:await prepare();if(token!==generation)return;prepared=candidate;
-   if(template)json('aquashift-measurements-template.json',executionMeasurementTemplate({executionCase:candidate.executionCase,case_sha256:candidate.file.sha256}));
+   if(template)json('aktina-measurements-template.json',executionMeasurementTemplate({executionCase:candidate.executionCase,case_sha256:candidate.file.sha256}));
    else json(candidate.file.name,candidate.file.text);
   }catch(error){if(token===generation){status=error.message;$('execution-files').open=true;}}
   finally{if(token===generation){pending=false;render();}}

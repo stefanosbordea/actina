@@ -110,4 +110,4 @@ try {
   tabs.forEach((button,index)=>{button.addEventListener('click',()=>showView(button.dataset.view));button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%tabs.length;if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();showView(tabs[next].dataset.view);tabs[next].focus();}});});
   $('bench-results').hidden=false;render();
   let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(view==='compare')scatter();if(view==='errors')renderErrors();});});
-} catch(error) { $('bench-error').hidden=false;$('bench-results').hidden=true;console.error('ActinaBench:',error.message); }
+} catch(error) { $('bench-error').hidden=false;$('bench-results').hidden=true;console.error('AktinaBench:',error.message); }

@@ -6,6 +6,8 @@ Stefanos's authoritative model, predictions and scheduler remain at the reposito
 
 ## Current model demo
 
+[Open Aktina](https://aktina-pafos-2026.vercel.app/).
+
 ```sh
 cd app
 node build.mjs
@@ -18,13 +20,13 @@ Open `http://127.0.0.1:8527/` in a browser. All charts, fonts and input files ar
 
 The supplied `eval/schedule_hourly.csv` at commit `2a093ab` is reproduced byte for byte by selecting persistence in the scheduler. The unchanged model-driven scheduler has also been run separately: it changes 469 production hours. See [the reproduction and both outputs](handoff/scheduler-reproduction/README.md). The website keeps the supplied plans unchanged and distinguishes them from the LightGBM forecast; confirmation of the intended export is pending.
 
-## ActinaBench
+## AktinaBench
 
 Open `/benchmark.html` for the full original forecast comparison and six fixed improvement experiments, including a neural classifier. Both periods, all monthly/hourly errors and downloadable slide figures are included. No candidate improves F1, precision and recall together over test persistence. Original model files remain untouched.
 
 See [the experiment](experiments/f1-001/README.md) and [remaining delivery work](handoff/DELIVERY-STATUS.md). Repackage retained results with `python3 app/tools/package_benchmark.py` from the repository root.
 
-The [silent 60-second Aktina backup, version 2](delivery/Aktina-Backup-v2.mp4) shows the supplied demo and rebuilt ActinaBench, including the original forecast and direct classifier against the previous-day reference. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-v2-Source/README.md) are included. The [first walkthrough](delivery/Aktina-Backup.mp4) and [its source](delivery/Aktina-Backup-Source/README.md) remain unchanged.
+The [silent 60-second Aktina backup, version 2](delivery/Aktina-Backup-v2.mp4) shows the supplied demo and rebuilt benchmark, including the original forecast and direct classifier against the previous-day reference. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-v2-Source/README.md) are included. The [first walkthrough](delivery/Aktina-Backup.mp4) and [its source](delivery/Aktina-Backup-Source/README.md) remain unchanged. The video retains the benchmark name visible when its screenshots were captured; a final-name refresh is pending.
 
 ## Existing review workspace
 

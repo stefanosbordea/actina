@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d0e11"><meta name="description" content="Compare Aktina’s day-ahead solar predictions across the full Paphos validation and test periods.">
-  <title>ActinaBench — Solar forecast evaluation</title>
+  <title>AktinaBench — Solar forecast evaluation</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./benchmark.css">
   <script src="./benchmark-data.js" defer></script><script src="./benchmark.mjs" type="module"></script>
 </head>
@@ -11,11 +11,11 @@
   <a class="skip" href="#comparison">Skip to comparison</a>
   <header class="app-header">
     <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 16 5l12 21M10 21h12M16 5v9"/></svg>Aktina</a>
-    <nav aria-label="Product"><a href="./">Schedule</a><a href="./benchmark.html" aria-current="page">ActinaBench</a><a href="./workspace/#reviews">Review</a></nav>
+    <nav aria-label="Product"><a href="./">Schedule</a><a href="./benchmark.html" aria-current="page">AktinaBench</a><a href="./workspace/#reviews">Review</a></nav>
     <a class="header-export" href="./experiment-results.csv" download>Export results<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 14v3h12v-3"/></svg></a>
   </header>
   <main>
-    <header class="workspace-heading"><div><h1>ActinaBench</h1><p>Day-ahead solar forecasts for Paphos.</p></div><div class="period-picker" role="group" aria-label="Evaluation period"><button type="button" data-split="test" aria-pressed="true">Test</button><button type="button" data-split="validation" aria-pressed="false">Validation</button></div></header>
+    <header class="workspace-heading"><div><h1>AktinaBench</h1><p>Day-ahead solar forecasts for Paphos.</p></div><div class="period-picker" role="group" aria-label="Evaluation period"><button type="button" data-split="test" aria-pressed="true">Test</button><button type="button" data-split="validation" aria-pressed="false">Validation</button></div></header>
     <p id="bench-error" role="alert" hidden>The results could not load. <a href="./benchmark-results.json">Open the saved report</a> or reload this page.</p>
     <div id="bench-results" hidden>
       <div class="workspace-toolbar"><nav role="tablist" aria-label="Evaluation views"><button id="compare-tab" role="tab" aria-selected="true" aria-controls="compare-panel" data-view="compare" tabindex="0">Compare</button><button id="errors-tab" role="tab" aria-selected="false" aria-controls="errors-panel" data-view="errors" tabindex="-1">Forecast errors</button><button id="method-tab" role="tab" aria-selected="false" aria-controls="method-panel" data-view="method" tabindex="-1">Method & exports</button></nav><p id="period"></p></div>
