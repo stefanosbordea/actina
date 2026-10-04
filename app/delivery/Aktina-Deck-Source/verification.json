@@ -1,8 +1,8 @@
 {
   "date": "2026-10-04",
   "artifact": "Aktina-Pafos-2026.pptx",
-  "sha256": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
-  "bytes": 122197,
+  "sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
+  "bytes": 123030,
   "slides": 12,
   "native_editable_charts": 4,
   "embedded_workbooks": 4,
@@ -26,7 +26,10 @@
     "native_chart_structure": true,
     "artifact_tool_reimport": true,
     "source_hashes": "matched on final build",
-    "build_exit_code": 0
+    "build_exit_code": 0,
+    "native_notes_match_source_and_wrapper": true,
+    "native_notes_corruption_tests": 5,
+    "slide8_table_and_chart_match_frozen_comparison": true
   },
   "visual_review": {
     "renderer": "Bundled artifact-tool PNG export of validated final PPTX",
@@ -45,20 +48,54 @@
       12
     ],
     "final_changed_pages_rechecked": [
-      1,
-      8,
-      11,
-      12
+      8
     ],
-    "result": "No clipping, overlap or misplaced chart labels found.",
+    "result": "Slide 8 rendered and inspected: chart, editable score table, labels and caveats legible without overlap. Other eleven slides are pixel-identical to prior version.",
     "native_powerpoint_final": false,
     "native_powerpoint_note": "Earlier draft opened as 12 slides and exported to PDF. After team-credit corrections, native export was stopped due to concurrent desktop input; that superseded PDF is outside delivery. Final slides were re-rendered with the bundled renderer.",
-    "native_chart_editing_tested": false
+    "native_chart_editing_tested": false,
+    "other_slides_pixel_identical_to_prior": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12
+    ]
   },
   "scope": [
     "Original model test MAE and F1 lose to persistence.",
-    "Direct classifier comparison has fewer misses and more false alarms, lower precision and F1.",
+    "Archived day2 forecasts improve the retained retrospective benchmark. Raw residual analogues lower MAE with one extra false alarm against that control.",
+    "Satellite reference sensitivity, missing hours and harder validation remain in speaker notes. No live superiority or learned-method promotion claimed.",
     "July 3 tariff example is retrospective and illustrative; no measured savings or curtailment recovery.",
     "Model v2 and intended submitted schedule version remain pending."
-  ]
+  ],
+  "native_editable_tables": 1,
+  "latest_execution": {
+    "command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node delivery/Aktina-Deck-Source/build.mjs delivery/Aktina-Pafos-2026-research-update.pptx",
+    "cwd": "app",
+    "exit_code": 0,
+    "output_promoted_unchanged_to": "delivery/Aktina-Pafos-2026.pptx",
+    "validation_sha256": "02eb9cacb11826eb3f9e8e55769f19530527ad1bc67119fe00a0b79e23bf3750",
+    "notes_validation": "results/current-deck-native-notes-research-update.json",
+    "notes_validation_exit_code": 0,
+    "test_command": "python3 -m unittest discover -s app/tests -p test_deck_notes.py -v",
+    "test_exit_code": 0,
+    "tests": 5,
+    "prior_version": "build/aktina-deck-before-research-update/Aktina-Pafos-2026.pptx",
+    "prior_sha256": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
+    "research_value_check": "results/current-deck-research-values.json",
+    "research_value_check_sha256": "243cfdfa94891bdbea9b63e921764bc30d34e0d75c95b911ea054f4cedcbbb52"
+  },
+  "current_source_sha256": {
+    "build.mjs": "f09906c0313ec63545ee6c6c0c28cb8508b233a0fe792bec9cbf37c476edac0f",
+    "Speaker-Notes.md": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
+    "inputs.sha256.json": "f5ace8b8925db4436bf0e916b0b9808d66ec8b7ec25eabc757f820b5b642b6b2",
+    "facts.json": "4142e15f72e77c02004361ed53ed7dc055b6f879a16603d07a419336b2c2d760"
+  }
 }

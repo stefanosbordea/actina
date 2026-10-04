@@ -101,8 +101,8 @@ Test & LightGBM & 14.27 & .9757 & .9554 & .9655 \\
 \end{center}
 The test model loses on all displayed measures. Validation informed early stopping; the two periods use different fitted models. The original adjacent splits lack a 24-hour boundary purge. All retained rows, including partial boundary days, remain in the benchmark.
 
-\smallhead{Candidate: a tradeoff, not a replacement}
-The validation-selected direct classifier reaches test F1 .9745, precision .9641 and recall .9851. It misses 15 positive hours versus persistence's 25, but raises false alarms from 20 to 37. The roadmap prioritises precision. No candidate improves F1, precision and recall together; the neural candidate also loses. Experiments purge 24 hours, but the test was already inspected: further gains require a fresh holdout.
+\smallhead{Archived weather and residual corrections}
+On the same 3,567 test hours, fixed archived weather forecasts reach MAE 8.81 W/m\textsuperscript{2}, precision .9851, recall .9832 and F1 .9841. Raw residual analogues reduce MAE to 6.92, but add one false alarm: 16 versus 15, with 17 misses for both. Validation retains the archived forecast. These retrospective results use a model-derived reference; historical publication times are unverified. No learned correction is promoted.
 
 \newpage
 \titleline{HANDOFF}{Keep ownership and evidence clear.}
@@ -118,10 +118,10 @@ Andreas Nikolaides / Cleopas Cleopa & Business case and pitch. No technical mode
 \smallhead{Demo and backup}
 Open \href{https://aktina-pafos-2026.vercel.app}{Aktina}, then choose 3 July, 10 December and 16 March. Inspect sun, supplied production and ending tank stock before cost. On 16 March the model's MAE is 48.48 versus 156.33 W/m\textsuperscript{2} for persistence; this selected day does not replace the full test. Open \href{https://aktina-pafos-2026.vercel.app/benchmark.html}{AktinaBench} for both periods and every candidate.
 
-The packaged site needs no internet. \texttt{Aktina-Backup-v2.mp4} is a silent 60-second screenshot walkthrough, not a live interaction recording. Two team rehearsals remain.
+The packaged site needs no internet. \texttt{Aktina-Backup-Final.mp4} is a silent 44-second screenshot walkthrough, not a live interaction recording. Two team rehearsals remain.
 
 \smallhead{Next model evidence}
-Test target-time solar geometry, clear-sky normalisation and weather forecasts available at the decision time. Compare feature groups through controlled removal, with chronological validation and a 24-hour gap. Do not remove difficult test hours or replace future cloud forecasts with realised weather. Pin weather source, forecast lead, training cutoff and prediction timestamps. These are proposals for Stefanos's v2; no v2 gain is established.
+Solar geometry, fixed archived forecasts and historical residual scenarios have been tested separately from the original model. Against satellite estimates on 3,517 common test hours, archived-forecast F1 is .9659 and raw-analogue F1 is .9654; 50 missing hours remain unscored. Satellite estimates are not ground sensors. Future forecasts are locked for a separate later check; competition delivery uses the completed evidence. No v2 gain is established.
 
 \smallhead{Pilot and business scope}
 Grid needs operator-confirmed demand, plant limits, meter data, tariffs and usable curtailment signals. Pressure, flushing, water quality, ramps and maintenance remain outside the supplied scheduler. Sites remains a separate garden/leak prototype; its synthetic checks are not field validation. Pricing, customer agreements and savings are unverified.
@@ -132,6 +132,6 @@ Confirm the intended schedule with Stefanos, reconcile the slides with this evid
 \vfill
 \hrule height .5pt\vspace{3mm}
 {\footnotesize Evidence, 4 October 2026: \href{https://github.com/stefanosbordea/actina/tree/stefanos-model}{Stefanos's repository}, model source at \texttt{2a093ab}.\par
-Retained checks: \texttt{app/handoff/ACTINABENCH.md}, \texttt{scheduler-reproduction/README.md}, \texttt{MODEL-V2-FEEDBACK.md}; candidate results: \texttt{app/experiments/f1-001/README.md}.\par
-Historical Open-Meteo weather; supplied local labels lack UTC offsets. The scheduler has already shifted prediction-origin timestamps by 24 hours; the demo does not shift them again. No plant operating authority is claimed.}
+Retained checks: \texttt{app/handoff/ACTINABENCH.md}, \texttt{scheduler-reproduction/README.md}, \texttt{MODEL-V2-FEEDBACK.md}; research results: \texttt{app/experiments/README.md}.\par
+Historical Open-Meteo weather; source labels use a recovered fixed UTC+03 clock. The scheduler has already shifted prediction-origin timestamps by 24 hours; the demo does not shift them again. No plant operating authority is claimed.}
 \end{document}

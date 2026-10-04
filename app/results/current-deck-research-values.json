@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "deck_sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
+  "source_sha256": "376b95f01ebb46af86e0cd788b96c5934d2c8754629cc752bce1672a58780b38",
+  "identical_test_hours": 3567,
+  "editable_score_table_exact_display_values": [
+    [
+      "",
+      "Precision",
+      "Recall",
+      "F1"
+    ],
+    [
+      "Original",
+      "97.57%",
+      "95.54%",
+      "96.55%"
+    ],
+    [
+      "Day2 forecast",
+      "98.51%",
+      "98.32%",
+      "98.41%"
+    ],
+    [
+      "Raw analogue",
+      "98.41%",
+      "98.32%",
+      "98.37%"
+    ]
+  ],
+  "native_mae_chart_values": [
+    14.265815,
+    8.805719,
+    6.921082
+  ],
+  "chart_rounding_absolute_tolerance": 5.1e-07,
+  "source_methods": [
+    "original",
+    "nwp_day2",
+    "analogue_raw"
+  ],
+  "false_alarms": {
+    "original": 24,
+    "nwp_day2": 15,
+    "analogue_raw": 16
+  },
+  "scope": "Source-to-table/chart check, not a new accuracy experiment."
+}

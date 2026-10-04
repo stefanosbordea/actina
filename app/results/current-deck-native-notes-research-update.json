@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "mode": "current-aktina",
+  "checks": [
+    {
+      "slide": 1,
+      "title": "Aktina",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 2,
+      "title": "Why water storage matters",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 3,
+      "title": "Grid and Sites",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 4,
+      "title": "The supplied demonstration",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 5,
+      "title": "3 July 2026",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 6,
+      "title": "Inside the demonstration",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 7,
+      "title": "Original forecast against persistence",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 8,
+      "title": "Archived weather inputs",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 9,
+      "title": "Business hypotheses",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 10,
+      "title": "What the model does not establish",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 11,
+      "title": "Next evidence",
+      "native_notes_match_source_and_wrapper": true
+    },
+    {
+      "slide": 12,
+      "title": "The team and the ask",
+      "native_notes_match_source_and_wrapper": true
+    }
+  ],
+  "native_editable_charts": 4,
+  "embedded_workbooks": 4,
+  "team_names": [
+    "Loukas Louka",
+    "Stefanos Bordea",
+    "Andreas Nikolaides",
+    "Cleopas Cleopa"
+  ],
+  "equal_team_credit": true,
+  "input_sha256": {
+    "deck": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
+    "markdown": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
+    "build": "f09906c0313ec63545ee6c6c0c28cb8508b233a0fe792bec9cbf37c476edac0f"
+  },
+  "human_rehearsal_performed": false,
+  "timing_and_presenter_assignments": "Not specified by current notes; require team rehearsal"
+}

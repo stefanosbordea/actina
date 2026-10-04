@@ -55,7 +55,7 @@ The supplied schedule uses persistence. Stefanos's LightGBM forecasts are shown 
 \end{minipage}\hfill
 \begin{minipage}[t]{.47\linewidth}
 {\large\bfseries What we need}\par
-The full test favours persistence over the original model. A separate classifier raises recall but lowers precision; no candidate wins all three classification measures. The next model needs fresh evidence.
+The original test favours persistence. Archived weather forecasts improve retrospective F1 to 98.41\%; residual corrections reduce MAE further but add one false alarm. No learned correction is promoted; live performance is unproven.
 
 A pilot needs operator limits, demand, tariffs and curtailment signals. Recovered solar and field savings remain unmeasured. Grid and the separate Sites prototype retain untested business models.
 \end{minipage}

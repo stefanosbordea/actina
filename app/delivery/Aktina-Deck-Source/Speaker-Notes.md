@@ -1,6 +1,6 @@
 # Aktina speaker notes
 
-Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections match the current Aktina deck. Use the silent 60-second backup only if the live demo is unavailable.
+Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections match the current Aktina deck. Use the silent 44-second backup only if the live demo is unavailable.
 
 ## 1. Aktina
 
@@ -39,9 +39,9 @@ Live cues:
 - Open Aktina locally. Choose **3 July 2026**; inspect sun, production, tank and cost.
 - Choose **10 December 2025**; point to low radiation and the tank minimum.
 - Choose **16 March 2026**; MAE is 48.48 W/m² for the original model versus 156.33 for persistence.
-- Open **AktinaBench**; show the original test comparison, then the direct classifier's precision/recall tradeoff.
+- Open **AktinaBench**; show the original test comparison, then select **Archived weather forecast** and **Weather + past errors**.
 
-Fallback: `Aktina-Backup-v2.mp4`, 60 seconds, no audio. It is a screenshot walkthrough, not a live interaction recording. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
+Fallback: `Aktina-Backup-Final.mp4`, 44 seconds, no audio. It is a product screenshot walkthrough, not a live interaction recording. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
 
 ## 7. What the original model achieves
 
@@ -53,11 +53,15 @@ Source cue: `app/handoff/ACTINABENCH.md`; full MAE, RMSE, precision, recall, F1,
 
 ## 8. Research comparison
 
-We ran six separate fixed experiments while preserving the original model. The validation-selected direct classifier misses 15 positive test hours instead of persistence's 25. But it raises false alarms from 20 to 37, lowering precision from 98.01 to 96.41 percent. Its F1 remains lower than persistence. The neural candidate also loses.
+The strongest completed progress comes from additional weather information. On the same 3,567 original test hours, the original model has MAE 14.27 W/m². The fixed archived day2 forecast has MAE 8.81, and raw residual analogues reduce it to 6.92. Precision, recall and F1 are 97.57%, 95.54%, 96.55% for the original model; 98.51%, 98.32%, 98.41% for the archived forecast; and 98.41%, 98.32%, 98.37% for the raw analogue. These are retrospective comparisons against the original model-derived reference.
 
-The roadmap prioritises precision because a false surplus prediction can be costly. Higher recall alone is not enough to promote this candidate. The experiments purge 24 hours at the training boundary, but this test period was already inspected. We need fresh held-out evidence before claiming a better next model.
+The analogue reuses 64 historical residuals to form hourly scenarios. Its lower MAE comes with one extra false alarm: 16 instead of the archived forecast's 15, with 17 misses for both. Validation retains the fixed archived forecast. On the harder 3,566-hour validation period its F1 is 90.08%, compared with 80.07% for the original model and 89.95% for raw analogues. No learned candidate is promoted. The original model remains intact.
 
-Source cue: `app/experiments/f1-001/README.md`. Direct classifier: F1 0.974535, precision 0.964147, recall 0.985149; persistence: 0.977667, 0.980100, 0.975248. No candidate wins all three.
+We also checked the same fixed forecasts against the SARAH3 satellite estimate. On 3,517 common test hours, with 50 missing reference hours retained as unscored, archived-forecast F1 is 96.59% and raw-analogue F1 is 96.54%. MAE is 19.33 versus 18.23 W/m², while false alarms rise from 42 to 43. The harder satellite validation gives the archived forecast F1 of 80.71% on 3,419 common hours. The reference changes the apparent accuracy, so the near-99% weather-reference scores cannot stand alone.
+
+These tests were already inspected during development. Historical forecast publication times are unverified, and satellite estimates are not local ground-sensor measurements. We have separately locked 48 future forecast hours for later satellite evaluation, with no outcomes scored yet. This is evidence to review with Stefanos, not a claim of live superiority, measured curtailment recovery or field savings.
+
+Source cue: `app/experiments/f1-004/result/comparison.csv` (fixed defaults, full test), `app/experiments/reference-sensitivity-001/result-amended/metrics.csv` (identical common-hour bases), and the frozen prospective capture. The fixed 600 W/m² event remains a radiation proxy. Analogue decisions use scenario probability strictly above 0.5. Keep original, archived-control and synthesis results distinct.
 
 ## 9. Business hypotheses
 

@@ -85,8 +85,8 @@
         92
       ],
       "geometry": "rect",
-      "text": "More detections, more false alarms",
-      "textPreview": "More detections, more false alarms",
+      "text": "Archived weather inputs",
+      "textPreview": "Archived weather inputs",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -108,14 +108,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "More detections, more false alarms"
+            "text": "Archived weather inputs"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "More detections, more false alarms",
+          "text": "Archived weather inputs",
           "resolvedTextStyle": {
             "fontSize": 48,
             "typeface": "Arial",
@@ -126,7 +126,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "More detections, more false alarms",
+              "text": "Archived weather inputs",
               "fontSize": 48,
               "typeface": "Arial",
               "color": "#101010",
@@ -214,12 +214,12 @@
       "bbox": [
         68,
         142,
-        1100,
+        1130,
         52
       ],
       "geometry": "rect",
-      "text": "Research comparison, all 3,567 test hours",
-      "textPreview": "Research comparison, all 3,567 test hours",
+      "text": "Retrospective comparison, the same 3,567 test hours",
+      "textPreview": "Retrospective comparison, the same 3,567 test hours",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -241,14 +241,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "Research comparison, all 3,567 test hours"
+            "text": "Retrospective comparison, the same 3,567 test hours"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Research comparison, all 3,567 test hours",
+          "text": "Retrospective comparison, the same 3,567 test hours",
           "resolvedTextStyle": {
             "fontSize": 30,
             "typeface": "Arial",
@@ -257,7 +257,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Research comparison, all 3,567 test hours",
+              "text": "Retrospective comparison, the same 3,567 test hours",
               "fontSize": 30,
               "typeface": "Arial",
               "color": "#626262"
@@ -273,32 +273,501 @@
       "order": 4,
       "kind": "chart",
       "scope": "slide",
-      "aid": "ch/eh07yl4j",
-      "id": "16",
+      "aid": "ch/1kb6903a",
+      "id": "15",
       "name": "Chart",
       "bbox": [
         60,
-        219,
-        795,
-        365
+        227,
+        490,
+        330
       ],
       "chartType": "bar"
     },
     {
       "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/5sre1gnq",
+      "id": "16",
+      "bbox": [
+        584,
+        242,
+        627,
+        264
+      ],
+      "text": "Precision | Recall | F1\nOriginal | 97.57% | 95.54% | 96.55%\nDay2 forecast | 98.51% | 98.32% | 98.41%\nRaw analogue | 98.41% | 98.32% | 98.37%",
+      "textPreview": "Precision | Recall | F1 | Original | 97.57% | 95.54% | 96.55% | Day2 forecast | 98.51% | 98.32% | 98.41% | Raw analogue | 98.41% | 98.32%...",
+      "rows": 4,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            584,
+            242,
+            205,
+            66
+          ],
+          "fillColor": "#FAFAFA"
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            789,
+            242,
+            151,
+            66
+          ],
+          "text": "Precision",
+          "textPreview": "Precision",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Precision",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Precision",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            940,
+            242,
+            138,
+            66
+          ],
+          "text": "Recall",
+          "textPreview": "Recall",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Recall",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Recall",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            1078,
+            242,
+            133,
+            66
+          ],
+          "text": "F1",
+          "textPreview": "F1",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "F1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "F1",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            584,
+            308,
+            205,
+            66
+          ],
+          "text": "Original",
+          "textPreview": "Original",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Original",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Original",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            789,
+            308,
+            151,
+            66
+          ],
+          "text": "97.57%",
+          "textPreview": "97.57%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "97.57%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "97.57%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            940,
+            308,
+            138,
+            66
+          ],
+          "text": "95.54%",
+          "textPreview": "95.54%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "95.54%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "95.54%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            1078,
+            308,
+            133,
+            66
+          ],
+          "text": "96.55%",
+          "textPreview": "96.55%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "96.55%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "96.55%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            584,
+            374,
+            205,
+            66
+          ],
+          "text": "Day2 forecast",
+          "textPreview": "Day2 forecast",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Day2 forecast",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Day2 forecast",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            789,
+            374,
+            151,
+            66
+          ],
+          "text": "98.51%",
+          "textPreview": "98.51%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.51%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.51%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            940,
+            374,
+            138,
+            66
+          ],
+          "text": "98.32%",
+          "textPreview": "98.32%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.32%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.32%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            1078,
+            374,
+            133,
+            66
+          ],
+          "text": "98.41%",
+          "textPreview": "98.41%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.41%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.41%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            584,
+            440,
+            205,
+            66
+          ],
+          "text": "Raw analogue",
+          "textPreview": "Raw analogue",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Raw analogue",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Raw analogue",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            789,
+            440,
+            151,
+            66
+          ],
+          "text": "98.41%",
+          "textPreview": "98.41%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.41%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.41%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            940,
+            440,
+            138,
+            66
+          ],
+          "text": "98.32%",
+          "textPreview": "98.32%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.32%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.32%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            1078,
+            440,
+            133,
+            66
+          ],
+          "text": "98.37%",
+          "textPreview": "98.37%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.37%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.37%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m5gvmhwn",
-      "id": "12",
+      "aid": "sh/n6pwfmd8",
+      "id": "13",
       "bbox": [
-        919,
-        211,
-        290,
-        50
+        68,
+        570,
+        1135,
+        47
       ],
       "geometry": "rect",
-      "text": "Precision",
-      "textPreview": "Precision",
+      "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+      "textPreview": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -320,16 +789,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "Precision"
+            "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Precision",
+          "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
           "resolvedTextStyle": {
-            "fontSize": 31,
+            "fontSize": 28,
             "typeface": "Arial",
             "color": "#141414",
             "bold": true
@@ -337,99 +806,11 @@
           "runs": [
             {
               "index": 1,
-              "text": "Precision",
-              "fontSize": 31,
+              "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+              "fontSize": 28,
               "typeface": "Arial",
               "color": "#141414",
               "bold": true
-            }
-          ],
-          "bulletCharacter": "",
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 6,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/n6pwfmd8",
-      "id": "13",
-      "bbox": [
-        919,
-        282,
-        297,
-        101
-      ],
-      "geometry": "rect",
-      "text": "98.01%   Persistence\n96.41%   Classifier",
-      "textPreview": "98.01%   Persistence | 96.41%   Classifier",
-      "resolvedFontSize": 24,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 24,
-        "typeface": "Calibri",
-        "color": "tx1",
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "autoFit": "none",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "98.01%   Persistence"
-          },
-          {
-            "index": 2,
-            "text": "96.41%   Classifier"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "98.01%   Persistence",
-          "resolvedTextStyle": {
-            "fontSize": 25,
-            "typeface": "Arial",
-            "color": "#141414"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "98.01%   Persistence",
-              "fontSize": 25,
-              "typeface": "Arial",
-              "color": "#141414"
-            }
-          ],
-          "bulletCharacter": "",
-          "marginLeft": 0
-        },
-        {
-          "index": 2,
-          "text": "96.41%   Classifier",
-          "resolvedTextStyle": {
-            "fontSize": 25,
-            "typeface": "Arial",
-            "color": "#141414"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "96.41%   Classifier",
-              "fontSize": 25,
-              "typeface": "Arial",
-              "color": "#141414"
             }
           ],
           "bulletCharacter": "",
@@ -445,106 +826,14 @@
       "aid": "sh/0jydkreh",
       "id": "14",
       "bbox": [
-        919,
-        423,
-        300,
-        119
-      ],
-      "geometry": "rect",
-      "text": "Lower F1\n0.9745 vs 0.9777",
-      "textPreview": "Lower F1 | 0.9745 vs 0.9777",
-      "resolvedFontSize": 24,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 24,
-        "typeface": "Calibri",
-        "color": "tx1",
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "autoFit": "none",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "Lower F1"
-          },
-          {
-            "index": 2,
-            "text": "0.9745 vs 0.9777"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "Lower F1",
-          "resolvedTextStyle": {
-            "fontSize": 32,
-            "typeface": "Arial",
-            "color": "#141414",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "Lower F1",
-              "fontSize": 32,
-              "typeface": "Arial",
-              "color": "#141414",
-              "bold": true
-            }
-          ],
-          "bulletCharacter": "",
-          "marginLeft": 0
-        },
-        {
-          "index": 2,
-          "text": "0.9745 vs 0.9777",
-          "resolvedTextStyle": {
-            "fontSize": 32,
-            "typeface": "Arial",
-            "color": "#141414",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "0.9745 vs 0.9777",
-              "fontSize": 32,
-              "typeface": "Arial",
-              "color": "#141414",
-              "bold": true
-            }
-          ],
-          "bulletCharacter": "",
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 8,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/1k7edwv2",
-      "id": "15",
-      "bbox": [
         68,
-        623,
+        641,
         1110,
         50
       ],
       "geometry": "rect",
-      "text": "Validation selected the candidate. The test was already inspected. Fresh holdout needed.",
-      "textPreview": "Validation selected the candidate. The test was already inspected. Fresh holdout needed.",
+      "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
+      "textPreview": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -566,14 +855,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "Validation selected the candidate. The test was already inspected. Fresh holdout needed."
+            "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Validation selected the candidate. The test was already inspected. Fresh holdout needed.",
+          "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Arial",
@@ -582,7 +871,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Validation selected the candidate. The test was already inspected. Fresh holdout needed.",
+              "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
               "fontSize": 22,
               "typeface": "Arial",
               "color": "#626262"

@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED",
+  "verified_at_utc": "2026-10-04T09:32:53.442184+00:00",
+  "archive": "delivery/Aktina-Competition-Pack.zip",
+  "sha256": "70409d8159e8a829591a80fd2416a36e0f5d4d6acc4d089ba8c6810b9b6180f7",
+  "bytes": 7735801,
+  "entries": 88,
+  "manifest_file_hashes_verified": 87,
+  "source_notes_byte_identical": true,
+  "current_latex_sources_byte_identical": true,
+  "final_video_byte_identical": true,
+  "stale_or_research_artifacts_included": false,
+  "offline_http_files_verified": 77,
+  "offline_http_content_types": {
+    "text/javascript": 33,
+    "application/json": 9,
+    "text/css": 7,
+    "text/html": 4,
+    "text/csv": 3,
+    "image/svg+xml": 7,
+    "font/woff2": 7,
+    "text/plain": 5,
+    "image/png": 2
+  },
+  "entry_routes_http_200": [
+    "/",
+    "/benchmark.html",
+    "/workspace/"
+  ],
+  "checks_scope": "Extracted file hashes and local HTTP delivery/MIME only; no browser interaction asserted.",
+  "unit_tests": {
+    "command": "python3 -B -m unittest discover -s app/tests -p test_review_pack.py -v",
+    "exit_code": 0,
+    "passed": 8
+  },
+  "build_command": "python3 -B app/tools/package_review_pack.py",
+  "build_exit_code": 0
+}

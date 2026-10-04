@@ -1,0 +1,138 @@
+{
+  "checked_utc": "2026-10-04T09:29:58.722643+00:00",
+  "source_commit": "9cfde74d7310f90e275e01d1bbc983d4062af4f5",
+  "deployment_id": "dpl_9RhYbZBKx3t3sCFuahxFw6ai1Kuh",
+  "checks": [
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "index.html",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/index.html",
+      "sha256": "eae017a3b8495f230915162571cecd0a4d0aa4123ee22127fd199368f9713c3c",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "benchmark.html",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark.html",
+      "sha256": "f9a430589ee0aa62defe7d7e8df8d2085fc25b90ce7beb6065aa2105dfc5b439",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "benchmark.mjs",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark.mjs",
+      "sha256": "34cf7490721f4059a6e86ca496f805b0f62a25a60c154b66266ea0c5d7856bb2",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "benchmark-data.js",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark-data.js",
+      "sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "research-results.json",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/research-results.json",
+      "sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "index.html",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/index.html",
+      "sha256": "eae017a3b8495f230915162571cecd0a4d0aa4123ee22127fd199368f9713c3c",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "benchmark.html",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark.html",
+      "sha256": "f9a430589ee0aa62defe7d7e8df8d2085fc25b90ce7beb6065aa2105dfc5b439",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "benchmark.mjs",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark.mjs",
+      "sha256": "34cf7490721f4059a6e86ca496f805b0f62a25a60c154b66266ea0c5d7856bb2",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "benchmark-data.js",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark-data.js",
+      "sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "research-results.json",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/research-results.json",
+      "sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "experiment-results.csv",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/experiment-results.csv",
+      "sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "matches_local": true
+    },
+    {
+      "host": "aktina-pafos-2026.vercel.app",
+      "path": "workspace/index.html",
+      "status": 200,
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/index.html",
+      "sha256": "9b6d40514b04e964084ef98a044d128726a70e24565f33cc3c0bfc8883a2404a",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "experiment-results.csv",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/experiment-results.csv",
+      "sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "matches_local": true
+    },
+    {
+      "host": "aquashift-pafos-2026.vercel.app",
+      "path": "workspace/index.html",
+      "status": 200,
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/index.html",
+      "sha256": "9b6d40514b04e964084ef98a044d128726a70e24565f33cc3c0bfc8883a2404a",
+      "matches_local": true
+    }
+  ],
+  "browser_review": {
+    "browser": "Codex built-in browser",
+    "desktop_viewport": [
+      1600,
+      900
+    ],
+    "observed_default": "Archived weather forecast",
+    "precision": "98.51%",
+    "recall": "98.32%",
+    "f1": "98.41%",
+    "mobile_widths_checked_locally": [
+      390,
+      320
+    ],
+    "mobile_horizontal_overflow": false,
+    "desktop_screenshot": "benchmark-research-desktop.jpg",
+    "screenshot_sha256": "6e83d78d69c18ab8dce74a4bf2352282fb05df8d93714bf934edc93ecda2c7cd"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "VISUALLY_INSPECTED",
+  "reviewed_at_utc": "2026-10-04T09:27:52.394432+00:00",
+  "output_sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
+  "scope": "All six decoded scene-midpoint frames were opened and inspected, as were the six retained source views.",
+  "frames": [
+    {
+      "file": "render/qa-frames/01.png",
+      "at_seconds": 3.0,
+      "sha256": "10ac27c0839eb3542cf0e70fa027bae51d93ffa2e20d1685790d4fd1450acfaf",
+      "source_capture": "captures/01-home.jpg"
+    },
+    {
+      "file": "render/qa-frames/02.png",
+      "at_seconds": 10.5,
+      "sha256": "4b23549d4de30f2f08a48fd7546411938ed835aeda555cbb2908a4e4de889b68",
+      "source_capture": "captures/02-summer.jpg"
+    },
+    {
+      "file": "render/qa-frames/03.png",
+      "at_seconds": 18.0,
+      "sha256": "a30bfa76d9b06bd53fd18b8f65b9b6b60715527ab3b26dad6392196cbd321cae",
+      "source_capture": "captures/03-summer-cost.jpg"
+    },
+    {
+      "file": "render/qa-frames/04.png",
+      "at_seconds": 25.0,
+      "sha256": "484dcf9044e30759798e36401a15b165ecea12ae6cb3f1eb6421a8e99bd2553e",
+      "source_capture": "captures/04-winter.jpg"
+    },
+    {
+      "file": "render/qa-frames/05.png",
+      "at_seconds": 32.0,
+      "sha256": "d05f97e6f67d79548a29af6fd69c3b17f634f54a3f82168f59f811f8c0ed8c50",
+      "source_capture": "captures/05-winter-cost.jpg"
+    },
+    {
+      "file": "render/qa-frames/06.png",
+      "at_seconds": 39.5,
+      "sha256": "e858ff71e3e51292bc3a0da908059d829466bbffffb3b5a3fa448aa539c5526e",
+      "source_capture": "captures/06-change.jpg"
+    }
+  ],
+  "findings": [
+    "Current Aktina name and AktinaBench navigation visible; no AquaShift or ActinaBench text in frames.",
+    "No added BridgeMind/BridgeClip/AI-assistance overlay, title or caption.",
+    "Summer and winter costs retain equal-water/ending-storage conditions; winter shows zero cost difference.",
+    "Cost views visibly use Source time UTC+03.",
+    "Supplied-schedule forecast discrepancy note remains visible.",
+    "No research candidate or benchmark score is presented as an upgrade.",
+    "All source screenshot framing preserved without crop; upscaling adds no detail."
+  ],
+  "limitations": [
+    "Screenshot walkthrough, not live interaction recording.",
+    "Original1600x900 screenshot detail upscaled to1080p.",
+    "Illustrative plant and prices; product demonstration does not establish operating savings."
+  ]
+}

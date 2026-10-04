@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-04T09:32:57.325887+00:00",
+  "compiler": "Codex desktop built-in LaTeX compiler",
+  "status": "SUCCESS",
+  "files": {
+    "app/delivery/AquaShift-Technical-Proposal.tex": "2d4a01cd02102d633da9871699ed5ef14267f38eee6814c32c897c8a52accd51",
+    "app/delivery/AquaShift-Executive-Summary.tex": "ada1f2dd514782cd705132e8dcd37e3a76e13d15522a3099be476853abd38fac"
+  },
+  "scope": "Both existing primary sources compiled successfully after updating research claims and silent-video cue; packaged copies are byte-identical. No PDF export claimed."
+}

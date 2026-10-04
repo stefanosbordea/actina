@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "kind": "actual-interface screenshots; not a live interaction recording",
+  "recorded_at_utc": "2026-10-04T09:26:12.179648+00:00",
+  "captures": [
+    {
+      "capture": "01-home.jpg",
+      "source": "app/build/aktina-backup-final/captures/01-home.jpg",
+      "source_ui_commit": null,
+      "source_state": "Current actual UI with AktinaBench navigation and fixed UTC+03 cost-view clock label",
+      "sha256": "62f636ff59e771ff06498ba42906d064a970b72b2c96e23ab92d98728949426d",
+      "bytes": 87277
+    },
+    {
+      "capture": "02-summer.jpg",
+      "source": "app/delivery/Aktina-Backup-v2-Source/captures/02-summer.jpg",
+      "source_ui_commit": "5b9c24f",
+      "source_state": "Unchanged supplied-product plot view from prior walkthrough",
+      "sha256": "28eb71399994031e3ad8eaffca776e11e3627df5708db6302bdd113fe03846ec",
+      "bytes": 84519
+    },
+    {
+      "capture": "03-summer-cost.jpg",
+      "source": "app/build/aktina-backup-final/captures/03-summer-cost.jpg",
+      "source_ui_commit": null,
+      "source_state": "Current actual UI with AktinaBench navigation and fixed UTC+03 cost-view clock label",
+      "sha256": "0ff0d15c19ef78d3164e538d9c258519828faa9b12717a29287d0808b1866ed3",
+      "bytes": 82601
+    },
+    {
+      "capture": "04-winter.jpg",
+      "source": "app/delivery/Aktina-Backup-v2-Source/captures/04-winter.jpg",
+      "source_ui_commit": "5b9c24f",
+      "source_state": "Unchanged supplied-product plot view from prior walkthrough",
+      "sha256": "52e99ea7a400a1c3fda8546d8d48d073fcca2fdac08a3486d775aa4cc837151c",
+      "bytes": 83335
+    },
+    {
+      "capture": "05-winter-cost.jpg",
+      "source": "app/build/aktina-backup-final/captures/05-winter-cost.jpg",
+      "source_ui_commit": null,
+      "source_state": "Current actual UI with AktinaBench navigation and fixed UTC+03 cost-view clock label",
+      "sha256": "64df84eab9323db85e5fc8c3ad9495d787118ffceee80c5acb73f1d74e455039",
+      "bytes": 81212
+    },
+    {
+      "capture": "06-change.jpg",
+      "source": "app/delivery/Aktina-Backup-v2-Source/captures/06-change.jpg",
+      "source_ui_commit": "5b9c24f",
+      "source_state": "Unchanged supplied-product plot view from prior walkthrough",
+      "sha256": "cd1b59de511c7416295b807adaeda4a1e4b9b407fe8c52992e0917522e4abf5d",
+      "bytes": 86562
+    }
+  ],
+  "fresh_capture_scope": "Root captured and visually checked three1600x900 JPEGs in built-in browser. Current source identity is recorded below; uncommitted time-label correction is not represented as an existing commit.",
+  "current_site_sources_sha256": {
+    "app/site/index.html": "eae017a3b8495f230915162571cecd0a4d0aa4123ee22127fd199368f9713c3c",
+    "app/site/site.mjs": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a",
+    "app/site/site.css": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b",
+    "app/site/data.js": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5"
+  },
+  "prior_compositor_sha256": "4da9709fb306fb83807e6158667224051b14f275121307b1d23d17625e13dc9a",
+  "adapter_sha256": "68cbf1185792b99ae51b08661d38d416395e8870bc2de838fa7460f83ade5b3c",
+  "timeline_scope": "Product only; all benchmark/research-candidate views removed. No upgraded-model claim."
+}

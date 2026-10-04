@@ -29,6 +29,13 @@ if(rows.length!==24||sum('aktina')!==5658||sum('flat')!==5658||day.start_tank!==
 const records=(await fs.readFile(path.join(app,'experiments/f1-001/RESULTS.csv'),'utf8')).trim().split(/\r?\n/).map(row=>row.split(','));
 const header=records.shift(),metrics=records.map(row=>Object.fromEntries(header.map((key,i)=>[key,row[i]])));
 const metric=(method,split,key)=>Number(metrics.find(r=>r.method===method&&r.split===split)[key]);
+const comparisonRows=(await fs.readFile(path.join(app,'experiments/f1-004/result/comparison.csv'),'utf8')).trim().split(/\r?\n/).map(row=>row.split(','));
+const comparisonHeader=comparisonRows.shift(),comparison=comparisonRows.map(row=>Object.fromEntries(comparisonHeader.map((key,i)=>[key,row[i]])));
+const research=['original','nwp_day2','analogue_raw'].map(method=>{
+ const r=comparison.find(row=>row.method===method&&row.split==='test'&&row.basis==='default'&&row.scope==='full');
+ if(!r||Number(r.hours)!==3567)throw Error('Expected identical 3,567-hour fixed test comparisons.');
+ return {method,...Object.fromEntries(['hours','precision','recall','f1','mae','fp','fn'].map(key=>[key,Number(r[key])]))};
+});
 const notes=(await fs.readFile(path.join(dir,'Speaker-Notes.md'),'utf8')).split(/\n## \d+\. /).slice(1);
 if(notes.length!==12)throw Error('Expected 12 corrected note sections.');
 const p=await PresentationFile.importPptx(await FileBlob.load(path.join(dir,'template.pptx')));
@@ -120,15 +127,19 @@ const foot=(s,copy,y=623)=>text(s,copy,68,y,1110,50,22,false,C.muted);
  foot(s,'3,566 validation and 3,567 test hours. Validation informed fitting. Original splits lack a 24-hour purge.');
 }
 {
- const s=slide(8,'More detections, more false alarms');
- text(s,'Research comparison, all 3,567 test hours',68,142,1100,52,30,false,C.muted);
- chart(s,'bar',{left:60,top:219,width:795,height:365},['Missed positive hours','False alarms'],[
-  {name:'Persistence',values:[25,20],fill:'#999999',valuesFormatCode:'0'},
-  {name:'Direct classifier',values:[15,37],fill:C.ink,valuesFormatCode:'0'}],
-  {dataLabels:{showValue:true,position:'outEnd',textStyle:{typeface:'Arial',fontSize:25,fill:C.ink}},yAxis:{min:0,max:40,majorUnit:10,textStyle:{typeface:'Arial',fontSize:21,fill:C.muted},majorGridlines:{fill:C.light,width:1}}});
- text(s,'Precision',919,211,290,50,31,true);text(s,'98.01%   Persistence\n96.41%   Classifier',919,282,297,101,25);
- text(s,'Lower F1\n0.9745 vs 0.9777',919,423,300,119,32,true);
- foot(s,'Validation selected the candidate. The test was already inspected. Fresh holdout needed.');
+ const s=slide(8,'Archived weather inputs');
+ text(s,'Retrospective comparison, the same 3,567 test hours',68,142,1130,52,30,false,C.muted);
+ const labels=['Original','Day2 forecast','Raw analogue'];
+ chart(s,'bar',{left:60,top:227,width:490,height:330},['MAE, W/m²'],research.map((r,i)=>({name:labels[i],values:[r.mae],fill:['#BBBBBB','#777777',C.ink][i],valuesFormatCode:'0.00'})),
+  {dataLabels:{showValue:true,position:'outEnd',textStyle:{typeface:'Arial',fontSize:25,fill:C.ink}},yAxis:{min:0,max:16,majorUnit:4,textStyle:{typeface:'Arial',fontSize:21,fill:C.muted},majorGridlines:{fill:C.light,width:1}},legend:{position:'bottom',overlay:false,textStyle:{typeface:'Arial',fontSize:18,fill:C.ink}}});
+ const table=s.tables.add({rows:4,columns:4,left:584,top:242,width:627,height:264,columnWidths:[205,151,138,133],
+  values:[['','Precision','Recall','F1'],...research.map((r,i)=>[labels[i],...['precision','recall','f1'].map(key=>(100*r[key]).toFixed(2)+'%')])]});
+ table.styleOptions={headerRow:false,bandedRows:false};table.borders.assign({fill:'none',width:0});
+ for(let r=0;r<4;r++)for(let c=0;c<4;c++){
+  const cell=table.getCell(r,c);cell.fill=C.paper;cell.text.style={typeface:'Arial',fontSize:24,bold:r===0,color:r===0?C.muted:C.ink};
+ }
+ text(s,'Raw analogue lowers MAE. False alarms rise from 15 to 16.',68,570,1135,47,28,true);
+ foot(s,'Model-derived reference. Previously inspected test. Historical forecast publication time unverified.',641);
 }
 {
  const s=slide(9,'Business hypotheses');
@@ -171,8 +182,8 @@ const validation=await finalizePresentation({workspaceDir:app,candidatePath:cand
  pythonExecutable:path.join(runtime,'python/bin/python3'),
  integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),
  layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),
- layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],
- explicitTotalSlideCount:12,requiredNativeChartOwnerSlides:[5,7,8],requiredNativeTableOwnerSlides:[],materializeLiteralChartWorkbooks:true,
+ layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit','--require-native-table-slide','8'],
+ explicitTotalSlideCount:12,requiredNativeChartOwnerSlides:[5,7,8],requiredNativeTableOwnerSlides:[8],materializeLiteralChartWorkbooks:true,
  fontPolicy:{basis:'reference',families:['Arial'],referencePath:path.join(dir,'template.pptx'),referenceSha256:provenance['delivery/Aktina-Deck-Source/template.pptx']},
  verifyArtifactToolImport:true,receiptPath:path.join(stage,`${path.basename(output)}.validation.json`)});
 const final=await PresentationFile.importPptx(await FileBlob.load(output));
@@ -181,5 +192,5 @@ for(let i=0;i<final.slides.items.length;i++){
  await fs.writeFile(path.join(preview,`slide-${String(i+1).padStart(2,'0')}.png`),new Uint8Array(await blob.arrayBuffer()));
  await fs.writeFile(path.join(preview,`slide-${String(i+1).padStart(2,'0')}.layout.json`),await(await s.export({format:'layout'})).text());
 }
-await fs.writeFile(path.join(dir,'facts.json'),JSON.stringify({source_days:data.days.length,source_rows:data.days.reduce((n,d)=>n+d.rows.length,0),date:day.date,production_m3:sum('aktina'),flat_production_m3:sum('flat'),energy_kwh:energy,cost_eur:{supplied:cost('aktina'),flat:cost('flat')},illustrative_reduction_percent:reduction,start_tank:day.start_tank,end_tank:rows.at(-1).tank,native_charts:4},null,2)+'\n');
+await fs.writeFile(path.join(dir,'facts.json'),JSON.stringify({source_days:data.days.length,source_rows:data.days.reduce((n,d)=>n+d.rows.length,0),date:day.date,production_m3:sum('aktina'),flat_production_m3:sum('flat'),energy_kwh:energy,cost_eur:{supplied:cost('aktina'),flat:cost('flat')},illustrative_reduction_percent:reduction,start_tank:day.start_tank,end_tank:rows.at(-1).tank,native_charts:4,native_tables:1,slide8_fixed_test_comparison:research},null,2)+'\n');
 console.log(JSON.stringify({output,slides:final.slides.items.length,validation},null,2));
