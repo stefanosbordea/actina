@@ -4,7 +4,7 @@ Updated 4 October 2026. The review pack now includes the current historical fore
 
 | Deliverable | Current state |
 |---|---|
-| [Competition pack](../delivery/Aktina-Competition-Pack.zip) | 98 verified entries, including 82 offline site assets. [Per-file and archive hashes](../delivery/Aktina-Competition-Pack.manifest.json) |
+| [Competition pack](../delivery/Aktina-Competition-Pack.zip) | 98 verified entries, including 82 offline site assets and persistent home-animation Play/Pause. [Per-file and archive hashes](../delivery/Aktina-Competition-Pack.manifest.json) |
 | [Technical summary](../delivery/Aktina-Technical-Summary.tex) | Current standalone source, compiled in the native editor. No separate PDF generated or included |
 | [Forecast QR](../delivery/Aktina-Forecast-QR.png) | PNG, SVG, slide SVG and usage notes included. Encodes the published forecast URL |
 | [Existing PowerPoint](../delivery/Aktina-Pafos-2026.pptx) | 12 slides, four editable charts, equal team credit. Slides 6 and 11 corrected. All native notes match the source. This is a factual reference for the presentation lead |
@@ -21,6 +21,6 @@ The 44-second video remains the earlier schedule walkthrough. Its verified foota
 
 The pack contains no private messages, team-setting captures, private screenshots, historical PDF exports or research datasets. Its public workspace preview images remain bundled dependencies of the offline demo. The earlier proposal LaTeX sources remain review drafts and predate the new forecast comparison. Use the new technical summary for the current model result, and reconcile the proposal before submission.
 
-The prior pack and manifest are preserved in `app/build/competition-pack-before-019-handoff/`. The current pack was opened after creation and every archived entry was compared with its retained source bytes. Ten packaging tests passed, including changed-source, QR, private-screenshot and no-overwrite checks. [Packaging guide](../tools/PACKAGING.md).
+The previous pack and manifest are preserved in `app/build/competition-pack-before-home-motion/`. The earlier pre-019 copy remains in `app/build/competition-pack-before-019-handoff/`. The animation update changed only two offline site files. All other 95 payload entries remain byte-identical, including model data, deck, notes, LaTeX, QR assets and video. The current pack was opened after creation and every archived entry was compared with its retained source bytes. Ten packaging tests passed. The [animation pack receipt](../results/competition-pack-home-motion.json) records the new archive hash and preserves the [earlier handoff receipt](../results/competition-pack-019-handoff.json). [Packaging guide](../tools/PACKAGING.md).
 
 No plant-control connection, measured curtailment recovery or field saving is established. The schedule still uses illustrative operating and tariff assumptions. [Scheduler reproduction](scheduler-reproduction/README.md) preserves both outputs for the team to choose the intended submission version.

@@ -45,6 +45,8 @@ The supplied schedule matches a persistence-driven scheduler export. A separate 
 
 The refreshed [competition pack](delivery/Aktina-Competition-Pack.zip) includes all 82 current offline site assets, the corrected 12-slide [PowerPoint](delivery/Aktina-Pafos-2026.pptx) and notes, the [technical-summary LaTeX source](delivery/Aktina-Technical-Summary.tex), four forecast QR assets and the verified silent backup. Its [manifest](delivery/Aktina-Competition-Pack.manifest.json) records all 98 entries and the archive hash. No standalone PDF was generated. Shotter will handle the final presentation.
 
+The offline home animation now remembers explicit Play/Pause across reloads. Its [pack update receipt](results/competition-pack-home-motion.json) verifies that only the animation controller and SVG changed. All other packaged files are unchanged. The previous pack is preserved under ignored `build/competition-pack-before-home-motion/`.
+
 The [44-second video](delivery/Aktina-Backup-Final.mp4) is historical screenshot footage that predates the current forecast page. It is a fallback for the earlier schedule demonstration, not a showcase of the new correction. Earlier proposal sources are included as review drafts and need reconciliation with the current technical summary. No private messages or team-setting captures are included. Use the [delivery status](handoff/DELIVERY-STATUS.md) and [packaging guide](tools/PACKAGING.md) for the exact contents and limits. The prior pack is preserved under ignored `build/competition-pack-before-019-handoff/`.
 
 To open the earlier review workspace directly without opening a browser automatically:

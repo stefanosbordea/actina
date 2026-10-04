@@ -1,8 +1,8 @@
 {
   "status": "PACKAGED_AND_VERIFIED",
   "file": "Aktina-Competition-Pack.zip",
-  "bytes": 7869416,
-  "sha256": "73fb555ea604dbebb844b045409dec3fdde30ad93e1b26e91ec5738a5b96857b",
+  "bytes": 7869574,
+  "sha256": "7815bc7f16a4d535d249793fe69ea162d60d69e5c09da231aabfb9e4f1c2d678",
   "entries": 98,
   "slides": 12,
   "site_files": 82,
@@ -251,8 +251,8 @@
       "sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526"
     },
     "site/workspace/home-demo.mjs": {
-      "bytes": 5405,
-      "sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254"
+      "bytes": 5881,
+      "sha256": "be50be1793ecb246d65de786c6cf5e294a5c2cce37960887977d6e61abbd7789"
     },
     "site/workspace/home-reference.mjs": {
       "bytes": 1169,
@@ -355,8 +355,8 @@
       "sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb"
     },
     "site/workspace/solar-water.svg": {
-      "bytes": 12981,
-      "sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f"
+      "bytes": 12975,
+      "sha256": "98b66194d5d166c44a1c63e6dad938fd6e96547c5f95ce9d71bea71c0f99e1cd"
     },
     "site/workspace/storage-frontier.mjs": {
       "bytes": 10239,

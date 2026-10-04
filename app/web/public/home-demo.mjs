@@ -20,10 +20,16 @@ export function setupHomeDemo({document, onOpen}) {
  const menu = $('home-menu');
  const motionPreference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
  const diagram = $('home-flow-diagram'), motionToggle = $('home-flow-toggle');
+ const motionKey = 'aktina.diagram-motion';
  let motionChoice = null;
+ try {
+  const saved = window.localStorage.getItem(motionKey);
+  if (saved === 'play' || saved === 'pause') motionChoice = saved;
+ } catch { /* Playback still works when storage is unavailable. */ }
  function updateMotion() {
   const paused = motionChoice === 'pause' || (motionChoice === null && (motionPreference?.matches ?? false));
-  diagram.setAttribute('src', `solar-water.svg${paused ? '#still' : motionChoice === 'play' ? '#play' : ''}`);
+  const source = `solar-water.svg${paused ? '#still' : motionChoice === 'play' ? '#play' : ''}`;
+  if (diagram.getAttribute('src') !== source) diagram.setAttribute('src', source);
   motionToggle.hidden = false;
   motionToggle.setAttribute('aria-label', paused ? 'Play diagram animation' : 'Pause diagram animation');
   motionToggle.title = motionToggle.getAttribute('aria-label');
@@ -31,9 +37,11 @@ export function setupHomeDemo({document, onOpen}) {
  }
  motionToggle.addEventListener('click', () => {
   motionChoice = diagram.getAttribute('src').endsWith('#still') ? 'play' : 'pause';
+  try { window.localStorage.setItem(motionKey, motionChoice); } catch { /* Keep the choice for this visit. */ }
   updateMotion();
  });
  motionPreference?.addEventListener('change', updateMotion);
+ window.addEventListener('pageshow', updateMotion);
  updateMotion();
  menu.addEventListener('click', event => { if (event.target.closest('a')) menu.open = false; });
  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.open) { event.preventDefault(); menu.open = false; menu.querySelector('summary').focus(); } });

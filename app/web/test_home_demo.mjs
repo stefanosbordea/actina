@@ -70,6 +70,52 @@ test('concept animation respects reduced motion by default and allows an explici
  } finally {w.close();}
 });
 
+test('explicit play and pause survive a reload and returning home without restarting the image', () => {
+ const key='aktina.diagram-motion';
+ for(const [choice,reduced,fragment,label] of [['play',true,'#play','Pause'],['pause',false,'#still','Play']]){
+  const first=new JSDOM(read('index.html'),{url:'https://aktina.example/workspace/#home'});
+  let saved;
+  try {
+   first.window.matchMedia=()=>({matches:reduced,addEventListener:()=>{}});
+   setupHomeDemo({document:first.window.document,onOpen:()=>{}});
+   first.window.document.getElementById('home-flow-toggle').click();
+   saved=first.window.localStorage.getItem(key);
+   assert.equal(saved,choice);
+  } finally {first.window.close();}
+  const restored=new JSDOM(read('index.html'),{url:'https://aktina.example/workspace/#overview'}),w=restored.window;
+  try {
+   w.localStorage.setItem(key,saved);
+   w.matchMedia=()=>({matches:reduced,addEventListener:()=>{}});
+   setupHomeDemo({document:w.document,onOpen:()=>{}});
+   const image=w.document.getElementById('home-flow-diagram'),button=w.document.getElementById('home-flow-toggle');
+   assert.equal(image.getAttribute('src'),`solar-water.svg${fragment}`);
+   assert.equal(button.getAttribute('aria-label'),`${label} diagram animation`);
+   const setAttribute=image.setAttribute.bind(image),writes=[];
+   image.setAttribute=(name,value)=>{writes.push(name);setAttribute(name,value);};
+   w.history.replaceState(null,'','#home');w.dispatchEvent(new w.HashChangeEvent('hashchange'));
+   w.dispatchEvent(new w.PageTransitionEvent('pageshow',{persisted:true}));
+   assert.equal(image.getAttribute('src'),`solar-water.svg${fragment}`);
+   assert.deepEqual(writes,[]);
+  } finally {w.close();}
+ }
+});
+
+test('unavailable or invalid saved motion settings cannot prevent playback or bypass reduced motion', () => {
+ for(const unavailable of [false,true]){
+  const dom=new JSDOM(read('index.html'),{url:'https://aktina.example/workspace/#home'}),w=dom.window;
+  try {
+   w.matchMedia=()=>({matches:true,addEventListener:()=>{}});
+   if(unavailable)Object.defineProperty(w,'localStorage',{get:()=>{throw new w.DOMException('Storage blocked','SecurityError');}});
+   else w.localStorage.setItem('aktina.diagram-motion','invalid');
+   setupHomeDemo({document:w.document,onOpen:()=>{}});
+   const image=w.document.getElementById('home-flow-diagram'),button=w.document.getElementById('home-flow-toggle');
+   assert.equal(image.getAttribute('src'),'solar-water.svg#still');
+   button.click();assert.equal(image.getAttribute('src'),'solar-water.svg#play');
+   button.click();assert.equal(image.getAttribute('src'),'solar-water.svg#still');
+  } finally {w.close();}
+ }
+});
+
 test('workspace home links verified v2 forecasts and keeps the simulation label out of the border', () => {
  const dom=new JSDOM(read('index.html')),document=dom.window.document;
  try {
@@ -80,6 +126,7 @@ test('workspace home links verified v2 forecasts and keeps the simulation label 
   const svg=read('solar-water.svg');
   assert.match(svg,/id="still"/);assert.match(svg,/:root:target/);assert.match(svg,/@media\(prefers-reduced-motion:reduce\)/);
   assert.match(svg,/id="play"/);assert.match(svg,/#play:target .energy-flow/);assert.match(svg,/animation-play-state:running/);
+  assert.match(svg,/animation:flow 4s linear infinite/);assert.match(svg,/animation:ripple 4s ease-out infinite/);
   assert.match(svg,/class="energy-flow"/);assert.match(svg,/class="water-flow"/);assert.match(svg,/level is illustrative and fixed/);
  } finally {dom.window.close();}
 });
