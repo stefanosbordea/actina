@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "app/handoff/v2-integration-2026-10-04/build_code_guide.py",
+    "--check"
+  ],
+  "started_at_utc": "2026-10-04T13:47:13.216977+00:00",
+  "completed_at_utc": "2026-10-04T13:47:13.282415+00:00",
+  "wall_seconds": 0.0654657919994861,
+  "exit_code": 0,
+  "log_sha256": "b34d57d1e05014b39ad02daacb9b0668a404c7f1bc5ac653ad2acfaadc5714a4"
+}
