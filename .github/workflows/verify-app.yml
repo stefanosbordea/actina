@@ -52,6 +52,28 @@ jobs:
           node app/tools/test_demo.mjs
           node app/tools/test_benchmark_ui.mjs
           node app/build.mjs
+      - name: Replay saved Bernstein quantile networks
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s app/experiments/f1-009 -p test_bqn.py -v
+          python -m unittest discover -s app/experiments/f1-009/review -p test_replay.py -v
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import runpy
+          audit = runpy.run_path('app/experiments/f1-009/review/check.py')
+          result = audit['check']()
+          Path('app/build/release-check/model009-replay.json').write_text(json.dumps(result, indent=2))
+          print(json.dumps(result))
+          sensitivity = runpy.run_path('app/experiments/f1-009/review/uncertainty.py')['main']()
+          saved = json.loads(Path('app/experiments/f1-009/review/uncertainty-result.json').read_text())
+          assert sensitivity == saved
+          print('Paired day-block uncertainty replay PASS')
+          PY
       - name: Preserve verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

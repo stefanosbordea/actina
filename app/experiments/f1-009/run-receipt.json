@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T10:11:50.024748+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-009/run.py --output app/experiments/f1-009/result > app/experiments/f1-009/run.log 2>&1",
+  "exit_code": 0,
+  "fits": 4,
+  "optimizer_converged_fits": 0,
+  "all_fits_stopped_at_fixed_iteration_budget": true,
+  "fit_wall_seconds": 42.636471042002086,
+  "fit_cpu_seconds": 24.765552,
+  "peak_process_rss_bytes": 200392704,
+  "preflight": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python -m unittest discover -s app/experiments/f1-009 -p test_bqn.py -v",
+    "exit_code": 0,
+    "tests": 4,
+    "parameter_finite_difference_checks": 1338
+  },
+  "evidence_sha256": {
+    "PROTOCOL.md": "b266806d0e2eb83ee8d1bbd1c04982348ee84497dfb6b06ac384aad96393c6ed",
+    "inputs.json": "4d56e253d5a52aafd233cb894624d2cdd96cc302b4c28a18487b8076f49dce5a",
+    "bqn.py": "fc70f20304e9be1e0b1698a46f33bfa4336f91f6f21637c2cfe82687e88dafce",
+    "run.py": "d93ef6556c4dc9807504a6571f78d1af78fbc4072ca46ab50a6351c7b58241a7",
+    "test_bqn.py": "cab5aa1e577d786dd50c8ee98b056a6ee5cd079d86a32ec69d09879606f9296f",
+    "preflight.log": "aaa2bb39b0482ba6cd195eb41f596199d4ac17fa927d307d3026b9054fc17a67",
+    "preflight-final.log": "2e89b562912ec70f46e3b2793622a0f189f248a2ab56d06f818f7ac65efe8ac7",
+    "run.log": "a582e77115c4977af5664254059070a3adbb231e134070efb4e4c982f41b7874",
+    "result/report.json": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+    "result/validation-selection.json": "cc89822fac7f339296b23c7e4c22c57317148df4c08e92b4284183f2267d4cf7"
+  },
+  "independent_review": "Pending separate receipt.",
+  "conclusion": "All six event metrics improve versus raw NWP; weather median MAE regresses and five event metrics regress versus frozen008. No global-upgrade or product-replacement claim."
+}

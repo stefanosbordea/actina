@@ -1,0 +1,10 @@
+{
+  "action": "Preserved the exact previously executed checker bytes without modifying or rerunning them.",
+  "source_path": "/tmp/aktina-009-uncertainty-independent.py",
+  "retained_path": "app/experiments/f1-009/review/uncertainty-check.py",
+  "sha256": "01853eca80ab7b27a0e28091259593aecf599f2b77a4ea603e5963cbc7a71b49",
+  "prior_review_receipt_sha256": "f3aeff37aa2f228d84f7bf64b5363f714185acca63da6c0b45274f7fe321c0c1",
+  "prior_actual_exit_code": 0,
+  "reproduce_command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-009/review/uncertainty-check.py",
+  "rerun_output_note": "All checks run in memory. The checker refuses to overwrite an existing uncertainty-review.json. Run in a fresh checkout with that generated receipt absent to save a fresh receipt, preserving the existing receipt first."
+}

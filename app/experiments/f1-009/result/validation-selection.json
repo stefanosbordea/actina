@@ -1,0 +1,97 @@
+{
+  "selected_arm": "joint",
+  "policies": {
+    "weather": {
+      "policy": {
+        "kind": "control"
+      },
+      "metrics": {
+        "weather_full": {
+          "hours": 3566,
+          "tp": 268,
+          "fp": 21,
+          "fn": 38,
+          "tn": 3239,
+          "precision": 0.9273356401384083,
+          "recall": 0.8758169934640523,
+          "f1": 0.9008403361344538,
+          "brier": null
+        },
+        "weather_common": {
+          "hours": 3419,
+          "tp": 255,
+          "fp": 16,
+          "fn": 37,
+          "tn": 3111,
+          "precision": 0.940959409594096,
+          "recall": 0.8732876712328768,
+          "f1": 0.9058614564831261,
+          "brier": null
+        },
+        "satellite_common": {
+          "hours": 3419,
+          "tp": 228,
+          "fp": 43,
+          "fn": 66,
+          "tn": 3082,
+          "precision": 0.8413284132841329,
+          "recall": 0.7755102040816326,
+          "f1": 0.8070796460176991,
+          "brier": null
+        }
+      },
+      "changed": 0,
+      "qualifies": true,
+      "strict_gain": false
+    },
+    "joint": {
+      "policy": {
+        "kind": "correction",
+        "lower": 0.5,
+        "upper": 0.65
+      },
+      "metrics": {
+        "weather_full": {
+          "hours": 3566,
+          "tp": 269,
+          "fp": 21,
+          "fn": 37,
+          "tn": 3239,
+          "precision": 0.9275862068965517,
+          "recall": 0.8790849673202614,
+          "f1": 0.9026845637583892,
+          "brier": null
+        },
+        "weather_common": {
+          "hours": 3419,
+          "tp": 256,
+          "fp": 17,
+          "fn": 36,
+          "tn": 3110,
+          "precision": 0.9377289377289377,
+          "recall": 0.8767123287671232,
+          "f1": 0.9061946902654867,
+          "brier": null
+        },
+        "satellite_common": {
+          "hours": 3419,
+          "tp": 230,
+          "fp": 43,
+          "fn": 64,
+          "tn": 3082,
+          "precision": 0.8424908424908425,
+          "recall": 0.782312925170068,
+          "f1": 0.8112874779541446,
+          "brier": null
+        }
+      },
+      "changed": 3,
+      "qualifies": true,
+      "strict_gain": true
+    }
+  },
+  "frozen_at_utc": "2026-10-04T10:09:33.755781+00:00",
+  "protocol_sha256": "b266806d0e2eb83ee8d1bbd1c04982348ee84497dfb6b06ac384aad96393c6ed",
+  "runner_sha256": "d93ef6556c4dc9807504a6571f78d1af78fbc4072ca46ab50a6351c7b58241a7",
+  "core_sha256": "fc70f20304e9be1e0b1698a46f33bfa4336f91f6f21637c2cfe82687e88dafce"
+}

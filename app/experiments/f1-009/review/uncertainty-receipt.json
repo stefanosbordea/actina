@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "exit_code": 0,
+  "recorded_at_utc": "2026-10-04T10:25:21.113457+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-009/review/uncertainty.py > app/experiments/f1-009/review/uncertainty.log 2>&1",
+  "sha256": {
+    "uncertainty-protocol.md": "5c3032938ffdfb5e6c456d9101fa9748da7061f330d21aa70119206a373c6395",
+    "uncertainty.py": "473f2cc74dcab76b0a7546e7454a097e7603c7e8e26695ab69c184882bc08167",
+    "uncertainty-result.json": "e6a3c64ca469b67f3c57b1516ed1e6c8578c454a04091ca9670ea81b6edb74fe",
+    "uncertainty.log": "f98084520dc880177baf9997732cee273f125d070cc6e0124853aeffe0624732"
+  }
+}
