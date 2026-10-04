@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_captures_visually_checked": 8,
+  "exported_midpoint_frames_visually_checked": [
+    {
+      "frame": 315,
+      "file": "render-retry1/frames/02.png",
+      "content": "summer date, Sun, production and tank line"
+    },
+    {
+      "frame": 540,
+      "file": "render-retry1/frames/03.png",
+      "content": "summer tank, matched water and modelled costs"
+    },
+    {
+      "frame": 1680,
+      "file": "render-retry1/frames/08.png",
+      "content": "all six experiment rows, full-test loss and false-call consequence"
+    }
+  ],
+  "findings": "Sampled exported text and plots remain legible, without additional crop or overlay. Original capture viewport edges remain visible. No live interaction is implied.",
+  "source_capture_commit_reported_by_capture_owner": "5b9c24f",
+  "complete_decode": "passed",
+  "audio_tracks": 0,
+  "bridgeclip_fallback": null,
+  "network_attempts": 0,
+  "output_sha256": "bbaa694979bff8341878a90d63bc6e844a818215532222a576eb58d289e47919"
+}

@@ -1,0 +1,110 @@
+{
+  "verified_at_utc": "2026-10-04T07:26:02.996934+00:00",
+  "source_commit": "5b9c24fd54bce2cd741f87d83668e758f3331010",
+  "deployment": "dpl_FHp6jH3oL8BdqdxdtDurjrXGGGvy",
+  "url": "https://aquashift-pafos-2026.vercel.app/benchmark.html",
+  "files": [
+    {
+      "path": "index.html",
+      "http": 200,
+      "sha256": "6b2342dcc610fe14cf2f487ad8b078e3e651f58d19957c4215fdcd3bc4eca2cc",
+      "matches_source": true
+    },
+    {
+      "path": "site.mjs",
+      "http": 200,
+      "sha256": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a",
+      "matches_source": true
+    },
+    {
+      "path": "site.css",
+      "http": 200,
+      "sha256": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b",
+      "matches_source": true
+    },
+    {
+      "path": "benchmark.html",
+      "http": 200,
+      "sha256": "0a48f3eeb3ea680d52a1a41612f5be721fbd0a3ff9d17439c140dfac3b2d2177",
+      "matches_source": true
+    },
+    {
+      "path": "benchmark.mjs",
+      "http": 200,
+      "sha256": "ef79f7a345b387a0da82dc72bc012b0a55e9994410f30994da357f56b29c8e8b",
+      "matches_source": true
+    },
+    {
+      "path": "benchmark.css",
+      "http": 200,
+      "sha256": "dab4913d9e8e009956db18f77b1c56ea7d5f7a64714773e713d2e9688915a8ba",
+      "matches_source": true
+    },
+    {
+      "path": "benchmark-data.js",
+      "http": 200,
+      "sha256": "f054376b4d8ad0dc0443e01a87628d7838a74a01fe32010920709d537e3eb955",
+      "matches_source": true
+    },
+    {
+      "path": "benchmark-results.json",
+      "http": 200,
+      "sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084",
+      "matches_source": true
+    },
+    {
+      "path": "experiment-results.json",
+      "http": 200,
+      "sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93",
+      "matches_source": true
+    },
+    {
+      "path": "experiment-results.csv",
+      "http": 200,
+      "sha256": "f6ae4084acb5c3b821972be5747ab88ecdb949f4ea86763e54080b3c28bb2193",
+      "matches_source": true
+    },
+    {
+      "path": "feature-importance.csv",
+      "http": 200,
+      "sha256": "8c5b164dea3b05487a0f81716f65ae8b5231cbc89048270d2fa53dadccc50884",
+      "matches_source": true
+    },
+    {
+      "path": "figures/test-classification.svg",
+      "http": 200,
+      "sha256": "3f85a15f9b15fe2084a6f71bd2358a134782a8238ec3c950c345b91a67432ab1",
+      "matches_source": true
+    },
+    {
+      "path": "figures/monthly-error.svg",
+      "http": 200,
+      "sha256": "7a687ac4160af6ee4cf5c775c4cff4c52f1d47351ed8f9f8cc542e0ecc101cfa",
+      "matches_source": true
+    },
+    {
+      "path": "figures/hourly-error.svg",
+      "http": 200,
+      "sha256": "be37aa78ae8fe7c8e9e451a7044efc4d083fffe1dfd1dde522336393b9fa6199",
+      "matches_source": true
+    }
+  ],
+  "browser_checks": {
+    "desktop": true,
+    "mobile_widths": [
+      320,
+      390
+    ],
+    "page_overflow": false,
+    "validation_test_switch": true,
+    "confusion_disclosure": true,
+    "all_six_methods_visible": true
+  },
+  "tests": {
+    "python_data_and_benchmark": 8,
+    "dom_demo_and_benchmark": 7,
+    "independent_prediction_rows": 42798,
+    "audit_mismatches": 0
+  },
+  "original_root_model_data_eval": "unchanged from 2a093aba97f6ad615c43fa7c514044342af16e3a"
+}
