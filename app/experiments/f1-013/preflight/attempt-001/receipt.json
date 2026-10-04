@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/f1-013",
+    "-p",
+    "test_runner.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.44072058300002936,
+  "scope": "Synthetic fixtures only. Initial test harness path and directory failures retained.",
+  "sources": {
+    "run.py": "583b01fe1957e1d29a5d5b97325ea1ce03aae352322f772e3e3857a4fc4f7865",
+    "test_runner.py": "28767bb5490b1633ad92faf64efbc4ed935bfcbe03a690fd348d8f7a412bcb3a"
+  }
+}

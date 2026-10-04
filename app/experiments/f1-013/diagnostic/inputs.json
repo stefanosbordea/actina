@@ -1,0 +1,11 @@
+{
+  "diagnostic/PROTOCOL.md": "fa2208dbace9b5b1df373806276e9f92ff5119ccda4a80d5d830f069c2e4a1b5",
+  "diagnostic/run.py": "3370cd9beb23c4ae09e5681f8ff60a0ec45567c9f680c6165320de6d9b39daa7",
+  "diagnostic/test_diagnostic.py": "67411383f10adfb8bfffea256f47df1ee34c4985d70be9b43c95a3d392ecb40d",
+  "PROTOCOL.md": "b8cf31b245b5faba48d62396e5c91ca5c47925bef9f381ff348d8383729e6fc5",
+  "inputs.json": "f07354b9a99a64fcea182d13380c63f061d9ca466c7fc690d8c603da39ad1f82",
+  "result/planning-freeze.json": "4abb2f4364f43fd357a07c067ef2a6152477c2ec37f5432cb9f46bc76a5721b8",
+  "result/outputs.json": "9f5344849f1783d5002d231746852f10807fb2f4d4844a80aeca12d525cc66fd",
+  "result/validation/decisions.jsonl.gz": "ce6d9c3f45d1d442b17e9022bf270dfb410feb265e36e240fad1f5c7a50e38c7",
+  "result/test/decisions.jsonl.gz": "78319255404f98f67a3ac2c25b9fa62d9be36f94b47b79a46f83cb0fd32bbf99"
+}

@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-10-04T11:45:07.191659+00:00",
+  "files_sha256": {
+    "complexity.json": "c4c6032688d3df2c2082327f71298c5ffca1dcee5b1e5140c25d20c8462ab96b",
+    "test/calls.csv": "7cd7f8a8af02b8b1f63c3c11d870048f497bb828dadee8631ef5ec3270072513",
+    "test/calls.npz": "9e6b706efdafc1059fcf3d5fd1d3c13c6752f73d956aeaae2a244c989ba3ebad",
+    "test/decisions.jsonl.gz": "78319255404f98f67a3ac2c25b9fa62d9be36f94b47b79a46f83cb0fd32bbf99",
+    "validation/calls.csv": "397475167b5f017d9baa697e3446e4acf0c77003e0acb7cbcb0ed80fa65c8064",
+    "validation/calls.npz": "790f63377e803f0a9eb4e98e4afac1bf87f257fc18c3de4489bec4c0c7f94821",
+    "validation/decisions.jsonl.gz": "ce6d9c3f45d1d442b17e9022bf270dfb410feb265e36e240fad1f5c7a50e38c7"
+  },
+  "statement": "Both periods and all four fixed arms complete before loading evaluation references, masks or context predictions."
+}

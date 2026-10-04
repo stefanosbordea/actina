@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013/uncertainty/review/check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "exit_code": 0,
+  "elapsed_seconds": 4.027363917000002,
+  "completed_at_utc": "2026-10-04T11:52:04.647850+00:00",
+  "log_sha256": "2a7a2feefee8d24087eb024d297c15712d5bdfede8b910b7750414f3f2a96e7a",
+  "checker_sha256": "94ba9f20f4bccdbd937511691cc7a7e431d9d5ca421f086fef4be548d411d5ae"
+}

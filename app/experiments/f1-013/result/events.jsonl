@@ -1,0 +1,16 @@
+{"at_utc":"2026-10-04T11:44:56.263662+00:00","event":"START","outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:56.701841+00:00","event":"FORECAST_INPUTS_VERIFIED","canonical_subsets":72459}
+{"at_utc":"2026-10-04T11:44:57.043171+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":25,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:57.437082+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":50,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:57.879581+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":75,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:58.514001+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":100,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:59.143233+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":125,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:00.099946+00:00","event":"DECISION_PROGRESS","stage":"validation","horizons":150,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:01.956425+00:00","event":"DECISION_PROGRESS","stage":"test","horizons":25,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:03.108083+00:00","event":"DECISION_PROGRESS","stage":"test","horizons":50,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:04.095617+00:00","event":"DECISION_PROGRESS","stage":"test","horizons":75,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:05.076369+00:00","event":"DECISION_PROGRESS","stage":"test","horizons":100,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:06.196633+00:00","event":"DECISION_PROGRESS","stage":"test","horizons":125,"outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:07.191917+00:00","event":"ALL_DECISIONS_FROZEN","planning_freeze_sha256":"4abb2f4364f43fd357a07c067ef2a6152477c2ec37f5432cb9f46bc76a5721b8","outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:45:07.191971+00:00","event":"SCORING_REFERENCES_OPENED","outcome_scoring_started":true}
+{"at_utc":"2026-10-04T11:45:07.737131+00:00","event":"COMPLETE","outcome_scoring_started":true}

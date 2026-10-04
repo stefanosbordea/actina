@@ -1,0 +1,3005 @@
+{
+  "status": "COMPLETE",
+  "scope": "Retrospective event decisions on previously inspected estimated references. No model fit, live evidence, physical dispatch or novelty claim.",
+  "methods": [
+    "raw_nwp",
+    "recency_robust",
+    "recency_pooled",
+    "conditional_robust",
+    "conditional_pooled"
+  ],
+  "protocol_sha256": "b8cf31b245b5faba48d62396e5c91ca5c47925bef9f381ff348d8383729e6fc5",
+  "input_lock_sha256": "f07354b9a99a64fcea182d13380c63f061d9ca466c7fc690d8c603da39ad1f82",
+  "splits": {
+    "validation": {
+      "hours": 3566,
+      "common_hours": 3419,
+      "missing_satellite_hours": 147,
+      "planned_hours": 3600,
+      "padding_hours": 34,
+      "metrics": {
+        "raw_nwp": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 268,
+            "fp": 21,
+            "fn": 38,
+            "tn": 3239,
+            "positive_calls": 289,
+            "precision": {
+              "numerator": 268,
+              "denominator": 289,
+              "value": 0.9273356401384083
+            },
+            "recall": {
+              "numerator": 134,
+              "denominator": 153,
+              "value": 0.8758169934640523
+            },
+            "f1": {
+              "numerator": 536,
+              "denominator": 595,
+              "value": 0.9008403361344538
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 255,
+            "fp": 16,
+            "fn": 37,
+            "tn": 3111,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 255,
+              "denominator": 271,
+              "value": 0.940959409594096
+            },
+            "recall": {
+              "numerator": 255,
+              "denominator": 292,
+              "value": 0.8732876712328768
+            },
+            "f1": {
+              "numerator": 510,
+              "denominator": 563,
+              "value": 0.9058614564831261
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 228,
+            "fp": 43,
+            "fn": 66,
+            "tn": 3082,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 228,
+              "denominator": 271,
+              "value": 0.8413284132841329
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 49,
+              "value": 0.7755102040816326
+            },
+            "f1": {
+              "numerator": 456,
+              "denominator": 565,
+              "value": 0.8070796460176991
+            }
+          }
+        },
+        "recency_robust": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 268,
+            "fp": 23,
+            "fn": 38,
+            "tn": 3237,
+            "positive_calls": 291,
+            "precision": {
+              "numerator": 268,
+              "denominator": 291,
+              "value": 0.9209621993127147
+            },
+            "recall": {
+              "numerator": 134,
+              "denominator": 153,
+              "value": 0.8758169934640523
+            },
+            "f1": {
+              "numerator": 536,
+              "denominator": 597,
+              "value": 0.897822445561139
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 255,
+            "fp": 18,
+            "fn": 37,
+            "tn": 3109,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 85,
+              "denominator": 91,
+              "value": 0.9340659340659341
+            },
+            "recall": {
+              "numerator": 255,
+              "denominator": 292,
+              "value": 0.8732876712328768
+            },
+            "f1": {
+              "numerator": 102,
+              "denominator": 113,
+              "value": 0.9026548672566371
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 228,
+            "fp": 45,
+            "fn": 66,
+            "tn": 3080,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 76,
+              "denominator": 91,
+              "value": 0.8351648351648352
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 49,
+              "value": 0.7755102040816326
+            },
+            "f1": {
+              "numerator": 152,
+              "denominator": 189,
+              "value": 0.8042328042328042
+            }
+          }
+        },
+        "recency_pooled": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 268,
+            "fp": 23,
+            "fn": 38,
+            "tn": 3237,
+            "positive_calls": 291,
+            "precision": {
+              "numerator": 268,
+              "denominator": 291,
+              "value": 0.9209621993127147
+            },
+            "recall": {
+              "numerator": 134,
+              "denominator": 153,
+              "value": 0.8758169934640523
+            },
+            "f1": {
+              "numerator": 536,
+              "denominator": 597,
+              "value": 0.897822445561139
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 255,
+            "fp": 18,
+            "fn": 37,
+            "tn": 3109,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 85,
+              "denominator": 91,
+              "value": 0.9340659340659341
+            },
+            "recall": {
+              "numerator": 255,
+              "denominator": 292,
+              "value": 0.8732876712328768
+            },
+            "f1": {
+              "numerator": 102,
+              "denominator": 113,
+              "value": 0.9026548672566371
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 228,
+            "fp": 45,
+            "fn": 66,
+            "tn": 3080,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 76,
+              "denominator": 91,
+              "value": 0.8351648351648352
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 49,
+              "value": 0.7755102040816326
+            },
+            "f1": {
+              "numerator": 152,
+              "denominator": 189,
+              "value": 0.8042328042328042
+            }
+          }
+        },
+        "conditional_robust": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 268,
+            "fp": 21,
+            "fn": 38,
+            "tn": 3239,
+            "positive_calls": 289,
+            "precision": {
+              "numerator": 268,
+              "denominator": 289,
+              "value": 0.9273356401384083
+            },
+            "recall": {
+              "numerator": 134,
+              "denominator": 153,
+              "value": 0.8758169934640523
+            },
+            "f1": {
+              "numerator": 536,
+              "denominator": 595,
+              "value": 0.9008403361344538
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 255,
+            "fp": 16,
+            "fn": 37,
+            "tn": 3111,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 255,
+              "denominator": 271,
+              "value": 0.940959409594096
+            },
+            "recall": {
+              "numerator": 255,
+              "denominator": 292,
+              "value": 0.8732876712328768
+            },
+            "f1": {
+              "numerator": 510,
+              "denominator": 563,
+              "value": 0.9058614564831261
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 228,
+            "fp": 43,
+            "fn": 66,
+            "tn": 3082,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 228,
+              "denominator": 271,
+              "value": 0.8413284132841329
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 49,
+              "value": 0.7755102040816326
+            },
+            "f1": {
+              "numerator": 456,
+              "denominator": 565,
+              "value": 0.8070796460176991
+            }
+          }
+        },
+        "conditional_pooled": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 268,
+            "fp": 21,
+            "fn": 38,
+            "tn": 3239,
+            "positive_calls": 289,
+            "precision": {
+              "numerator": 268,
+              "denominator": 289,
+              "value": 0.9273356401384083
+            },
+            "recall": {
+              "numerator": 134,
+              "denominator": 153,
+              "value": 0.8758169934640523
+            },
+            "f1": {
+              "numerator": 536,
+              "denominator": 595,
+              "value": 0.9008403361344538
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 255,
+            "fp": 16,
+            "fn": 37,
+            "tn": 3111,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 255,
+              "denominator": 271,
+              "value": 0.940959409594096
+            },
+            "recall": {
+              "numerator": 255,
+              "denominator": 292,
+              "value": 0.8732876712328768
+            },
+            "f1": {
+              "numerator": 510,
+              "denominator": 563,
+              "value": 0.9058614564831261
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 228,
+            "fp": 43,
+            "fn": 66,
+            "tn": 3082,
+            "positive_calls": 271,
+            "precision": {
+              "numerator": 228,
+              "denominator": 271,
+              "value": 0.8413284132841329
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 49,
+              "value": 0.7755102040816326
+            },
+            "f1": {
+              "numerator": 456,
+              "denominator": 565,
+              "value": 0.8070796460176991
+            }
+          }
+        },
+        "original": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 241,
+            "fp": 55,
+            "fn": 65,
+            "tn": 3205,
+            "positive_calls": 296,
+            "precision": {
+              "numerator": 241,
+              "denominator": 296,
+              "value": 0.8141891891891891
+            },
+            "recall": {
+              "numerator": 241,
+              "denominator": 306,
+              "value": 0.7875816993464052
+            },
+            "f1": {
+              "numerator": 241,
+              "denominator": 301,
+              "value": 0.8006644518272426
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 233,
+            "fp": 47,
+            "fn": 59,
+            "tn": 3080,
+            "positive_calls": 280,
+            "precision": {
+              "numerator": 233,
+              "denominator": 280,
+              "value": 0.8321428571428572
+            },
+            "recall": {
+              "numerator": 233,
+              "denominator": 292,
+              "value": 0.797945205479452
+            },
+            "f1": {
+              "numerator": 233,
+              "denominator": 286,
+              "value": 0.8146853146853147
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 212,
+            "fp": 68,
+            "fn": 82,
+            "tn": 3057,
+            "positive_calls": 280,
+            "precision": {
+              "numerator": 53,
+              "denominator": 70,
+              "value": 0.7571428571428571
+            },
+            "recall": {
+              "numerator": 106,
+              "denominator": 147,
+              "value": 0.7210884353741497
+            },
+            "f1": {
+              "numerator": 212,
+              "denominator": 287,
+              "value": 0.7386759581881533
+            }
+          }
+        },
+        "persistence": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 244,
+            "fp": 62,
+            "fn": 62,
+            "tn": 3198,
+            "positive_calls": 306,
+            "precision": {
+              "numerator": 122,
+              "denominator": 153,
+              "value": 0.7973856209150327
+            },
+            "recall": {
+              "numerator": 122,
+              "denominator": 153,
+              "value": 0.7973856209150327
+            },
+            "f1": {
+              "numerator": 122,
+              "denominator": 153,
+              "value": 0.7973856209150327
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 236,
+            "fp": 54,
+            "fn": 56,
+            "tn": 3073,
+            "positive_calls": 290,
+            "precision": {
+              "numerator": 118,
+              "denominator": 145,
+              "value": 0.8137931034482758
+            },
+            "recall": {
+              "numerator": 59,
+              "denominator": 73,
+              "value": 0.8082191780821918
+            },
+            "f1": {
+              "numerator": 236,
+              "denominator": 291,
+              "value": 0.8109965635738832
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 218,
+            "fp": 72,
+            "fn": 76,
+            "tn": 3053,
+            "positive_calls": 290,
+            "precision": {
+              "numerator": 109,
+              "denominator": 145,
+              "value": 0.7517241379310344
+            },
+            "recall": {
+              "numerator": 109,
+              "denominator": 147,
+              "value": 0.7414965986394558
+            },
+            "f1": {
+              "numerator": 109,
+              "denominator": 146,
+              "value": 0.7465753424657534
+            }
+          }
+        },
+        "f1_008_selected": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 271,
+            "fp": 21,
+            "fn": 35,
+            "tn": 3239,
+            "positive_calls": 292,
+            "precision": {
+              "numerator": 271,
+              "denominator": 292,
+              "value": 0.928082191780822
+            },
+            "recall": {
+              "numerator": 271,
+              "denominator": 306,
+              "value": 0.8856209150326797
+            },
+            "f1": {
+              "numerator": 271,
+              "denominator": 299,
+              "value": 0.9063545150501672
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 258,
+            "fp": 17,
+            "fn": 34,
+            "tn": 3110,
+            "positive_calls": 275,
+            "precision": {
+              "numerator": 258,
+              "denominator": 275,
+              "value": 0.9381818181818182
+            },
+            "recall": {
+              "numerator": 129,
+              "denominator": 146,
+              "value": 0.8835616438356164
+            },
+            "f1": {
+              "numerator": 172,
+              "denominator": 189,
+              "value": 0.91005291005291
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 233,
+            "fp": 42,
+            "fn": 61,
+            "tn": 3083,
+            "positive_calls": 275,
+            "precision": {
+              "numerator": 233,
+              "denominator": 275,
+              "value": 0.8472727272727273
+            },
+            "recall": {
+              "numerator": 233,
+              "denominator": 294,
+              "value": 0.7925170068027211
+            },
+            "f1": {
+              "numerator": 466,
+              "denominator": 569,
+              "value": 0.8189806678383128
+            }
+          }
+        },
+        "f1_009_selected": {
+          "weather_full": {
+            "hours": 3566,
+            "tp": 269,
+            "fp": 21,
+            "fn": 37,
+            "tn": 3239,
+            "positive_calls": 290,
+            "precision": {
+              "numerator": 269,
+              "denominator": 290,
+              "value": 0.9275862068965517
+            },
+            "recall": {
+              "numerator": 269,
+              "denominator": 306,
+              "value": 0.8790849673202614
+            },
+            "f1": {
+              "numerator": 269,
+              "denominator": 298,
+              "value": 0.9026845637583892
+            }
+          },
+          "weather_common": {
+            "hours": 3419,
+            "tp": 256,
+            "fp": 17,
+            "fn": 36,
+            "tn": 3110,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 256,
+              "denominator": 273,
+              "value": 0.9377289377289377
+            },
+            "recall": {
+              "numerator": 64,
+              "denominator": 73,
+              "value": 0.8767123287671232
+            },
+            "f1": {
+              "numerator": 512,
+              "denominator": 565,
+              "value": 0.9061946902654867
+            }
+          },
+          "satellite_common": {
+            "hours": 3419,
+            "tp": 230,
+            "fp": 43,
+            "fn": 64,
+            "tn": 3082,
+            "positive_calls": 273,
+            "precision": {
+              "numerator": 230,
+              "denominator": 273,
+              "value": 0.8424908424908425
+            },
+            "recall": {
+              "numerator": 115,
+              "denominator": 147,
+              "value": 0.782312925170068
+            },
+            "f1": {
+              "numerator": 460,
+              "denominator": 567,
+              "value": 0.8112874779541446
+            }
+          }
+        }
+      },
+      "corrections": {
+        "raw_nwp": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "recency_robust": {
+          "additions": 2,
+          "removals": 0,
+          "changed_full_day_counts": 1
+        },
+        "recency_pooled": {
+          "additions": 2,
+          "removals": 0,
+          "changed_full_day_counts": 1
+        },
+        "conditional_robust": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "conditional_pooled": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "original": {
+          "additions": 64,
+          "removals": 57,
+          "changed_full_day_counts": null
+        },
+        "persistence": {
+          "additions": 72,
+          "removals": 55,
+          "changed_full_day_counts": null
+        },
+        "f1_008_selected": {
+          "additions": 9,
+          "removals": 6,
+          "changed_full_day_counts": null
+        },
+        "f1_009_selected": {
+          "additions": 2,
+          "removals": 1,
+          "changed_full_day_counts": null
+        }
+      },
+      "comparisons": {
+        "recency_robust": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -536,
+                "denominator": 84099,
+                "value": -0.006373440825693528
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": -1072,
+                "denominator": 355215,
+                "value": -0.003017890573314753
+              },
+              "satellite_common/precision": {
+                "numerator": -152,
+                "denominator": 24661,
+                "value": -0.006163578119297676
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": -304,
+                "denominator": 106785,
+                "value": -0.0028468417848948823
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 9197,
+                "denominator": 86136,
+                "value": 0.1067730101235256
+              },
+              "weather_full/recall": {
+                "numerator": 3,
+                "denominator": 34,
+                "value": 0.08823529411764706
+              },
+              "weather_full/f1": {
+                "numerator": 17459,
+                "denominator": 179697,
+                "value": 0.0971579937338965
+              },
+              "satellite_common/precision": {
+                "numerator": 71,
+                "denominator": 910,
+                "value": 0.07802197802197802
+              },
+              "satellite_common/recall": {
+                "numerator": 8,
+                "denominator": 147,
+                "value": 0.05442176870748299
+              },
+              "satellite_common/f1": {
+                "numerator": 508,
+                "denominator": 7749,
+                "value": 0.06555684604465092
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 1834,
+                "denominator": 14841,
+                "value": 0.1235765783976821
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 51,
+                "value": 0.0784313725490196
+              },
+              "weather_full/f1": {
+                "numerator": 3058,
+                "denominator": 30447,
+                "value": 0.10043682464610634
+              },
+              "satellite_common/precision": {
+                "numerator": 1101,
+                "denominator": 13195,
+                "value": 0.08344069723380068
+              },
+              "satellite_common/recall": {
+                "numerator": 5,
+                "denominator": 147,
+                "value": 0.034013605442176874
+              },
+              "satellite_common/f1": {
+                "numerator": 1591,
+                "denominator": 27594,
+                "value": 0.057657461767050805
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -605,
+                "denominator": 84972,
+                "value": -0.007119992468107141
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 102,
+                "value": -0.00980392156862745
+              },
+              "weather_full/f1": {
+                "numerator": -1523,
+                "denominator": 178503,
+                "value": -0.008532069489028196
+              },
+              "satellite_common/precision": {
+                "numerator": -303,
+                "denominator": 25025,
+                "value": -0.012107892107892109
+              },
+              "satellite_common/recall": {
+                "numerator": -5,
+                "denominator": 294,
+                "value": -0.017006802721088437
+              },
+              "satellite_common/f1": {
+                "numerator": -1586,
+                "denominator": 107541,
+                "value": -0.014747863605508596
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -559,
+                "denominator": 84390,
+                "value": -0.006624007583836948
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 306,
+                "value": -0.0032679738562091504
+              },
+              "weather_full/f1": {
+                "numerator": -865,
+                "denominator": 177906,
+                "value": -0.004862118197250233
+              },
+              "satellite_common/precision": {
+                "numerator": -2,
+                "denominator": 273,
+                "value": -0.007326007326007326
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 147,
+                "value": -0.006802721088435374
+              },
+              "satellite_common/f1": {
+                "numerator": -4,
+                "denominator": 567,
+                "value": -0.007054673721340388
+              }
+            }
+          }
+        },
+        "recency_pooled": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -536,
+                "denominator": 84099,
+                "value": -0.006373440825693528
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": -1072,
+                "denominator": 355215,
+                "value": -0.003017890573314753
+              },
+              "satellite_common/precision": {
+                "numerator": -152,
+                "denominator": 24661,
+                "value": -0.006163578119297676
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": -304,
+                "denominator": 106785,
+                "value": -0.0028468417848948823
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 9197,
+                "denominator": 86136,
+                "value": 0.1067730101235256
+              },
+              "weather_full/recall": {
+                "numerator": 3,
+                "denominator": 34,
+                "value": 0.08823529411764706
+              },
+              "weather_full/f1": {
+                "numerator": 17459,
+                "denominator": 179697,
+                "value": 0.0971579937338965
+              },
+              "satellite_common/precision": {
+                "numerator": 71,
+                "denominator": 910,
+                "value": 0.07802197802197802
+              },
+              "satellite_common/recall": {
+                "numerator": 8,
+                "denominator": 147,
+                "value": 0.05442176870748299
+              },
+              "satellite_common/f1": {
+                "numerator": 508,
+                "denominator": 7749,
+                "value": 0.06555684604465092
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 1834,
+                "denominator": 14841,
+                "value": 0.1235765783976821
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 51,
+                "value": 0.0784313725490196
+              },
+              "weather_full/f1": {
+                "numerator": 3058,
+                "denominator": 30447,
+                "value": 0.10043682464610634
+              },
+              "satellite_common/precision": {
+                "numerator": 1101,
+                "denominator": 13195,
+                "value": 0.08344069723380068
+              },
+              "satellite_common/recall": {
+                "numerator": 5,
+                "denominator": 147,
+                "value": 0.034013605442176874
+              },
+              "satellite_common/f1": {
+                "numerator": 1591,
+                "denominator": 27594,
+                "value": 0.057657461767050805
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -605,
+                "denominator": 84972,
+                "value": -0.007119992468107141
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 102,
+                "value": -0.00980392156862745
+              },
+              "weather_full/f1": {
+                "numerator": -1523,
+                "denominator": 178503,
+                "value": -0.008532069489028196
+              },
+              "satellite_common/precision": {
+                "numerator": -303,
+                "denominator": 25025,
+                "value": -0.012107892107892109
+              },
+              "satellite_common/recall": {
+                "numerator": -5,
+                "denominator": 294,
+                "value": -0.017006802721088437
+              },
+              "satellite_common/f1": {
+                "numerator": -1586,
+                "denominator": 107541,
+                "value": -0.014747863605508596
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -559,
+                "denominator": 84390,
+                "value": -0.006624007583836948
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 306,
+                "value": -0.0032679738562091504
+              },
+              "weather_full/f1": {
+                "numerator": -865,
+                "denominator": 177906,
+                "value": -0.004862118197250233
+              },
+              "satellite_common/precision": {
+                "numerator": -2,
+                "denominator": 273,
+                "value": -0.007326007326007326
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 147,
+                "value": -0.006802721088435374
+              },
+              "satellite_common/f1": {
+                "numerator": -4,
+                "denominator": 567,
+                "value": -0.007054673721340388
+              }
+            }
+          }
+        },
+        "conditional_robust": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 9679,
+                "denominator": 85544,
+                "value": 0.11314645094921912
+              },
+              "weather_full/recall": {
+                "numerator": 3,
+                "denominator": 34,
+                "value": 0.08823529411764706
+              },
+              "weather_full/f1": {
+                "numerator": 2563,
+                "denominator": 25585,
+                "value": 0.10017588430721126
+              },
+              "satellite_common/precision": {
+                "numerator": 1597,
+                "denominator": 18970,
+                "value": 0.0841855561412757
+              },
+              "satellite_common/recall": {
+                "numerator": 8,
+                "denominator": 147,
+                "value": 0.05442176870748299
+              },
+              "satellite_common/f1": {
+                "numerator": 11092,
+                "denominator": 162155,
+                "value": 0.06840368782954581
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 338,
+                "denominator": 2601,
+                "value": 0.12995001922337562
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 51,
+                "value": 0.0784313725490196
+              },
+              "weather_full/f1": {
+                "numerator": 554,
+                "denominator": 5355,
+                "value": 0.1034547152194211
+              },
+              "satellite_common/precision": {
+                "numerator": 3521,
+                "denominator": 39295,
+                "value": 0.08960427535309835
+              },
+              "satellite_common/recall": {
+                "numerator": 5,
+                "denominator": 147,
+                "value": 0.034013605442176874
+              },
+              "satellite_common/f1": {
+                "numerator": 4991,
+                "denominator": 82490,
+                "value": 0.06050430355194569
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -63,
+                "denominator": 84388,
+                "value": -0.0007465516424136133
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 102,
+                "value": -0.00980392156862745
+              },
+              "weather_full/f1": {
+                "numerator": -981,
+                "denominator": 177905,
+                "value": -0.005514178915713442
+              },
+              "satellite_common/precision": {
+                "numerator": -443,
+                "denominator": 74525,
+                "value": -0.005944313988594432
+              },
+              "satellite_common/recall": {
+                "numerator": -5,
+                "denominator": 294,
+                "value": -0.017006802721088437
+              },
+              "satellite_common/f1": {
+                "numerator": -3826,
+                "denominator": 321485,
+                "value": -0.011901021820613715
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -21,
+                "denominator": 83810,
+                "value": -0.00025056675814341965
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 306,
+                "value": -0.0032679738562091504
+              },
+              "weather_full/f1": {
+                "numerator": -327,
+                "denominator": 177310,
+                "value": -0.0018442276239354803
+              },
+              "satellite_common/precision": {
+                "numerator": -86,
+                "denominator": 73983,
+                "value": -0.0011624292067096496
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 147,
+                "value": -0.006802721088435374
+              },
+              "satellite_common/f1": {
+                "numerator": -1348,
+                "denominator": 320355,
+                "value": -0.004207831936445506
+              }
+            }
+          }
+        },
+        "conditional_pooled": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 9679,
+                "denominator": 85544,
+                "value": 0.11314645094921912
+              },
+              "weather_full/recall": {
+                "numerator": 3,
+                "denominator": 34,
+                "value": 0.08823529411764706
+              },
+              "weather_full/f1": {
+                "numerator": 2563,
+                "denominator": 25585,
+                "value": 0.10017588430721126
+              },
+              "satellite_common/precision": {
+                "numerator": 1597,
+                "denominator": 18970,
+                "value": 0.0841855561412757
+              },
+              "satellite_common/recall": {
+                "numerator": 8,
+                "denominator": 147,
+                "value": 0.05442176870748299
+              },
+              "satellite_common/f1": {
+                "numerator": 11092,
+                "denominator": 162155,
+                "value": 0.06840368782954581
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 338,
+                "denominator": 2601,
+                "value": 0.12995001922337562
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 51,
+                "value": 0.0784313725490196
+              },
+              "weather_full/f1": {
+                "numerator": 554,
+                "denominator": 5355,
+                "value": 0.1034547152194211
+              },
+              "satellite_common/precision": {
+                "numerator": 3521,
+                "denominator": 39295,
+                "value": 0.08960427535309835
+              },
+              "satellite_common/recall": {
+                "numerator": 5,
+                "denominator": 147,
+                "value": 0.034013605442176874
+              },
+              "satellite_common/f1": {
+                "numerator": 4991,
+                "denominator": 82490,
+                "value": 0.06050430355194569
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -63,
+                "denominator": 84388,
+                "value": -0.0007465516424136133
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 102,
+                "value": -0.00980392156862745
+              },
+              "weather_full/f1": {
+                "numerator": -981,
+                "denominator": 177905,
+                "value": -0.005514178915713442
+              },
+              "satellite_common/precision": {
+                "numerator": -443,
+                "denominator": 74525,
+                "value": -0.005944313988594432
+              },
+              "satellite_common/recall": {
+                "numerator": -5,
+                "denominator": 294,
+                "value": -0.017006802721088437
+              },
+              "satellite_common/f1": {
+                "numerator": -3826,
+                "denominator": 321485,
+                "value": -0.011901021820613715
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -21,
+                "denominator": 83810,
+                "value": -0.00025056675814341965
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 306,
+                "value": -0.0032679738562091504
+              },
+              "weather_full/f1": {
+                "numerator": -327,
+                "denominator": 177310,
+                "value": -0.0018442276239354803
+              },
+              "satellite_common/precision": {
+                "numerator": -86,
+                "denominator": 73983,
+                "value": -0.0011624292067096496
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 147,
+                "value": -0.006802721088435374
+              },
+              "satellite_common/f1": {
+                "numerator": -1348,
+                "denominator": 320355,
+                "value": -0.004207831936445506
+              }
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "hours": 3567,
+      "common_hours": 3517,
+      "missing_satellite_hours": 50,
+      "planned_hours": 3576,
+      "padding_hours": 9,
+      "metrics": {
+        "raw_nwp": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 993,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2542,
+            "positive_calls": 1008,
+            "precision": {
+              "numerator": 331,
+              "denominator": 336,
+              "value": 0.9851190476190477
+            },
+            "recall": {
+              "numerator": 993,
+              "denominator": 1010,
+              "value": 0.9831683168316832
+            },
+            "f1": {
+              "numerator": 993,
+              "denominator": 1009,
+              "value": 0.9841427155599604
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 977,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2508,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 977,
+              "denominator": 992,
+              "value": 0.9848790322580645
+            },
+            "recall": {
+              "numerator": 977,
+              "denominator": 994,
+              "value": 0.9828973843058351
+            },
+            "f1": {
+              "numerator": 977,
+              "denominator": 993,
+              "value": 0.9838872104733132
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 950,
+            "fp": 42,
+            "fn": 25,
+            "tn": 2500,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 475,
+              "denominator": 496,
+              "value": 0.9576612903225806
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 39,
+              "value": 0.9743589743589743
+            },
+            "f1": {
+              "numerator": 1900,
+              "denominator": 1967,
+              "value": 0.9659379766141332
+            }
+          }
+        },
+        "recency_robust": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 993,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2542,
+            "positive_calls": 1008,
+            "precision": {
+              "numerator": 331,
+              "denominator": 336,
+              "value": 0.9851190476190477
+            },
+            "recall": {
+              "numerator": 993,
+              "denominator": 1010,
+              "value": 0.9831683168316832
+            },
+            "f1": {
+              "numerator": 993,
+              "denominator": 1009,
+              "value": 0.9841427155599604
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 977,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2508,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 977,
+              "denominator": 992,
+              "value": 0.9848790322580645
+            },
+            "recall": {
+              "numerator": 977,
+              "denominator": 994,
+              "value": 0.9828973843058351
+            },
+            "f1": {
+              "numerator": 977,
+              "denominator": 993,
+              "value": 0.9838872104733132
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 950,
+            "fp": 42,
+            "fn": 25,
+            "tn": 2500,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 475,
+              "denominator": 496,
+              "value": 0.9576612903225806
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 39,
+              "value": 0.9743589743589743
+            },
+            "f1": {
+              "numerator": 1900,
+              "denominator": 1967,
+              "value": 0.9659379766141332
+            }
+          }
+        },
+        "recency_pooled": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 993,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2542,
+            "positive_calls": 1008,
+            "precision": {
+              "numerator": 331,
+              "denominator": 336,
+              "value": 0.9851190476190477
+            },
+            "recall": {
+              "numerator": 993,
+              "denominator": 1010,
+              "value": 0.9831683168316832
+            },
+            "f1": {
+              "numerator": 993,
+              "denominator": 1009,
+              "value": 0.9841427155599604
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 977,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2508,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 977,
+              "denominator": 992,
+              "value": 0.9848790322580645
+            },
+            "recall": {
+              "numerator": 977,
+              "denominator": 994,
+              "value": 0.9828973843058351
+            },
+            "f1": {
+              "numerator": 977,
+              "denominator": 993,
+              "value": 0.9838872104733132
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 950,
+            "fp": 42,
+            "fn": 25,
+            "tn": 2500,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 475,
+              "denominator": 496,
+              "value": 0.9576612903225806
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 39,
+              "value": 0.9743589743589743
+            },
+            "f1": {
+              "numerator": 1900,
+              "denominator": 1967,
+              "value": 0.9659379766141332
+            }
+          }
+        },
+        "conditional_robust": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 993,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2542,
+            "positive_calls": 1008,
+            "precision": {
+              "numerator": 331,
+              "denominator": 336,
+              "value": 0.9851190476190477
+            },
+            "recall": {
+              "numerator": 993,
+              "denominator": 1010,
+              "value": 0.9831683168316832
+            },
+            "f1": {
+              "numerator": 993,
+              "denominator": 1009,
+              "value": 0.9841427155599604
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 977,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2508,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 977,
+              "denominator": 992,
+              "value": 0.9848790322580645
+            },
+            "recall": {
+              "numerator": 977,
+              "denominator": 994,
+              "value": 0.9828973843058351
+            },
+            "f1": {
+              "numerator": 977,
+              "denominator": 993,
+              "value": 0.9838872104733132
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 950,
+            "fp": 42,
+            "fn": 25,
+            "tn": 2500,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 475,
+              "denominator": 496,
+              "value": 0.9576612903225806
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 39,
+              "value": 0.9743589743589743
+            },
+            "f1": {
+              "numerator": 1900,
+              "denominator": 1967,
+              "value": 0.9659379766141332
+            }
+          }
+        },
+        "conditional_pooled": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 993,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2542,
+            "positive_calls": 1008,
+            "precision": {
+              "numerator": 331,
+              "denominator": 336,
+              "value": 0.9851190476190477
+            },
+            "recall": {
+              "numerator": 993,
+              "denominator": 1010,
+              "value": 0.9831683168316832
+            },
+            "f1": {
+              "numerator": 993,
+              "denominator": 1009,
+              "value": 0.9841427155599604
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 977,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2508,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 977,
+              "denominator": 992,
+              "value": 0.9848790322580645
+            },
+            "recall": {
+              "numerator": 977,
+              "denominator": 994,
+              "value": 0.9828973843058351
+            },
+            "f1": {
+              "numerator": 977,
+              "denominator": 993,
+              "value": 0.9838872104733132
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 950,
+            "fp": 42,
+            "fn": 25,
+            "tn": 2500,
+            "positive_calls": 992,
+            "precision": {
+              "numerator": 475,
+              "denominator": 496,
+              "value": 0.9576612903225806
+            },
+            "recall": {
+              "numerator": 38,
+              "denominator": 39,
+              "value": 0.9743589743589743
+            },
+            "f1": {
+              "numerator": 1900,
+              "denominator": 1967,
+              "value": 0.9659379766141332
+            }
+          }
+        },
+        "original": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 965,
+            "fp": 24,
+            "fn": 45,
+            "tn": 2533,
+            "positive_calls": 989,
+            "precision": {
+              "numerator": 965,
+              "denominator": 989,
+              "value": 0.9757330637007078
+            },
+            "recall": {
+              "numerator": 193,
+              "denominator": 202,
+              "value": 0.9554455445544554
+            },
+            "f1": {
+              "numerator": 1930,
+              "denominator": 1999,
+              "value": 0.9654827413706853
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 949,
+            "fp": 24,
+            "fn": 45,
+            "tn": 2499,
+            "positive_calls": 973,
+            "precision": {
+              "numerator": 949,
+              "denominator": 973,
+              "value": 0.9753340184994861
+            },
+            "recall": {
+              "numerator": 949,
+              "denominator": 994,
+              "value": 0.954728370221328
+            },
+            "f1": {
+              "numerator": 1898,
+              "denominator": 1967,
+              "value": 0.9649211997966446
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 920,
+            "fp": 53,
+            "fn": 55,
+            "tn": 2489,
+            "positive_calls": 973,
+            "precision": {
+              "numerator": 920,
+              "denominator": 973,
+              "value": 0.9455292908530318
+            },
+            "recall": {
+              "numerator": 184,
+              "denominator": 195,
+              "value": 0.9435897435897436
+            },
+            "f1": {
+              "numerator": 460,
+              "denominator": 487,
+              "value": 0.944558521560575
+            }
+          }
+        },
+        "persistence": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 985,
+            "fp": 20,
+            "fn": 25,
+            "tn": 2537,
+            "positive_calls": 1005,
+            "precision": {
+              "numerator": 197,
+              "denominator": 201,
+              "value": 0.9800995024875622
+            },
+            "recall": {
+              "numerator": 197,
+              "denominator": 202,
+              "value": 0.9752475247524752
+            },
+            "f1": {
+              "numerator": 394,
+              "denominator": 403,
+              "value": 0.9776674937965261
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 969,
+            "fp": 20,
+            "fn": 25,
+            "tn": 2503,
+            "positive_calls": 989,
+            "precision": {
+              "numerator": 969,
+              "denominator": 989,
+              "value": 0.9797775530839231
+            },
+            "recall": {
+              "numerator": 969,
+              "denominator": 994,
+              "value": 0.9748490945674044
+            },
+            "f1": {
+              "numerator": 646,
+              "denominator": 661,
+              "value": 0.9773071104387292
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 941,
+            "fp": 48,
+            "fn": 34,
+            "tn": 2494,
+            "positive_calls": 989,
+            "precision": {
+              "numerator": 941,
+              "denominator": 989,
+              "value": 0.9514661274014156
+            },
+            "recall": {
+              "numerator": 941,
+              "denominator": 975,
+              "value": 0.9651282051282051
+            },
+            "f1": {
+              "numerator": 941,
+              "denominator": 982,
+              "value": 0.9582484725050916
+            }
+          }
+        },
+        "f1_008_selected": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 995,
+            "fp": 16,
+            "fn": 15,
+            "tn": 2541,
+            "positive_calls": 1011,
+            "precision": {
+              "numerator": 995,
+              "denominator": 1011,
+              "value": 0.9841740850642928
+            },
+            "recall": {
+              "numerator": 199,
+              "denominator": 202,
+              "value": 0.9851485148514851
+            },
+            "f1": {
+              "numerator": 1990,
+              "denominator": 2021,
+              "value": 0.9846610588817417
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 979,
+            "fp": 16,
+            "fn": 15,
+            "tn": 2507,
+            "positive_calls": 995,
+            "precision": {
+              "numerator": 979,
+              "denominator": 995,
+              "value": 0.9839195979899498
+            },
+            "recall": {
+              "numerator": 979,
+              "denominator": 994,
+              "value": 0.9849094567404426
+            },
+            "f1": {
+              "numerator": 1958,
+              "denominator": 1989,
+              "value": 0.9844142785319256
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 954,
+            "fp": 41,
+            "fn": 21,
+            "tn": 2501,
+            "positive_calls": 995,
+            "precision": {
+              "numerator": 954,
+              "denominator": 995,
+              "value": 0.9587939698492463
+            },
+            "recall": {
+              "numerator": 318,
+              "denominator": 325,
+              "value": 0.9784615384615385
+            },
+            "f1": {
+              "numerator": 954,
+              "denominator": 985,
+              "value": 0.9685279187817258
+            }
+          }
+        },
+        "f1_009_selected": {
+          "weather_full": {
+            "hours": 3567,
+            "tp": 994,
+            "fp": 15,
+            "fn": 16,
+            "tn": 2542,
+            "positive_calls": 1009,
+            "precision": {
+              "numerator": 994,
+              "denominator": 1009,
+              "value": 0.9851337958374629
+            },
+            "recall": {
+              "numerator": 497,
+              "denominator": 505,
+              "value": 0.9841584158415841
+            },
+            "f1": {
+              "numerator": 1988,
+              "denominator": 2019,
+              "value": 0.9846458642892522
+            }
+          },
+          "weather_common": {
+            "hours": 3517,
+            "tp": 978,
+            "fp": 15,
+            "fn": 16,
+            "tn": 2508,
+            "positive_calls": 993,
+            "precision": {
+              "numerator": 326,
+              "denominator": 331,
+              "value": 0.9848942598187311
+            },
+            "recall": {
+              "numerator": 489,
+              "denominator": 497,
+              "value": 0.9839034205231388
+            },
+            "f1": {
+              "numerator": 1956,
+              "denominator": 1987,
+              "value": 0.984398590840463
+            }
+          },
+          "satellite_common": {
+            "hours": 3517,
+            "tp": 951,
+            "fp": 42,
+            "fn": 24,
+            "tn": 2500,
+            "positive_calls": 993,
+            "precision": {
+              "numerator": 317,
+              "denominator": 331,
+              "value": 0.9577039274924471
+            },
+            "recall": {
+              "numerator": 317,
+              "denominator": 325,
+              "value": 0.9753846153846154
+            },
+            "f1": {
+              "numerator": 317,
+              "denominator": 328,
+              "value": 0.9664634146341463
+            }
+          }
+        }
+      },
+      "corrections": {
+        "raw_nwp": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "recency_robust": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "recency_pooled": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "conditional_robust": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "conditional_pooled": {
+          "additions": 0,
+          "removals": 0,
+          "changed_full_day_counts": 0
+        },
+        "original": {
+          "additions": 24,
+          "removals": 43,
+          "changed_full_day_counts": null
+        },
+        "persistence": {
+          "additions": 21,
+          "removals": 24,
+          "changed_full_day_counts": null
+        },
+        "f1_008_selected": {
+          "additions": 5,
+          "removals": 2,
+          "changed_full_day_counts": null
+        },
+        "f1_009_selected": {
+          "additions": 2,
+          "removals": 1,
+          "changed_full_day_counts": null
+        }
+      },
+      "comparisons": {
+        "recency_robust": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 3119,
+                "denominator": 332304,
+                "value": 0.009385983918339834
+              },
+              "weather_full/recall": {
+                "numerator": 14,
+                "denominator": 505,
+                "value": 0.027722772277227723
+              },
+              "weather_full/f1": {
+                "numerator": 37637,
+                "denominator": 2016991,
+                "value": 0.018659974189275015
+              },
+              "satellite_common/precision": {
+                "numerator": 5855,
+                "denominator": 482608,
+                "value": 0.012131999469548784
+              },
+              "satellite_common/recall": {
+                "numerator": 2,
+                "denominator": 65,
+                "value": 0.03076923076923077
+              },
+              "satellite_common/f1": {
+                "numerator": 20480,
+                "denominator": 957929,
+                "value": 0.02137945505355825
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 113,
+                "denominator": 22512,
+                "value": 0.00501954513148543
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 505,
+                "value": 0.007920792079207921
+              },
+              "weather_full/f1": {
+                "numerator": 2633,
+                "denominator": 406627,
+                "value": 0.0064752217634343025
+              },
+              "satellite_common/precision": {
+                "numerator": 3039,
+                "denominator": 490544,
+                "value": 0.006195162921165074
+              },
+              "satellite_common/recall": {
+                "numerator": 3,
+                "denominator": 325,
+                "value": 0.009230769230769232
+              },
+              "satellite_common/f1": {
+                "numerator": 14853,
+                "denominator": 1931594,
+                "value": 0.007689504109041548
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": true,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 107,
+                "denominator": 113232,
+                "value": 0.0009449625547548397
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 505,
+                "value": -0.0019801980198019802
+              },
+              "weather_full/f1": {
+                "numerator": -1057,
+                "denominator": 2039189,
+                "value": -0.0005183433217813552
+              },
+              "satellite_common/precision": {
+                "numerator": -559,
+                "denominator": 493520,
+                "value": -0.001132679526665586
+              },
+              "satellite_common/recall": {
+                "numerator": -4,
+                "denominator": 975,
+                "value": -0.0041025641025641026
+              },
+              "satellite_common/f1": {
+                "numerator": -5018,
+                "denominator": 1937495,
+                "value": -0.0025899421675926906
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -5,
+                "denominator": 339024,
+                "value": -1.4748218415215442e-05
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 1010,
+                "value": -0.0009900990099009901
+              },
+              "weather_full/f1": {
+                "numerator": -1025,
+                "denominator": 2037171,
+                "value": -0.0005031487292917482
+              },
+              "satellite_common/precision": {
+                "numerator": -7,
+                "denominator": 164176,
+                "value": -4.263716986648475e-05
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 975,
+                "value": -0.0010256410256410256
+              },
+              "satellite_common/f1": {
+                "numerator": -339,
+                "denominator": 645176,
+                "value": -0.0005254380200131437
+              }
+            }
+          }
+        },
+        "recency_pooled": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 3119,
+                "denominator": 332304,
+                "value": 0.009385983918339834
+              },
+              "weather_full/recall": {
+                "numerator": 14,
+                "denominator": 505,
+                "value": 0.027722772277227723
+              },
+              "weather_full/f1": {
+                "numerator": 37637,
+                "denominator": 2016991,
+                "value": 0.018659974189275015
+              },
+              "satellite_common/precision": {
+                "numerator": 5855,
+                "denominator": 482608,
+                "value": 0.012131999469548784
+              },
+              "satellite_common/recall": {
+                "numerator": 2,
+                "denominator": 65,
+                "value": 0.03076923076923077
+              },
+              "satellite_common/f1": {
+                "numerator": 20480,
+                "denominator": 957929,
+                "value": 0.02137945505355825
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 113,
+                "denominator": 22512,
+                "value": 0.00501954513148543
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 505,
+                "value": 0.007920792079207921
+              },
+              "weather_full/f1": {
+                "numerator": 2633,
+                "denominator": 406627,
+                "value": 0.0064752217634343025
+              },
+              "satellite_common/precision": {
+                "numerator": 3039,
+                "denominator": 490544,
+                "value": 0.006195162921165074
+              },
+              "satellite_common/recall": {
+                "numerator": 3,
+                "denominator": 325,
+                "value": 0.009230769230769232
+              },
+              "satellite_common/f1": {
+                "numerator": 14853,
+                "denominator": 1931594,
+                "value": 0.007689504109041548
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": true,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 107,
+                "denominator": 113232,
+                "value": 0.0009449625547548397
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 505,
+                "value": -0.0019801980198019802
+              },
+              "weather_full/f1": {
+                "numerator": -1057,
+                "denominator": 2039189,
+                "value": -0.0005183433217813552
+              },
+              "satellite_common/precision": {
+                "numerator": -559,
+                "denominator": 493520,
+                "value": -0.001132679526665586
+              },
+              "satellite_common/recall": {
+                "numerator": -4,
+                "denominator": 975,
+                "value": -0.0041025641025641026
+              },
+              "satellite_common/f1": {
+                "numerator": -5018,
+                "denominator": 1937495,
+                "value": -0.0025899421675926906
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -5,
+                "denominator": 339024,
+                "value": -1.4748218415215442e-05
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 1010,
+                "value": -0.0009900990099009901
+              },
+              "weather_full/f1": {
+                "numerator": -1025,
+                "denominator": 2037171,
+                "value": -0.0005031487292917482
+              },
+              "satellite_common/precision": {
+                "numerator": -7,
+                "denominator": 164176,
+                "value": -4.263716986648475e-05
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 975,
+                "value": -0.0010256410256410256
+              },
+              "satellite_common/f1": {
+                "numerator": -339,
+                "denominator": 645176,
+                "value": -0.0005254380200131437
+              }
+            }
+          }
+        },
+        "conditional_robust": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 3119,
+                "denominator": 332304,
+                "value": 0.009385983918339834
+              },
+              "weather_full/recall": {
+                "numerator": 14,
+                "denominator": 505,
+                "value": 0.027722772277227723
+              },
+              "weather_full/f1": {
+                "numerator": 37637,
+                "denominator": 2016991,
+                "value": 0.018659974189275015
+              },
+              "satellite_common/precision": {
+                "numerator": 5855,
+                "denominator": 482608,
+                "value": 0.012131999469548784
+              },
+              "satellite_common/recall": {
+                "numerator": 2,
+                "denominator": 65,
+                "value": 0.03076923076923077
+              },
+              "satellite_common/f1": {
+                "numerator": 20480,
+                "denominator": 957929,
+                "value": 0.02137945505355825
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 113,
+                "denominator": 22512,
+                "value": 0.00501954513148543
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 505,
+                "value": 0.007920792079207921
+              },
+              "weather_full/f1": {
+                "numerator": 2633,
+                "denominator": 406627,
+                "value": 0.0064752217634343025
+              },
+              "satellite_common/precision": {
+                "numerator": 3039,
+                "denominator": 490544,
+                "value": 0.006195162921165074
+              },
+              "satellite_common/recall": {
+                "numerator": 3,
+                "denominator": 325,
+                "value": 0.009230769230769232
+              },
+              "satellite_common/f1": {
+                "numerator": 14853,
+                "denominator": 1931594,
+                "value": 0.007689504109041548
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": true,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 107,
+                "denominator": 113232,
+                "value": 0.0009449625547548397
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 505,
+                "value": -0.0019801980198019802
+              },
+              "weather_full/f1": {
+                "numerator": -1057,
+                "denominator": 2039189,
+                "value": -0.0005183433217813552
+              },
+              "satellite_common/precision": {
+                "numerator": -559,
+                "denominator": 493520,
+                "value": -0.001132679526665586
+              },
+              "satellite_common/recall": {
+                "numerator": -4,
+                "denominator": 975,
+                "value": -0.0041025641025641026
+              },
+              "satellite_common/f1": {
+                "numerator": -5018,
+                "denominator": 1937495,
+                "value": -0.0025899421675926906
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -5,
+                "denominator": 339024,
+                "value": -1.4748218415215442e-05
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 1010,
+                "value": -0.0009900990099009901
+              },
+              "weather_full/f1": {
+                "numerator": -1025,
+                "denominator": 2037171,
+                "value": -0.0005031487292917482
+              },
+              "satellite_common/precision": {
+                "numerator": -7,
+                "denominator": 164176,
+                "value": -4.263716986648475e-05
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 975,
+                "value": -0.0010256410256410256
+              },
+              "satellite_common/f1": {
+                "numerator": -339,
+                "denominator": 645176,
+                "value": -0.0005254380200131437
+              }
+            }
+          }
+        },
+        "conditional_pooled": {
+          "raw_nwp": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "weather_full/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/precision": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/recall": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              },
+              "satellite_common/f1": {
+                "numerator": 0,
+                "denominator": 1,
+                "value": 0.0
+              }
+            }
+          },
+          "original": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 3119,
+                "denominator": 332304,
+                "value": 0.009385983918339834
+              },
+              "weather_full/recall": {
+                "numerator": 14,
+                "denominator": 505,
+                "value": 0.027722772277227723
+              },
+              "weather_full/f1": {
+                "numerator": 37637,
+                "denominator": 2016991,
+                "value": 0.018659974189275015
+              },
+              "satellite_common/precision": {
+                "numerator": 5855,
+                "denominator": 482608,
+                "value": 0.012131999469548784
+              },
+              "satellite_common/recall": {
+                "numerator": 2,
+                "denominator": 65,
+                "value": 0.03076923076923077
+              },
+              "satellite_common/f1": {
+                "numerator": 20480,
+                "denominator": 957929,
+                "value": 0.02137945505355825
+              }
+            }
+          },
+          "persistence": {
+            "assessable": true,
+            "nonregression": true,
+            "strict_gain": true,
+            "all_six_strict": true,
+            "passed": true,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 113,
+                "denominator": 22512,
+                "value": 0.00501954513148543
+              },
+              "weather_full/recall": {
+                "numerator": 4,
+                "denominator": 505,
+                "value": 0.007920792079207921
+              },
+              "weather_full/f1": {
+                "numerator": 2633,
+                "denominator": 406627,
+                "value": 0.0064752217634343025
+              },
+              "satellite_common/precision": {
+                "numerator": 3039,
+                "denominator": 490544,
+                "value": 0.006195162921165074
+              },
+              "satellite_common/recall": {
+                "numerator": 3,
+                "denominator": 325,
+                "value": 0.009230769230769232
+              },
+              "satellite_common/f1": {
+                "numerator": 14853,
+                "denominator": 1931594,
+                "value": 0.007689504109041548
+              }
+            }
+          },
+          "f1_008_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": true,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": 107,
+                "denominator": 113232,
+                "value": 0.0009449625547548397
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 505,
+                "value": -0.0019801980198019802
+              },
+              "weather_full/f1": {
+                "numerator": -1057,
+                "denominator": 2039189,
+                "value": -0.0005183433217813552
+              },
+              "satellite_common/precision": {
+                "numerator": -559,
+                "denominator": 493520,
+                "value": -0.001132679526665586
+              },
+              "satellite_common/recall": {
+                "numerator": -4,
+                "denominator": 975,
+                "value": -0.0041025641025641026
+              },
+              "satellite_common/f1": {
+                "numerator": -5018,
+                "denominator": 1937495,
+                "value": -0.0025899421675926906
+              }
+            }
+          },
+          "f1_009_selected": {
+            "assessable": true,
+            "nonregression": false,
+            "strict_gain": false,
+            "all_six_strict": false,
+            "passed": false,
+            "differences": {
+              "weather_full/precision": {
+                "numerator": -5,
+                "denominator": 339024,
+                "value": -1.4748218415215442e-05
+              },
+              "weather_full/recall": {
+                "numerator": -1,
+                "denominator": 1010,
+                "value": -0.0009900990099009901
+              },
+              "weather_full/f1": {
+                "numerator": -1025,
+                "denominator": 2037171,
+                "value": -0.0005031487292917482
+              },
+              "satellite_common/precision": {
+                "numerator": -7,
+                "denominator": 164176,
+                "value": -4.263716986648475e-05
+              },
+              "satellite_common/recall": {
+                "numerator": -1,
+                "denominator": 975,
+                "value": -0.0010256410256410256
+              },
+              "satellite_common/f1": {
+                "numerator": -339,
+                "denominator": 645176,
+                "value": -0.0005254380200131437
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "gates": {
+    "recency_robust": {
+      "raw_control_both_periods": false,
+      "all_six_strict_both_periods": false
+    },
+    "recency_pooled": {
+      "raw_control_both_periods": false,
+      "all_six_strict_both_periods": false
+    },
+    "conditional_robust": {
+      "raw_control_both_periods": false,
+      "all_six_strict_both_periods": false
+    },
+    "conditional_pooled": {
+      "raw_control_both_periods": false,
+      "all_six_strict_both_periods": false
+    }
+  },
+  "primary_method": "conditional_robust",
+  "context_information_limit": "Original, persistence, 008 and 009 use later rolling issuance information. They are same-hour context benchmarks, not matched issue-time controls."
+}

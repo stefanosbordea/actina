@@ -1,0 +1,1688 @@
+{
+  "primary": "conditional_robust",
+  "draws_per_period_and_block": 5000,
+  "seed": 20261004,
+  "scope": "Exploratory marginal resampling intervals. No fresh holdout or multiple-experiment adjustment. Not an additional admission gate.",
+  "results": [
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.11314645094921916,
+      "interval95": [
+        0.05027484477153536,
+        0.18296768496734817
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.08823529411764708,
+      "interval95": [
+        0.016609236429532413,
+        0.1571916871752803
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.10017588430721125,
+      "interval95": [
+        0.05406952815273083,
+        0.14942329266830123
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.12995001922337557,
+      "interval95": [
+        0.05904492295697493,
+        0.2081599665955444
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.07843137254901955,
+      "interval95": [
+        0.003857762346568312,
+        0.15555940023068046
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.10345471521942107,
+      "interval95": [
+        0.05382427837009815,
+        0.15954201220993489
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.000746551642413662,
+      "interval95": [
+        -0.020855178677306394,
+        0.019403539018324402
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.009803921568627416,
+      "interval95": [
+        -0.025000000000000022,
+        0.0035090808005929295
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.005514178915713375,
+      "interval95": [
+        -0.016976117215702677,
+        0.006096080763860354
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -0.000250566758143389,
+      "interval95": [
+        -0.009826445695089727,
+        0.009090302660573197
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.0032679738562091387,
+      "interval95": [
+        -0.010527242401779126,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.001844227623935435,
+      "interval95": [
+        -0.007748607602784965,
+        0.00317488617703338
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.08418555614127576,
+      "interval95": [
+        0.021843288399824922,
+        0.15166113785368032
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.05442176870748294,
+      "interval95": [
+        -0.023076923076923106,
+        0.1282051282051282
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.06840368782954576,
+      "interval95": [
+        0.014443242230206507,
+        0.1235790524782945
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.08960427535309845,
+      "interval95": [
+        0.02404827228302165,
+        0.1623584979702342
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.0340136054421768,
+      "interval95": [
+        -0.04180092317689361,
+        0.11034540422096643
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.06050430355194569,
+      "interval95": [
+        0.007651502298558645,
+        0.11888517140022248
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.005944313988594407,
+      "interval95": [
+        -0.017338619674991753,
+        0.005311106158332436
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.017006802721088454,
+      "interval95": [
+        -0.04074423480083857,
+        0.00347252468060404
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.0119010218206137,
+      "interval95": [
+        -0.026775930711881807,
+        0.0015187335060036172
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -0.0011624292067096142,
+      "interval95": [
+        -0.003129554707584398,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.006802721088435382,
+      "interval95": [
+        -0.01746763062265239,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.004207831936445472,
+      "interval95": [
+        -0.010805281005923002,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.11314645094921916,
+      "interval95": [
+        0.05432293017718893,
+        0.19966089247682084
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.08823529411764708,
+      "interval95": [
+        0.034265915807971885,
+        0.15790420295342664
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.10017588430721125,
+      "interval95": [
+        0.059258113333196805,
+        0.1642682489775901
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.12995001922337557,
+      "interval95": [
+        0.06854885007469151,
+        0.2274967696550933
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.07843137254901955,
+      "interval95": [
+        0.012383900928792598,
+        0.1610169491525424
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.10345471521942107,
+      "interval95": [
+        0.0499505833921623,
+        0.18388370024191786
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.000746551642413662,
+      "interval95": [
+        -0.020325566084287858,
+        0.021811663205615135
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.009803921568627416,
+      "interval95": [
+        -0.023973287671232864,
+        0.004184100418409997
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.005514178915713375,
+      "interval95": [
+        -0.01692816227767595,
+        0.005881077455074554
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -0.000250566758143389,
+      "interval95": [
+        -0.008475004248066898,
+        0.007703685008232866
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.0032679738562091387,
+      "interval95": [
+        -0.01094990775647703,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.001844227623935435,
+      "interval95": [
+        -0.007751106353518495,
+        0.0019208443018095458
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.08418555614127576,
+      "interval95": [
+        0.030986592496789644,
+        0.15108157537921396
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.05442176870748294,
+      "interval95": [
+        -0.005992644340947671,
+        0.11215067244130385
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.06840368782954576,
+      "interval95": [
+        0.025700342123039916,
+        0.11660882314508719
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.08960427535309845,
+      "interval95": [
+        0.030849969141137523,
+        0.1732280677459382
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.0340136054421768,
+      "interval95": [
+        -0.0314795463234357,
+        0.10705193957478548
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.06050430355194569,
+      "interval95": [
+        0.006633744315236954,
+        0.13060918602139807
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.005944313988594407,
+      "interval95": [
+        -0.015098749140707513,
+        0.004996115860904432
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.017006802721088454,
+      "interval95": [
+        -0.038690956221198135,
+        0.0036771514161219807
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.0119010218206137,
+      "interval95": [
+        -0.023522947016251725,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -0.0011624292067096142,
+      "interval95": [
+        -0.0032506991422750846,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.006802721088435382,
+      "interval95": [
+        -0.020000000000000018,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "validation",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.004207831936445472,
+      "interval95": [
+        -0.012962148495131515,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.00938598391833989,
+      "interval95": [
+        -0.003085641253757101,
+        0.027697835507986438
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.027722772277227747,
+      "interval95": [
+        0.013684905379398815,
+        0.04244817374136223
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.018659974189275008,
+      "interval95": [
+        0.00935939590737376,
+        0.029886425725754194
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.005019545131485503,
+      "interval95": [
+        -0.0019317072594073614,
+        0.012563100562819169
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.007920792079207928,
+      "interval95": [
+        -0.0039961038961038725,
+        0.021402868129863816
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.006475221763434291,
+      "interval95": [
+        -0.00011634505817509905,
+        0.013638647684525005
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": 0.0009449625547548468,
+      "interval95": [
+        -9.120138206226424e-05,
+        0.0029731377586662134
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.001980198019801982,
+      "interval95": [
+        -0.007070707070707116,
+        0.003956478733926796
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.000518343321781356,
+      "interval95": [
+        -0.003476781625971931,
+        0.0025131389613053607
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -1.47482184151837e-05,
+      "interval95": [
+        -0.002941749837542529,
+        0.0029120673634377035
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.000990099009900991,
+      "interval95": [
+        -0.003015151208760175,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.0005031487292918024,
+      "interval95": [
+        -0.0021159432771633018,
+        0.0009880481799936975
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.012131999469548793,
+      "interval95": [
+        -0.0019216471354948418,
+        0.03055167810854358
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.03076923076923077,
+      "interval95": [
+        0.016788492065955875,
+        0.044866523184936224
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.021379455053558205,
+      "interval95": [
+        0.01163481975590539,
+        0.032693467656969344
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.006195162921165065,
+      "interval95": [
+        -0.0035289938085875214,
+        0.015052783468605098
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.009230769230769265,
+      "interval95": [
+        -0.002081165452653469,
+        0.02134517860186671
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.007689504109041567,
+      "interval95": [
+        0.0007001054581492166,
+        0.014783832424024016
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.0011326795266656253,
+      "interval95": [
+        -0.00596793416163253,
+        0.002612591690350815
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.004102564102564155,
+      "interval95": [
+        -0.00843014854632681,
+        -0.0010020040080160886
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.0025899421675926737,
+      "interval95": [
+        -0.00573929463791707,
+        -2.948209078257342e-05
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -4.2637169866521774e-05,
+      "interval95": [
+        -0.002917988499776011,
+        0.0028355696136916657
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.0010256410256410664,
+      "interval95": [
+        -0.0031545741324920966,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 1,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.000525438020013147,
+      "interval95": [
+        -0.0024833295393640793,
+        0.000993772246986843
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.00938598391833989,
+      "interval95": [
+        -0.001797198125842418,
+        0.026259781744885687
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.027722772277227747,
+      "interval95": [
+        0.00992038911699474,
+        0.05242075215586068
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.018659974189275008,
+      "interval95": [
+        0.007435810209782801,
+        0.03685557177133824
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.005019545131485503,
+      "interval95": [
+        -0.0009785454976675434,
+        0.01173296888853891
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.007920792079207928,
+      "interval95": [
+        -0.004840388309807311,
+        0.024316775333473414
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.006475221763434291,
+      "interval95": [
+        -0.0004940718461306698,
+        0.014850604706288616
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": 0.0009449625547548468,
+      "interval95": [
+        -8.32964094111821e-05,
+        0.003039128502701073
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.001980198019801982,
+      "interval95": [
+        -0.0069308647911371975,
+        0.004123711340206171
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.000518343321781356,
+      "interval95": [
+        -0.0030484114361737204,
+        0.0026104488301417735
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -1.47482184151837e-05,
+      "interval95": [
+        -0.0028720991767553993,
+        0.0029316720525870226
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.000990099009900991,
+      "interval95": [
+        -0.003089757774213825,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "weather_full",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.0005031487292918024,
+      "interval95": [
+        -0.0021295991238662573,
+        0.0010146594946035896
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "precision",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "recall",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "raw_nwp",
+      "metric": "f1",
+      "difference": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "precision",
+      "difference": 0.012131999469548793,
+      "interval95": [
+        0.0028807779172571103,
+        0.024639762529380774
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "recall",
+      "difference": 0.03076923076923077,
+      "interval95": [
+        0.011738217539454995,
+        0.05402885032215287
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "original",
+      "metric": "f1",
+      "difference": 0.021379455053558205,
+      "interval95": [
+        0.00985828475242588,
+        0.036146748702802996
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "precision",
+      "difference": 0.006195162921165065,
+      "interval95": [
+        -0.0028102466226054474,
+        0.013994598002699062
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "recall",
+      "difference": 0.009230769230769265,
+      "interval95": [
+        -0.002081219649670463,
+        0.022158481726645616
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "persistence",
+      "metric": "f1",
+      "difference": 0.007689504109041567,
+      "interval95": [
+        0.001875950490379752,
+        0.01361580834152838
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "precision",
+      "difference": -0.0011326795266656253,
+      "interval95": [
+        -0.006211984089758501,
+        0.0026993635401568027
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "recall",
+      "difference": -0.004102564102564155,
+      "interval95": [
+        -0.008360113825305836,
+        -0.0009920634920634885
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_008_selected",
+      "metric": "f1",
+      "difference": -0.0025899421675926737,
+      "interval95": [
+        -0.005917699250031047,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "precision",
+      "difference": -4.2637169866521774e-05,
+      "interval95": [
+        -0.002888668716688858,
+        0.002837521097409773
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "recall",
+      "difference": -0.0010256410256410664,
+      "interval95": [
+        -0.0031983795764279925,
+        0.0
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    },
+    {
+      "period": "test",
+      "reference": "satellite_common",
+      "block_days": 7,
+      "control": "f1_009_selected",
+      "metric": "f1",
+      "difference": -0.000525438020013147,
+      "interval95": [
+        -0.002182360410823261,
+        0.0010102055853791119
+      ],
+      "valid_draws": 5000,
+      "undefined_draws": 0
+    }
+  ]
+}

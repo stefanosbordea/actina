@@ -1,0 +1,12 @@
+{
+  "started_at_utc": "2026-10-04T11:46:58.680600+00:00",
+  "command": [
+    "app/experiments/f1-013/uncertainty/paired.py"
+  ],
+  "status": "COMPLETE",
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-04T11:46:59.309394+00:00",
+  "elapsed_seconds": 0.6310325410000814,
+  "cpu_seconds": 0.618293,
+  "peak_rss_bytes": 83673088
+}

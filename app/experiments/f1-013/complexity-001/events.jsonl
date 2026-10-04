@@ -1,0 +1,3 @@
+{"at_utc":"2026-10-04T11:44:09.446035+00:00","event":"START","outcome_scoring_started":false}
+{"at_utc":"2026-10-04T11:44:09.960857+00:00","event":"FORECAST_INPUTS_VERIFIED","canonical_subsets":72459}
+{"at_utc":"2026-10-04T11:44:09.979738+00:00","event":"COMPLETE","outcome_scoring_started":false}

@@ -130,6 +130,34 @@ jobs:
           Path('app/build/release-check/physical012-fixtures.json').write_text(json.dumps(result, indent=2))
           print(json.dumps(result))
           PY
+      - name: Check exact event decisions and retained evidence
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s app/experiments/f1-013 -p 'test_*.py' -v
+          python -m unittest discover -s app/experiments/f1-013/uncertainty -p 'test_*.py' -v
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          experiment = Path('app/experiments/f1-013')
+          checked = 0
+          manifests = [(Path('.'), experiment / 'inputs.json'),
+                       (experiment / 'result', experiment / 'result/outputs.json'),
+                       (experiment, experiment / 'uncertainty/result/inputs.json'),
+                       (experiment / 'uncertainty/result', experiment / 'uncertainty/result/outputs.json')]
+          for base, manifest in manifests:
+              for name, digest in json.loads(manifest.read_text()).items():
+                  assert hashlib.sha256((base / name).read_bytes()).hexdigest() == digest, name
+                  checked += 1
+          result = dict(status='PASS', retained_file_hashes=checked,
+                        scope='Exact-decision and resampling fixtures plus retained evidence identity, not a new historical run.')
+          Path('app/build/release-check/model013-fixtures.json').write_text(json.dumps(result, indent=2))
+          print(json.dumps(result))
+          PY
       - name: Preserve verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
