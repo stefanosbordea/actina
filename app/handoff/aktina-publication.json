@@ -1,0 +1,58 @@
+{
+  "verified_at_utc": "2026-10-04T08:52:14.135292+00:00",
+  "source_commit": "5393e10",
+  "public_url": "https://aktina-pafos-2026.vercel.app",
+  "deployment_url": "https://aktina-pafos-2026-as8xxgvsq-dlukels-projects.vercel.app",
+  "compatibility_url": "https://aquashift-pafos-2026.vercel.app",
+  "checks": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 8369,
+      "sha256": "752837ae2c9d1d2bdf30fc93827456367527609b30ba25d45f03c5e53463a529",
+      "matches_build": true
+    },
+    {
+      "path": "site.css",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 14849,
+      "sha256": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b",
+      "matches_build": true
+    },
+    {
+      "path": "site.mjs",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 15853,
+      "sha256": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a",
+      "matches_build": true
+    },
+    {
+      "path": "benchmark.html",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 8526,
+      "sha256": "d9636e80f0d50fd91b9dc4c21716bf858e7167ea5ea2d5f9f43eb85c42e74c73",
+      "matches_build": true
+    },
+    {
+      "path": "benchmark.mjs",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 14133,
+      "sha256": "6e616a92f9778441b70cec55349d8bcd6670dcbf1b36b3084c54b38c79a1c2b6",
+      "matches_build": true
+    },
+    {
+      "path": "workspace/index.html",
+      "http_status": 200,
+      "same_url": true,
+      "bytes": 12749,
+      "sha256": "9b6d40514b04e964084ef98a044d128726a70e24565f33cc3c0bfc8883a2404a",
+      "matches_build": true
+    }
+  ],
+  "domain_fix": "Registered Aktina as a production project domain. Preview/deployment authentication remains enabled."
+}

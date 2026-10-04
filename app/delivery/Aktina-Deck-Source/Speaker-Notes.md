@@ -1,0 +1,86 @@
+# Aktina speaker notes
+
+Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections match the current Aktina deck. Use the silent 60-second backup only if the live demo is unavailable.
+
+## 1. Aktina
+
+Aktina starts with a simple idea: use solar electricity that would otherwise be curtailed to make drinking water, then store the water for later. Our current demonstration shows the retained model and schedule output and the evidence behind it. Recovering curtailed solar still needs a suitable plant, storage and grid coordination.
+
+## 2. Why storage matters
+
+Water demand and available solar do not arrive at the same time. A tank lets an operator move some water production between hours while keeping water available. We need to check both sides: whether the plan supplies water, and whether its electricity use actually helps the grid. Radiation is useful context, but a sunny hour is not proof of curtailed electricity available to a particular plant.
+
+## 3. Grid and Sites
+
+The roadmap has two parts. Grid compares production for a desalination unit and its tank. Sites explores garden water budgets and unusual overnight meter readings. Today's supplied model and schedule cover Grid. Sites remains a separate prototype; its synthetic examples are not field results. Neither part controls equipment.
+
+## 4. What the demonstration loads
+
+The demo loads 7,104 supplied schedule rows, covering 296 complete days from 6 December 2025 to 28 September 2026. Each day shows radiation, production, tank level and illustrative cost. The data, scripts and fonts are local, so the presentation does not need an API or internet connection.
+
+We checked which forecast generated the supplied export. Its forecast column matches persistence in every row, and that version reproduces byte for byte. Stefanos's LightGBM forecast appears separately. The unchanged model-driven scheduler also runs, but produces a different schedule. We have kept both outputs; the intended submission version still needs confirmation.
+
+Source cue: `app/handoff/README.md` and `app/handoff/scheduler-reproduction/README.md`. Do not call the displayed schedule a demonstrated LightGBM saving.
+
+## 5. A matched day
+
+On 3 July, flat and supplied production both make 5,658 cubic metres of water and use 19,237.2 kilowatt-hours. The supplied tank starts and ends at 966 cubic metres. Under the illustrative prices, the supplied plan costs about 2,628 euros versus 2,995 euros for flat production: 12.23 percent less. The comparison moves electricity use between differently priced hours; it does not demonstrate lower energy use or recovered solar.
+
+This equal-stock result is specific to the day. The scheduler carries water between days and does not enforce equal daily ending stock. A cost comparison must retain production and stock change, especially at the separate validation/test resets.
+
+Source cue: original `eval/schedule_hourly.csv`, 3 July 2026. Discount is €101/MWh when actual radiation is strictly above 600 W/m²; otherwise €183/MWh. Specific electricity is 3.4 kWh/m³. These are assumptions, not bills or a market tariff.
+
+## 6. Demo and fallback
+
+We will show three days, then the full benchmark. July 3 shows midday production and the matched daily cost. December 10 has no high-radiation hours; the retained tank still stays at or above its declared minimum. March 16 shows a day when the original model predicts better than persistence. We then return to all test hours so that one good day does not become the headline result.
+
+Live cues:
+
+- Open Aktina locally. Choose **3 July 2026**; inspect sun, production, tank and cost.
+- Choose **10 December 2025**; point to low radiation and the tank minimum.
+- Choose **16 March 2026**; MAE is 48.48 W/m² for the original model versus 156.33 for persistence.
+- Open **AktinaBench**; show the original test comparison, then the direct classifier's precision/recall tradeoff.
+
+Fallback: `Aktina-Backup-v2.mp4`, 60 seconds, no audio. It is a screenshot walkthrough, not a live interaction recording. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
+
+## 7. What the original model achieves
+
+We evaluated every retained prediction: 3,566 validation hours and 3,567 test hours. Validation MAE is 29.34 watts per square metre for LightGBM versus 32.47 for persistence. On the test period, that reverses: 14.27 versus 12.26. Test precision, recall and F1 also favour persistence. The model's test F1 is 0.9655; persistence reaches 0.9777.
+
+Validation informed early stopping, and the original validation and test files come from different model fits. The adjacent original splits also lack a 24-hour prediction-horizon purge. These limits stay in the benchmark. Radiation above 600 watts per square metre defines the label; it is not observed grid curtailment.
+
+Source cue: `app/handoff/ACTINABENCH.md`; full MAE, RMSE, precision, recall, F1, confusion counts and month/hour breakdowns are retained. Partial boundary days remain in full-period results.
+
+## 8. Research comparison
+
+We ran six separate fixed experiments while preserving the original model. The validation-selected direct classifier misses 15 positive test hours instead of persistence's 25. But it raises false alarms from 20 to 37, lowering precision from 98.01 to 96.41 percent. Its F1 remains lower than persistence. The neural candidate also loses.
+
+The roadmap prioritises precision because a false surplus prediction can be costly. Higher recall alone is not enough to promote this candidate. The experiments purge 24 hours at the training boundary, but this test period was already inspected. We need fresh held-out evidence before claiming a better next model.
+
+Source cue: `app/experiments/f1-001/README.md`. Direct classifier: F1 0.974535, precision 0.964147, recall 0.985149; persistence: 0.977667, 0.980100, 0.975248. No candidate wins all three.
+
+## 9. Business hypotheses
+
+The canvas separates potential Grid customers from Sites customers. Water operators would need integration and evidence that a plan fits their operations. Hotels or managed gardens would need usable meters and a measurable water-management problem. Setup fees, subscriptions and support are revenue hypotheses. We have not established pricing, willingness to pay, margins or customer agreements. Those assumptions need to be tested with prospective users.
+
+Presenter cue: show the updated one-page business model canvas; older PDF exports are excluded from the current review pack.
+
+## 10. What remains outside the model
+
+The supplied scheduler uses illustrative production, demand, tank and electricity assumptions. Demand includes the target day's recorded temperature, so this is a retrospective scenario. Pressure, flushing, water quality, ramps and maintenance are not established by these charts. A real operator would need to supply those constraints and approve any trial. There is no plant control connection, and no measured electricity-bill saving or solar recovery is claimed.
+
+Source cue: original `model/scheduler.py`; production 100–400 m³/h, tank 4,000 m³, minimum 800 m³, start 2,000 m³ at each period. Keep hourly endpoints distinct from continuous physical safety.
+
+## 11. Next evidence
+
+First, confirm which retained schedule should be submitted and rehearse the offline demo together. For the next model, controlled comparisons can test solar geometry, clear-sky normalisation and forecasts of tomorrow's cloud that were available today. Each addition needs a controlled comparison, fixed time boundaries and a fresh holdout. Difficult test hours must stay in the evaluation.
+
+For a pilot, we need an operator, a data contact and an agreed measurement plan. We would check plant constraints, demand, tariffs and available curtailment signals before considering an operational trial. The business case should follow measured results rather than assumed savings.
+
+Source cue: `app/handoff/MODEL-V2-FEEDBACK.md`. These are proposed v2 directions, not a completed v2 model or guaranteed gains. Two team rehearsals remain uncompleted.
+
+## 12. Team and ask
+
+Our team is Loukas Louka, Stefanos Bordea, Andreas Nikolaides and Cleopas Cleopa. We are asking for a Paphos operator and a data contact to help test the idea against real operating needs. The current evidence gives us a reviewable starting point, with its limits visible.
+
+Preparation checks: confirm the team contact, final slide alignment, required competition declarations and intended schedule before submission. Keep the original source credits and third-party licences. Keep the earlier reference experiment distinct from the original model.

@@ -1,0 +1,16 @@
+{
+  "source_days": 296,
+  "source_rows": 7104,
+  "date": "2026-07-03",
+  "production_m3": 5658,
+  "flat_production_m3": 5658,
+  "energy_kwh": 19237.2,
+  "cost_eur": {
+    "supplied": 2628.2475999999997,
+    "flat": 2994.5907999999986
+  },
+  "illustrative_reduction_percent": 12.23349781212174,
+  "start_tank": 966,
+  "end_tank": 966,
+  "native_charts": 4
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-04",
+  "artifact": "Aktina-Pafos-2026.pptx",
+  "sha256": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
+  "bytes": 122197,
+  "slides": 12,
+  "native_editable_charts": 4,
+  "embedded_workbooks": 4,
+  "chart_slides": [
+    5,
+    7,
+    8
+  ],
+  "team_names": [
+    "Loukas Louka",
+    "Stefanos Bordea",
+    "Andreas Nikolaides",
+    "Cleopas Cleopa"
+  ],
+  "equal_team_format": "All four names once on slide 12, Arial 22.5 pt regular; no public role hierarchy.",
+  "checks": {
+    "package_integrity": "pass",
+    "package_findings": 0,
+    "layout_findings": 0,
+    "font_policy": true,
+    "native_chart_structure": true,
+    "artifact_tool_reimport": true,
+    "source_hashes": "matched on final build",
+    "build_exit_code": 0
+  },
+  "visual_review": {
+    "renderer": "Bundled artifact-tool PNG export of validated final PPTX",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "final_changed_pages_rechecked": [
+      1,
+      8,
+      11,
+      12
+    ],
+    "result": "No clipping, overlap or misplaced chart labels found.",
+    "native_powerpoint_final": false,
+    "native_powerpoint_note": "Earlier draft opened as 12 slides and exported to PDF. After team-credit corrections, native export was stopped due to concurrent desktop input; that superseded PDF is outside delivery. Final slides were re-rendered with the bundled renderer.",
+    "native_chart_editing_tested": false
+  },
+  "scope": [
+    "Original model test MAE and F1 lose to persistence.",
+    "Direct classifier comparison has fewer misses and more false alarms, lower precision and F1.",
+    "July 3 tariff example is retrospective and illustrative; no measured savings or curtailment recovery.",
+    "Model v2 and intended submitted schedule version remain pending."
+  ]
+}
