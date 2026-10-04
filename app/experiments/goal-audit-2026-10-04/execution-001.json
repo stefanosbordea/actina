@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/goal-audit-2026-10-04/check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T11:14:18.290943+00:00",
+  "completed_at_utc": "2026-10-04T11:14:20.643631+00:00",
+  "wall_seconds": 2.3525641669984907,
+  "exit_code": 0,
+  "sha256": {
+    "check.py": "514deaa6eadcff7eefcf8c534eef2e8dd354de38b52424f66aeb4e48f2444383",
+    "check-001.log": "b163a953bdaee272672705468b450781e85fcc1041db66f4b1404fd0a476090f",
+    "evidence.json": "abce6e8c105f9845c20172b7b64d7bb8f3e2c9a4cc00aa6030d6a3a0ac282fa6",
+    "event-metrics.csv": "01d19e736ec8d4d95161ec23b2003c56fb38e8fddfb6e6ccf61c8e1e48321128"
+  }
+}

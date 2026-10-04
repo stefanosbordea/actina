@@ -18,7 +18,7 @@ with ZipFile(temporary, 'w') as output:
     for item, data in members:
         if item.filename == 'docProps/core.xml':
             root = ET.fromstring(data)
-            for name, value in [(f'{{{dc}}}creator', 'Loukas Louka'), (f'{{{cp}}}lastModifiedBy', 'Loukas Louka'), (f'{{{dc}}}title', 'Aktina | Pafos 2026')]:
+            for name, value in [(f'{{{dc}}}creator', 'Loukas Louka, Stefanos Bordea, Andreas Nikolaides, Cleopas Cleopa'), (f'{{{cp}}}lastModifiedBy', 'Loukas Louka'), (f'{{{dc}}}title', 'Aktina | Pafos 2026')]:
                 element = root.find(name)
                 if element is None:
                     element = ET.SubElement(root, name)

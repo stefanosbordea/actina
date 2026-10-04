@@ -1,8 +1,8 @@
 {
   "date": "2026-10-04",
   "artifact": "Aktina-Pafos-2026.pptx",
-  "sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
-  "bytes": 123030,
+  "sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
+  "bytes": 123065,
   "slides": 12,
   "native_editable_charts": 4,
   "embedded_workbooks": 4,
@@ -17,7 +17,7 @@
     "Andreas Nikolaides",
     "Cleopas Cleopa"
   ],
-  "equal_team_format": "All four names once on slide 12, Arial 22.5 pt regular; no public role hierarchy.",
+  "equal_team_format": "All four names once on slide 12, Arial 22.5 pt regular. All four names in document creator metadata. No public role hierarchy.",
   "checks": {
     "package_integrity": "pass",
     "package_findings": 0,
@@ -96,6 +96,23 @@
     "build.mjs": "f09906c0313ec63545ee6c6c0c28cb8508b233a0fe792bec9cbf37c476edac0f",
     "Speaker-Notes.md": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
     "inputs.sha256.json": "f5ace8b8925db4436bf0e916b0b9808d66ec8b7ec25eabc757f820b5b642b6b2",
-    "facts.json": "4142e15f72e77c02004361ed53ed7dc055b6f879a16603d07a419336b2c2d760"
+    "facts.json": "4142e15f72e77c02004361ed53ed7dc055b6f879a16603d07a419336b2c2d760",
+    "set_metadata.py": "bc220dfe01fa7ba1b24c3b86815b8032e74eb31662d2368091135d13e7c68faf"
+  },
+  "attribution_review": {
+    "date": "2026-10-04",
+    "operation": "Metadata-only creator correction. Slide text, notes, charts and embedded workbooks unchanged.",
+    "previous_sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
+    "changed_package_members": [
+      "docProps/core.xml"
+    ],
+    "rendered_slides": [
+      1,
+      12
+    ],
+    "rendered_pixels_unchanged": true,
+    "private_evidence": "build/team-attribution-audit-2026-10-04",
+    "last_modified_by": "Loukas Louka",
+    "creator": "Loukas Louka, Stefanos Bordea, Andreas Nikolaides, Cleopas Cleopa"
   }
 }

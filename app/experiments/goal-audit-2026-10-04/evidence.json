@@ -1,0 +1,604 @@
+{
+  "status": "EVIDENCE_CHECKS_PASS_NOT_GOAL_COMPLETE",
+  "checked_at_utc": "2026-10-04T11:14:20.581130+00:00",
+  "checks": 42777,
+  "point_score_clause": {
+    "method": "f1-009 joint BQN frozen policy",
+    "comparisons": [
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "4867/42920",
+        "difference": 0.11339701770736253
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "14/153",
+        "difference": 0.0915032679738562
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "9151/89698",
+        "difference": 0.10202011193114674
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "5777/44370",
+        "difference": 0.13020058598151904
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "25/306",
+        "difference": 0.08169934640522876
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "4801/45594",
+        "difference": 0.10529894284335659
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "21/83810",
+        "difference": 0.00025056675814341965
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "1/306",
+        "difference": 0.0032679738562091504
+      },
+      {
+        "split": "validation",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "327/177310",
+        "difference": 0.0018442276239354803
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "233/2730",
+        "difference": 0.08534798534798535
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "3/49",
+        "difference": 0.061224489795918366
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "1688/23247",
+        "difference": 0.07261151976599131
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "3593/39585",
+        "difference": 0.09076670455980801
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "2/49",
+        "difference": 0.04081632653061224
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "5357/82782",
+        "difference": 0.06471213548839119
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "86/73983",
+        "difference": 0.0011624292067096496
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "1/147",
+        "difference": 0.006802721088435374
+      },
+      {
+        "split": "validation",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "1348/320355",
+        "difference": 0.004207831936445506
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "9381/997901",
+        "difference": 0.009400732136755048
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "29/1010",
+        "difference": 0.028712871287128714
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "original",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "77342/4035981",
+        "difference": 0.019163122918566762
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "1021/202809",
+        "difference": 0.005034293349900645
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "9/1010",
+        "difference": 0.00891089108910891
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "persistence",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "5678/813657",
+        "difference": 0.00697837049272605
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "5/339024",
+        "difference": 1.4748218415215442e-05
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "1/1010",
+        "difference": 0.0009900990099009901
+      },
+      {
+        "split": "test",
+        "basis": "weather_full",
+        "control": "nwp_day2",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "1025/2037171",
+        "difference": 0.0005031487292917482
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "3921/322063",
+        "difference": 0.01217463663941527
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "31/975",
+        "difference": 0.031794871794871796
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "original",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "3499/159736",
+        "difference": 0.021904893073571394
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "2042/327359",
+        "difference": 0.006237800091031559
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "2/195",
+        "difference": 0.010256410256410256
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "persistence",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "1323/161048",
+        "difference": 0.008214942129054692
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "precision",
+        "status": "improved",
+        "difference_fraction": "7/164176",
+        "difference": 4.263716986648475e-05
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "recall",
+        "status": "improved",
+        "difference_fraction": "1/975",
+        "difference": 0.0010256410256410256
+      },
+      {
+        "split": "test",
+        "basis": "satellite_common",
+        "control": "nwp_day2",
+        "metric": "f1",
+        "status": "improved",
+        "difference_fraction": "339/645176",
+        "difference": 0.0005254380200131437
+      }
+    ],
+    "all_36_primary_point_comparisons_strictly_improve": true,
+    "limits": "Published-method adaptation. Already-inspected periods. This does not establish novelty, uncertainty-separated superiority or downstream value of this candidate."
+  },
+  "experiment_inventory": {
+    "f1-001": {
+      "report": "app/experiments/f1-001/result-retry1/report.json",
+      "status": "COMPLETE",
+      "sha256": "6d9b6980ae9a027df34e5037b96223a366f7b974c1b8adabc7e265ad3e90d930"
+    },
+    "f1-002": {
+      "report": "app/experiments/f1-002/result-retry1/report.json",
+      "status": "COMPLETE",
+      "sha256": "d5ea8a4b15dbe65259aa4a0cfce75863f30d5be962723f54859df2f522f8cadd"
+    },
+    "f1-003": {
+      "report": "app/experiments/f1-003/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "c01c619bfb5d66d138414613328f75e720d05332aae0c48f8247b47bc30ae464"
+    },
+    "f1-004": {
+      "report": "app/experiments/f1-004/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "49c36922e7fa303112e62d8371a07e6e9888c93f901c5cf922c0db44ce452028"
+    },
+    "f1-005": {
+      "report": "app/experiments/f1-005/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "180065f08116483a48440175528dba52f5db029ce5c1a44fea46620985239ac1"
+    },
+    "f1-006": {
+      "report": "app/experiments/f1-006/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1"
+    },
+    "f1-007": {
+      "report": "app/experiments/f1-007/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281"
+    },
+    "f1-008": {
+      "report": "app/experiments/f1-008/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "fb95ae701e16d6a9df988fc5c8ef318db03a1906d38edf58f2e3ab2751c47ac6",
+      "test_gate": {
+        "passes_frozen_gate": false,
+        "all_six_strictly_improved": false,
+        "comparisons": [
+          {
+            "basis": "weather_full",
+            "metric": "precision",
+            "candidate": 0.9841740850642928,
+            "control": 0.9851190476190477,
+            "status": "regressed"
+          },
+          {
+            "basis": "weather_full",
+            "metric": "recall",
+            "candidate": 0.9851485148514851,
+            "control": 0.9831683168316832,
+            "status": "improved"
+          },
+          {
+            "basis": "weather_full",
+            "metric": "f1",
+            "candidate": 0.9846610588817417,
+            "control": 0.9841427155599604,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "precision",
+            "candidate": 0.9587939698492463,
+            "control": 0.9576612903225806,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "recall",
+            "candidate": 0.9784615384615385,
+            "control": 0.9743589743589743,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "f1",
+            "candidate": 0.9685279187817258,
+            "control": 0.9659379766141332,
+            "status": "improved"
+          }
+        ]
+      }
+    },
+    "f1-009": {
+      "report": "app/experiments/f1-009/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+      "test_gate": {
+        "passes_frozen_gate": true,
+        "all_six_strictly_improved": true,
+        "comparisons": [
+          {
+            "basis": "weather_full",
+            "metric": "precision",
+            "candidate": 0.9851337958374629,
+            "control": 0.9851190476190477,
+            "status": "improved"
+          },
+          {
+            "basis": "weather_full",
+            "metric": "recall",
+            "candidate": 0.9841584158415841,
+            "control": 0.9831683168316832,
+            "status": "improved"
+          },
+          {
+            "basis": "weather_full",
+            "metric": "f1",
+            "candidate": 0.9846458642892522,
+            "control": 0.9841427155599604,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "precision",
+            "candidate": 0.9577039274924471,
+            "control": 0.9576612903225806,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "recall",
+            "candidate": 0.9753846153846154,
+            "control": 0.9743589743589743,
+            "status": "improved"
+          },
+          {
+            "basis": "satellite_common",
+            "metric": "f1",
+            "candidate": 0.9664634146341463,
+            "control": 0.9659379766141332,
+            "status": "improved"
+          }
+        ]
+      }
+    },
+    "f1-010": {
+      "report": "app/experiments/f1-010/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3"
+    },
+    "physical-011": {
+      "report": "app/experiments/physical-011/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "6dde63e84db9fae787a416d9bd54ee1c5f43489ffc61cf219b66c16fd2021adf"
+    },
+    "physical-012": {
+      "report": "app/experiments/physical-012/result/report.json",
+      "status": "COMPLETE",
+      "sha256": "7257d6034c9d1b6143d09ad705365ab5cbe34693a26c0922c181b06189377a73",
+      "experiment_gate": {
+        "conditional_coherent": {
+          "risk_both_periods": false,
+          "all_axis_both_periods": true,
+          "overall_no_tradeoff": false
+        },
+        "conditional_shuffled": {
+          "risk_both_periods": false,
+          "all_axis_both_periods": true,
+          "overall_no_tradeoff": false
+        }
+      }
+    }
+  },
+  "protected_originals": {
+    "baseline_commit": "2a093aba97f6ad615c43fa7c514044342af16e3a",
+    "directories": [
+      "model",
+      "data",
+      "eval"
+    ],
+    "git_diff_name_status": ""
+  },
+  "publication": {
+    "local_head": "cb71a520ae7c8da905962dffb676fc131ea7922a",
+    "remote_stefanos_model": "cb71a520ae7c8da905962dffb676fc131ea7922a",
+    "recent_runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37197704506,
+        "headSha": "cb71a520ae7c8da905962dffb676fc131ea7922a",
+        "name": "Verify release",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37197688826,
+        "headSha": "0eab3302db29a882a3426cc03f149033336e7275",
+        "name": "Verify release",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37197513118,
+        "headSha": "9e9b75654014b5dc4ee756b8604fbbf5fdc0f8b0",
+        "name": "Verify release",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37197021814,
+        "headSha": "2b634efbffe671ea3c2a1de8096589fc35463daf",
+        "name": "Verify release",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37196289348,
+        "headSha": "492be1d137fe05b414d5638971b1294d0201e3a9",
+        "name": "Verify release",
+        "status": "completed"
+      }
+    ],
+    "recent_authors_and_messages": "cb71a520ae7c8da905962dffb676fc131ea7922a Loukas Louka\nRetain conditional-scenario execution and audit logs\n\n0eab3302db29a882a3426cc03f149033336e7275 Loukas Louka\nEvaluate forecast-conditioned water schedules with exact matched controls\n\n9e9b75654014b5dc4ee756b8604fbbf5fdc0f8b0 Loukas Louka\nRestore monochrome Aktina design and simplify mobile comparison\n\n2b634efbffe671ea3c2a1de8096589fc35463daf Loukas Louka\nMeasure solar-to-water schedules with matched service and independent bounds\n\n492be1d137fe05b414d5638971b1294d0201e3a9 Loukas Louka\nResolve relative paths in uncertainty replay"
+  },
+  "inputs_sha256": {
+    "app/experiments/RESEARCH-GOAL.md": "b73f2774d2ffad51216d8ff88a4c371ae13260150321b8946a0750435c8cc6ad",
+    "app/experiments/f1-009/result/report.json": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+    "app/experiments/f1-009/result/validation-selection.json": "cc89822fac7f339296b23c7e4c22c57317148df4c08e92b4284183f2267d4cf7",
+    "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+    "app/experiments/reference-training-001/result/joined-reference.csv": "23d2fa0170de78d701cd247a43aa30a460368c53afb25ddc9ec11cd71a1504c6",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "app/experiments/f1-009/result/predictions/validation-joint.csv": "a8129642dafcace0b9a513e7ee18985e864cc904af22056137fa8403f76ca173",
+    "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+    "app/experiments/f1-009/result/predictions/test-joint.csv": "211d1497e2ed33c9957038b03e29bba85ac23a4dc9251e0167a0aff349cfa15d",
+    "app/experiments/f1-008/result/predictions/test-consensus_two_source.csv": "7339965abcf516738d98f504f25ba99fb89cdba286dc97cfb83f0fffe17aea0d",
+    "app/experiments/f1-001/result-retry1/report.json": "6d9b6980ae9a027df34e5037b96223a366f7b974c1b8adabc7e265ad3e90d930",
+    "app/experiments/f1-002/result-retry1/report.json": "d5ea8a4b15dbe65259aa4a0cfce75863f30d5be962723f54859df2f522f8cadd",
+    "app/experiments/f1-003/result/report.json": "c01c619bfb5d66d138414613328f75e720d05332aae0c48f8247b47bc30ae464",
+    "app/experiments/f1-004/result/report.json": "49c36922e7fa303112e62d8371a07e6e9888c93f901c5cf922c0db44ce452028",
+    "app/experiments/f1-005/result/report.json": "180065f08116483a48440175528dba52f5db029ce5c1a44fea46620985239ac1",
+    "app/experiments/f1-006/result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+    "app/experiments/f1-007/result/report.json": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281",
+    "app/experiments/f1-008/result/report.json": "fb95ae701e16d6a9df988fc5c8ef318db03a1906d38edf58f2e3ab2751c47ac6",
+    "app/experiments/f1-010/result/report.json": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3",
+    "app/experiments/physical-011/result/report.json": "6dde63e84db9fae787a416d9bd54ee1c5f43489ffc61cf219b66c16fd2021adf",
+    "app/experiments/physical-012/result/report.json": "7257d6034c9d1b6143d09ad705365ab5cbe34693a26c0922c181b06189377a73",
+    "app/experiments/f1-009/review/result.json": "03f3659b86c051884f7b81568303831d0347a7d12a1173819f16c94008b1d0c4",
+    "app/experiments/f1-009/review/uncertainty-result.json": "e6a3c64ca469b67f3c57b1516ed1e6c8578c454a04091ca9670ea81b6edb74fe",
+    "app/experiments/f1-009/review/uncertainty-review.json": "f3aeff37aa2f228d84f7bf64b5363f714185acca63da6c0b45274f7fe321c0c1",
+    "app/experiments/f1-010/review/result.json": "f9788e79e0d1f6984c0370dad5a0e06e72b60dda3307ff50c4c6152efb728885",
+    "app/experiments/physical-011/review/result.json": "2db992ced748dc621ab28ab1a9f33cb6e12d9a94f0ec2aebdebcaafc931dc13e",
+    "app/experiments/physical-011/uncertainty/review/result.json": "7ba6963e475ad569bf4ea0a46bdf8681502572ff143761b2cb0175e0fb2aed85",
+    "app/experiments/physical-011/uncertainty/review/frequency-result.json": "3ce34e9ab9457f182f0f869399492eeec683e5e2ee29f3e46375882815913b42",
+    "app/experiments/physical-012/review/result.json": "a6c8edba03861233219f3266a43f09206a4413e047df225cc60d4b77495e2b1f",
+    "app/experiments/physical-012/inputs.json": "5d64139c49bf802d1225310a6a6a7333fd92d590d9d4c0bcfe754f1cc589475f",
+    "app/experiments/research-2026-10-04/full-pdf-followthrough.md": "694640c9af78fc76f012fb83bb4da1d226e953d246ebf52d254e43e58746790b",
+    "app/experiments/research-2026-10-04/correction-regret-hypothesis.md": "4fa3f752cb0bf298a63e0a34ed178d57e221743fde263056e4e94fccba9e7cac",
+    "app/experiments/research-2026-10-04/physical-decision-study.md": "f464c4471099f4c6c0355de52f2b5e7fd8305a58434bcc912f3dd8586e2ef228",
+    "app/experiments/research-2026-10-04/conditional-scenarios.md": "302f27c70b4961d79396b91aed0e83d73b1161bad5f37758166ccf3d707f3ba5",
+    "app/experiments/f1-009/PROTOCOL.md": "b266806d0e2eb83ee8d1bbd1c04982348ee84497dfb6b06ac384aad96393c6ed",
+    "app/experiments/f1-009/run.py": "d93ef6556c4dc9807504a6571f78d1af78fbc4072ca46ab50a6351c7b58241a7",
+    "app/experiments/f1-009/bqn.py": "fc70f20304e9be1e0b1698a46f33bfa4336f91f6f21637c2cfe82687e88dafce",
+    "app/experiments/f1-010/run.py": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+    "app/experiments/physical-012/run.py": "72b6df6d42f65938d54a027966aef773d999f1ce8aed36b332d64213c4c243fa",
+    "app/experiments/f1-009/result/models/test-joint.npz": "1670039b800d702ffc91a86308bb4ff505b69d8b1dff5906d1ce60bfba5e6da7",
+    "app/experiments/f1-009/result/models/test-weather.npz": "7937d5cdc8e6cdc539987f73c42d4b72c2c8c1c31fb5d0a090f7b9e37a1dbb69",
+    "app/experiments/f1-009/result/models/validation-joint.npz": "a76bdba335ca7eafbb18c32bdc7e5e92ed36bf12c495e448ca603dd8c766b438",
+    "app/experiments/f1-009/result/models/validation-weather.npz": "6a268b45349fdca68cef9536a09ee24b3b8fd2839973409b5acce4f1cecc62d4"
+  },
+  "code_sha256": "514deaa6eadcff7eefcf8c534eef2e8dd354de38b52424f66aeb4e48f2444383"
+}

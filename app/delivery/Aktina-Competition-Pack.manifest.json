@@ -1,16 +1,16 @@
 {
   "status": "PACKAGED_AND_VERIFIED",
   "file": "Aktina-Competition-Pack.zip",
-  "bytes": 7735801,
-  "sha256": "70409d8159e8a829591a80fd2416a36e0f5d4d6acc4d089ba8c6810b9b6180f7",
-  "entries": 88,
+  "bytes": 7736801,
+  "sha256": "04eff4af166a9e4482daf5666c4d5cdd54187e7f784435c393c7cbedc54a8137",
+  "entries": 89,
   "slides": 12,
-  "site_files": 77,
+  "site_files": 78,
   "video_seconds": 44,
   "audio_tracks": 0,
   "stale_pdf_exports_included": false,
   "source_notes_sha256": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
-  "deck_sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9",
+  "deck_sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
   "video_sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
   "contents": {
     "Aktina-Backup-Final.mp4": {
@@ -34,8 +34,8 @@
       "sha256": "2d4a01cd02102d633da9871699ed5ef14267f38eee6814c32c897c8a52accd51"
     },
     "presentation/Aktina-Pafos-2026.pptx": {
-      "bytes": 123030,
-      "sha256": "324f83248f2e452368d51530bffdea24f37d8ebff03f28f11a4196a9dc05efa9"
+      "bytes": 123065,
+      "sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d"
     },
     "presentation/Aktina-Speaker-Notes.md": {
       "bytes": 10164,
@@ -50,16 +50,16 @@
       "sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084"
     },
     "site/benchmark.css": {
-      "bytes": 16202,
-      "sha256": "3ec16d0a9068d625d27a1a4bba7dc0fbf4e2278a612550cffc88d50c0ab1a415"
+      "bytes": 15778,
+      "sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb"
     },
     "site/benchmark.html": {
-      "bytes": 8808,
-      "sha256": "f9a430589ee0aa62defe7d7e8df8d2085fc25b90ce7beb6065aa2105dfc5b439"
+      "bytes": 8859,
+      "sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e"
     },
     "site/benchmark.mjs": {
-      "bytes": 15175,
-      "sha256": "34cf7490721f4059a6e86ca496f805b0f62a25a60c154b66266ea0c5d7856bb2"
+      "bytes": 15183,
+      "sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8"
     },
     "site/data.js": {
       "bytes": 1259526,
@@ -74,8 +74,8 @@
       "sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93"
     },
     "site/favicon.svg": {
-      "bytes": 258,
-      "sha256": "f5a9140d131be4fe48e83ebfa18f98304d7200582de5841f35d535e822a579ca"
+      "bytes": 237,
+      "sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736"
     },
     "site/feature-importance.csv": {
       "bytes": 448,
@@ -106,8 +106,12 @@
       "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
     },
     "site/index.html": {
-      "bytes": 8370,
-      "sha256": "eae017a3b8495f230915162571cecd0a4d0aa4123ee22127fd199368f9713c3c"
+      "bytes": 10124,
+      "sha256": "2d088afc707238d5a19b0d71accd81cdc30a768ba5b00c4ad98353b7d62811ea"
+    },
+    "site/mark.svg": {
+      "bytes": 175,
+      "sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698"
     },
     "site/research-results.json": {
       "bytes": 1362,
@@ -118,12 +122,12 @@
       "sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20"
     },
     "site/site.css": {
-      "bytes": 14849,
-      "sha256": "d52bb1f53b192047e1155026eb4d2351db36872c6b84701170f87530a9a2435b"
+      "bytes": 15322,
+      "sha256": "c32641dacd4b488969cc26999f11fcc72593cd7869da976102b16750f182e903"
     },
     "site/site.mjs": {
       "bytes": 15853,
-      "sha256": "9985320c3aefe7e7b99886cd083e297a41efa82de55c4bcd30ea2a17d39ef50a"
+      "sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71"
     },
     "site/workspace/analysis-layouts.mjs": {
       "bytes": 8867,
@@ -154,8 +158,8 @@
       "sha256": "c0846ad539b812d87fa8371cc08cbb3adef9c469562a22d4e6a120fc1ae367f3"
     },
     "site/workspace/favicon.svg": {
-      "bytes": 603,
-      "sha256": "faa2cb0bd5b04003224d08b569a74c6d409b10d4987ef0f1b7ddf4dfb076956c"
+      "bytes": 237,
+      "sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736"
     },
     "site/workspace/fonts/IBMPlexMono-Regular.woff2": {
       "bytes": 49248,
@@ -210,24 +214,24 @@
       "sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f"
     },
     "site/workspace/home.css": {
-      "bytes": 16042,
-      "sha256": "68d8498a02dec3222e3713a4a4b318f0df4bd2d3ba56d661a4a76d42f61720b0"
+      "bytes": 16446,
+      "sha256": "0073a42e634578b9cc393b96d22237a7d07aa4b2e122414d7bf0a3b6036d6872"
     },
     "site/workspace/index.html": {
-      "bytes": 12749,
-      "sha256": "9b6d40514b04e964084ef98a044d128726a70e24565f33cc3c0bfc8883a2404a"
+      "bytes": 12767,
+      "sha256": "f1530bd77e30f70e07e40e42dc7aa6dad80be290e71de0a0e20b751ec5bd56da"
     },
     "site/workspace/manifest.json": {
       "bytes": 543,
       "sha256": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51"
     },
     "site/workspace/mark.svg": {
-      "bytes": 523,
-      "sha256": "bbed7f00b23a8b4566c75ee3a16a384d7e166d5a69480b23e6b357532eff3189"
+      "bytes": 175,
+      "sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698"
     },
     "site/workspace/mobile.css": {
-      "bytes": 10176,
-      "sha256": "8cf16d9a2ae689b0363f410ff83eb606d16e7791edf3b7e7abd3a06cac28953e"
+      "bytes": 10174,
+      "sha256": "63299bb270bbd4511030a2fc8fd4ca6dc7e3879cd75b90a6233686d6ebba63f8"
     },
     "site/workspace/observation-reconciliation.mjs": {
       "bytes": 12419,
@@ -318,12 +322,12 @@
       "sha256": "755b20b63910c05a258a248a5c172d8eea2eb31ee46f91e3cdb9280be55171fd"
     },
     "site/workspace/theme.css": {
-      "bytes": 13447,
-      "sha256": "c05917e24f9bba7a07b9f04ded7e30e9287ce36411bc01fbfc7f1e9e8f524f7c"
+      "bytes": 14359,
+      "sha256": "ad4b0803a5b9f2cf4850bd2283b7a174098e72a20aeb122ec7adc03f16cafc69"
     },
     "site/workspace/typography.css": {
-      "bytes": 3014,
-      "sha256": "8927c04c9f5beea76bb30ab948c16442bfe9e3e2cb807cd2fed1933f4df7f3f9"
+      "bytes": 3077,
+      "sha256": "9dbef9a34e6edeb138aef5faa7e7742c69c817d69b8d17b938be3b3e5577adf8"
     },
     "site/workspace/vendor/LICENSE-papaparse.txt": {
       "bytes": 1079,
@@ -354,8 +358,8 @@
       "sha256": "f5ace8b8925db4436bf0e916b0b9808d66ec8b7ec25eabc757f820b5b642b6b2"
     },
     "verification/PowerPoint.json": {
-      "bytes": 3933,
-      "sha256": "e642d1f53ce51716be955521f58250cee332c3fbf7e80134c1fab0a367e1d373"
+      "bytes": 4676,
+      "sha256": "86679ab6908679a233ccaa032aaea5415c6c7b89e4b8ae2d82ff6cb1a0788bbe"
     },
     "verification/Silent-video.json": {
       "bytes": 5024,
