@@ -1,35 +1,37 @@
-Aktina — team review
+Aktina — current handoff
 
 Demo: https://aktina-pafos-2026.vercel.app/
+Current forecast: https://aktina-pafos-2026.vercel.app/forecast.html
 Evaluation: https://aktina-pafos-2026.vercel.app/benchmark.html
 Review tools: https://aktina-pafos-2026.vercel.app/workspace/#reviews
-Silent backup: Aktina-Backup-v2.mp4
 Current files and remaining work: ../handoff/DELIVERY-STATUS.md
 
-The idea: use available solar electricity to make drinking water earlier,
-then store the water for later demand. Weather alone does not establish
-recoverable curtailment or permission to operate a plant.
+Your v2 source and validation predictions are merged with their original
+contents preserved. The current forecast view uses the audited correction
+of the retained v2 refit. Its 3,566-hour validation result is:
+precision 94.08%, recall 88.24%, F1 91.06%, with 17 false alarms and 36 misses.
 
-The demo presents your supplied schedule and separate model predictions.
-AktinaBench covers the full validation and test periods, all months and hours,
-with persistence and six separate prediction experiments. The original test
-baseline loss remains visible; no candidate wins F1, precision and recall
-simultaneously over persistence. Higher recall with more false surplus calls
-is a tradeoff, especially under the roadmap's priority on precision.
+Compared with 008, it makes four fewer false alarms and misses one extra hour.
+Compared with supplied v2 at the original cutoff, it catches eight more events
+with eight fewer false alarms. Validation has been reused. The uncertainty
+interval against 008 includes zero, so this is not a proven unseen-data win.
+No new v2 test predictions were supplied or scored.
 
-The supplied schedule is reproduced byte for byte using persistence. Running
-the unchanged scheduler with model predictions changes 469 production hours.
-Both reproductions are retained in ../handoff/scheduler-reproduction/.
-The demo keeps the supplied export pending confirmation of its replacement.
+The correction changes event calls, not the numeric radiation curve or the
+supplied schedule. The current curve is the separately retained v2 refit.
+Original forecast options restore your supplied curve. Source, coefficients,
+checks and limitations: ../experiments/v2-019/README.md.
 
-Aktina v2 is in preparation; no replacement model files have been received.
-Your model and scheduler remain at the repository root. Loukas handles
-feature/filter feedback, evaluation and product integration; the separate
-experiments preserve those original files. Andreas Nikolaides and Cleopas
-Cleopa contribute the business case and pitch.
+The supplied schedule is reproduced using persistence. Your unchanged
+model-driven scheduler gives a different plan. Both reproductions remain in
+../handoff/scheduler-reproduction/. Confirm the intended submission schedule.
+Weather alone does not establish recoverable curtailment or plant permission.
 
-The 60-second v2 backup uses actual screenshots and has no audio. Its captures
-retain the benchmark spelling displayed when recorded; a final-name refresh
-is pending. Earlier videos, results and source packs remain historical.
-Review the final submission documents and rehearse the demo together.
+Shotter will handle the final presentation. The existing 12-slide deck has
+factual updates for reference, with equal team credit. The technical summary
+and QR handoff support the final presentation. Review them before submission.
+
+Aktina-Backup-Final.mp4 is a silent 44-second historical screenshot walkthrough.
+It predates the current forecast page and does not demonstrate the new event
+correction. It is a fallback for the earlier schedule demonstration only.
 No competition upload, consent, signature or team rehearsal is claimed.

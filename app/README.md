@@ -13,7 +13,7 @@ python3 -m http.server 8527 --bind 127.0.0.1 --directory app/dist
 
 Open `http://127.0.0.1:8527/`, or the [published demo](https://aktina-pafos-2026.vercel.app/). The build copies `site/` to `dist/` and the earlier review workspace to `dist/workspace/`. Fonts, charts and data are bundled locally. No training, model dependencies or external API calls are required. [Vercel configuration](vercel.json) uses this same build.
 
-Open `/forecast.html` for the [forecast view](site/forecast.html), also linked from the workspace home. The default **V2 + event correction** uses the audited 019 event decisions and the chronology-safe v2 refit curve it actually consumes. Supplied v2, its retained 562 event cutoff and 008 event calls remain selectable. The original v2 options display the supplied curve. 008 supplies event calls only.
+Open `/forecast.html` for the [forecast view](site/forecast.html), also linked from the workspace home. The default **Current forecast** uses the audited 019 event decisions and the chronology-safe v2 refit curve it actually consumes. Supplied v2, its retained 562 event cutoff and 008 event calls remain selectable. The original v2 options display the supplied curve. 008 supplies event calls only.
 
 [The packager](tools/prepare_forecast_demo.py) verifies pinned inputs, audit evidence and all 3,566 matched validation hours, including partial boundary days. It does not train or choose a model. Historical event F1 is 91.062%, with 17 false alarms and 36 misses. Relative to 008 this is four fewer false alarms and one additional miss. [Full result and uncertainty](experiments/v2-019/README.md). Neither this event correction nor the animated solar-to-water illustration changes the retained schedule or costs.
 
@@ -37,13 +37,15 @@ The supplied schedule matches a persistence-driven scheduler export. A separate 
 
 ## Evaluation and research
 
-`/benchmark.html` presents the original supplied forecast comparison and retained early experiments. It is not a live v2 model service. The [new v2 validation report](handoff/v2-validation-2026-10-04/README.md) records the separately received 4 October handoff at the fixed >600 W/m² threshold. [Version and calibration status](../docs/MODEL-MAP.md#current-evaluation-status) distinguishes that published result from the later threshold scan and newly resumed extension work.
+`/benchmark.html` presents the original supplied forecast comparison and retained early experiments. It is not a live v2 model service. The [new v2 validation report](handoff/v2-validation-2026-10-04/README.md) records the separately received 4 October handoff at the fixed >600 W/m² threshold. [Version and calibration status](../docs/MODEL-MAP.md#current-evaluation-status) distinguishes that handoff from the later threshold scan and completed event correction.
 
 [008](experiments/f1-008/README.md) is a separate event model trained from scratch. It improves five of six historical test event metrics against the archived ECMWF control, with a weather-precision regression. [009](experiments/f1-009/README.md) narrowly improves all six against raw NWP, but weather median MAE worsens and five event metrics regress against 008. Neither result establishes a general replacement or live superiority. [All research and retained failures](experiments/README.md) remain available.
 
 ## Delivery and earlier workspace
 
-The retained [competition pack](delivery/Aktina-Competition-Pack.zip) predates the latest v2 forecast view and needs repackaging to include it. The [PowerPoint](delivery/Aktina-Pafos-2026.pptx) and [silent final video](delivery/Aktina-Backup-Final.mp4) remain available with their sources. Use the [delivery status](handoff/DELIVERY-STATUS.md) and [packaging guide](tools/PACKAGING.md) to identify reviewed versions. Older AquaShift files remain historical evidence.
+The refreshed [competition pack](delivery/Aktina-Competition-Pack.zip) includes all 82 current offline site assets, the corrected 12-slide [PowerPoint](delivery/Aktina-Pafos-2026.pptx) and notes, the [technical-summary LaTeX source](delivery/Aktina-Technical-Summary.tex), four forecast QR assets and the verified silent backup. Its [manifest](delivery/Aktina-Competition-Pack.manifest.json) records all 98 entries and the archive hash. No standalone PDF was generated. Shotter will handle the final presentation.
+
+The [44-second video](delivery/Aktina-Backup-Final.mp4) is historical screenshot footage that predates the current forecast page. It is a fallback for the earlier schedule demonstration, not a showcase of the new correction. Earlier proposal sources are included as review drafts and need reconciliation with the current technical summary. No private messages or team-setting captures are included. Use the [delivery status](handoff/DELIVERY-STATUS.md) and [packaging guide](tools/PACKAGING.md) for the exact contents and limits. The prior pack is preserved under ignored `build/competition-pack-before-019-handoff/`.
 
 To open the earlier review workspace directly without opening a browser automatically:
 

@@ -1,8 +1,8 @@
 {
   "date": "2026-10-04",
   "artifact": "Aktina-Pafos-2026.pptx",
-  "sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
-  "bytes": 123065,
+  "sha256": "c3a038f3fd0308f8a5068e1428fbea9e5a8b27c59cb66491bd25088b6028be13",
+  "bytes": 123566,
   "slides": 12,
   "native_editable_charts": 4,
   "embedded_workbooks": 4,
@@ -48,9 +48,10 @@
       12
     ],
     "final_changed_pages_rechecked": [
-      8
+      6,
+      11
     ],
-    "result": "Slide 8 rendered and inspected: chart, editable score table, labels and caveats legible without overlap. Other eleven slides are pixel-identical to prior version.",
+    "result": "Slides 6 and 11 were rendered and inspected. Video duration, result metrics and limits are legible without overlap. The other ten slides are pixel-identical to the prior deck.",
     "native_powerpoint_final": false,
     "native_powerpoint_note": "Earlier draft opened as 12 slides and exported to PDF. After team-credit corrections, native export was stopped due to concurrent desktop input; that superseded PDF is outside delivery. Final slides were re-rendered with the bundled renderer.",
     "native_chart_editing_tested": false,
@@ -60,11 +61,10 @@
       3,
       4,
       5,
-      6,
       7,
+      8,
       9,
       10,
-      11,
       12
     ]
   },
@@ -73,29 +73,34 @@
     "Archived day2 forecasts improve the retained retrospective benchmark. Raw residual analogues lower MAE with one extra false alarm against that control.",
     "Satellite reference sensitivity, missing hours and harder validation remain in speaker notes. No live superiority or learned-method promotion claimed.",
     "July 3 tariff example is retrospective and illustrative; no measured savings or curtailment recovery.",
-    "Model v2 and intended submitted schedule version remain pending."
+    "V2 received and merged. The completed 019 historical validation comparison has higher observed F1 and four fewer false alarms than 008, with one extra miss. Unseen-data superiority is unproven. The intended submission schedule remains pending."
   ],
   "native_editable_tables": 1,
   "latest_execution": {
-    "command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node delivery/Aktina-Deck-Source/build.mjs delivery/Aktina-Pafos-2026-research-update.pptx",
+    "command": [
+      "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "delivery/Aktina-Deck-Source/build.mjs",
+      "delivery/Aktina-Pafos-2026-handoff-update.pptx"
+    ],
     "cwd": "app",
     "exit_code": 0,
+    "wall_seconds": 8.465942625000025,
+    "completed_at_utc": "2026-10-04T14:12:04.685544+00:00",
+    "log_sha256": "425002c6fae258953f0f756373401abfdfa4ea5e1a522c9c26e6a788e8831740",
     "output_promoted_unchanged_to": "delivery/Aktina-Pafos-2026.pptx",
-    "validation_sha256": "02eb9cacb11826eb3f9e8e55769f19530527ad1bc67119fe00a0b79e23bf3750",
-    "notes_validation": "results/current-deck-native-notes-research-update.json",
+    "validation_sha256": "ae09660d9d5d2a8eb0e1d10e579b90e50c58e8f917c208a896b5d2c5d2309ddd",
+    "notes_validation": "results/current-deck-notes-019-handoff.json",
     "notes_validation_exit_code": 0,
-    "test_command": "python3 -m unittest discover -s app/tests -p test_deck_notes.py -v",
+    "prior_version": "build/aktina-deck-before-019-handoff/Aktina-Pafos-2026.pptx",
+    "prior_sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
+    "test_command": "python -m unittest discover -s app/tests -p test_deck_notes.py -v",
     "test_exit_code": 0,
-    "tests": 5,
-    "prior_version": "build/aktina-deck-before-research-update/Aktina-Pafos-2026.pptx",
-    "prior_sha256": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
-    "research_value_check": "results/current-deck-research-values.json",
-    "research_value_check_sha256": "243cfdfa94891bdbea9b63e921764bc30d34e0d75c95b911ea054f4cedcbbb52"
+    "tests": 5
   },
   "current_source_sha256": {
-    "build.mjs": "f09906c0313ec63545ee6c6c0c28cb8508b233a0fe792bec9cbf37c476edac0f",
-    "Speaker-Notes.md": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
-    "inputs.sha256.json": "f5ace8b8925db4436bf0e916b0b9808d66ec8b7ec25eabc757f820b5b642b6b2",
+    "build.mjs": "90d5561138a7bef40d7e72e3dc314f12cd109c763248eaefc71adaaac1dcd0e2",
+    "Speaker-Notes.md": "2b15532fb3b5389a2d763bd26ee68616af5108c6ae8b6e1aa588355993c194a8",
+    "inputs.sha256.json": "3ce13bbc397143abd2948ede6e3bcc1277b93cf1409610cba67c1d8f253ea8fe",
     "facts.json": "4142e15f72e77c02004361ed53ed7dc055b6f879a16603d07a419336b2c2d760",
     "set_metadata.py": "bc220dfe01fa7ba1b24c3b86815b8032e74eb31662d2368091135d13e7c68faf"
   },

@@ -1,16 +1,25 @@
 {
   "status": "PACKAGED_AND_VERIFIED",
   "file": "Aktina-Competition-Pack.zip",
-  "bytes": 7736801,
-  "sha256": "04eff4af166a9e4482daf5666c4d5cdd54187e7f784435c393c7cbedc54a8137",
-  "entries": 89,
+  "bytes": 7869416,
+  "sha256": "73fb555ea604dbebb844b045409dec3fdde30ad93e1b26e91ec5738a5b96857b",
+  "entries": 98,
   "slides": 12,
-  "site_files": 78,
+  "site_files": 82,
   "video_seconds": 44,
   "audio_tracks": 0,
   "stale_pdf_exports_included": false,
-  "source_notes_sha256": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
-  "deck_sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
+  "current_forecast_included": true,
+  "technical_summary_source_included": true,
+  "qr_assets": [
+    "Aktina-Forecast-QR.png",
+    "Aktina-Forecast-QR.svg",
+    "Aktina-Forecast-QR-Slide.svg",
+    "Aktina-Forecast-QR.txt"
+  ],
+  "private_handoff_material_included": false,
+  "source_notes_sha256": "2b15532fb3b5389a2d763bd26ee68616af5108c6ae8b6e1aa588355993c194a8",
+  "deck_sha256": "c3a038f3fd0308f8a5068e1428fbea9e5a8b27c59cb66491bd25088b6028be13",
   "video_sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
   "contents": {
     "Aktina-Backup-Final.mp4": {
@@ -18,8 +27,8 @@
       "sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6"
     },
     "READ-ME.txt": {
-      "bytes": 1919,
-      "sha256": "9a6fc7c8206247f7747d0eb3694d41232068b30ccbafbca27fd6adb107089503"
+      "bytes": 2823,
+      "sha256": "14610b663bcaf2f78f553a2874a044368ade0b948cec0257e82a76b27dd2f159"
     },
     "documents/Aktina-Business-Model-Canvas.tex": {
       "bytes": 3067,
@@ -33,13 +42,33 @@
       "bytes": 10971,
       "sha256": "2d4a01cd02102d633da9871699ed5ef14267f38eee6814c32c897c8a52accd51"
     },
+    "documents/Aktina-Technical-Summary.tex": {
+      "bytes": 5056,
+      "sha256": "a3c1d5fe6ec29a3794e985abe16c5235cbeefce3fa3ce657e3a6d74c20e5b07a"
+    },
     "presentation/Aktina-Pafos-2026.pptx": {
-      "bytes": 123065,
-      "sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d"
+      "bytes": 123566,
+      "sha256": "c3a038f3fd0308f8a5068e1428fbea9e5a8b27c59cb66491bd25088b6028be13"
     },
     "presentation/Aktina-Speaker-Notes.md": {
-      "bytes": 10164,
-      "sha256": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48"
+      "bytes": 11350,
+      "sha256": "2b15532fb3b5389a2d763bd26ee68616af5108c6ae8b6e1aa588355993c194a8"
+    },
+    "qr/Aktina-Forecast-QR-Slide.svg": {
+      "bytes": 5452,
+      "sha256": "e8ab3e026889caf1b29371f818097472aaa6795400d9d5b60919d60bae76083d"
+    },
+    "qr/Aktina-Forecast-QR.png": {
+      "bytes": 10942,
+      "sha256": "f2a330cf586468838ec62af5b6dc87098fdbd905e12f093dc0b905abe25df984"
+    },
+    "qr/Aktina-Forecast-QR.svg": {
+      "bytes": 5066,
+      "sha256": "5faf4876a7b30c825e8307d8660d5401e6af468577fdb41810a16f39d050ea9f"
+    },
+    "qr/Aktina-Forecast-QR.txt": {
+      "bytes": 1170,
+      "sha256": "565496c31e2170d75b268289306268fddf9126560b8d84316061121bc23e9ddd"
     },
     "site/benchmark-data.js": {
       "bytes": 104942,
@@ -54,12 +83,12 @@
       "sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb"
     },
     "site/benchmark.html": {
-      "bytes": 8859,
-      "sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e"
+      "bytes": 8416,
+      "sha256": "161b3c87b7f48e7273c37696b10dcb36da4fb3eafd07d59e1d7af869725bb214"
     },
     "site/benchmark.mjs": {
-      "bytes": 15183,
-      "sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8"
+      "bytes": 15171,
+      "sha256": "eecb1478dfcdc69c89287ccb73c8790fa6040ea5f2a38c9ab96b7bb96f61e8b5"
     },
     "site/data.js": {
       "bytes": 1259526,
@@ -105,9 +134,25 @@
       "bytes": 4456,
       "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
     },
+    "site/forecast-data.js": {
+      "bytes": 819488,
+      "sha256": "1ccf8dd4ee3a2916d14a1f2a99013a1c36896d9bd158608fbbcea31c39a5476c"
+    },
+    "site/forecast.css": {
+      "bytes": 10466,
+      "sha256": "b0b78032885df6919b1948cbd17ed7242b7fec63e57b45f17e7412fc683fcf04"
+    },
+    "site/forecast.html": {
+      "bytes": 8296,
+      "sha256": "0f849335a9d86438c543e90e90c4c3ad726b4441cb02df8e632bf01e2f377463"
+    },
+    "site/forecast.mjs": {
+      "bytes": 11788,
+      "sha256": "7cdcad6dbc0a1cd6e3ca82294079151b43bf398d68b02c20bcf3657fea08e913"
+    },
     "site/index.html": {
-      "bytes": 10124,
-      "sha256": "2d088afc707238d5a19b0d71accd81cdc30a768ba5b00c4ad98353b7d62811ea"
+      "bytes": 9715,
+      "sha256": "5da821bd86c012ae65d880e79b3f268372303b61f36f052b5233c08eb0d55ea7"
     },
     "site/mark.svg": {
       "bytes": 175,
@@ -122,16 +167,16 @@
       "sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20"
     },
     "site/site.css": {
-      "bytes": 15322,
-      "sha256": "c32641dacd4b488969cc26999f11fcc72593cd7869da976102b16750f182e903"
+      "bytes": 15373,
+      "sha256": "23852db46c260173c1781591c612057907a95bec328c9576b655fb275390fdd1"
     },
     "site/site.mjs": {
-      "bytes": 15853,
-      "sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71"
+      "bytes": 15092,
+      "sha256": "0425433436a025118c3294671a6a07ac10ed847fdbe7ce3e0b6a2b07fa2cecbd"
     },
     "site/workspace/analysis-layouts.mjs": {
-      "bytes": 8867,
-      "sha256": "9292290eb5bfbfda01a64368ecd78fec6705475027513096bcb358fd2ce8e3c9"
+      "bytes": 8852,
+      "sha256": "7844dff4e548420d47daa8f8caeecf85f74c7ad770c8c4f9d6fee79d718182ec"
     },
     "site/workspace/brand.html": {
       "bytes": 2386,
@@ -146,8 +191,8 @@
       "sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557"
     },
     "site/workspace/data/returned-water-example.json": {
-      "bytes": 87267,
-      "sha256": "e432aed1b0de0ee6725165a3191bed9f52efa3999e7904992d113644332a92e5"
+      "bytes": 87277,
+      "sha256": "338766f35f6ea1c6b775e41685bd05b4565f523201138ddcebb1e9b943e55fa2"
     },
     "site/workspace/execution-review-ui.mjs": {
       "bytes": 13535,
@@ -206,20 +251,20 @@
       "sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526"
     },
     "site/workspace/home-demo.mjs": {
-      "bytes": 4442,
-      "sha256": "dbe12e16079a85e31bebab7a38077b5dcf03c5f85b4384299e1315378e63e29e"
+      "bytes": 5405,
+      "sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254"
     },
     "site/workspace/home-reference.mjs": {
       "bytes": 1169,
       "sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f"
     },
     "site/workspace/home.css": {
-      "bytes": 16446,
-      "sha256": "0073a42e634578b9cc393b96d22237a7d07aa4b2e122414d7bf0a3b6036d6872"
+      "bytes": 16765,
+      "sha256": "30a9fd6304c586d2deb1cdafca6cdaf5643e0a38ea88c895edbb9e390a09597b"
     },
     "site/workspace/index.html": {
-      "bytes": 12767,
-      "sha256": "f1530bd77e30f70e07e40e42dc7aa6dad80be290e71de0a0e20b751ec5bd56da"
+      "bytes": 12629,
+      "sha256": "aa7d0dccf207e5eb9dbe3cbfec63fd06985c220f7888e345b651c067c2add1e6"
     },
     "site/workspace/manifest.json": {
       "bytes": 543,
@@ -262,16 +307,16 @@
       "sha256": "80b97314565f2c659716e1b4b784095feb31c58f3a3408d2bd3f3ad9fdd91f37"
     },
     "site/workspace/plan-revision-ui.mjs": {
-      "bytes": 48828,
-      "sha256": "d5070db16f3ab25f9d4ae904fa67109dc17d4ff5dede29c3e11020074f6afe1f"
+      "bytes": 48841,
+      "sha256": "ca6afb74311f53816b1c15700a3a67168f90a4a2788a063e45f771f01425c206"
     },
     "site/workspace/plan-revision.mjs": {
       "bytes": 11129,
       "sha256": "793795ced9937bca01d802b1ccabb6a6cbd1cf25d3204a223e56adbe5a5bbc16"
     },
     "site/workspace/plan-sequence-ui.mjs": {
-      "bytes": 57370,
-      "sha256": "da4a39936acfb9239a6604a724c9f67dd644c9f2a3d32feeea0aed6c172742ff"
+      "bytes": 57383,
+      "sha256": "ead82337630de7648b4f2661d8f827d5d56f5ff2258dc5938d467ba086b0545e"
     },
     "site/workspace/plan-sequence.mjs": {
       "bytes": 9723,
@@ -310,8 +355,8 @@
       "sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb"
     },
     "site/workspace/solar-water.svg": {
-      "bytes": 11475,
-      "sha256": "a7c2f7a98db6fff98c78734c6aa0f3f5b06d6cc139e19a88f1e211a82e7a0ad7"
+      "bytes": 12981,
+      "sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f"
     },
     "site/workspace/storage-frontier.mjs": {
       "bytes": 10239,
@@ -350,16 +395,16 @@
       "sha256": "2f9909db5b3fdc7e1826bcbdf0e2b74572ef671004d627f8254c2a1ac1cddc8c"
     },
     "site/workspace/workspace.js": {
-      "bytes": 99800,
-      "sha256": "6dac29d3eb5cc2c4d8fc89258527979c66f0e00ff99fbafe843b923049ab96c0"
+      "bytes": 99813,
+      "sha256": "0b12243e8ecd13b61c1cda8a858c968addec629b035c5c69288083a5e78ae132"
     },
     "verification/PowerPoint-inputs.json": {
-      "bytes": 893,
-      "sha256": "f5ace8b8925db4436bf0e916b0b9808d66ec8b7ec25eabc757f820b5b642b6b2"
+      "bytes": 1116,
+      "sha256": "3ce13bbc397143abd2948ede6e3bcc1277b93cf1409610cba67c1d8f253ea8fe"
     },
     "verification/PowerPoint.json": {
-      "bytes": 4676,
-      "sha256": "86679ab6908679a233ccaa032aaea5415c6c7b89e4b8ae2d82ff6cb1a0788bbe"
+      "bytes": 4892,
+      "sha256": "7582ea31f6ada1a93d57530a87e08a96aaccccdc318956f0a93cbd5721cc6d19"
     },
     "verification/Silent-video.json": {
       "bytes": 5024,

@@ -14,6 +14,8 @@ APP = Path(__file__).resolve().parents[1]
 VIDEO = "Aktina-Backup-Final.mp4"
 DECK = "Aktina-Pafos-2026.pptx"
 SITE_TYPES = {".html", ".css", ".js", ".mjs", ".json", ".csv", ".svg", ".png", ".jpg", ".webp", ".ico", ".woff", ".woff2", ".txt"}
+QR_FILES = ('Aktina-Forecast-QR.png', 'Aktina-Forecast-QR.svg', 'Aktina-Forecast-QR-Slide.svg', 'Aktina-Forecast-QR.txt')
+FORECAST_URL = 'https://aktina-pafos-2026.vercel.app/forecast.html'
 
 
 def sha(raw):
@@ -27,6 +29,9 @@ def static_paths(root):
     for path in sorted(root.rglob("*")):
         if path.is_symlink():
             raise ValueError(f"Symlink in site: {path}")
+        if any(part.lower() in {'private', 'messages', 'whatsapp', 'team-settings', 'screenshots'}
+               for part in path.relative_to(root).parts):
+            raise ValueError(f"Private handoff material is not a site asset: {path}")
         if any(part.startswith((".", "~$")) or part in {"drafts", "attempts", "__pycache__", "node_modules"}
                for part in path.relative_to(root).parts):
             continue
@@ -43,6 +48,9 @@ def run_order(duration):
 1. PREPARE
 Unzip the complete Aktina folder. Open presentation/{DECK}; the accompanying
 Aktina-Speaker-Notes.md matches its source notes. Keep {VIDEO} ready.
+Shotter handles the final presentation. This existing deck is a factual reference.
+documents/Aktina-Technical-Summary.tex contains the current technical summary.
+qr/ contains the forecast QR in PNG and SVG, a slide card and usage notes.
 
 2. OPEN OFFLINE
 From the unzipped Aktina folder, with Python 3 already installed, run:
@@ -52,26 +60,36 @@ the presentation; Ctrl+C stops it. The product data, scripts and fonts are
 included. Internet access is needed only for external links.
 Online fallback: https://aktina-pafos-2026.vercel.app/
 
-3. PRESENT
-Follow the 12-slide deck. At the demo, show 3 July 2026, 10 December 2025 and
+3. REVIEW THE DEMO
+The forecast page at /forecast.html shows Current forecast and its comparisons.
+Precision is 94.08%, recall 88.24% and F1 91.06% across 3,566 validation hours.
+Relative to the research comparison it has four fewer false alarms and one
+additional missed hour. Validation was reused and the uncertainty interval
+includes zero. This does not prove superiority on unseen data.
+Forecast link for the QR: {FORECAST_URL}
+
+For the existing schedule demonstration, show 3 July 2026, 10 December 2025 and
 16 March 2026: sun, production, tank, then cost. Open AktinaBench for the
 full-period comparisons. If the browser is unavailable, play the {duration:g}-second
-silent backup in place of the product demo. It is a screenshot walkthrough.
+silent backup for this earlier schedule sequence. It uses historical screenshots
+predating the current forecast page. It does not show the new event correction.
 
 4. KEEP THE TWO RESULTS SEPARATE
 The product displays Stefanos's supplied 7,104-row schedule, covering 296 days.
 Its plan input is persistence; the original LightGBM forecast is shown separately.
 Water, electricity prices and plant limits are illustrative, not measured savings.
-Research forecasts and residual corrections are separate retrospective comparisons;
-they do not replace the supplied schedule or establish live superiority.
-Research source: https://github.com/stefanosbordea/actina/tree/stefanos-model/app/experiments
+The current event correction uses a retained refit curve. Original forecast
+options restore the supplied curve. Neither changes the supplied schedule.
 
 5. CHECK BEFORE SUBMISSION
 Confirm the intended schedule and team/contact declarations with Stefanos, and
 complete the team rehearsals. The pack is ready for review; it has not been submitted.
-documents/ contains current standalone LaTeX sources. Historical PDF exports,
-old videos, draft files and research datasets are excluded. MANIFEST.json records
-the packaged hashes; verification/ retains the deck and silent-video checks.
+documents/ contains the current technical summary and earlier standalone proposal
+sources for team review. The older Technical-Proposal predates the current
+forecast comparison. Use the Technical-Summary for the current model result.
+No standalone PDF was generated or included. Private messages, team settings,
+private screenshots, old videos and research datasets are excluded.
+MANIFEST.json records packaged hashes. verification/ retains artifact checks.
 """.encode("utf-8")
 
 
@@ -102,7 +120,8 @@ def collect(app):
             raise ValueError(f"Offline dist is stale at {name}; run the app build before packaging")
         include(built[name], "site/" + name)
     required = {"site/index.html", "site/site.css", "site/site.mjs", "site/data.js", "site/schedule_hourly.csv",
-                "site/benchmark.html", "site/benchmark.mjs", "site/benchmark-data.js", "site/workspace/index.html"}
+                "site/benchmark.html", "site/benchmark.mjs", "site/benchmark-data.js", "site/workspace/index.html",
+                "site/forecast.html", "site/forecast.mjs", "site/forecast.css", "site/forecast-data.js"}
     if not required <= files.keys():
         raise ValueError("Complete offline product and benchmark are required")
     if files["site/schedule_hourly.csv"] != read(app.parent / "eval/schedule_hourly.csv"):
@@ -139,6 +158,15 @@ def collect(app):
             raise ValueError(f"Document still references a superseded video: {source}")
         include(source, f"documents/Aktina-{name}.tex")
 
+    include(delivery / 'Aktina-Technical-Summary.tex', 'documents/Aktina-Technical-Summary.tex')
+    qr_notes = read(delivery / 'Aktina-Forecast-QR.txt').decode()
+    if FORECAST_URL not in qr_notes:
+        raise ValueError('QR handoff points to a different forecast URL')
+    for name in QR_FILES:
+        if name.endswith(('.png', '.svg')) and f'{sha(read(delivery / name))}  {name}' not in qr_notes:
+            raise ValueError(f'QR asset differs from its verification notes: {name}')
+        include(delivery / name, 'qr/' + name)
+
     video_path = delivery / VIDEO
     video_receipt = delivery / "Aktina-Backup-Final-Source/render/verification.json"
     missing = [str(path) for path in (video_path, video_receipt) if not path.is_file()]
@@ -164,6 +192,8 @@ def collect(app):
     files["READ-ME.txt"] = run_order(duration)
     facts = {"slides": slide_count, "site_files": len(built), "video_seconds": duration,
              "audio_tracks": 0, "stale_pdf_exports_included": False,
+             "current_forecast_included": True, "technical_summary_source_included": True,
+             "qr_assets": list(QR_FILES), "private_handoff_material_included": False,
              "source_notes_sha256": sha(read(notes_path)), "deck_sha256": sha(deck), "video_sha256": sha(video)}
     return files, inputs, facts
 

@@ -3,8 +3,10 @@
   "experiments/f1-001/RESULTS.csv": "f6ae4084acb5c3b821972be5747ab88ecdb949f4ea86763e54080b3c28bb2193",
   "handoff/ACTINABENCH.md": "d0cec99258fc094a15d4c8b5bf64ec4efbcb097277504a62d2e70544e66945b2",
   "delivery/Aktina-Deck-Source/template.pptx": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
-  "delivery/Aktina-Deck-Source/Speaker-Notes.md": "363c8964d5761812267e53b6340b7fe158a5e3b88a1f8a2d97bbceb68713bf48",
+  "delivery/Aktina-Deck-Source/Speaker-Notes.md": "2b15532fb3b5389a2d763bd26ee68616af5108c6ae8b6e1aa588355993c194a8",
   "delivery/Aktina-Deck-Source/product-july3.jpg": "28eb71399994031e3ad8eaffca776e11e3627df5708db6302bdd113fe03846ec",
   "experiments/f1-004/result/comparison.csv": "376b95f01ebb46af86e0cd788b96c5934d2c8754629cc752bce1672a58780b38",
-  "experiments/reference-sensitivity-001/result-amended/metrics.csv": "4bd07971d0f20c52233e11b2eedd6c50105ae8760a36988a284e6fc36d86cef0"
+  "experiments/reference-sensitivity-001/result-amended/metrics.csv": "4bd07971d0f20c52233e11b2eedd6c50105ae8760a36988a284e6fc36d86cef0",
+  "experiments/v2-019/result/summary.json": "83522a8c6a1d5e460835712f6ac364a60fc48805a74b4583f82b970d6dacd68a",
+  "experiments/v2-019/review/review.json": "c823b66f6c24b51e076d7d3139bbab41bf83c53fadda944e162bf6a1be6a4f9e"
 }

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "archive": "app/delivery/Aktina-Competition-Pack.zip",
+  "sha256": "73fb555ea604dbebb844b045409dec3fdde30ad93e1b26e91ec5738a5b96857b",
+  "bytes": 7869416,
+  "entries": 98,
+  "per_file_hashes_checked": 97,
+  "latest_handoff_bytes_checked": 11,
+  "private_material_or_pdf_entries": 0,
+  "packaging_tests": 10,
+  "test_command": "python -B -m unittest discover -s app/tests -p test_review_pack.py -v",
+  "prior_pack_preserved": "app/build/competition-pack-before-019-handoff/",
+  "technical_summary_source_sha256": "a3c1d5fe6ec29a3794e985abe16c5235cbeefce3fa3ce657e3a6d74c20e5b07a",
+  "limit": "Earlier proposal sources are review drafts. Video is historical footage. No new PDF or video was generated."
+}

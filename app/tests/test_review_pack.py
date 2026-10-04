@@ -21,7 +21,8 @@ class ReviewPackTests(unittest.TestCase):
         self.app = self.root / 'app'
         self.output = self.root / 'final.zip'
         for name in ('index.html', 'site.css', 'site.mjs', 'data.js', 'schedule_hourly.csv',
-                     'benchmark.html', 'benchmark.mjs', 'benchmark-data.js'):
+                     'benchmark.html', 'benchmark.mjs', 'benchmark-data.js',
+                     'forecast.html', 'forecast.mjs', 'forecast.css', 'forecast-data.js'):
             self.write('site/' + name, 'local fixture')
         self.write('web/public/index.html', '<html>workspace</html>')
         self.write('site/fonts/LICENSE.txt', 'font license')
@@ -46,6 +47,14 @@ class ReviewPackTests(unittest.TestCase):
         for name in ('Business-Model-Canvas', 'Executive-Summary', 'Technical-Proposal'):
             self.write(f'delivery/AquaShift-{name}.tex', 'current standalone source')
             self.write(f'delivery/AquaShift-{name}.pdf', 'stale export must not ship')
+        self.write('delivery/Aktina-Technical-Summary.tex', 'current technical summary source')
+        qr_notes = pack.FORECAST_URL + '\n'
+        for name in pack.QR_FILES:
+            if name.endswith(('.png', '.svg')):
+                raw = ('fixture for ' + name).encode()
+                self.write('delivery/' + name, raw)
+                qr_notes += f'{pack.sha(raw)}  {name}\n'
+        self.write('delivery/Aktina-Forecast-QR.txt', qr_notes)
         self.write('delivery/AquaShift-Backup.mp4', 'old video must not ship')
         self.write('experiments/bulk.json', 'research bulk must not ship')
         self.write('delivery/' + pack.VIDEO, b'final video fixture')
@@ -79,6 +88,10 @@ class ReviewPackTests(unittest.TestCase):
                              (self.app / 'delivery/Aktina-Deck-Source/Speaker-Notes.md').read_bytes())
             self.assertIn('Aktina/site/fonts/LICENSE.txt', names)
             self.assertIn('Aktina/site/workspace/index.html', names)
+            self.assertIn('Aktina/site/forecast.html', names)
+            self.assertIn('Aktina/documents/Aktina-Technical-Summary.tex', names)
+            self.assertTrue(all('Aktina/qr/' + name in names for name in pack.QR_FILES))
+            self.assertIn(b'predating the current forecast page', archive.read('Aktina/READ-ME.txt'))
             self.assertFalse(any('.pdf' in name or 'drafts/' in name or 'experiments/' in name
                                  or '.DS_Store' in name or 'AquaShift' in name for name in names))
         self.assertEqual(json.loads(self.output.with_suffix('.manifest.json').read_text())['sha256'],
@@ -123,6 +136,16 @@ class ReviewPackTests(unittest.TestCase):
     def test_symlink_site_is_rejected(self):
         (self.app / 'site/external.json').symlink_to(self.app / 'site/data.js')
         with self.assertRaisesRegex(ValueError, 'Symlink in site'):
+            pack.collect(self.app)
+
+    def test_private_screenshots_are_rejected(self):
+        self.write('site/screenshots/whatsapp.png', 'private capture')
+        with self.assertRaisesRegex(ValueError, 'Private handoff material'):
+            pack.collect(self.app)
+
+    def test_changed_qr_is_rejected(self):
+        self.write('delivery/Aktina-Forecast-QR.png', 'different QR')
+        with self.assertRaisesRegex(ValueError, 'QR asset differs'):
             pack.collect(self.app)
 
     def test_check_does_not_write_an_archive(self):

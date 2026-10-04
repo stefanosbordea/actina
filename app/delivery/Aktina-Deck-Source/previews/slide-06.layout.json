@@ -636,8 +636,8 @@
         50
       ],
       "geometry": "rect",
-      "text": "aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough",
-      "textPreview": "aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough",
+      "text": "44-second silent backup. Historical screenshots, before the current forecast view.",
+      "textPreview": "44-second silent backup. Historical screenshots, before the current forecast view.",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -659,14 +659,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough"
+            "text": "44-second silent backup. Historical screenshots, before the current forecast view."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough",
+          "text": "44-second silent backup. Historical screenshots, before the current forecast view.",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Arial",
@@ -675,7 +675,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough",
+              "text": "44-second silent backup. Historical screenshots, before the current forecast view.",
               "fontSize": 22,
               "typeface": "Arial",
               "color": "#626262"

@@ -1,6 +1,6 @@
 # Aktina speaker notes
 
-Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections match the current Aktina deck. Use the silent 44-second backup only if the live demo is unavailable.
+Updated 4 October 2026. Rehearsal outline; final running time and speaker assignments need a team rehearsal. The numbered sections match the current Aktina deck. The silent 44-second backup contains historical screenshots that predate the current forecast view. Use it only as a fallback for the earlier schedule demonstration.
 
 ## 1. Aktina
 
@@ -41,7 +41,7 @@ Live cues:
 - Choose **16 March 2026**; MAE is 48.48 W/m² for the original model versus 156.33 for persistence.
 - Open **AktinaBench**; show the original test comparison, then select **Archived weather forecast** and **Weather + past errors**.
 
-Fallback: `Aktina-Backup-Final.mp4`, 44 seconds, no audio. It is a product screenshot walkthrough, not a live interaction recording. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
+Fallback: `Aktina-Backup-Final.mp4`, 44 seconds, no audio. It is a historical screenshot walkthrough that predates the current forecast view, not a live interaction recording or a showcase of the new event correction. Do not play both sequences. Online address: https://aktina-pafos-2026.vercel.app/.
 
 ## 7. What the original model achieves
 
@@ -53,9 +53,9 @@ Source cue: `app/handoff/ACTINABENCH.md`; full MAE, RMSE, precision, recall, F1,
 
 ## 8. Research comparison
 
-The strongest completed progress comes from additional weather information. On the same 3,567 original test hours, the original model has MAE 14.27 W/m². The fixed archived day2 forecast has MAE 8.81, and raw residual analogues reduce it to 6.92. Precision, recall and F1 are 97.57%, 95.54%, 96.55% for the original model; 98.51%, 98.32%, 98.41% for the archived forecast; and 98.41%, 98.32%, 98.37% for the raw analogue. These are retrospective comparisons against the original model-derived reference.
+The earlier original-test comparison examines additional weather information. On the same 3,567 original test hours, the original model has MAE 14.27 W/m². The fixed archived day2 forecast has MAE 8.81, and raw residual analogues reduce it to 6.92. Precision, recall and F1 are 97.57%, 95.54%, 96.55% for the original model; 98.51%, 98.32%, 98.41% for the archived forecast; and 98.41%, 98.32%, 98.37% for the raw analogue. These are retrospective comparisons against the original model-derived reference.
 
-The analogue reuses 64 historical residuals to form hourly scenarios. Its lower MAE comes with one extra false alarm: 16 instead of the archived forecast's 15, with 17 misses for both. Validation retains the fixed archived forecast. On the harder 3,566-hour validation period its F1 is 90.08%, compared with 80.07% for the original model and 89.95% for raw analogues. No learned candidate is promoted. The original model remains intact.
+The analogue reuses 64 historical residuals to form hourly scenarios. Its lower MAE comes with one extra false alarm: 16 instead of the archived forecast's 15, with 17 misses for both. Validation retains the fixed archived forecast. On the harder 3,566-hour validation period its F1 is 90.08%, compared with 80.07% for the original model and 89.95% for raw analogues. That archived-weather comparison did not promote a learned candidate. The original model remains intact. Slide 11 covers the later completed v2 validation extension.
 
 We also checked the same fixed forecasts against the SARAH3 satellite estimate. On 3,517 common test hours, with 50 missing reference hours retained as unscored, archived-forecast F1 is 96.59% and raw-analogue F1 is 96.54%. MAE is 19.33 versus 18.23 W/m², while false alarms rise from 42 to 43. The harder satellite validation gives the archived forecast F1 of 80.71% on 3,419 common hours. The reference changes the apparent accuracy, so the near-99% weather-reference scores cannot stand alone.
 
@@ -77,11 +77,13 @@ Source cue: original `model/scheduler.py`; production 100–400 m³/h, tank 4,00
 
 ## 11. Next evidence
 
-First, confirm which retained schedule should be submitted and rehearse the offline demo together. For the next model, controlled comparisons can test solar geometry, clear-sky normalisation and forecasts of tomorrow's cloud that were available today. Each addition needs a controlled comparison, fixed time boundaries and a fresh holdout. Difficult test hours must stay in the evaluation.
+Stefanos's v2 source and validation predictions have been received and merged without altering his original files. A small correction of its chronology-safe refit is now evaluated and shown in the historical forecast viewer. On all 3,566 validation hours, precision is 94.08 percent, recall 88.24 percent and F1 91.06 percent. There are 270 true positives, 17 false positives, 36 false negatives and 3,243 true negatives.
 
-For a pilot, we need an operator, a data contact and an agreed measurement plan. We would check plant constraints, demand, tariffs and available curtailment signals before considering an operational trial. The business case should follow measured results rather than assumed savings.
+Supplied v2 at its original threshold scores 91.29 percent precision, 85.62 percent recall and 88.36 percent F1. The separate 008 comparison scores 92.81 percent precision, 88.56 percent recall and 90.64 percent F1. The correction has four fewer false alarms than 008 but misses one additional hour. Its higher observed F1 does not establish superiority on unseen data. The paired-day interval for the F1 difference against 008 includes zero, from −1.6061 to +2.6215 percentage points. The validation period has been reused. No new v2 test predictions were supplied or scored.
 
-Source cue: `app/handoff/MODEL-V2-FEEDBACK.md`. These are proposed v2 directions, not a completed v2 model or guaranteed gains. Two team rehearsals remain uncompleted.
+The correction changes high-solar event calls. Its radiation curve is the separately retained v2 refit, not an alteration of the supplied curve. It does not change the demonstration schedule or establish operational savings. The intended submission schedule still needs team confirmation. For a pilot, we need an operator, a data contact and an agreed measurement plan. The presentation lead can use these checked facts in the final slides and rehearse the chosen demonstration.
+
+Source cue: `app/experiments/v2-019/result/summary.json` and `app/experiments/v2-019/review/review.json`. Event truth is strictly above 600 W/m². Source files, saved coefficients and complete matched-hour counts are retained. Two team rehearsals remain uncompleted.
 
 ## 12. Team and ask
 

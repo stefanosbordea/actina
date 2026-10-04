@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "deck_sha256": "c3a038f3fd0308f8a5068e1428fbea9e5a8b27c59cb66491bd25088b6028be13",
+  "build_exit_code": 0,
+  "build_wall_seconds": 8.465942625000025,
+  "changed_visual_slides": [
+    6,
+    11
+  ],
+  "pixel_identical_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    12
+  ],
+  "native_notes_check": "results/current-deck-notes-019-handoff.json",
+  "source_and_validation": {
+    "build.mjs": "90d5561138a7bef40d7e72e3dc314f12cd109c763248eaefc71adaaac1dcd0e2",
+    "Speaker-Notes.md": "2b15532fb3b5389a2d763bd26ee68616af5108c6ae8b6e1aa588355993c194a8",
+    "inputs.sha256.json": "3ce13bbc397143abd2948ede6e3bcc1277b93cf1409610cba67c1d8f253ea8fe",
+    "facts.json": "4142e15f72e77c02004361ed53ed7dc055b6f879a16603d07a419336b2c2d760",
+    "set_metadata.py": "bc220dfe01fa7ba1b24c3b86815b8032e74eb31662d2368091135d13e7c68faf"
+  },
+  "video_seconds": 44,
+  "video_description": "Historical screenshot walkthrough predating current forecast view. No new video created.",
+  "competition_zip_rebuilt": false,
+  "corruption_tests_passed": 5
+}

@@ -404,8 +404,8 @@
         63
       ],
       "geometry": "rect",
-      "text": "Model v2",
-      "textPreview": "Model v2",
+      "text": "V2 + correction",
+      "textPreview": "V2 + correction",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -427,14 +427,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "Model v2"
+            "text": "V2 + correction"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Model v2",
+          "text": "V2 + correction",
           "resolvedTextStyle": {
             "fontSize": 42,
             "typeface": "Arial",
@@ -444,7 +444,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Model v2",
+              "text": "V2 + correction",
               "fontSize": 42,
               "typeface": "Arial",
               "color": "#141414",
@@ -470,8 +470,8 @@
         244
       ],
       "geometry": "rect",
-      "text": "Controlled features\nFixed time boundaries\n\nFresh held-out period",
-      "textPreview": "Controlled features | Fixed time boundaries |  | Fresh held-out period",
+      "text": "P 94.08%  R 88.24%\nF1 91.06%\n\n3,566 validation hours",
+      "textPreview": "P 94.08%  R 88.24% | F1 91.06% |  | 3,566 validation hours",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -493,11 +493,11 @@
         "lines": [
           {
             "index": 1,
-            "text": "Controlled features"
+            "text": "P 94.08%  R 88.24%"
           },
           {
             "index": 2,
-            "text": "Fixed time boundaries"
+            "text": "F1 91.06%"
           },
           {
             "index": 3,
@@ -505,14 +505,14 @@
           },
           {
             "index": 4,
-            "text": "Fresh held-out period"
+            "text": "3,566 validation hours"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Controlled features",
+          "text": "P 94.08%  R 88.24%",
           "resolvedTextStyle": {
             "fontSize": 30,
             "typeface": "Arial",
@@ -521,7 +521,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Controlled features",
+              "text": "P 94.08%  R 88.24%",
               "fontSize": 30,
               "typeface": "Arial",
               "color": "#141414"
@@ -532,7 +532,7 @@
         },
         {
           "index": 2,
-          "text": "Fixed time boundaries",
+          "text": "F1 91.06%",
           "resolvedTextStyle": {
             "fontSize": 30,
             "typeface": "Arial",
@@ -541,7 +541,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Fixed time boundaries",
+              "text": "F1 91.06%",
               "fontSize": 30,
               "typeface": "Arial",
               "color": "#141414"
@@ -552,7 +552,7 @@
         },
         {
           "index": 4,
-          "text": "Fresh held-out period",
+          "text": "3,566 validation hours",
           "resolvedTextStyle": {
             "fontSize": 30,
             "typeface": "Arial",
@@ -561,7 +561,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Fresh held-out period",
+              "text": "3,566 validation hours",
               "fontSize": 30,
               "typeface": "Arial",
               "color": "#141414"
@@ -772,8 +772,8 @@
         50
       ],
       "geometry": "rect",
-      "text": "V2 is pending. Improvements and pilot benefits must be demonstrated.",
-      "textPreview": "V2 is pending. Improvements and pilot benefits must be demonstrated.",
+      "text": "Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result.",
+      "textPreview": "Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result.",
       "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -795,14 +795,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "V2 is pending. Improvements and pilot benefits must be demonstrated."
+            "text": "Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "V2 is pending. Improvements and pilot benefits must be demonstrated.",
+          "text": "Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result.",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Arial",
@@ -811,7 +811,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "V2 is pending. Improvements and pilot benefits must be demonstrated.",
+              "text": "Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result.",
               "fontSize": 22,
               "typeface": "Arial",
               "color": "#626262"

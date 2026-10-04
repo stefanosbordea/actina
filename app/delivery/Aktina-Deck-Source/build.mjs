@@ -38,6 +38,8 @@ const research=['original','nwp_day2','analogue_raw'].map(method=>{
 });
 const notes=(await fs.readFile(path.join(dir,'Speaker-Notes.md'),'utf8')).split(/\n## \d+\. /).slice(1);
 if(notes.length!==12)throw Error('Expected 12 corrected note sections.');
+const current=JSON.parse(await fs.readFile(path.join(app,'experiments/v2-019/result/summary.json'),'utf8')).metrics.expanded;
+if(current.tp!==270||current.fp!==17||current.fn!==36||current.tn!==3243)throw Error('019 validation comparison changed.');
 const p=await PresentationFile.importPptx(await FileBlob.load(path.join(dir,'template.pptx')));
 const C={ink:'#141414',muted:'#626262',light:'#D8D8D8',paper:'#FAFAFA',white:'#FFFFFF',black:'#101010'};
 function text(s,content,x,y,w,h,size=30,bold=false,color=C.ink){
@@ -113,7 +115,7 @@ const foot=(s,copy,y=623)=>text(s,copy,68,y,1110,50,22,false,C.muted);
  text(s,'3 July',928,184,283,52,32,true);text(s,'Matched daily example',928,236,279,65,25,false,C.muted);
  text(s,'10 December',928,329,290,52,32,true);text(s,'Low radiation',928,380,279,65,25,false,C.muted);
  text(s,'AktinaBench',928,473,290,52,32,true);text(s,'Every retained test hour',928,524,279,70,25,false,C.muted);
- foot(s,'aktina-pafos-2026.vercel.app     Offline fallback: 60-second silent walkthrough',639);
+ foot(s,'44-second silent backup. Historical screenshots, before the current forecast view.',639);
 }
 {
  const s=slide(7,'Original forecast against persistence');
@@ -159,9 +161,9 @@ const foot=(s,copy,y=623)=>text(s,copy,68,y,1110,50,22,false,C.muted);
 {
  const s=slide(11,'Next evidence');
  text(s,'Submission',68,180,365,63,42,true);text(s,'Confirm the intended\nschedule version\n\nRehearse the offline demo',68,285,345,244,30);
- text(s,'Model v2',470,180,350,63,42,true);text(s,'Controlled features\nFixed time boundaries\n\nFresh held-out period',470,285,350,244,30);
+ text(s,'V2 + correction',470,180,350,63,42,true);text(s,`P ${(100*current.precision).toFixed(2)}%  R ${(100*current.recall).toFixed(2)}%\nF1 ${(100*current.f1).toFixed(2)}%\n\n3,566 validation hours`,470,285,350,244,30);
  text(s,'Pilot',873,180,345,63,42,true);text(s,'One operator\nOne data contact\n\nAgreed measurement plan',873,285,335,244,30);
- foot(s,'V2 is pending. Improvements and pilot benefits must be demonstrated.');
+ foot(s,'Versus 008: 4 fewer false alarms, 1 extra miss. Historical validation, not an unseen-data result.');
 }
 {
  const s=slide(12,'The team and the ask');
