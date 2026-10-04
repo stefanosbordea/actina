@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-10-04T08:43:49.971746+00:00",
+  "reason": "Raw archive cloud missingness discovered before training or scoring; preserve all evaluation rows.",
+  "original_protocol_sha256": "65dbb0b9cc3dfd6fa014c73c9f7d93efd911f0e791fd8932940022f5261fdab6",
+  "amended_protocol_sha256": "a31cd52672ebbe36c221c822fb8d085bee86e11d972e5fbb8457229938af76c7",
+  "training_started": false,
+  "metrics_observed": false
+}

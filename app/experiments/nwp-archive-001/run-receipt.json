@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "app/experiments/nwp-archive-001/fetch.py"
+  ],
+  "started_at_utc": "2026-10-04T08:42:09.327680+00:00",
+  "finished_at_utc": "2026-10-04T08:42:20.285765+00:00",
+  "exit_code": 0,
+  "fetch_source_sha256": "f1de8e13566b28abfd3afdaf2621a4f15af955696a0d33afc64529fc04820bf9",
+  "log_sha256": "cd5eb4baddc1b5081874c0062283b11adf1e1cbab17957df8850e0d4ea8966b9"
+}

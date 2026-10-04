@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-04T08:57:35.305201+00:00",
+  "script_sha256": "7eced4dcfb9457dfa60745606c91a2dd6d0c42a74af68b6dd647b84136597f81",
+  "question": "Availability and schema of a satellite-derived reference for future independent-data comparisons; no forecast scoring.",
+  "days": [
+    "2025-12-10",
+    "2026-07-03",
+    "2026-10-01"
+  ],
+  "model": "eumetsat_sarah3",
+  "latitude": 34.7744,
+  "longitude": 32.4229,
+  "units": "W/m\u00b2",
+  "interval": "preceding-hour mean",
+  "timezone": "UTC",
+  "selection": "Three dates fixed before intake: existing winter/July clock-check days and a recent date at least two days old. No selection by radiation or errors.",
+  "limits": [
+    "Satellite retrieval is an estimate, not a local ground sensor.",
+    "Returned product/version and interpolation must be reviewed before reference use.",
+    "No comparison, target replacement or original dataset modification in this intake.",
+    "These samples alone do not establish full-period availability or source independence."
+  ],
+  "sources": [
+    "https://open-meteo.com/en/docs/satellite-radiation-api",
+    "https://github.com/open-meteo/open-meteo/blob/main/Sources/App/Controllers/ForecastapiController.swift",
+    "https://doi.org/10.5676/EUM_SAF_CM/SARAH/V003"
+  ]
+}

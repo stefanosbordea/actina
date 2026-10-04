@@ -1,0 +1,25 @@
+{
+  "clock": "Original naive target labels interpreted with fixed UTC+03; no DST conversion.",
+  "feature_origins": 17832,
+  "unique_matched_target_epochs": 17832,
+  "day2_radiation_missing": 0,
+  "day2_cloud_missing": 129,
+  "target_start": "2024-09-16 00:00:00",
+  "target_end": "2026-09-28 23:00:00",
+  "archive_sha256": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+  "joined_features_sha256": "c1c042cfa151c3f3ba853c379a610a97a8975e97ca38f53ba7e774b375aea94d",
+  "splits": {
+    "validation": {
+      "hours": 3566,
+      "evaluation_cloud_missing": 129,
+      "training_cloud_missing": 0,
+      "training_excluded": 0
+    },
+    "test": {
+      "hours": 3567,
+      "evaluation_cloud_missing": 0,
+      "training_cloud_missing": 129,
+      "training_excluded": 0
+    }
+  }
+}

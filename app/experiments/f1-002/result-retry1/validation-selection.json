@@ -1,0 +1,105 @@
+{
+  "method": "residual_base",
+  "fallback_no_qualifier": false,
+  "configuration": {
+    "alpha": 1,
+    "cutoff": 620,
+    "qualifies": true
+  },
+  "all_configurations": {
+    "persistence": {
+      "alpha": 0,
+      "cutoff": 600,
+      "qualifies": true
+    },
+    "original": {
+      "alpha": 1,
+      "cutoff": 600,
+      "qualifies": true
+    },
+    "absolute_l1": {
+      "alpha": 1,
+      "cutoff": 620,
+      "qualifies": true
+    },
+    "residual_base": {
+      "alpha": 1,
+      "cutoff": 620,
+      "qualifies": true
+    },
+    "residual_history": {
+      "alpha": 1,
+      "cutoff": 620,
+      "qualifies": true
+    }
+  },
+  "validation": {
+    "persistence": {
+      "hours": 3566,
+      "tp": 244,
+      "fp": 62,
+      "fn": 62,
+      "tn": 3198,
+      "precision": 0.7973856209150327,
+      "recall": 0.7973856209150327,
+      "f1": 0.7973856209150327,
+      "mae": 32.469433538979246,
+      "rmse": 80.09554375942383
+    },
+    "original": {
+      "hours": 3566,
+      "tp": 241,
+      "fp": 55,
+      "fn": 65,
+      "tn": 3205,
+      "precision": 0.8141891891891891,
+      "recall": 0.7875816993464052,
+      "f1": 0.8006644518272426,
+      "mae": 29.33746861937588,
+      "rmse": 69.65638278353492
+    },
+    "absolute_l1": {
+      "hours": 3566,
+      "tp": 261,
+      "fp": 64,
+      "fn": 45,
+      "tn": 3196,
+      "precision": 0.803076923076923,
+      "recall": 0.8529411764705882,
+      "f1": 0.8272583201267829,
+      "mae": 28.45315695611982,
+      "rmse": 71.28850390205947
+    },
+    "residual_base": {
+      "hours": 3566,
+      "tp": 262,
+      "fp": 55,
+      "fn": 44,
+      "tn": 3205,
+      "precision": 0.8264984227129337,
+      "recall": 0.8562091503267973,
+      "f1": 0.841091492776886,
+      "mae": 27.867706578087564,
+      "rmse": 71.26028512445677
+    },
+    "residual_history": {
+      "hours": 3566,
+      "tp": 258,
+      "fp": 58,
+      "fn": 48,
+      "tn": 3202,
+      "precision": 0.8164556962025317,
+      "recall": 0.8431372549019608,
+      "f1": 0.8295819935691319,
+      "mae": 27.54423264015303,
+      "rmse": 70.99906815173019
+    }
+  },
+  "grid_sha256": {
+    "absolute_l1": "53efedc0047b927d9a97cda5eea80482bce0f808be5ecf9dd851d3b07f8dc872",
+    "residual_base": "6723e91bbeb173e2fc93b66a7d0177bb3d822990b386f0f2147ba3937cd7b44a",
+    "residual_history": "8021c6afe6b4d5f0cebd21c63984d4a9911a3a2534d0e6e41641c018afed920d"
+  },
+  "protocol_sha256": "4d11bf8aca8c9797a9ae8d40d11a612db6354105d91576123f9830b5382b586f",
+  "code_sha256": "a21db137053ad61e6e95ed702a80ef00f5ae3236d0b2a5794de7b67f994a715d"
+}

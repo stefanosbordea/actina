@@ -1,0 +1,13 @@
+test_all_rows_nulls_and_strict_threshold_retained (test_capture.CaptureTests.test_all_rows_nulls_and_strict_threshold_retained) ... ok
+test_bad_units_values_and_offset_rejected (test_capture.CaptureTests.test_bad_units_values_and_offset_rejected) ... ok
+test_duplicate_missing_unordered_and_nonhourly_timestamps_rejected (test_capture.CaptureTests.test_duplicate_missing_unordered_and_nonhourly_timestamps_rejected) ... ok
+test_exact_and_fractional_capture_boundaries (test_capture.CaptureTests.test_exact_and_fractional_capture_boundaries) ... ok
+test_existing_output_refused_before_network_without_mutation (test_capture.CaptureTests.test_existing_output_refused_before_network_without_mutation) ... ok
+test_network_failure_is_retained_and_attempt_cannot_be_reused (test_capture.CaptureTests.test_network_failure_is_retained_and_attempt_cannot_be_reused) ... ok
+test_selected_null_never_changes_membership (test_capture.CaptureTests.test_selected_null_never_changes_membership) ... ok
+test_target_missing_duplicate_and_naive_completion_rejected (test_capture.CaptureTests.test_target_missing_duplicate_and_naive_completion_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.025s
+
+OK

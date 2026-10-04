@@ -1,0 +1,19 @@
+{
+  "url": "https://api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&hourly=shortwave_radiation%2Ccloud_cover&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime&forecast_days=7",
+  "parameters": {
+    "latitude": "34.7744",
+    "longitude": "32.4229",
+    "hourly": "shortwave_radiation,cloud_cover",
+    "models": "ecmwf_ifs025",
+    "timezone": "GMT",
+    "timeformat": "unixtime",
+    "forecast_days": "7"
+  },
+  "identities_sha256": {
+    "protocol": "1e13b5ad305d5f70d00ead5e07a9f820e75c2eddd4b4c2ca1f654ea6e5647c7d",
+    "script": "9cc69f41ae54233a9e50e0391a77b59457355cb93b21055892a354cde4a15c48",
+    "helper": "8ee0256c6b37f0378df60b75533e58dbe67dbac5d81f4f33e2ebe64c83d80db5"
+  },
+  "started_at_utc": "2026-10-04T08:58:50.309640+00:00",
+  "scope": "Capture only; no accuracy or verified issuance claim"
+}

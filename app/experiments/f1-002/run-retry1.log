@@ -1,0 +1,13 @@
+validation persistence alpha=0 cutoff=600: {"hours": 3566, "tp": 244, "fp": 62, "fn": 62, "tn": 3198, "precision": 0.7973856209150327, "recall": 0.7973856209150327, "f1": 0.7973856209150327, "mae": 32.469433538979246, "rmse": 80.09554375942383}
+validation original alpha=1 cutoff=600: {"hours": 3566, "tp": 241, "fp": 55, "fn": 65, "tn": 3205, "precision": 0.8141891891891891, "recall": 0.7875816993464052, "f1": 0.8006644518272426, "mae": 29.33746861937588, "rmse": 69.65638278353492}
+validation absolute_l1 alpha=1 cutoff=620: {"hours": 3566, "tp": 261, "fp": 64, "fn": 45, "tn": 3196, "precision": 0.803076923076923, "recall": 0.8529411764705882, "f1": 0.8272583201267829, "mae": 28.45315695611982, "rmse": 71.28850390205947}
+validation residual_base alpha=1 cutoff=620: {"hours": 3566, "tp": 262, "fp": 55, "fn": 44, "tn": 3205, "precision": 0.8264984227129337, "recall": 0.8562091503267973, "f1": 0.841091492776886, "mae": 27.867706578087564, "rmse": 71.26028512445677}
+validation residual_history alpha=1 cutoff=620: {"hours": 3566, "tp": 258, "fp": 58, "fn": 48, "tn": 3202, "precision": 0.8164556962025317, "recall": 0.8431372549019608, "f1": 0.8295819935691319, "mae": 27.54423264015303, "rmse": 70.99906815173019}
+VALIDATION selection frozen: {"method": "residual_base", "fallback_no_qualifier": false, "configuration": {"alpha": 1, "cutoff": 620, "qualifies": true}}
+TEST begins after frozen selection: residual_base
+test persistence alpha=0 cutoff=600: {"hours": 3567, "tp": 985, "fp": 20, "fn": 25, "tn": 2537, "precision": 0.9800995024875622, "recall": 0.9752475247524752, "f1": 0.9776674937965261, "mae": 12.259321558732829, "rmse": 40.10747056849009}
+test original alpha=1 cutoff=600: {"hours": 3567, "tp": 965, "fp": 24, "fn": 45, "tn": 2533, "precision": 0.9757330637007078, "recall": 0.9554455445544554, "f1": 0.9654827413706853, "mae": 14.265815252695758, "rmse": 42.66015997533186}
+test absolute_l1 alpha=1 cutoff=620: {"hours": 3567, "tp": 945, "fp": 15, "fn": 65, "tn": 2542, "precision": 0.984375, "recall": 0.9356435643564357, "f1": 0.9593908629441624, "mae": 12.010384549187483, "rmse": 40.45901702642796}
+test residual_base alpha=1 cutoff=620: {"hours": 3567, "tp": 945, "fp": 17, "fn": 65, "tn": 2540, "precision": 0.9823284823284824, "recall": 0.9356435643564357, "f1": 0.9584178498985801, "mae": 11.35969155128589, "rmse": 40.395552604284745}
+test residual_history alpha=1 cutoff=620: {"hours": 3567, "tp": 950, "fp": 18, "fn": 60, "tn": 2539, "precision": 0.981404958677686, "recall": 0.9405940594059405, "f1": 0.9605662285136501, "mae": 11.10262316826007, "rmse": 38.40018119737174}
+COMPLETE; original inputs unchanged.

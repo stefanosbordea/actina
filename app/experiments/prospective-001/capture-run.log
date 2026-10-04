@@ -1,0 +1,20 @@
+{
+  "status": "CAPTURED_BYTES_VERIFIED_NO_ACCURACY",
+  "finished_at_utc": "2026-10-04T08:58:50.742225+00:00",
+  "capture_finished_at_utc": "2026-10-04T08:58:50.739698+00:00",
+  "http_date": "Sun, 04 Oct 2026 08:58:50 GMT",
+  "all_hours": 168,
+  "selected_hours": 48,
+  "selected_targets": {
+    "bytes": 18497,
+    "sha256": "7df57cce3cb4ab37b5700906aa507f1216aa186dfa7c1160ffb82f94f5843815"
+  },
+  "raw_response": {
+    "bytes": 3371,
+    "sha256": "603289aad68422bec648785a5e1d7b525fc77bd15d6b01354dba49fb00ac7eff"
+  },
+  "null_counts": {
+    "shortwave_radiation": 0,
+    "cloud_cover": 0
+  }
+}

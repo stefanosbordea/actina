@@ -1,0 +1,11 @@
+{
+  "recorded_before_fitting": true,
+  "method_order": ["persistence", "original", "nwp_day2", "nwp_calibrated", "classifier_base", "classifier_nwp", "residual_nwp"],
+  "natural_cutoffs": {"radiation": 600, "probability": 0.5},
+  "unqualified_method_reporting": "Keep its fixed-default configuration and mark unqualified; it is not eligible for recommendation.",
+  "fixed_defaults": {"radiation_cutoff": 600, "probability_cutoff": 0.5, "residual_alpha": 1},
+  "remaining_ties": "After protocol rank and lower alpha, prefer lower cutoff then earlier method_order.",
+  "feature_count_base": 7,
+  "feature_count_augmented": 14,
+  "cloud_missing": "native NaN plus explicit indicator; never discard evaluation rows"
+}

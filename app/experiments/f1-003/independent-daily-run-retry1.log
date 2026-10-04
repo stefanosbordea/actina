@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "checks": {
+    "joined_rows": 17832,
+    "prediction_rows": 49931,
+    "prediction_files": 14,
+    "full_scores": 28,
+    "monthly_scores": 154,
+    "validation_grid_scores": 368
+  },
+  "selected": "classifier_nwp",
+  "effects": {
+    "f1": {
+      "difference_nwp_minus_persistence": 0.006475221763434291,
+      "percentile_95_interval": [
+        -0.00048507721630935974,
+        0.013578744170851816
+      ],
+      "bootstrap_fraction_favouring_nwp": 0.96505
+    },
+    "precision": {
+      "difference_nwp_minus_persistence": 0.005019545131485503,
+      "percentile_95_interval": [
+        -0.001939085441055799,
+        0.012335175420561447
+      ],
+      "bootstrap_fraction_favouring_nwp": 0.9204
+    },
+    "recall": {
+      "difference_nwp_minus_persistence": 0.007920792079207928,
+      "percentile_95_interval": [
+        -0.004036326942482349,
+        0.02102102102102099
+      ],
+      "bootstrap_fraction_favouring_nwp": 0.87725
+    },
+    "mae": {
+      "difference_nwp_minus_persistence": -3.453602467059154,
+      "percentile_95_interval": [
+        -5.75501256037352,
+        -1.5239486963835167
+      ],
+      "bootstrap_fraction_favouring_nwp": 1.0
+    },
+    "rmse": {
+      "difference_nwp_minus_persistence": -17.306986605084465,
+      "percentile_95_interval": [
+        -26.693837105847653,
+        -7.599682796802419
+      ],
+      "bootstrap_fraction_favouring_nwp": 1.0
+    }
+  }
+}

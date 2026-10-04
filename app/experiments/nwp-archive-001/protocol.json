@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "kind": "archived_weather_feature_intake",
+  "created_at_utc": "2026-10-04T08:42:09.381824+00:00",
+  "location": {
+    "latitude": 34.7744,
+    "longitude": 32.4229
+  },
+  "forecast_model": "ecmwf_ifs025",
+  "fields": [
+    "shortwave_radiation_previous_day1",
+    "cloud_cover_previous_day1",
+    "shortwave_radiation_previous_day2",
+    "cloud_cover_previous_day2"
+  ],
+  "supplied_label_start": "2024-09-14 00:00:00",
+  "supplied_label_end": "2026-09-28 23:00:00",
+  "recovered_fixed_offset_seconds": 10800,
+  "target_utc_start": "2024-09-13T21:00:00+00:00",
+  "target_utc_end_exclusive": "2026-09-28T21:00:00+00:00",
+  "request_utc_dates": [
+    "2024-09-13",
+    "2026-09-28"
+  ],
+  "padding": "All 24 UTC padding hours remain in the raw response; no target hour is filtered.",
+  "input_sha256": {
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "data/download_weather_data.py": "9f60fa59e7976135e33977d13c5c95986ed899f4922a8f6dc5c5da7ba1902f81",
+    "data/features.py": "9fa4a8552709b45a8aa3b64090df0880c39e695c3760f69e3201a1932f14530c"
+  },
+  "fetch_source_sha256": "f1de8e13566b28abfd3afdaf2621a4f15af955696a0d33afc64529fc04820bf9",
+  "selection": "Pinned model and all four variables fixed before any full-period scoring. No model comparison or training here.",
+  "prior_research": "Tiny day1/day2 samples and three historical timestamp comparisons were inspected before this full intake; no metric gain was measured.",
+  "limits": [
+    "Previous-day offsets are provider-declared lead times, not verified historical API publication times.",
+    "At target=origin+24h, day2 provides a nominal 24h margin before origin; this is not proof of live availability.",
+    "Original CSV labels have no retained UTC metadata. Fixed +03:00 is recovered from sample equality, not inferred with DST rules.",
+    "Radiation is a preceding-hour mean; cloud is instantaneous. Do not shift radiation to interval starts.",
+    "Pinned IFS 0.25 degree forecast and unpinned historical reconstruction use different grid cells and potentially related models; truth is not independent station measurement.",
+    "Archive availability does not authenticate original operational issue vintages or exclude reconstructed hindcasts.",
+    "The test period was previously inspected. This archive is exploratory model support, not a fresh holdout or claimed improvement."
+  ],
+  "sources": [
+    "https://open-meteo.com/en/docs/previous-runs-api",
+    "https://open-meteo.com/en/docs",
+    "https://open-meteo.com/en/docs/single-runs-api",
+    "https://open-meteo.com/en/docs/model-updates"
+  ]
+}

@@ -1,0 +1,17 @@
+validation persistence alpha=1 cutoff=600: {"hours": 3566, "tp": 244, "fp": 62, "fn": 62, "tn": 3198, "precision": 0.7973856209150327, "recall": 0.7973856209150327, "f1": 0.7973856209150327, "mae": 32.469433538979246, "rmse": 80.09554375942383}
+validation original alpha=1 cutoff=600: {"hours": 3566, "tp": 241, "fp": 55, "fn": 65, "tn": 3205, "precision": 0.8141891891891891, "recall": 0.7875816993464052, "f1": 0.8006644518272426, "mae": 29.33746861937588, "rmse": 69.65638278353492}
+validation nwp_day2 alpha=1 cutoff=600: {"hours": 3566, "tp": 268, "fp": 21, "fn": 38, "tn": 3239, "precision": 0.9273356401384083, "recall": 0.8758169934640523, "f1": 0.9008403361344538, "mae": 17.692933258553, "rmse": 45.42010853260759}
+validation nwp_calibrated alpha=1 cutoff=600: {"hours": 3566, "tp": 268, "fp": 21, "fn": 38, "tn": 3239, "precision": 0.9273356401384083, "recall": 0.8758169934640523, "f1": 0.9008403361344538, "mae": 17.692933258553, "rmse": 45.42010853260759}
+validation classifier_base alpha=1 cutoff=0.5: {"hours": 3566, "tp": 276, "fp": 78, "fn": 30, "tn": 3182, "precision": 0.7796610169491526, "recall": 0.9019607843137255, "f1": 0.8363636363636363, "mae": null, "rmse": null}
+validation classifier_nwp alpha=1 cutoff=0.19: {"hours": 3566, "tp": 295, "fp": 52, "fn": 11, "tn": 3208, "precision": 0.8501440922190202, "recall": 0.9640522875816994, "f1": 0.9035222052067381, "mae": null, "rmse": null}
+validation residual_nwp alpha=0 cutoff=600: {"hours": 3566, "tp": 268, "fp": 21, "fn": 38, "tn": 3239, "precision": 0.9273356401384083, "recall": 0.8758169934640523, "f1": 0.9008403361344538, "mae": 17.692933258553, "rmse": 45.42010853260759}
+VALIDATION selection frozen: {"method": "classifier_nwp", "fallback_no_qualifier": false, "configuration": {"alpha": 1, "cutoff": 0.19, "qualifies": true}}
+TEST after frozen validation selection: classifier_nwp
+test persistence alpha=1 cutoff=600: {"hours": 3567, "tp": 985, "fp": 20, "fn": 25, "tn": 2537, "precision": 0.9800995024875622, "recall": 0.9752475247524752, "f1": 0.9776674937965261, "mae": 12.259321558732829, "rmse": 40.10747056849009}
+test original alpha=1 cutoff=600: {"hours": 3567, "tp": 965, "fp": 24, "fn": 45, "tn": 2533, "precision": 0.9757330637007078, "recall": 0.9554455445544554, "f1": 0.9654827413706853, "mae": 14.265815252695758, "rmse": 42.66015997533186}
+test nwp_day2 alpha=1 cutoff=600: {"hours": 3567, "tp": 993, "fp": 15, "fn": 17, "tn": 2542, "precision": 0.9851190476190477, "recall": 0.9831683168316832, "f1": 0.9841427155599604, "mae": 8.805719091673675, "rmse": 22.80048396340563}
+test nwp_calibrated alpha=1 cutoff=600: {"hours": 3567, "tp": 993, "fp": 15, "fn": 17, "tn": 2542, "precision": 0.9851190476190477, "recall": 0.9831683168316832, "f1": 0.9841427155599604, "mae": 8.805719091673675, "rmse": 22.80048396340563}
+test classifier_base alpha=1 cutoff=0.5: {"hours": 3567, "tp": 979, "fp": 32, "fn": 31, "tn": 2525, "precision": 0.9683481701285855, "recall": 0.9693069306930693, "f1": 0.9688273132112816, "mae": null, "rmse": null}
+test classifier_nwp alpha=1 cutoff=0.19: {"hours": 3567, "tp": 1003, "fp": 26, "fn": 7, "tn": 2531, "precision": 0.9747327502429544, "recall": 0.9930693069306931, "f1": 0.9838155958803335, "mae": null, "rmse": null}
+test residual_nwp alpha=0 cutoff=600: {"hours": 3567, "tp": 993, "fp": 15, "fn": 17, "tn": 2542, "precision": 0.9851190476190477, "recall": 0.9831683168316832, "f1": 0.9841427155599604, "mae": 8.805719091673675, "rmse": 22.80048396340563}
+COMPLETE; original inputs unchanged.

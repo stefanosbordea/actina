@@ -1,0 +1,18 @@
+{
+  "exit_status": 0,
+  "output_directory": "result",
+  "log": "run.log",
+  "log_sha256": "70b00982d6cb7c006b2a619b9df4d704c15b7a1d07d8113b010a6da1035c15b2",
+  "protocol_sha256": "a31cd52672ebbe36c221c822fb8d085bee86e11d972e5fbb8457229938af76c7",
+  "code_sha256": "8ed6b1c8df954352f2f93ed42831db99c56065d242092dcee7d502ee5d1f738a",
+  "result_sha256": "c01c619bfb5d66d138414613328f75e720d05332aae0c48f8247b47bc30ae464",
+  "audit_sha256": "0ad1a169c3e595215b89f3213600bed85db897ead3b0d059e2ab749c1fbd784d",
+  "interpreter_environment": "Existing local AquaShift .venv; exact package versions recorded in report.json",
+  "thread_limits": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "new_dependencies_installed": false,
+  "original_inputs_unchanged": true
+}

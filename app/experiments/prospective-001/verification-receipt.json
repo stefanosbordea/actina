@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "app/scripts/record_forecast_handoff.py",
+    "verify",
+    "app/experiments/prospective-001/capture-001/capture"
+  ],
+  "exit_status": 0,
+  "finished_at_utc": "2026-10-04T08:59:24.918324+00:00",
+  "log_sha256": "2dbd476446b2ff9fffdb93d2c695ed38bdf9590f78589c775e3e2b0c102fcee7"
+}

@@ -1,0 +1,25 @@
+{
+  "day": "2026-07-03",
+  "url": "https://satellite-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2026-07-03&end_date=2026-07-03&hourly=shortwave_radiation&models=eumetsat_sarah3&timezone=GMT&timeformat=unixtime",
+  "started_at_utc": "2026-10-04T08:57:35.740085+00:00",
+  "http_status": 200,
+  "headers": {
+    "Date": "Sun, 04 Oct 2026 08:57:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close"
+  },
+  "finished_at_utc": "2026-10-04T08:57:36.138810+00:00",
+  "bytes": 655,
+  "sha256": "d2f47f4cc8e5e1f4eb15a4c7f110c5448cd9bb5062aa120dee6e85469861fdd3",
+  "hours": 24,
+  "nulls": 0,
+  "first_epoch": 1783036800,
+  "last_epoch": 1783119600,
+  "returned_grid": {
+    "latitude": 34.75,
+    "longitude": 32.4,
+    "elevation": 71.0
+  },
+  "status": "SCHEMA_VERIFIED"
+}

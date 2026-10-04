@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2025-12-10",
+    "utc_offset_seconds": 10800,
+    "timezone": "Asia/Nicosia",
+    "hours": 24,
+    "max_absolute_differences": {
+      "shortwave_radiation": 0.0,
+      "cloud_cover": 0.0
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "utc_offset_seconds": 10800,
+    "timezone": "Asia/Nicosia",
+    "hours": 24,
+    "max_absolute_differences": {
+      "shortwave_radiation": 0.0,
+      "cloud_cover": 0.0
+    }
+  },
+  {
+    "date": "2025-03-30",
+    "utc_offset_seconds": 10800,
+    "timezone": "Asia/Nicosia",
+    "hours": 24,
+    "max_absolute_differences": {
+      "shortwave_radiation": 0.0,
+      "cloud_cover": 0.0
+    }
+  },
+  {
+    "winter_assumed_offset_hours": 2,
+    "hours": 24,
+    "max_absolute_differences": {
+      "shortwave_radiation": 93.0,
+      "cloud_cover": 83.0
+    },
+    "mean_absolute_differences": {
+      "shortwave_radiation": 15.5,
+      "cloud_cover": 11.958333333333334
+    }
+  },
+  {
+    "winter_assumed_offset_hours": 3,
+    "hours": 24,
+    "max_absolute_differences": {
+      "shortwave_radiation": 0.0,
+      "cloud_cover": 0.0
+    },
+    "mean_absolute_differences": {
+      "shortwave_radiation": 0.0,
+      "cloud_cover": 0.0
+    }
+  }
+]

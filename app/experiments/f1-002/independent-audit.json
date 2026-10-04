@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "mismatches": [],
+  "checks": {
+    "prediction_files": 10,
+    "prediction_rows": 35665,
+    "full_scores": 20,
+    "monthly_scores": 110,
+    "validation_combinations": 231,
+    "training_memberships": 2,
+    "comparison_rows": 20
+  },
+  "result_sha256": "d5ea8a4b15dbe65259aa4a0cfce75863f30d5be962723f54859df2f522f8cadd",
+  "protocol_sha256": "4d11bf8aca8c9797a9ae8d40d11a612db6354105d91576123f9830b5382b586f",
+  "code_sha256": "a21db137053ad61e6e95ed702a80ef00f5ae3236d0b2a5794de7b67f994a715d",
+  "checker_sha256": "9b03a5b7695dcdd356fe0b2e5efb237cc65547271f3e4529a6fcda013927d127",
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+  },
+  "selected_method": "residual_base",
+  "reference_csv_parser_residual": {
+    "values": 2054,
+    "maximum_absolute_w_m2": 1.1368683772161603e-13,
+    "classification_changes": 0
+  },
+  "numeric_check_tolerance_absolute": 1e-09,
+  "promotion_check": {
+    "criterion_provenance": "Additional parent/user condition after protocol freeze; does not change selection.",
+    "selected_full_test": {
+      "hours": 3567,
+      "tp": 945,
+      "fp": 17,
+      "fn": 65,
+      "tn": 2540,
+      "precision": 0.9823284823284824,
+      "recall": 0.9356435643564357,
+      "f1": 0.9584178498985801,
+      "mae": 11.35969155128589,
+      "rmse": 40.395552604284745
+    },
+    "original_full_test": {
+      "hours": 3567,
+      "tp": 965,
+      "fp": 24,
+      "fn": 45,
+      "tn": 2533,
+      "precision": 0.9757330637007078,
+      "recall": 0.9554455445544554,
+      "f1": 0.9654827413706853,
+      "mae": 14.265815252695754,
+      "rmse": 42.66015997533186
+    },
+    "persistence_full_test": {
+      "hours": 3567,
+      "tp": 985,
+      "fp": 20,
+      "fn": 25,
+      "tn": 2537,
+      "precision": 0.9800995024875622,
+      "recall": 0.9752475247524752,
+      "f1": 0.9776674937965261,
+      "mae": 12.259321558732829,
+      "rmse": 40.10747056849009
+    },
+    "strictly_exceeds_original_f1_precision_recall": false,
+    "noninferior_to_persistence_all_three": false,
+    "strict_gain_over_persistence": true,
+    "passes_numerical_gate": false,
+    "release_recommendation": false,
+    "new_independent_evidence": false
+  },
+  "initial_failed_attempt": {
+    "stage": "Input cadence validation; no model fitted",
+    "exit_status": 1,
+    "cause": "DatetimeIndex stored microseconds, while initial integer check assumed nanoseconds.",
+    "fix": "Compare Timedelta values directly; no input, split, model or selection change.",
+    "code_sha256": "6542e4b94eb21c72363734e3369cd2683a4e3b3ac4de2b1726b8ea84355a631d",
+    "log_sha256": "df81c3fa992345cddc992a5eb2d87a27b51364f7bf4d3e1aaa15becfb9c46a24"
+  },
+  "successful_run_log_sha256": "650437b2e29cc7e58b1c1d9f0134becead8bd46de7f36b2f25ecbca2f9846627"
+}
