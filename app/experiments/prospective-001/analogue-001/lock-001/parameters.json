@@ -1,0 +1,32 @@
+{
+  "cloud_median": 4.0,
+  "feature_mean": [
+    0.40365608765402117,
+    18.99854194706146,
+    0.007234185733512786,
+    0.0038383018926555715,
+    -1.9061944203758852e-06,
+    3.940766110218793e-06
+  ],
+  "feature_std": [
+    0.4198922551355329,
+    28.409545682667805,
+    0.08474580986859885,
+    0.5785059781726113,
+    0.7071058105178216,
+    0.7071077518403928
+  ],
+  "feature_order": [
+    "nwp_over_solar_scale",
+    "cloud_imputed",
+    "cloud_missing",
+    "mean_coszen",
+    "solar_hour_sin",
+    "solar_hour_cos"
+  ],
+  "K": 64,
+  "probability_cutoff": 0.5,
+  "event_threshold_w_m2": 600,
+  "event_operator": ">",
+  "decision_operator": ">"
+}

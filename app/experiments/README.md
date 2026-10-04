@@ -4,7 +4,7 @@
 
 ## What improved
 
-The strongest change so far is adding the archived numerical weather forecast. The original predictor largely extrapolates historical weather; tomorrow's weather forecast adds information about the target day. A fixed day2 forecast improves the retained test precision, recall and F1 over both the original predictor and previous-day persistence. The paired day-block intervals for those classification differences still include zero. This is an exploratory result, not established live superiority.
+The strongest change so far is adding the archived numerical weather forecast. The original predictor largely extrapolates historical weather; tomorrow's weather forecast adds information about the target day. A fixed day2 forecast improves the retained test precision, recall and F1 over both the original predictor and previous-day persistence. The paired day-block intervals for the differences versus persistence still include zero. No corresponding interval against the original predictor was computed. This is an exploratory result, not established live superiority.
 
 A conditional residual prototype then looks up 64 earlier hours with similar forecast radiation, cloud and solar geometry. It transfers their forecast errors to the target hour, producing a median, event probability and empirical interval. The solar-scaled variant changes only the error scaling. These are adaptations of published analogue-ensemble and forecast-postprocessing methods, not a claim to have invented the field. [Research and primary sources](research-2026-10-04/solar-synthesis-review.md).
 

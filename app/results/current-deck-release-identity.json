@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "current_deck_source_and_test_in_release_identity": true,
+    "historical_deck_no_longer_default_identity": true,
+    "corruption_tests_in_release_helpers": true
+  },
+  "files_sha256": {
+    "delivery/Aktina-Pafos-2026.pptx": "5b78331564c2aba28efc292ae1c6a9bfcb5b17c1ffcaa3d9a54eb39717466286",
+    "delivery/Aktina-Deck-Source/Speaker-Notes.md": "51802957b30c19c9ae16616e544c0b3e9fd03e78b352b906765c4bbfd876ecf2",
+    "delivery/Aktina-Deck-Source/build.mjs": "1bf4752b2b6c43f4ed0d39a509bf3c6755de28c2cf22a21d5668ba44d3e6de16",
+    "tests/test_deck_notes.py": "3de4670f04967a7d4947418297bceaa0cd2bfe3543afd26514ada45afa835577"
+  }
+}

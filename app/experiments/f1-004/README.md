@@ -2,7 +2,7 @@
 
 **No learned-method promotion.** Validation retained the fixed archived day2 forecast. Neither analogue qualified against its precision and recall. The research methods remain separate from the product and Stefanos’s model.
 
-Conditional residual scenarios improve continuous error and probability scores on the retained test, but do not improve every required classification metric over the stronger forecast control. Solar scaling provides no classification win over that control and slightly worsens MAE relative to raw residual analogues.
+Conditional residual scenarios improve continuous error and probability scores on the retained test, but do not improve every required classification metric over the stronger forecast control. Solar scaling gains one true positive but loses precision and F1 against that control; it also slightly worsens MAE relative to raw residual analogues.
 
 | Full test, 3,567 hours | Precision | Recall | F1 | False calls | Misses | MAE W/m² | RMSE W/m² | Brier |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|

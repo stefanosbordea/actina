@@ -11,15 +11,15 @@ function boot(change) {
   return dom;
 }
 const withPage=fn=>{const dom=boot();try{fn(dom.window.document,dom.window);}finally{dom.window.close();}};
-test('full test opens the original forecast, retains seven methods and defines previous-day reference',()=>withPage(d=>{
+test('full test opens archived weather, retains nine methods and defines previous-day reference',()=>withPage(d=>{
   assert.equal(d.getElementById('bench-results').hidden,false);
-  assert.match(d.getElementById('model-title').textContent,/Original forecast/);
+  assert.match(d.getElementById('model-title').textContent,/Archived weather forecast/);
   assert.match(d.getElementById('period').textContent,/3,567/);
-  assert.match(d.getElementById('metric-comparison').textContent,/96.55%/);
-  assert.equal(d.querySelectorAll('[data-method]').length,7);
-  assert.equal(d.querySelectorAll('#model-select option').length,7);
-  assert.equal(d.querySelectorAll('[data-point]').length,7);
-  assert.equal(d.querySelectorAll('#experiment-rows tr').length,7);
+  assert.match(d.getElementById('metric-comparison').textContent,/98.41%/);
+  assert.equal(d.querySelectorAll('[data-method]').length,9);
+  assert.equal(d.querySelectorAll('#model-select option').length,9);
+  assert.equal(d.querySelectorAll('[data-point]').length,4);
+  assert.equal(d.querySelectorAll('#experiment-rows tr').length,9);
   assert.match(d.querySelector('.model-browser-note').textContent,/prior day/);
   assert.equal(d.getElementById('method-panel').hidden,true);
   assert.equal(d.getElementById('errors-panel').hidden,true);
@@ -69,6 +69,7 @@ test('keyboard tabs and mobile selector operate the same model state',()=>withPa
   const select=d.getElementById('model-select');select.value='history_classifier';select.dispatchEvent(new w.Event('change'));
   assert.match(d.getElementById('model-title').textContent,/History classifier/);
   assert.equal(d.querySelector('[data-method=history_classifier]').getAttribute('aria-pressed'),'true');
+  select.value='deep_classifier';select.dispatchEvent(new w.Event('change'));
   d.querySelector('[data-point=deep_classifier]').dispatchEvent(new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));
   assert.match(d.getElementById('model-title').textContent,/Neural network/);
   assert.equal(d.getElementById('model-select').value,'deep_classifier');
@@ -79,3 +80,13 @@ test('undefined scores remain undefined and malformed reports cannot publish sco
   const broken=boot(data=>{data.experiment.status='INCOMPLETE';});
   try{assert.equal(broken.window.document.getElementById('bench-error').hidden,false);assert.equal(broken.window.document.getElementById('bench-results').hidden,true);}finally{broken.window.close();}
 });
+
+test('archived control and synthesis retain exact counts and release limits',()=>withPage(d=>{
+  assert.match(d.getElementById('outcome-summary').textContent,/15false calls/);
+  assert.match(d.getElementById('selection-note').textContent,/publication timing is unverified/);
+  d.querySelector('[data-method=analogue_raw]').click();
+  assert.match(d.getElementById('outcome-summary').textContent,/16false calls/);
+  assert.match(d.getElementById('selection-note').textContent,/did not pass/);
+  d.querySelector('[data-split=validation]').click();
+  assert.match(d.getElementById('metric-comparison').textContent,/89.95%/);
+}));

@@ -1,0 +1,189 @@
+{
+  "query": {
+    "target_set": "secondary",
+    "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+    "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+    "shortwave_radiation_w_m2": 0.0,
+    "cloud_cover_percent": 6,
+    "event_gt_600": 0,
+    "start_lead_seconds": 205269.260302,
+    "valid_time_lead_seconds": 208869.260302,
+    "solar_scale": 100.0,
+    "mean_coszen": -0.6054616413801226,
+    "solar_hour_sin": -0.7317444870775726,
+    "solar_hour_cos": 0.6815790531050527,
+    "cloud_missing": 0
+  },
+  "selected_sets_equal_with_saved_parameters": true,
+  "pair": [
+    {
+      "origin": "2025-02-02 22:00:00",
+      "raw_features": [
+        0.0,
+        2.0,
+        0,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "squares": [
+        0.0,
+        0.019824005308380275,
+        0.0,
+        0.0018953873455619474,
+        0.010282614745763132,
+        0.014861933588371743
+      ],
+      "sum": 0.0468639409880771,
+      "fsum": 0.0468639409880771,
+      "residual": 0.0,
+      "independent_geometry": [
+        100,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "stored_geometry": [
+        100.0,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "stored_neighbor": {
+        "target_set": "secondary",
+        "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+        "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+        "start_lead_seconds": 205269.260302,
+        "valid_time_lead_seconds": 208869.260302,
+        "rank": 60,
+        "source_feature_time": "2025-02-02 22:00:00",
+        "source_target_epoch_utc": 1738609200,
+        "distance_squared": 0.0468639409880771
+      }
+    },
+    {
+      "origin": "2026-02-02 22:00:00",
+      "raw_features": [
+        0.0,
+        10.0,
+        0,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "squares": [
+        0.0,
+        0.019824005308380258,
+        0.0,
+        0.0018953873455619474,
+        0.010282614745763132,
+        0.014861933588371743
+      ],
+      "sum": 0.04686394098807708,
+      "fsum": 0.04686394098807708,
+      "residual": 0.0,
+      "independent_geometry": [
+        100,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "stored_geometry": [
+        100.0,
+        -0.6306475045511025,
+        -0.8034472991396384,
+        0.5953758791765252
+      ],
+      "stored_neighbor": {
+        "target_set": "secondary",
+        "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+        "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+        "start_lead_seconds": 205269.260302,
+        "valid_time_lead_seconds": 208869.260302,
+        "rank": 59,
+        "source_feature_time": "2026-02-02 22:00:00",
+        "source_target_epoch_utc": 1770145200,
+        "distance_squared": 0.04686394098807708
+      }
+    }
+  ],
+  "stored_tail": [
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 57,
+      "source_feature_time": "2024-10-11 22:00:00",
+      "source_target_epoch_utc": 1728759600,
+      "distance_squared": 0.04663035972594099
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 58,
+      "source_feature_time": "2025-12-12 22:00:00",
+      "source_target_epoch_utc": 1765652400,
+      "distance_squared": 0.046806184767997736
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 59,
+      "source_feature_time": "2026-02-02 22:00:00",
+      "source_target_epoch_utc": 1770145200,
+      "distance_squared": 0.04686394098807708
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 60,
+      "source_feature_time": "2025-02-02 22:00:00",
+      "source_target_epoch_utc": 1738609200,
+      "distance_squared": 0.0468639409880771
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 61,
+      "source_feature_time": "2025-10-12 22:00:00",
+      "source_target_epoch_utc": 1760382000,
+      "distance_squared": 0.047136138278961986
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 62,
+      "source_feature_time": "2026-02-21 22:00:00",
+      "source_target_epoch_utc": 1771786800,
+      "distance_squared": 0.04727264837754089
+    },
+    {
+      "target_set": "secondary",
+      "interval_start_utc": "2026-10-06T18:00:00.000000+00:00",
+      "valid_time_utc": "2026-10-06T19:00:00.000000+00:00",
+      "start_lead_seconds": 205269.260302,
+      "valid_time_lead_seconds": 208869.260302,
+      "rank": 63,
+      "source_feature_time": "2024-10-12 22:00:00",
+      "source_target_epoch_utc": 1728846000,
+      "distance_squared": 0.04728578622934294
+    }
+  ]
+}

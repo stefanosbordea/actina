@@ -28,6 +28,10 @@ jobs:
         run: |
           python -m unittest discover -s app/tools -p "test_*.py" -v
           python app/experiments/f1-001/check_audit.py
+          python -m unittest discover -s app/experiments/prospective-001 -p test_capture.py -v
+          python -m unittest discover -s app/experiments/prospective-001/evaluation -p test_evaluate.py -v
+          python -m unittest discover -s app/experiments/reference-sensitivity-001 -p test_check.py -v
+          python app/experiments/reference-sensitivity-001/review.py
           node app/tools/test_demo.mjs
           node app/tools/test_benchmark_ui.mjs
           node app/build.mjs

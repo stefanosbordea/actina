@@ -1,0 +1,42 @@
+{
+  "status": "PASS_NO_FUTURE_REFERENCE",
+  "recorded_at_utc": "2026-10-04T09:21:28.648483+00:00",
+  "amendment": "Immutable byte archive only; forecasts, target sets and scoring unchanged.",
+  "archive": {
+    "path": "frozen-inputs.zip",
+    "bytes": 1399489,
+    "uncompressed_bytes": 6195869,
+    "member_count": 32,
+    "exact_member_set": true,
+    "duplicates": 0,
+    "all_member_hashes_match_original_lock": true,
+    "extraction_performed": false
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s app/experiments/prospective-001/evaluation -p test_evaluate.py -v > app/experiments/prospective-001/evaluation/test-run-durability-001.log 2>&1",
+    "exit_code": 0,
+    "tests": 15,
+    "failures": 0,
+    "durability_cases": [
+      "No working input files present",
+      "All 32 working input files replaced",
+      "Archive hash corruption",
+      "Member corruption despite recomputed archive hash",
+      "Missing, extra or duplicate archive member"
+    ]
+  },
+  "sha256": {
+    "AMENDMENT-001.md": "585a25603efcca4b3b883c69f2c80d94652bef675e9201074611b97476c00183",
+    "PROTOCOL.md": "46f60449efec769e87005568cbea45a8c10b7b1b802be58281b0dc6841a38888",
+    "input-lock.json": "0b223e0d99316c63db6e1f5b08e989249802f20d2d3a5af951c0236c14fa8bc3",
+    "frozen-inputs.zip": "294ecf9541ba5ca3520528e593d871cc63b598e5c6c61fe415f7260d3c570c83",
+    "evaluate.py": "25a4eae19acd93fc208c9cf6acf18a68e0e44e8b4f6f0bf6bf76f6f77cc0ac61",
+    "test_evaluate.py": "393e4dfdb3cc86ddb25af0062b5dcfce24c76db764dbcf03e2596287bc40b9ec",
+    "README.md": "75a4182b69726bd9df607767d94f71e8db117c26d65a04d8a5c0587d542e7b49",
+    "test-run-durability-001.log": "6eb396c56961eec5ef33986cbcf5530ba6c668daa3cafcf95e32a0c9c6066724",
+    "history/v1/snapshot.json": "a6e9a671523a9d294f0e3b20ae959f7d75516a6e3ee0b7e0b0bc5eba0d2a5079",
+    "execution-receipt.json": "0f98af71101e47449b33e95e72d5fdc7b0c2ed51f5242a53869901cd2e5a84fc"
+  },
+  "v1_evidence_preserved": "history/v1/ and original execution-receipt.json / early-refusal-001 remain unchanged",
+  "scope": "Offline tests and byte verification only; no network reference request, future scoring, model fit, selection or target reselection."
+}

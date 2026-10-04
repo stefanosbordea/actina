@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "status": "LOCKED_RESEARCH_ONLY",
+  "methods": [
+    "nwp_live",
+    "analogue_raw",
+    "analogue_solar"
+  ],
+  "protocol_sha256": "b21cf821cfdffa00a913e372f445d9ec77dcfb14bb7eac9f58f4fb7ff2790fca",
+  "input_identities_sha256": "73be720d4f9341c8da5cf8bbb951677556c39a344523839c7c3d16b74851b098",
+  "adapter_sha256": "3680e5733f4ec19be48df34d6011345eaa225a88983a23d5d989d277f5f7f039",
+  "geometry_sha256": "6a59a4aa25a6169c930dc4031122df383b6cc0f51cd0ffc8da603dd9d1cf6a74",
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "app/experiments/nwp-archive-001/archive.json": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+    "app/experiments/f1-004/PROTOCOL.md": "cebe09579d33da67a648c9516047f173bd2a65d046f5162888a45b2b1215ab60",
+    "app/experiments/f1-004/geometry.py": "6a59a4aa25a6169c930dc4031122df383b6cc0f51cd0ffc8da603dd9d1cf6a74",
+    "app/experiments/f1-004/run.py": "86e892dd65b435ae61af2b88a760a178f90ddc4ec69a7047b550e267cd0294d0",
+    "app/experiments/prospective-001/PROTOCOL.md": "1e13b5ad305d5f70d00ead5e07a9f820e75c2eddd4b4c2ca1f654ea6e5647c7d",
+    "app/experiments/prospective-001/capture-001/selected-targets.json": "7df57cce3cb4ab37b5700906aa507f1216aa186dfa7c1160ffb82f94f5843815",
+    "app/experiments/prospective-001/capture-001/response.json": "603289aad68422bec648785a5e1d7b525fc77bd15d6b01354dba49fb00ac7eff",
+    "app/experiments/prospective-001/capture-001/predictions-full.csv": "44d00db6d2dd5d341e6a4ae8192cb462f287fa461afcbd8ddb52dea7361bb98c",
+    "app/experiments/prospective-001/capture-001/capture/manifest.json": "444ba09fdc1fa171aedc94a8cfab55aa51510811c581c3db641209acb56fa4b9",
+    "app/experiments/prospective-001/capture-001/byte-verification.json": "2dbd476446b2ff9fffdb93d2c695ed38bdf9590f78589c775e3e2b0c102fcee7"
+  },
+  "capture_manifest_sha256": "444ba09fdc1fa171aedc94a8cfab55aa51510811c581c3db641209acb56fa4b9",
+  "lock_started_at_utc": "2026-10-04T09:10:17.275452+00:00",
+  "lock_finished_at_utc": "2026-10-04T09:10:17.962142+00:00",
+  "capture_finished_at_utc": "2026-10-04T08:58:50.739698+00:00",
+  "earliest_target_interval_start_utc": "2026-10-05T09:00:00+00:00",
+  "target_sets": {
+    "primary": 24,
+    "secondary": 24
+  },
+  "training": {
+    "hours": 17832,
+    "excluded_at_or_after_capture": 0,
+    "latest_target_utc": "2026-09-28T20:00:00+00:00",
+    "cloud_missing": 129,
+    "provider_availability": "unverified; only target-time-before-capture checked"
+  },
+  "missing_radiation_hours": 0,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "scope": "Fixed research transfer, not a promoted method. Live observed capture leads differ from archived day2; actual NWP issuance/publication unknown. No future truth or scoring. Marginal scenarios are not independent or daily trajectories. Local clock is not trusted attestation.",
+  "output_sha256": {
+    "neighbors.json": "9897d3f8ab39346cea9d10a28bf199a5384549a134a0f920b00deaf054fe173c",
+    "parameters.json": "c6543d0fc2eeeba21bf2b95221e435f2270d6e050b1355f0e85ee1604f1cf17b",
+    "predictions.csv": "d224293bc85b8c6017b196042dd20a6f33f21f56c9b1449e7c9182ba58c87477",
+    "predictions.json": "5cc8dd3d2bfe3c8a2e7e05eeb38c22ebd2baf1956e631fad949d492d1f3a5b8f",
+    "queries.json": "8bab6140befd2ced56a65d50bcec215f1a436a909c35e99a1a46c527fc663570",
+    "scenarios.json": "5d71d78a574b673a42d2f922f3ed88083b75ddd66ab0ee2c7cf9f8c3b7b8097e",
+    "training-bank.csv": "cd7c8a3cee4be4b7822eada896bf9ea5020779c89747b0ba531e1e72fea0f5ad"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "target_set": "primary",
+  "started_at_utc": "2026-10-04T09:13:48.518948+00:00",
+  "eligible_at_utc": "2026-10-08T09:00:00+00:00",
+  "protocol_sha256": "46f60449efec769e87005568cbea45a8c10b7b1b802be58281b0dc6841a38888",
+  "input_lock_sha256": "0b223e0d99316c63db6e1f5b08e989249802f20d2d3a5af951c0236c14fa8bc3",
+  "script_sha256": "e8965af6c412df8c4093443c2a4844137bce135ba42e73e70ba231e758159895"
+}

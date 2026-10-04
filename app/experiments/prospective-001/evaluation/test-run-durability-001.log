@@ -1,0 +1,20 @@
+test_early_attempt_never_loads_inputs_or_network_and_cannot_overwrite (test_evaluate.EvaluationTests.test_early_attempt_never_loads_inputs_or_network_and_cannot_overwrite) ... ok
+test_exact_archive_member_set_and_duplicate_guard (test_evaluate.EvaluationTests.test_exact_archive_member_set_and_duplicate_guard) ... ok
+test_frozen_chain_and_corruption (test_evaluate.EvaluationTests.test_frozen_chain_and_corruption) ... ok
+test_gate_before_and_exact_boundary_for_both_sets (test_evaluate.EvaluationTests.test_gate_before_and_exact_boundary_for_both_sets) ... ok
+test_hand_derived_strict_threshold_metrics_and_inclusive_intervals (test_evaluate.EvaluationTests.test_hand_derived_strict_threshold_metrics_and_inclusive_intervals) ... ok
+test_integrity_failure_prevents_request_after_time_gate (test_evaluate.EvaluationTests.test_integrity_failure_prevents_request_after_time_gate) ... ok
+test_member_hashes_are_checked_even_with_a_new_archive_hash (test_evaluate.EvaluationTests.test_member_hashes_are_checked_even_with_a_new_archive_hash) ... ok
+test_no_candidate_specific_or_duplicate_target_subset (test_evaluate.EvaluationTests.test_no_candidate_specific_or_duplicate_target_subset) ... ok
+test_null_and_absent_reference_are_different_original_rows_retained (test_evaluate.EvaluationTests.test_null_and_absent_reference_are_different_original_rows_retained) ... ok
+test_offline_http_workflow_keeps_complete_incomplete_and_invalid_attempts (test_evaluate.EvaluationTests.test_offline_http_workflow_keeps_complete_incomplete_and_invalid_attempts) ... ok
+test_partial_null_invalid_probability_and_interval_are_integrity_failures (test_evaluate.EvaluationTests.test_partial_null_invalid_probability_and_interval_are_integrity_failures) ... ok
+test_reference_rejects_duplicates_invalid_units_numbers_and_clock (test_evaluate.EvaluationTests.test_reference_rejects_duplicates_invalid_units_numbers_and_clock) ... ok
+test_undefined_metrics_and_empty_intersection (test_evaluate.EvaluationTests.test_undefined_metrics_and_empty_intersection) ... ok
+test_unknown_forecast_remains_unknown_for_every_candidate (test_evaluate.EvaluationTests.test_unknown_forecast_remains_unknown_for_every_candidate) ... ok
+test_working_inputs_can_change_or_be_absent_without_changing_frozen_predictions (test_evaluate.EvaluationTests.test_working_inputs_can_change_or_be_absent_without_changing_frozen_predictions) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.997s
+
+OK
