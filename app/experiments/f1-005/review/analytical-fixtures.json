@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "frozen_protocol_sha256": "a72390b7ad764b40e12b63b898837480502a32a1cff1b4cee8b50cf916c7f37a",
+  "scope": "Hand-derived binary64 boundary cases, fixed before reading005 outcomes. No runner import or outcome scoring.",
+  "threshold": {
+    "value": 600,
+    "hex": "0x1.2c00000000000p+9",
+    "ulp_exact": "1/8796093022208",
+    "upper": 600.0000000000001,
+    "upper_hex": "0x1.2c00000000001p+9",
+    "lower": 599.9999999999999,
+    "lower_hex": "0x1.2bfffffffffffp+9"
+  },
+  "projection_cases": [
+    {
+      "id": "at_threshold_negative",
+      "nwp": 600,
+      "analogue": 800,
+      "expected": 600,
+      "event": false
+    },
+    {
+      "id": "smallest_positive_floor",
+      "nwp": 600.0000000000001,
+      "analogue": 599,
+      "expected": 600.0000000000001,
+      "event": true
+    },
+    {
+      "id": "lower_ulp_negative_cap",
+      "nwp": 599.9999999999999,
+      "analogue": 600.0000000000001,
+      "expected": 600,
+      "event": false
+    },
+    {
+      "id": "point_exact_threshold_positive_floor",
+      "nwp": 700,
+      "analogue": 600,
+      "expected": 600.0000000000001,
+      "event": true
+    },
+    {
+      "id": "positive_stays_above_nwp",
+      "nwp": 650,
+      "analogue": 900,
+      "expected": 900,
+      "event": true
+    },
+    {
+      "id": "negative_zero_stays",
+      "nwp": 0,
+      "analogue": 0,
+      "expected": 0,
+      "event": false
+    },
+    {
+      "id": "negative_point_stays",
+      "nwp": 500,
+      "analogue": 550,
+      "expected": 550,
+      "event": false
+    },
+    {
+      "id": "positive_zero_to_upper",
+      "nwp": 600.0000000000001,
+      "analogue": 0,
+      "expected": 600.0000000000001,
+      "event": true
+    },
+    {
+      "id": "above_upper_stays",
+      "nwp": 600.0000000000001,
+      "analogue": 600.0000000000002,
+      "expected": 600.0000000000002,
+      "event": true
+    }
+  ],
+  "scenario_cases": [
+    {
+      "id": "half_positive_median_positive",
+      "groups": [
+        [
+          600,
+          32
+        ],
+        [
+          602,
+          32
+        ]
+      ],
+      "expected_median": 601,
+      "expected_probability": 0.5,
+      "expected_probability_event": false,
+      "expected_median_event": true
+    },
+    {
+      "id": "positive_majority",
+      "groups": [
+        [
+          599,
+          31
+        ],
+        [
+          601,
+          33
+        ]
+      ],
+      "expected_median": 601,
+      "expected_probability": 0.515625,
+      "expected_probability_event": true,
+      "expected_median_event": true
+    },
+    {
+      "id": "no_positive_majority",
+      "groups": [
+        [
+          599,
+          33
+        ],
+        [
+          602,
+          31
+        ]
+      ],
+      "expected_median": 599,
+      "expected_probability": 0.484375,
+      "expected_probability_event": false,
+      "expected_median_event": false
+    },
+    {
+      "id": "all_equal_threshold",
+      "groups": [
+        [
+          600,
+          64
+        ]
+      ],
+      "expected_median": 600,
+      "expected_probability": 0,
+      "expected_probability_event": false,
+      "expected_median_event": false
+    }
+  ],
+  "metric_case": {
+    "truth": [
+      600,
+      601,
+      599,
+      602
+    ],
+    "point": [
+      600,
+      602,
+      600,
+      599
+    ],
+    "positive": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "expected": {
+      "tp": 1,
+      "tn": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "mae": 1.25,
+      "rmse": 1.6583123951777,
+      "mean_error": -0.25
+    }
+  },
+  "required_rejections": [
+    "NaN/infinity in forecast, point, or non-null scored reference",
+    "Negative forecast/point input",
+    "Duplicate timestamp/reference key",
+    "Missing original prediction hour"
+  ],
+  "required_unknowns": [
+    "Null satellite value stays in missingness ledger; original full-weather score still retains that hour",
+    "No positive predictions -> null precision; no actual positive labels -> null recall",
+    "Empty denominator -> null F1; no silent zero"
+  ]
+}

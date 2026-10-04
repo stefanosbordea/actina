@@ -1,0 +1,18 @@
+{
+  "status": "INDEPENDENT_REVIEW_COMPLETE",
+  "recorded_at_utc": "2026-10-04T09:40:26.084822+00:00",
+  "original_run_receipt_preserved": true,
+  "independent_checks": 247573,
+  "matched_hours": 7133,
+  "scenario_values": 456512,
+  "metric_rows": 30,
+  "evidence_sha256": {
+    "run-receipt.json": "9342816fa2e6baf16f4cf523a37b5209f300d0701fdb64b71983d278ad74f2be",
+    "review/analytical-fixtures.json": "682834c138149249c8e64f7e2d643938eb7f7fc2226aa4e0f69f174598eddf72",
+    "review/api-fixture-result.json": "36ebf7c9eb66a54a43ed7e802dfcee42dce07088c1db727067b8f885ba45b311",
+    "review/check.py": "fbcc74116b404a438daf10f32b30a3b0c180179a07f0651c110579c3e1a3e306",
+    "review/result.json": "904116c41a15084655315397344bed7482c337af5574b278cf0cdc60d954ab9d",
+    "review/execution-receipt.json": "75494f56300e7c5d040063fdb6fdbd4dfc14919c9e334c9bb38c6d6189346669"
+  },
+  "scope": "Links the completed independent review to the preserved execution evidence. No fit, scoring rerun or application change."
+}

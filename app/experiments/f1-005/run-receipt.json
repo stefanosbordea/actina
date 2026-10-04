@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T09:37:41.170711+00:00",
+  "command": "OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 app/experiments/f1-005/run.py --output app/experiments/f1-005/result > app/experiments/f1-005/run.log 2>&1",
+  "exit_code": 0,
+  "source_and_output_sha256": {
+    "PROTOCOL.md": "a72390b7ad764b40e12b63b898837480502a32a1cff1b4cee8b50cf916c7f37a",
+    "inputs.json": "b161df257bb527f4e04ea9cef80fea2c3872370841716c5e3b9eeb3e4971700f",
+    "MEASUREMENT-NOTE.md": "7bf2a745304813fd777a1db99d6117ee1cd6b2ea4c6ca19f0de514e6be71c081",
+    "correction.py": "58d267948916eca72105e392e98fa36b4f9038e24d2098229d9c31d3760a7fb5",
+    "run.py": "2a13f3b8ec1f0485f7b9f0194e29c7d3b5b7407eff39462f1a9ccb3725219e0c",
+    "run.log": "4368fc80e4c6fb603f1eb36ffdf538d9ee3ebaa7c5161bad1490091d75b76136",
+    "result/report.json": "180065f08116483a48440175528dba52f5db029ce5c1a44fea46620985239ac1",
+    "result/metrics.csv": "942291cdec19a382b2e1ef1cd4c12a8c3f3c145df0e4b795cdd40c1df4471afc",
+    "result/validation-rows.csv": "4295038a142cb3119e8459912bbd09010e604225616c23745b9bd40e32a9ed82",
+    "result/test-rows.csv": "92e060d7a5576430f37f15b94d1c851a6bd90d44628d36fcb8e63db2ba159f4f"
+  },
+  "checks": {
+    "row_memberships": 7133,
+    "scenario_values": 456512,
+    "projection_identities": 7133,
+    "serialized_roundtrips": 7133
+  },
+  "independent_review": "Pending separate review receipt; no pass claimed yet.",
+  "scope": "Single-threaded stdlib computation. No training, network, new dependencies, model/scheduler/UI/deck changes. Negative satellite validation retained."
+}

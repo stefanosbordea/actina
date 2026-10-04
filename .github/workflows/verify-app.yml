@@ -33,6 +33,10 @@ jobs:
           python -m unittest discover -s app/experiments/prospective-001/evaluation -p test_evaluate.py -v
           python -m unittest discover -s app/experiments/reference-sensitivity-001 -p test_check.py -v
           python app/experiments/reference-sensitivity-001/review.py
+          python app/experiments/f1-005/review/check.py
+          python app/experiments/f1-006/review/check.py
+          python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-006/check.py'); print(json.dumps(audit['main']()))"
+          python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-005/review/paired-bootstrap-review.py'); print(json.dumps(audit['main']()['checks']))"
           node app/tools/test_demo.mjs
           node app/tools/test_benchmark_ui.mjs
           node app/build.mjs

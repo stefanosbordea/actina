@@ -1,0 +1,235 @@
+{
+  "scope": "Post-inspection exploratory paired-day percentile intervals; original forecast versus guarded correction only. Marginal 95% intervals, no multiplicity correction. Whole target-calendar days sampled with replacement; does not preserve multi-day weather dependence or establish live superiority.",
+  "seed": 20261004,
+  "resamples": 20000,
+  "direction": "guarded minus original",
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/f1-005/review/paired_bootstrap.py"
+  ],
+  "numpy_version": "2.5.3",
+  "code_sha256": "bf78683fb2372e2c0acb30921de59f39621135e8b2a39de32bc22b1bcca0d87b",
+  "inputs": {
+    "validation-rows.csv": "4295038a142cb3119e8459912bbd09010e604225616c23745b9bd40e32a9ed82",
+    "test-rows.csv": "92e060d7a5576430f37f15b94d1c851a6bd90d44628d36fcb8e63db2ba159f4f"
+  },
+  "comparisons": [
+    {
+      "split": "validation",
+      "reference": "weather_reference_w_m2",
+      "hours": 3566,
+      "unscored_hours": 0,
+      "day_blocks": 150,
+      "metrics": {
+        "mae": {
+          "difference": -12.538113599746051,
+          "percentile_95": [
+            -15.219811996569781,
+            -10.07806564364808
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "rmse": {
+          "difference": -24.737560727810795,
+          "percentile_95": [
+            -31.816220918422356,
+            -18.387386554178526
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "precision": {
+          "difference": 0.11314645094921916,
+          "percentile_95": [
+            0.05134696443716299,
+            0.18442951445971897
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "recall": {
+          "difference": 0.08823529411764708,
+          "percentile_95": [
+            0.017239898092190946,
+            0.15909090909090906
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "f1": {
+          "difference": 0.10017588430721125,
+          "percentile_95": [
+            0.054265898013618606,
+            0.15084511179645835
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        }
+      }
+    },
+    {
+      "split": "validation",
+      "reference": "satellite_reference_w_m2",
+      "hours": 3419,
+      "unscored_hours": 147,
+      "day_blocks": 147,
+      "metrics": {
+        "mae": {
+          "difference": -11.314250440536632,
+          "percentile_95": [
+            -14.473184003374362,
+            -8.307615805940861
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "rmse": {
+          "difference": -20.999799493363184,
+          "percentile_95": [
+            -28.193229162310157,
+            -13.916777130100728
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "precision": {
+          "difference": 0.08418555614127576,
+          "percentile_95": [
+            0.023761312555857263,
+            0.15118966428263034
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "recall": {
+          "difference": 0.05442176870748294,
+          "percentile_95": [
+            -0.02447588126159555,
+            0.1271686513204926
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "f1": {
+          "difference": 0.06840368782954576,
+          "percentile_95": [
+            0.013646911749504321,
+            0.12388993855686171
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        }
+      }
+    },
+    {
+      "split": "test",
+      "reference": "weather_reference_w_m2",
+      "hours": 3567,
+      "unscored_hours": 0,
+      "day_blocks": 149,
+      "metrics": {
+        "mae": {
+          "difference": -7.348237456228133,
+          "percentile_95": [
+            -9.827621760019525,
+            -5.371346411903251
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "rmse": {
+          "difference": -20.53600093521447,
+          "percentile_95": [
+            -34.86019722103835,
+            -8.175234510639982
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "precision": {
+          "difference": 0.00938598391833989,
+          "percentile_95": [
+            -0.0027405854180756945,
+            0.027031437673981033
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "recall": {
+          "difference": 0.027722772277227747,
+          "percentile_95": [
+            0.013833650683408217,
+            0.04267701260911738
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "f1": {
+          "difference": 0.018659974189275008,
+          "percentile_95": [
+            0.009236928180214248,
+            0.02956527933455978
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        }
+      }
+    },
+    {
+      "split": "test",
+      "reference": "satellite_reference_w_m2",
+      "hours": 3517,
+      "unscored_hours": 50,
+      "day_blocks": 149,
+      "metrics": {
+        "mae": {
+          "difference": -7.122671144061986,
+          "percentile_95": [
+            -10.144713561692056,
+            -4.7783381551964945
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "rmse": {
+          "difference": -15.700910015647842,
+          "percentile_95": [
+            -29.100301382486375,
+            -5.470744020596728
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "precision": {
+          "difference": 0.012131999469548793,
+          "percentile_95": [
+            -0.0018767892703194483,
+            0.030227840078740343
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "recall": {
+          "difference": 0.03076923076923077,
+          "percentile_95": [
+            0.016895459345301008,
+            0.04513622274386177
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        },
+        "f1": {
+          "difference": 0.021379455053558205,
+          "percentile_95": [
+            0.011479489169090532,
+            0.03265576242708643
+          ],
+          "defined_resamples": 20000,
+          "undefined_resamples": 0
+        }
+      }
+    }
+  ],
+  "status": "COMPLETE"
+}

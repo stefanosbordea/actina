@@ -7,7 +7,7 @@ The original work split and updated demo instructions both apply. The full Grid/
 | MAE, RMSE, precision, recall, F1, confusion counts | Full original validation/test results retained; no favorable-day substitution |
 | Month and hour breakdowns, slide figures | Included in AktinaBench and experiment exports |
 | Leakage and feature checks | Chronological boundary audit complete; experimental training purges 24 hours; original native model inspected against retained predictions |
-| Help improve the predictor | Four research experiments retained, including neural, purged linear, archived-weather and residual-scenario methods. Fixed archived weather forecasts improve test point scores; no learned candidate passes the stronger control for release. [Full evidence](../experiments/README.md) |
+| Help improve the predictor | Six research experiments retained, including neural, purged linear, archived-weather, residual-scenario, constrained-correction and event-classifier methods. The last classifier passes the original-reference gate narrowly but loses on satellite test; no general replacement is recommended. [Full evidence](../experiments/README.md) |
 | Date picker, sun/production/tank plots, costs | Connected to original files, with three requested showcase dates |
 | Model-to-schedule connection | Supplied export reproduced byte for byte using persistence; unchanged model-driven scheduler also reproduced separately for review |
 | Offline operation | Site data, scripts and fonts packaged locally; internet-free presentation assets |

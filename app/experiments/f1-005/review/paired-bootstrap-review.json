@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "scope": "Independent saved-input, membership and point-estimate recomputation plus static statistical-method review. The 20,000 random draws and percentile endpoints were not rerun.",
+  "checks": {
+    "groups": 4,
+    "point_differences": 20,
+    "individual_metric_matches_to_005": 40,
+    "maximum_point_difference_abs_error": 1.4210854715202004e-14
+  },
+  "method_review": [
+    "A common multinomial day-count vector multiplies both forecasts, preserving paired target-day clusters.",
+    "Absolute error, squared error and confusion counts are pooled before computing metrics; variable-sized partial days are not incorrectly averaged as daily scores.",
+    "Day blocks use the original fixed UTC+03 target calendar, not UTC dates; satellite groups condition on available-reference hours and omit entirely missing days.",
+    "Strict >600 event labels, TP/(TP+FP), TP/(TP+FN), 2TP/(2TP+FP+FN), and guarded-minus-original direction are correct.",
+    "np.quantile uses the default linear percentile rule. Nonfinite differences are excluded per metric and their counts reported; all saved groups report zero undefined draws."
+  ],
+  "comparisons": [
+    {
+      "split": "validation",
+      "reference": "weather_reference_w_m2",
+      "hours": 3566,
+      "day_blocks": 150,
+      "partial_day_blocks": 2,
+      "point_differences": {
+        "mae": -12.538113599746044,
+        "rmse": -24.737560727810795,
+        "precision": 0.11314645094921916,
+        "recall": 0.08823529411764708,
+        "f1": 0.10017588430721125
+      }
+    },
+    {
+      "split": "validation",
+      "reference": "satellite_reference_w_m2",
+      "hours": 3419,
+      "day_blocks": 147,
+      "partial_day_blocks": 8,
+      "point_differences": {
+        "mae": -11.314250440536632,
+        "rmse": -20.9997994933632,
+        "precision": 0.08418555614127576,
+        "recall": 0.05442176870748294,
+        "f1": 0.06840368782954576
+      }
+    },
+    {
+      "split": "test",
+      "reference": "weather_reference_w_m2",
+      "hours": 3567,
+      "day_blocks": 149,
+      "partial_day_blocks": 1,
+      "point_differences": {
+        "mae": -7.3482374562281345,
+        "rmse": -20.536000935214464,
+        "precision": 0.00938598391833989,
+        "recall": 0.027722772277227747,
+        "f1": 0.018659974189275008
+      }
+    },
+    {
+      "split": "test",
+      "reference": "satellite_reference_w_m2",
+      "hours": 3517,
+      "day_blocks": 149,
+      "partial_day_blocks": 5,
+      "point_differences": {
+        "mae": -7.122671144061989,
+        "rmse": -15.70091001564785,
+        "precision": 0.012131999469548793,
+        "recall": 0.03076923076923077,
+        "f1": 0.021379455053558205
+      }
+    }
+  ],
+  "findings": [],
+  "interpretation": [
+    "Weather test F1 gain is 1.866 percentage points, interval [0.924, 2.957]; satellite common-hour gain is 2.138 points, interval [1.148, 3.266].",
+    "Both test precision intervals cross zero. Satellite validation recall also crosses zero; no all-metric confidence claim is supported.",
+    "These are marginal post-inspection intervals without multiplicity or inter-day dependence protection. They do not establish independent, causal, live or general superiority.",
+    "Original is the supplied original forecast; the guarded method uses additional archived weather inputs. This comparison does not isolate model architecture or preserve scheduler dispatch."
+  ],
+  "sha256": {
+    "paired_bootstrap.py": "bf78683fb2372e2c0acb30921de59f39621135e8b2a39de32bc22b1bcca0d87b",
+    "paired-bootstrap.json": "d83438c27a752e3da3b0a471eb238c57f52df2ca557a0110daee13fe916e1ab8",
+    "paired-bootstrap-review.py": "76177dd11f4bff8e49ab3cb64c24019540e32c8bfe64209d3c41a0927409355a"
+  },
+  "source_sha256": {
+    "validation-rows.csv": "4295038a142cb3119e8459912bbd09010e604225616c23745b9bd40e32a9ed82",
+    "test-rows.csv": "92e060d7a5576430f37f15b94d1c851a6bd90d44628d36fcb8e63db2ba159f4f"
+  },
+  "execution": {
+    "command": "python3 app/experiments/f1-005/review/paired-bootstrap-review.py",
+    "exit_code": 0,
+    "recorded_at_utc": "2026-10-04T09:42:31.500887+00:00",
+    "original_bootstrap_rerun": false
+  }
+}

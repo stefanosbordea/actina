@@ -1,0 +1,281 @@
+{
+  "status": "COMPLETE",
+  "coverage": {
+    "validation": {
+      "original_hours": 3566,
+      "satellite_common_hours": 3419,
+      "missing_reference_hours": 147
+    },
+    "test": {
+      "original_hours": 3567,
+      "satellite_common_hours": 3517,
+      "missing_reference_hours": 50
+    }
+  },
+  "checks": {
+    "row_memberships": 7133,
+    "scenario_values": 456512,
+    "projection_identities": 7133,
+    "serialized_roundtrips": 7133
+  },
+  "diagnostics": {
+    "validation_weather_full": {
+      "projection": {
+        "hours": 3566,
+        "projected_points": 12,
+        "upward": 0,
+        "downward": 12,
+        "max_absolute_adjustment_w_m2": 16.0,
+        "raw_median_event_disagreements": 12,
+        "raw_probability_event_disagreements": 12,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 7,
+          "new_false_positive": 0,
+          "corrected_false_negative": 0,
+          "new_false_negative": 5
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 13,
+            "exactly_nextafter_600": 0
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": -0.8935782389231655,
+          "rmse": -0.5012864768834646,
+          "mean_error": 1.550336511497476
+        },
+        "analogue_raw": {
+          "mae": -0.0061693774537303625,
+          "rmse": -0.07057424590420425,
+          "mean_error": -0.01991026360067316
+        }
+      }
+    },
+    "validation_weather_common": {
+      "projection": {
+        "hours": 3419,
+        "projected_points": 11,
+        "upward": 0,
+        "downward": 11,
+        "max_absolute_adjustment_w_m2": 16.0,
+        "raw_median_event_disagreements": 11,
+        "raw_probability_event_disagreements": 11,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 7,
+          "new_false_positive": 0,
+          "corrected_false_negative": 0,
+          "new_false_negative": 4
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 12,
+            "exactly_nextafter_600": 0
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": -0.8909037730330507,
+          "rmse": -0.5117622627798255,
+          "mean_error": 1.533781807546066
+        },
+        "analogue_raw": {
+          "mae": -0.0073120795554242335,
+          "rmse": -0.08509986960270766,
+          "mean_error": -0.019888856390757548
+        }
+      }
+    },
+    "validation_satellite_common": {
+      "projection": {
+        "hours": 3419,
+        "projected_points": 11,
+        "upward": 0,
+        "downward": 11,
+        "max_absolute_adjustment_w_m2": 16.0,
+        "raw_median_event_disagreements": 11,
+        "raw_probability_event_disagreements": 11,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 4,
+          "new_false_positive": 0,
+          "corrected_false_negative": 0,
+          "new_false_negative": 7
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 12,
+            "exactly_nextafter_600": 0
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": 0.03509798186604485,
+          "rmse": 0.9635775459873912,
+          "mean_error": 1.5337818075460659
+        },
+        "analogue_raw": {
+          "mae": 0.0005849663644355019,
+          "rmse": -0.039729113911164404,
+          "mean_error": -0.019888856390757326
+        }
+      }
+    },
+    "test_weather_full": {
+      "projection": {
+        "hours": 3567,
+        "projected_points": 3,
+        "upward": 1,
+        "downward": 2,
+        "max_absolute_adjustment_w_m2": 7.5,
+        "raw_median_event_disagreements": 3,
+        "raw_probability_event_disagreements": 3,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 2,
+          "new_false_positive": 1,
+          "corrected_false_negative": 0,
+          "new_false_negative": 0
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 0,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 2,
+            "exactly_nextafter_600": 1
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": -1.8881412952060552,
+          "rmse": -0.6763249232882345,
+          "mean_error": -0.4524810765349033
+        },
+        "analogue_raw": {
+          "mae": -0.0035043453882819264,
+          "rmse": -0.0009899435564051373,
+          "mean_error": -0.0035043453882814823
+        }
+      }
+    },
+    "test_weather_common": {
+      "projection": {
+        "hours": 3517,
+        "projected_points": 3,
+        "upward": 1,
+        "downward": 2,
+        "max_absolute_adjustment_w_m2": 7.5,
+        "raw_median_event_disagreements": 3,
+        "raw_probability_event_disagreements": 3,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 2,
+          "new_false_positive": 1,
+          "corrected_false_negative": 0,
+          "new_false_negative": 0
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 0,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 2,
+            "exactly_nextafter_600": 1
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": -1.8821438726187099,
+          "rmse": -0.6666998315404697,
+          "mean_error": -0.44313335228888256
+        },
+        "analogue_raw": {
+          "mae": -0.003554165481944871,
+          "rmse": -0.000997176396833055,
+          "mean_error": -0.003554165481944871
+        }
+      }
+    },
+    "test_satellite_common": {
+      "projection": {
+        "hours": 3517,
+        "projected_points": 3,
+        "upward": 1,
+        "downward": 2,
+        "max_absolute_adjustment_w_m2": 7.5,
+        "raw_median_event_disagreements": 3,
+        "raw_probability_event_disagreements": 3,
+        "raw_probability_to_guarded_event_changes": {
+          "corrected_false_positive": 1,
+          "new_false_positive": 0,
+          "corrected_false_negative": 1,
+          "new_false_negative": 1
+        },
+        "threshold_pileups": {
+          "nwp_day2": {
+            "exactly_600": 0,
+            "exactly_nextafter_600": 0
+          },
+          "analogue_raw": {
+            "exactly_600": 1,
+            "exactly_nextafter_600": 0
+          },
+          "guarded": {
+            "exactly_600": 2,
+            "exactly_nextafter_600": 1
+          }
+        }
+      },
+      "guarded_minus": {
+        "nwp_day2": {
+          "mae": -1.0973841342052886,
+          "rmse": -0.005406481041831057,
+          "mean_error": -0.44313335228888273
+        },
+        "analogue_raw": {
+          "mae": 0.000710833096388086,
+          "rmse": -0.009129038892446317,
+          "mean_error": -0.003554165481944871
+        }
+      }
+    }
+  }
+}

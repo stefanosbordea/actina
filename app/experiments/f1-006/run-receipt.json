@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "written_at_utc": "2026-10-04T09:41:15.444034+00:00",
+  "receipt_scope": "Records actual completed execution and subsequent checker; no fit rerun to write receipt.",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-006/run.py --output app/experiments/f1-006/result > app/experiments/f1-006/run.log 2>&1",
+  "exit_status": 0,
+  "tool_reported_command_wall_seconds": 9.19995,
+  "fit_started_at_utc": "2026-10-04T09:37:46.328472+00:00",
+  "completed_at_utc": "2026-10-04T09:37:48.704402+00:00",
+  "fit_count": 6,
+  "threads_per_fit": 2,
+  "new_dependencies": false,
+  "original_inputs_unchanged": true,
+  "selected_method": "larger",
+  "original_reference_test_gate_passed": true,
+  "satellite_test_all_metric_gate_passed": false,
+  "promotion": "No replacement recommendation; reference-sensitive retrospective result.",
+  "checker_attempts": [
+    {
+      "script": "check-first.py",
+      "log": "check.log",
+      "exit_status": 1,
+      "reason": "KeyError comparing equivalent UTC timestamp strings with space versus T; stopped before satellite counts."
+    },
+    {
+      "script": "check.py",
+      "log": "check-retry.log",
+      "exit_status": 0,
+      "result": "check-result.json",
+      "repair": "Parse both timestamps before exact datetime comparison; no input/model/prediction changes."
+    }
+  ],
+  "artifact_sha256": {
+    "PROTOCOL.md": "d764be04235af9dd860867a3374bf2651d8cca6cc736e2d4e94242ee3a5c7446",
+    "inputs.json": "4c8703dc27784ab977f5cd73d6750317ecaab6b63edeb20c17ca5dfe00fd0bab",
+    "run.py": "bf2656bf1c301d815a4096b650b5d6e8afa6a437391a8b60f996b52016fe899d",
+    "run.log": "8451a44a561e5aa438e1f8112407a2623bacac1c1034ae82311623b36849076c",
+    "result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+    "result/validation-selection.json": "d4d6199060d08479ca9ce910f4a6eaf1473ead660c2c31998a751a72324877cf",
+    "result/comparison.csv": "691568a8690186728645b3030eff3903178e51940b5eb462cfc0fa30d4aa7783",
+    "check-first.py": "65092326f542a8d8294d60d35f073b27c06ffec45e5e1abc2b91c44c98fb3e73",
+    "check.log": "149a3b1996ae623a30236c597368f8519e25320b87cf10215b7909ba975806d3",
+    "check.py": "1598ee77abea600eb921b98a7694558ad9bb8941678c6b2d38b79b5966e817cb",
+    "check-retry.log": "e213552f6bd89ff41c9391ca4519e1e6f085ec0d4ac3b5fef94bf87d0f2a0e50",
+    "check-result.json": "91bc367b2d6138541810cb037b7edcf1e2983261ea3a12bee0b8394eef42ba17"
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "lightgbm": "4.7.0"
+  }
+}

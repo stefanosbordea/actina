@@ -1,0 +1,15 @@
+validation original {"hours": 3566, "tp": 241, "fp": 55, "fn": 65, "tn": 3205, "precision": 0.8141891891891891, "recall": 0.7875816993464052, "f1": 0.8006644518272426, "brier": 0.03365114974761638}
+validation persistence {"hours": 3566, "tp": 244, "fp": 62, "fn": 62, "tn": 3198, "precision": 0.7973856209150327, "recall": 0.7973856209150327, "f1": 0.7973856209150327, "brier": 0.034772854739203586}
+validation nwp_day2 {"hours": 3566, "tp": 268, "fp": 21, "fn": 38, "tn": 3239, "precision": 0.9273356401384083, "recall": 0.8758169934640523, "f1": 0.9008403361344538, "brier": 0.016545148625911384}
+validation small {"hours": 3566, "tp": 268, "fp": 21, "fn": 38, "tn": 3239, "precision": 0.9273356401384083, "recall": 0.8758169934640523, "f1": 0.9008403361344538, "brier": 0.011852145908579128}
+validation medium {"hours": 3566, "tp": 269, "fp": 20, "fn": 37, "tn": 3240, "precision": 0.9307958477508651, "recall": 0.8790849673202614, "f1": 0.9042016806722689, "brier": 0.011783590526749713}
+validation larger {"hours": 3566, "tp": 271, "fp": 20, "fn": 35, "tn": 3240, "precision": 0.9312714776632303, "recall": 0.8856209150326797, "f1": 0.9078726968174204, "brier": 0.011885072498136716}
+FROZEN selection larger
+TEST after frozen selection: larger
+test original {"hours": 3567, "tp": 965, "fp": 24, "fn": 45, "tn": 2533, "precision": 0.9757330637007078, "recall": 0.9554455445544554, "f1": 0.9654827413706853, "brier": 0.01934398654331371}
+test persistence {"hours": 3567, "tp": 985, "fp": 20, "fn": 25, "tn": 2537, "precision": 0.9800995024875622, "recall": 0.9752475247524752, "f1": 0.9776674937965261, "brier": 0.012615643397813289}
+test nwp_day2 {"hours": 3567, "tp": 993, "fp": 15, "fn": 17, "tn": 2542, "precision": 0.9851190476190477, "recall": 0.9831683168316832, "f1": 0.9841427155599604, "brier": 0.00897112419400056}
+test small {"hours": 3567, "tp": 992, "fp": 12, "fn": 18, "tn": 2545, "precision": 0.9880478087649402, "recall": 0.9821782178217822, "f1": 0.9851042701092354, "brier": 0.0066333371683968715}
+test medium {"hours": 3567, "tp": 994, "fp": 14, "fn": 16, "tn": 2543, "precision": 0.9861111111111112, "recall": 0.9841584158415841, "f1": 0.9851337958374629, "brier": 0.006472480942786866}
+test larger {"hours": 3567, "tp": 994, "fp": 15, "fn": 16, "tn": 2542, "precision": 0.9851337958374629, "recall": 0.9841584158415841, "f1": 0.9846458642892522, "brier": 0.00681716465624261}
+COMPLETE Retrospective candidate only; no deployment recommendation

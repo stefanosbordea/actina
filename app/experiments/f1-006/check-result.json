@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "feature_rows": 17832,
+  "history_values_checked": 89160,
+  "maximum_history_mean_abs_error": 0,
+  "prediction_rows": 42798,
+  "grid_rows_checked": 5202,
+  "comparison_rows_checked": 36,
+  "selection": "larger",
+  "source_hashes_unchanged": true,
+  "result_report_sha256": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+  "checker_sha256": "1598ee77abea600eb921b98a7694558ad9bb8941678c6b2d38b79b5966e817cb"
+}

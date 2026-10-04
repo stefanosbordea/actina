@@ -1,0 +1,1 @@
+{"status": "PASS", "checks": 247573, "matched_hours": 7133, "scenario_values": 456512, "metric_rows": 30, "coverage": {"validation": {"original_hours": 3566, "satellite_common_hours": 3419, "missing_reference_hours": 147}, "test": {"original_hours": 3567, "satellite_common_hours": 3517, "missing_reference_hours": 50}}}
