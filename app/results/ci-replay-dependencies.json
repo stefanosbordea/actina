@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-04T09:58:11.283461+00:00",
+  "problem": "GitHub run37193313079 stopped at saved-model replay because LightGBM was not installed. verify_release.py --install installs npm dependencies only.",
+  "change": "Install seven exact replay runtime versions before retained-model checks, using binary wheels and pip check. UI Python packages are not installed. Exact decision assertions remain unchanged.",
+  "dependencies": {
+    "lightgbm": "4.7.0",
+    "narwhals": "2.26.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python-dateutil": "2.9.0.post0",
+    "scipy": "1.18.1",
+    "six": "1.17.0"
+  },
+  "validation": {
+    "pins_match_existing_lock_and_installed_versions": true,
+    "mandatory_dependency_closure_checked": true,
+    "pip_check": {
+      "command": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python -m pip check",
+      "exit_code": 0,
+      "output": "No broken requirements found."
+    },
+    "local_replay": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-006/review/replay_models.py",
+      "exit_code": 0,
+      "checks": [
+        {
+          "split": "validation",
+          "method": "small",
+          "hours": 3566,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        },
+        {
+          "split": "validation",
+          "method": "medium",
+          "hours": 3566,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        },
+        {
+          "split": "validation",
+          "method": "larger",
+          "hours": 3566,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        },
+        {
+          "split": "test",
+          "method": "small",
+          "hours": 3567,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        },
+        {
+          "split": "test",
+          "method": "medium",
+          "hours": 3567,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        },
+        {
+          "split": "test",
+          "method": "larger",
+          "hours": 3567,
+          "max_probability_abs_error": 0.0,
+          "selected_and_default_decisions_match": true
+        }
+      ],
+      "output_sha256": "027a7b022185db084fad5baa40aedbbc9f319d7c287d3b19d71745b58b87e98b"
+    },
+    "corrected_invocation": "An initial pip-check invocation mistyped the existing volume path as CARMIX-W and exited127 before Python started; corrected CARMIX-WORK invocation above passed."
+  },
+  "identity": {
+    "app/requirements-replay.txt": "8c3ccdafd420c5d8f04fefda693a6193a1e8136163c4dfd7418dbf4f55d45b4b",
+    ".github/workflows/verify-app.yml": "c1b356550a0255fbaf3c0454987b500e9f0f5bba133b96eb88fb03f0403a8606",
+    "app/experiments/f1-006/review/replay_models.py": "d2be039d8f80864cdbb15dbb93d8437f7636d5167b1cb7c9e0002cbe9693e4b3"
+  },
+  "limits": "Local replay used the existing exact-version development environment. Fresh Linux installation and replay are checked by the pushed GitHub workflow."
+}
