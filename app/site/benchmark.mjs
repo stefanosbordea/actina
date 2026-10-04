@@ -3,7 +3,7 @@ const data = window.ACTINABENCH;
 const percent = value => value == null ? '—' : (100 * value).toFixed(2) + '%';
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const methods = {
-  original: ['Original forecast','LightGBM','Stefanos’s retained day-ahead radiation forecast.'],
+  original: ['Original forecast','Reference','Retained day-ahead radiation forecast.'],
   persistence: ['Previous-day forecast','Reference','Predicts radiation by reusing the previous day at the same hour.'],
   nwp_day2: ['Archived weather forecast','Research control','Fixed ECMWF day2 radiation forecast. Retrospective comparison on the original weather-model reference.'],
   analogue_raw: ['Weather + past errors','Research prototype','64 similar historical hours estimate forecast uncertainty. Lower test MAE, but one extra false alarm versus the fixed weather forecast.'],

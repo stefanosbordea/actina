@@ -16,7 +16,7 @@
   <a class="skip" href="#day-review">Skip to the schedule</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 3h6L8 29H2L14 3Zm7 7 10 19h-7l-7-13 4-6ZM12 23h9l3 6H9l3-6Z"/></svg><span>Aktina</span></a>
-    <nav aria-label="Main"><a href="#about">About the model</a><a href="./forecast.html">Forecasts</a><a href="./benchmark.html">AktinaBench</a><a href="./workspace/#reviews">Review<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></nav>
+    <nav aria-label="Main"><a href="#about">About</a><a href="./forecast.html">Forecasts</a><a href="./benchmark.html">AktinaBench</a><a href="./workspace/#reviews">Review<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></nav>
   </header>
   <main>
     <section class="introduction" aria-labelledby="purpose">
@@ -39,7 +39,7 @@
       </nav>
       <div class="instrument" aria-label="Linked hourly charts">
         <section class="chart-section" aria-labelledby="sun-title">
-          <div class="chart-heading"><div><h3 id="sun-title">Sun <span>W/m²</span></h3><div class="legend"><span class="actual">Actual</span><span class="forecast">LightGBM forecast</span></div></div><p id="sun-reading" class="chart-reading"></p></div>
+          <div class="chart-heading"><div><h3 id="sun-title">Sun <span>W/m²</span></h3><div class="legend"><span class="actual">Actual</span><span class="forecast">Forecast forecast</span></div></div><p id="sun-reading" class="chart-reading"></p></div>
           <div id="sun-chart" class="plot"></div>
           <p id="forecast-error" class="forecast-error"></p>
         </section>
@@ -60,17 +60,17 @@
         <p id="comparison-note" class="comparison-note"></p>
         <dl class="water-accounting"><div><dt>Demand</dt><dd id="water-demand"></dd></div><div><dt>Production, flat / Aktina</dt><dd id="water-production"></dd></div><div><dt>Tank, start / end</dt><dd id="water-storage"></dd></div></dl>
       </section>
-      <details id="about" class="evidence"><summary>Model, assumptions and hourly data</summary>
+      <details id="about" class="evidence"><summary>Assumptions and hourly data</summary>
         <div class="evidence-content">
-          <section><h3>What this shows</h3><p>Forecast and scheduler by Stefanos Bordea. Forecast: a LightGBM model trained on two years of Paphos weather from Open-Meteo, predicting the day ahead. Plan: the supplied Aktina scheduler output. These are historical results, not a connection to a working plant.</p><p id="forecast-provenance"></p><p>Plant, demand, storage and electricity prices are illustrative assumptions. A radiation threshold labels the lower-price hours. It does not measure curtailed electricity.</p></section>
+          <section><h3>What this shows</h3><p>Review a day-ahead solar forecast alongside a supplied water-production plan. This historical example is not connected to a plant.</p><p id="forecast-provenance"></p><p>Plant, demand, storage and electricity prices are illustrative assumptions. A radiation threshold labels the lower-price hours. It does not measure curtailed electricity.</p></section>
           <section><h3>Cost and storage assumptions</h3><dl id="assumptions" class="assumptions"></dl><p>Hourly cost = production × 3.4 ÷ 1,000 × electricity price. Price is determined by actual radiation. Daily costs compare the supplied plans. Production and ending water can differ. Tank levels are supplied end-of-hour values.</p></section>
-          <section class="source"><h3>Source</h3><p><a id="source-repository" href="https://github.com/stefanosbordea/actina">stefanosbordea/actina</a><br><a href="./schedule_hourly.csv" download>Download the supplied schedule</a></p><dl><dt>Commit</dt><dd id="source-commit"></dd><dt>Schedule SHA-256</dt><dd id="source-hash"></dd></dl></section>
-          <section class="hourly-data"><h3>Hourly data <span id="table-date"></span></h3><p>Time identifies the hour’s start. Tank is measured at its end. Plan input is the forecast column from the supplied schedule.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Hourly data, scroll horizontally for all columns"><table><caption class="visually-hidden">Selected day’s source values</caption><thead><tr><th scope="col">Hour</th><th scope="col">Actual<br>W/m²</th><th scope="col">LightGBM<br>W/m²</th><th scope="col">Plan input<br>W/m²</th><th scope="col">Demand<br>m³</th><th scope="col">Flat<br>m³</th><th scope="col">Aktina<br>m³</th><th scope="col">Tank<br>m³</th></tr></thead><tbody id="hourly-rows"></tbody></table></div></section>
+          <section class="source"><h3>Export</h3><p><a href="./schedule_hourly.csv" download>Download hourly schedule</a></p></section>
+          <section class="hourly-data"><h3>Hourly data <span id="table-date"></span></h3><p>Time identifies the hour’s start. Tank is measured at its end. Plan input is the forecast column from the supplied schedule.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Hourly data, scroll horizontally for all columns"><table><caption class="visually-hidden">Selected day’s source values</caption><thead><tr><th scope="col">Hour</th><th scope="col">Actual<br>W/m²</th><th scope="col">Forecast<br>W/m²</th><th scope="col">Plan input<br>W/m²</th><th scope="col">Demand<br>m³</th><th scope="col">Flat<br>m³</th><th scope="col">Aktina<br>m³</th><th scope="col">Tank<br>m³</th></tr></thead><tbody id="hourly-rows"></tbody></table></div></section>
         </div>
       </details>
     </section>
   </main>
-  <footer><a class="brand" href="./">Aktina</a><p class="team">Loukas Louka, Stefanos Bordea<br>Andreas Nikolaides, Cleopas Cleopa</p><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
+  <footer><a class="brand" href="./">Aktina</a><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
   <noscript><p class="load-error">Enable JavaScript to explore the charts. The supplied schedule remains available as a CSV file.</p></noscript>
 </body>
 </html>

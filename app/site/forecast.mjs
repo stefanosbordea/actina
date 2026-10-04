@@ -4,6 +4,10 @@
   const text = (id, value) => { $(id).textContent = value; };
   const percent = value => value === null ? '—' : `${(100 * value).toFixed(2)}%`;
   const labels = {raw_v2: 'Supplied weather, day 1', ecmwf_day2: 'ECMWF, day 2'};
+  const methodLabels = {
+    event_019: 'Current forecast', v2_600: 'Original forecast', v2_562: 'Higher sensitivity',
+    event_008: 'Research comparison', v1: 'Earlier forecast', persistence: 'Previous day', ...labels
+  };
   const hourLabel = hour => `${String(hour).padStart(2, '0')}:00`;
   $('forecast-reload').addEventListener('click', () => window.location.reload());
   try {
@@ -23,34 +27,23 @@
     let geometry;
     const eventCall = row => method === 'event_008' || method === 'event_019' ? Boolean(row[method]) : row.v2 > (method === 'v2_562' ? 562 : 600);
     const curveKey = () => method === 'v2_600' || method === 'v2_562' ? 'v2' : 'v2_refit';
-    const curveLabel = () => method === 'event_008' ? 'V2 refit (reference)' : curveKey() === 'v2' ? 'Original v2' : 'V2 refit';
+    const curveLabel = () => method === 'event_008' ? 'Reference forecast' : curveKey() === 'v2' ? 'Original forecast' : 'Forecast';
     const selection = () => days[dayIndex].rows.find(row => row.hour === hour);
     const methodNotes = {
-      event_019: '4 fewer false alarms than 008, 1 extra missed hour. Prototype validation.',
-      v2_600: 'Original v2 event rule. The forecast must exceed 600 W/m².',
-      v2_562: 'Threshold selected on these validation hours. More events found, with more false calls. The radiation curve is unchanged.',
-      event_008: 'Separate research comparator. V2 refit is shown as a reference curve. The 008 rule was selected on validation.'
+      event_019: '4 fewer false alarms than the research comparison, 1 extra missed hour. Historical validation.',
+      v2_600: 'High-solar calls when the forecast exceeds 600 W/m².',
+      v2_562: 'More high-solar hours found, with more false alarms. The original forecast curve is unchanged.',
+      event_008: 'Event calls only. The current forecast curve is shown for reference.'
     };
     $('forecast-date').min = days[0].date;
     $('forecast-date').max = days.at(-1).date;
     text('score-hours', data.coverage.hours.toLocaleString('en-GB'));
     text('forecast-coverage', `${data.coverage.hours.toLocaleString('en-GB')} target hours across ${data.coverage.days} dates, from ${data.coverage.first.slice(0, 16)} to ${data.coverage.last.slice(0, 16)}. The first date has 5 hours and the last has 9. All are retained in the scores.`);
-    $('forecast-source-link').href = `https://github.com/stefanosbordea/actina/tree/${data.source.commit}`;
-    data.source.files.forEach(source => {
-      const term = document.createElement('dt');
-      const value = document.createElement('dd');
-      term.textContent = source.path;
-      value.textContent = source.sha256;
-      $('forecast-source-hashes').append(term, value);
-    });
     data.metrics.forEach(metric => {
       const row = document.createElement('tr');
       row.dataset.method = metric.id;
       const name = document.createElement('td');
-      name.append(document.createTextNode(metric.label));
-      const note = document.createElement('small');
-      note.textContent = metric.note;
-      name.append(note);
+      name.textContent = methodLabels[metric.id];
       row.append(name);
       [percent(metric.precision), percent(metric.recall), percent(metric.f1), metric.tp, metric.fp, metric.fn, metric.tn].forEach(value => {
         const cell = document.createElement('td');

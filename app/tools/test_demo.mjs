@@ -14,13 +14,13 @@ test('demo shows model predictions separately from the supplied plan',()=>{
   const dom=boot(), d=dom.window.document;
   try {
     assert.equal(d.body.dataset.state,'ready');
-    assert.match(d.querySelector('.schedule-status').textContent,/matches yesterday/);
+    assert.match(d.querySelector('.schedule-status').textContent,/matches previous-day/);
     assert.equal(d.getElementById('flat-cost').textContent,'€2,994.59');
     assert.equal(d.getElementById('aktina-cost').textContent,'€2,628.25');
     assert.equal(d.getElementById('comparison-note').textContent,'Same water production and ending storage.');
     d.querySelector('[data-date="2026-03-16"]').click();
     assert.match(d.getElementById('sun-reading').textContent,/Forecast 486.2/);
-    assert.match(d.getElementById('forecast-error').textContent,/LightGBM 48 W/);
+    assert.match(d.getElementById('forecast-error').textContent,/Forecast 48 W/);
   } finally {dom.window.close();}
 });
 test('cloudy day has zero price saving and invalid dates preserve the current review',()=>{

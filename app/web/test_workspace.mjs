@@ -14,7 +14,7 @@ function test(name,body){
 }
 const read=name=>fs.readFileSync(new URL(`public/${name}`,import.meta.url),'utf8');
 const fixture=JSON.parse(read('data.json'));
-async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#reviews'){
+async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#reviews',reviewer='QA reviewer'){
  const dom=new JSDOM(read('index.html'),{url:'http://localhost:8788'+initialHash,runScripts:'outside-only'}),w=dom.window,downloads=[];
  Object.defineProperty(w,'crypto',{value:cryptoProvider});w.Blob=Blob;w.structuredClone=structuredClone;
  w.URL.createObjectURL=blob=>{downloads.push(blob);return 'blob:test';};w.URL.revokeObjectURL=()=>{};
@@ -30,6 +30,8 @@ async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#
  async function importCSV(text,name='test.csv'){Object.defineProperty($('handoff-file'),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $('handoff-file').onchange();}
  async function importPlan(text,name='plan.csv'){Object.defineProperty($('schedule-file'),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $('schedule-file').onchange();}
  async function importRevision(id,text,name){if(id==='revision-solar-file'){$('revision-solar').open=true;$('revision-solar-profile').open=true;}else if(id==='revision-case-file'){$('revision-inputs').open=true;$('revision-open-case').open=true;}else if(id==='revision-proposal-file')$('revision-inputs').open=true;Object.defineProperty($(id),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $(id).onchange();}
+ // Review fixtures supply their own identity. Production fields start blank.
+ for(const id of ['reviewer','revision-reviewer','sequence-reviewer']){assert.equal($(id).value,'');assert.equal($(id).placeholder,'Reviewer name');$(id).value=reviewer;}
  return {dom,w,$,click,change,route,downloads,importCSV,importPlan,importRevision,close:()=>{w.close();modules.clear();downloads.length=0;}};
 }
 const oneRow=()=>`time,predicted\n${fixture.days[0].times[0]},0\n`;
@@ -1731,5 +1733,23 @@ test('selecting a storage reference opens Current plan and preserves the importe
   assert.equal(a.w.document.body.dataset.view,'reviews');assert.equal(a.w.document.body.dataset.reviewTab,'current');assert.equal(a.$('review-current').hidden,false);assert.equal(a.$('review-revision').hidden,true);assert.equal(a.$('tank').value,'500');assert.equal(a.$('plan-source').value,'frozen');assert.equal(a.$('date').value,day.date);
   a.route('data');a.$('analysis-task-plan').click();a.$('inspect-candidate').click();
   assert.equal(a.w.document.body.dataset.view,'operations');assert.equal(a.$('plan-source').value,'imported');assert.equal(a.$('tank').value,'4000');assert.equal(a.$('date').value,day.date);
+ }finally{a.close();}
+});
+
+
+test('public workspace starts without individual credit or a preset reviewer',async()=>{
+ const a=await boot({}, {}, webcrypto, '#reviews', '');try{
+  const publicCopy=['index.html','analysis-layouts.mjs','workspace.js','plan-revision-ui.mjs','plan-sequence-ui.mjs','data/returned-water-example.json'].map(read).join('\n');
+  assert.doesNotMatch(publicCopy,/Loucas|Loukas|Stefanos|Andreas|Cleopas|Bordea|Nikolaides|Cleopa/i);
+  assert.doesNotMatch(publicCopy,/CODE-GUIDE|code walkthrough|code handoff/i);
+  assert.equal(a.w.document.querySelector('.home-forecast-link').textContent.trim(),'Explore forecasts');
+  assert.match(a.w.document.querySelector('.about').textContent,/historical and synthetic inputs/);
+  assert.match(a.w.document.querySelector('.about').textContent,/No plant is connected/);
+  a.route('reviews');a.$('review-note').value='Inspect the plan.';a.$('download-current-review').click();
+  assert.equal(a.downloads.length,0);assert.equal(a.w.document.activeElement.id,'reviewer');
+  a.$('reviewer').value='Independent reviewer';a.$('download-current-review').click();
+  assert.equal(JSON.parse(await a.downloads.at(-1).text()).reviewer,'Independent reviewer');
+  a.$('review-tab-revision').click();await a.$('revision-example').onclick();
+  assert.equal(a.$('revision-reviewer').value,'Example reviewer');assert.equal(a.$('revision-result').hidden,false);
  }finally{a.close();}
 });

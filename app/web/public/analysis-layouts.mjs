@@ -6,7 +6,7 @@ const plot=(id,label)=>`<div id="${id}" class="chart" role="region" tabindex="0"
 export const dataTemplate=`<div class="analysis-workbench">
 ${tabs('analysis','Input tasks',[['forecast','Forecast'],['plan','Schedule'],['handoff','Roadmap'],['reference','Reference']])}
 <section id="analysis-pane-forecast" class="task-pane data-intake" data-analysis-pane="forecast" role="tabpanel" aria-labelledby="analysis-task-forecast" tabindex="0">
- <header class="result-heading"><h2>Forecast input</h2><p class="subtle">Evaluate Stefanos’s prediction CSV against matching reference hours. Files stay in this browser.</p></header>
+ <header class="result-heading"><h2>Forecast input</h2><p class="subtle">Compare a prediction CSV with matching reference hours. Files stay in this browser.</p></header>
  <div class="inline-controls"><label class="file-label">Prediction CSV<input id="handoff-file" type="file" accept=".csv,text/csv"></label><button id="download-template" type="button">Export reference CSV</button></div>
  <p id="import-status" role="status">No handoff imported.</p>
  <section aria-label="Forecast validation"><header class="result-heading"><h2>Validation findings</h2><button id="download-validation" type="button" disabled>Export validation</button></header><div class="table-wrap" id="validation-table"><p class="subtle">Choose a prediction file to inspect its timestamps and values.</p></div><details><summary>Coverage details</summary><div class="kpis" id="validation-kpis"></div></details></section>

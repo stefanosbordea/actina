@@ -32,27 +32,27 @@ test('019 is the default, with its matching refit curve and all validation score
   assert.equal(d.querySelector('#forecast-metrics tr[aria-current=true]').dataset.method, 'event_019');
   assert.equal(d.querySelectorAll('[data-curve=v2_refit]').length, 1);
   assert.equal(d.querySelectorAll('[data-curve=v2]').length, 0);
-  assert.equal(d.getElementById('model-legend').textContent, 'V2 refit');
-  assert.match(d.getElementById('event-method-note').textContent, /4 fewer false alarms than 008, 1 extra missed hour/);
+  assert.equal(d.getElementById('model-legend').textContent, 'Forecast');
+  assert.match(d.getElementById('event-method-note').textContent, /4 fewer false alarms than the research comparison, 1 extra missed hour/);
   const day = w.AKTINA_FORECAST.days.find(item => item.date === d.getElementById('forecast-date').value);
   assert.equal(d.querySelectorAll('#predicted-events [data-positive=true]').length, day.rows.filter(row => row.event_019).length);
   assert.equal(d.getElementById('forecast-provenance').open, false);
   assert.match(d.getElementById('forecast-coverage').textContent, /3,566/);
-  assert.match(d.getElementById('forecast-provenance').textContent, /No v2 test predictions/);
+  assert.match(d.getElementById('forecast-provenance').textContent, /does not establish superiority on new data/);
 }));
 test('the tuned threshold changes only event calls and global scores, not a curve', () => withPage((d, w) => {
   const refit = d.querySelector('[data-curve=v2_refit]').getAttribute('d');
   change(d, w, 'event-method', 'v2_600');
   const curve = d.querySelector('[data-curve=v2]').getAttribute('d');
   assert.notEqual(curve, refit);
-  assert.equal(d.getElementById('model-legend').textContent, 'Original v2');
+  assert.equal(d.getElementById('model-legend').textContent, 'Original forecast');
   assert.equal(d.getElementById('score-f1').textContent, '88.36%');
   change(d, w, 'event-method', 'v2_562');
   assert.equal(d.getElementById('score-f1').textContent, '89.13%');
   assert.equal(d.getElementById('score-precision').textContent, '84.91%');
   assert.equal(d.getElementById('score-recall').textContent, '93.79%');
   assert.equal(d.querySelector('[data-curve=v2]').getAttribute('d'), curve);
-  assert.match(d.getElementById('event-method-note').textContent, /More events found, with more false calls/);
+  assert.match(d.getElementById('event-method-note').textContent, /More high-solar hours found, with more false alarms/);
   const day = w.AKTINA_FORECAST.days.find(item => item.date === d.getElementById('forecast-date').value);
   assert.equal(d.querySelectorAll('#predicted-events [data-positive=true]').length, day.rows.filter(row => row.v2 > 562).length);
   change(d, w, 'event-method', 'event_019');
@@ -65,9 +65,9 @@ test('008 stays binary and labels the refit as a reference, even after original 
   change(d, w, 'event-method', 'event_008');
   assert.equal(d.getElementById('score-f1').textContent, '90.64%');
   assert.equal(d.querySelector('[data-curve=v2_refit]').getAttribute('d'), curve);
-  assert.equal(d.getElementById('model-legend').textContent, 'V2 refit (reference)');
+  assert.equal(d.getElementById('model-legend').textContent, 'Reference forecast');
   assert.equal(d.querySelectorAll('[data-curve=event_008]').length, 0);
-  assert.match(d.getElementById('event-method-note').textContent, /Separate research comparator/);
+  assert.match(d.getElementById('event-method-note').textContent, /Event calls only/);
   const day = w.AKTINA_FORECAST.days.find(item => item.date === d.getElementById('forecast-date').value);
   assert.equal(d.querySelectorAll('#predicted-events [data-positive=true]').length, day.rows.filter(row => row.event_008).length);
 }));
@@ -126,3 +126,16 @@ test('home links the standalone view without changing the supplied plan entry po
   assert.match(html, /src="\.\/data\.js"/);
   assert.match(html, /src="\.\/site\.mjs"/);
 });
+test('public labels keep attribution and code handoff details out of every forecast view', () => withPage((d, w) => {
+  assert.deepEqual([...d.querySelectorAll('#event-method option')].map(option => option.textContent),
+    ['Current forecast', 'Original forecast', 'Higher sensitivity', 'Research comparison']);
+  assert.deepEqual([...d.querySelectorAll('#forecast-metrics tr td:first-child')].map(cell => cell.textContent),
+    ['Original forecast', 'Higher sensitivity', 'Earlier forecast', 'Previous day', 'Supplied weather, day 1', 'ECMWF, day 2', 'Research comparison', 'Current forecast']);
+  for (const method of ['event_019', 'v2_600', 'v2_562', 'event_008']) {
+    change(d, w, 'event-method', method);
+    assert.doesNotMatch(d.body.textContent, /Stefanos|Loukas|Loucas|GitHub|\.csv|\.py|sha256|logistic|refit|\bv[12]\b|\b008\b|\b019\b/i);
+    assert.equal(d.querySelectorAll('a[href*="github.com"], code, #forecast-source-hashes').length, 0);
+  }
+  assert.match(d.getElementById('forecast-provenance').textContent, /18\.700675 W\/m²/);
+  assert.match(d.getElementById('forecast-provenance').textContent, /18\.697343 W\/m²/);
+}));
