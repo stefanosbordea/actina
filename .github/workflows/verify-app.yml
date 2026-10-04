@@ -106,6 +106,30 @@ jobs:
           Path('app/build/release-check/physical011-fixtures.json').write_text(json.dumps(result, indent=2))
           print(json.dumps(result))
           PY
+      - name: Check conditional-scenario fixtures and retained evidence
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python app/experiments/physical-012/test_retrieval.py
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          experiment = Path('app/experiments/physical-012')
+          checked = 0
+          for base, manifest in [(Path('.'), experiment / 'inputs.json'),
+                                 (experiment / 'result', experiment / 'result/outputs.json')]:
+              for name, digest in json.loads(manifest.read_text()).items():
+                  assert hashlib.sha256((base / name).read_bytes()).hexdigest() == digest, name
+                  checked += 1
+          result = dict(status='PASS', retained_file_hashes=checked,
+                        scope='Retrieval fixtures and retained evidence identity, not a new historical run.')
+          Path('app/build/release-check/physical012-fixtures.json').write_text(json.dumps(result, indent=2))
+          print(json.dumps(result))
+          PY
       - name: Preserve verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

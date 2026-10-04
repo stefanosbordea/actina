@@ -1,0 +1,407 @@
+{
+  "status": "PASS",
+  "checks": 714332,
+  "source_endpoints": 17832,
+  "retrieval_distances": 153616,
+  "reconstructed_scenario_values": 3674112,
+  "water_plans": 1794,
+  "exact_recency_reproductions": 598,
+  "maximum_scenario_cost_error_eur": 0.0,
+  "maximum_exact_water_violation_m3": "15/8796093022208",
+  "maximum_water_violation_float_m3": 1.7053025658242404e-12,
+  "immutable_files": 54,
+  "splits": {
+    "validation": {
+      "planned_days": 150,
+      "eligible_pool_days": 444,
+      "primary_days": 139,
+      "weather_sensitivity_days": 148,
+      "gates": {
+        "conditional_coherent": {
+          "risk_only_pass": false,
+          "all_axis_pass": true
+        },
+        "conditional_shuffled": {
+          "risk_only_pass": false,
+          "all_axis_pass": true
+        }
+      },
+      "outcomes": {
+        "conditional_coherent/weather": {
+          "cost_eur": {
+            "mean": 340.82013514554467,
+            "cvar90": 715.9217397818412,
+            "maximum": 851.4875001,
+            "minimum": 0.07820007696888581
+          },
+          "grid_kwh": {
+            "mean": 3336.9159099238273,
+            "cvar90": 7041.02293625452,
+            "maximum": 8374.2,
+            "minimum": 0.6015390536068139
+          },
+          "unused_pv_kwh": {
+            "mean": 396.1360538087195,
+            "cvar90": 2075.250655645197,
+            "maximum": 2698.5015390536078,
+            "minimum": 0.0
+          },
+          "peak_grid_kw": {
+            "mean": 1026.0045280190354,
+            "cvar90": 1534.659712230216,
+            "maximum": 1623.5,
+            "minimum": 0.6015390536068139
+          },
+          "cost_regret_eur": {
+            "mean": -5.033221786203592,
+            "cvar90": 0.4079300150500161,
+            "maximum": 2.9328888955728587,
+            "minimum": -18.298417241420154
+          },
+          "grid_regret_kwh": {
+            "mean": -36.336608200421324,
+            "cvar90": 7.323559338439307,
+            "maximum": 30.014742653612757,
+            "minimum": -174.9110608061403
+          },
+          "days": 139,
+          "worse_days": 5,
+          "better_days": 126,
+          "equal_days": 8,
+          "cost_regret_below_reporting_resolution_days": 8
+        },
+        "conditional_coherent/satellite": {
+          "cost_eur": {
+            "mean": 395.2209982358561,
+            "cvar90": 796.5623695440306,
+            "maximum": 885.1653501000001,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 3794.533235747353,
+            "cvar90": 7776.160791366678,
+            "maximum": 8658.099999999999,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 544.6774803516696,
+            "cvar90": 2942.3722064943313,
+            "maximum": 3744.249999999999,
+            "minimum": 0.0
+          },
+          "peak_grid_kw": {
+            "mean": 1062.3294498670093,
+            "cvar90": 1598.410224394299,
+            "maximum": 1634.55,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -5.0619864098665435,
+            "cvar90": 0.527654276145527,
+            "maximum": 4.366218606567855,
+            "minimum": -17.78199376221994
+          },
+          "grid_regret_kwh": {
+            "mean": -34.80237606227657,
+            "cvar90": 4.46821336580673,
+            "maximum": 20.6415260713311,
+            "minimum": -157.9110608061402
+          },
+          "days": 139,
+          "worse_days": 4,
+          "better_days": 127,
+          "equal_days": 8,
+          "cost_regret_below_reporting_resolution_days": 8
+        },
+        "conditional_shuffled/weather": {
+          "cost_eur": {
+            "mean": 340.0908494482942,
+            "cvar90": 716.036653502611,
+            "maximum": 851.4174995570417,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 3327.8758755475674,
+            "cvar90": 7041.630083553103,
+            "maximum": 8374.2,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 387.09601943245923,
+            "cvar90": 2033.982243101649,
+            "maximum": 2692.7999999999984,
+            "minimum": 0.0
+          },
+          "peak_grid_kw": {
+            "mean": 1010.3502175970089,
+            "cvar90": 1534.659712230216,
+            "maximum": 1623.5,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -5.762507483454116,
+            "cvar90": 0.12473286522260109,
+            "maximum": 1.199450820769357,
+            "minimum": -31.906442068890044
+          },
+          "grid_regret_kwh": {
+            "mean": -45.376642576681554,
+            "cvar90": 2.5272667207611788,
+            "maximum": 11.900000000000546,
+            "minimum": -269.4638471363287
+          },
+          "days": 139,
+          "worse_days": 3,
+          "better_days": 131,
+          "equal_days": 5,
+          "cost_regret_below_reporting_resolution_days": 5
+        },
+        "conditional_shuffled/satellite": {
+          "cost_eur": {
+            "mean": 393.9392360063703,
+            "cvar90": 796.7171449764284,
+            "maximum": 885.1156230033239,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 3780.339449273954,
+            "cvar90": 7776.355533477237,
+            "maximum": 8658.099999999999,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 530.4836938782707,
+            "cvar90": 2912.619493654747,
+            "maximum": 3744.250000000001,
+            "minimum": 0.0
+          },
+          "peak_grid_kw": {
+            "mean": 1047.3038064468699,
+            "cvar90": 1599.4262127823401,
+            "maximum": 1634.55,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -6.34374863935238,
+            "cvar90": 0.7684566465491441,
+            "maximum": 9.653961882737008,
+            "minimum": -37.80629043778009
+          },
+          "grid_regret_kwh": {
+            "mean": -48.99616253567544,
+            "cvar90": 4.617538429369992,
+            "maximum": 48.00764275927776,
+            "minimum": -319.0781101229585
+          },
+          "days": 139,
+          "worse_days": 4,
+          "better_days": 130,
+          "equal_days": 5,
+          "cost_regret_below_reporting_resolution_days": 5
+        }
+      }
+    },
+    "test": {
+      "planned_days": 149,
+      "eligible_pool_days": 584,
+      "primary_days": 144,
+      "weather_sensitivity_days": 148,
+      "gates": {
+        "conditional_coherent": {
+          "risk_only_pass": true,
+          "all_axis_pass": true
+        },
+        "conditional_shuffled": {
+          "risk_only_pass": true,
+          "all_axis_pass": true
+        }
+      },
+      "outcomes": {
+        "conditional_coherent/weather": {
+          "cost_eur": {
+            "mean": 13.016535783097844,
+            "cvar90": 68.06991625247429,
+            "maximum": 170.58639737606185,
+            "minimum": 0.17085164585900658
+          },
+          "grid_kwh": {
+            "mean": 114.30120510294779,
+            "cvar90": 612.7878153270748,
+            "maximum": 1614.252963058598,
+            "minimum": 1.314243429684666
+          },
+          "unused_pv_kwh": {
+            "mean": 2882.4796773251696,
+            "cvar90": 4396.898964748655,
+            "maximum": 4580.175553787363,
+            "minimum": 0.0
+          },
+          "peak_grid_kw": {
+            "mean": 54.08893731076233,
+            "cvar90": 282.74210703825514,
+            "maximum": 882.3406713332828,
+            "minimum": 1.314243429684666
+          },
+          "cost_regret_eur": {
+            "mean": -7.388729564776402,
+            "cvar90": -3.3464595763253744,
+            "maximum": -1.0912553601465387,
+            "minimum": -14.610091400787404
+          },
+          "grid_regret_kwh": {
+            "mean": -47.31685100662508,
+            "cvar90": -17.88974823970115,
+            "maximum": 4.080328391722901,
+            "minimum": -124.55017581847983
+          },
+          "days": 144,
+          "worse_days": 0,
+          "better_days": 144,
+          "equal_days": 0,
+          "cost_regret_below_reporting_resolution_days": 0
+        },
+        "conditional_coherent/satellite": {
+          "cost_eur": {
+            "mean": 30.232862189669277,
+            "cvar90": 198.1400855273592,
+            "maximum": 379.52876101639515,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 249.73876611534212,
+            "cvar90": 1752.190250766924,
+            "maximum": 3278.45,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 2983.6398077820086,
+            "cvar90": 4705.078329534899,
+            "maximum": 4867.950008866912,
+            "minimum": 16.581529669272044
+          },
+          "peak_grid_kw": {
+            "mean": 94.6948053808062,
+            "cvar90": 567.1473656693754,
+            "maximum": 922.2906713332828,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -9.438538577799797,
+            "cvar90": -2.533103458932976,
+            "maximum": -0.012248689890846265,
+            "minimum": -15.814053489809005
+          },
+          "grid_regret_kwh": {
+            "mean": -56.3851928038756,
+            "cvar90": -8.140320642290517,
+            "maximum": 16.581529669272186,
+            "minimum": -103.59018972252852
+          },
+          "days": 144,
+          "worse_days": 0,
+          "better_days": 144,
+          "equal_days": 0,
+          "cost_regret_below_reporting_resolution_days": 0
+        },
+        "conditional_shuffled/weather": {
+          "cost_eur": {
+            "mean": 9.660004927095706,
+            "cvar90": 60.67145019806534,
+            "maximum": 172.37868952925626,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 85.30468117154555,
+            "cvar90": 542.5751367572301,
+            "maximum": 1624.8670360524789,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 2853.483153393767,
+            "cvar90": 4388.6829591543965,
+            "maximum": 4574.244701386138,
+            "minimum": 1.6999999999999993
+          },
+          "peak_grid_kw": {
+            "mean": 40.38169601887295,
+            "cvar90": 228.1896466641515,
+            "maximum": 777.456068268733,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -10.745260420778541,
+            "cvar90": -3.6927079897278725,
+            "maximum": -1.2967105396337502,
+            "minimum": -28.67644526889006
+          },
+          "grid_regret_kwh": {
+            "mean": -76.31337493802728,
+            "cvar90": -20.71581804502368,
+            "maximum": 1.699999999999818,
+            "minimum": -230.6797647119509
+          },
+          "days": 144,
+          "worse_days": 0,
+          "better_days": 144,
+          "equal_days": 0,
+          "cost_regret_below_reporting_resolution_days": 0
+        },
+        "conditional_shuffled/satellite": {
+          "cost_eur": {
+            "mean": 25.067062004737448,
+            "cvar90": 184.76976191199054,
+            "maximum": 378.79715602303804,
+            "minimum": 0.0
+          },
+          "grid_kwh": {
+            "mean": 211.43548987706262,
+            "cvar90": 1632.2056475938177,
+            "maximum": 3300.5500001699997,
+            "minimum": 0.0
+          },
+          "unused_pv_kwh": {
+            "mean": 2945.3365315437295,
+            "cvar90": 4684.21220960366,
+            "maximum": 4856.272959392842,
+            "minimum": 13.600020791028527
+          },
+          "peak_grid_kw": {
+            "mean": 82.67164509111161,
+            "cvar90": 534.3524529774891,
+            "maximum": 866.8737785258414,
+            "minimum": 0.0
+          },
+          "cost_regret_eur": {
+            "mean": -14.604338762731626,
+            "cvar90": -2.377737930286331,
+            "maximum": 1.2769221971752067,
+            "minimum": -56.32439369999997
+          },
+          "grid_regret_kwh": {
+            "mean": -94.68846904215512,
+            "cvar90": -5.572118345169295,
+            "maximum": 22.304181160150563,
+            "minimum": -454.16400099030704
+          },
+          "days": 144,
+          "worse_days": 2,
+          "better_days": 142,
+          "equal_days": 0,
+          "cost_regret_below_reporting_resolution_days": 0
+        }
+      }
+    }
+  },
+  "limitations": [
+    "No fitting or LP re-solving. Independently replayed saved scenarios and per-solve objectives, not a new numerical optimality certificate.",
+    "All evaluation periods were already inspected. Validation losses remain and test gains cannot establish general superiority.",
+    "Binary64 water residuals retained with the frozen1e-6m3 tolerance. Tiny numerical signs are not meaningful plant gains.",
+    "Nominal source times do not verify publication availability. References are estimates, not independent ground sensors.",
+    "Constant-efficiency illustrative PV and water plant with unlimited grid backup. No field curtailment or operational authorization claim."
+  ],
+  "code_sha256": "9868b7db43f33b0ddad2748a7d81d3f6434321df61aa66bd30521d39290bc347",
+  "report_sha256": "7257d6034c9d1b6143d09ad705365ab5cbe34693a26c0922c181b06189377a73",
+  "protocol_sha256": "3a128ec8c8668ce402bf80ecfc6a8d699774a6ee52ae6254d117c26f2d12771b",
+  "completed_at_utc": "2026-10-04T11:04:19.817614+00:00",
+  "wall_seconds": 3.1824234999949113
+}

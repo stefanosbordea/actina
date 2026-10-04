@@ -1,0 +1,23 @@
+{
+  "all_plans_created_at_utc": "2026-10-04T11:00:41.016863+00:00",
+  "files_sha256": {
+    "solver-records.jsonl": "6347990070d238831463881a4d1da05c4752af53b4d9e4926edcc5c45fb9f58f",
+    "test/bank.npz": "c8b1ad517a1cf9bd2dad1f62ab8e49f99cdf40fc519dea4d6d3763710c907191",
+    "test/plan-metadata.csv": "92da2d266601583ac014010c28d616bf203866a424fa657a672f4b4a502228f3",
+    "test/plans.npz": "40690642f12c512250466e3bc2b8cff11243d65c3b1541d80afa6e57a96855cc",
+    "test/pool-membership.csv": "5b2e0cc60e0c9b67e79dee59e41eadce2edba359906178f2a4de23b0f1a8e4b4",
+    "test/recency-reproduction.csv": "b4c559fda011edf5310209ae65dc3a1eba1073e26bcc4229d10ff0e3a28138ed",
+    "test/retrieval.csv": "51821ee41edc0dcc963520d0ed5c21d26b811f3f702fdffb141d3460e0241f0e",
+    "test/scenario-replay.npz": "559dec954f8d6fd9c9f8f1b5e6a286bd573993d6d124e82d572a14d27f9e70a7",
+    "test/schedules.csv": "e77c8dedd810045fd0162e49bff15fec95e8173a2daad228f7ed4d29d93e6429",
+    "validation/bank.npz": "d1198a69d425b6ebafef3109c7930a94bba5755f1309a0bb37d54c4195224c0c",
+    "validation/plan-metadata.csv": "9ffd26293b47414778bfad3016e7c93e5614b51f1f68f74126b6e1d87d8cad9d",
+    "validation/plans.npz": "f3e7c9bbb181ed63eb66410b02197eafcbab05fa004f7210587a0d7131dd7f89",
+    "validation/pool-membership.csv": "7bc18b904d234ede3be26020dde8e12075c8f8266fedf41faf1637a8b2c60da9",
+    "validation/recency-reproduction.csv": "780a57299b7330a416cb8523dcb302fe26529e45bdb5f795cccd9ca958465cee",
+    "validation/retrieval.csv": "83ed17904fac0e447ef8ee6ad2b94bc3a121554147da00e1a51f8a4dfbff6c8b",
+    "validation/scenario-replay.npz": "5101b307fd3c5a91990b1e16ea3586b1cd0612bde3ecd05d9fab6976d3f9690f",
+    "validation/schedules.csv": "2956db2d8d9f62c2f73d12b4acc354c3e216616916524cca3e5f0e974530cf55"
+  },
+  "statement": "All 299 horizons and 1794 schedules exist before evaluation masks and realized outcome scoring. Recency controls were reproduced."
+}

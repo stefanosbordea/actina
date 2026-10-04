@@ -1,0 +1,16 @@
+{
+  "status": "ANALYTICAL_PREFREEZE",
+  "no_candidate_scoring": true,
+  "descriptor": "Left-to-right cumulative P divided by3.4, then left-to-right mean absolute prefix difference",
+  "cases": [
+    {"id":"identity", "a_ghi":"all24 hours200", "b_ghi":"all24 hours200", "distance_m3":0},
+    {"id":"early_against_zero", "a_ghi":"hour0=200, all others0", "b_ghi":"all0", "distance_m3":100},
+    {"id":"late_against_zero", "a_ghi":"hour23=200, all others0", "b_ghi":"all0", "distance_m3_fraction":"25/6"},
+    {"id":"equal_energy_different_timing", "a_ghi":"hour0=200, all others0", "b_ghi":"hour23=200, all others0", "distance_m3_fraction":"575/6"},
+    {"id":"cap_equivalence", "a_ghi":"all24 hours1000", "b_ghi":"all24 hours2000", "distance_m3":0},
+    {"id":"zero_equivalence", "a_ghi":"all24 hours-1", "b_ghi":"all24 hours0", "distance_m3":0},
+    {"id":"equal_distance", "historical_days":["2025-01-03","2025-01-01","2025-01-02"], "distances_m3":[0,0,0], "ranked_days":["2025-01-01","2025-01-02","2025-01-03"]},
+    {"id":"selected_set_canonical_order", "distance_ranked_selected_days":["2025-01-03","2025-01-01","2025-01-02"], "order_before_shuffle":["2025-01-01","2025-01-02","2025-01-03"]}
+  ],
+  "numeric_comparison": "Fraction expectations are analytical. Implementation checks need a declared small floating-point tolerance for arithmetic identity, not for neighbor tie grouping."
+}

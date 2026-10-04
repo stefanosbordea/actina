@@ -1,0 +1,36 @@
+{
+  "status": "NO_BLOCKING_STATIC_ISSUE",
+  "reviewed_at_utc": "2026-10-04T10:57:36.335479+00:00",
+  "scope": "Independent source and analytical-fixture review before execution. No historical retrieval, fitting, LP solves or outcome scoring performed by reviewer.",
+  "sha256": {
+    "PROTOCOL.md": "3a128ec8c8668ce402bf80ecfc6a8d699774a6ee52ae6254d117c26f2d12771b",
+    "retrieval.py": "eb1e939a07c4b64df021b0ec6ee9fa19a0ce832cf3844fced1786a5fed03820a",
+    "test_retrieval.py": "81005cb2e3693370ab8bebd3a90dea476eeee676c11591431077147bd284e37b",
+    "descriptor-fixtures.json": "14d78366c679fbec6f0114d1f84915c87271fb34d5023ed29739529499fec82a",
+    "run.py": "72b6df6d42f65938d54a027966aef773d999f1ce8aed36b332d64213c4c243fa"
+  },
+  "checks": [
+    "Descriptor and eight hand-derived distance/tie examples agree",
+    "Only raw NWP enters historical and target distance",
+    "Fixed original stage cutoffs and full paired source eligibility",
+    "No near-tie tolerance and chronological selected-set order before shuffle",
+    "Archived tariff and raw-point anchors preserved",
+    "598 prior recency solves must reproduce within the unchanged numerical tolerance",
+    "Same hourly scenario marginals and additive expected-cost invariance checked",
+    "All299 horizons and1794 schedules frozen before outcome masks and scoring",
+    "Matched-control regret recomputed from actual candidate and control costs"
+  ],
+  "remaining_runtime_checks": [
+    "Full input pin verification",
+    "Actual fixture exit and solve statuses",
+    "All selected source identities and distance ranks",
+    "All water, cost, energy, fractional-tail and gate outputs"
+  ],
+  "scientific_limits": [
+    "Mechanism proposed after011 outcomes, before012 outcomes",
+    "Estimated references and unverified publication vintage",
+    "Constant-demand illustrative water model with unlimited grid backup",
+    "No conditional calibration or operational improvement guarantee",
+    "Strict numerical signs are distinct from meaningful physical gains"
+  ]
+}

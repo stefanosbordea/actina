@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/physical-012/run.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "started_at_utc": "2026-10-04T10:58:11.796534+00:00",
+  "completed_at_utc": "2026-10-04T11:00:41.516607+00:00",
+  "exit_code": 0,
+  "wall_seconds": 149.7205446660082,
+  "input_lock_sha256": "5d64139c49bf802d1225310a6a6a7333fd92d590d9d4c0bcfe754f1cc589475f",
+  "run_log_sha256": "74cf4d519b810b3cabb2c0eb929e6ec8e576aec01086a2a874bab240e733e8a9",
+  "source_sha256": {
+    "run.py": "72b6df6d42f65938d54a027966aef773d999f1ce8aed36b332d64213c4c243fa",
+    "retrieval.py": "eb1e939a07c4b64df021b0ec6ee9fa19a0ce832cf3844fced1786a5fed03820a",
+    "PROTOCOL.md": "3a128ec8c8668ce402bf80ecfc6a8d699774a6ee52ae6254d117c26f2d12771b"
+  },
+  "report_sha256": "7257d6034c9d1b6143d09ad705365ab5cbe34693a26c0922c181b06189377a73"
+}
