@@ -1,0 +1,8 @@
+{
+  "status": 200,
+  "url": "https://satellite-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-10-01&hourly=shortwave_radiation&models=eumetsat_sarah3&timezone=GMT&timeformat=unixtime",
+  "headers": "Date: Sun, 04 Oct 2026 09:01:58 GMT\nContent-Type: application/json; charset=utf-8\nTransfer-Encoding: chunked\nConnection: close\n\n",
+  "http_date": "Sun, 04 Oct 2026 09:01:58 GMT",
+  "finished_at_utc": "2026-10-04T09:01:58.890135+00:00",
+  "elapsed_monotonic_seconds": 0.7581466670017107
+}

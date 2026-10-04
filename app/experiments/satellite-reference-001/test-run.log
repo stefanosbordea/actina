@@ -1,0 +1,11 @@
+test_all_hours_and_null_spans_retained (test_fetch.IntakeTests.test_all_hours_and_null_spans_retained) ... ok
+test_bad_grid_or_array_length_rejected (test_fetch.IntakeTests.test_bad_grid_or_array_length_rejected) ... ok
+test_duplicate_missing_or_wrong_period_rejected (test_fetch.IntakeTests.test_duplicate_missing_or_wrong_period_rejected) ... ok
+test_no_overwrite_before_network (test_fetch.IntakeTests.test_no_overwrite_before_network) ... ok
+test_nonfinite_negative_and_boolean_radiation_rejected (test_fetch.IntakeTests.test_nonfinite_negative_and_boolean_radiation_rejected) ... ok
+test_wrong_units_and_time_basis_rejected (test_fetch.IntakeTests.test_wrong_units_and_time_basis_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+OK

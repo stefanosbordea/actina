@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_BYTES_AND_ALL_CSV_ROWS",
+  "finished_at_utc": "2026-10-04T09:02:43.771303+00:00",
+  "rows_checked": 17976,
+  "nulls_preserved": 197,
+  "protocol_sha256": "a63f78569ffed0c23140dc945e354cef043618e2d1979f39a5ba84ac1816bff7",
+  "script_sha256": "c7a1e45d76a8d9ab102c743652a7241502aa2670a494f6254af1caa1be8233ad",
+  "no_forecast_scoring": true
+}

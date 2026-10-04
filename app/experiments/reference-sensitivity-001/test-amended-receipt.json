@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/reference-sensitivity-001",
+    "-p",
+    "test_check.py",
+    "-v"
+  ],
+  "exit_status": 0,
+  "finished_at_utc": "2026-10-04T09:08:47.602318+00:00",
+  "log_sha256": "8672581e65902afafe64b784c1a2dcb98334c6d1dede466445839323d154d614",
+  "source_sha256": {
+    "check.py": "bb27f6facbf0a8439d5b021ad6d484f4a6e8291b60119c8da1c39f2386e8169a",
+    "test_check.py": "45ddfe3efb1f6c92ec668e14bbf75c6c97c765f372644709c1fec7c058834a90",
+    "PROTOCOL.md": "6d0493b8ab22067b71bc0c5f64b6212c5a2c32d0fff9dcd5e3b59d65008553d3",
+    "serialization-amendment.json": "18d32d96714916383870f9df1b49236377c10cad59054ee4e149df37618e9ce1"
+  },
+  "actual_data_scored": false
+}

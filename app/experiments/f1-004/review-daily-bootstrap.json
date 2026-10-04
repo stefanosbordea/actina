@@ -1,0 +1,159 @@
+{
+  "status": "COMPLETE",
+  "protocol": {
+    "requested_after_results_known": true,
+    "selection_allowed": false,
+    "seed": 20261004,
+    "replicates": 20000,
+    "comparisons": {
+      "analogue_raw_minus_nwp_day2": [
+        "mae",
+        "rmse",
+        "f1",
+        "precision",
+        "recall"
+      ],
+      "analogue_raw_minus_global_residual": [
+        "brier",
+        "interval_width_90",
+        "interval_coverage_90"
+      ]
+    },
+    "configuration": "All three methods use their fixed default, not a test-chosen probability threshold. Event cutoff is probability>0.5; truth is actual>600W/m2.",
+    "block": "Resample supplied target-date blocks under fixed UTC+03, paired across all three methods. Retain the partial first date; resampled hour counts can vary.",
+    "interval": "Marginal two-sided95% percentile interval, linear interpolation; no multiplicity adjustment.",
+    "limits": [
+      "Already-inspected retrospective test; neither a new holdout nor a promotion decision.",
+      "Day blocks retain within-day but not cross-day dependence.",
+      "Scenarios and resamples do not create independent ground truth.",
+      "Smaller interval width and larger coverage must be interpreted jointly; neither alone proves better uncertainty.",
+      "No bootstrap tail fraction is a formal p-value."
+    ]
+  },
+  "protocol_sha256": "b4c8da822d19c57052dedd283a5460709e311a56502edb33db563c2ef672d90e",
+  "script_sha256": "0d81585346eccb2c6b4f8fb4b38639872c314951d75429337d19dc3d1c5ec512",
+  "audit_sha256": "4521b60b2bf282b48c0c6f77e173be82cea45dd07850a9398284904c4b473daa",
+  "runner_report_sha256": "49c36922e7fa303112e62d8371a07e6e9888c93f901c5cf922c0db44ce452028",
+  "prediction_sha256": {
+    "analogue_raw": "44c9ea427d96c418ddf3d6f7b5066a6cb1c63b8ed287dd2e23ca888f44d124db",
+    "nwp_day2": "7d21f402d9bc0284cae861e6738350bff8bdf0f267eaec6b9ed60781d97292a2",
+    "global_residual": "22f0773e4c26139b184ad785e214a6b38d448e67f9447d747a5e329a9a776b4c"
+  },
+  "target_hours": 3567,
+  "target_date_blocks": 149,
+  "partial_blocks": {
+    "2026-05-03": 15
+  },
+  "resample_hour_count_range": [
+    3513,
+    3576
+  ],
+  "observed": {
+    "analogue_raw": {
+      "mae": 6.921082141855901,
+      "rmse": 22.1251489836738,
+      "precision": 0.9841427155599604,
+      "recall": 0.9831683168316832,
+      "f1": 0.9836552748885586,
+      "brier": 0.006771668353132885,
+      "interval_width_90": 38.95761143818334,
+      "interval_coverage_90": 0.9629941126997477
+    },
+    "nwp_day2": {
+      "mae": 8.805719091673675,
+      "rmse": 22.80048396340563,
+      "precision": 0.9851190476190477,
+      "recall": 0.9831683168316832,
+      "f1": 0.9841427155599604,
+      "brier": 0.00897112419400056
+    },
+    "global_residual": {
+      "mae": 8.805719091673675,
+      "rmse": 22.80048396340563,
+      "precision": 0.9851190476190477,
+      "recall": 0.9831683168316832,
+      "f1": 0.9841427155599604,
+      "brier": 0.0076632230997687135,
+      "interval_width_90": 48.71649845808799,
+      "interval_coverage_90": 0.9428090832632464
+    }
+  },
+  "differences": {
+    "analogue_raw_minus_nwp_day2": {
+      "mae": {
+        "observed_difference": -1.8846369498177733,
+        "percentile_95_interval": [
+          -2.065437491275923,
+          -1.6932938856015785
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "rmse": {
+        "observed_difference": -0.6753349797318293,
+        "percentile_95_interval": [
+          -1.4793949180218338,
+          -0.10399416964350741
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "f1": {
+        "observed_difference": -0.00048744067140171765,
+        "percentile_95_interval": [
+          -0.002027738414206187,
+          0.0009867666279177456
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "precision": {
+        "observed_difference": -0.0009763320590873148,
+        "percentile_95_interval": [
+          -0.004056697362546774,
+          0.001975897662958803
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "recall": {
+        "observed_difference": 0.0,
+        "percentile_95_interval": [
+          0.0,
+          0.0
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      }
+    },
+    "analogue_raw_minus_global_residual": {
+      "brier": {
+        "observed_difference": -0.0008915547466358288,
+        "percentile_95_interval": [
+          -0.0018521234226440157,
+          3.998243876443819e-05
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "interval_width_90": {
+        "observed_difference": -9.758887019904648,
+        "percentile_95_interval": [
+          -13.972564507002069,
+          -5.228079679595253
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      },
+      "interval_coverage_90": {
+        "observed_difference": 0.020185029436501245,
+        "percentile_95_interval": [
+          0.006711409395973145,
+          0.03398528594959693
+        ],
+        "defined_replicates": 20000,
+        "undefined_replicates": 0
+      }
+    }
+  }
+}

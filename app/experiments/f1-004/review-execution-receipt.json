@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETED",
+  "audit": {
+    "command": "python3 app/experiments/f1-004/review-check.py",
+    "stdout": "review-run.log",
+    "exit_code": 0,
+    "result_status": "PASS"
+  },
+  "daily_bootstrap": {
+    "command": "python3 app/experiments/f1-004/review-daily-bootstrap.py > app/experiments/f1-004/review-daily-run.log 2>&1",
+    "exit_code": 0,
+    "result_status": "COMPLETE"
+  },
+  "sha256": {
+    "review-check.py": "5afff148f83efd435cbb4d0fbb83ddf79e3da603bbd0e63eaaa9b4555354bac9",
+    "review-result.json": "4521b60b2bf282b48c0c6f77e173be82cea45dd07850a9398284904c4b473daa",
+    "review-run.log": "b4fd4344a548c804ad379c20250e242bb2bf120d5ac059791a45f8df5e486647",
+    "review-geometry-fixtures.json": "a54aec771380601ab75f4fc337c4dac139634d7bf3b007a73f4ed3b3f7979a76",
+    "review-daily-bootstrap.py": "0d81585346eccb2c6b4f8fb4b38639872c314951d75429337d19dc3d1c5ec512",
+    "review-daily-protocol.json": "b4c8da822d19c57052dedd283a5460709e311a56502edb33db563c2ef672d90e",
+    "review-daily-bootstrap.json": "ae1dfc8d61b9b9056a4189c9275af76a4369edf093f99d3545af7b8f5db24ec6",
+    "review-daily-run.log": "acfe63af70def55910a9c64652b5942f5682e2cd4f3004dc7445220373fc56de"
+  },
+  "notes": [
+    "Receipts recorded after the completed executions; no computation repeated to create this receipt.",
+    "The audit was rerun successfully after correcting the scope text from 7123 to 7133 query neighborhoods. Both audits passed; the retained review-run.log is the corrected rerun.",
+    "Bootstrap uses already-inspected test results and makes no selection or promotion."
+  ]
+}

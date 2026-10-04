@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "exit_status": 0,
+  "receipt_written_at_utc": "2026-10-04T09:10:45.104964+00:00",
+  "receipt_scope": "Records the previously observed completed execution; runner was not rerun to write this receipt.",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-004/run.py --output app/experiments/f1-004/result > app/experiments/f1-004/run.log 2>&1",
+  "actual_python_executable": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+  "working_directory": "repository root",
+  "thread_limits": {
+    "OMP_NUM_THREADS": 2,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "lightgbm": "4.7.0"
+  },
+  "runtime_scope": "Runner-reported fit/predict/score phase seconds, not an end-to-end benchmark; shell wall time not retained in this receipt.",
+  "phase_seconds": {
+    "validation": 5.282425166995381,
+    "test": 5.568493250000756
+  },
+  "dependency_disclosure": "001 input/count helper transitively imports already installed LightGBM and joblib beyond protocol runtime list; no LightGBM fitting or package installation occurred in004.",
+  "artifacts_sha256": {
+    "run.py": "86e892dd65b435ae61af2b88a760a178f90ddc4ec69a7047b550e267cd0294d0",
+    "geometry.py": "6a59a4aa25a6169c930dc4031122df383b6cc0f51cd0ffc8da603dd9d1cf6a74",
+    "PROTOCOL.md": "cebe09579d33da67a648c9516047f173bd2a65d046f5162888a45b2b1215ab60",
+    "run.log": "54efe136c7172a3f3166dbb0bd43196d8e1f8af34a89a54e337c9bc4736e5dc1",
+    "result/report.json": "49c36922e7fa303112e62d8371a07e6e9888c93f901c5cf922c0db44ce452028",
+    "result/validation-selection.json": "30e23013574730a3727e1e5c4617228e754b137f72e16f48b0f7e0f382bc8d93",
+    "review-check.py": "5afff148f83efd435cbb4d0fbb83ddf79e3da603bbd0e63eaaa9b4555354bac9",
+    "review-result.json": "4521b60b2bf282b48c0c6f77e173be82cea45dd07850a9398284904c4b473daa",
+    "review-daily-bootstrap.py": "0d81585346eccb2c6b4f8fb4b38639872c314951d75429337d19dc3d1c5ec512",
+    "review-daily-bootstrap.json": "ae1dfc8d61b9b9056a4189c9275af76a4369edf093f99d3545af7b8f5db24ec6"
+  },
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+  },
+  "archive_sha256": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+  "audit_status": "PASS",
+  "audit_exit_status": 0,
+  "bootstrap_exit_status": 0,
+  "promotion": "No learned method promoted; validation retained raw day2 forecast.",
+  "portable_command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python app/experiments/f1-004/run.py --output app/experiments/f1-004/result > app/experiments/f1-004/run.log 2>&1"
+}

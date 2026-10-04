@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "app/experiments/reference-sensitivity-001/check.py",
+    "--output",
+    "app/experiments/reference-sensitivity-001/result-amended"
+  ],
+  "started_at_utc": "2026-10-04T09:09:03.369395+00:00",
+  "finished_at_utc": "2026-10-04T09:09:03.974282+00:00",
+  "exit_status": 0,
+  "log_sha256": "86fd3d30ff8ee890b947d476b275110666b34f6af644f3d801125695c3f86b3e",
+  "script_sha256": "bb27f6facbf0a8439d5b021ad6d484f4a6e8291b60119c8da1c39f2386e8169a",
+  "serialization_amendment_sha256": "18d32d96714916383870f9df1b49236377c10cad59054ee4e149df37618e9ce1"
+}

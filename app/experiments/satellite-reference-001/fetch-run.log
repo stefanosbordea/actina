@@ -1,0 +1,54 @@
+{
+  "status": "SCHEMA_AND_COVERAGE_VERIFIED",
+  "forecast_scoring_performed": false,
+  "finished_at_utc": "2026-10-04T09:01:58.958256+00:00",
+  "raw_response": {
+    "bytes": 286536,
+    "sha256": "207b57c01a0a5cb6b8b71307b905e116d25c5f9ca845940898ae6628f516666c"
+  },
+  "full_csv": {
+    "bytes": 1076493,
+    "sha256": "1c95569b0b1d0d2bea3910e01e917a41dc37c7aedee3d25a7477af55bf7fc7df"
+  },
+  "expected_hours": 17976,
+  "returned_hours": 17976,
+  "first_valid_time_utc": "2024-09-13T00:00:00+00:00",
+  "last_valid_time_utc": "2026-10-01T23:00:00+00:00",
+  "first_interval_start_utc": "2024-09-12T23:00:00+00:00",
+  "null_hours": 197,
+  "missing_spans": [
+    {
+      "first_valid_time_utc": "2026-02-13T00:00:00+00:00",
+      "last_valid_time_utc": "2026-02-14T00:00:00+00:00",
+      "hours": 25
+    },
+    {
+      "first_valid_time_utc": "2026-03-15T00:00:00+00:00",
+      "last_valid_time_utc": "2026-03-19T00:00:00+00:00",
+      "hours": 97
+    },
+    {
+      "first_valid_time_utc": "2026-03-31T00:00:00+00:00",
+      "last_valid_time_utc": "2026-04-01T00:00:00+00:00",
+      "hours": 25
+    },
+    {
+      "first_valid_time_utc": "2026-07-01T00:00:00+00:00",
+      "last_valid_time_utc": "2026-07-02T00:00:00+00:00",
+      "hours": 25
+    },
+    {
+      "first_valid_time_utc": "2026-07-20T00:00:00+00:00",
+      "last_valid_time_utc": "2026-07-21T00:00:00+00:00",
+      "hours": 25
+    }
+  ],
+  "timestamp_gaps": 0,
+  "returned_grid": {
+    "latitude": 34.75,
+    "longitude": 32.4,
+    "elevation": 71.0
+  },
+  "returned_timezone": "GMT",
+  "scope": "Satellite-derived estimate; schema and coverage only"
+}

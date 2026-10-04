@@ -1,0 +1,30 @@
+{
+  "requested_after_results_known": true,
+  "selection_allowed": false,
+  "seed": 20261004,
+  "replicates": 20000,
+  "comparisons": {
+    "analogue_raw_minus_nwp_day2": [
+      "mae",
+      "rmse",
+      "f1",
+      "precision",
+      "recall"
+    ],
+    "analogue_raw_minus_global_residual": [
+      "brier",
+      "interval_width_90",
+      "interval_coverage_90"
+    ]
+  },
+  "configuration": "All three methods use their fixed default, not a test-chosen probability threshold. Event cutoff is probability>0.5; truth is actual>600W/m2.",
+  "block": "Resample supplied target-date blocks under fixed UTC+03, paired across all three methods. Retain the partial first date; resampled hour counts can vary.",
+  "interval": "Marginal two-sided95% percentile interval, linear interpolation; no multiplicity adjustment.",
+  "limits": [
+    "Already-inspected retrospective test; neither a new holdout nor a promotion decision.",
+    "Day blocks retain within-day but not cross-day dependence.",
+    "Scenarios and resamples do not create independent ground truth.",
+    "Smaller interval width and larger coverage must be interpreted jointly; neither alone proves better uncertainty.",
+    "No bootstrap tail fraction is a formal p-value."
+  ]
+}

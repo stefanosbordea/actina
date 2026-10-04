@@ -1,0 +1,11 @@
+validation neighbor queries 0 of 3566
+validation neighbor queries 1000 of 3566
+validation neighbor queries 2000 of 3566
+validation neighbor queries 3000 of 3566
+validation reconstruction and metrics complete
+test neighbor queries 0 of 3567
+test neighbor queries 1000 of 3567
+test neighbor queries 2000 of 3567
+test neighbor queries 3000 of 3567
+test reconstruction and metrics complete
+{"status": "PASS", "failure_count": 0, "selected_method": "nwp_day2", "promotion_gate_passed": false, "checks": {"status": 1, "hash": 44, "membership": 4, "join": 106863, "geometry": 71376, "purge": 2, "scaler": 26, "residual": 2, "representatives": 130, "ridge": 14, "neighbors": 477913, "neighbors:exhaustive-query": 7133, "prediction": 627720, "metrics": 5472, "scenarios": 1369542, "selection": 40, "grid": 351, "comparison": 896, "oracle": 1}}

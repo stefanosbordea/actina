@@ -2,6 +2,8 @@
 
 4 October 2026. Research note, not a trained model or a reported gain. Six primary papers, with the inspected access level stated below. Mechanisms proposed for Aktina are adaptations, not reproductions of those papers.
 
+Subsequent work: the fixed conditional-residual prototype was implemented in [experiment 004](../f1-004/README.md), followed by a [satellite-reference check](../reference-sensitivity-001/README.md). Its scale uses solar geometry, not an atmospheric clear-sky model. The proposal below is retained as the pre-experiment research rationale; measured outcomes and limitations are in the [research summary](../README.md).
+
 **Best next experiment:** conditional historical residual scenarios around a fixed archived weather forecast. Add known solar geometry, retain a simple mean/bias-correction control, and test whether probabilities and intervals improve decisions on chronological validation. Synthetic rows can regularize a model or describe uncertainty; they do not create new observed weather or a fresh test set. Treat “parthenogenesis” as an analogy for generating training examples, not an established solar-forecasting method. [Rematerialization](https://arxiv.org/abs/2006.09616) concerns recomputing intermediate values to save memory; it supplies no missing weather information.
 
 ## Primary papers
