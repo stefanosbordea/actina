@@ -1,0 +1,17 @@
+{
+  "started_at_utc": "2026-10-04T09:55:44.316264+00:00",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-15&end_date=2026-09-28&hourly=shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=gfs_global&timezone=GMT&timeformat=unixtime",
+  "parameters": {
+    "latitude": "34.7744",
+    "longitude": "32.4229",
+    "start_date": "2024-09-15",
+    "end_date": "2026-09-28",
+    "hourly": "shortwave_radiation_previous_day2,cloud_cover_previous_day2",
+    "models": "gfs_global",
+    "timezone": "GMT",
+    "timeformat": "unixtime"
+  },
+  "protocol_sha256": "6f3b720391b0c3fcad427ba97748d6a419c5522127d689aae1cdbb6191a6373f",
+  "fetch_sha256": "7a7d33f486d3b7b50aa1dca52c1be82700ff06c08852770280d73f814916767d",
+  "input_manifest_sha256": "69c53d8154f9232b6905cf1c317e82d61895f4bd0e7524be72f7f062fd267fb8"
+}

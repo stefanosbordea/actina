@@ -42,6 +42,10 @@ jobs:
           python app/experiments/f1-005/review/check.py
           python app/experiments/f1-006/review/check.py
           python app/experiments/f1-006/review/replay_models.py
+          python app/experiments/nwp-alternative-001/review/check.py
+          python app/experiments/f1-007/review/check.py
+          python -m unittest discover -s app/experiments/f1-008 -p test_policy.py -v
+          python app/experiments/f1-008/review/check.py
           python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-006/check.py'); print(json.dumps(audit['main']()))"
           python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-005/review/paired-bootstrap-review.py'); print(json.dumps(audit['main']()['checks']))"
           node app/tools/test_demo.mjs

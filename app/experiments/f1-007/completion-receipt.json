@@ -1,0 +1,23 @@
+{
+  "status": "RESEARCH_COMPLETE_NOT_PROMOTED",
+  "recorded_at_utc": "2026-10-04T09:59:29.680965+00:00",
+  "independent_review": "PASS",
+  "checks": 726104,
+  "training_labels": 24916,
+  "prediction_rows": 64197,
+  "threshold_rows": 10692,
+  "metric_rows": 126,
+  "model_replays": 6,
+  "maximum_model_probability_error": 0.0,
+  "decision": "Both validation-selected families fail the fixed six-metric test gate. Preserve established control; no retuning or product replacement.",
+  "evidence_sha256": {
+    "run-receipt.json": "83a104cac93d54c33961bb7c7b7e7132968e6ee433b9e4ef3ddb47fb80aaa7b6",
+    "review/check.py": "be626e409b089ee5b7b7c5d731a4af6eb11533a7b3f9439f39b3e0870c2dd501",
+    "review/result.json": "5e93b2152ab233d1a1166d240bdd00eb7c352bc4b547cf32710c60623d9fd5b9",
+    "review/execution-receipt.json": "a6c9ecba6871dd75a6b256f9fe49e971dead860224fbca3a2d985d50f9d2b9b5",
+    "review/attempt-1-failed-receipt.json": "4d3ec97607dab420deeba69a264a8f4c478a5f2baf23fb1c875b360896474856",
+    "README.md": "44e5068415a5e3b2aeac370ae1f8c617d34ac5cf46e2a3c05e4ed112fc771868"
+  },
+  "source_and_results_unchanged": true,
+  "initial_failed_review_invocation_preserved": true
+}

@@ -26,7 +26,7 @@ Open `/benchmark.html` for the full original forecast comparison and six fixed i
 
 See [the experiment](experiments/f1-001/README.md) and [remaining delivery work](handoff/DELIVERY-STATUS.md). Repackage retained results with `python3 app/tools/package_benchmark.py` from the repository root.
 
-Further [forecast research](experiments/README.md) covers purged linear models, archived weather inputs, conditional residual scenarios, satellite-reference sensitivity and a frozen future capture. These results are separate from the website's original comparison. No learned candidate has passed the stronger weather-forecast control for release; all unsuccessful results remain available.
+Further [forecast research](experiments/README.md) covers purged models, archived ECMWF/GFS inputs, conditional residual scenarios and joint weather/satellite supervision. These results are separate from the website's original comparison. No learned candidate has passed the stronger weather-forecast control on all required metrics under both references; all unsuccessful results remain available.
 
 The [silent 60-second Aktina backup, version 2](delivery/Aktina-Backup-v2.mp4) shows the supplied demo and rebuilt benchmark, including the original forecast and direct classifier against the previous-day reference. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-v2-Source/README.md) are included. The [first walkthrough](delivery/Aktina-Backup.mp4) and [its source](delivery/Aktina-Backup-Source/README.md) remain unchanged. The video retains the benchmark name visible when its screenshots were captured; a final-name refresh is pending.
 

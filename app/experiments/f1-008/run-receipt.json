@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/f1-008/run.py",
+    "--output",
+    "app/experiments/f1-008/result"
+  ],
+  "started_at_utc": "2026-10-04T10:01:53.266100+00:00",
+  "completed_at_utc": "2026-10-04T10:02:00.814360+00:00",
+  "exit_code": 0,
+  "input_manifest_sha256": "0a0cd1695d3a42d03a7914dcdef4d163a575eb53ab01c8b50b7b2833730e18d3",
+  "protocol_sha256": "92d3190129ac88149581a53741a87634cefc9b0354e166e901bdd844cfc998a2",
+  "runner_sha256": "0c0751f6f46bcdb6f2edee23302e1562b6d21622f24f061634511d2b713202ca",
+  "log_sha256": "20ab1dedd2cf52e22505cf629abb9c2880f1773f57f4883cdafba09625425b5d"
+}

@@ -1,0 +1,5447 @@
+[
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.0,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.05,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.1,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.15,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.2,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.25,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.3,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.35,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 25,
+        "fn": 33,
+        "tn": 3235,
+        "precision": 0.9161073825503355,
+        "recall": 0.8921568627450981,
+        "f1": 0.9039735099337748,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 19,
+        "fn": 32,
+        "tn": 3108,
+        "precision": 0.931899641577061,
+        "recall": 0.8904109589041096,
+        "f1": 0.9106830122591943,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 233,
+        "fp": 46,
+        "fn": 61,
+        "tn": 3079,
+        "precision": 0.8351254480286738,
+        "recall": 0.7925170068027211,
+        "f1": 0.8132635253054101,
+        "brier": null
+      }
+    },
+    "changed": 9,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 22,
+        "fn": 34,
+        "tn": 3238,
+        "precision": 0.9251700680272109,
+        "recall": 0.8888888888888888,
+        "f1": 0.9066666666666666,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 16,
+        "fn": 33,
+        "tn": 3111,
+        "precision": 0.9418181818181818,
+        "recall": 0.886986301369863,
+        "f1": 0.9135802469135802,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 43,
+        "fn": 62,
+        "tn": 3082,
+        "precision": 0.8436363636363636,
+        "recall": 0.7891156462585034,
+        "f1": 0.8154657293497364,
+        "brier": null
+      }
+    },
+    "changed": 5,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 21,
+        "fn": 37,
+        "tn": 3239,
+        "precision": 0.9275862068965517,
+        "recall": 0.8790849673202614,
+        "f1": 0.9026845637583892,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 16,
+        "fn": 36,
+        "tn": 3111,
+        "precision": 0.9411764705882353,
+        "recall": 0.8767123287671232,
+        "f1": 0.9078014184397163,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 229,
+        "fp": 43,
+        "fn": 65,
+        "tn": 3082,
+        "precision": 0.8419117647058824,
+        "recall": 0.7789115646258503,
+        "f1": 0.8091872791519434,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.4,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 0,
+    "qualifies": true,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 273,
+        "fp": 24,
+        "fn": 33,
+        "tn": 3236,
+        "precision": 0.9191919191919192,
+        "recall": 0.8921568627450981,
+        "f1": 0.9054726368159204,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 260,
+        "fp": 18,
+        "fn": 32,
+        "tn": 3109,
+        "precision": 0.935251798561151,
+        "recall": 0.8904109589041096,
+        "f1": 0.9122807017543859,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 232,
+        "fp": 46,
+        "fn": 62,
+        "tn": 3079,
+        "precision": 0.8345323741007195,
+        "recall": 0.7891156462585034,
+        "f1": 0.8111888111888111,
+        "brier": null
+      }
+    },
+    "changed": 10,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 21,
+        "fn": 34,
+        "tn": 3239,
+        "precision": 0.9283276450511946,
+        "recall": 0.8888888888888888,
+        "f1": 0.9081803005008348,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 15,
+        "fn": 33,
+        "tn": 3112,
+        "precision": 0.9452554744525548,
+        "recall": 0.886986301369863,
+        "f1": 0.9151943462897526,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 231,
+        "fp": 43,
+        "fn": 63,
+        "tn": 3082,
+        "precision": 0.843065693430657,
+        "recall": 0.7857142857142857,
+        "f1": 0.8133802816901409,
+        "brier": null
+      }
+    },
+    "changed": 6,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 20,
+        "fn": 37,
+        "tn": 3240,
+        "precision": 0.9307958477508651,
+        "recall": 0.8790849673202614,
+        "f1": 0.9042016806722689,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 15,
+        "fn": 36,
+        "tn": 3112,
+        "precision": 0.9446494464944649,
+        "recall": 0.8767123287671232,
+        "f1": 0.9094138543516874,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 269,
+        "fp": 20,
+        "fn": 37,
+        "tn": 3240,
+        "precision": 0.9307958477508651,
+        "recall": 0.8790849673202614,
+        "f1": 0.9042016806722689,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 256,
+        "fp": 15,
+        "fn": 36,
+        "tn": 3112,
+        "precision": 0.9446494464944649,
+        "recall": 0.8767123287671232,
+        "f1": 0.9094138543516874,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.45,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 1,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 272,
+        "fp": 24,
+        "fn": 34,
+        "tn": 3236,
+        "precision": 0.918918918918919,
+        "recall": 0.8888888888888888,
+        "f1": 0.9036544850498339,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 259,
+        "fp": 18,
+        "fn": 33,
+        "tn": 3109,
+        "precision": 0.9350180505415162,
+        "recall": 0.886986301369863,
+        "f1": 0.9103690685413005,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 231,
+        "fp": 46,
+        "fn": 63,
+        "tn": 3079,
+        "precision": 0.8339350180505415,
+        "recall": 0.7857142857142857,
+        "f1": 0.809106830122592,
+        "brier": null
+      }
+    },
+    "changed": 11,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.55
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 271,
+        "fp": 21,
+        "fn": 35,
+        "tn": 3239,
+        "precision": 0.928082191780822,
+        "recall": 0.8856209150326797,
+        "f1": 0.9063545150501672,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 258,
+        "fp": 15,
+        "fn": 34,
+        "tn": 3112,
+        "precision": 0.945054945054945,
+        "recall": 0.8835616438356164,
+        "f1": 0.9132743362831859,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 230,
+        "fp": 43,
+        "fn": 64,
+        "tn": 3082,
+        "precision": 0.8424908424908425,
+        "recall": 0.782312925170068,
+        "f1": 0.8112874779541446,
+        "brier": null
+      }
+    },
+    "changed": 7,
+    "qualifies": true,
+    "strict_gain": true
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.6
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 3,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.65
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 20,
+        "fn": 38,
+        "tn": 3240,
+        "precision": 0.9305555555555556,
+        "recall": 0.8758169934640523,
+        "f1": 0.9023569023569024,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 15,
+        "fn": 37,
+        "tn": 3112,
+        "precision": 0.9444444444444444,
+        "recall": 0.8732876712328768,
+        "f1": 0.9074733096085409,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 227,
+        "fp": 43,
+        "fn": 67,
+        "tn": 3082,
+        "precision": 0.8407407407407408,
+        "recall": 0.7721088435374149,
+        "f1": 0.8049645390070922,
+        "brier": null
+      }
+    },
+    "changed": 3,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.7
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.75
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.8
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.85
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.9
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 0.95
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  },
+  {
+    "policy": {
+      "kind": "correction",
+      "lower": 0.5,
+      "upper": 1.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 267,
+        "fp": 20,
+        "fn": 39,
+        "tn": 3240,
+        "precision": 0.9303135888501742,
+        "recall": 0.8725490196078431,
+        "f1": 0.9005059021922428,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 254,
+        "fp": 15,
+        "fn": 38,
+        "tn": 3112,
+        "precision": 0.9442379182156134,
+        "recall": 0.8698630136986302,
+        "f1": 0.9055258467023173,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 226,
+        "fp": 43,
+        "fn": 68,
+        "tn": 3082,
+        "precision": 0.8401486988847584,
+        "recall": 0.7687074829931972,
+        "f1": 0.8028419182948491,
+        "brier": null
+      }
+    },
+    "changed": 2,
+    "qualifies": false,
+    "strict_gain": false
+  }
+]

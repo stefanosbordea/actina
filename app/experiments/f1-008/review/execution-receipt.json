@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "exit_status": 0,
+  "completion_observed_at_utc": "2026-10-04T10:04:54.273504+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-008/review/check.py > app/experiments/f1-008/review/check.log 2>&1",
+  "model_replays": 4,
+  "maximum_probability_error": 0,
+  "threads_per_replay": 2,
+  "fitting_performed": false,
+  "experiment_sources_or_outputs_modified": false,
+  "new_files_scope": "app/experiments/f1-008/review only",
+  "artifact_sha256": {
+    "check.py": "9fba28d749e18eb6a74d3a5a620e6b28309212478ba7724c2bfcf1c924c52153",
+    "check.log": "6cda2e32d9fce6008fa8235cd6b01627002fc2609f78aed5d56dcf2567c27e85",
+    "result.json": "6cda2e32d9fce6008fa8235cd6b01627002fc2609f78aed5d56dcf2567c27e85"
+  },
+  "interpretation": "PASS means saved experiment reconstructed correctly. The selected model fails its strict performance gate because weather-reference precision regresses."
+}

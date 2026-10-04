@@ -1,0 +1,28 @@
+{
+  "original_files_unchanged": true,
+  "changed_files": [],
+  "input_sha256": {
+    "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+    "app/experiments/nwp-alternative-001/PROTOCOL.md": "6f3b720391b0c3fcad427ba97748d6a419c5522127d689aae1cdbb6191a6373f",
+    "app/experiments/nwp-archive-001/time-checks.json": "060e70d46bb3456321884f6195c529a564943856d72a9b058d4a0c69763a0135",
+    "data/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/download_weather_data.py": "9f60fa59e7976135e33977d13c5c95986ed899f4922a8f6dc5c5da7ba1902f81",
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/features.py": "9fa4a8552709b45a8aa3b64090df0880c39e695c3760f69e3201a1932f14530c",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/explore.py": "4cbd98057a30b27fa52a0c93e2c1bfe74a66bc3c0fe6ebed7ddf296c52449ef1",
+    "eval/plots/radiation_average.png": "7c1f6c176b42ba263cbc709023c458b73e510f95179816333f06b37cb1c3bda6",
+    "eval/results.ipynb": "11cbab94c465fa52e72bcca0396042ee53a7909851e08a5a95d169ca49633f8e",
+    "eval/schedule_hourly.csv": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+    "model/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/final_model.py": "94b2f332bca4e8c5e748e8ebfe3ea1be28e2492f4d5298d6359bc05312016ef7",
+    "model/lgbm_radiation.pkl": "de6523c664823072ae4d271fc674d67448ea8c437c561f2803a5a0293491f0a2",
+    "model/model.py": "c738fd96f2b8fc4ca84edecef4f7b641c9ea10411eecefbb4fe6b2fd596a48a2",
+    "model/scheduler.py": "0eb27cf63bcaf9e4c9923bfcaae4918d895be3f5afe5fc544917c704f69b5517"
+  },
+  "intake_success": false,
+  "finished_at_utc": "2026-10-04T09:55:47.121384+00:00"
+}

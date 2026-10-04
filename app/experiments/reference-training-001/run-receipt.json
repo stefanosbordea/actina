@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "status": "VERIFIED_REFERENCE_JOIN",
+  "receipt_written_at_utc": "2026-10-04T09:52:27.772984+00:00",
+  "command": "python3 -B app/experiments/reference-training-001/prepare.py --output app/experiments/reference-training-001/result > app/experiments/reference-training-001/run.log 2>&1",
+  "exit_status": 0,
+  "tool_reported_wall_seconds": 0.967567334,
+  "network_data_requests": 0,
+  "source": "Previously retained SARAH3 archive; source HTTP receipt remains the acquisition authority.",
+  "models_fitted": 0,
+  "scores_computed": 0,
+  "source_inputs_unchanged": true,
+  "artifacts_sha256": {
+    "PROTOCOL.md": "1d13f673bc82a8054e143f7ac2fd5e7fc1786f9963d3ed1a8b5e633edafafaf0",
+    "inputs.json": "8977e0fd0c1c63a2a78488ab850d1f156d6c4fcb1c2d584b088bb4e29a636a0a",
+    "prepare.py": "11c7c5e7861f5307cef10376adac5ce7b63e3fbe560010a4e85a5de2d06e8805",
+    "run.log": "6cd31f127399f090ea99eb54db90f518723be192ec3a2269471a42aecae67f8f",
+    "result/joined-reference.csv": "23d2fa0170de78d701cd247a43aa30a460368c53afb25ddc9ec11cd71a1504c6",
+    "result/missing-reference.csv": "55788ee158f60ef87f005209591761935f24668e1b98c679aa754c7618d367fc",
+    "result/report.json": "6cd31f127399f090ea99eb54db90f518723be192ec3a2269471a42aecae67f8f",
+    "result/provenance.json": "7a793ec710effc5a0998f343c3e9924476a8871f4c7c3f4dee27fbf9c334af16"
+  }
+}

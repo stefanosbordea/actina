@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/f1-007/review/check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T09:58:31.615706+00:00",
+  "completed_at_utc": "2026-10-04T09:58:35.768876+00:00",
+  "elapsed_seconds": 4.150177207993693,
+  "exit_status": 0,
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "prior_failed_attempt": {
+    "receipt": "attempt-1-failed-receipt.json",
+    "log": "attempt-1-failed.log",
+    "reason": "Wrapper resolved the venv executable to its base interpreter, losing installed environment dependencies. All stdlib numerical checks had reached model replay, where LightGBM import failed; no result PASS was emitted. Retry preserves the venv invocation; checker and experiment unchanged."
+  },
+  "sha256": {
+    "check.py": "be626e409b089ee5b7b7c5d731a4af6eb11533a7b3f9439f39b3e0870c2dd501",
+    "check.log": "53d7e936f96357c5e4772c25a7f18b28b229e1aa125202bfd855963892777156",
+    "result.json": "5e93b2152ab233d1a1166d240bdd00eb7c352bc4b547cf32710c60623d9fd5b9"
+  }
+}
