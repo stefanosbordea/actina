@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "executed_at": "2026-10-02T13:20:46.324Z",
+  "command": "node results/plan-resilience-independent-review.mjs > results/plan-resilience-independent-review.json",
+  "exit_code": 0,
+  "runtime": "v25.9.0",
+  "provenance": "The two ephemeral audit probe algorithms were reconstructed as this retained script and rerun. Random calls, seeds, case counts, bounds and tolerances preserve the original probe semantics. This receipt records this retained execution.",
+  "scope": "Independent checks of fixed-plan water accounting and reserve-support bounds. Not a plant model, operational certification or proof of field performance. UI hashes record the reviewed version; this numerical script does not exercise UI behavior.",
+  "boundary_probe": {
+    "seed": 771,
+    "cases": 350,
+    "demand_boundary_cases": 350,
+    "demand_multiplier_increment": 0.00001,
+    "feasible_initial_cases": 173,
+    "capacity_insufficient_cases": 177,
+    "tolerance_m3": 0.000001
+  },
+  "minute_step_probe": {
+    "seed": 449,
+    "cases": 70,
+    "step_minutes": 1,
+    "compared_fields": 5,
+    "comparisons": 350,
+    "tolerance_m3": 0.000001,
+    "outage_boundary_grid_minutes": 15
+  },
+  "issue_count": 0,
+  "issues": [],
+  "sha256": {
+    "web/public/plan-resilience.mjs": "f312c9bef19e0acf18331177b1fc23fede29bd5be7fd95030dd114527a116101",
+    "web/public/resilience-ui.mjs": "b08f584c20bcfdffb8cca65c94672d906ca6201d2a232fc33ad259d4fe976a29",
+    "web/test_plan_resilience.mjs": "0681f008262071de8efd5e73ef3a0f75f014cc378090271c3b261618075f097e",
+    "web/test_workspace.mjs": "142a452fd30821e008befd5bc1f3a401be09f425919937082487acb3b0033c4c",
+    "results/plan-resilience-independent-review.mjs": "f5c2d84cf7ded06d65f71c60d5a75b046856fc576564ee026cc8c51999b0b8dc"
+  }
+}

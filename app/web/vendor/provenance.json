@@ -1,0 +1,8 @@
+{
+  "name": "papaparse",
+  "version": "5.7.0",
+  "source": "https://www.npmjs.com/package/papaparse",
+  "license": "MIT",
+  "archive_sha256": "263bac53bab292390bcf2697a8c14f0bc382ab3c192fa088e1caa9a8241956b1",
+  "script_sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+}

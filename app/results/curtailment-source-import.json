@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-01T23:18:48.296113+00:00",
+  "sources": [
+    {
+      "source_id": "eac-2026-07",
+      "sha256": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+      "pages": 31,
+      "extract": "data/grid-reports/eac-extracted-fields-2026-07.txt",
+      "exit_code": 0
+    },
+    {
+      "source_id": "eac-2026-08",
+      "sha256": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d",
+      "pages": 31,
+      "extract": "data/grid-reports/eac-extracted-fields-2026-08.txt",
+      "exit_code": 0
+    }
+  ],
+  "days": 62,
+  "source_ratio_discrepancies": [
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-11",
+    "2026-08-03",
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-25"
+  ],
+  "status": "executed; source arithmetic discrepancies retained without correction"
+}

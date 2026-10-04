@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-01T23:16:31.705302+00:00",
+  "reviewer": "Independent stefanos_workspace agent",
+  "scope": "Independent read-only logic and JSDOM workflow review, including prediction import, evaluation provenance, matched scheduler candidate import, review persistence and failed loads. Final rendered-browser review is separate and performed by root. No web source or real browser storage changed.",
+  "asset_sha256": {
+    "index.html": "1591a7d4c5931b4a91af03f1cffafd24268abf0864050f7e3422b7ea70c804e0",
+    "workspace.js": "7ad2a076e8e866bf74c854120df14f8060f4bbde0c54c1165ef89eeae7e926c2",
+    "core.mjs": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+    "data.json": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+    "manifest.json": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+    "research.json": "2703aceeda78c3852d3424424b1fa774665b3a9e5867f3eedf8e7352e6fba004",
+    "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+  },
+  "p1_findings": 0,
+  "p2_findings": 0,
+  "executed_checks": {
+    "existing_tests": {
+      "command": "node --experimental-vm-modules --test test_core.mjs test_workspace.mjs",
+      "exit_code": 0,
+      "tests": 25,
+      "passed": 25,
+      "log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-existing-tests.log"
+    },
+    "independent_probe": {
+      "command": "node --experimental-vm-modules /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-probe.mjs",
+      "exit_code": 0,
+      "source": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-probe.mjs",
+      "result": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-probe.json",
+      "checks": {
+        "equal_control": {
+          "scope": "Imported handoff \u00b7 2,208 matching hours / 92 days \u00b7 canonical actual and controls \u00b7 exact-persistence.csv",
+          "kpis": "Model MAE7.64 W/m\u00b2Mean absolute errorPersistence MAE7.64 W/m\u00b2Same matching timestampsModel RMSE19.43 W/m\u00b2Large-error sensitivityModel minus persistence0.00 W/m\u00b2Lower MAE on matching rows",
+          "note": "Imported predictions have lower MAE on this matching subset. This does not establish future performance, feature timing or added schedule value."
+        },
+        "file_identity": {
+          "raw_file_sha256": "d993f0ae3abbe735e7b3a924afb804586843f8dae15091481313b8b505f3d51a",
+          "decoded_text_sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+          "exported_sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+          "raw_identity_preserved": false
+        },
+        "provenance_record": {
+          "analysis": {
+            "kind": "Imported handoff",
+            "file": "utf8-bom.csv",
+            "sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+            "coverage": "PARTIAL",
+            "matchingRows": 1
+          },
+          "scope": "Historical simulation review; no plant authorization",
+          "planSource": "Frozen reference radiation; illustrative clock tariffs",
+          "issue_provenance_flag_retained": false
+        },
+        "exact_plan": true,
+        "failed_import": {
+          "message": "Maximum file size is 5 MB. Previous analysis remains selected.",
+          "previous_analysis_retained": true
+        },
+        "review_reload": true,
+        "quota_failure": {
+          "message": "Quota exceeded Export the current record if browser storage is unavailable.",
+          "export_still_works": true
+        },
+        "failed_start": {
+          "startup": "Workspace could not load: Dataset identity does not match its manifest. Reload to retry.",
+          "download_disabled": true,
+          "navigation_errors": [
+            "Cannot read properties of undefined (reading 'date')"
+          ]
+        }
+      }
+    }
+  },
+  "importer_precision": {
+    "source_sha256": {
+      "eac-2026-07": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+      "eac-2026-08": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d"
+    },
+    "parse_script_sha256": "696f7c97f4a6bd9e36fdbecd7e4f316dd070d57f8d9bb0bb02bf1067b563b248",
+    "source_pdf_display_strings_checked_for_flagged_days": true,
+    "all_62_tables_checked_with_decimal_precision": 50,
+    "same_flag_set_as_float_implementation": true,
+    "flagged_days": [
+      "2026-07-02",
+      "2026-07-03",
+      "2026-07-04",
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-11",
+      "2026-08-03",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-25"
+    ],
+    "smallest_nonoverlap_gap_percentage_points": 0.0008509415613119971,
+    "largest_nonoverlap_gap_percentage_points": 0.029349599184375186,
+    "maximum_float_interval_error_percentage_points": 7.105427357601002e-15,
+    "rounding_assumption": "Nearest rounding to the displayed decimal precision; integer displays receive \u00b10.5 units. EAC rounding method is not independently certified.",
+    "conclusion": "All 11 interval flags are supported under this rounding assumption; no epsilon on the scale of floating-point error changes the flag set. Preserve published percent and both energy fields; do not correct source values.",
+    "published_fixture_flag_set_matches": true
+  },
+  "honest_boundaries_verified": [
+    "Imported predictions are evaluated on exactly matching canonical truth and controls.",
+    "Blocked CSV contributes no metrics and resets analysis to the frozen reference.",
+    "Partial imports retain missing-hour warnings and are not zero-filled.",
+    "The candidate schedule remains frozen; its source is separate from imported evaluation input in both UI and saved record.",
+    "Actual exported 24-hour candidate production matched retained canonical schedule.",
+    "Local review save/reload succeeded; quota failure displayed a failure and current-record export remained available.",
+    "Oversized-file rejection did not read the file and clearly preserved previous analysis.",
+    "Synthetic meter findings, retrospective weather/grid context, assumed tariff costs and no plant authority are explicitly labeled."
+  ],
+  "status": "Independent recheck complete; no remaining P1/P2 findings on the recorded current assets. Static matched-fixture and browser-local review limits remain explicit.",
+  "initial_asset_sha256": {
+    "index.html": "920e63ee613f4507b5ef81818dfc5f7235704064742d93aac92eba08da264694",
+    "workspace.js": "029c3551b10fadca9bc1af4781b724d9ee24e258b5d9dd8805f1028943db34fa",
+    "core.mjs": "405d169d947b1ac5c95b61d0985581e65c754fd25d4def01f4470fc2687e1624",
+    "data.json": "1b01b50c18f3202ebba5fad4ed2371f584445f463b821838fceacd2f382e9024",
+    "manifest.json": "24d7a2a2cc5c3d6ceaeafcef005e1543a5247be60fc3a2cc7b5734c661449b7e",
+    "research.json": "2703aceeda78c3852d3424424b1fa774665b3a9e5867f3eedf8e7352e6fba004",
+    "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+  },
+  "resolved_findings": [
+    {
+      "id": "P2-equal-control-label",
+      "priority": "P2",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web/public/workspace.js",
+      "line": 65,
+      "finding": "An imported prediction file equal to canonical persistence is described as having lower MAE, although the displayed difference is zero.",
+      "reproduction": "Import all 2,208 canonical times with predicted=baseline; select Imported handoff in Evaluation.",
+      "observed": {
+        "scope": "Imported handoff \u00b7 2,208 matching hours / 92 days \u00b7 canonical actual and controls \u00b7 exact-persistence.csv",
+        "kpis": "Model MAE7.64 W/m\u00b2Mean absolute errorPersistence MAE7.64 W/m\u00b2Same matching timestampsModel RMSE19.43 W/m\u00b2Large-error sensitivityModel minus persistence0.00 W/m\u00b2Lower MAE on matching rows",
+        "note": "Imported predictions have lower MAE on this matching subset. This does not establish future performance, feature timing or added schedule value."
+      },
+      "expected": "Use three outcomes: higher, equal and lower MAE; avoid a gain claim at equality.",
+      "status": "resolved_and_independently_rechecked",
+      "resolution": "Full 2,208-hour imported persistence control explicitly displays Equal MAE and no Lower MAE claim."
+    },
+    {
+      "id": "P2-raw-input-hash",
+      "priority": "P2",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web/public/workspace.js",
+      "line": 79,
+      "finding": "Input SHA-256 is calculated after UTF-8 decoding. A standard UTF-8 BOM CSV is accepted but its recorded hash differs from the original file bytes.",
+      "reproduction": "Import a valid CSV prefixed with UTF-8 BOM bytes EF BB BF; compare exported validation SHA with the raw-file SHA.",
+      "observed": {
+        "raw_file_sha256": "d993f0ae3abbe735e7b3a924afb804586843f8dae15091481313b8b505f3d51a",
+        "decoded_text_sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+        "exported_sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+        "raw_identity_preserved": false
+      },
+      "expected": "Hash file.arrayBuffer(), or label a decoded-text hash explicitly and preserve raw file identity separately.",
+      "status": "resolved_and_independently_rechecked",
+      "resolution": "Actual UTF8BOM file-byte SHA matches validation export; decoded-text SHA differs as expected."
+    },
+    {
+      "id": "P2-review-timing-provenance",
+      "priority": "P2",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web/public/workspace.js",
+      "line": 27,
+      "finding": "A saved imported-analysis record preserves filename, hash and coverage but drops the validator's issueProvenanceSupplied flag and does not state that model training/feature timing remains unverified.",
+      "reproduction": "Import a valid CSV containing forecast_issue_time, save a review, then export or reload the record.",
+      "observed": {
+        "analysis": {
+          "kind": "Imported handoff",
+          "file": "utf8-bom.csv",
+          "sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+          "coverage": "PARTIAL",
+          "matchingRows": 1
+        },
+        "scope": "Historical simulation review; no plant authorization",
+        "planSource": "Frozen reference radiation; illustrative clock tariffs",
+        "issue_provenance_flag_retained": false
+      },
+      "expected": "Retain the issue-field flag and nominal issue contract; preserve explicit unverified training/feature-timing status in the review export.",
+      "status": "resolved_and_independently_rechecked",
+      "resolution": "Persisted imported analysis retains issue provenance, explicit Not reviewed training/feature-timing states and reviewer-statement authority."
+    },
+    {
+      "id": "P2-failed-load-navigation",
+      "priority": "P2",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web/public/workspace.js",
+      "line": 87,
+      "finding": "After a dataset/manifest hash mismatch, download stays disabled but navigation attempts to render partially initialized data and throws an uncaught undefined-date exception.",
+      "reproduction": "Return manifest.json with an incorrect data_sha256, then click Operations.",
+      "observed": {
+        "startup": "Workspace could not load: Dataset identity does not match its manifest. Reload to retry.",
+        "download_disabled": true,
+        "navigation_errors": [
+          "Cannot read properties of undefined (reading 'date')"
+        ]
+      },
+      "expected": "Guard navigation/rendering with successful initialization or reset data on failure; keep a clear recoverable error state.",
+      "status": "resolved_and_independently_rechecked",
+      "resolution": "Failed manifest identity keeps downloads disabled and Operations navigation produces no JavaScript errors."
+    }
+  ],
+  "findings": [],
+  "rechecked_at_utc": "2026-10-01T23:38:15.492196+00:00",
+  "recheck": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--experimental-vm-modules",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-recheck.mjs"
+    ],
+    "exit_code": 0,
+    "probe_source_sha256": "ce699535d036468543a54240d7c0dc817448a0f0fab80f249d8f85a79ec478b3",
+    "json": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-recheck.json",
+    "json_sha256": "399cceef34c46e27a6983dc5e9811c257b91d083dd83c7a32d9698d626106444",
+    "log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-independent-recheck.log",
+    "checks": {
+      "equal_control": {
+        "scope": "Imported handoff \u00b7 2,208 matching hours / 92 days \u00b7 canonical actual and controls \u00b7 exact-persistence.csv",
+        "kpis": "Model MAE7.64 W/m\u00b2Mean absolute errorPersistence MAE7.64 W/m\u00b2Same matching timestampsModel RMSE19.43 W/m\u00b2Large-error sensitivityModel minus persistence0.00 W/m\u00b2Equal MAE within numeric tolerance",
+        "note": "Imported predictions match persistence MAE within numeric tolerance on this matching subset. This does not establish future performance, feature timing or added schedule value."
+      },
+      "file_identity": {
+        "raw_file_sha256": "d993f0ae3abbe735e7b3a924afb804586843f8dae15091481313b8b505f3d51a",
+        "decoded_text_sha256": "20a9e653e445432fe74e2715aa31371936cab7ac1162b75f38e729bde0b80a3a",
+        "exported_sha256": "d993f0ae3abbe735e7b3a924afb804586843f8dae15091481313b8b505f3d51a",
+        "raw_identity_preserved": true
+      },
+      "provenance_record": {
+        "analysis": {
+          "kind": "Imported handoff",
+          "file": "utf8-bom.csv",
+          "sha256": "d993f0ae3abbe735e7b3a924afb804586843f8dae15091481313b8b505f3d51a",
+          "coverage": "PARTIAL",
+          "matchingRows": 1,
+          "issueProvenanceSupplied": true,
+          "baselineSourceProvenanceSupplied": false,
+          "warnings": [
+            "2207 canonical hours missing; comparisons use matching rows only.",
+            "Numeric validation does not certify model training or feature timing. Review model metadata separately."
+          ],
+          "modelVersion": "",
+          "trainingReview": "Not reviewed",
+          "featureTimingReview": "Not reviewed",
+          "reviewNote": "",
+          "metadataAuthority": "Reviewer-supplied; not automatically certified"
+        },
+        "scope": "Historical simulation review; no plant authorization",
+        "planSource": "Frozen reference radiation; illustrative clock tariffs",
+        "issue_provenance_flag_retained": true
+      },
+      "exact_plan": true,
+      "failed_import": {
+        "message": "Maximum file size is 5 MB. Previous analysis remains selected.",
+        "previous_analysis_retained": true
+      },
+      "review_reload": true,
+      "quota_failure": {
+        "message": "Quota exceeded Export the current record if browser storage is unavailable.",
+        "export_still_works": true
+      },
+      "failed_start": {
+        "startup": "Workspace could not load: Dataset identity does not match its manifest. Reload to retry.",
+        "download_disabled": true,
+        "navigation_errors": []
+      },
+      "candidate": {
+        "status": "VALIDATED / 24 input rows / 0 findings. Select \u201cInspect imported candidate\u201d to inspect it.",
+        "selected_source": "imported",
+        "plan_source": "Imported CSV candidate; retained illustrative tariffs",
+        "exact_flat_plan": true,
+        "cost_matches_flat": true,
+        "raw_hash_matches": true,
+        "timing_review": "Not reviewed",
+        "metadata_authority": "Reviewer-supplied; no authorship or operating authority verified",
+        "reference_unchanged": true,
+        "navigation_errors": []
+      },
+      "candidate_context_change": {
+        "selected_source": "frozen",
+        "reference_restored": true,
+        "plan_provenance_null": true
+      }
+    },
+    "source_assets_unchanged_after_probe": true
+  },
+  "existing_tests_rechecked": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--experimental-vm-modules",
+      "--test",
+      "test_core.mjs",
+      "test_schedule.mjs",
+      "test_workspace.mjs"
+    ],
+    "working_directory": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web",
+    "exit_code": 0,
+    "tests": 42,
+    "passed": 42,
+    "failed": 0,
+    "log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/workspace-existing-tests-final.log",
+    "log_sha256": "84b48ba524964bc9b7668d634ec970e2d7e141622ee847edf236b623b1e70dac"
+  },
+  "candidate_review": "A separately imported flat plan for 24 hours validates against the matched 4,000 m\u00b3 fixture, displays Imported CSV candidate, records exact production/raw-file SHA/manual timing status, and equals the flat-control tariff cost. Changing tank context restores the exact frozen 1,000 m\u00b3 reference with null candidate provenance. The reference fixture remains unchanged. No optimizer authorship, operational release timing or plant authority is certified."
+}

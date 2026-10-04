@@ -1,0 +1,359 @@
+{
+  "reviewed_at_utc": "2026-10-01T23:26:52.131183+00:00",
+  "scope": "Independent read-only review and adversarial runs of eval/evaluate.py --join-canonical. No evaluator, model, training, reference predictions or weather edited. Probe mutation affected only a copied external input.",
+  "reviewed_source_sha256": "21bc9739af264f82ab716589da8794045fd2f8f7ff2261d6f76539340b191f4e",
+  "source_unchanged_during_probe": true,
+  "checks": [
+    {
+      "id": "forged_actual_only",
+      "status": "rejected",
+      "error": "actual does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_baseline_only",
+      "status": "rejected",
+      "error": "baseline does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_actual_both",
+      "status": "rejected",
+      "error": "actual does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_baseline_both",
+      "status": "rejected",
+      "error": "baseline does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "partial_quarter",
+      "status": "rejected",
+      "error": "Prediction timestamps must cover every canonical held-out hour exactly once"
+    },
+    {
+      "id": "duplicate",
+      "status": "rejected",
+      "error": "Duplicate prediction timestamps"
+    },
+    {
+      "id": "wrong_split",
+      "status": "rejected",
+      "error": "Prediction outside the frozen July\u2013September held-out period"
+    },
+    {
+      "id": "naive_target_time",
+      "status": "rejected",
+      "error": "Prediction timestamps require explicit timezone offsets"
+    },
+    {
+      "id": "wrong_issue_time",
+      "status": "rejected",
+      "error": "Forecast issue must be 18:00 local on the preceding date"
+    },
+    {
+      "id": "naive_issue_time",
+      "status": "rejected",
+      "error": "Forecast issue timestamps require explicit timezone offsets"
+    },
+    {
+      "id": "nonfinite_prediction",
+      "status": "rejected",
+      "error": "Nonfinite prediction column: predicted"
+    },
+    {
+      "id": "canonical_join_values_and_nominal_cutoff",
+      "status": "passed",
+      "rows": 2208
+    },
+    {
+      "id": "forged_supplied_baseline_source_time",
+      "status": "rejected",
+      "error": "Baseline source time does not match canonical issue-safe control"
+    },
+    {
+      "id": "naive_baseline_source_time",
+      "status": "rejected",
+      "error": "Baseline source timestamps require explicit timezone offsets"
+    },
+    {
+      "id": "explicit_canonical_source_and_issue_utc_offsets",
+      "status": "passed"
+    },
+    {
+      "id": "raw_bom_hash_metrics_and_missing_provenance",
+      "status": "passed",
+      "input_sha256": "dd030487af59982e0b0aa821c307711db5a225375b2f768d13049e55e5413f14",
+      "rows": 2208,
+      "provenance": {
+        "supplied_columns": [
+          "time",
+          "predicted"
+        ],
+        "canonical_join_requested": true,
+        "canonical_fields_added": [
+          "actual",
+          "baseline"
+        ],
+        "issue_provenance_supplied": false,
+        "training_metadata_supplied": false,
+        "source_availability_verified": false,
+        "authority": "Actuals and controls are always checked against retained weather. Missing issue times use the study assumption; training metadata alone does not certify source publication availability."
+      }
+    },
+    {
+      "id": "input_changed_during_evaluation",
+      "status": "passed",
+      "evaluated_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a",
+      "recorded_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a",
+      "file_after_sha256": "f441d99d4d9b9086ca735371e8b9eb383f3a4b2fe68151849948a31f31b5384e",
+      "metrics_equal_original_frozen": true,
+      "original_snapshot_retained": true
+    }
+  ],
+  "existing_tests": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "unittest",
+      "eval.test_evaluation"
+    ],
+    "exit_code": 0,
+    "tests": 28,
+    "output": "Ran 28 tests in 0.502s; OK"
+  },
+  "probe": {
+    "path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/probe.py",
+    "sha256": "83b934be10d9d539542f80ae7c035c8efac3765b85b0965adb502e6b4217dc76",
+    "command": [
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/probe.py"
+    ],
+    "exit_code": 0,
+    "json": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/probe.json",
+    "json_sha256": "e3e11215c28771fccea707ad277b34f0db500080925c999392afce90a5d74032"
+  },
+  "confirmed_behavior": [
+    "Bare time,predicted handoff needs explicit --join-canonical.",
+    "Four combinations of forged supplied actual/baseline are rejected rather than overwritten.",
+    "Canonical truth and latest nominally safe persistence joined exactly for2208 hours.",
+    "Duplicate, partial-quarter, outside-period, naive/wrong issue time and nonfinite inputs rejected.",
+    "Missing issue and training provenance remains false; source availability verification remains false.",
+    "UTF8BOM bytes included in exact manifest hash.",
+    "Complete bare reference reproduces frozen all-scope metrics exactly.",
+    "All returned baseline source times are no later than nominal study issue times; zero publication delay remains a disclosed assumption."
+  ],
+  "limits": "All four identified issues resolved. 17 adversarial checks, three raw-input snapshot checks and 28 evaluation tests passed before the final chart-label-only edit; actual new chart visually checked and final manifest source hash reconciled. This checks nominal study chronology and canonical CSV authority, not a teammate model, original issued forecasts or publication latency.",
+  "initial_reviewed_source_sha256": "e3557ffa1de276bd0bdcc26ea0881b9e0d0742c1cdad9cb1b8b955ae6fea6b9f",
+  "initial_checks": [
+    {
+      "id": "forged_actual_only",
+      "status": "rejected",
+      "error": "actual does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_baseline_only",
+      "status": "rejected",
+      "error": "baseline does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_actual_both",
+      "status": "rejected",
+      "error": "actual does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "forged_baseline_both",
+      "status": "rejected",
+      "error": "baseline does not match canonical truth / safe issue-time persistence"
+    },
+    {
+      "id": "partial_quarter",
+      "status": "rejected",
+      "error": "Prediction timestamps must cover every canonical held-out hour exactly once"
+    },
+    {
+      "id": "duplicate",
+      "status": "rejected",
+      "error": "Duplicate prediction timestamps"
+    },
+    {
+      "id": "wrong_split",
+      "status": "rejected",
+      "error": "Prediction outside the frozen July\u2013September held-out period"
+    },
+    {
+      "id": "naive_target_time",
+      "status": "rejected",
+      "error": "Prediction timestamps require explicit timezone offsets"
+    },
+    {
+      "id": "wrong_issue_time",
+      "status": "rejected",
+      "error": "Forecast issue must be 18:00 local on the preceding date"
+    },
+    {
+      "id": "naive_issue_time",
+      "status": "rejected",
+      "error": "Forecast issue timestamps require explicit timezone offsets"
+    },
+    {
+      "id": "nonfinite_prediction",
+      "status": "rejected",
+      "error": "Nonfinite prediction column: predicted"
+    },
+    {
+      "id": "canonical_join_values_and_nominal_cutoff",
+      "status": "passed",
+      "rows": 2208
+    },
+    {
+      "id": "forged_supplied_baseline_source_time",
+      "status": "accepted_and_silently_overwritten",
+      "supplied": "2027-01-01T00:00:00+02:00",
+      "first_output": "2026-06-30T00:00:00+03:00"
+    },
+    {
+      "id": "raw_bom_hash_metrics_and_missing_provenance",
+      "status": "passed",
+      "input_sha256": "dd030487af59982e0b0aa821c307711db5a225375b2f768d13049e55e5413f14",
+      "rows": 2208,
+      "provenance": {
+        "supplied_columns": [
+          "time",
+          "predicted"
+        ],
+        "canonical_join_requested": true,
+        "canonical_fields_added": [
+          "actual",
+          "baseline"
+        ],
+        "issue_provenance_supplied": false,
+        "training_metadata_supplied": false,
+        "source_availability_verified": false,
+        "authority": "Actuals and controls are always checked against retained weather. Missing issue times use the study assumption; training metadata alone does not certify source publication availability."
+      }
+    },
+    {
+      "id": "input_changed_during_evaluation",
+      "status": "manifest_records_later_bytes_not_evaluated_bytes",
+      "evaluated_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a",
+      "recorded_sha256": "f441d99d4d9b9086ca735371e8b9eb383f3a4b2fe68151849948a31f31b5384e",
+      "file_after_sha256": "f441d99d4d9b9086ca735371e8b9eb383f3a4b2fe68151849948a31f31b5384e",
+      "metrics_equal_original_frozen": true
+    }
+  ],
+  "snapshot_recheck": {
+    "checked_at_utc": "2026-10-01T23:31:09.420622+00:00",
+    "source_sha256_before": "759d48d3bdeb8562bfe1431113a2aa1472d49015616f3e01b574ba42ca3e921a",
+    "source_sha256_after": "759d48d3bdeb8562bfe1431113a2aa1472d49015616f3e01b574ba42ca3e921a",
+    "checks": [
+      {
+        "source": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/predictions.csv",
+        "used_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a",
+        "later_source_sha256": "bb1f8c769556cc52edb2678cece002de651c682fb203c6fd8a61f96827eb7df5",
+        "snapshot": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/evaluation/input-snapshots/0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a.csv",
+        "snapshot_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a"
+      },
+      {
+        "source": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/weather.csv",
+        "used_sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+        "later_source_sha256": "6e77a56f59bab37d7ed14c9024d89ee147968d6125e51cc302115786d51d385b",
+        "snapshot": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/evaluation/input-snapshots/fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262.csv",
+        "snapshot_sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262"
+      },
+      {
+        "source": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/metadata.json",
+        "used_sha256": "f50a8e11b21061b5aaf124581f9bb17702e0bf953c4cfd324afdd3d20132e760",
+        "later_source_sha256": "ecdd0ade0eb38ff75cddc434c9b269331b837e02db146d92d4e39e136cdf6ece",
+        "snapshot": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/evaluation/input-snapshots/f50a8e11b21061b5aaf124581f9bb17702e0bf953c4cfd324afdd3d20132e760.json",
+        "snapshot_sha256": "f50a8e11b21061b5aaf124581f9bb17702e0bf953c4cfd324afdd3d20132e760"
+      }
+    ],
+    "metrics_exactly_equal_frozen": true,
+    "validated_metadata_prediction_hash_uses_evaluated_snapshot": true
+  },
+  "resolved_findings": [
+    {
+      "id": "SUPPLIED_BASELINE_SOURCE_TIME",
+      "priority": "P2",
+      "status": "resolved_and_independently_rechecked",
+      "file": "eval/evaluate.py",
+      "line": 79,
+      "evidence": "All2208 supplied baseline_source_time values2027-01-01T00:00:00+02:00 are accepted and silently replaced by canonical values. Actuals and baseline values remain authoritative, but this supplied timing claim is not checked.",
+      "action": "If baseline_source_time is supplied, require explicit timezone and exact canonical match before replacement, or retain the contradiction as an explicit failed provenance check.",
+      "resolution": "Forged future and naive source times rejected. Exact UTC-equivalent canonical source/issue times accepted."
+    },
+    {
+      "id": "INPUT_IDENTITY_AT_USE",
+      "priority": "P2",
+      "status": "resolved_and_independently_rechecked",
+      "file": "eval/evaluate.py",
+      "line": 278,
+      "evidence": "A copied prediction input was changed during make_charts after scoring. Metrics exactly equal original frozen results, but manifest hashes the changed input: original0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a, recordedf441d99d4d9b9086ca735371e8b9eb383f3a4b2fe68151849948a31f31b5384e.",
+      "action": "Capture the raw bytes/hash used to parse each input at read time, or reject a changed input before writing the manifest. Metadata hash checks must reference the same prediction bytes.",
+      "resolution": "Prediction, weather and metadata bytes captured before parsing. Controlled changes to all three paths retain evaluated original hashes and original raw snapshots. Metadata prediction hash checked against the captured prediction bytes."
+    },
+    {
+      "id": "UNREVIEWED_THRESHOLD_SELECTION",
+      "priority": "P2",
+      "status": "resolved_and_independently_rechecked",
+      "file": "eval/evaluate.py",
+      "line": 230,
+      "evidence": "External CSV without metadata is correctly marked unreviewed, yet threshold_selection says Fixed supplied scenario threshold; no test tuning. No threshold-selection history is available for that handoff.",
+      "action": "Label missing selection provenance unreviewed. Distinguish a supplied metadata declaration from independently verified selection chronology.",
+      "resolution": "Missing threshold-selection history explicitly labeled selection provenance unreviewed; no no-test-tuning assertion is made."
+    },
+    {
+      "id": "CHART_ISSUE_LABEL",
+      "priority": "P2",
+      "status": "resolved_and_independently_visually_checked",
+      "file": "eval/evaluate.py",
+      "line": 189,
+      "evidence": "The standalone forecast-first-test-day PNG title says issued the prior day at18:00 even for a bare external handoff without issue provenance. JSON correctly treats that time as a nominal study assumption and source availability as unverified.",
+      "action": "Change standalone chart wording to nominal study issue time; do not imply actual historical issuance.",
+      "resolution": "Current source and actual regenerated forecast-first-test-day PNG explicitly say nominal study issue: prior-day 18:00."
+    }
+  ],
+  "findings": [],
+  "rechecked_at_utc": "2026-10-01T23:32:33.200475+00:00",
+  "initial_existing_tests": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "unittest",
+      "eval.test_evaluation"
+    ],
+    "exit_code": 0,
+    "tests": 26,
+    "output": "Ran26 tests in0.368s; OK"
+  },
+  "recheck_probe": {
+    "path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/probe-v2.py",
+    "sha256": "e9d44ac04e58e8256862db57b70f7bb3d165602e53a78bef889a087c5f41ca35",
+    "command": [
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/probe-v2.py"
+    ],
+    "exit_code": 0,
+    "json": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/v2/probe.json",
+    "json_sha256": "1bcd9a4c7a10a54ac2041a4d182888ebbe81b2d3631137b72df00b7d343c7d3b"
+  },
+  "snapshot_probe": {
+    "path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshot-probe.py",
+    "sha256": "80e4b20c1c377574b5a048e87fcc08743709ed9cef8d6ad100e48dfaa9af1b04",
+    "command": [
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshot-probe.py"
+    ],
+    "exit_code": 0,
+    "json": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-independent-review/snapshots/check.json",
+    "json_sha256": "4f4fd30e7bee2a41e8b843d1f9d924d7bebc7598e057f4b6fb4b44087098d30d"
+  },
+  "behavior_probe_source_sha256": "759d48d3bdeb8562bfe1431113a2aa1472d49015616f3e01b574ba42ca3e921a",
+  "final_reconciled_at_utc": "2026-10-01T23:36:55.037071+00:00",
+  "final_artifact_check": {
+    "manifest_source_hash_matches_current": true,
+    "default_evaluation_rows": 2208,
+    "chart_visually_checked": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/results/charts/forecast_first_test_day.png",
+    "chart_sha256": "a8f2bd6079df042a3518362b9ae67316dcac2c6f3cbbac3a02ae8a69c65b1e30",
+    "latest_root_run": "Parent reports final full evaluation exit0 and 28 tests passed after chart-label-only change. Child did not repeat the suite without a new concern."
+  }
+}

@@ -1,0 +1,49 @@
+1
+00:00:00,300 --> 00:00:04,240
+AquaShift. Solar power into water. Water stored for later.
+
+2
+00:00:05,300 --> 00:00:12,298
+When solar would otherwise be curtailed, the idea is to use
+it for desalination, where plant and grid conditions allow.
+
+3
+00:00:14,300 --> 00:00:20,202
+Make fresh water during that window. Store it in
+a tank. Use the water later, when people need it.
+
+4
+00:00:23,300 --> 00:00:29,498
+That's the concept. These are illustrations. No real
+curtailed solar has been recovered by this prototype.
+
+5
+00:00:32,300 --> 00:00:38,194
+Here is the working draft. Choose a date, change
+the tank size, and inspect the proposed schedule.
+
+6
+00:00:42,300 --> 00:00:48,607
+Same water. Same energy. In this scenario, the
+cost falls because of the assumed hourly prices.
+
+7
+00:00:51,300 --> 00:00:56,562
+With less storage, there is less room to shift production. Water supply still comes first.
+
+8
+00:00:59,300 --> 00:01:05,206
+In average error, the reference loses to the stronger
+simple control. Added AI value is unproven.
+
+9
+00:01:09,300 --> 00:01:14,318
+Sites tests an irrigation budget and an injected leak. The meter data is simulated.
+
+10
+00:01:17,300 --> 00:01:23,449
+Next: real grid signals, plant limits, water demand and tariffs. Then test the benefit.
+
+11
+00:01:24,300 --> 00:01:29,646
+Loucas's concept. Stefanos's expanded roadmap. An AI-assisted draft.

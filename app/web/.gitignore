@@ -1,0 +1,5 @@
+.vercel
+.npm-cache
+vendor/*.tgz
+node_modules
+.env*

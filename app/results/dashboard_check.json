@@ -1,0 +1,62 @@
+{
+  "command": ".venv/bin/python tests/test_dashboard.py",
+  "finished_utc": "2026-10-01T22:12:13.473776+00:00",
+  "input_sha256": {
+    "data/test_predictions.csv": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+    "data/paphos_weather.csv": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+    "results/metrics.json": "8c3958d81d26d41b6c03df39d1ab7d1595dcfdb2b080b4c39e93cbe78e275194",
+    "app/app.py": "df6384240ac3a1103b7dae51bf49803c28b664c71857b98731afa56690365acb",
+    "model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+    "model/sites.py": "fdcc2be7d08c28db802753bac8fc710ee6adaed5a99e000e153a376da456af4c"
+  },
+  "checks": [
+    {
+      "case": "default evidence dashboard",
+      "status": "PASS",
+      "metrics": {
+        "Illustrative cost reduction": "\u20ac331",
+        "Energy in sunny hours": "100.0%",
+        "Water produced": "2,880 m\u00b3",
+        "Tank safety violations": "0",
+        "Reference model MAE": "8.8 W/m\u00b2",
+        "Persistence MAE": "7.6 W/m\u00b2",
+        "Reference model RMSE": "17.9 W/m\u00b2",
+        "Evaluation samples": "2,208",
+        "Precision": "98.2%",
+        "Recall": "99.0%",
+        "Weather-based irrigation": "26.0 m\u00b3",
+        "Fixed-timer comparison": "+13.3%",
+        "Daily evapotranspiration": "6.32 mm",
+        "Flagged fixture hours": "4"
+      },
+      "warnings": [
+        "The reference model does not beat the stronger persistence control: MAE 8.81 vs 7.64 W/m\u00b2. The dashboard and scheduler work; added AI forecasting benefit is unproven. This is useful evaluation feedback for Stefanos\u2019s next model.",
+        "Scenario alert: unusual night flow. A site operator would inspect the meter and pipework; this fixture sends no external notification."
+      ]
+    },
+    {
+      "case": "small tank",
+      "status": "PASS",
+      "tank_capacity_m3": 500,
+      "illustrative_cost_reduction": "\u20ac112",
+      "safety_violations": 0
+    },
+    {
+      "case": "no-leak control",
+      "status": "PASS",
+      "alerts": 0
+    },
+    {
+      "case": "last complete held-out date",
+      "status": "PASS",
+      "date": "2026-09-30"
+    },
+    {
+      "case": "insufficient production capacity",
+      "status": "PASS",
+      "message": "This scenario cannot be scheduled: infeasible: demand 120 m\u00b3/h exceeds unit capacity 100; equal terminal storage forbids borrowing water",
+      "plan_displayed": false
+    }
+  ],
+  "status": "PASS"
+}

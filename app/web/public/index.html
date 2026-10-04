@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AquaShift — Solar to water</title><meta name="description" content="Use otherwise curtailed solar to make water for later. Explore AquaShift’s plan, forecast and water evidence workspace."><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preload" href="fonts/Inter-Latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="workspace.css"><link rel="stylesheet" href="typography.css"><link rel="stylesheet" href="home.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="mobile.css"><script defer src="vendor/papaparse.min.js"></script><script type="module" src="workspace.js"></script></head>
+<body data-view="home" data-ready="false">
+<div id="product-home"><div id="home" class="product-home">
+<a class="home-skip" href="#home-content">Skip to content</a>
+<header class="home-header"><div class="home-wrap home-header-inner">
+ <a class="home-brand" href="#home" aria-label="AquaShift home"><img src="mark.svg" width="29" height="29" alt="">AquaShift</a>
+ <nav class="home-nav" aria-label="Product"><a href="#home-purpose">Overview</a><a href="#home-workflow">Try a plan</a><a href="#home-faq">Questions</a></nav>
+ <details id="home-menu" class="home-menu"><summary aria-label="Product menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></summary><nav aria-label="Product sections"><a href="#home-purpose">Overview</a><a href="#home-workflow">Try a plan</a><a href="#home-faq">Questions</a><button type="button" class="home-menu-open" data-route="reviews">Open workspace</button></nav></details>
+ <button class="home-button home-button-small" type="button" data-route="reviews">Open workspace <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></button>
+</div></header>
+<main id="home-content" class="home-main" tabindex="-1">
+ <section id="home-purpose" class="home-hero home-wrap" aria-labelledby="home-title">
+  <div class="home-hero-copy"><h1 id="home-title">Solar now.<br>Water later.</h1><p class="home-hero-description">Use otherwise-curtailed solar to make water for later. Test the production plan against demand, outages and storage limits.</p></div>
+  <figure class="home-hero-graphic"><img src="solar-water.svg" width="1100" height="600" alt="Solar panels supply a desalination unit that fills a water storage tank." fetchpriority="high"><figcaption><span>Solar supply</span><span>Desalination</span><span>Water storage</span></figcaption></figure>
+ </section>
+ <section id="home-workflow" class="home-workspace home-wrap" aria-labelledby="home-workspace-title">
+  <div class="home-preview-heading"><h2 id="home-workspace-title">Test a reference plan.</h2></div>
+  <section id="home-demo" class="home-demo" aria-label="Interactive reference plan">
+   <header class="home-demo-header"><span class="home-demo-scope">Simulation</span><span>15 Jul 2026</span><span>4,000 m³ tank</span></header>
+   <fieldset class="home-demo-controls"><legend>Test the same plan</legend><label><input type="radio" name="home-demo-case" value="original" checked><span>Original</span></label><label><input type="radio" name="home-demo-case" value="demand"><span>+10% demand</span></label><label><input type="radio" name="home-demo-case" value="outage"><span>2h outage</span></label></fieldset>
+   <div class="home-demo-result" aria-live="polite" aria-atomic="true"><div><h3 id="home-demo-outcome">Loading reference</h3><p id="home-demo-detail">A fixed production plan, tested against changing conditions.</p></div><dl><dt>Lowest inventory</dt><dd id="home-demo-minimum">—</dd></dl></div>
+   <div class="home-demo-chart-heading"><span>Water inventory (m³)</span><span>Cyprus time</span></div><div id="home-demo-chart" class="home-demo-chart" role="img" aria-label="Reference tank inventory through the day"></div>
+   <div class="home-demo-legend" aria-hidden="true"><span class="home-demo-tested">Selected conditions</span><span class="home-demo-reference">Original plan</span><span class="home-demo-reserve">800 m³ reserve</span></div>
+   <div class="home-demo-bottom"><details class="home-demo-source"><summary>Reference and hourly values</summary><p>Frozen reference production; synthetic water demand. No plant connection or measured solar recovery. Production stays fixed except during the selected outage.</p><p>Initial water 2,000 m³. Reserve 800 m³. End-of-day target 2,000 m³. The same hourly replay runs in the full workspace.</p><p id="home-demo-source"></p><div class="home-demo-table" tabindex="0" role="region" aria-label="Hourly simulated water inventory"><table><caption>Hourly boundary inventory (m³), Cyprus time</caption><thead><tr><th scope="col">Time</th><th scope="col">Original</th><th scope="col">Selected</th></tr></thead><tbody id="home-demo-values"></tbody></table></div></details><button id="home-demo-open" class="home-button" type="button">Open this review <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></button></div>
+   <p id="home-demo-error" class="home-demo-error" role="alert" hidden></p>
+  </section>
+
+  <div class="home-capabilities" aria-label="Workspace tasks">
+   <button class="home-capability" type="button" data-route="data" data-intake="handoff"><span><strong>Bring your files</strong><small>Review supplied forecasts and operating plans.</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></button>
+  </div>
+ </section>
+ <section id="home-faq" class="home-faq home-wrap" aria-labelledby="home-faq-title"><div><h2 id="home-faq-title">Before you use it.</h2></div><div class="home-questions">
+  <details><summary>What can I do in AquaShift?</summary><p>Review supplied plans, test water delivery and compare forecasts. Import observations, keep review notes and export the evidence.</p></details>
+  <details><summary>Is a plant connected?</summary><p>No. The workspace reviews supplied files and modeled scenarios. Reference examples use historical weather and synthetic inputs.</p></details>
+  <details><summary>Who builds the forecasts and schedules?</summary><p>Stefanos leads forecasting and scheduling. This workspace evaluates the supplied outputs. It sends no commands to a plant.</p></details>
+  <details><summary>Does this prove recovered solar electricity?</summary><p>No. Recovery needs plant-specific eligibility and independent measurements. The workspace shows modeled results under declared assumptions.</p></details>
+  <details><summary>Where do my files go?</summary><p>They stay in this browser. Export a review to share your results and notes.</p></details>
+ </div></section>
+</main>
+<footer class="home-footer"><div class="home-wrap home-footer-inner"><a class="home-brand" href="#home" aria-label="AquaShift home"><img src="mark.svg" width="25" height="25" alt="">AquaShift</a><p>Concept by Loucas Louka<br>Forecasting and scheduling by Stefanos</p><a href="#home-purpose">Made for Paphos</a></div></footer>
+</div></div>
+<a class="skip-link" href="#views">Skip to workspace</a>
+<header class="appbar">
+ <button id="workspace-toggle" aria-label="Open workspace navigation" aria-expanded="false" aria-controls="workspace-navigation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button>
+ <a class="wordmark" href="#home" aria-label="AquaShift home"><img src="mark.svg" width="25" height="25" alt="" aria-hidden="true">AquaShift</a>
+ <span class="project-name">Paphos water systems</span>
+ <div class="appbar-end"><span class="environment">Simulation</span><details class="about"><summary aria-label="About this workspace">About</summary><div><strong>Solar to water</strong><p>Use otherwise curtailed solar to make drinking water. Store water for later.</p><dl><dt>Original concept</dt><dd>Loucas Louka</dd><dt>Roadmap</dt><dd>Stefanos</dd></dl><p>This reference uses historical and synthetic inputs. No plant is connected; recovered electricity has not been measured.</p><p>Files and review records stay in this browser.</p></div></details></div>
+</header>
+<div class="shell">
+ <aside id="workspace-navigation" class="navigation">
+  <div class="project-label">Workspace</div>
+  <nav aria-label="Workspace">
+   <button data-workspace="plans" aria-expanded="false" aria-controls="navigation-plans"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h14v14H3zM6 7h8M6 11h6"/></svg>Plans</button>
+   <div id="navigation-plans" class="navigation-group" data-navigation-group="plans" hidden>
+    <button data-view="reviews">Review</button>
+    <button data-view="operations">Schedule</button>
+    <button data-view="resilience">Test conditions</button>
+    <button data-view="scenarios">Compare storage</button>
+   </div>
+   <button data-workspace="forecasts" aria-expanded="false" aria-controls="navigation-forecasts"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 17V9m7 8V3m7 14V6M1 17h18"/></svg>Forecasts</button>
+   <div id="navigation-forecasts" class="navigation-group" data-navigation-group="forecasts" hidden>
+    <button data-view="evaluation">Compare forecasts</button>
+    <button data-view="data">Import files</button>
+   </div>
+   <button data-workspace="observations" aria-expanded="false" aria-controls="navigation-observations"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14v11H3zM7 2v8m6-8v8"/></svg>Observations</button>
+   <div id="navigation-observations" class="navigation-group" data-navigation-group="observations" hidden>
+    <button data-view="pilot">Import observations</button>
+    <button data-view="alerts">Site checks</button>
+   </div>
+   <button data-workspace="reference" aria-expanded="false" aria-controls="navigation-reference"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h6l1 2h7v12H3zM6 9h8m-8 4h6"/></svg>Reference</button>
+   <div id="navigation-reference" class="navigation-group" data-navigation-group="reference" hidden>
+    <button data-view="overview">System</button>
+    <button data-view="evidence">Sources</button>
+   </div>
+  </nav>
+  <div class="sidebar-bottom"><span>Historical reference</span><span>July–September 2026</span></div>
+ </aside>
+ <main>
+  <header class="topbar"><div class="workspace-heading"><p id="breadcrumb" class="workspace-path">Paphos</p><h1 id="view-title">Plan review</h1></div><div class="workspace-header-tools"><button id="workspace-handoff" data-route="data" data-intake="handoff">Open handoff</button><p id="status" role="status" aria-live="polite">Loading reference data…</p></div></header>
+  <section id="workspace-loader" class="workspace-loader" aria-label="Opening AquaShift workspace" role="status" aria-live="polite"><a class="workspace-load-home" href="#home">← Home</a><img src="mark.svg" width="48" height="48" alt=""><h2>AquaShift</h2><p id="workspace-load-detail">Loading workspace</p><progress aria-label="Loading workspace"></progress></section>
+  <details id="workspace-case-row" class="workspace-case-row"><summary><span id="workspace-case-label">Selected plan</span><span>Change plan</span></summary>
+  <section class="context" aria-label="Workspace context">
+   <label class="context-day">Day<select id="date" disabled></select></label>
+   <label class="context-tank">Tank<select id="tank" disabled></select></label>
+   <label class="context-source">Plan<select id="plan-source" disabled><option value="frozen">Frozen reference</option><option value="imported" disabled>Imported candidate</option></select></label>
+   <label id="workspace-hour-control" class="hour-control">Hour <output id="hour-label">13:00</output><input id="hour" type="range" min="0" max="23" step="1" value="13" aria-label="Inspect simulation hour"></label>
+   <button id="download" disabled>Export schedule</button>
+  </section>
+  </details>
+  <div id="views" tabindex="-1"></div>
+  <p id="export-status" class="micro" hidden role="status" aria-live="polite"></p>
+  <details id="export-preview-panel" class="panel" hidden><summary>Last export</summary><p id="export-meta" class="micro"></p><label>UTF-8 content<textarea id="export-preview" rows="12" readonly spellcheck="false"></textarea></label><button id="select-export">Select content</button><p class="micro">If the download does not start, copy this content and save it as a file.</p></details>
+  <footer><span>Weather: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>, ECMWF, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></span></footer>
+ </main>
+</div>
+<noscript>JavaScript is required to inspect the reference data.</noscript>
+</body></html>

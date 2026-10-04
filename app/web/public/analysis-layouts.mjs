@@ -1,0 +1,44 @@
+import {roadmapHandoffTemplate} from './roadmap-handoff-ui.mjs';
+
+const tabs=(kind,label,items)=>`<div class="task-tabs" role="tablist" aria-label="${label}">${items.map(([value,name],i)=>`<button id="${kind}-task-${value}" type="button" role="tab" data-${kind}-task="${value}" aria-controls="${kind}-pane-${value}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${name}</button>`).join('')}</div>`;
+const plot=(id,label)=>`<div id="${id}" class="chart" role="region" tabindex="0" aria-label="${label}"></div>`;
+
+export const dataTemplate=`<div class="analysis-workbench">
+${tabs('analysis','Input tasks',[['forecast','Forecast'],['plan','Schedule'],['handoff','Roadmap'],['reference','Reference']])}
+<section id="analysis-pane-forecast" class="task-pane data-intake" data-analysis-pane="forecast" role="tabpanel" aria-labelledby="analysis-task-forecast" tabindex="0">
+ <header class="result-heading"><h2>Forecast input</h2><p class="subtle">Evaluate Stefanos’s prediction CSV against matching reference hours. Files stay in this browser.</p></header>
+ <div class="inline-controls"><label class="file-label">Prediction CSV<input id="handoff-file" type="file" accept=".csv,text/csv"></label><button id="download-template" type="button">Export reference CSV</button></div>
+ <p id="import-status" role="status">No handoff imported.</p>
+ <section aria-label="Forecast validation"><header class="result-heading"><h2>Validation findings</h2><button id="download-validation" type="button" disabled>Export validation</button></header><div class="table-wrap" id="validation-table"><p class="subtle">Choose a prediction file to inspect its timestamps and values.</p></div><details><summary>Coverage details</summary><div class="kpis" id="validation-kpis"></div></details></section>
+ <details><summary>CSV requirements and evaluation scope</summary><p>Required: time, predicted. ISO times need Z or an offset. Radiation values must be 0–2,000 W/m². Optional actual and baseline must match retained data. Optional forecast_issue_time and baseline_source_time must match retained issue/control timestamps. Unsupported columns block the file. Optional cloud_cover is ignored; diagnostics use retained weather.</p><p>Matching rows only. No fitting occurs here; validation cannot certify training or feature timing.</p></details>
+ <details><summary>Model review notes</summary><label>Model or version<input id="model-version" maxlength="120" placeholder="Optional version identifier"></label><label>Training review<select id="training-review"><option>Not reviewed</option><option>Metadata inspected; questions remain</option><option>Reviewer reports separate training evidence</option></select></label><label>Feature timing review<select id="timing-review"><option>Not reviewed</option><option>Metadata inspected; questions remain</option><option>Reviewer reports issue-safe feature evidence</option></select></label><label>Evidence and questions<textarea id="model-review-note" maxlength="2000" rows="3"></textarea></label><p class="micro">Manual statements are recorded, not automatically certified. New files reset these review states.</p></details>
+</section>
+<section id="analysis-pane-plan" class="task-pane data-intake" data-analysis-pane="plan" role="tabpanel" aria-labelledby="analysis-task-plan" tabindex="0" hidden>
+ <header class="result-heading"><h2>Plan input</h2><p class="subtle">Check a 24-hour candidate against the retained fixture.</p></header>
+ <div id="data-plan-context"></div>
+ <div class="inline-controls"><label class="file-label">Schedule CSV<input id="schedule-file" type="file" accept=".csv,text/csv"></label><button id="download-schedule-template" type="button">Export current plan CSV</button></div>
+ <p id="schedule-import-status" role="status">No candidate imported.</p>
+ <section aria-label="Candidate validation"><header class="result-heading"><h2>Candidate validation</h2><button id="download-schedule-validation" type="button" disabled>Export plan validation</button></header><div id="schedule-validation"></div><button id="inspect-candidate" type="button" disabled>Inspect imported candidate</button></section>
+ <details><summary>CSV requirements and supported fields</summary><p>Required: time, production_m3. Exactly one complete retained day. Optional tank_capacity_m3; otherwise the selected tank is used. Supplied demand, storage and prices must match the fixture. Unsupported columns block the file. Alternative plant assumptions require a separate matched fixture.</p><p>Supported columns: time, production_m3, tank_capacity_m3, demand_m3, storage_start_m3, storage_end_m3, storage_m3, assumed_price_eur_mwh, safety_minimum_m3, unit_capacity_m3_hour.</p><p>Use “Export current plan CSV” for a file that can be imported here; the full audit export includes additional descriptive columns.</p></details>
+ <details><summary>Plan review notes</summary><label>Method or version<input id="plan-method" maxlength="120"></label><label>Decision timing review<select id="plan-timing"><option>Not reviewed</option><option>Metadata inspected; questions remain</option><option>Reviewer reports issue-safe decision evidence</option></select></label><label>Evidence and questions<textarea id="plan-review-note" rows="3" maxlength="2000"></textarea></label><p class="micro">Metadata is a reviewer statement, not proof of optimization or authorship.</p></details>
+ <details><summary>Fixture limits</summary><p>Unit 500 m³/h, demand 120 m³/h, reserve 20%, start/end 50%; no ramps or grid authority. An accepted candidate is still a simulation.</p></details>
+</section>
+<section id="analysis-pane-handoff" class="task-pane" data-analysis-pane="handoff" role="tabpanel" aria-labelledby="analysis-task-handoff" tabindex="0" hidden>${roadmapHandoffTemplate}</section>
+<section id="analysis-pane-reference" class="task-pane" data-analysis-pane="reference" role="tabpanel" aria-labelledby="analysis-task-reference" tabindex="0" hidden>
+ <header class="result-heading"><h2>Reference data</h2></header><div id="data-health"></div><details><summary>Data identity and provenance</summary><div id="provenance"></div></details>
+</section></div>`;
+
+export const evaluationTemplate=`<div class="analysis-workbench">
+<div class="inline-controls forecast-toolbar"><div id="forecast-context"></div><label>Input<select id="evaluation-source"><option value="frozen">Frozen reference model</option><option value="imported" disabled>Imported handoff</option></select></label><label>Hours<select id="evaluation-hours"><option value="all">All matching hours</option><option value="daylight">Daylight, reference &gt; 20 W/m²</option></select></label><button id="download-feedback" type="button">Export feedback</button></div>
+<p class="subtle" id="evaluation-scope"></p>
+<section aria-label="Forecast comparison">${plot('forecast-chart','Historical radiation reference and three forecast controls')}</section>
+<div class="kpis" id="evaluation-kpis"></div><p class="micro" id="evaluation-note"></p>
+${tabs('diagnostic','Forecast diagnostics',[['hourly','Hourly error'],['monthly','Monthly error'],['conditions','Conditions'],['timing','Timing']])}
+<section id="diagnostic-pane-hourly" class="task-pane" data-diagnostic-pane="hourly" role="tabpanel" aria-labelledby="diagnostic-task-hourly" tabindex="0"><header class="result-heading"><h2>Error by hour</h2></header>${plot('hour-error-chart','Model and persistence error by hour')}</section>
+<section id="diagnostic-pane-monthly" class="task-pane" data-diagnostic-pane="monthly" role="tabpanel" aria-labelledby="diagnostic-task-monthly" tabindex="0" hidden><header class="result-heading"><h2>Error by month</h2></header>${plot('month-error-chart','Model and persistence error by month')}</section>
+<section id="diagnostic-pane-conditions" class="task-pane" data-diagnostic-pane="conditions" role="tabpanel" aria-labelledby="diagnostic-task-conditions" tabindex="0" hidden>
+ <header class="result-heading"><h2>Weather diagnostics</h2></header><div class="table-wrap" id="weather-diagnostics"></div><details><summary>Diagnostic definitions</summary><p id="weather-diagnostics-scope"></p></details>
+ <details><summary>High-radiation classification</summary><div id="classification"></div><p class="micro">Threshold 600 W/m². Weather classification only. A sunny hour is not a measured electricity surplus event.</p></details>
+</section>
+<section id="diagnostic-pane-timing" class="task-pane" data-diagnostic-pane="timing" role="tabpanel" aria-labelledby="diagnostic-task-timing" tabindex="0" hidden><header class="result-heading"><h2>Forecast and control timing</h2></header><div id="diagnostic-time-control"></div><div id="evaluation-timing"></div><p class="micro">Nominal information cutoff on reconstructed weather; provider publication delay and model feature timing require separate review.</p></section>
+</div>`;

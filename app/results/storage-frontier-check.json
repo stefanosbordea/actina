@@ -1,0 +1,299 @@
+{
+  "checked_at_utc": "2026-10-02T11:45:29.688Z",
+  "command": "node --test web/test_storage_frontier.mjs",
+  "exit_status": 0,
+  "node": "v25.9.0",
+  "tests": 12,
+  "passed": 12,
+  "failed": 0,
+  "input_and_implementation_sha256": {
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "web/public/research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+    "web/public/core.mjs": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+    "web/public/storage-frontier.mjs": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+    "web/test_storage_frontier.mjs": "5ca670d614ef0718752d68293fb1a06d8001165c2d63a43e8013f56a6e5feab1",
+    "results/curtailment-overlap.json": "f8af35d3fc04fbd52c65c3d83cc9391c3afc535246fdb46664ecd5b64bd690dc",
+    "results/curtailment-overlap.csv": "cf88406f271dc9c0970561fe45e740e1521d9e4806deaa2ddd9e714c542e82b2",
+    "model/train.py": "21118d488c17314239702b077c2d5192e2b287492b51a2fd4f673877e76354d5",
+    "model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048"
+  },
+  "matched_days": 62,
+  "matched_cases": 310,
+  "excluded_no_report_days": 30,
+  "tanks": [
+    {
+      "tank_m3": 500,
+      "matched_days": 62,
+      "window_load_kwh": {
+        "reference": 195228,
+        "persistence": 194990,
+        "price_only": 172788,
+        "flat": 153204
+      },
+      "reference_cost_eur": 74918.32000000002,
+      "flat_cost_eur": 81832.56000000001,
+      "reference_minus": {
+        "persistence": {
+          "total_kwh": 238,
+          "mean_kwh": 3.838709677419355,
+          "min_daily_kwh": -1292,
+          "max_daily_kwh": 969,
+          "more_days": 3,
+          "tied_days": 56,
+          "less_days": 3
+        },
+        "price_only": {
+          "total_kwh": 22440,
+          "mean_kwh": 361.93548387096774,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 1343,
+          "more_days": 50,
+          "tied_days": 12,
+          "less_days": 0
+        },
+        "flat": {
+          "total_kwh": 42024,
+          "mean_kwh": 677.8064516129032,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 1360,
+          "more_days": 57,
+          "tied_days": 5,
+          "less_days": 0
+        }
+      }
+    },
+    {
+      "tank_m3": 1000,
+      "matched_days": 62,
+      "window_load_kwh": {
+        "reference": 267546,
+        "persistence": 266679,
+        "price_only": 216818,
+        "flat": 153204
+      },
+      "reference_cost_eur": 68897.87200000003,
+      "flat_cost_eur": 81832.56000000001,
+      "reference_minus": {
+        "persistence": {
+          "total_kwh": 867,
+          "mean_kwh": 13.983870967741936,
+          "min_daily_kwh": -1156,
+          "max_daily_kwh": 1156,
+          "more_days": 2,
+          "tied_days": 59,
+          "less_days": 1
+        },
+        "price_only": {
+          "total_kwh": 50728,
+          "mean_kwh": 818.1935483870968,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 2159,
+          "more_days": 52,
+          "tied_days": 10,
+          "less_days": 0
+        },
+        "flat": {
+          "total_kwh": 114342,
+          "mean_kwh": 1844.225806451613,
+          "min_daily_kwh": 34,
+          "max_daily_kwh": 2720,
+          "more_days": 62,
+          "tied_days": 0,
+          "less_days": 0
+        }
+      }
+    },
+    {
+      "tank_m3": 2000,
+      "matched_days": 62,
+      "window_load_kwh": {
+        "reference": 410584,
+        "persistence": 410074,
+        "price_only": 337093,
+        "flat": 153204
+      },
+      "reference_cost_eur": 64985.42400000009,
+      "flat_cost_eur": 81832.56000000001,
+      "reference_minus": {
+        "persistence": {
+          "total_kwh": 510,
+          "mean_kwh": 8.225806451612904,
+          "min_daily_kwh": -136,
+          "max_daily_kwh": 646,
+          "more_days": 1,
+          "tied_days": 60,
+          "less_days": 1
+        },
+        "price_only": {
+          "total_kwh": 73491,
+          "mean_kwh": 1185.3387096774193,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 1564,
+          "more_days": 52,
+          "tied_days": 10,
+          "less_days": 0
+        },
+        "flat": {
+          "total_kwh": 257380,
+          "mean_kwh": 4151.290322580645,
+          "min_daily_kwh": 1615,
+          "max_daily_kwh": 5168,
+          "more_days": 62,
+          "tied_days": 0,
+          "less_days": 0
+        }
+      }
+    },
+    {
+      "tank_m3": 4000,
+      "matched_days": 62,
+      "window_load_kwh": {
+        "reference": 448154,
+        "persistence": 448970,
+        "price_only": 448154,
+        "flat": 153204
+      },
+      "reference_cost_eur": 61317.50399999993,
+      "flat_cost_eur": 81832.56000000001,
+      "reference_minus": {
+        "persistence": {
+          "total_kwh": -816,
+          "mean_kwh": -13.161290322580646,
+          "min_daily_kwh": -816,
+          "max_daily_kwh": 0,
+          "more_days": 0,
+          "tied_days": 61,
+          "less_days": 1
+        },
+        "price_only": {
+          "total_kwh": 0,
+          "mean_kwh": 0,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 0,
+          "more_days": 0,
+          "tied_days": 62,
+          "less_days": 0
+        },
+        "flat": {
+          "total_kwh": 294950,
+          "mean_kwh": 4757.258064516129,
+          "min_daily_kwh": 2091,
+          "max_daily_kwh": 6630,
+          "more_days": 62,
+          "tied_days": 0,
+          "less_days": 0
+        }
+      }
+    },
+    {
+      "tank_m3": 8000,
+      "matched_days": 62,
+      "window_load_kwh": {
+        "reference": 450806,
+        "persistence": 451214,
+        "price_only": 450806,
+        "flat": 153204
+      },
+      "reference_cost_eur": 61317.50399999993,
+      "flat_cost_eur": 81832.56000000001,
+      "reference_minus": {
+        "persistence": {
+          "total_kwh": -408,
+          "mean_kwh": -6.580645161290323,
+          "min_daily_kwh": -408,
+          "max_daily_kwh": 0,
+          "more_days": 0,
+          "tied_days": 61,
+          "less_days": 1
+        },
+        "price_only": {
+          "total_kwh": 0,
+          "mean_kwh": 0,
+          "min_daily_kwh": 0,
+          "max_daily_kwh": 0,
+          "more_days": 0,
+          "tied_days": 62,
+          "less_days": 0
+        },
+        "flat": {
+          "total_kwh": 297602,
+          "mean_kwh": 4800.032258064516,
+          "min_daily_kwh": 2499,
+          "max_daily_kwh": 6630,
+          "more_days": 62,
+          "tied_days": 0,
+          "less_days": 0
+        }
+      }
+    }
+  ],
+  "marginal": [
+    {
+      "from_tank_m3": 500,
+      "to_tank_m3": 1000,
+      "additional_capacity_m3": 500,
+      "matched_days": 62,
+      "window_load_delta_kwh": {
+        "reference": 72318,
+        "persistence": 71689,
+        "price_only": 44030,
+        "flat": 0
+      },
+      "reference_cost_change_eur": -6020.447999999989
+    },
+    {
+      "from_tank_m3": 1000,
+      "to_tank_m3": 2000,
+      "additional_capacity_m3": 1000,
+      "matched_days": 62,
+      "window_load_delta_kwh": {
+        "reference": 143038,
+        "persistence": 143395,
+        "price_only": 120275,
+        "flat": 0
+      },
+      "reference_cost_change_eur": -3912.4479999999458
+    },
+    {
+      "from_tank_m3": 2000,
+      "to_tank_m3": 4000,
+      "additional_capacity_m3": 2000,
+      "matched_days": 62,
+      "window_load_delta_kwh": {
+        "reference": 37570,
+        "persistence": 38896,
+        "price_only": 111061,
+        "flat": 0
+      },
+      "reference_cost_change_eur": -3667.9200000001583
+    },
+    {
+      "from_tank_m3": 4000,
+      "to_tank_m3": 8000,
+      "additional_capacity_m3": 4000,
+      "matched_days": 62,
+      "window_load_delta_kwh": {
+        "reference": 2652,
+        "persistence": 2244,
+        "price_only": 2652,
+        "flat": 0
+      },
+      "reference_cost_change_eur": 0
+    }
+  ],
+  "scope": "Retrospective load during reported Group 1 windows, assuming uniform within-hour production and Cyprus civil time. Temporal coincidence is not recovered electricity, local renewable availability or permission to operate. Missing reports remain unknown. No forecast fitting or schedule optimization occurs.",
+  "limitations": "Only the five retained tank cases are compared. Each starts and ends half full, so absolute starting inventory changes with tank size. Costs use illustrative clock tariffs, with no capital, maintenance or plant feasibility model. This is not an investment optimum. Persistence and price-only window totals are retained scalar controls; their hourly plans are not re-audited here. Input hashes identify caller-supplied bytes, not source authentication.",
+  "checks": [
+    "Independent analytic two-day fixture",
+    "Parity with retained 62-day / five-tank controls",
+    "Raw input SHA-256 identities",
+    "Fractional windows reconciled from clock intervals",
+    "Explicit EMPTY and absent-report selection",
+    "Invalid or incomplete paired controls blocked",
+    "Water, energy, reserve, capacity, terminal inventory and cost audit",
+    "Strict ISO calendar and exact-hour validation before Cyprus civil-time alignment",
+    "Input immutability",
+    "No model fitting or scheduling"
+  ],
+  "test_output": "✔ 62 matched days retain all four controls and exclude unknown September (177.006458ms)\n✔ independent two-day arithmetic preserves signed differences and partial hours (58.450375ms)\n✔ date subsets use exactly paired cases, independent of caller ordering (31.61675ms)\n✔ empty and wholly unreported selections stay explicit, never zero benefit (0.760791ms)\n✔ a retained report with no windows is a zero timing result, not missing data (22.802ms)\n✔ missing, duplicated or nonfinite paired controls fail closed (132.703ms)\n✔ water balance, terminal storage, unit capacity and energy cannot drift silently (151.6305ms)\n✔ Cyprus civil-time bins accept equivalent UTC timestamps and reject reordered or naive times (169.520958ms)\n✔ impossible dates and sub-hour timestamps cannot normalize into valid local bins (76.312375ms)\n✔ report windows, computed overlap and retained deltas are independently reconciled (73.982792ms)\n✔ dates, contract and source identities are mandatory and unambiguous (97.190583ms)\n✔ comparison does not mutate either retained input or fit any model (56.217958ms)\nℹ tests 12\nℹ suites 0\nℹ pass 12\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1809.900416\n"
+}

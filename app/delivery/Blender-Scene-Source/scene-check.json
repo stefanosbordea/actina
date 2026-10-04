@@ -1,0 +1,88 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "engine": "BLENDER_EEVEE",
+  "evidence_status": "Symbolic concept illustration; no physical measurements, actual plant or grid surplus shown",
+  "acts": {
+    "overview": {
+      "packed_blend": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/Blender-Scene-Source/aquashift-overview.blend",
+      "packed_blend_sha256": "5c2751748848436a16cb48c8114437ff4d1d61d6ec6c0022da3a888d250d603a",
+      "source_render_blend_sha256": "441ec4b1650526f390f3fb2e79291b329a91597bee08f0a1cf708a80c806f671",
+      "source_sha256": "90f604ab8133b6dfd34b86e9c988ca482952fe807c0db949c2cb6ade970414a3",
+      "frame_range": [
+        1,
+        108
+      ],
+      "fps": 12,
+      "duration_s": 9,
+      "resolution": [
+        1280,
+        720
+      ],
+      "active_directional_markers": 20,
+      "illustrative_water_height_start": 0.8245999813079834,
+      "illustrative_water_height_end": 2.1812000274658203,
+      "external_assets": [],
+      "moving_directional_markers": 20,
+      "camera_moves": true,
+      "monochrome_materials_lights_world": true,
+      "linked_libraries": 0,
+      "native_frames": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/overview/frame-%04d.png",
+      "render_manifest": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/overview/render-manifest.json"
+    },
+    "storage": {
+      "packed_blend": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/Blender-Scene-Source/aquashift-storage.blend",
+      "packed_blend_sha256": "de2ea347022c9a33066499a03a3911ddfd3f16fbe9cef0a58e21c61301363848",
+      "source_render_blend_sha256": "60fe9985a9d81f0f25957c4b2f47d4b34ef5a3aea4a3eb2179956a754b6d3cff",
+      "source_sha256": "90f604ab8133b6dfd34b86e9c988ca482952fe807c0db949c2cb6ade970414a3",
+      "frame_range": [
+        1,
+        108
+      ],
+      "fps": 12,
+      "duration_s": 9,
+      "resolution": [
+        1280,
+        720
+      ],
+      "active_directional_markers": 14,
+      "illustrative_water_height_start": 2.1812000274658203,
+      "illustrative_water_height_end": 2.3408000469207764,
+      "external_assets": [],
+      "moving_directional_markers": 14,
+      "camera_moves": true,
+      "monochrome_materials_lights_world": true,
+      "linked_libraries": 0,
+      "native_frames": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/storage/frame-%04d.png",
+      "render_manifest": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/storage/render-manifest.json"
+    },
+    "evening": {
+      "packed_blend": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/Blender-Scene-Source/aquashift-evening.blend",
+      "packed_blend_sha256": "27aaf60c14990a9e693f1dabc98b16dc5908e14c2d05d1d00bd6570726d35ecf",
+      "source_render_blend_sha256": "ec25e25aa1f0db653a49dd1c19c2a3335af41d4e86c4c1318466c2591a415d93",
+      "source_sha256": "90f604ab8133b6dfd34b86e9c988ca482952fe807c0db949c2cb6ade970414a3",
+      "frame_range": [
+        1,
+        108
+      ],
+      "fps": 12,
+      "duration_s": 9,
+      "resolution": [
+        1280,
+        720
+      ],
+      "active_directional_markers": 6,
+      "illustrative_water_height_start": 2.3408000469207764,
+      "illustrative_water_height_end": 1.0374000072479248,
+      "external_assets": [],
+      "moving_directional_markers": 6,
+      "camera_moves": true,
+      "monochrome_materials_lights_world": true,
+      "linked_libraries": 0,
+      "native_frames": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/evening/frame-%04d.png",
+      "render_manifest": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/render-monochrome/evening/render-manifest.json"
+    }
+  },
+  "verification": "All scene checks and pack operations passed; Blender returned successfully",
+  "packing_process_exit_code": 0,
+  "visual_inspection": "Start, middle and end of each act inspected in actual Blender-rendered frames; clear grayscale composition, tank waterline, flow direction and evening transition."
+}

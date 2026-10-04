@@ -1,0 +1,6952 @@
+{
+  "schema": 1,
+  "input_sha256": "0e36f9d2e104e75e7f749e0ae2435cd779d27a7144e4a112a507ac113921d8ec",
+  "source_sha256": "a8c0d2a7239e5a88f5f5b3d4b491b54f2668759fa91e5199179817bef81d4c0f",
+  "records": [
+    {
+      "id": "identical",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "hidden_new_hour",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "hidden_subhour",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "fractional_common_outage",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "reserve_hinge_5_over_3",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "stock_funded_reduction",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "valid_shift",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "identical_inadequate",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "cross_midnight",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "49",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "49",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "tiny_service",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "tiny_reserve",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            },
+            "added_deficit_m3": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            },
+            "added_deficit_m3": {
+              "numerator": "6646139978924579",
+              "denominator": "664613997892457936451903530140172288"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "positive_volume_below_binary64",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "full_capacity_spill",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "zero_demand",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "zero_production",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "restart_at_ten",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "23",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "23",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "huge_common_stock_unit_loss",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "effective_derating",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "16"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "16"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "16"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "16"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_00",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "19",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "22",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "19",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "22",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_01",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_02",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "13",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "13",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "41",
+              "denominator": "25"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "13",
+              "denominator": "17"
+            },
+            "original_deficit_m3": {
+              "numerator": "42",
+              "denominator": "17"
+            },
+            "revised_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "26",
+              "denominator": "17"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "74",
+              "denominator": "21"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "44",
+              "denominator": "21"
+            },
+            "added_deficit_m3": {
+              "numerator": "44",
+              "denominator": "21"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_03",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "67",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "173",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "58",
+              "denominator": "3"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_04",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_05",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "33",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "241",
+              "denominator": "27"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "45",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "23",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "68",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "241",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "33",
+              "denominator": "4"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "68",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "241",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "33",
+              "denominator": "4"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_06",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "5"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_07",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "15",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "15",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_08",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_09",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "13"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "13"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "14"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "8"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "8"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "16",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "36",
+              "denominator": "17"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_10",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "41",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "41",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_11",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "60",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "60",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "57",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "60",
+              "denominator": "13"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "57",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "60",
+              "denominator": "13"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_12",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_13",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "19",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "3"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "527",
+              "denominator": "26"
+            },
+            "end_hour": {
+              "numerator": "428",
+              "denominator": "21"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "5"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "25",
+              "denominator": "12"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "8"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "8"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "43",
+              "denominator": "8"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "11",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_14",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "18",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "19",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "29",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "9",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "178",
+              "denominator": "15"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "177",
+              "denominator": "16"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_15",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "391",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "106",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "477",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "35",
+              "denominator": "46"
+            },
+            "added_deficit_m3": {
+              "numerator": "35",
+              "denominator": "46"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "391",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "106",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "477",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "35",
+              "denominator": "46"
+            },
+            "added_deficit_m3": {
+              "numerator": "35",
+              "denominator": "46"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_16",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "51",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "359",
+              "denominator": "27"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "27",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "27",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "59",
+              "denominator": "29"
+            },
+            "end_hour": {
+              "numerator": "49",
+              "denominator": "12"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "23",
+              "denominator": "7"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "158",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "47",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "74",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_17",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "6",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "41",
+              "denominator": "10"
+            },
+            "end_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_18",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "43",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "4"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "12",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "68",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "51",
+              "denominator": "10"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "17",
+              "denominator": "40"
+            },
+            "added_deficit_m3": {
+              "numerator": "17",
+              "denominator": "40"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "68",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "51",
+              "denominator": "10"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "17",
+              "denominator": "40"
+            },
+            "added_deficit_m3": {
+              "numerator": "17",
+              "denominator": "40"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_19",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "427",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "27",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "40",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "41",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "425",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "257",
+              "denominator": "8"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "427",
+              "denominator": "16"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "425",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "257",
+              "denominator": "8"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "427",
+              "denominator": "16"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_20",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "49",
+              "denominator": "24"
+            },
+            "end_hour": {
+              "numerator": "58",
+              "denominator": "25"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "49",
+              "denominator": "24"
+            },
+            "end_hour": {
+              "numerator": "58",
+              "denominator": "25"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_21",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "27",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "298",
+              "denominator": "21"
+            },
+            "end_hour": {
+              "numerator": "15",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "21",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "21",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "80",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "25",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "84",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "77",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "12",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_22",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "19",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "203",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "37",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_23",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "42",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "42",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "40",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "22",
+              "denominator": "7"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "42",
+              "denominator": "19"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "40",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "22",
+              "denominator": "7"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "42",
+              "denominator": "19"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_24",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_25",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "35",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "29",
+              "denominator": "9"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "29",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "29",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_26",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_27",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "991",
+              "denominator": "26"
+            },
+            "end_hour": {
+              "numerator": "344",
+              "denominator": "9"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "61",
+              "denominator": "20"
+            },
+            "original_deficit_m3": {
+              "numerator": "11",
+              "denominator": "80"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "109",
+              "denominator": "80"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "22",
+              "denominator": "3"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "33",
+              "denominator": "5"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_28",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "113",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "9",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "113",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "9",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "37",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "95",
+              "denominator": "28"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "97",
+              "denominator": "18"
+            },
+            "end_hour": {
+              "numerator": "27",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "47",
+              "denominator": "5"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "53",
+              "denominator": "10"
+            },
+            "added_deficit_m3": {
+              "numerator": "53",
+              "denominator": "10"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_29",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "190",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "191",
+              "denominator": "7"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "154",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "49",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "203",
+              "denominator": "25"
+            },
+            "original_deficit_m3": {
+              "numerator": "93",
+              "denominator": "100"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "7",
+              "denominator": "100"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "9",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "197",
+              "denominator": "15"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "21",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_30",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "329",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "original_deficit_m3": {
+              "numerator": "61",
+              "denominator": "80"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "19",
+              "denominator": "80"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "37",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "27",
+              "denominator": "5"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_31",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_32",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "54",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "19",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "146",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "12",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "57",
+              "denominator": "22"
+            },
+            "end_hour": {
+              "numerator": "27",
+              "denominator": "7"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "162",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "543",
+              "denominator": "31"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "65",
+              "denominator": "7"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_33",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "14",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "14",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "14",
+              "denominator": "17"
+            },
+            "original_deficit_m3": {
+              "numerator": "81",
+              "denominator": "34"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "21",
+              "denominator": "34"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "78",
+              "denominator": "19"
+            },
+            "end_hour": {
+              "numerator": "140",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_34",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "91",
+              "denominator": "18"
+            },
+            "end_hour": {
+              "numerator": "57",
+              "denominator": "11"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "239",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "582",
+              "denominator": "17"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_35",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "36",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "36",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "139",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "36",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "139",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "36",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_36",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "118",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "317",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "22",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "69",
+              "denominator": "13"
+            },
+            "end_hour": {
+              "numerator": "37",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "109",
+              "denominator": "19"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "53",
+              "denominator": "38"
+            },
+            "added_deficit_m3": {
+              "numerator": "53",
+              "denominator": "38"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "12",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "368",
+              "denominator": "21"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "118",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "7",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_37",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "18",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "11"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "18",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "11"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "11"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "18",
+              "denominator": "17"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "11"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "18",
+              "denominator": "17"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_38",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "60",
+              "denominator": "29"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "60",
+              "denominator": "29"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_39",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "13",
+              "denominator": "6"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "233",
+              "denominator": "29"
+            },
+            "end_hour": {
+              "numerator": "9",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "29",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "29",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "17",
+              "denominator": "8"
+            },
+            "end_hour": {
+              "numerator": "41",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "55",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "16",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_40",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "10"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_41",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "12",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "71",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "61",
+              "denominator": "15"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "71",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "61",
+              "denominator": "15"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_42",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_43",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "23",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "112",
+              "denominator": "19"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "115",
+              "denominator": "22"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "279",
+              "denominator": "88"
+            },
+            "added_deficit_m3": {
+              "numerator": "279",
+              "denominator": "88"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "23",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "112",
+              "denominator": "19"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "115",
+              "denominator": "22"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "279",
+              "denominator": "88"
+            },
+            "added_deficit_m3": {
+              "numerator": "279",
+              "denominator": "88"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_44",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_45",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "16"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "30"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "49",
+              "denominator": "60"
+            },
+            "added_deficit_m3": {
+              "numerator": "49",
+              "denominator": "60"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "16"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "30"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "49",
+              "denominator": "60"
+            },
+            "added_deficit_m3": {
+              "numerator": "49",
+              "denominator": "60"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_46",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "8",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "317",
+              "denominator": "22"
+            },
+            "end_hour": {
+              "numerator": "15",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "10"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "8",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "10"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "8",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_47",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_48",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "40",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "79",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_49",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "9",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "7"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "9",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "7"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_50",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_51",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "29",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "10"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "19"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "27",
+              "denominator": "76"
+            },
+            "added_deficit_m3": {
+              "numerator": "27",
+              "denominator": "76"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "10"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "19"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "27",
+              "denominator": "76"
+            },
+            "added_deficit_m3": {
+              "numerator": "27",
+              "denominator": "76"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_52",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_53",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "34",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "35",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_54",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_55",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "102",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "102",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "25",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "97",
+              "denominator": "17"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "102",
+              "denominator": "25"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "39",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "97",
+              "denominator": "17"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "102",
+              "denominator": "25"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_56",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "50",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "30",
+              "denominator": "13"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "79",
+              "denominator": "6"
+            },
+            "end_hour": {
+              "numerator": "66",
+              "denominator": "5"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "6",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "49",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "30",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "50",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "49",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "30",
+              "denominator": "13"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "50",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_57",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "50",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "125",
+              "denominator": "24"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "50",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "125",
+              "denominator": "24"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_58",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "6"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_59",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "83",
+              "denominator": "27"
+            },
+            "end_hour": {
+              "numerator": "25",
+              "denominator": "8"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "27",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "27",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "14",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_60",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "28"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "14"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "11",
+              "denominator": "28"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "14"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "7",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "28"
+            },
+            "end_hour": {
+              "numerator": "11",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "11",
+              "denominator": "28"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "8"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "13",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "185",
+              "denominator": "12"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "331",
+              "denominator": "25"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_61",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "30",
+              "denominator": "11"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "274",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "19",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "181",
+              "denominator": "25"
+            },
+            "end_hour": {
+              "numerator": "169",
+              "denominator": "23"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "183",
+              "denominator": "25"
+            },
+            "original_deficit_m3": {
+              "numerator": "17",
+              "denominator": "50"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "4",
+              "denominator": "25"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "19",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "26",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_62",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "seeded_63",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "27",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "27",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_64",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "25",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "21",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "50",
+              "denominator": "9"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "9",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "36",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "178",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "50",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "36",
+              "denominator": "7"
+            },
+            "end_hour": {
+              "numerator": "178",
+              "denominator": "27"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "50",
+              "denominator": "9"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_65",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "27",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "5"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "27",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "5"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "23",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "25",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "27",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "17",
+              "denominator": "46"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "23"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "25",
+              "denominator": "23"
+            },
+            "end_hour": {
+              "numerator": "6",
+              "denominator": "5"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "27",
+              "denominator": "23"
+            },
+            "original_deficit_m3": {
+              "numerator": "17",
+              "denominator": "46"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "23"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_66",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "25",
+              "denominator": "8"
+            },
+            "end_hour": {
+              "numerator": "31",
+              "denominator": "9"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "25",
+              "denominator": "8"
+            },
+            "end_hour": {
+              "numerator": "31",
+              "denominator": "9"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "5",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "31",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "25",
+              "denominator": "8"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "32"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "23",
+              "denominator": "32"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "31",
+              "denominator": "5"
+            },
+            "end_hour": {
+              "numerator": "59",
+              "denominator": "8"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "7",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "3",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_67",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "248",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "17",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "46",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1203",
+              "denominator": "26"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "15",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "73",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "8",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "430",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "53",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "155",
+              "denominator": "6"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "7",
+              "denominator": "4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_68",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "19",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "13",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "17",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "19",
+              "denominator": "15"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "17",
+              "denominator": "15"
+            },
+            "end_hour": {
+              "numerator": "13",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "19",
+              "denominator": "15"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_69",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_70",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "61",
+              "denominator": "16"
+            },
+            "end_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "11",
+              "denominator": "4"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "5",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "44",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "1370",
+              "denominator": "31"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "15",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "153",
+              "denominator": "14"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "173",
+              "denominator": "16"
+            },
+            "original_deficit_m3": {
+              "numerator": "155",
+              "denominator": "32"
+            },
+            "revised_deficit_m3": {
+              "numerator": "21",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "13",
+              "denominator": "32"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "713",
+              "denominator": "22"
+            },
+            "end_hour": {
+              "numerator": "542",
+              "denominator": "15"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "34",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "revised_deficit_m3": {
+              "numerator": "21",
+              "denominator": "4"
+            },
+            "added_deficit_m3": {
+              "numerator": "7",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_71",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "5",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "3",
+              "denominator": "2"
+            }
+          }
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "46",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "86",
+              "denominator": "21"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "46",
+              "denominator": "9"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "86",
+              "denominator": "21"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "hidden_new_hour_partitioned",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "hidden_subhour_partitioned",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "reserve_hinge_5_over_3_partitioned",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "start_open": true,
+            "end_open": true,
+            "peak_hour": {
+              "numerator": "5",
+              "denominator": "3"
+            },
+            "original_deficit_m3": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "6"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "seeded_04_partitioned",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "38",
+              "denominator": "17"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "17",
+              "denominator": "4"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "hidden_new_hour_reversed",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "3",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "hidden_subhour_reversed",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "3",
+              "denominator": "2"
+            },
+            "end_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "4",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "reserve_hinge_5_over_3_reversed",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "7",
+              "denominator": "4"
+            },
+            "end_hour": {
+              "numerator": "24",
+              "denominator": "1"
+            },
+            "start_open": true,
+            "end_open": false,
+            "peak_hour": {
+              "numerator": "2",
+              "denominator": "1"
+            },
+            "original_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "revised_deficit_m3": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_deficit_m3": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "valid_shift_reversed",
+      "expected": {
+        "delivery": {
+          "first": null,
+          "maximum": null
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "id": "maximum_8784_hours",
+      "expected": {
+        "delivery": {
+          "first": {
+            "start_hour": {
+              "numerator": "8783",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "8784",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "maximum": {
+            "start_hour": {
+              "numerator": "8783",
+              "denominator": "1"
+            },
+            "end_hour": {
+              "numerator": "8784",
+              "denominator": "1"
+            },
+            "original_unserved_rate_m3_h": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "revised_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "added_unserved_rate_m3_h": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          }
+        },
+        "reserve": {
+          "first": null,
+          "maximum": null
+        }
+      }
+    }
+  ]
+}

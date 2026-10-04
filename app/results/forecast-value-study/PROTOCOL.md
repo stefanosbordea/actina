@@ -1,0 +1,29 @@
+# Supplied forecast decision comparison · protocol 1
+
+This extends Loucas's evaluation/integration work. It does not execute a forecast or scheduler. The original roadmap assigns both to Stefanos. The existing 92-day forecast/price-only comparison has zero declared tariff-cost difference; retain that result.
+
+## Question and inputs
+
+Do two supplied forecasts differ in error, and do their supplied plans differ in modeled water service and declared tariff cost on one complete common future realization?
+
+Open one schema-1 `forecast_decision_review` JSON bundle through the existing Handoff intake. Retain a raw declaration JSON and six raw files with name, UTF-8 text and SHA-256: `case` (the inner `replaySequence` input JSON, containing the control plan and common realized water conditions; no saved-review wrapper), `returned` (existing full-horizon case-bound production CSV, candidate plan), `weather` (`time,radiation_w_m2`), `candidate_forecast` and `control_forecast` (`time,predicted_radiation_w_m2`), and `tariffs` (`time,eur_kwh`). All CSV supports must match every case hour once; radiation is in [0,2000], tariffs are nonnegative. No gaps, duplicate instants, unknown columns, nonfinite values or numeric underflow. File identities are checked against retained bytes; cached results and prior notes never authorize a conclusion.
+
+The declaration fixes `decision_cutoff`, `specific_energy_kwh_m3` (positive or null), source kind/name, and candidate/control run records. Each run records forecast/plan SHA-256 links, `case_sha256`, `tariffs_sha256`, `controller_sha256`, `settings_sha256`, `randomness` and four nullable times: `forecast_issue_time`, `forecast_first_observed_time`, `features_available_time`, `plan_first_observed_time`. Issue/receipt/features are distinct. A common decision cutoff must precede the evaluated horizon. Run links must identify their own retained forecast/plan; changing a declared case, tariffs, controller, settings or randomness prevents declared-control eligibility but retains numerical outcomes on the common supplied realization.
+
+## Conclusions kept separate
+
+1. Full-support MAE, RMSE and bias compare candidate/control against one supplied realized radiation series. Better error is not an operating benefit.
+2. Replay both supplied plans continuously, with no inventory reset, under the case's identical demand, tank, initial stock, reserve, target, derating and outages. Exact existing paired-water comparison checks delivery almost everywhere, reserve pointwise and final inventory. Independently assess each plan's absolute modeled unmet demand, reserve and terminal target using the same exact trajectory. Equal inadequate plans do not pass adequacy.
+3. Effective produced water times one declared constant specific energy gives modeled electricity. Full-support declared hourly tariffs give modeled cost; include spilled production. Unknown specific energy keeps electricity/cost unknown; known zero tariffs give zero cost. Integrate normalized rate × exact elapsed duration × specific energy × tariff before numeric display, retaining exact fractions and paired differences. Reject final nonzero energy/cost outside finite nonzero numeric display range; a tiny intermediate water volume must not silently become zero. This has no causal or measured-energy authority. This refinement follows the read-only review before fixture commitment or any product invocation.
+4. Declared method compatibility, declared timing eligibility and numerical outcomes remain separate. All four times must be supplied and at or before cutoff for `declared_before_cutoff`; any late time gives `late_declared`; incomplete times give `not_established`. First observation cannot precede declared issue. Imported declarations and matching hashes do not verify execution, issuance, feature authority, training provenance or field causality. `forecast_attribution` remains `not_established` even when declarations match.
+5. Cost reduction receives matched-water wording only when exact relative water nonregression passes. Absolute adequacy remains separately visible; no operating-readiness or recovered-curtailment claim follows.
+
+## Frozen analytical evaluation
+
+Before any product invocation, commit an independent generator and its supplied fixtures/expected labels. Use selected analytical cases, not observed prevalence. Include: better MAE/worse water; better MAE/worse cost; identical forecasts/different method; late features (before target but after cutoff); matching declarations/no issuance authority; cheaper plan/lower ending stock; identical plans/better error; equal inadequate plans; adequate equal-water retiming with tariff difference; unknown specific energy; zero tariffs; hash mismatch; missing/duplicate hour; wrong case-bound return; fractional outage and continuous multi-day carry; a subnormal reserve/terminal violation that floating replay can round away. Compare accepted cases' numerical and categorical labels and rejection families; retain first adverse witness. Freeze before implementation use, preserve failures, and record artifact hashes.
+
+## User task and falsification
+
+Within existing Handoff intake, open a supplied pair, see one concise outcome statement, inspect its first water discrepancy or declared-control/timing gap, export, and reopen. Reopening recalculates all outcomes from retained raw files; changing selection or pending/stale reads must clear export authority. No new navigation branch or initial form. Unknown/caller-declared provenance stays visible on demand.
+
+Falsified if any selected family receives unsupported forecast credit, hidden water regression, equal-failure adequacy, stale approval, fabricated missing support or a missing exact discrepancy. This validates evaluation behavior only. Real Stefanos outputs, controller execution and plant measurements remain absent.

@@ -1,0 +1,125 @@
+{
+  "checked_at": "2026-10-02T00:14:37.842087+00:00",
+  "base": "http://127.0.0.1:8510",
+  "public": [
+    {
+      "path": "core.mjs",
+      "status": 200,
+      "bytes": 15668,
+      "sha256": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "data.json",
+      "status": 200,
+      "bytes": 955138,
+      "sha256": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+      "content_type": "application/json"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 3497,
+      "sha256": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+      "content_type": "text/html"
+    },
+    {
+      "path": "manifest.json",
+      "status": 200,
+      "bytes": 543,
+      "sha256": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+      "content_type": "application/json"
+    },
+    {
+      "path": "pilot-ui.mjs",
+      "status": 200,
+      "bytes": 13321,
+      "sha256": "2b1f390824f62d0bfba86c14bd4a920a56ab31676d132d2fc3395475c645d955",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "pilot.mjs",
+      "status": 200,
+      "bytes": 15389,
+      "sha256": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "research.json",
+      "status": 200,
+      "bytes": 198538,
+      "sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "content_type": "application/json"
+    },
+    {
+      "path": "vendor/LICENSE-papaparse.txt",
+      "status": 200,
+      "bytes": 1079,
+      "sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+      "content_type": "text/plain"
+    },
+    {
+      "path": "vendor/papaparse.min.js",
+      "status": 200,
+      "bytes": 18874,
+      "sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "workspace.css",
+      "status": 200,
+      "bytes": 9881,
+      "sha256": "d6013c79ea48f0c6126c5cdc8a632f97a9181fbc0ed745d1de1de48b1ce891e0",
+      "content_type": "text/css"
+    },
+    {
+      "path": "workspace.js",
+      "status": 200,
+      "bytes": 54353,
+      "sha256": "afa1986b2bf9bcdfb3dd6b923242df0a3e1033b554acdc97bba7a5905a2a6fe8",
+      "content_type": "text/javascript"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "source/provenance.json",
+      "status": 404
+    },
+    {
+      "path": "results/metrics.json",
+      "status": 404
+    },
+    {
+      "path": "generate.py",
+      "status": 404
+    },
+    {
+      "path": ".vercel/project.json",
+      "status": 404
+    },
+    {
+      "path": "package.json",
+      "status": 404
+    },
+    {
+      "path": "test_workspace.mjs",
+      "status": 404
+    },
+    {
+      "path": "archived-initial/app.js",
+      "status": 404
+    },
+    {
+      "path": "review_pilot.mjs",
+      "status": 404
+    },
+    {
+      "path": "check_pilot_cli.mjs",
+      "status": 404
+    },
+    {
+      "path": "fixtures/pilot-synthetic-declaration.json",
+      "status": 404
+    }
+  ]
+}

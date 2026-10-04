@@ -1,0 +1,18 @@
+[
+  {
+    "id": "eac-2026-07",
+    "month": 7,
+    "filename": "EAC-distribution-curtailments-2026-07.pdf",
+    "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_07_2026.pdf",
+    "sha256": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+    "bytes": 6100529
+  },
+  {
+    "id": "eac-2026-08",
+    "month": 8,
+    "filename": "EAC-distribution-curtailments-2026-08.pdf",
+    "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_08_2026.pdf",
+    "sha256": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d",
+    "bytes": 6524712
+  }
+]

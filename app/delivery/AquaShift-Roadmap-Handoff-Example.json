@@ -1,0 +1,1065 @@
+{
+  "schema": 1,
+  "kind": "roadmap_handoff_review",
+  "declaration_file": {
+    "name": "declaration.json",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"roadmap_handoff_declaration\",\n  \"source_kind\": \"illustrative_scenario\",\n  \"source_label\": \"Independent analytical example; no plant or Stefanos results\",\n  \"utc_offset\": \"+03:00\",\n  \"radiation_time_semantics\": \"interval_start\",\n  \"date_hour_semantics\": \"interval_start\",\n  \"weather_units\": {\n    \"shortwave_radiation\": \"W/m2\",\n    \"cloud_cover\": \"percent\",\n    \"temperature_2m\": \"degC\",\n    \"relative_humidity_2m\": \"percent\"\n  },\n  \"power_semantics\": \"interval_mean\",\n  \"tank_level_semantics\": \"aquashift_interval_end\",\n  \"tank_capacity_m3\": 200,\n  \"surplus_threshold_w_m2\": 600,\n  \"surplus_comparison\": \"greater_than\",\n  \"test_period\": {\n    \"start\": \"2026-07-01T00:00:00+03:00\",\n    \"end\": \"2026-07-04T00:00:00+03:00\"\n  },\n  \"tariffs\": [\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 0,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 1,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 2,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 3,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 4,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 5,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 6,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 7,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 8,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 9,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 10,\n      \"eur_kwh\": 0.3\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 11,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 12,\n      \"eur_kwh\": 0.1\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 13,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 14,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 15,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 16,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 17,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 18,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 19,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 20,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 21,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 22,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-01\",\n      \"hour\": 23,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 0,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 1,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 2,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 3,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 4,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 5,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 6,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 7,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 8,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 9,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 10,\n      \"eur_kwh\": 0.3\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 11,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 12,\n      \"eur_kwh\": 0.1\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 13,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 14,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 15,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 16,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 17,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 18,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 19,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 20,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 21,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 22,\n      \"eur_kwh\": 0.2\n    },\n    {\n      \"date\": \"2026-07-03\",\n      \"hour\": 23,\n      \"eur_kwh\": 0.2\n    }\n  ],\n  \"declared_links\": {\n    \"schedule_forecast_sha256\": \"2a8b594c169dfb0c4483d9ba6404b246bb96108ebb6930ed5e2ae1944702b3ef\",\n    \"weather_sha256\": \"b0edac57d0e1f2737017780597c7fc6622c04979cc9a9bf0da5232e8cc78be6a\"\n  }\n}\n",
+    "sha256": "2df7c8d1d151cf4c5d30ce711fc48eed5b5f15cd9ced5bda5adce924bc76d32e"
+  },
+  "files": {
+    "weather": {
+      "name": "paphos_weather.csv",
+      "text": "time,shortwave_radiation,cloud_cover,temperature_2m,relative_humidity_2m\n2026-07-01T00:00:00+03:00,0,20,30,50\n2026-07-01T01:00:00+03:00,0,20,30,50\n2026-07-01T02:00:00+03:00,0,20,30,50\n2026-07-01T03:00:00+03:00,0,20,30,50\n2026-07-01T04:00:00+03:00,0,20,30,50\n2026-07-01T05:00:00+03:00,0,20,30,50\n2026-07-01T06:00:00+03:00,0,20,30,50\n2026-07-01T07:00:00+03:00,0,20,30,50\n2026-07-01T08:00:00+03:00,0,20,30,50\n2026-07-01T09:00:00+03:00,0,20,30,50\n2026-07-01T10:00:00+03:00,0,20,30,50\n2026-07-01T11:00:00+03:00,600,20,30,50\n2026-07-01T12:00:00+03:00,800,20,30,50\n2026-07-01T13:00:00+03:00,0,20,30,50\n2026-07-01T14:00:00+03:00,0,20,30,50\n2026-07-01T15:00:00+03:00,0,20,30,50\n2026-07-01T16:00:00+03:00,0,20,30,50\n2026-07-01T17:00:00+03:00,0,20,30,50\n2026-07-01T18:00:00+03:00,0,20,30,50\n2026-07-01T19:00:00+03:00,0,20,30,50\n2026-07-01T20:00:00+03:00,0,20,30,50\n2026-07-01T21:00:00+03:00,0,20,30,50\n2026-07-01T22:00:00+03:00,0,20,30,50\n2026-07-01T23:00:00+03:00,0,20,30,50\n2026-07-02T00:00:00+03:00,0,20,30,50\n2026-07-02T01:00:00+03:00,0,20,30,50\n2026-07-02T02:00:00+03:00,0,20,30,50\n2026-07-02T03:00:00+03:00,0,20,30,50\n2026-07-02T04:00:00+03:00,0,20,30,50\n2026-07-02T05:00:00+03:00,0,20,30,50\n2026-07-02T06:00:00+03:00,0,20,30,50\n2026-07-02T07:00:00+03:00,0,20,30,50\n2026-07-02T08:00:00+03:00,0,20,30,50\n2026-07-02T09:00:00+03:00,0,20,30,50\n2026-07-02T10:00:00+03:00,0,20,30,50\n2026-07-02T11:00:00+03:00,600,20,30,50\n2026-07-02T12:00:00+03:00,800,20,30,50\n2026-07-02T13:00:00+03:00,0,20,30,50\n2026-07-02T14:00:00+03:00,0,20,30,50\n2026-07-02T15:00:00+03:00,0,20,30,50\n2026-07-02T16:00:00+03:00,0,20,30,50\n2026-07-02T17:00:00+03:00,0,20,30,50\n2026-07-02T18:00:00+03:00,0,20,30,50\n2026-07-02T19:00:00+03:00,0,20,30,50\n2026-07-02T20:00:00+03:00,0,20,30,50\n2026-07-02T21:00:00+03:00,0,20,30,50\n2026-07-02T22:00:00+03:00,0,20,30,50\n2026-07-02T23:00:00+03:00,0,20,30,50\n2026-07-03T00:00:00+03:00,0,20,30,50\n2026-07-03T01:00:00+03:00,0,20,30,50\n2026-07-03T02:00:00+03:00,0,20,30,50\n2026-07-03T03:00:00+03:00,0,20,30,50\n2026-07-03T04:00:00+03:00,0,20,30,50\n2026-07-03T05:00:00+03:00,0,20,30,50\n2026-07-03T06:00:00+03:00,0,20,30,50\n2026-07-03T07:00:00+03:00,0,20,30,50\n2026-07-03T08:00:00+03:00,0,20,30,50\n2026-07-03T09:00:00+03:00,0,20,30,50\n2026-07-03T10:00:00+03:00,0,20,30,50\n2026-07-03T11:00:00+03:00,600,20,30,50\n2026-07-03T12:00:00+03:00,800,20,30,50\n2026-07-03T13:00:00+03:00,0,20,30,50\n2026-07-03T14:00:00+03:00,0,20,30,50\n2026-07-03T15:00:00+03:00,0,20,30,50\n2026-07-03T16:00:00+03:00,0,20,30,50\n2026-07-03T17:00:00+03:00,0,20,30,50\n2026-07-03T18:00:00+03:00,0,20,30,50\n2026-07-03T19:00:00+03:00,0,20,30,50\n2026-07-03T20:00:00+03:00,0,20,30,50\n2026-07-03T21:00:00+03:00,0,20,30,50\n2026-07-03T22:00:00+03:00,0,20,30,50\n2026-07-03T23:00:00+03:00,0,20,30,50\n",
+      "sha256": "b0edac57d0e1f2737017780597c7fc6622c04979cc9a9bf0da5232e8cc78be6a"
+    },
+    "predictions": {
+      "name": "test_predictions.csv",
+      "text": "time,actual,predicted,baseline\n2026-07-01T00:00:00+03:00,0,1,10\n2026-07-01T01:00:00+03:00,0,1,10\n2026-07-01T02:00:00+03:00,0,1,10\n2026-07-01T03:00:00+03:00,0,1,10\n2026-07-01T04:00:00+03:00,0,1,10\n2026-07-01T05:00:00+03:00,0,1,10\n2026-07-01T06:00:00+03:00,0,1,10\n2026-07-01T07:00:00+03:00,0,1,10\n2026-07-01T08:00:00+03:00,0,1,10\n2026-07-01T09:00:00+03:00,0,1,10\n2026-07-01T10:00:00+03:00,0,1,10\n2026-07-01T11:00:00+03:00,600,601,610\n2026-07-01T12:00:00+03:00,800,801,810\n2026-07-01T13:00:00+03:00,0,1,10\n2026-07-01T14:00:00+03:00,0,1,10\n2026-07-01T15:00:00+03:00,0,1,10\n2026-07-01T16:00:00+03:00,0,1,10\n2026-07-01T17:00:00+03:00,0,1,10\n2026-07-01T18:00:00+03:00,0,1,10\n2026-07-01T19:00:00+03:00,0,1,10\n2026-07-01T20:00:00+03:00,0,1,10\n2026-07-01T21:00:00+03:00,0,1,10\n2026-07-01T22:00:00+03:00,0,1,10\n2026-07-01T23:00:00+03:00,0,1,10\n2026-07-02T00:00:00+03:00,0,1,10\n2026-07-02T01:00:00+03:00,0,1,10\n2026-07-02T02:00:00+03:00,0,1,10\n2026-07-02T03:00:00+03:00,0,1,10\n2026-07-02T04:00:00+03:00,0,1,10\n2026-07-02T05:00:00+03:00,0,1,10\n2026-07-02T06:00:00+03:00,0,1,10\n2026-07-02T07:00:00+03:00,0,1,10\n2026-07-02T08:00:00+03:00,0,1,10\n2026-07-02T09:00:00+03:00,0,1,10\n2026-07-02T10:00:00+03:00,0,1,10\n2026-07-02T11:00:00+03:00,600,601,610\n2026-07-02T12:00:00+03:00,800,801,810\n2026-07-02T13:00:00+03:00,0,1,10\n2026-07-02T14:00:00+03:00,0,1,10\n2026-07-02T15:00:00+03:00,0,1,10\n2026-07-02T16:00:00+03:00,0,1,10\n2026-07-02T17:00:00+03:00,0,1,10\n2026-07-02T18:00:00+03:00,0,1,10\n2026-07-02T19:00:00+03:00,0,1,10\n2026-07-02T20:00:00+03:00,0,1,10\n2026-07-02T21:00:00+03:00,0,1,10\n2026-07-02T22:00:00+03:00,0,1,10\n2026-07-02T23:00:00+03:00,0,1,10\n2026-07-03T00:00:00+03:00,0,1,10\n2026-07-03T01:00:00+03:00,0,1,10\n2026-07-03T02:00:00+03:00,0,1,10\n2026-07-03T03:00:00+03:00,0,1,10\n2026-07-03T04:00:00+03:00,0,1,10\n2026-07-03T05:00:00+03:00,0,1,10\n2026-07-03T06:00:00+03:00,0,1,10\n2026-07-03T07:00:00+03:00,0,1,10\n2026-07-03T08:00:00+03:00,0,1,10\n2026-07-03T09:00:00+03:00,0,1,10\n2026-07-03T10:00:00+03:00,0,1,10\n2026-07-03T11:00:00+03:00,600,601,610\n2026-07-03T12:00:00+03:00,800,801,810\n2026-07-03T13:00:00+03:00,0,1,10\n2026-07-03T14:00:00+03:00,0,1,10\n2026-07-03T15:00:00+03:00,0,1,10\n2026-07-03T16:00:00+03:00,0,1,10\n2026-07-03T17:00:00+03:00,0,1,10\n2026-07-03T18:00:00+03:00,0,1,10\n2026-07-03T19:00:00+03:00,0,1,10\n2026-07-03T20:00:00+03:00,0,1,10\n2026-07-03T21:00:00+03:00,0,1,10\n2026-07-03T22:00:00+03:00,0,1,10\n2026-07-03T23:00:00+03:00,0,1,10\n",
+      "sha256": "dc7dfe16edea1d64d520826837bf167c4d3057a5ddad9f54a5a68762f42c43f7"
+    },
+    "day_forecast": {
+      "name": "day_forecast.csv",
+      "text": "date,hour,predicted_radiation,surplus_flag\n2026-07-01,0,0,0\n2026-07-01,1,0,0\n2026-07-01,2,0,0\n2026-07-01,3,0,0\n2026-07-01,4,0,0\n2026-07-01,5,0,0\n2026-07-01,6,0,0\n2026-07-01,7,0,0\n2026-07-01,8,0,0\n2026-07-01,9,0,0\n2026-07-01,10,0,0\n2026-07-01,11,600,0\n2026-07-01,12,800,1\n2026-07-01,13,0,0\n2026-07-01,14,0,0\n2026-07-01,15,0,0\n2026-07-01,16,0,0\n2026-07-01,17,0,0\n2026-07-01,18,0,0\n2026-07-01,19,0,0\n2026-07-01,20,0,0\n2026-07-01,21,0,0\n2026-07-01,22,0,0\n2026-07-01,23,0,0\n2026-07-03,0,0,0\n2026-07-03,1,0,0\n2026-07-03,2,0,0\n2026-07-03,3,0,0\n2026-07-03,4,0,0\n2026-07-03,5,0,0\n2026-07-03,6,0,0\n2026-07-03,7,0,0\n2026-07-03,8,0,0\n2026-07-03,9,0,0\n2026-07-03,10,0,0\n2026-07-03,11,600,0\n2026-07-03,12,800,1\n2026-07-03,13,0,0\n2026-07-03,14,0,0\n2026-07-03,15,0,0\n2026-07-03,16,0,0\n2026-07-03,17,0,0\n2026-07-03,18,0,0\n2026-07-03,19,0,0\n2026-07-03,20,0,0\n2026-07-03,21,0,0\n2026-07-03,22,0,0\n2026-07-03,23,0,0\n",
+      "sha256": "2a8b594c169dfb0c4483d9ba6404b246bb96108ebb6930ed5e2ae1944702b3ef"
+    },
+    "schedule": {
+      "name": "schedule_results.csv",
+      "text": "date,hour,normal_power_kw,aquashift_power_kw,tank_level_m3,surplus_flag\n2026-07-01,0,10,10,100,0\n2026-07-01,1,10,10,100,0\n2026-07-01,2,10,10,100,0\n2026-07-01,3,10,10,100,0\n2026-07-01,4,10,10,100,0\n2026-07-01,5,10,10,100,0\n2026-07-01,6,10,10,100,0\n2026-07-01,7,10,10,100,0\n2026-07-01,8,10,10,100,0\n2026-07-01,9,10,10,100,0\n2026-07-01,10,10,5,100,0\n2026-07-01,11,10,10,100,0\n2026-07-01,12,10,15,100,1\n2026-07-01,13,10,10,100,0\n2026-07-01,14,10,10,100,0\n2026-07-01,15,10,10,100,0\n2026-07-01,16,10,10,100,0\n2026-07-01,17,10,10,100,0\n2026-07-01,18,10,10,100,0\n2026-07-01,19,10,10,100,0\n2026-07-01,20,10,10,100,0\n2026-07-01,21,10,10,100,0\n2026-07-01,22,10,10,100,0\n2026-07-01,23,10,10,100,0\n2026-07-03,0,10,10,100,0\n2026-07-03,1,10,10,100,0\n2026-07-03,2,10,10,100,0\n2026-07-03,3,10,10,100,0\n2026-07-03,4,10,10,100,0\n2026-07-03,5,10,10,100,0\n2026-07-03,6,10,10,100,0\n2026-07-03,7,10,10,100,0\n2026-07-03,8,10,10,100,0\n2026-07-03,9,10,10,100,0\n2026-07-03,10,10,5,100,0\n2026-07-03,11,10,10,100,0\n2026-07-03,12,10,15,100,1\n2026-07-03,13,10,10,100,0\n2026-07-03,14,10,10,100,0\n2026-07-03,15,10,10,100,0\n2026-07-03,16,10,10,100,0\n2026-07-03,17,10,10,100,0\n2026-07-03,18,10,10,100,0\n2026-07-03,19,10,10,100,0\n2026-07-03,20,10,10,100,0\n2026-07-03,21,10,10,100,0\n2026-07-03,22,10,10,100,0\n2026-07-03,23,10,10,100,0\n",
+      "sha256": "96616e3b29664175a575271f4a544d6b17a354f2b88c79461d9ac79a6ee185b6"
+    }
+  },
+  "createdAt": "2026-10-02T23:08:41.077Z",
+  "results": {
+    "schema": 1,
+    "kind": "roadmap_handoff_evaluation",
+    "declaration": {
+      "schema": 1,
+      "kind": "roadmap_handoff_declaration",
+      "source_kind": "illustrative_scenario",
+      "source_label": "Independent analytical example; no plant or Stefanos results",
+      "utc_offset": "+03:00",
+      "radiation_time_semantics": "interval_start",
+      "date_hour_semantics": "interval_start",
+      "weather_units": {
+        "shortwave_radiation": "W/m2",
+        "cloud_cover": "percent",
+        "temperature_2m": "degC",
+        "relative_humidity_2m": "percent"
+      },
+      "power_semantics": "interval_mean",
+      "tank_level_semantics": "aquashift_interval_end",
+      "tank_capacity_m3": 200,
+      "surplus_threshold_w_m2": 600,
+      "surplus_comparison": "greater_than",
+      "test_period": {
+        "start": "2026-07-01T00:00:00+03:00",
+        "end": "2026-07-04T00:00:00+03:00"
+      },
+      "tariffs": [
+        {
+          "date": "2026-07-01",
+          "hour": 0,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 1,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 2,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 3,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 4,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 5,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 6,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 7,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 8,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 9,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 10,
+          "eur_kwh": 0.3
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 11,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 12,
+          "eur_kwh": 0.1
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 13,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 14,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 15,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 16,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 17,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 18,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 19,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 20,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 21,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 22,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-01",
+          "hour": 23,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 0,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 1,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 2,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 3,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 4,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 5,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 6,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 7,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 8,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 9,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 10,
+          "eur_kwh": 0.3
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 11,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 12,
+          "eur_kwh": 0.1
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 13,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 14,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 15,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 16,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 17,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 18,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 19,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 20,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 21,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 22,
+          "eur_kwh": 0.2
+        },
+        {
+          "date": "2026-07-03",
+          "hour": 23,
+          "eur_kwh": 0.2
+        }
+      ],
+      "declared_links": {
+        "schedule_forecast_sha256": "2a8b594c169dfb0c4483d9ba6404b246bb96108ebb6930ed5e2ae1944702b3ef",
+        "weather_sha256": "b0edac57d0e1f2737017780597c7fc6622c04979cc9a9bf0da5232e8cc78be6a"
+      }
+    },
+    "file_identities": {
+      "weather": {
+        "name": "paphos_weather.csv",
+        "sha256": "b0edac57d0e1f2737017780597c7fc6622c04979cc9a9bf0da5232e8cc78be6a",
+        "bytes": 2749
+      },
+      "predictions": {
+        "name": "test_predictions.csv",
+        "sha256": "dc7dfe16edea1d64d520826837bf167c4d3057a5ddad9f54a5a68762f42c43f7",
+        "bytes": 2437
+      },
+      "day_forecast": {
+        "name": "day_forecast.csv",
+        "sha256": "2a8b594c169dfb0c4483d9ba6404b246bb96108ebb6930ed5e2ae1944702b3ef",
+        "bytes": 895
+      },
+      "schedule": {
+        "name": "schedule_results.csv",
+        "sha256": "96616e3b29664175a575271f4a544d6b17a354f2b88c79461d9ac79a6ee185b6",
+        "bytes": 1298
+      }
+    },
+    "forecast": {
+      "model": {
+        "rows": 72,
+        "mae": 1,
+        "rmse": 1,
+        "bias": 1
+      },
+      "baseline": {
+        "rows": 72,
+        "mae": 10,
+        "rmse": 10,
+        "bias": 10
+      },
+      "coverage": {
+        "status": "complete",
+        "expected_hours": 72,
+        "supplied_hours": 72,
+        "matched_hours": 72,
+        "missing_times": [],
+        "unmatched_times": []
+      }
+    },
+    "demo": {
+      "coverage": {
+        "status": "complete",
+        "selected_dates": [
+          "2026-07-01",
+          "2026-07-03"
+        ],
+        "expected_hours": 48,
+        "forecast_hours": 48,
+        "schedule_hours": 48,
+        "matched_hours": 48
+      },
+      "support": {
+        "hours": 48,
+        "electricity_kwh": {
+          "normal": 480,
+          "aquashift": 480,
+          "delta": 0
+        },
+        "cost_eur": {
+          "normal": 96,
+          "aquashift": 94,
+          "delta": -2
+        },
+        "forecast_flagged_electricity_kwh": {
+          "normal": 20,
+          "aquashift": 30,
+          "delta": 10
+        }
+      },
+      "days": [
+        {
+          "date": "2026-07-01",
+          "coverage": {
+            "status": "complete",
+            "expected_hours": 24,
+            "forecast_hours": 24,
+            "schedule_hours": 24,
+            "matched_hours": 24,
+            "missing_forecast_hours": [],
+            "missing_schedule_hours": []
+          },
+          "totals": {
+            "hours": 24,
+            "electricity_kwh": {
+              "normal": 240,
+              "aquashift": 240,
+              "delta": 0
+            },
+            "cost_eur": {
+              "normal": 48,
+              "aquashift": 47,
+              "delta": -1
+            },
+            "forecast_flagged_electricity_kwh": {
+              "normal": 10,
+              "aquashift": 15,
+              "delta": 5
+            }
+          }
+        },
+        {
+          "date": "2026-07-03",
+          "coverage": {
+            "status": "complete",
+            "expected_hours": 24,
+            "forecast_hours": 24,
+            "schedule_hours": 24,
+            "matched_hours": 24,
+            "missing_forecast_hours": [],
+            "missing_schedule_hours": []
+          },
+          "totals": {
+            "hours": 24,
+            "electricity_kwh": {
+              "normal": 240,
+              "aquashift": 240,
+              "delta": 0
+            },
+            "cost_eur": {
+              "normal": 48,
+              "aquashift": 47,
+              "delta": -1
+            },
+            "forecast_flagged_electricity_kwh": {
+              "normal": 10,
+              "aquashift": 15,
+              "delta": 5
+            }
+          }
+        }
+      ],
+      "rows": [
+        {
+          "time": "2026-06-30T21:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 0,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-06-30T22:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 1,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-06-30T23:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 2,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T00:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 3,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T01:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 4,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T02:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 5,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T03:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 6,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T04:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 7,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T05:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 8,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T06:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 9,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T07:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 10,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 5,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.3
+        },
+        {
+          "time": "2026-07-01T08:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 11,
+          "predicted_radiation": 600,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T09:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 12,
+          "predicted_radiation": 800,
+          "forecast_flag": 1,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 15,
+          "tank_level_m3": 100,
+          "schedule_flag": 1,
+          "tariff_eur_kwh": 0.1
+        },
+        {
+          "time": "2026-07-01T10:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 13,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T11:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 14,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T12:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 15,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T13:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 16,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T14:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 17,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T15:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 18,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T16:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 19,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T17:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 20,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T18:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 21,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T19:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 22,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-01T20:00:00.000Z",
+          "date": "2026-07-01",
+          "hour": 23,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-02T21:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 0,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-02T22:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 1,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-02T23:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 2,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T00:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 3,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T01:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 4,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T02:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 5,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T03:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 6,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T04:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 7,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T05:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 8,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T06:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 9,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T07:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 10,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 5,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.3
+        },
+        {
+          "time": "2026-07-03T08:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 11,
+          "predicted_radiation": 600,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T09:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 12,
+          "predicted_radiation": 800,
+          "forecast_flag": 1,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 15,
+          "tank_level_m3": 100,
+          "schedule_flag": 1,
+          "tariff_eur_kwh": 0.1
+        },
+        {
+          "time": "2026-07-03T10:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 13,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T11:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 14,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T12:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 15,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T13:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 16,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T14:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 17,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T15:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 18,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T16:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 19,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T17:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 20,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T18:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 21,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T19:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 22,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        },
+        {
+          "time": "2026-07-03T20:00:00.000Z",
+          "date": "2026-07-03",
+          "hour": 23,
+          "predicted_radiation": 0,
+          "forecast_flag": 0,
+          "normal_power_kw": 10,
+          "aquashift_power_kw": 10,
+          "tank_level_m3": 100,
+          "schedule_flag": 0,
+          "tariff_eur_kwh": 0.2
+        }
+      ]
+    },
+    "tank": {
+      "semantics": "aquashift_interval_end",
+      "capacity_m3": 200,
+      "min_m3": 100,
+      "max_m3": 100,
+      "above_capacity_hours": 0
+    },
+    "lineage": {
+      "status": "caller_declared"
+    },
+    "water_comparability": {
+      "status": "not_established"
+    },
+    "forecast_attribution": {
+      "status": "not_established"
+    },
+    "gaps": [
+      {
+        "code": "water_comparability_unestablished",
+        "message": "One supplied tank trace does not establish normal-plan stock, produced water or delivered water; lower electricity is not a matched-water benefit."
+      },
+      {
+        "code": "forecast_attribution_unestablished",
+        "message": "Normal versus AquaShift is a supplied policy comparison; the forecast contribution is not isolated."
+      },
+      {
+        "code": "provenance_unverified",
+        "message": "Source, training, baseline origin, forecast issue and feature availability remain unverified; file links are caller declarations."
+      },
+      {
+        "code": "different_supplied_predictions",
+        "count": 48,
+        "message": "48 overlapping demo/test hours contain different supplied predictions; their model-version linkage is unverified."
+      }
+    ],
+    "scope": [
+      "Retained supplied files; their SHA-256 bytes must be verified by the caller before evaluation.",
+      "Prediction metrics use only matched supplied weather and prediction hours; missing hours remain missing.",
+      "Electrical support totals cover supplied schedule hours only; complete selected dates are reported separately.",
+      "Mean kW over one elapsed hour gives kWh; point samples are not integrated.",
+      "Forecast flags describe radiation, not plant-eligible solar or recovered curtailment.",
+      "Supplied tank readings do not establish water conservation, comparable service or between-reading safety.",
+      "No forecast, plant model or schedule is generated; no source authenticity or operating authority is established."
+    ]
+  }
+}

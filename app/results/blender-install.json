@@ -1,0 +1,9 @@
+{
+  "url": "https://download.blender.org/release/Blender5.2/blender-5.2.2-macos-arm64.dmg",
+  "version": "5.2.2",
+  "expected_sha256": "dc4125399b8bfefe283cc1624d6cfc7809d1cac20ace51072127eb371f31f210",
+  "actual_sha256": "dc4125399b8bfefe283cc1624d6cfc7809d1cac20ace51072127eb371f31f210",
+  "bytes": 346286611,
+  "verified": true,
+  "download_path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/tools/blender-5.2.2-macos-arm64.dmg"
+}

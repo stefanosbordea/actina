@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-03T19:47:34.139916+00:00",
+  "source_commit": "d0d28ed9616a309d3753e4c0ec12bc8db037517b",
+  "ci_run": "https://github.com/dlukel/aquashift/actions/runs/37148688749",
+  "ci_status": "success",
+  "full_tests": 645,
+  "focused_tests": 60,
+  "stable_input_hashes": 152,
+  "current_sources_match_ci": true,
+  "study_status": "PASS",
+  "study_commands_exit_zero": true,
+  "study_log_hashes_match": true,
+  "public_assets_unchanged": 56,
+  "public_interface_source": "68de6fca3f7f83cdeb7ef3d02e5208f11591f141",
+  "deployment": "No new deployment: public assets are unchanged.",
+  "scope": "Offline supplied-limit evaluation and synthetic analytical validation only; the broader goal and field benefit remain unproven.",
+  "handoff": {
+    "recipient": "\u03a3\u03c4\u03ad\u03c6\u03b1\u03bd\u03bf\u03c2 \u039c\u03c0\u03bf\u03c1\u03c4\u03ad\u03b1\u03c2",
+    "channel": "WhatsApp",
+    "visible_status": "Delivered",
+    "local_time": "2026-10-03 22:47 Asia/Nicosia",
+    "message": "AquaShift: the supplied-limit reviewer checks ramps and run/rest times without changing your schedule; the tested example and code are here: https://github.com/dlukel/aquashift/tree/d0d28ed9616a309d3753e4c0ec12bc8db037517b/results/operating-envelope",
+    "private_screenshot": "source/private/release-confirmation/whatsapp-operating-envelope.png",
+    "screenshot_sha256": "940277764b0333127bcc5a4478592169898d393717613673234559754bd92a14"
+  },
+  "cleanup": {
+    "temporary_chat_tab_closed": true,
+    "remaining_page": "https://aquashift-pafos-2026.vercel.app/#home",
+    "chrome_used": false,
+    "local_server_started": false
+  }
+}

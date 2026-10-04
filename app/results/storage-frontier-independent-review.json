@@ -1,0 +1,450 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-02T11:46:15.751589+00:00",
+  "status": "PASS",
+  "scope": "Independent read-only review of retained storage comparison; no model fitting, primary scheduler changes, dispatch or field-performance claim.",
+  "input_sha256": {
+    "web/public/storage-frontier.mjs": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+    "web/test_storage_frontier.mjs": "5ca670d614ef0718752d68293fb1a06d8001165c2d63a43e8013f56a6e5feab1",
+    "web/public/core.mjs": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "web/public/research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e"
+  },
+  "executed_commands": [
+    {
+      "command": "python3 -",
+      "stdin_purpose": "Independent stdlib Decimal arithmetic from raw data.json and research.json; minute-counted report windows, reference hourly balance and energy, tariffs, paired controls, per-day signs and marginal capacities.",
+      "result": "PASS"
+    },
+    {
+      "command": "node --input-type=module -",
+      "stdin_purpose": "18 independent adversarial mutations and date-selection probes against storageFrontier.",
+      "result": "PASS"
+    },
+    {
+      "command": "node --test web/test_storage_frontier.mjs",
+      "exit_code": 0,
+      "tests_passed": 12,
+      "tests_failed": 0
+    }
+  ],
+  "numeric_comparisons": 153,
+  "tolerance": 1e-06,
+  "independent_recomputation": {
+    "method": "Python stdlib Decimal; independently counted each minute within raw reported windows, then recomputed reference overlap, water balance, tariff cost, flat load, control differences and marginal capacity changes from raw JSON. Persistence and price-only totals have no hourly source in these public inputs; checked as retained scalar controls only.",
+    "matched_days": 62,
+    "matched_cases": 310,
+    "excluded_dates": [
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-12",
+      "2026-09-13",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19",
+      "2026-09-20",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "tanks": [
+      {
+        "tank_m3": 500,
+        "matched_days": 62,
+        "window_load_kwh": {
+          "reference": 195228.0,
+          "persistence": 194990.0,
+          "price_only": 172788.0,
+          "flat": 153204.0
+        },
+        "reference_cost_eur": 74918.32,
+        "flat_cost_eur": 81832.56,
+        "reference_minus": {
+          "persistence": {
+            "total_kwh": 238.0,
+            "mean_kwh": 3.838709677419355,
+            "min_daily_kwh": -1292.0,
+            "max_daily_kwh": 969.0,
+            "more_days": 3,
+            "tied_days": 56,
+            "less_days": 3
+          },
+          "price_only": {
+            "total_kwh": 22440.0,
+            "mean_kwh": 361.93548387096774,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 1343.0,
+            "more_days": 50,
+            "tied_days": 12,
+            "less_days": 0
+          },
+          "flat": {
+            "total_kwh": 42024.0,
+            "mean_kwh": 677.8064516129032,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 1360.0,
+            "more_days": 57,
+            "tied_days": 5,
+            "less_days": 0
+          }
+        }
+      },
+      {
+        "tank_m3": 1000,
+        "matched_days": 62,
+        "window_load_kwh": {
+          "reference": 267546.0,
+          "persistence": 266679.0,
+          "price_only": 216818.0,
+          "flat": 153204.0
+        },
+        "reference_cost_eur": 68897.872,
+        "flat_cost_eur": 81832.56,
+        "reference_minus": {
+          "persistence": {
+            "total_kwh": 867.0,
+            "mean_kwh": 13.983870967741936,
+            "min_daily_kwh": -1156.0,
+            "max_daily_kwh": 1156.0,
+            "more_days": 2,
+            "tied_days": 59,
+            "less_days": 1
+          },
+          "price_only": {
+            "total_kwh": 50728.0,
+            "mean_kwh": 818.1935483870968,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 2159.0,
+            "more_days": 52,
+            "tied_days": 10,
+            "less_days": 0
+          },
+          "flat": {
+            "total_kwh": 114342.0,
+            "mean_kwh": 1844.225806451613,
+            "min_daily_kwh": 34.0,
+            "max_daily_kwh": 2720.0,
+            "more_days": 62,
+            "tied_days": 0,
+            "less_days": 0
+          }
+        }
+      },
+      {
+        "tank_m3": 2000,
+        "matched_days": 62,
+        "window_load_kwh": {
+          "reference": 410584.0,
+          "persistence": 410074.0,
+          "price_only": 337093.0,
+          "flat": 153204.0
+        },
+        "reference_cost_eur": 64985.424,
+        "flat_cost_eur": 81832.56,
+        "reference_minus": {
+          "persistence": {
+            "total_kwh": 510.0,
+            "mean_kwh": 8.225806451612904,
+            "min_daily_kwh": -136.0,
+            "max_daily_kwh": 646.0,
+            "more_days": 1,
+            "tied_days": 60,
+            "less_days": 1
+          },
+          "price_only": {
+            "total_kwh": 73491.0,
+            "mean_kwh": 1185.3387096774193,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 1564.0,
+            "more_days": 52,
+            "tied_days": 10,
+            "less_days": 0
+          },
+          "flat": {
+            "total_kwh": 257380.0,
+            "mean_kwh": 4151.290322580645,
+            "min_daily_kwh": 1615.0,
+            "max_daily_kwh": 5168.0,
+            "more_days": 62,
+            "tied_days": 0,
+            "less_days": 0
+          }
+        }
+      },
+      {
+        "tank_m3": 4000,
+        "matched_days": 62,
+        "window_load_kwh": {
+          "reference": 448154.0,
+          "persistence": 448970.0,
+          "price_only": 448154.0,
+          "flat": 153204.0
+        },
+        "reference_cost_eur": 61317.504,
+        "flat_cost_eur": 81832.56,
+        "reference_minus": {
+          "persistence": {
+            "total_kwh": -816.0,
+            "mean_kwh": -13.161290322580646,
+            "min_daily_kwh": -816.0,
+            "max_daily_kwh": 0.0,
+            "more_days": 0,
+            "tied_days": 61,
+            "less_days": 1
+          },
+          "price_only": {
+            "total_kwh": 0.0,
+            "mean_kwh": 0.0,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 0.0,
+            "more_days": 0,
+            "tied_days": 62,
+            "less_days": 0
+          },
+          "flat": {
+            "total_kwh": 294950.0,
+            "mean_kwh": 4757.258064516129,
+            "min_daily_kwh": 2091.0,
+            "max_daily_kwh": 6630.0,
+            "more_days": 62,
+            "tied_days": 0,
+            "less_days": 0
+          }
+        }
+      },
+      {
+        "tank_m3": 8000,
+        "matched_days": 62,
+        "window_load_kwh": {
+          "reference": 450806.0,
+          "persistence": 451214.0,
+          "price_only": 450806.0,
+          "flat": 153204.0
+        },
+        "reference_cost_eur": 61317.504,
+        "flat_cost_eur": 81832.56,
+        "reference_minus": {
+          "persistence": {
+            "total_kwh": -408.0,
+            "mean_kwh": -6.580645161290323,
+            "min_daily_kwh": -408.0,
+            "max_daily_kwh": 0.0,
+            "more_days": 0,
+            "tied_days": 61,
+            "less_days": 1
+          },
+          "price_only": {
+            "total_kwh": 0.0,
+            "mean_kwh": 0.0,
+            "min_daily_kwh": 0.0,
+            "max_daily_kwh": 0.0,
+            "more_days": 0,
+            "tied_days": 62,
+            "less_days": 0
+          },
+          "flat": {
+            "total_kwh": 297602.0,
+            "mean_kwh": 4800.032258064516,
+            "min_daily_kwh": 2499.0,
+            "max_daily_kwh": 6630.0,
+            "more_days": 62,
+            "tied_days": 0,
+            "less_days": 0
+          }
+        }
+      }
+    ],
+    "marginal": [
+      {
+        "from_tank_m3": 500,
+        "to_tank_m3": 1000,
+        "reference_window_load_delta_kwh": 72318.0,
+        "reference_cost_change_eur": -6020.448
+      },
+      {
+        "from_tank_m3": 1000,
+        "to_tank_m3": 2000,
+        "reference_window_load_delta_kwh": 143038.0,
+        "reference_cost_change_eur": -3912.448
+      },
+      {
+        "from_tank_m3": 2000,
+        "to_tank_m3": 4000,
+        "reference_window_load_delta_kwh": 37570.0,
+        "reference_cost_change_eur": -3667.92
+      },
+      {
+        "from_tank_m3": 4000,
+        "to_tank_m3": 8000,
+        "reference_window_load_delta_kwh": 2652.0,
+        "reference_cost_change_eur": 0.0
+      }
+    ]
+  },
+  "probes": [
+    {
+      "name": "missing_persistence",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: missing or invalid persistence control"
+    },
+    {
+      "name": "missing_tank",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: incomplete paired tank cases"
+    },
+    {
+      "name": "wrong_reference_delta",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: price-only delta mismatch"
+    },
+    {
+      "name": "wrong_flat_control",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: flat overlap mismatch"
+    },
+    {
+      "name": "overlapping_windows",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: overlapping, unordered or non-Group 1 window"
+    },
+    {
+      "name": "window_wrong_group",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: overlapping, unordered or non-Group 1 window"
+    },
+    {
+      "name": "window_mismatch",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: window fraction mismatch"
+    },
+    {
+      "name": "source_conflict",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-02: conflicting report source identity"
+    },
+    {
+      "name": "reference_inventory",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: hourly water balance"
+    },
+    {
+      "name": "reference_control",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: reference overlap mismatch"
+    },
+    {
+      "name": "wrong_capacity",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: unsupported retained scenario contract"
+    },
+    {
+      "name": "milliseconds",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: timestamps do not match local hourly bins"
+    },
+    {
+      "name": "impossible_calendar_date",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-07-01: timestamps do not match local hourly bins"
+    },
+    {
+      "name": "unknown_september",
+      "expected": "EMPTY",
+      "actual": "EMPTY",
+      "matched_days": 0,
+      "excluded_dates": [
+        "2026-09-01"
+      ],
+      "reference_value": null,
+      "requested_dates": [
+        "2026-09-01"
+      ]
+    },
+    {
+      "name": "empty_selection",
+      "expected": "EMPTY",
+      "actual": "EMPTY",
+      "matched_days": 0,
+      "excluded_dates": [],
+      "reference_value": null,
+      "requested_dates": []
+    },
+    {
+      "name": "reverse_selection",
+      "expected": "COMPLETE",
+      "actual": "COMPLETE",
+      "matched_days": 2,
+      "excluded_dates": [],
+      "reference_value": 7378,
+      "requested_dates": [
+        "2026-07-01",
+        "2026-07-02"
+      ]
+    },
+    {
+      "name": "duplicate_selection",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: duplicate selected date"
+    },
+    {
+      "name": "noncanonical_date",
+      "expected": "blocked",
+      "actual": "blocked",
+      "message": "Storage comparison unavailable: 2026-10-01: selected date has no retained scenario"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "SF-1",
+      "severity": "P2",
+      "issue": "Civil-time display formatting had accepted fractional seconds and normalized impossible calendar dates as exact hourly bins.",
+      "resolution": "Module now calls strict core.isoHour before Cyprus civil-time matching. Independent .999-second and June31 probes both block; 12 focused tests pass.",
+      "status": "resolved"
+    }
+  ],
+  "remaining_findings": [],
+  "limits": [
+    "Reference schedules and flat controls were recomputed from the raw hourly inputs. Persistence and price-only controls are retained scalars here, so their complete hourly feasibility and decision timing remain unverified.",
+    "Each tank starts and ends half full; increased capacity also changes absolute initial inventory. No capital cost or investment optimum is established.",
+    "Reported-window load is retrospective timing coincidence, not recovered electricity, confirmed local solar allocation, authorized dispatch or evidence of future performance.",
+    "SHA-256 values identify exact reviewed local inputs; source authenticity is not established."
+  ],
+  "artifacts": {
+    "decimal_result": "build/storage-frontier-independent-values.json",
+    "mutation_result": "build/storage-frontier-independent-probes.json",
+    "focused_test_log": "build/storage-frontier-independent-test.log"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "status": "Frozen analytical expectations; no application/oracle output used.",
+  "fixtures": [
+    {
+      "id": "initial_shortage",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 4,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 0,
+            "demand": 1
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 2,
+            "demand": 1
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "2",
+        "initial_shortfall_m3": "1",
+        "with_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "1",
+          "capacity_shortfall_m3": "0",
+          "minimum_capacity_after_initial_topup_m3": "2",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "capacity_shortage",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 2,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 3,
+            "demand": 0
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 0,
+            "demand": 3
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "1",
+        "initial_shortfall_m3": "0",
+        "with_spill": {
+          "minimum_capacity_m3": "4",
+          "capacity_shortfall_m3": "2",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "4",
+          "capacity_shortfall_m3": "2",
+          "minimum_capacity_after_initial_topup_m3": "4",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "spill_changes_capacity",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 3,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 4,
+            "demand": 0
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 0,
+            "demand": 2
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "1",
+        "initial_shortfall_m3": "0",
+        "with_spill": {
+          "minimum_capacity_m3": "3",
+          "capacity_shortfall_m3": "0",
+          "feasible": true
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "5",
+          "capacity_shortfall_m3": "2",
+          "minimum_capacity_after_initial_topup_m3": "5",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "budget_passes_target_fails",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 3,
+        "capacity": 3,
+        "reserve": 0,
+        "target": 3,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 2,
+            "demand": 0
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 0,
+            "demand": 2
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "3",
+        "initial_shortfall_m3": "0",
+        "with_spill": {
+          "minimum_capacity_m3": "5",
+          "capacity_shortfall_m3": "2",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "5",
+          "capacity_shortfall_m3": "2",
+          "minimum_capacity_after_initial_topup_m3": "5",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "topup_causes_no_spill_capacity_shortage",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 2,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 0,
+            "demand": 1
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 2,
+            "demand": 0
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "2",
+        "initial_shortfall_m3": "1",
+        "with_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "minimum_capacity_after_initial_topup_m3": "3",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "boundary_equality",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 2,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 2,
+            "demand": 1
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 0,
+            "demand": 1
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "1",
+        "initial_shortfall_m3": "0",
+        "with_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "feasible": true
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "minimum_capacity_after_initial_topup_m3": "2",
+          "feasible": true
+        }
+      }
+    },
+    {
+      "id": "binary64_positive_residual",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 2,
+        "initial": 1,
+        "capacity": 1,
+        "reserve": 0,
+        "target": 1,
+        "segments": [
+          {
+            "from": 0,
+            "to": 1,
+            "production": 0.1,
+            "demand": 0.3
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "production": 0.2,
+            "demand": 0
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "36028797018963967/36028797018963968",
+        "initial_shortfall_m3": "0",
+        "with_spill": {
+          "minimum_capacity_m3": "1",
+          "capacity_shortfall_m3": "0",
+          "feasible": true
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "36028797018963969/36028797018963968",
+          "capacity_shortfall_m3": "1/36028797018963968",
+          "minimum_capacity_after_initial_topup_m3": "36028797018963969/36028797018963968",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "zero_horizon",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 0,
+        "end_hour": 0,
+        "initial": 1,
+        "capacity": 3,
+        "reserve": 0,
+        "target": 2,
+        "segments": []
+      },
+      "expected": {
+        "minimum_initial_m3": "2",
+        "initial_shortfall_m3": "1",
+        "with_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "1",
+          "capacity_shortfall_m3": "0",
+          "minimum_capacity_after_initial_topup_m3": "2",
+          "feasible": false
+        }
+      }
+    },
+    {
+      "id": "fractional_restart",
+      "model": {
+        "start_epoch": 1782853200000,
+        "start_hour": 5,
+        "end_hour": 6.0,
+        "initial": 1,
+        "capacity": 2,
+        "reserve": 1,
+        "target": 1,
+        "segments": [
+          {
+            "from": 5,
+            "to": 5.5,
+            "production": 0,
+            "demand": 2
+          },
+          {
+            "from": 5.5,
+            "to": 6.0,
+            "production": 4,
+            "demand": 0
+          }
+        ]
+      },
+      "expected": {
+        "minimum_initial_m3": "2",
+        "initial_shortfall_m3": "1",
+        "with_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "feasible": false
+        },
+        "without_spill": {
+          "minimum_capacity_m3": "2",
+          "capacity_shortfall_m3": "0",
+          "minimum_capacity_after_initial_topup_m3": "3",
+          "feasible": false
+        }
+      }
+    }
+  ],
+  "notes": {
+    "binary64_positive_residual": "binary64(0.1)+binary64(0.2)-binary64(0.3)=1/2^55 exactly. This is representation accounting, not a meaningful field water margin.",
+    "fractional_restart": "Same net volumes as coupled top-up fixture but starts at hour 5 with half-hour segments; witness hours remain in original model coordinates."
+  }
+}

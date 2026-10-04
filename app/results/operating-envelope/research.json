@@ -1,0 +1,29 @@
+{
+  "scope": "Independent review of supplied operating constraints; no forecast, plant model or schedule generation.",
+  "roadmap": {
+    "pitch_file": "source/AquaShift Pitch.pdf",
+    "pitch_sha256": "01dce41ccaf3536527b4933259835ea54c2a8e88bbb8a6d642e763448ec5d608",
+    "pitch_page": 8,
+    "requirement": "The original pitch includes maximum plant-ramp rules.",
+    "work_split_file": "source/AquaShift_PoC_Work_Split.pdf",
+    "work_split_sha256": "3f15d7b4a727e9ff1e2fa9eb13da8ecbf84e68fefe397e94187cc41a5f59f4d0",
+    "ownership": "Stefanos owns the primary forecasts, plant model and scheduler; Loucas independently evaluates supplied results and integrates the demonstration.",
+    "audit": "results/forecast-value-study/roadmap-audit.json"
+  },
+  "primary_source": {
+    "title": "Stochastic Power-Water Coordination: Unlocking Flexibility in Hybrid RO Desalination Plants via Variable-Speed Pumps and Tank Mixing",
+    "authors": ["Rongxing Hu", "Charalambos Konstantinou"],
+    "version": "arXiv:2601.07295v1",
+    "url": "https://arxiv.org/html/2601.07295v1",
+    "inspected_sections": ["II-A High Pressure Pump System", "II-B RO Desalination Process, including Flushing Requirements"],
+    "finding": "The authors model pump operating bounds, water and salt balances, flushing water and energy, and minimum shutdown duration. Their formulation separates plant operating state from freshwater output.",
+    "application": "Review declared flow and state constraints separately. A water-balance result does not establish pressure, membrane, flushing, quality or electrical feasibility.",
+    "limits": "This paper is a preprint and supplies no verified operating limits for the Paphos plant. No paper parameter or reported cost saving is adopted as an AquaShift or Cyprus result. Only the listed sections were inspected for this increment."
+  },
+  "unverified_source": {
+    "title": "DuPont FilmTec Reverse Osmosis and Nanofiltration Technical Manual",
+    "url": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-Manual-45-D01504-en.pdf",
+    "status": "Search indexing returned excerpts, but two attempts to open the official PDF timed out. No parameter is taken from those excerpts."
+  },
+  "boundary": "Synthetic analytical examples establish implementation behavior only. A supplied declaration is not authenticated operating authority. Real plant limits, their basis, time-resolved trajectories and operating history remain necessary inputs."
+}

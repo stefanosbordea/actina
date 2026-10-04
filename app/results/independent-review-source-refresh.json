@@ -1,0 +1,20 @@
+{
+  "command": ".venv/bin/python results/independent-review.py > results/independent-review-source-refresh.log 2>&1",
+  "exit_status": 0,
+  "finished_utc": "2026-10-01T22:10:57.236684+00:00",
+  "stdout_stderr_log": "results/independent-review-source-refresh.log",
+  "current_result": "results/independent-review.json",
+  "current_result_sha256": "c7fb52935e876f12c560dd0a4222bc894bb67e4a53cab54107dfa05ca5eac081",
+  "source_sha256_verified": {
+    "results/independent-review.py": true,
+    "model/scheduler.py": true,
+    "model/train.py": true,
+    "eval/evaluate.py": true,
+    "data/test_predictions.csv": true,
+    "data/paphos_weather.csv": true
+  },
+  "evidence_values_equal_retained_deck_input": true,
+  "retained_deck_input": "results/independent-review-for-deck.json",
+  "retained_deck_input_sha256": "aae2def354c10b47e0de8574407f95e23628edda395cfc4da3e4c58591de6d5c",
+  "deck_sha256_unchanged": "15fd5e88a1b7583808297d8f56c06a89dbfde03523689ecb57e06e5c29495205"
+}

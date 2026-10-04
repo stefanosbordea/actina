@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-02T00:01:20.851399+00:00",
+  "palette": "monochrome",
+  "pages_inspected": 5,
+  "layout": "All five current rendered pages visually reviewed in contact sheet; changed technical page 1 also reviewed individually. No clipping or overflow observed.",
+  "contact_sheet": "build/latex-review/current/contact.jpg",
+  "page_images": [
+    "build/latex-review/current/Executive-Summary-1.jpg",
+    "build/latex-review/current/Technical-Proposal-1.jpg",
+    "build/latex-review/current/Technical-Proposal-2.jpg",
+    "build/latex-review/current/Technical-Proposal-3.jpg",
+    "build/latex-review/current/Business-Model-Canvas-1.jpg"
+  ],
+  "built_in_compiler": {
+    "AquaShift-Executive-Summary.tex": "success",
+    "AquaShift-Technical-Proposal.tex": "success",
+    "AquaShift-Business-Model-Canvas.tex": "success"
+  },
+  "pdf_sha256": {
+    "delivery/AquaShift-Executive-Summary.pdf": "9b1cd4f57a0eca11dcf7cc0c9d2906c89d8197e1d75bab2f3d3d48533f84e029",
+    "delivery/AquaShift-Technical-Proposal.pdf": "6d6820e1bf0038e2041c68593f0d20f36d09fd7c79d91e01ec1767f51361ffca",
+    "delivery/AquaShift-Business-Model-Canvas.pdf": "3aea394e00521f31746ac9aea37ea1781fd141528f2930ab1cb8933cfcc77a23"
+  },
+  "source_sha256": {
+    "delivery/AquaShift-Executive-Summary.tex": "edc0559db61246bef448b438ff0b4db526c16a021784354410451277ff2980e5",
+    "delivery/AquaShift-Technical-Proposal.tex": "726a0af66ebe68c8219c2f12b3f9605147f5f7c125929f267db6a78682d8e1a2",
+    "delivery/AquaShift-Business-Model-Canvas.tex": "672daf93f48bb79235ae9e0800c1c86ea31d88dfc1f7222be0275b3a3ea2393c"
+  },
+  "delivery_receipt": "results/latex-delivery.json"
+}

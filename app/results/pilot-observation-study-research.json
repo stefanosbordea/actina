@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "researched_on": "2026-10-02",
+  "status": "Proposed experiment; not an executed pilot or novelty finding",
+  "scope": "Loucas: independent measurement, plan evaluation and review evidence. Stefanos retains forecast training, plant model and schedule generation. No new scheduler, contact or plant control.",
+  "question": "Does reviewing a frozen submitted plan against timely, correctly mapped observations identify consequential departures earlier and more usefully than the same plan without new observations or a simple current-level alarm?",
+  "sources": [
+    {
+      "id": "water-flexibility",
+      "url": "https://www.nature.com/articles/s44221-024-00316-4",
+      "title": "Valuing energy flexibility from water systems",
+      "published": "2024-09-27",
+      "access": "Publisher abstract and preview inspected earlier in this session; full text subscription-only. Later fetch encountered a cookie redirect. Author publication listing corroborates title and DOI.",
+      "supports": "Water-system flexibility, storage-equivalent metrics and cost valuation are established work; they cannot be claimed as AquaShift inventions."
+    },
+    {
+      "id": "current-related-work",
+      "url": "https://we3lab.stanford.edu/publications.html",
+      "access": "Current author publication listing inspected; linked DOI pages could not be retrieved.",
+      "supports": "Lists Demand response event simulator and risk-aware bidding tool for industrial customers (2026; 10.1016/j.apenergy.2026.127456), and PyPES: A data and metadata schema for portable water system models (2025; 10.1016/j.envsoft.2025.106788).",
+      "limit": "Titles establish relevant prior-art leads, not their precise methods, comparison results or publication day. Full-text comparison remains needed before any novelty claim."
+    },
+    {
+      "id": "femp-mv",
+      "url": "https://www.energy.gov/sites/default/files/2024-10/mv_guide_5_0.pdf",
+      "title": "M&V Guidelines: Measurement and Verification for Performance-Based Contracts, Version 5.0",
+      "document_date": "September 2024",
+      "access": "Official 142-page PDF; sections 2.1, 4.3, 4.4.2, 5.3 and 6.15 inspected.",
+      "supports": "Savings compare a baseline with performance under adjusted conditions; uncertainty persists. Interval demand is average power or energy over an interval. Meter accuracy, calibration and missing data affect confidence. Dispatchable-load savings require comparison with counterfactual load and applicable tariff periods.",
+      "limit": "A transferable measurement reference, not Cyprus law, site authorization or certification of this study. No federal numeric acceptance threshold is imported."
+    },
+    {
+      "id": "curtailment-definition",
+      "url": "https://research-hub.nlr.gov/en/publications/what-is-power-system-curtailment/",
+      "document_url": "https://www.nlr.gov/docs/fy25osti/90517.pdf",
+      "title": "What Is Power System Curtailment?",
+      "published_year": 2024,
+      "access": "Official abstract and four-page PDF available through the laboratory's current domain.",
+      "supports": "Curtailment means intentional generation reduction relative to available renewable production; its energy quantity depends on the uncurtailed potential, not merely on consumption during a reported window."
+    },
+    {
+      "id": "pv-potential",
+      "url": "https://arxiv.org/abs/1705.04132",
+      "title": "Photovoltaic Model-Based Solar Irradiance Estimators: Performance Comparison and Application to Maximum Power Forecasting",
+      "submitted": "2017-04-18",
+      "access": "Authors' primary research abstract inspected.",
+      "supports": "Measured curtailed PV output differs from available potential. Estimating that potential is itself existing research, evaluated here with electrical and temperature measurements on a particular PV installation.",
+      "limit": "The reported experimental performance does not transfer automatically to a Cyprus plant or validate an AquaShift estimator."
+    },
+    {
+      "id": "eac-curtailment",
+      "url": "https://www.eac.com.cy/EN/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/Photovoltaic_Disconnection_Process_EN.pdf",
+      "access": "Official process reviewed earlier; retained full-document retrieval and page-inspection evidence is in results/pilot-input-research.json. Current repeat web fetch failed.",
+      "supports": "Curtailment stages and connection conditions matter; some retain self-consumption while the emergency stage stops all production. A public window grants neither site allocation nor load permission.",
+      "limit": "General process, not the identified plant's valid connection agreement or live instruction."
+    }
+  ],
+  "proposed_measurement_contract": {
+    "basis": "Engineering proposal informed by these sources; field names and study criteria below are ours, not source mandates.",
+    "identity": "Every point or interval retains asset, sensor, physical boundary, units, original source hash, quality, calibration reference, observation time and first-available time. Mapping must name the actual tank or electrical connection and its valid period.",
+    "time": "Use explicit UTC offsets and interval start/end. An interval observation cannot support a decision made before the interval ended or before it became available. Preserve corrected values as later vintages. Reject overlapping duplicates; report gaps and coverage. Do not assume every local civil day has 24 hours.",
+    "electricity": [
+      "A point reading in kW supports a point comparison only. Integrating held or interpolated point values produces an estimate under a named assumption, not measured interval kWh.",
+      "Declared interval-average kW times elapsed hours yields interval energy. A measured kWh interval or validated cumulative-register difference also yields energy; require register identity, multiplier, direction, reset/rollover handling and equal endpoints.",
+      "Subtract import/export only when meter topology and sign conventions warrant it. Do not sum gross and net channels, or allocate the same PV energy to multiple loads. Preserve pumping, treatment, auxiliary, startup and flush consumption within the declared comparison boundary."
+    ],
+    "water": [
+      "Convert level to usable volume only using the identified tank's calibrated level-volume relationship. Point inventory departure is not a measured period deficit or a leak diagnosis.",
+      "For a period, reconcile initial inventory plus accepted-product inflow minus withdrawals, measured losses and final inventory. Gross permeate, rejected product and flushing are separate channels. An unexplained balance residual remains unexplained.",
+      "Equal service includes delivered accepted-quality water, reserve compliance and terminal usable inventory; merely producing the same gross volume is insufficient."
+    ]
+  },
+  "energy_claim_levels": [
+    {
+      "level": "reported_window",
+      "meaning": "Regional or group curtailment context.",
+      "cannot_establish": "Site-available power, recovered energy or authority to change operation."
+    },
+    {
+      "level": "allocation",
+      "meaning": "An identified and valid contractual/operator allocation to a connection and period.",
+      "cannot_establish": "Physical consumption or incremental avoided curtailment."
+    },
+    {
+      "level": "usable_energy",
+      "meaning": "Power the asset could accept over the period within its verified electrical and water-process envelope, with source availability and uncertainty.",
+      "cannot_establish": "That the power was consumed or would otherwise have been curtailed."
+    },
+    {
+      "level": "observed_consumption",
+      "meaning": "Metered interval electricity within the declared boundary. Renewable attribution requires a defensible topology/allocation method.",
+      "cannot_establish": "Incremental recovery just because consumption coincides with sunshine or curtailment elsewhere."
+    },
+    {
+      "level": "estimated_incremental_avoided_curtailment",
+      "meaning": "Difference between counterfactual curtailed renewable energy without the intervention and curtailed energy with it, under matched weather, grid limits, other loads and water service. Report the counterfactual method, uncertainty and possible displacement to other resources.",
+      "cannot_establish": "A directly metered counterfactual. min(plant consumption, regional curtailment) is not an attributable saving; neither is assigned renewable energy alone."
+    }
+  ],
+  "study_design": [
+    {
+      "step": "Freeze",
+      "criterion": "Before each review period, archive Stefanos's issued forecast, unchanged plan, plant assumptions and their hashes. Freeze evaluation code, review cutoffs, endpoints, exclusions, horizons and comparison methods before inspecting outcome data."
+    },
+    {
+      "step": "Read-only paired comparison",
+      "criterion": "At identical cutoffs, compare three evaluators: submitted plan alone; current observed-level threshold alarm; submitted plan anchored to timely observations. All see the same eligible data and operator thresholds. None creates or dispatches a new schedule."
+    },
+    {
+      "step": "Independent outcome labels",
+      "criterion": "Use subsequent calibrated inventory/service measurements to label departures and reserve events, allowing stated sensor uncertainty. Log operator interventions and changed production/demand; report affected/censored cases explicitly. A prevented event after intervention cannot simply be counted as a false alarm."
+    },
+    {
+      "step": "Primary endpoint",
+      "criterion": "Predeclare a practical minimum warning lead time and tolerable false-alert burden with the operator. Measure event sensitivity, false alerts per monitored day, warning lead time, inventory error and coverage. Report paired differences versus both controls with uncertainty; zero events cannot establish event-detection superiority."
+    },
+    {
+      "step": "Causal and uncertainty checks",
+      "criterion": "A point departure may result from demand, production, calibration or mapping error. Do not attribute cause without corresponding measured channels. Test timestamp delay, stale mapping and calibration error separately from physical disturbances; quantify missingness and fail-open rates."
+    },
+    {
+      "step": "Size the experiment",
+      "criterion": "Choose duration from the minimum useful effect, observed day/event variability, meter uncertainty and event frequency; do not prescribe an unsupported fixed sample count. Analyze paired blocks/days rather than treating correlated sensor samples as independent trials. Retain adverse and quiet periods, not only sunny examples."
+    },
+    {
+      "step": "Any later savings study",
+      "criterion": "Only with operator participation, use a pre-agreed normal-operation baseline or approved matched/crossover periods, accounting for weather, grid state, water service, terminal inventory, startup/flush costs, actual tariffs and other loads. Passive shadow replay measures review quality and modeled consequences, not realized savings."
+    }
+  ],
+  "credible_contribution_if_demonstrated": "A reproducible Cyprus pilot showing whether time-correct independent review of externally supplied plans improves warning usefulness and evidence traceability under real measurement constraints. Novelty and economic benefit remain hypotheses; source-linked data alone, water storage, risk simulation and standard accounting are established ideas.",
+  "next_buildable_result": "A small observation-to-plan evaluation fixture covering timely, late, stale-mapped and uncertain readings, followed by one operator-provided observation window. Keep point departures distinct from future interval energy and water-balance evaluation.",
+  "limitations": [
+    "No real pilot dataset, operator-agreed thresholds, valid site envelope or meter calibration was obtained in this research.",
+    "No field saving, operational readiness, scientific novelty or competition outcome is established.",
+    "Research recommendations do not authorize plant control or replace Stefanos's assigned work.",
+    "This record supplements the existing source and input research; it does not redefine the user's wider product goal as completed."
+  ],
+  "synthetic_warning_study": {
+    "status": "Proposed acceptance protocol; no runs or gains claimed here.",
+    "question": "With the same latest eligible tank observations, does replaying an immutable remaining plan provide more useful warning than present-level and causal trend monitoring?",
+    "primary_configuration": {
+      "proposal_not_operator_requirement": "Freeze these numerical choices before opening held-out results; change them only in a separately labelled sensitivity study.",
+      "review_cadence_minutes": 15,
+      "warning_horizon_hours": 4,
+      "minimum_useful_lead_minutes": 30,
+      "exact_arithmetic_tolerance_m3": 1e-06,
+      "noise_analysis": "Analyze an exact-sensor control and separately declared calibration/noise settings. Never interpret the numerical tolerance as field sensor accuracy."
+    },
+    "controls": [
+      "Present-level alarm: use only the latest available tank value and the same reserve threshold.",
+      "Observed-trend extrapolation: use a predeclared trailing window of eligible past readings, a fixed minimum sample count and declared clipping; no future points or scenario parameters. If insufficient history, report abstention rather than silently borrowing future history.",
+      "Nominal plan alone: retain original initial conditions; distinguishes the value of new observations from knowing the planned production pattern.",
+      "Observation-anchored plan: latest eligible reading plus unchanged planned remaining production and nominal demand; never supply the hidden disturbance to this evaluator."
+    ],
+    "leakage_and_fairness": [
+      "Generate a common actual trajectory independently of all evaluator outputs. Hidden future demand/production disturbances drive only this truth generator. Archive family parameters/seeds and code hashes; split scenario families or parameter ranges, not neighbouring time rows, into development and held-out evaluation.",
+      "All evaluators get identical timestamps, observation delays, dropouts, quantization and mapping validity. A delayed reading is eligible at its first_available_at, but describes inventory at observed_at. Do not silently move it to the cutoff without an explicit assumed transition.",
+      "Fix thresholds, horizon, cadence, tie rules, warm-up, gap handling and event matching before scoring. Do not tune a winner on the held-out scenarios or select only the favourable disturbance family.",
+      "Use a stable no-disturbance case, a known future planned drawdown, an unforecast demand shock, a production outage, recovery/refill, and delayed/noisy readings. The unforecast shocks test limits; a plan-aware method need not dominate every family."
+    ],
+    "event_accounting": [
+      "Truth is a strict reserve violation S < reserve - tolerance, with exact within-interval crossing where the truth generator supports it. Touching the reserve without crossing is not a violation. Declare recovery/hysteresis and event merging before counting repeated excursions.",
+      "At each cutoff, a predictive warning means a new violation strictly after the cutoff and within the next four hours. Already-below-reserve states are detected violations, not successful early warnings. Evaluate initial unsafe states separately.",
+      "For an event, match only eligible warnings within its preceding horizon; credit the first matched warning once. Lead time is truth crossing minus warning issue time, not reading observation time. A missed event lacks a matched warning with at least 30 minutes lead.",
+      "Report event recall, missed events, lead-time distribution, false-alert episodes and alert time fraction. Merge repeated consecutive warnings into episodes for burden; also retain raw warning counts. Keep per-cutoff false positives distinct from event-level misses.",
+      "A false warning has no qualifying crossing within its declared horizon. Exclude end-of-record cutoffs without complete horizon from outcome classification, reporting their count. Do not let a much later crossing retroactively vindicate it.",
+      "No interventions are simulated in the primary passive study. An optional intervention experiment needs independent action rules and different causal interpretation; otherwise the evaluator can erase its own event and corrupt the label."
+    ],
+    "acceptance": [
+      "Correctness: zero violations of information cutoffs, asset/mapping identity, preserved plan hash, per-period mass balance or exact-sensor no-disturbance replay within declared numerical tolerance.",
+      "Coverage: score and report every predeclared family, all abstentions, ineligible observations, warm-up and end-window exclusions. Test late revisions and invalid mappings explicitly; they must not masquerade as valid predictions.",
+      "Useful synthetic effect: report paired event recall at the declared useful lead time and false-alert burden against all controls, with scenario-level uncertainty. Claim a synthetic improvement only if the predeclared primary comparison improves without exceeding the predeclared alarm budget; the budget must be fixed before scoring.",
+      "Choose the alarm budget from the simulated use case or present trade-offs without a superiority claim. No arbitrary post-hoc budget may convert an adverse result into a success.",
+      "Generalization: preserve untouched seeded holdouts and stress-family results. A gain on known planned drawdowns alone establishes that limited behaviour, not robust unforecast-failure detection.",
+      "Reporting: list exact generated inputs, commands, seeds, counts and hashes. Label all results synthetic, state both gains and regressions, and make no realized energy, operator or field-safety claim."
+    ]
+  }
+}

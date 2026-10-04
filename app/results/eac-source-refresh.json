@@ -1,0 +1,135 @@
+{
+  "checked_at_utc": "2026-10-02T00:55:14.570548+00:00",
+  "scope": "Read-only official-source refresh; compact delivery receipt. Raw response headers/index and duplicate PDFs stay on the mounted authoring volume. No product data, forecasting or scheduler edits.",
+  "official_index": {
+    "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx",
+    "fetch_start_utc": "2026-10-02T00:53:49.447761+00:00",
+    "status": 200,
+    "final_url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx",
+    "path": "/Volumes/CARMIX-WORK/AquaShift-eac-refresh-2026-10-02/official-curtailment-index.html",
+    "bytes": 248819,
+    "sha256": "06ab515a2bb45e4d07b78203eb455344156192d1008f07bee4e1fec4dd972cf0",
+    "fetch_complete_utc": "2026-10-02T00:53:52.585970+00:00"
+  },
+  "listed_2026_months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "september_2026_report_linked": false,
+  "conclusion": "No September 2026 monthly report is linked on the official index at this retrieval. September remains unknown, not zero. July/August currently linked original PDFs are byte-identical to retained sources; no revision is linked.",
+  "monthly_report_links": [
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_01_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_01_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_01_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_02_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_02_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_02_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_03_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_03_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_03_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_04_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_04_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_04_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_05_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_05_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_05_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_06_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_06_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_06_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_07_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_07_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_07_2026.pdf"
+    },
+    {
+      "text": "ΠΕΡΙΚΟΠΕΣ_08_2026.pdf",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_08_2026.pdf",
+      "decoded_url": "/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/ΠΕΡΙΚΟΠΕΣ_08_2026.pdf"
+    }
+  ],
+  "fresh_known_pdf_retrievals": [
+    {
+      "id": "eac-2026-07",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_07_2026.pdf",
+      "fetch_start_utc": "2026-10-02T00:53:38.411527+00:00",
+      "status": 200,
+      "final_url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_07_2026.pdf",
+      "path": "/Volumes/CARMIX-WORK/AquaShift-eac-refresh-2026-10-02/eac-2026-07.pdf",
+      "bytes": 6100529,
+      "sha256": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+      "is_pdf": true,
+      "fetch_complete_utc": "2026-10-02T00:53:40.726665+00:00",
+      "retained_sha256": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+      "matches_retained": true,
+      "pages": 31,
+      "pdf_modification_metadata": "Mon Aug  3 11:09:03 2026 EEST",
+      "metadata_is_not_publication_date": true
+    },
+    {
+      "id": "eac-2026-08",
+      "url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_08_2026.pdf",
+      "fetch_start_utc": "2026-10-02T00:53:38.411631+00:00",
+      "status": 200,
+      "final_url": "https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/%ce%a0%ce%95%ce%a1%ce%99%ce%9a%ce%9f%ce%a0%ce%95%ce%a3_08_2026.pdf",
+      "path": "/Volumes/CARMIX-WORK/AquaShift-eac-refresh-2026-10-02/eac-2026-08.pdf",
+      "bytes": 6524712,
+      "sha256": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d",
+      "is_pdf": true,
+      "fetch_complete_utc": "2026-10-02T00:53:44.404666+00:00",
+      "retained_sha256": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d",
+      "matches_retained": true,
+      "pages": 31,
+      "pdf_modification_metadata": "Tue Sep  1 11:38:37 2026 EEST",
+      "metadata_is_not_publication_date": true
+    }
+  ],
+  "printed_page_inspections": [
+    {
+      "source": "eac-2026-07",
+      "page": 1,
+      "printed_curtailment_date": "01/07/2026",
+      "group_1_window": "10:00–15:30",
+      "main_estimated_curtailed_mwh": 704.3
+    },
+    {
+      "source": "eac-2026-08",
+      "page": 1,
+      "printed_curtailment_date": "01/08/2026",
+      "group_1_window": "09:00–16:45",
+      "main_estimated_curtailed_mwh": 1243.8
+    },
+    {
+      "source": "eac-2026-08",
+      "page": 31,
+      "printed_curtailment_date": "31/08/2026",
+      "group_1_window": "09:45–15:00",
+      "main_estimated_curtailed_mwh": 495.8
+    }
+  ],
+  "energy_scope": "Report main estimated curtailed energy and Group1 windows; separately listed Ripple/IoT values are distinct and must not be silently included. No local plant allocation, recoverable-hourly availability or measured recovery is inferred.",
+  "public_release_unchanged": true,
+  "web_tool_limitation": "Web tool could not fetch legacy official index/PDF; direct verified HTTPS GETs returned200 and raw bytes/headers were retained.",
+  "original_external_receipt": {
+    "path": "/Volumes/CARMIX-WORK/AquaShift-eac-refresh-2026-10-02/audit-results.json",
+    "bytes": 11858,
+    "sha256": "aa0d31e797892891ff38f6f32a28e5aba1eda575c7f1167b9f3e517c7b3bf0bb"
+  }
+}

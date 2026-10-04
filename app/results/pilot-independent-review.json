@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-02T00:12:22.740221+00:00",
+  "scope": "Independent read-only numeric/API and JSDOM handler review of the frozen Pilot intake. No plant control, model training, planner edits, deployment or physical/visual browser certification.",
+  "finding_count": 0,
+  "open_findings": [],
+  "asset_sha256": {
+    "index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+    "workspace.js": "afa1986b2bf9bcdfb3dd6b923242df0a3e1033b554acdc97bba7a5905a2a6fe8",
+    "workspace.css": "d6013c79ea48f0c6126c5cdc8a632f97a9181fbc0ed745d1de1de48b1ce891e0",
+    "core.mjs": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+    "pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "pilot-ui.mjs": "2b1f390824f62d0bfba86c14bd4a920a56ab31676d132d2fc3395475c645d955",
+    "data.json": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+    "manifest.json": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+    "research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+    "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+  },
+  "actual_runs": [
+    {
+      "command": "node --experimental-vm-modules /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/probe.mjs",
+      "exit_code": 0,
+      "pure_checks_passed": 37,
+      "handler_checks_passed": 12,
+      "source_bytes_unchanged_during_probe": true,
+      "log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/release-final-probe.log",
+      "machine_checks": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/checks.json"
+    },
+    {
+      "command": "node --experimental-vm-modules --test test_core.mjs test_schedule.mjs test_workspace.mjs test_pilot.mjs",
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web",
+      "exit_code": 0,
+      "passed": 71,
+      "failed": 0,
+      "log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/release-final-tests.log"
+    }
+  ],
+  "checks": {
+    "time_and_coverage": "Equivalent-offset/fractional-second duplicates rejected. Spring/autumn Cyprus windows have 23/25 hours, tested at 15- and 60-minute cadence. Exclusive end, invalid calendars, naive/off-grid times and telemetry available before observation fail closed. Missing and late slots remain distinct unknowns; no wall-clock review time inferred.",
+    "numeric_contract": "Closed min/max bounds preserve an actual zero. Nonfinite/nondecimal/out-of-range values, wrong units, undeclared streams, duplicate assets/headers, unsupported fields/source/schema/cadence and invalid reserves block all displayed numeric inputs.",
+    "inert_imports": "Declared __proto__, constructor and toString IDs work through Map keys without prototype authority. Own prototype-shaped JSON extras are rejected. Malicious source/asset labels and filenames remain inert text; no injected image/script/event SVG was created.",
+    "identity_and_failure": "Raw BOM/CRLF contract and CSV hashes match imported bytes. Original CSV export matches exact input bytes. Fatal UTF-8 failure and rejected declarations explicitly preserve the prior accepted intake. Blocked CSV clears numeric/chart/parsed-export values while retaining a separate original export.",
+    "first_available_and_chart": "Historical cutoff withholds late values from metrics/chart, retains source observations in the record, and exports every unknown slot. Point view leaves gaps blank; it does not interpolate.",
+    "source_and_readiness": "Synthetic/invented and operator-declared/unverified source labels remain distinct. COMPLETE with below-declared-reserve readings remains reviewRequired and is visibly NEEDS REVIEW. Coverage/readiness certifies neither origin, plant safety, water quality nor dispatch authority.",
+    "isolation": "Pilot controls hide the reference context and restore it on leaving. Imported tank bounds do not change selected reference capacity/date/plan source. Exact before/after plan CSV bytes and model/control metrics match. Intake performs no additional fetch, localStorage write, power integration, recovered-energy calculation or planner mutation.",
+    "failed_reference": "Pilot review/export remains available if the canonical manifest fails verification; reference plan actions stay disabled.",
+    "DST_presentation": "Explicit offsets and seconds distinguish repeated autumn readings; exact observation/first-available point titles use SVG DOM textContent. Earlier cutoff excludes the later repeated hour.",
+    "final_UI_scope": "Current source and executed handler regressions label end inventory at h+1 including24:00, keep 24 meter-clock slots with unknown daytime gaps, preserve Hold for correction without authorization language, label historical radiation as a reference, display friendly Pilot names/units while exported schema stays unchanged, and use singular blocking findings.",
+    "publication_metadata": "The EAC process is Undated in public research, with an explicit PDF-creation-metadata limitation. The regression and actual70-test suite pass; no publication year inferred from creation metadata.",
+    "chart_edge_labels": "Final generic chart source anchors first/last labels inward without changing point coordinates or time spans. The new edge-label regression passed in the actual71-test rerun; real rendered QA remains parent-owned."
+  },
+  "limitations": [
+    "JSDOM confirms handler behavior and DOM content; parent owns real-browser rendered QA.",
+    "Reviewer-supplied observations, provenance labels and numeric bounds are not authenticated or certified.",
+    "Observation intake is memory-local and disappears on reload; a user must export an explicit record to retain/share it.",
+    "Operator permission, approved plant envelope, calibrated measurements, water quality and brine constraints are outside this narrow numeric intake.",
+    "Offline CLI transport was read statically and found no blocker; its owner runs wrapper fixtures separately."
+  ],
+  "historical_receipts_preserved": true,
+  "probe_identity": {
+    "script_sha256": "bcba5e37bf2fe9496fb97b2e99bcbab6114cbbf6457c969c88015917d3cf552c",
+    "checks_sha256": "5f131c00d8b60f1633690941fdccc51d4af7c1c74d2812e69d61fbbe3b4b121e",
+    "test_log_sha256": "5cb55c182a43c557c2b9a0e54b7c58a90c5b648d8cf123f0a3fdf571a9a8afc7"
+  },
+  "source_bytes_unchanged_after_existing_tests": true,
+  "release_state": "Final frozen Pilot source rechecked; no open P1/P2 findings.",
+  "resolved_findings": [
+    {
+      "priority": "P2",
+      "id": "DST-display-ambiguity",
+      "identified_by": "Root review; missed by initial independent presentation review",
+      "resolution": "Cyprus stream/latest and review timestamps display seconds and UTC offset; each chart point carries exact ISO observation and first-available times through SVG title.textContent. The compact chart axis remains a short civil-time label; point titles disambiguate repeated instants.",
+      "verification": "Actual independent autumn handler fixture:03:00+03 and03:00+02 remain two distinct points/titles; cutoff03:01+03 retains only the first point and GMT+3 display."
+    }
+  ],
+  "historical_pre_fix_proof": {
+    "sources": {
+      "index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+      "workspace.js": "9daeaa9a4aeb51ed2914f70a402defdd492b342838d08d38868967f6c183b583",
+      "workspace.css": "d6013c79ea48f0c6126c5cdc8a632f97a9181fbc0ed745d1de1de48b1ce891e0",
+      "core.mjs": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+      "pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "pilot-ui.mjs": "6c0a14ff65803bfc260f46261064d86426c348fa5e790a295fd0c4e10582bd36",
+      "data.json": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+      "manifest.json": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+      "research.json": "2703aceeda78c3852d3424424b1fa774665b3a9e5867f3eedf8e7352e6fba004",
+      "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+    },
+    "checks": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/pre-dst-checks.json",
+    "suite_log": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-independent-review/pre-dst-existing-tests.log",
+    "pure_checks": 37,
+    "handler_checks": 11,
+    "existing_tests": 63
+  },
+  "prior_final_source_snapshots": [
+    {
+      "reviewed_at_utc": "2026-10-01T23:54:20.550357+00:00",
+      "asset_sha256": {
+        "index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+        "workspace.js": "69669436df05eaab867d13fb1357026b33fb90140b00ab9e387f6e8a9ba904df",
+        "workspace.css": "d6013c79ea48f0c6126c5cdc8a632f97a9181fbc0ed745d1de1de48b1ce891e0",
+        "core.mjs": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+        "pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+        "pilot-ui.mjs": "651f9de368a7fc9f91678631e84f360e0a9bb1dbe06d30a787c81e6d1d5dcdf5",
+        "data.json": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+        "manifest.json": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+        "research.json": "2703aceeda78c3852d3424424b1fa774665b3a9e5867f3eedf8e7352e6fba004",
+        "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+      },
+      "suite_passed": 64,
+      "receipt_sha256": "253487d4c887347c687afc6a084818c3063c2f27a21ad187a823a7069cc2d124"
+    },
+    {
+      "reviewed_at_utc": "2026-10-02T00:08:41.745473+00:00",
+      "asset_sha256": {
+        "index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+        "workspace.js": "8a57f7e877856463595029289eaff0b1b2fa87f6f4f31f4cbb640763ededf29e",
+        "workspace.css": "d6013c79ea48f0c6126c5cdc8a632f97a9181fbc0ed745d1de1de48b1ce891e0",
+        "core.mjs": "32053a80d149a969489fdf0ea2a0608296a02143030fccf9bdff046f9f3862f3",
+        "pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+        "pilot-ui.mjs": "2b1f390824f62d0bfba86c14bd4a920a56ab31676d132d2fc3395475c645d955",
+        "data.json": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+        "manifest.json": "b09d9437417297d89409be568cda9abaac9f7553f8384ca2a5dec72ce466958c",
+        "research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+        "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e"
+      },
+      "suite_passed": 70,
+      "receipt_sha256": "fbeb56f05ee76a34749370c13c208cd5cff2fce4d7bef973e5832d706d516eb3"
+    }
+  ]
+}

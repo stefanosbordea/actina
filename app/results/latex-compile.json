@@ -1,0 +1,17 @@
+[
+  {
+    "name": "AquaShift-Executive-Summary",
+    "exit_status": 0,
+    "log": "build/latex-review/AquaShift-Executive-Summary.compile.log"
+  },
+  {
+    "name": "AquaShift-Technical-Proposal",
+    "exit_status": 0,
+    "log": "build/latex-review/AquaShift-Technical-Proposal.compile.log"
+  },
+  {
+    "name": "AquaShift-Business-Model-Canvas",
+    "exit_status": 0,
+    "log": "build/latex-review/AquaShift-Business-Model-Canvas.compile.log"
+  }
+]

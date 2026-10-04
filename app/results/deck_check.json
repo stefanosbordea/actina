@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "finished_utc": "2026-10-01T23:30:31.312606+00:00",
+  "scope": "Natural speaker-note rewrite. Slide visuals, displayed values, roles and native chart data preserved.",
+  "final_path": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/AquaShift-Pafos-2026.pptx",
+  "final_sha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+  "byte_count": 63686,
+  "speaker_notes_path": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/AquaShift-Speaker-Notes.md",
+  "speaker_notes_sha256": "25974d96e9f86066e164f377fe298f6ddb239577fb2c48a1f921ac3b5a5811a3",
+  "spoken_words": 1504,
+  "planned_seconds_including_demo": 830,
+  "demo_or_video_fallback_seconds": 90,
+  "official_limit_seconds": 900,
+  "headroom_seconds": 70,
+  "human_rehearsal_performed": false,
+  "changes": [
+    "Removed repeated preparation-status paragraphs",
+    "Direct Loucas/Stefanos contribution attribution",
+    "One overall preparation note and slide-10 AI disclosure",
+    "Relevant experiment limits retained beside each claim",
+    "Slide-6 cues use the actual monochrome workspace and new film",
+    "Slide-9 cue presents the one-page canvas; spoken text covers all nine blocks",
+    "Slide-7 issue-time availability explicitly remains an unverified assumption"
+  ],
+  "executed_commands": [
+    {
+      "command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/deck.mjs build/deck-final-natural-notes/AquaShift-Pafos-2026.pptx",
+      "exit_status": 0
+    },
+    {
+      "command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/render_deck.mjs build/deck-final-natural-notes/AquaShift-Pafos-2026.pptx build/deck-final-natural-notes-previews",
+      "exit_status": 0
+    },
+    {
+      "command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/check_deck_notes.py",
+      "exit_status": 0
+    }
+  ],
+  "input_sha256": {
+    "scripts/deck.mjs": "1a44b5ba7b94cfd631d6026f3dc452ea5a85b55ee60f63029e03f6bc8cd5996d",
+    "scripts/render_deck.mjs": "1008b48f66d377685ce17401f475caa262d889efbfce5043ddc0c5051ae76bd1",
+    "scripts/check_deck_notes.py": "ea31d8f64abf2e1543f7ec5a7f482f7c2ae8be73245e5e427fb220a2f5faf460",
+    "build/deck-data.json": "06c26a3b9fbce33209bc10e842a7a40a01d4c1f7326f68af29176366676c813e",
+    "build/deck-content.json": "0054302d19b8d7e30194091ebea44b7cedf9d075025d1a86bedd8a416af7cf8b",
+    "build/deck-before-natural-notes.pptx": "215d87a65514297fe43e392bd7758cb2067475f169cfa5432679b4763dff23a0"
+  },
+  "visual_review": {
+    "slides_rendered": 12,
+    "all_final_renders_pixel_equal_to_previously_individually_reviewed_monochrome_slides": true,
+    "final_render_directory": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/build/deck-final-natural-notes-previews",
+    "powerpoint_application_opened": false
+  },
+  "native_chart_owner_slides": [
+    5,
+    7,
+    8
+  ],
+  "native_chart_xml_byte_identical": true,
+  "native_note_markdown_parity_all_12": true,
+  "validation": {
+    "schemaVersion": "presentation-finalization.v1",
+    "finalSha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+    "byteCount": 63686,
+    "packageIntegrity": {
+      "chart_count": 3,
+      "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+      "finding_count": 0,
+      "findings": [],
+      "notes_parts_skipped": 12,
+      "relationship_part_count": 32,
+      "slide_count": 12,
+      "status": "pass",
+      "exitCode": 0,
+      "findingCount": 0,
+      "warnings": []
+    },
+    "presentationLayout": {
+      "finding_count": 0,
+      "findings": [],
+      "font_policy": {
+        "checked_text_script_count": 145,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 145
+        },
+        "passed": true,
+        "performed": true
+      },
+      "slide_count": 12,
+      "slide_size_in": [
+        13.3333,
+        7.5
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "exitCode": 0,
+      "findingCount": 0,
+      "fontPolicy": {
+        "checked_text_script_count": 145,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 145
+        },
+        "passed": true,
+        "performed": true
+      }
+    },
+    "fontSelection": {
+      "basis": "design",
+      "approvedFamilies": [
+        "Arial"
+      ],
+      "scriptFonts": {},
+      "referenceSha256": null,
+      "referenceFontsVerifiedInEncodedText": false,
+      "checked_text_script_count": 145,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 145
+      },
+      "passed": true,
+      "performed": true
+    },
+    "firstPartyImport": {
+      "performed": true,
+      "passed": true,
+      "slideCount": 12,
+      "sha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+      "runtimeNodeModules": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+      "nodeExecutable": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+    },
+    "nativeTableArithmetic": {
+      "performed": true,
+      "checked_column_count": 0,
+      "checks": [],
+      "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+      "eligible_table_count": 0,
+      "finding_count": 0,
+      "findings": [],
+      "native_table_count": 0,
+      "passed": true,
+      "schema_version": "presentation-native-table-arithmetic.v1",
+      "skipped_tables": [],
+      "slide_count": 12,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "nativeChartTitles": {
+      "performed": true,
+      "checks": [
+        {
+          "chart": 1,
+          "slide": 5,
+          "status": "absent"
+        },
+        {
+          "chart": 1,
+          "slide": 7,
+          "status": "absent"
+        },
+        {
+          "chart": 1,
+          "slide": 8,
+          "status": "absent"
+        }
+      ],
+      "finding_count": 0,
+      "findings": [],
+      "native_chart_count": 3,
+      "native_powerpoint_verified": false,
+      "passed": true,
+      "presentation_sha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+      "schema_version": "presentation-native-chart-titles.v1",
+      "slide_count": 12,
+      "source_text_emitted": false,
+      "unresolved_linked_title_count": 0
+    },
+    "sourceDerivedPolicyFlags": [
+      "--expected-slide-size-emu",
+      "12192000,6858000",
+      "--validate-bullet-geometry",
+      "--validate-heading-fit",
+      "--cover-role",
+      "none",
+      "--expected-slide-count",
+      "12",
+      "--approved-font-family",
+      "Arial"
+    ],
+    "nativeChartValidation": {
+      "detectedOwnerSlides": [
+        5,
+        7,
+        8
+      ],
+      "detectedChartCount": 3,
+      "targetApplication": "portable",
+      "sourceChartOwnersExplicitlyDeclared": true,
+      "validatorRan": true,
+      "passed": true
+    },
+    "nativeQuantitativeCharts": {
+      "report": {
+        "claim_boundary": "OOXML/workbook structural validation only; source provenance and native PowerPoint opening remain separate checks.",
+        "expected_quantitative_chart_slides": [
+          5,
+          7,
+          8
+        ],
+        "failed_slide_count": 0,
+        "failed_slides": [],
+        "formal_human_reviewed": false,
+        "native_application_open_verified": false,
+        "package_sha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+        "passed": true,
+        "results": [
+          {
+            "approved_source_figure_exception": false,
+            "charts": [
+              {
+                "cache_reference_ranges_verified": true,
+                "embedded_workbook_count": 1,
+                "embedded_workbook_sheet_count": 1,
+                "native_chart_types": [
+                  "barChart"
+                ],
+                "numeric_cache_point_count": 96,
+                "series_formula_count": 4,
+                "workbook_numeric_cell_count": 96
+              }
+            ],
+            "failure_codes": [],
+            "native_chart_count": 1,
+            "raster_picture_count": 0,
+            "required_native_chart_count": 1,
+            "slide_number": 5,
+            "status": "passed"
+          },
+          {
+            "approved_source_figure_exception": false,
+            "charts": [
+              {
+                "cache_reference_ranges_verified": true,
+                "embedded_workbook_count": 1,
+                "embedded_workbook_sheet_count": 1,
+                "native_chart_types": [
+                  "barChart"
+                ],
+                "numeric_cache_point_count": 4,
+                "series_formula_count": 4,
+                "workbook_numeric_cell_count": 4
+              }
+            ],
+            "failure_codes": [],
+            "native_chart_count": 1,
+            "raster_picture_count": 0,
+            "required_native_chart_count": 1,
+            "slide_number": 7,
+            "status": "passed"
+          },
+          {
+            "approved_source_figure_exception": false,
+            "charts": [
+              {
+                "cache_reference_ranges_verified": true,
+                "embedded_workbook_count": 1,
+                "embedded_workbook_sheet_count": 1,
+                "native_chart_types": [
+                  "barChart"
+                ],
+                "numeric_cache_point_count": 2,
+                "series_formula_count": 2,
+                "workbook_numeric_cell_count": 2
+              }
+            ],
+            "failure_codes": [],
+            "native_chart_count": 1,
+            "raster_picture_count": 0,
+            "required_native_chart_count": 1,
+            "slide_number": 8,
+            "status": "passed"
+          }
+        ],
+        "schema_version": "owner-private.quantitative-chart-native-gate.v1",
+        "slide_count": 12,
+        "source_attachments_accessed": false,
+        "validated_slide_count": 3
+      },
+      "exitCode": 0,
+      "validatedSlideCount": 3,
+      "requiredOwnerSlides": [
+        5,
+        7,
+        8
+      ],
+      "approvedSourceFigureExceptionSlides": []
+    },
+    "chartDataPackaging": {
+      "conversion": "chart_data_snapshot",
+      "converted_chart_count": 3,
+      "converted_charts": [
+        {
+          "chart_part": "ppt/slides/charts/chart1.xml",
+          "owner_slide": 5,
+          "point_count": 48,
+          "series_count": 2,
+          "workbook_part": "ppt/embeddings/chart-data-snapshot-001.xlsx"
+        },
+        {
+          "chart_part": "ppt/slides/charts/chart2.xml",
+          "owner_slide": 7,
+          "point_count": 4,
+          "series_count": 2,
+          "workbook_part": "ppt/embeddings/chart-data-snapshot-002.xlsx"
+        },
+        {
+          "chart_part": "ppt/slides/charts/chart3.xml",
+          "owner_slide": 8,
+          "point_count": 2,
+          "series_count": 1,
+          "workbook_part": "ppt/embeddings/chart-data-snapshot-003.xlsx"
+        }
+      ],
+      "detected_chart_owner_slides": [
+        5,
+        7,
+        8
+      ],
+      "experimental": true,
+      "input_sha256": "9528bb02310949435a1167f1b1de77b1266349b1f7479c2f4ff0ad581a2b718c",
+      "new_formulas_describe_snapshot_only": true,
+      "output_bytes": 63686,
+      "output_sha256": "af8de878e9a82678932ed9900a24843f8c596af73383dcd6f497cfa576d6b5b9",
+      "portable_chart_validation_passed": true,
+      "portable_validated_owner_slides": [
+        5,
+        7,
+        8
+      ],
+      "preserved_existing_workbook_chart_count": 0,
+      "preserved_existing_workbook_charts": [],
+      "schema_version": "experimental.literal-chart-workbook-snapshot.v1",
+      "source_formula_required_slides": [],
+      "source_formulas_preserved": false,
+      "source_workbook_preserved": false,
+      "source_workbook_required_slides": []
+    }
+  },
+  "notes_check_receipt": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/results/deck-notes-check.json",
+  "previous_receipt": "results/deck_check-before-notes.json"
+}

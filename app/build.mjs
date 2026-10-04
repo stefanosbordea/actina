@@ -1,0 +1,10 @@
+import {cpSync, mkdirSync, rmSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const app = path.dirname(fileURLToPath(import.meta.url));
+const output = path.join(app, 'dist');
+rmSync(output, {recursive:true, force:true});
+mkdirSync(output);
+cpSync(path.join(app, 'site'), output, {recursive:true});
+cpSync(path.join(app, 'web/public'), path.join(output, 'workspace'), {recursive:true});
+console.log('Built Aktina demo and review workspace in app/dist.');

@@ -1,0 +1,1739 @@
+{
+  "schema": 1,
+  "source_kind": "synthetic_fixture",
+  "status": "Hand-derived expectations frozen before evaluator implementation and retained tests. No application output used.",
+  "numeric_semantics": "Exact rational values of parsed binary64 numbers; no epsilon.",
+  "fixtures": [
+    {
+      "id": "flat_matched_water_control",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "triangle_water_feasible_ramp_failure",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 1,
+              "rate_m3_h": 4
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 0
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "violated",
+          "ramp_down": "violated",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "up_slope": "4",
+          "down_slope_magnitude": "4",
+          "up_excess": "1",
+          "down_excess": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": "Same 4 m3 production, water service and ending stock as flat control. These are synthetic declared limits."
+    },
+    {
+      "id": "ramp_equality",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 1,
+              "rate_m3_h": 4
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 0
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 4,
+          "ramp_down_m3_h2": 4,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "minimum_product_rate_failure",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 1
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 1
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 2,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "violated",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "minimum_rate": "1",
+          "shortfall": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "nonproduction_is_not_inferred_from_rate",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 1
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 1
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 2,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "not_applicable",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": "Positive flow does not supply a production-state declaration; no zero-flow constraint is invented."
+    },
+    {
+      "id": "unknown_production_applicability",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": null
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "unknown",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "interpolated_production_boundary",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 4
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": false
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 2,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "minimum_productive_rate": "2",
+          "productive_start_hour": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "short_online_completed_run",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 0
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": true
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "offline",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "offline",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 2,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "violated",
+          "minimum_offline": "met"
+        },
+        "values": {
+          "completed_online_duration": "1",
+          "online_shortfall": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "short_offline_completed_run",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 0
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "offline",
+            "producing": false
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 2
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "violated"
+        },
+        "values": {
+          "completed_offline_duration": "1",
+          "offline_shortfall": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "unfinished_tail_is_obligation",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "offline",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 3,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "unknown",
+          "minimum_offline": "met"
+        },
+        "values": {},
+        "tail_obligations": [
+          {
+            "state": "online",
+            "at_hour": "2",
+            "remaining_min_hours": "1",
+            "remaining_max_hours": "1"
+          }
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "unknown_first_run_age",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": true
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "offline",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": null
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 2,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "unknown",
+          "minimum_offline": "met"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": "Visible completed run lasts 1 h but may have begun before the horizon."
+    },
+    {
+      "id": "carried_first_run_age",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": true
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "offline",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 1
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 2,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "met"
+        },
+        "values": {
+          "completed_online_duration": "2"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "missing_prior_opposite_state",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": null,
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 1,
+          "minimum_offline_hours": 1
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "unknown"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": "Visible 2 h online duration suffices, but an unobserved offline-to-online transition at the start cannot be certified."
+    },
+    {
+      "id": "initial_boundary_transition_failure",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "offline",
+          "age_hours": 1
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 2
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "violated"
+        },
+        "values": {
+          "prior_offline_duration": "1",
+          "offline_shortfall": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "coalesce_online_production_modes",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 3
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 0
+            },
+            {
+              "hour": 3,
+              "rate_m3_h": 0
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": true
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "online",
+            "producing": false
+          },
+          {
+            "from_hour": 2,
+            "to_hour": 3,
+            "state": "offline",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "offline",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 2,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "met"
+        },
+        "values": {
+          "completed_online_duration": "2"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "bounded_means_do_not_certify",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "interval_mean",
+          "intervals": [
+            {
+              "from_hour": 0,
+              "to_hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "unknown",
+          "minimum_production_rate": "unknown",
+          "ramp_up": "unknown",
+          "ramp_down": "unknown",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "mean_above_maximum_proves_failure",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "interval_mean",
+          "intervals": [
+            {
+              "from_hour": 0,
+              "to_hour": 2,
+              "rate_m3_h": 6
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "violated",
+          "minimum_production_rate": "unknown",
+          "ramp_up": "unknown",
+          "ramp_down": "unknown",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "mean_rate": "6",
+          "excess": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "productive_mean_below_minimum_proves_failure",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "interval_mean",
+          "intervals": [
+            {
+              "from_hour": 0,
+              "to_hour": 2,
+              "rate_m3_h": 1
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 2,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "unknown",
+          "minimum_production_rate": "violated",
+          "ramp_up": "unknown",
+          "ramp_down": "unknown",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "mean_rate": "1",
+          "shortfall": "1"
+        },
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "partly_productive_mean_cannot_be_split",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "interval_mean",
+          "intervals": [
+            {
+              "from_hour": 0,
+              "to_hour": 2,
+              "rate_m3_h": 1
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": false
+          },
+          {
+            "from_hour": 1,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 2,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "unknown",
+          "minimum_production_rate": "unknown",
+          "ramp_up": "unknown",
+          "ramp_down": "unknown",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "missing_declarations_are_unknown",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": null,
+        "states": null,
+        "initial_state": null,
+        "limits": {}
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "unknown",
+          "minimum_production_rate": "unknown",
+          "ramp_up": "unknown",
+          "ramp_down": "unknown",
+          "minimum_online": "unknown",
+          "minimum_offline": "unknown"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "maximum_equality",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 5
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 5
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "met",
+        "decision": "checked_limits_met",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": []
+      },
+      "note": ""
+    },
+    {
+      "id": "binary64_just_above_maximum",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 1.0000000000000002
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 1.0000000000000002
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 1,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "violated",
+        "decision": "revise_trace",
+        "checks": {
+          "maximum_rate": "violated",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "met",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {
+          "maximum_rate": "4503599627370497/4503599627370496",
+          "excess": "1/4503599627370496"
+        },
+        "tail_obligations": []
+      },
+      "note": "Exact binary64 residual, not evidence of a material physical failure."
+    },
+    {
+      "id": "unknown_tail_age_range",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": null
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 3,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected": {
+        "status": "unknown",
+        "decision": "supply_evidence",
+        "checks": {
+          "maximum_rate": "met",
+          "minimum_production_rate": "met",
+          "ramp_up": "met",
+          "ramp_down": "met",
+          "minimum_online": "unknown",
+          "minimum_offline": "not_applicable"
+        },
+        "values": {},
+        "tail_obligations": [
+          {
+            "state": "online",
+            "at_hour": "2",
+            "remaining_min_hours": "0",
+            "remaining_max_hours": "1"
+          }
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "duplicate_rate_time",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 0,
+              "rate_m3_h": 3
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected_error": true
+    },
+    {
+      "id": "state_gap",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 1,
+            "state": "online",
+            "producing": true
+          },
+          {
+            "from_hour": 1.5,
+            "to_hour": 2,
+            "state": "offline",
+            "producing": false
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected_error": true
+    },
+    {
+      "id": "offline_producing_contradiction",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "offline",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected_error": true
+    },
+    {
+      "id": "wrong_rate_basis",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "feed_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": 3,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected_error": true
+    },
+    {
+      "id": "negative_limit",
+      "input": {
+        "schema": 1,
+        "kind": "supplied_unit_operating_envelope",
+        "unit_id": "synthetic-unit",
+        "rate_basis": "net_product_water",
+        "horizon": {
+          "start_hour": 0,
+          "end_hour": 2
+        },
+        "trajectory": {
+          "representation": "continuous_piecewise_linear",
+          "points": [
+            {
+              "hour": 0,
+              "rate_m3_h": 2
+            },
+            {
+              "hour": 2,
+              "rate_m3_h": 2
+            }
+          ]
+        },
+        "states": [
+          {
+            "from_hour": 0,
+            "to_hour": 2,
+            "state": "online",
+            "producing": true
+          }
+        ],
+        "initial_state": {
+          "state": "online",
+          "age_hours": 2
+        },
+        "limits": {
+          "maximum_rate_m3_h": 5,
+          "minimum_production_rate_m3_h": 0,
+          "ramp_up_m3_h2": -1,
+          "ramp_down_m3_h2": 3,
+          "minimum_online_hours": 0,
+          "minimum_offline_hours": 0
+        }
+      },
+      "expected_error": true
+    }
+  ],
+  "matched_water": {
+    "demand_m3_h": "2",
+    "initial_m3": "2",
+    "capacity_m3": "4",
+    "reserve_m3": "1",
+    "target_m3": "2",
+    "duration_hours": "2",
+    "each_production_m3": "4",
+    "each_delivered_m3": "4",
+    "each_final_m3": "2",
+    "triangle_minimum_m3": "3/2",
+    "triangle_minimum_hour": "1/2",
+    "triangle_maximum_m3": "5/2",
+    "triangle_maximum_hour": "3/2",
+    "flat_minimum_m3": "2",
+    "flat_maximum_m3": "2"
+  },
+  "source_sha256": {
+    "web/public/plan-sequence.mjs": "c277e51efb6c593e91b1f0919f402c135752ab085bb0946ada2dc47a5d979bbe",
+    "web/public/paired-water-service.mjs": "cb3b6b03a7902f0299735b46346ed926ace52bb248fa2a917aa1b3a5ab2d8caa",
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "results/storage-requirements/protocol-v1.json": "333407723677bc310b4c38b345d70a4165cce867aa1e0d79c7214a997ae003e2",
+    "results/execution-accounting/PROTOCOL.md": "069cb9a291eb0c1cc77165a9fd1b1e7a2818df7fe630bf61a9ae96c586c02676"
+  }
+}

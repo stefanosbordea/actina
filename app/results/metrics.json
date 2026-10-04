@@ -1,0 +1,794 @@
+{
+  "model_status": "Externally supplied predictions; model and feature timing unreviewed",
+  "handoff_provenance": {
+    "supplied_columns": [
+      "time",
+      "actual",
+      "predicted",
+      "baseline",
+      "baseline_day2",
+      "baseline_source_time",
+      "climatology",
+      "forecast_issue_time"
+    ],
+    "canonical_join_requested": false,
+    "canonical_fields_added": [],
+    "issue_provenance_supplied": true,
+    "training_metadata_supplied": false,
+    "source_availability_verified": false,
+    "authority": "Actuals and controls are always checked against retained weather. Missing issue times use the study assumption; training metadata alone does not certify source publication availability."
+  },
+  "source_kind": "Retrospective Open-Meteo ECMWF IFS gridded historical reconstruction",
+  "issue_time": "18:00 Asia/Nicosia on the preceding local date",
+  "threshold_w_m2": 600,
+  "threshold_role": "Solar availability proxy, not measured grid surplus",
+  "threshold_selection": "Fixed scenario threshold; selection provenance unreviewed",
+  "split": {
+    "train_target_before": "2026-07-01",
+    "test_start": "2026-07-01",
+    "test_end": "2026-09-30"
+  },
+  "rows": 2208,
+  "days": 92,
+  "units": "W/m\u00b2",
+  "all": {
+    "rows": 2208,
+    "model": {
+      "mae": 8.812139833169894,
+      "rmse": 17.941774340867905
+    },
+    "persistence": {
+      "mae": 7.638134057971015,
+      "rmse": 19.433076818601865
+    },
+    "climatology": {
+      "mae": 17.26422342466911,
+      "rmse": 29.26909196743712
+    },
+    "persistence_day2": {
+      "mae": 9.578351449275363,
+      "rmse": 21.649202130761097
+    }
+  },
+  "daylight": {
+    "rows": 1200,
+    "model": {
+      "mae": 15.843133644966189,
+      "rmse": 24.328779316985262
+    },
+    "persistence": {
+      "mae": 13.985,
+      "rmse": 26.35706736342266
+    },
+    "climatology": {
+      "mae": 31.39868259826256,
+      "rmse": 39.64013020565671
+    },
+    "persistence_day2": {
+      "mae": 17.5375,
+      "rmse": 29.36288757371568
+    }
+  },
+  "daylight_definition": "Historical target radiation>20 W/m\u00b2; excludes zero-radiation night hours",
+  "by_month": {
+    "2026-07": {
+      "rows": 744,
+      "model": {
+        "mae": 7.699125249745408,
+        "rmse": 13.78936072044873
+      },
+      "persistence": {
+        "mae": 5.477150537634409,
+        "rmse": 11.918800094763094
+      },
+      "climatology": {
+        "mae": 12.930016402405688,
+        "rmse": 19.50868653255108
+      },
+      "persistence_day2": {
+        "mae": 7.685483870967742,
+        "rmse": 15.830333615107149
+      }
+    },
+    "2026-08": {
+      "rows": 744,
+      "model": {
+        "mae": 9.837934929809604,
+        "rmse": 21.056747778851843
+      },
+      "persistence": {
+        "mae": 9.15725806451613,
+        "rmse": 24.947714140983237
+      },
+      "climatology": {
+        "mae": 18.71815383281304,
+        "rmse": 32.30557237542221
+      },
+      "persistence_day2": {
+        "mae": 11.504032258064516,
+        "rmse": 27.287473001282088
+      }
+    },
+    "2026-09": {
+      "rows": 720,
+      "model": {
+        "mae": 8.902266636180828,
+        "rmse": 18.235444002224217
+      },
+      "persistence": {
+        "mae": 8.301388888888889,
+        "rmse": 19.18806776213917
+      },
+      "climatology": {
+        "mae": 20.240509259259255,
+        "rmse": 33.99173033962057
+      },
+      "persistence_day2": {
+        "mae": 9.544444444444444,
+        "rmse": 20.22203143988149
+      }
+    }
+  },
+  "by_hour": {
+    "0": {
+      "rows": 92,
+      "model": {
+        "mae": 0.3549925335455695,
+        "rmse": 0.516759519700199
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "1": {
+      "rows": 92,
+      "model": {
+        "mae": 0.3946669191041985,
+        "rmse": 0.5464588474075631
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "2": {
+      "rows": 92,
+      "model": {
+        "mae": 0.39523179795148383,
+        "rmse": 0.5480123712934772
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "3": {
+      "rows": 92,
+      "model": {
+        "mae": 0.35151270104377336,
+        "rmse": 0.47356395540961055
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "4": {
+      "rows": 92,
+      "model": {
+        "mae": 0.35034690802618335,
+        "rmse": 0.4657790356615164
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "5": {
+      "rows": 92,
+      "model": {
+        "mae": 0.3683231021055828,
+        "rmse": 0.4874246390456758
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "6": {
+      "rows": 92,
+      "model": {
+        "mae": 0.3776768065358809,
+        "rmse": 0.5297504335100702
+      },
+      "persistence": {
+        "mae": 0.03260869565217391,
+        "rmse": 0.1805787796286538
+      },
+      "climatology": {
+        "mae": 0.23434045689019897,
+        "rmse": 0.4569101072516228
+      },
+      "persistence_day2": {
+        "mae": 0.06521739130434782,
+        "rmse": 0.2553769592276246
+      }
+    },
+    "7": {
+      "rows": 92,
+      "model": {
+        "mae": 3.6242770795128694,
+        "rmse": 4.9356608268116595
+      },
+      "persistence": {
+        "mae": 1.4021739130434783,
+        "rmse": 2.281780388015121
+      },
+      "climatology": {
+        "mae": 8.139423221686041,
+        "rmse": 10.472261528418347
+      },
+      "persistence_day2": {
+        "mae": 2.532608695652174,
+        "rmse": 3.437327070749065
+      }
+    },
+    "8": {
+      "rows": 92,
+      "model": {
+        "mae": 9.358888628244197,
+        "rmse": 11.697848572145828
+      },
+      "persistence": {
+        "mae": 5.543478260869565,
+        "rmse": 8.545275837001096
+      },
+      "climatology": {
+        "mae": 20.679450440170836,
+        "rmse": 25.446796444556757
+      },
+      "persistence_day2": {
+        "mae": 7.467391304347826,
+        "rmse": 10.204964691160185
+      }
+    },
+    "9": {
+      "rows": 92,
+      "model": {
+        "mae": 12.929962785837214,
+        "rmse": 21.887848871787227
+      },
+      "persistence": {
+        "mae": 11.152173913043478,
+        "rmse": 24.482025349578233
+      },
+      "climatology": {
+        "mae": 29.322541422017256,
+        "rmse": 37.98043038420911
+      },
+      "persistence_day2": {
+        "mae": 13.706521739130435,
+        "rmse": 25.47825159519048
+      }
+    },
+    "10": {
+      "rows": 92,
+      "model": {
+        "mae": 14.383025680156349,
+        "rmse": 20.086786550886604
+      },
+      "persistence": {
+        "mae": 11.554347826086957,
+        "rmse": 19.75474626513841
+      },
+      "climatology": {
+        "mae": 31.88796641864963,
+        "rmse": 37.07675628167605
+      },
+      "persistence_day2": {
+        "mae": 14.5,
+        "rmse": 21.88209512264586
+      }
+    },
+    "11": {
+      "rows": 92,
+      "model": {
+        "mae": 17.48467730495824,
+        "rmse": 32.887664246004164
+      },
+      "persistence": {
+        "mae": 18.902173913043477,
+        "rmse": 43.526978140998445
+      },
+      "climatology": {
+        "mae": 36.399908479330605,
+        "rmse": 46.93017163282001
+      },
+      "persistence_day2": {
+        "mae": 22.369565217391305,
+        "rmse": 45.02269958877265
+      }
+    },
+    "12": {
+      "rows": 92,
+      "model": {
+        "mae": 22.15455282611406,
+        "rmse": 34.847224375326974
+      },
+      "persistence": {
+        "mae": 20.815217391304348,
+        "rmse": 41.365418238994714
+      },
+      "climatology": {
+        "mae": 38.48465602491263,
+        "rmse": 47.398984113371576
+      },
+      "persistence_day2": {
+        "mae": 24.67391304347826,
+        "rmse": 43.144348211656826
+      }
+    },
+    "13": {
+      "rows": 92,
+      "model": {
+        "mae": 23.931408329039254,
+        "rmse": 29.973420141085757
+      },
+      "persistence": {
+        "mae": 21.97826086956522,
+        "rmse": 33.327753156112735
+      },
+      "climatology": {
+        "mae": 38.603429846039255,
+        "rmse": 45.68207496326092
+      },
+      "persistence_day2": {
+        "mae": 27.57608695652174,
+        "rmse": 37.7852915943435
+      }
+    },
+    "14": {
+      "rows": 92,
+      "model": {
+        "mae": 24.006536538744662,
+        "rmse": 31.996976133724
+      },
+      "persistence": {
+        "mae": 22.02173913043478,
+        "rmse": 32.2335229225724
+      },
+      "climatology": {
+        "mae": 38.1320888899454,
+        "rmse": 45.53805054810604
+      },
+      "persistence_day2": {
+        "mae": 28.52173913043478,
+        "rmse": 39.11799319116904
+      }
+    },
+    "15": {
+      "rows": 92,
+      "model": {
+        "mae": 20.947669335313815,
+        "rmse": 27.683679772392583
+      },
+      "persistence": {
+        "mae": 18.619565217391305,
+        "rmse": 25.81224010291309
+      },
+      "climatology": {
+        "mae": 37.03422021220117,
+        "rmse": 44.4692066706698
+      },
+      "persistence_day2": {
+        "mae": 23.47826086956522,
+        "rmse": 30.458810390998245
+      }
+    },
+    "16": {
+      "rows": 92,
+      "model": {
+        "mae": 20.394335448217273,
+        "rmse": 28.904734171939733
+      },
+      "persistence": {
+        "mae": 17.804347826086957,
+        "rmse": 26.5329983228432
+      },
+      "climatology": {
+        "mae": 37.85370222898392,
+        "rmse": 46.399442757375745
+      },
+      "persistence_day2": {
+        "mae": 23.652173913043477,
+        "rmse": 31.595610592227082
+      }
+    },
+    "17": {
+      "rows": 92,
+      "model": {
+        "mae": 17.151140073797833,
+        "rmse": 23.237277694327855
+      },
+      "persistence": {
+        "mae": 15.304347826086957,
+        "rmse": 23.783443272853564
+      },
+      "climatology": {
+        "mae": 36.75881867021654,
+        "rmse": 43.52026847518332
+      },
+      "persistence_day2": {
+        "mae": 20.57608695652174,
+        "rmse": 29.163892207585256
+      }
+    },
+    "18": {
+      "rows": 92,
+      "model": {
+        "mae": 11.173411561545569,
+        "rmse": 14.665064735144972
+      },
+      "persistence": {
+        "mae": 10.532608695652174,
+        "rmse": 15.54481599594624
+      },
+      "climatology": {
+        "mae": 32.94375500194135,
+        "rmse": 39.69252910922438
+      },
+      "persistence_day2": {
+        "mae": 13.108695652173912,
+        "rmse": 17.859353900383137
+      }
+    },
+    "19": {
+      "rows": 92,
+      "model": {
+        "mae": 7.680238294364005,
+        "rmse": 9.52385760450803
+      },
+      "persistence": {
+        "mae": 6.108695652173913,
+        "rmse": 7.627182510172302
+      },
+      "climatology": {
+        "mae": 21.968406153675488,
+        "rmse": 26.630634646945463
+      },
+      "persistence_day2": {
+        "mae": 6.108695652173913,
+        "rmse": 7.627182510172302
+      }
+    },
+    "20": {
+      "rows": 92,
+      "model": {
+        "mae": 2.4802250118129856,
+        "rmse": 3.6601583338918084
+      },
+      "persistence": {
+        "mae": 1.5434782608695652,
+        "rmse": 2.1007245127005274
+      },
+      "climatology": {
+        "mae": 5.89865472539837,
+        "rmse": 8.179715885904438
+      },
+      "persistence_day2": {
+        "mae": 1.5434782608695652,
+        "rmse": 2.1007245127005274
+      }
+    },
+    "21": {
+      "rows": 92,
+      "model": {
+        "mae": 0.3763598604740102,
+        "rmse": 0.5635472969469231
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "22": {
+      "rows": 92,
+      "model": {
+        "mae": 0.41075200297723846,
+        "rmse": 0.6050654775378992
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    },
+    "23": {
+      "rows": 92,
+      "model": {
+        "mae": 0.4111444666552176,
+        "rmse": 0.6020476130428443
+      },
+      "persistence": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "climatology": {
+        "mae": 0.0,
+        "rmse": 0.0
+      },
+      "persistence_day2": {
+        "mae": 0.0,
+        "rmse": 0.0
+      }
+    }
+  },
+  "surplus_proxy": {
+    "model": {
+      "tp": 601,
+      "fp": 11,
+      "tn": 1590,
+      "fn": 6,
+      "precision": 0.9820261437908496,
+      "recall": 0.9901153212520593,
+      "f1": 0.9860541427399507,
+      "flagged": 612,
+      "actual_positive": 607
+    },
+    "persistence": {
+      "tp": 600,
+      "fp": 10,
+      "tn": 1591,
+      "fn": 7,
+      "precision": 0.9836065573770492,
+      "recall": 0.9884678747940692,
+      "f1": 0.9860312243221035,
+      "flagged": 610,
+      "actual_positive": 607
+    },
+    "climatology": {
+      "tp": 549,
+      "fp": 4,
+      "tn": 1597,
+      "fn": 58,
+      "precision": 0.9927667269439421,
+      "recall": 0.9044481054365733,
+      "f1": 0.946551724137931,
+      "flagged": 553,
+      "actual_positive": 607
+    },
+    "persistence_day2": {
+      "tp": 600,
+      "fp": 13,
+      "tn": 1588,
+      "fn": 7,
+      "precision": 0.9787928221859706,
+      "recall": 0.9884678747940692,
+      "f1": 0.9836065573770492,
+      "flagged": 613,
+      "actual_positive": 607
+    }
+  },
+  "paired_day_bootstrap": {
+    "unit": "local day",
+    "days": 92,
+    "repeats": 2000,
+    "seed": 20261002,
+    "interval": "95% percentile paired day bootstrap; seasonal dependence remains",
+    "baseline": {
+      "mae_difference_model_minus_control_w_m2": 1.1740057751988797,
+      "mae_difference_95_ci": [
+        0.17830909711507387,
+        2.0661147144407064
+      ],
+      "improvement_percent": -15.370321681821084,
+      "improvement_percent_95_ci": [
+        -31.354850701011234,
+        -2.0787372466083185
+      ]
+    },
+    "climatology": {
+      "mae_difference_model_minus_control_w_m2": -8.45208359149922,
+      "mae_difference_95_ci": [
+        -10.576309342513966,
+        -6.4170746033994135
+      ],
+      "improvement_percent": 48.95721854144859,
+      "improvement_percent_95_ci": [
+        40.471015283680494,
+        56.201047077155636
+      ]
+    },
+    "baseline_day2": {
+      "mae_difference_model_minus_control_w_m2": -0.7662116161054683,
+      "mae_difference_95_ci": [
+        -1.8243247129788247,
+        0.15804980401224866
+      ],
+      "improvement_percent": 7.999410129844795,
+      "improvement_percent_95_ci": [
+        -1.7853913134079575,
+        16.91144566719714
+      ]
+    }
+  },
+  "feature_timing_audit": {
+    "status": "Unreviewed external model"
+  },
+  "limitations": [
+    "Historical gridded reconstruction is not sensor ground truth or an archived issue-time forecast.",
+    "Temporal checks do not certify original historical data-publication availability.",
+    "Primary persistence uses latest available same local hour: day-1 for00\u201318 and day-2 for19\u201323.",
+    "Hour18 source ends at the issue cutoff; zero reporting latency is assumed, not validated.",
+    "No measured grid surplus, curtailment, tariff, water-demand or plant-benefit labels.",
+    "July\u2013September results do not establish cloudy-winter accuracy.",
+    "Any scheduling savings are illustrative outcomes under separate declared assumptions."
+  ],
+  "paired_day_bootstrap_daylight": {
+    "unit": "local day",
+    "days": 92,
+    "repeats": 2000,
+    "seed": 20261002,
+    "interval": "95% percentile paired day bootstrap; seasonal dependence remains",
+    "baseline": {
+      "mae_difference_model_minus_control_w_m2": 1.8581336449661892,
+      "mae_difference_95_ci": [
+        0.025120012049844286,
+        3.4894403307644786
+      ],
+      "improvement_percent": -13.286618841374255,
+      "improvement_percent_95_ci": [
+        -28.977968001264273,
+        -0.1650012523918389
+      ]
+    },
+    "climatology": {
+      "mae_difference_model_minus_control_w_m2": -15.555548953296372,
+      "mae_difference_95_ci": [
+        -19.466106143998967,
+        -11.79296534970901
+      ],
+      "improvement_percent": 49.54204337909749,
+      "improvement_percent_95_ci": [
+        40.8890747522165,
+        56.8167585215237
+      ]
+    },
+    "baseline_day2": {
+      "mae_difference_model_minus_control_w_m2": -1.6943663550338108,
+      "mae_difference_95_ci": [
+        -3.653903954310335,
+        0.010703727007534776
+      ],
+      "improvement_percent": 9.661390477740913,
+      "improvement_percent_95_ci": [
+        -0.06987320028763769,
+        18.432397207044804
+      ]
+    }
+  },
+  "cloudiness_daylight": {
+    "low_0_to_20_percent": {
+      "rows": 1090,
+      "model": {
+        "mae": 14.34194948741681,
+        "rmse": 21.125144863725232
+      },
+      "persistence": {
+        "mae": 11.880733944954128,
+        "rmse": 22.879180071277574
+      },
+      "climatology": {
+        "mae": 30.832288135593224,
+        "rmse": 38.299952756802575
+      },
+      "persistence_day2": {
+        "mae": 15.305504587155964,
+        "rmse": 25.337157686548572
+      }
+    },
+    "medium_20_to_60_percent": {
+      "rows": 92,
+      "model": {
+        "mae": 25.488921259812674,
+        "rmse": 35.18440836183612
+      },
+      "persistence": {
+        "mae": 30.532608695652176,
+        "rmse": 40.57320276498635
+      },
+      "climatology": {
+        "mae": 32.79303125569528,
+        "rmse": 42.660738547202506
+      },
+      "persistence_day2": {
+        "mae": 35.641304347826086,
+        "rmse": 48.7920387304964
+      }
+    },
+    "high_60_to_100_percent": {
+      "rows": 18,
+      "model": {
+        "mae": 57.44748204290774,
+        "rmse": 78.15244455295137
+      },
+      "persistence": {
+        "mae": 56.833333333333336,
+        "rmse": 78.74607573996589
+      },
+      "climatology": {
+        "mae": 58.57034303302755,
+        "rmse": 81.40004072980804
+      },
+      "persistence_day2": {
+        "mae": 60.166666666666664,
+        "rmse": 80.22364572452022
+      }
+    }
+  },
+  "cloudiness_strata_role": "Realized target cloud cover is used only for error diagnosis, never model features"
+}

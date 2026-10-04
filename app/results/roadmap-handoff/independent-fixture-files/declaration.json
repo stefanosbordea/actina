@@ -1,0 +1,270 @@
+{
+  "schema": 1,
+  "kind": "roadmap_handoff_declaration",
+  "source_kind": "illustrative_scenario",
+  "source_label": "Independent analytical example; no plant or Stefanos results",
+  "utc_offset": "+03:00",
+  "radiation_time_semantics": "interval_start",
+  "date_hour_semantics": "interval_start",
+  "weather_units": {
+    "shortwave_radiation": "W/m2",
+    "cloud_cover": "percent",
+    "temperature_2m": "degC",
+    "relative_humidity_2m": "percent"
+  },
+  "power_semantics": "interval_mean",
+  "tank_level_semantics": "aquashift_interval_end",
+  "tank_capacity_m3": 200,
+  "surplus_threshold_w_m2": 600,
+  "surplus_comparison": "greater_than",
+  "test_period": {
+    "start": "2026-07-01T00:00:00+03:00",
+    "end": "2026-07-04T00:00:00+03:00"
+  },
+  "tariffs": [
+    {
+      "date": "2026-07-01",
+      "hour": 0,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 1,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 2,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 3,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 4,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 5,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 6,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 7,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 8,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 9,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 10,
+      "eur_kwh": 0.3
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 11,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 12,
+      "eur_kwh": 0.1
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 13,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 14,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 15,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 16,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 17,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 18,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 19,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 20,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 21,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 22,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-01",
+      "hour": 23,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 0,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 1,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 2,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 3,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 4,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 5,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 6,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 7,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 8,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 9,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 10,
+      "eur_kwh": 0.3
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 11,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 12,
+      "eur_kwh": 0.1
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 13,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 14,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 15,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 16,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 17,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 18,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 19,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 20,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 21,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 22,
+      "eur_kwh": 0.2
+    },
+    {
+      "date": "2026-07-03",
+      "hour": 23,
+      "eur_kwh": 0.2
+    }
+  ],
+  "declared_links": {
+    "schedule_forecast_sha256": "2a8b594c169dfb0c4483d9ba6404b246bb96108ebb6930ed5e2ae1944702b3ef",
+    "weather_sha256": "b0edac57d0e1f2737017780597c7fc6622c04979cc9a9bf0da5232e8cc78be6a"
+  }
+}

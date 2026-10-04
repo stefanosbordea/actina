@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "scope": "Actual screenshot and composed crop/pan endpoint review only; final encoded native film remains pending",
+  "reviewed_at_utc": "2026-10-02T00:21:31.405610+00:00",
+  "captured_immutable_revision": "https://aquashift-pafos-2026-phmd6vqql-dlukels-projects.vercel.app",
+  "capture_method": "Parent isolated IAB CUA, public alias reloaded; root reported capture approximately 2026-10-02T00:16Z",
+  "captured_release_workspace_js_sha256": "afa1986b2bf9bcdfb3dd6b923242df0a3e1033b554acdc97bba7a5905a2a6fe8",
+  "screenshots": [
+    {
+      "view": "grid",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/professional-frames/native-24/overview.jpg",
+      "sha256": "c8b5d6c6a3b2571c8acbfab80ffa0e735d1064f6285d18e0e8e0745e2a494352",
+      "dimensions": [
+        1280,
+        1271
+      ],
+      "retained_at_utc": "2026-10-02T00:13:59.602202+00:00",
+      "historical_date": "2026-07-01",
+      "inspect_hour": 13,
+      "global_tank_capacity_m3": 4000,
+      "comparison_tanks_m3": null,
+      "crop_pan_endpoints": [
+        [
+          250,
+          145,
+          1245,
+          705
+        ],
+        [
+          250,
+          215,
+          1245,
+          775
+        ]
+      ]
+    },
+    {
+      "view": "schedule",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/professional-frames/native-24/operations.jpg",
+      "sha256": "71ca899551c638051460eaced269fe7e32cbfb4923fe7f4d1e377a6a251d881b",
+      "dimensions": [
+        1280,
+        2024
+      ],
+      "retained_at_utc": "2026-10-02T00:14:14.656270+00:00",
+      "historical_date": "2026-07-01",
+      "inspect_hour": 13,
+      "global_tank_capacity_m3": 4000,
+      "comparison_tanks_m3": null,
+      "crop_pan_endpoints": [
+        [
+          250,
+          268,
+          1245,
+          828
+        ],
+        [
+          250,
+          330,
+          1245,
+          890
+        ]
+      ]
+    },
+    {
+      "view": "tank",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/professional-frames/native-24/scenarios.jpg",
+      "sha256": "a9f75020a86ea1ad9b3cf197a56b4818eef24ae446acfbc7ba53cf813f241291",
+      "dimensions": [
+        1280,
+        1444
+      ],
+      "retained_at_utc": "2026-10-02T00:14:23.597776+00:00",
+      "historical_date": "2026-07-01",
+      "inspect_hour": 13,
+      "global_tank_capacity_m3": 4000,
+      "comparison_tanks_m3": [
+        500,
+        8000
+      ],
+      "crop_pan_endpoints": [
+        [
+          250,
+          595,
+          1245,
+          1155
+        ],
+        [
+          250,
+          645,
+          1245,
+          1205
+        ]
+      ]
+    },
+    {
+      "view": "forecast",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/professional-frames/native-24/evaluation.jpg",
+      "sha256": "36cfce44e96c5e6d2a1fa5906adc8c4a0d382617f6fa7e69cdf2c5d298fcb1ee",
+      "dimensions": [
+        1280,
+        1670
+      ],
+      "retained_at_utc": "2026-10-02T00:14:24.373026+00:00",
+      "historical_date": "2026-07-01",
+      "inspect_hour": 13,
+      "global_tank_capacity_m3": 500,
+      "comparison_tanks_m3": null,
+      "crop_pan_endpoints": [
+        [
+          250,
+          415,
+          1245,
+          975
+        ],
+        [
+          250,
+          440,
+          1245,
+          1000
+        ]
+      ]
+    },
+    {
+      "view": "sites",
+      "file": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/delivery/professional-frames/native-24/alerts-sites.jpg",
+      "sha256": "ed1bc9b143ba95cf7c8787925964b7323a4e0c3046f596094efdf6059f90478e",
+      "dimensions": [
+        1280,
+        1263
+      ],
+      "retained_at_utc": "2026-10-02T00:14:24.840912+00:00",
+      "historical_date": "2026-07-01",
+      "inspect_hour": 13,
+      "global_tank_capacity_m3": 500,
+      "comparison_tanks_m3": null,
+      "crop_pan_endpoints": [
+        [
+          250,
+          350,
+          1245,
+          910
+        ],
+        [
+          250,
+          605,
+          1245,
+          1165
+        ]
+      ]
+    }
+  ],
+  "preview_times_seconds": [
+    32.5,
+    41.5,
+    42.5,
+    50.5,
+    51.5,
+    58.5,
+    59.5,
+    68.5,
+    69.5,
+    76.5
+  ],
+  "contact_sheet": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/composition-native-24/capture-previews/capture-contact-sheet.jpg",
+  "contact_sheet_sha256": "b6bdbd4906e4e1f1a79136b660f5b4424c7151a616f5bdc014460f415db0e2ec",
+  "visual_review": "All five source images and ten composed pan endpoints inspected. Monochrome; date/tank controls and asset diagram shown; production charts show steps; Scenarios 500/8000 and illustrative price attribution visible; Evaluation 8.81/7.64; Sites explicitly synthetic; caption rail does not cover application data. Crops pan through real pixels without changing values.",
+  "composer_sha256": "cf03954c78c8db8f024fee30d5e1d9b35103e42b9e251c3bda6d33aa468aba1b",
+  "independent_review": {
+    "reviewer": "stefanos_workspace",
+    "scope": "actual composed pan contact sheet",
+    "verdict": "No material framing or claim issue; unknown daytime meter gap remains open"
+  }
+}

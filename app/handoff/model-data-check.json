@@ -1,0 +1,17 @@
+{
+  "source": {
+    "repository": "https://github.com/stefanosbordea/actina",
+    "commit": "2a093aba97f6ad615c43fa7c514044342af16e3a",
+    "csv_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+    "schedule_forecast_matches_baseline": 7104,
+    "schedule_forecast_matches_model": 9,
+    "schedule_forecast_status": "matches_persistence",
+    "time_basis": "Cyprus local wall-clock labels supplied by the scheduler; no UTC offsets provided.",
+    "forecast": "LightGBM, trained on two years of Paphos weather from Open-Meteo",
+    "scheduler": "Aktina scheduler"
+  },
+  "days": 296,
+  "rows": 7104,
+  "first_day": "2025-12-06",
+  "last_day": "2026-09-28"
+}

@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"build":"node build.mjs","test:data":"python3 -m unittest discover -s tools -p 'test_*.py' -v"}}

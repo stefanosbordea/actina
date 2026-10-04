@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-10-01T23:23:15.882162+00:00",
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "eval/evaluate.py",
+    "--predictions",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/build/forecast-handoff-review/bare-reference.csv",
+    "--join-canonical",
+    "--output",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/build/forecast-handoff-review/joined"
+  ],
+  "exit_code": 0,
+  "tests": {
+    "command": [
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+      "-m",
+      "unittest",
+      "eval.test_evaluation"
+    ],
+    "exit_code": 0,
+    "output": "..........................\n----------------------------------------------------------------------\nRan 26 tests in 1.139s\n\nOK\n"
+  },
+  "source_sha256": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+  "bare_input_sha256": "0dc45b8f6eea1ec2619bf9726ca0ffe896013ed5b5f58dc9607cbadc6588b27a",
+  "checks": [
+    "Bare time,predicted joined from canonical authority; exact metrics match frozen four-column evaluation",
+    "Missing issue provenance remains explicitly unverified",
+    "Seven new authority/range/timing checks included in26 tests"
+  ],
+  "script_sha256": "e3557ffa1de276bd0bdcc26ea0881b9e0d0742c1cdad9cb1b8b955ae6fea6b9f",
+  "failed_check_before_fix": "Canonical join test compared pandas frequency metadata None versus Hour; exact timestamp/value checks retained with check_freq=False.",
+  "scope": "Historical initial canonical-join check before source-time and input-snapshot hardening. Latest result is forecast-handoff-independent-review.json."
+}

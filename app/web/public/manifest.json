@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "data_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+  "days": 92,
+  "rows": 2208,
+  "schedules": 460,
+  "method": "Canonical SciPy/HiGHS scenario schedules; no measured grid surplus or plant connection",
+  "nominal_issue": "18:00 previous local date",
+  "test_period": "2026-07-01 through 2026-09-30",
+  "forecast_scope": "Independent frozen reference; team model remains replaceable",
+  "source_url": "https://open-meteo.com/en/docs/historical-weather-api",
+  "source_license": "CC BY 4.0"
+}

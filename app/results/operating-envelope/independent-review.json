@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "kind": "operating_envelope_independent_review",
+  "status": "passed",
+  "scope": "Independent supplied-trace evaluator review; synthetic mathematical and schema cases only. No authenticated Paphos operating limit, field result, scheduler, training or deployment claim.",
+  "reviewers": {
+    "protocol_author": "physical_value_protocol",
+    "implementation": "startup_review",
+    "independent_tests": "storage_requirements_core"
+  },
+  "protocol_review": {
+    "frozen_files_unchanged": true,
+    "unresolved_findings": [],
+    "pre_freeze_corrections": [
+      {
+        "severity": "P1",
+        "issue": "Interval means above a maximum, or below a minimum over a wholly productive interval, prove necessary violations even though bounded means cannot certify pointwise compliance.",
+        "resolution": "Frozen protocol retains these failures and leaves continuous ramp and pointwise compliance unknown."
+      },
+      {
+        "severity": "P1",
+        "issue": "Missing initial state cannot certify the possible opposite-state duration before a horizon-start transition.",
+        "resolution": "Frozen protocol preserves unknown positive-minimum boundary history; zero minimum needs no history."
+      }
+    ]
+  },
+  "implementation_review": {
+    "unresolved_findings": [],
+    "reviewed": [
+      "strict schema, basis, finite nonnegative values and complete partitions",
+      "exact binary64 ticks and cross-products before subtraction, interpolation and division",
+      "production-only minimum with state boundaries within trajectory segments",
+      "unknown applicability and violation precedence",
+      "same-state coalescing, initial-history carry and start-boundary transition evidence",
+      "unfinished final run continuation ranges without fabricated shutdown",
+      "JSON-pointer witnesses, source immutability and scope"
+    ]
+  },
+  "coverage": {
+    "node_tests": 45,
+    "frozen_fixtures": {
+      "valid": 23,
+      "invalid": 5
+    },
+    "generated_cases": {
+      "duration_history": 2016,
+      "rate_and_ramp": 625,
+      "total": 2641
+    },
+    "count_definition": "Generated cases are input combinations, not test-function or assertion counts. They are separate from the 28 frozen fixtures and focused adversarial cases; no aggregate field-scenario count is claimed.",
+    "independent_oracles": [
+      "Duration enumeration directly counts integer intervals between state changes across all 32 five-interval online/offline patterns, seven initial-history choices and nine pairs of minimum durations.",
+      "Rate/ramp enumeration compares integer vertex maxima and undivided slope cross-products for 125 three-point traces and five bounds.",
+      "Analytical binary64 fractions for native-rounding-hidden gaps, subnormal underflow and overflowing slope are asserted without evaluator internals."
+    ],
+    "adversarial_checks": [
+      "productive subinterval interpolation and exact endpoint applicability",
+      "mean intervals crossing productive, unknown and nonproductive state partitions",
+      "missing limits and missing states",
+      "zero output does not infer offline",
+      "known violations survive unknown evidence and unresolved tails",
+      "fractional restart, pre-horizon witnesses and initial age",
+      "exact time subtraction and carried-age addition rather than native rounded arithmetic",
+      "display underflow/overflow with nonzero exact witnesses",
+      "28 malformed mutations, four mean-partition errors and three excess-record resource boundaries",
+      "valid source pointers and unmutated frozen inputs"
+    ]
+  },
+  "initial_failed_run": {
+    "provenance": "Implementation agent reported the original retained tool output; no separate log file was written. This record preserves its failure details without claiming the independent reviewer directly observed that run.",
+    "command": "node --test web/test_operating_envelope.mjs",
+    "exit_code": 1,
+    "tests": 45,
+    "pass": 44,
+    "fail": 1,
+    "duration_ms": 194.585458,
+    "failure": {
+      "test": "integer transition enumeration independently checks initial history and unfinished runs",
+      "location": "web/test_operating_envelope.mjs:98:60",
+      "case": {
+        "bits": 0,
+        "prior": null,
+        "age": null,
+        "online": 0,
+        "offline": 0
+      },
+      "actual": "met",
+      "expected": "not_applicable"
+    },
+    "correction": {
+      "classification": "independent test-oracle diagnostic error",
+      "changed_file": "web/test_operating_envelope.mjs",
+      "reason": "With initial state absent, opposite-state absence is unproved. Its zero minimum is met under either possible history; not_applicable requires established absence. Frozen protocol lines 62 and 66 resolve the distinction.",
+      "adjudicated_by": [
+        "physical_value_protocol",
+        "storage_requirements_core",
+        "root"
+      ],
+      "frozen_expectations_changed": false,
+      "implementation_math_changed": false
+    }
+  },
+  "final_run": {
+    "command": "node --test web/test_operating_envelope.mjs",
+    "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+    "exit_code": 0,
+    "stdout": "\u2714 operating-envelope expectations remain the independently frozen protocol (1.936083ms)\n\u2714 operating-envelope frozen: flat_matched_water_control (1.85475ms)\n\u2714 operating-envelope frozen: triangle_water_feasible_ramp_failure (0.699958ms)\n\u2714 operating-envelope frozen: ramp_equality (0.174542ms)\n\u2714 operating-envelope frozen: minimum_product_rate_failure (0.213833ms)\n\u2714 operating-envelope frozen: nonproduction_is_not_inferred_from_rate (0.155375ms)\n\u2714 operating-envelope frozen: unknown_production_applicability (0.167292ms)\n\u2714 operating-envelope frozen: interpolated_production_boundary (0.133375ms)\n\u2714 operating-envelope frozen: short_online_completed_run (0.169417ms)\n\u2714 operating-envelope frozen: short_offline_completed_run (0.360916ms)\n\u2714 operating-envelope frozen: unfinished_tail_is_obligation (0.166208ms)\n\u2714 operating-envelope frozen: unknown_first_run_age (0.138292ms)\n\u2714 operating-envelope frozen: carried_first_run_age (0.797542ms)\n\u2714 operating-envelope frozen: missing_prior_opposite_state (0.0785ms)\n\u2714 operating-envelope frozen: initial_boundary_transition_failure (0.086583ms)\n\u2714 operating-envelope frozen: coalesce_online_production_modes (0.07425ms)\n\u2714 operating-envelope frozen: bounded_means_do_not_certify (0.113709ms)\n\u2714 operating-envelope frozen: mean_above_maximum_proves_failure (0.078083ms)\n\u2714 operating-envelope frozen: productive_mean_below_minimum_proves_failure (0.068667ms)\n\u2714 operating-envelope frozen: partly_productive_mean_cannot_be_split (0.060958ms)\n\u2714 operating-envelope frozen: missing_declarations_are_unknown (0.041292ms)\n\u2714 operating-envelope frozen: maximum_equality (0.06325ms)\n\u2714 operating-envelope frozen: binary64_just_above_maximum (0.087833ms)\n\u2714 operating-envelope frozen: unknown_tail_age_range (0.071292ms)\n\u2714 operating-envelope frozen: duplicate_rate_time (0.161542ms)\n\u2714 operating-envelope frozen: state_gap (0.066584ms)\n\u2714 operating-envelope frozen: offline_producing_contradiction (0.064959ms)\n\u2714 operating-envelope frozen: wrong_rate_basis (0.046541ms)\n\u2714 operating-envelope frozen: negative_limit (0.050083ms)\n\u2714 frozen numerical failures retain exact values and evidence intervals (0.522792ms)\n\u2714 integer transition enumeration independently checks initial history and unfinished runs (135.0395ms)\n\u2714 integer cross-products independently check continuous rate and ramp extrema (16.206291ms)\n\u2714 production boundaries use the continuous path and do not borrow nonproductive minima (0.288542ms)\n\u2714 nonproducing and offline declarations do not manufacture rate or state evidence (0.198333ms)\n\u2714 known failure survives unknown production applicability and unfinished obligations (0.098541ms)\n\u2714 interval means can prove failures across productive partitions without inventing a point path (0.136291ms)\n\u2714 interval endpoints exclude an adjacent nonproduction record from applicability (0.094333ms)\n\u2714 absent limits and absent histories never become defaults or authorization (0.120541ms)\n\u2714 subnormal slope violations survive display underflow (0.11025ms)\n\u2714 overflowing slope retains finite-input exact evidence (0.109625ms)\n\u2714 exact time subtraction retains a slope violation that native subtraction rounds away (0.085ms)\n\u2714 fractional restart carries history and qualifies a tail without inventing shutdown (0.080417ms)\n\u2714 completed duration and carried age retain positive gaps hidden by native rounding (0.138083ms)\n\u2714 schema errors reject instead of coercing, sorting, bridging or silently dropping fields (1.26375ms)\n\u2714 input resource bounds reject excess records before returning a certificate (4.815292ms)\n\u2139 tests 45\n\u2139 suites 0\n\u2139 pass 45\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 312.642625\n",
+    "stderr": "",
+    "sha256_before": {
+      "web/operating-envelope.mjs": "ea2afef67205e277c1e5ace672c7ec6672c195e2777cf2e967412cf0da41eacc",
+      "web/test_operating_envelope.mjs": "295a7a7a504f8e3fc9f885c9f6db34afabb8e907104fd3f0f63bb60e18c9d94f",
+      "results/operating-envelope/PROTOCOL.md": "d52999f323e1da379b355ef19d5b9a7636230677fe0ed334e09255a19076b46d",
+      "results/operating-envelope/protocol-fixtures.json": "84dfa25fe16b0cdf11f20db11625590737fec1035cfac2463ca367ff21afe40e"
+    },
+    "sha256_after": {
+      "web/operating-envelope.mjs": "ea2afef67205e277c1e5ace672c7ec6672c195e2777cf2e967412cf0da41eacc",
+      "web/test_operating_envelope.mjs": "295a7a7a504f8e3fc9f885c9f6db34afabb8e907104fd3f0f63bb60e18c9d94f",
+      "results/operating-envelope/PROTOCOL.md": "d52999f323e1da379b355ef19d5b9a7636230677fe0ed334e09255a19076b46d",
+      "results/operating-envelope/protocol-fixtures.json": "84dfa25fe16b0cdf11f20db11625590737fec1035cfac2463ca367ff21afe40e"
+    },
+    "node_version": "v25.9.0",
+    "host": "Darwin arm64",
+    "completed_at_utc": "2026-10-03T19:38:15.631960+00:00"
+  }
+}

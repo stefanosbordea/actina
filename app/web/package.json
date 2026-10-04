@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules --test --test-concurrency=1 test_core.mjs test_schedule.mjs test_workspace.mjs test_pilot.mjs test_storage_frontier.mjs test_plan_resilience.mjs test_plan_sequence.mjs test_sequence_revision.mjs test_observation_reconciliation.mjs test_warning_methods.mjs test_plan_revision.mjs test_joint_water_margin.mjs test_solar_allocation.mjs test_solar_timing_bounds.mjs test_temporal_water.mjs test_paired_water_service.mjs test_storage_requirements.mjs test_home_demo.mjs test_resilience_ui.mjs test_water_service_ui.mjs test_execution_review.mjs test_execution_review_ui.mjs test_roadmap_handoff.mjs test_roadmap_handoff_ui.mjs test_roadmap_cli.mjs test_forecast_decision.mjs test_forecast_decision_ui.mjs test_operating_envelope.mjs test_operating_cli.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

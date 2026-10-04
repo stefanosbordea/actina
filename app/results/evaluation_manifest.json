@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "data/test_predictions.csv": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+    "data/paphos_weather.csv": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+    "eval/evaluate.py": "21bc9739af264f82ab716589da8794045fd2f8f7ff2261d6f76539340b191f4e",
+    "model/train.py": "21118d488c17314239702b077c2d5192e2b287492b51a2fd4f673877e76354d5"
+  },
+  "input_snapshots": {
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/data/test_predictions.csv": "input-snapshots/e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c.csv",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/data/paphos_weather.csv": "input-snapshots/fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262.csv"
+  },
+  "input_identity_role": "Exact bytes captured before parsing; predictions, weather and metadata snapshots retained even if source paths later change",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "invocation": [
+    "eval/evaluate.py"
+  ],
+  "rows": 2208,
+  "first_target": "2026-07-01T00:00:00+03:00",
+  "last_target": "2026-09-30T23:00:00+03:00",
+  "threshold_w_m2": 600,
+  "outputs": {
+    "metrics.json": "3a187e830b16f7874165dc106a00733a11112a907e422f6dab919bc9190f0f5d",
+    "results.csv": "2870a02786624c2a508450955e0c489a83d6c177c1be4fb1b246819555ad089c",
+    "charts/mae_by_hour.png": "32349cbdc32e7cb3c13b6933dde71ad0f48498a5f14a43235e0223b593ed8f87",
+    "charts/feature_importance.png": "bce3f73d7ce0173cd3ff78b6fcd312e593bcfdfc2f1d3003e47566136bc63c38",
+    "charts/mae_by_month.png": "138be7b7d406af39fbf5ab5caafddfdcc475be5e904aba509043274d2c04d1c5",
+    "charts/forecast_first_test_day.png": "a8f2bd6079df042a3518362b9ae67316dcac2c6f3cbbac3a02ae8a69c65b1e30"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "completed_at": "2026-10-02T16:24:14.444Z",
+  "command": "node --experimental-vm-modules results/reviews-visual-independent-review.mjs",
+  "exit_status": 0,
+  "runner_sha256": "1214b570ee6d2ccfb7eed485e8f9503c9cd59a4190e4964e74bc17afdfa6d196",
+  "checked_source_sha256": {
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "web/public/workspace.css": "284edbaf3d2e558b9c2041f8105b7eb397ad1fc618b2689ce0ac4a18f3a81277",
+    "web/public/index.html": "7052a38432b8c27dbcd2096c35b347ebede6aea7affea369c1c777aed0577f15",
+    "web/public/vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+    "web/public/workspace.js": "f463d6383a0fa72159f6ba5d38aa1590d985b51484635557872edd7423a86e5c",
+    "web/public/core.mjs": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+    "web/public/pilot-ui.mjs": "746655b86e40d8d00e62b651c55921426df485d860bb926f02d6c7f88222343c",
+    "web/public/pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "web/public/pilot-builder.mjs": "fd834945dd4291112b5bf1bd68b729a0fb6bf2709930ca9589cc16653247a9d3",
+    "web/public/storage-frontier.mjs": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+    "web/public/resilience-ui.mjs": "a78474ecda566338f08e4573fad7e265b45944730d44fb528001f8e56272c53c",
+    "web/public/plan-resilience.mjs": "8eff0c83adb43d342863465c0c5f1dfaf4762d3273203a0a4e4b81e02bb90663",
+    "web/public/observation-restart.mjs": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+    "web/public/reconciliation-ui.mjs": "b20569dfa7525735156f9c3d645e532090b76f90a22b77cf2db22ee6101d30e6",
+    "web/public/observation-reconciliation.mjs": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+    "web/public/plan-revision-ui.mjs": "7756a7867b478b0d03eb817f8d23b22528acaa31be2d851d8536590f7017ecc1",
+    "web/public/plan-revision.mjs": "af26c55b719e4775471f010c37580176c96c1ba5024045f01d63e63e777b95ac",
+    "web/public/manifest.json": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+    "web/public/research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e"
+  },
+  "boundary_checks": 73,
+  "vertex_checks": 122,
+  "probes": [
+    {
+      "name": "nominal geometry and range input",
+      "status": "PASS",
+      "detail": "All 25 midnight-aligned inventory vertices match retained source storage; range input moves cursor to boundaries 0, 13 and 24 with matching values."
+    },
+    {
+      "name": "restart prefix and geometry",
+      "status": "PASS",
+      "detail": "Tested trace starts at hour 10 with exactly 700 m³; all preceding values remain absent, and all 15 retained boundaries align."
+    },
+    {
+      "name": "terminal target marker",
+      "status": "PASS",
+      "detail": "Final target is a marker at the terminal x position and correct physical y value, not an all-day target line."
+    },
+    {
+      "name": "returned matched partial horizon",
+      "status": "PASS",
+      "detail": "Both plans use the same 15 boundaries across 14 remaining hours; final selected label reflects next-day midnight, with full date in title."
+    },
+    {
+      "name": "stale selected-plan trace",
+      "status": "PASS",
+      "detail": "Changing tank removes the previous tested trace and marks conditions unassessed."
+    },
+    {
+      "name": "frozen returned-case independence",
+      "status": "PASS",
+      "detail": "Global tank change does not reinterpret the separately frozen returned case or expose unrelated global context."
+    },
+    {
+      "name": "non-midnight shifted start",
+      "status": "PASS",
+      "detail": {
+        "declared_start": "2026-07-15T08:00:00.000Z",
+        "hard_coded_expected_boundaries": {
+          "0": "11:00 GMT+3",
+          "14": "01:00 GMT+3"
+        },
+        "final_title": "16 Jul 2026, 01:00 GMT+3",
+        "boundaries_checked": 15,
+        "chart_first_label": "11:00",
+        "chart_final_label": "01:00"
+      }
+    },
+    {
+      "name": "autumn repeated hour",
+      "status": "PASS",
+      "detail": {
+        "declared_start": "2026-10-24T21:00:00.000Z",
+        "hard_coded_expected_boundaries": {
+          "0": "00:00 GMT+3",
+          "3": "03:00 GMT+3",
+          "4": "03:00 GMT+2",
+          "24": "23:00 GMT+2"
+        },
+        "final_title": "25 Oct 2026, 23:00 GMT+2",
+        "boundaries_checked": 25,
+        "chart_first_label": "00:00",
+        "chart_final_label": "23:00"
+      }
+    },
+    {
+      "name": "spring skipped hour",
+      "status": "PASS",
+      "detail": {
+        "declared_start": "2026-03-28T22:00:00.000Z",
+        "hard_coded_expected_boundaries": {
+          "0": "00:00 GMT+2",
+          "2": "02:00 GMT+2",
+          "3": "04:00 GMT+3",
+          "24": "01:00 GMT+3"
+        },
+        "final_title": "30 Mar 2026, 01:00 GMT+3",
+        "boundaries_checked": 25,
+        "chart_first_label": "00:00",
+        "chart_final_label": "01:00"
+      }
+    },
+    {
+      "name": "one remaining interval",
+      "status": "PASS",
+      "detail": {
+        "declared_start": "2026-07-15T20:00:00.000Z",
+        "hard_coded_expected_boundaries": {
+          "0": "23:00 GMT+3",
+          "1": "00:00 GMT+3"
+        },
+        "final_title": "16 Jul 2026, 00:00 GMT+3",
+        "boundaries_checked": 2,
+        "chart_first_label": "23:00",
+        "chart_final_label": "00:00"
+      }
+    },
+    {
+      "name": "returned assumptions invalidation",
+      "status": "PASS",
+      "detail": "Editing specific energy clears the chart and boundary readout and disables review export."
+    },
+    {
+      "name": "evidence survives new inspector hierarchy",
+      "status": "PASS",
+      "detail": "Unknown and nonzero explanation findings remain visible in the inspector and clear when the selected tank invalidates their comparison."
+    },
+    {
+      "name": "global style source inspection",
+      "status": "PASS",
+      "detail": "Panel/background changes retain hidden-state precedence, chart overflow access, resizable textareas and summary/control focus styles. No obvious functional loss identified from source; browser geometry not asserted."
+    }
+  ],
+  "failure": null,
+  "scope": [
+    "Narrow JSDOM behavior and SVG-coordinate checks; no browser or native pointer simulation.",
+    "Range input event/cursor alignment tested; native pointer and keyboard mechanics require browser QA.",
+    "Shifted/DST cases are synthetic declared case variants, not newly sourced plant data or new schedules.",
+    "Lines are documented as hourly sample connectors, not exact within-hour trajectories.",
+    "Global stylesheet checked for obvious functional loss only, not rendered pixel/layout correctness.",
+    "No source or existing test modifications, deployment, external messages or full-suite run."
+  ]
+}

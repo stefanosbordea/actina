@@ -1,0 +1,24 @@
+FOR STEFANOS — FOUR USEFUL READS
+
+Forecast inputs: use archived issued weather runs, keeping the initialization and availability time. A weather reconstruction cannot show what was known at 18:00.
+Open-Meteo: https://open-meteo.com/en/docs/previous-runs-api
+
+Forecast checks: compare with safe persistence and a clear-sky control; if the model supplies quantiles, check their calibration and proper scores. Do not manufacture a confidence band.
+Gneiting, Lerch & Schulz (2023): https://doi.org/10.1016/j.solener.2022.12.054
+
+Plant limits: pump efficiency, pressure, minimum operation, flushing and water quality affect how far production can shift. The current 3.4 kWh/m³ scenario does not model these.
+Hu & Konstantinou (2026 preprint): https://arxiv.org/abs/2601.07295
+Author parameter workbook: https://github.com/rxhu89/paper_desali_flex (not rerun)
+
+Pilot value: compare equal water service, power capacity, energy capacity and cost against current operation and a competent simple schedule. Savings depend on the actual tariff and spare capacity.
+Rao et al. (2024): https://doi.org/10.1038/s44221-024-00316-4
+Author data/code: https://github.com/we3lab/valuing-flexibility-from-water
+
+Cyprus context: the EAC July/August reports now supply 62 dated curtailment windows in the package and app. These are grid reports, not plant measurements. Main SCADA estimates, Group 1 windows and separate Ripple/IoT disconnections must stay distinct.
+EAC: https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx
+
+Before a pilot: confirm the asset's grid permission and operating limits. EAC's emergency fourth stage stops all PV production; sunshine alone cannot establish usable electricity. DuPont's current FilmTec manual advises smooth pressure changes and fewer starts; flushing and water acceptance affect the usable output. Neither document supplies approved Paphos settings.
+EAC procedure: https://www.eac.com.cy/EN/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/Photovoltaic_Disconnection_Process_EN.pdf
+DuPont, Rev. 20 (August 2026): https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-Manual-45-D01504-en.pdf
+
+Full citation list and scope: data/research_evidence.json and results/pilot-input-research.json. No new primary forecast or scheduler has been substituted for your work.

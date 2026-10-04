@@ -1,0 +1,10 @@
+{
+  "forecast-complete-reference.csv": "4179d2dbb6530ffdce892937311ee2805d855a22a346ef299f8f49a142aee48d",
+  "forecast-complete-with-control-sources.csv": "baf11bc304929d91cb2a29ea71fb183ba8847bbd7824ac3427c5e0a0265eac0b",
+  "forecast-invalid-control-source.csv": "54239881c300c560a26296bf52654b28fb239e53a212327e4e97a8a69f5cef9c",
+  "forecast-invalid-duplicate.csv": "7f0d9434ce589f677f6877523f52399d98d4a0bf06eb56be046029926bb8b457",
+  "forecast-partial-bom.csv": "7ae700cee901a5ecae3dad052d68f1f4ae2851c8f8646f8136f9a2a609b921e4",
+  "schedule-flat-july1-tank1000.csv": "4d92a19b837ec894d225f570026b8b401e620e60a5dfc09133d5bf16c0d1ff0f",
+  "schedule-invalid-capacity.csv": "88a4c0597a18886146c7e07702c0de035824f1912b2c87ec4ccfc14d1de9b7a5",
+  "schedule-unsupported-demand.csv": "6b87ccb4c88254f40e663c4b827642c86dbf3edf5b74b0f3c8c9d143c75af962"
+}

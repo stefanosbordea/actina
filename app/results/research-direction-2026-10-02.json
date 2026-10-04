@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-02T13:17:24.579286+00:00",
+  "scope": "Research direction and primary-source reconciliation; no claim of scientific novelty or field validation",
+  "ownership": {
+    "Loucas": [
+      "independent evaluation",
+      "integration",
+      "decision evidence",
+      "dashboard and demo"
+    ],
+    "Stefanos": [
+      "primary forecast training",
+      "primary plant model",
+      "schedule generation"
+    ]
+  },
+  "source_documents": [
+    {
+      "file": "source/AquaShift_PoC_Work_Split.pdf",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "finding": "Loucas evaluates and builds demo; Stefanos builds model, plant and scheduler."
+    },
+    {
+      "file": "source/AquaShift Pitch.pdf",
+      "pages": [
+        3,
+        5,
+        7,
+        8,
+        9,
+        12
+      ],
+      "finding": "Evening plans updated as readings arrive, advice mode, decision logs, calibrated local scale and before/after outcomes."
+    }
+  ],
+  "hypothesis": {
+    "question": "Can independent fixed-plan consequence analysis expose operational fragility missed by nominal validity and preserve an auditable observation-to-review workflow?",
+    "test": "Hold submitted production fixed; apply identical demand, production-loss, outage and starting-water conditions to reference and competent flat control. Link only explicitly mapped readings known at the declared review cutoff.",
+    "falsifiers": [
+      "Zero-disturbance replay fails to reproduce retained water trajectories.",
+      "Mass balance fails when demand cannot be served or storage overflows.",
+      "Different plans receive different external conditions.",
+      "Later readings affect an earlier review.",
+      "Changes in tank size are credited without exposing changed initial water."
+    ],
+    "limits": "No replacement forecast or scheduler. Physical validity is restricted to declared uniform hourly water flows; there is no grid allocation, salinity, ramp or drinking-water quality validation."
+  },
+  "prior_art": [
+    {
+      "url": "https://www.nature.com/articles/s44221-024-00316-4",
+      "title": "Valuing energy flexibility from water systems",
+      "evidence": "Accessible abstract and publisher preview; full text subscription-only",
+      "implication": "Water-flexibility valuation and storage/cost representations are established prior art; do not claim the dashboard invents them."
+    },
+    {
+      "url": "https://github.com/we3lab/valuing-flexibility-from-water",
+      "evidence": "Authors public data and plotting repository",
+      "implication": "Benchmark against competent published concepts, not merely the old interface."
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.07295",
+      "title": "Stochastic Power-Water Coordination",
+      "evidence": "Preprint abstract",
+      "implication": "Pump, flushing, salinity and operational constraints are substantive research dimensions. AquaShift does not implement or validate those from an abstract."
+    }
+  ],
+  "local_scale_leads": [
+    {
+      "site": "Kouklia",
+      "reported_m3_day": 15000,
+      "event_date": "2025-09-23",
+      "url": "https://www.gov.cy/georgia-agrotiki-anaptyxi-perivallon/anakoinosi-tou-tmimatos-anaptyxeos-ydaton-gia-ti-monada-afalatosis-kouklion/",
+      "scope": "Historical reported production/contractual scale, not verified October2026 headroom."
+    },
+    {
+      "site": "Kissonerga",
+      "reported_m3_day": 12000,
+      "event_date": "2026-04-05",
+      "url": "https://www.gov.cy/georgia-agrotiki-anaptyxi-perivallon/anakoinosi-tou-ypourgeiou-georgias-agrotikis-anaptyxis-kai-perivallontos-se-pliri-leitourgia-i-monada-afalatosis-sto-limani-lemesou/",
+      "scope": "Reported operating-scale anchor, no interval trace or spare headroom."
+    }
+  ],
+  "local_source_limit": "Gov.cy page bodies returned403; dates/figures were inspected in indexed primary-source snippets. Not imported as calibrated operator data. Older2026-stamped WDD pages contain2017\u20132019 planning text.",
+  "unresolved": [
+    "Current usable storage",
+    "Hourly site demand and spare plant capacity",
+    "Local electricity allocation and permission",
+    "Meter quality and interval semantics",
+    "Actual issued forecast vintages",
+    "Customer economics and measured outcomes",
+    "Validated Sites service"
+  ]
+}

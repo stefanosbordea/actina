@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-10-01T23:18:52.970588+00:00",
+  "command": ".venv/bin/python -m eval.curtailment_overlap",
+  "days": 62,
+  "matched_cases": 310,
+  "scope": "Existing scenario plant electricity scheduled during retrospectively reported Group 1 windows, assuming uniform within-hour load and Cyprus civil time; temporal coincidence only. Grid access, locally available renewable power, dispatch permission and actual recovery are not established.",
+  "decision_inputs": "EAC windows are evaluation inputs only and never enter the reference scheduler. Assumed tariffs remain unchanged.",
+  "summed_kwh_by_tank": {
+    "500": {
+      "reference_load_kwh": 195228.0,
+      "flat_load_kwh": 153204.0,
+      "persistence_load_kwh": 194990.0,
+      "price_only_load_kwh": 172788.0
+    },
+    "1000": {
+      "reference_load_kwh": 267546.0,
+      "flat_load_kwh": 153204.0,
+      "persistence_load_kwh": 266679.0,
+      "price_only_load_kwh": 216818.0
+    },
+    "2000": {
+      "reference_load_kwh": 410584.0,
+      "flat_load_kwh": 153204.0,
+      "persistence_load_kwh": 410074.0,
+      "price_only_load_kwh": 337093.0
+    },
+    "4000": {
+      "reference_load_kwh": 448154.0,
+      "flat_load_kwh": 153204.0,
+      "persistence_load_kwh": 448970.0,
+      "price_only_load_kwh": 448154.0
+    },
+    "8000": {
+      "reference_load_kwh": 450806.0,
+      "flat_load_kwh": 153204.0,
+      "persistence_load_kwh": 451214.0,
+      "price_only_load_kwh": 450806.0
+    }
+  },
+  "source_sha256": {
+    "data/grid-reports/eac-report-sources.json": "24693d7eb558789f0998aa58b1e2f7ac1be1958f96c8f8dd108e27f1a0e454f5",
+    "data/test_predictions.csv": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+    "data/paphos_weather.csv": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+    "model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+    "eval/curtailment_overlap.py": "ec1e5ee6d8071b0d80535c7a3b9a8db2889c7db273e39d15cabc52adaf4b69fa"
+  }
+}

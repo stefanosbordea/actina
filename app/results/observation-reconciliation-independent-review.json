@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "started_at": "2026-10-02T13:35:47.692Z",
+  "completed_at": "2026-10-02T13:35:47.844Z",
+  "node": "v25.9.0",
+  "command": "node results/observation-reconciliation-independent-review.mjs > results/observation-reconciliation-independent-review.json",
+  "scope": "Independent deterministic contract probes plus seeded point-oracle comparisons; invented inputs only, no browser, meter integration or field validation.",
+  "seed": 92817,
+  "trials": 300,
+  "rejected_contract_cases": 29,
+  "deterministic_cases": 6,
+  "passed_checks": 335,
+  "scalar_comparisons": 6000,
+  "issue_count": 0,
+  "issues": [],
+  "hashes": {
+    "web/public/observation-reconciliation.mjs": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+    "web/public/pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "web/public/plan-resilience.mjs": "f312c9bef19e0acf18331177b1fc23fede29bd5be7fd95030dd114527a116101",
+    "web/test_observation_reconciliation.mjs": "75c3c9f84f58f3e1f0e5151615a7ecee26c119af3376cf779a23248146d96835",
+    "results/observation-reconciliation-independent-review.mjs": "ef045d4ef5e39fe5ba9940d0187c299f2c9a6e47cb28286c21af2c5a8151eaf3"
+  },
+  "identity_limitation": "Constructed fixture hashes are explicitly caller metadata, not byte-authentication evidence."
+}

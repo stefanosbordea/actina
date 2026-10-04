@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "kind": "continuous_plan_revision_review",
+  "createdAt": "2026-10-02T20:34:20.875Z",
+  "scope": "Illustrative fixed supplied plans; conditional difference only. No forecast fitting, generated schedule, measured curtailment or operating permission.",
+  "case_file": {
+    "name": "comparison-case.json",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"continuous_plan_revision_case\",\n  \"source_file\": {\n    \"name\": \"midnight-ambiguous-source.json\",\n    \"sha256\": \"537203fa3225499f09e5767d01888b1efe46be29fa047e74be44ea0419f910b1\",\n    \"text\": \"{\\n  \\\"schema\\\": 1,\\n  \\\"kind\\\": \\\"fixed_plan_sequence_source\\\",\\n  \\\"label\\\": \\\"Illustrative midnight-ambiguous\\\",\\n  \\\"control_rate_m3_h\\\": 1,\\n  \\\"specific_energy_kwh_m3\\\": 1,\\n  \\\"inputs\\\": {\\n    \\\"blocks\\\": [\\n      {\\n        \\\"times\\\": [\\n          \\\"2026-06-30T21:00:00.000Z\\\",\\n          \\\"2026-06-30T22:00:00.000Z\\\",\\n          \\\"2026-06-30T23:00:00.000Z\\\",\\n          \\\"2026-07-01T00:00:00.000Z\\\",\\n          \\\"2026-07-01T01:00:00.000Z\\\",\\n          \\\"2026-07-01T02:00:00.000Z\\\",\\n          \\\"2026-07-01T03:00:00.000Z\\\",\\n          \\\"2026-07-01T04:00:00.000Z\\\",\\n          \\\"2026-07-01T05:00:00.000Z\\\",\\n          \\\"2026-07-01T06:00:00.000Z\\\",\\n          \\\"2026-07-01T07:00:00.000Z\\\",\\n          \\\"2026-07-01T08:00:00.000Z\\\",\\n          \\\"2026-07-01T09:00:00.000Z\\\",\\n          \\\"2026-07-01T10:00:00.000Z\\\",\\n          \\\"2026-07-01T11:00:00.000Z\\\",\\n          \\\"2026-07-01T12:00:00.000Z\\\",\\n          \\\"2026-07-01T13:00:00.000Z\\\",\\n          \\\"2026-07-01T14:00:00.000Z\\\",\\n          \\\"2026-07-01T15:00:00.000Z\\\",\\n          \\\"2026-07-01T16:00:00.000Z\\\",\\n          \\\"2026-07-01T17:00:00.000Z\\\",\\n          \\\"2026-07-01T18:00:00.000Z\\\",\\n          \\\"2026-07-01T19:00:00.000Z\\\",\\n          \\\"2026-07-01T20:00:00.000Z\\\"\\n        ],\\n        \\\"production\\\": [\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1\\n        ],\\n        \\\"demand\\\": 1\\n      },\\n      {\\n        \\\"times\\\": [\\n          \\\"2026-07-01T21:00:00.000Z\\\",\\n          \\\"2026-07-01T22:00:00.000Z\\\",\\n          \\\"2026-07-01T23:00:00.000Z\\\",\\n          \\\"2026-07-02T00:00:00.000Z\\\",\\n          \\\"2026-07-02T01:00:00.000Z\\\",\\n          \\\"2026-07-02T02:00:00.000Z\\\",\\n          \\\"2026-07-02T03:00:00.000Z\\\",\\n          \\\"2026-07-02T04:00:00.000Z\\\",\\n          \\\"2026-07-02T05:00:00.000Z\\\",\\n          \\\"2026-07-02T06:00:00.000Z\\\",\\n          \\\"2026-07-02T07:00:00.000Z\\\",\\n          \\\"2026-07-02T08:00:00.000Z\\\",\\n          \\\"2026-07-02T09:00:00.000Z\\\",\\n          \\\"2026-07-02T10:00:00.000Z\\\",\\n          \\\"2026-07-02T11:00:00.000Z\\\",\\n          \\\"2026-07-02T12:00:00.000Z\\\",\\n          \\\"2026-07-02T13:00:00.000Z\\\",\\n          \\\"2026-07-02T14:00:00.000Z\\\",\\n          \\\"2026-07-02T15:00:00.000Z\\\",\\n          \\\"2026-07-02T16:00:00.000Z\\\",\\n          \\\"2026-07-02T17:00:00.000Z\\\",\\n          \\\"2026-07-02T18:00:00.000Z\\\",\\n          \\\"2026-07-02T19:00:00.000Z\\\",\\n          \\\"2026-07-02T20:00:00.000Z\\\"\\n        ],\\n        \\\"production\\\": [\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1,\\n          1\\n        ],\\n        \\\"demand\\\": 1\\n      }\\n    ],\\n    \\\"capacity\\\": 100,\\n    \\\"reserve\\\": 0,\\n    \\\"initial\\\": 10,\\n    \\\"target\\\": 10,\\n    \\\"unitCapacity\\\": 4,\\n    \\\"scenario\\\": {\\n      \\\"demand_multiplier\\\": 1,\\n      \\\"production_multiplier\\\": 1\\n    },\\n    \\\"outages\\\": []\\n  }\\n}\\n\"\n  },\n  \"conditions\": {\n    \"initial\": 10,\n    \"demand_multiplier\": 1,\n    \"production_multiplier\": 1,\n    \"outages\": []\n  },\n  \"block_index\": 0\n}\n",
+    "sha256": "575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9"
+  },
+  "proposal_file": {
+    "name": "known-direction-return.csv",
+    "text": "case_sha256,time,production_m3\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-06-30T21:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-06-30T22:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-06-30T23:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T00:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T01:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T02:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T03:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T04:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T05:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T06:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T07:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T08:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T09:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T10:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T11:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T12:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T13:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T14:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T15:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T16:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T17:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T18:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T19:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T20:00:00.000Z,2\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T21:00:00.000Z,0.5\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T22:00:00.000Z,0.5\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-01T23:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T00:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T01:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T02:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T03:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T04:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T05:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T06:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T07:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T08:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T09:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T10:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T11:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T12:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T13:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T14:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T15:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T16:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T17:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T18:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T19:00:00.000Z,1\r\n575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9,2026-07-02T20:00:00.000Z,1\n",
+    "sha256": "0d99a44d2e1d7a68e92b826dcf8799f55695ec18dacc361cc5a4b2c62cee8696"
+  },
+  "solar_file": {
+    "name": "known-direction-solar.json",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"plant_solar_allocation\",\n  \"case_sha256\": \"575daa5a21477efa771a72f03e6641cffaba50c7208c5eb3b2fc26c4db261db9\",\n  \"source_kind\": \"illustrative_scenario\",\n  \"source_label\": \"Illustrative known-direction\",\n  \"plant_mapping\": \"Illustrative single tank and unit; no connected plant\",\n  \"power_basis\": \"total_plant_eligible_solar\",\n  \"interval_semantics\": \"constant_power\",\n  \"review_as_of\": \"2026-06-30T12:00:00Z\",\n  \"intervals\": [\n    {\n      \"start\": \"2026-07-01T20:00:00.000Z\",\n      \"end\": \"2026-07-01T21:00:00.000Z\",\n      \"available_at\": \"2026-06-30T12:00:00Z\",\n      \"power_kw\": 2\n    },\n    {\n      \"start\": \"2026-07-01T21:00:00.000Z\",\n      \"end\": \"2026-07-01T22:00:00.000Z\",\n      \"available_at\": \"2026-06-30T12:00:00Z\",\n      \"power_kw\": 0\n    }\n  ]\n}\n",
+    "sha256": "27cb9d5e8ed1c451e2508c12b10675ea090f7ba4dd374faab84558e1e968cc6b"
+  },
+  "selected_block": 0,
+  "decision": "Needs team review",
+  "reason": "Illustrative supplied-plan comparison.",
+  "reviewer": "AquaShift",
+  "results": {
+    "original": {
+      "initial_storage_m3": 10,
+      "final_storage_m3": 10,
+      "requested_production_m3": 48,
+      "available_production_m3": 48,
+      "demand_m3": 48,
+      "delivered_m3": 48,
+      "spill_m3": 0,
+      "unmet_m3": 0,
+      "min_storage_m3": 10,
+      "max_storage_m3": 10,
+      "max_reserve_deficit_m3": 0,
+      "reserve_margin_m3": 10,
+      "terminal_deficit_m3": 0,
+      "terminal_surplus_m3": 0,
+      "terminal_deviation_m3": 0,
+      "mass_balance_error_m3": 0,
+      "max_abs_accounting_residual_m3": 0
+    },
+    "returned": {
+      "initial_storage_m3": 10,
+      "final_storage_m3": 10,
+      "requested_production_m3": 48,
+      "available_production_m3": 48,
+      "demand_m3": 48,
+      "delivered_m3": 48,
+      "spill_m3": 0,
+      "unmet_m3": 0,
+      "min_storage_m3": 10,
+      "max_storage_m3": 11,
+      "max_reserve_deficit_m3": 0,
+      "reserve_margin_m3": 10,
+      "terminal_deficit_m3": 0,
+      "terminal_surplus_m3": 0,
+      "terminal_deviation_m3": 0,
+      "mass_balance_error_m3": 0,
+      "max_abs_accounting_residual_m3": 0
+    },
+    "changes": {
+      "available_production_m3": 0,
+      "delivered_m3": 0,
+      "unmet_m3": 0,
+      "spill_m3": 0,
+      "final_storage_m3": 0,
+      "max_reserve_deficit_m3": 0,
+      "terminal_deficit_m3": 0,
+      "terminal_deviation_m3": 0,
+      "modeled_production_energy_kwh": 0
+    },
+    "solar": {
+      "status": "partial",
+      "coverage": {
+        "horizon_hours": 48,
+        "known_hours": 2,
+        "unknown_hours": 46,
+        "late_hours": 0
+      },
+      "difference_envelope": {
+        "status": "bounded",
+        "delta_solar_kwh": {
+          "lower": 0.5,
+          "upper": 1
+        },
+        "delta_other_kwh": {
+          "lower": -1,
+          "upper": -0.5
+        },
+        "width_kwh": 0.5,
+        "scope": [
+          "Returned minus original under one shared nonnegative plant-eligible solar trace. Independent source intervals remain intact, including across midnight; no within-interval energy is invented.",
+          "Timely declared constant power, energy and power limits constrain the comparison. Missing and late evidence uses load-only limits; late numeric values are ignored. Partial absolute solar totals remain unknown.",
+          "Energy without a power limit gives closed infimum/supremum bounds under arbitrarily high finite power. Some endpoints may be limiting values rather than attainable traces; a zero endpoint does not establish an achievable tie.",
+          "Range widths attribute unresolved modeled differences to whole source intervals or contiguous missing gaps. They are not expected information value, promised resolution or a minimum measurement cadence.",
+          "No forecast, schedule, authenticated plant allocation, measured recovery or operating permission is established. Water service, spill, production and final inventory remain separate outcomes."
+        ]
+      }
+    }
+  }
+}

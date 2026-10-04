@@ -1,0 +1,66 @@
+{
+  "source_and_input_identity": {
+    "data/fetch_weather.py": "7767bc08e4a4163b27dc65561b3641f6a71df7fc2da3fcf4f257bac32b8bef5e",
+    "model/train.py": "21118d488c17314239702b077c2d5192e2b287492b51a2fd4f673877e76354d5",
+    "eval/evaluate.py": "53e3b4f1dd37ada1023daf6a7a5a446ace9715537a7b1e5d4959db95d790038e",
+    "eval/test_evaluation.py": "64585d4a3c950c19112b7afdded398466fdf89df17fce0826c92d5426a7a0d8e",
+    "model/residual_experiment.py": "d80145889936d71b82b8bdc6c3ee262409eaacd3ba5d549d5a288a9eddeadc3c",
+    "data/paphos_weather.csv": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+    "data/test_predictions.csv": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+    "model/reference_lightgbm.txt": "9d4bccda373e7fcd09499820a8e6de78720ee6efb7cfaada1754eca382e09cb2"
+  },
+  "executed": [
+    {
+      "command": "python3 data/fetch_weather.py",
+      "exit_status": 0,
+      "rows": 19728
+    },
+    {
+      "command": ".venv/bin/python model/train.py",
+      "exit_status": 1,
+      "log": "results/training-attempt-1.log",
+      "cause": "Pandas3 datetime storage used microseconds; contiguous-hour check corrected to explicit nanoseconds."
+    },
+    {
+      "command": ".venv/bin/python model/train.py",
+      "exit_status": 0,
+      "log": "results/training-run.log"
+    },
+    {
+      "command": ".venv/bin/python model/train.py",
+      "exit_status": 0,
+      "log": "results/training-final-run.log"
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s eval -p 'test_*.py' -v",
+      "exit_status": 0,
+      "tests": 19,
+      "log": "results/evaluation-final-tests.log"
+    },
+    {
+      "command": ".venv/bin/python eval/evaluate.py --model-metadata model/reference_metadata.json",
+      "exit_status": 0,
+      "log": "results/evaluation-final-run.log"
+    },
+    {
+      "command": ".venv/bin/python model/residual_experiment.py",
+      "exit_status": 0,
+      "log": "results/june-residual-run.log"
+    }
+  ],
+  "control_correction": {
+    "reason": "Independent review identified stronger issue-time-safe persistence",
+    "model_retrained_for_correction": false,
+    "threshold_changed": false,
+    "frozen_checkpoint_sha256": "9d4bccda373e7fcd09499820a8e6de78720ee6efb7cfaada1754eca382e09cb2",
+    "implementation": "Current model/train.py make_predictions uses strongest causal persistence; corrected stored predictions regenerated directly from frozen text booster."
+  },
+  "reproduction": [
+    ".venv/bin/python data/fetch_weather.py",
+    ".venv/bin/python model/train.py",
+    ".venv/bin/python eval/evaluate.py --model-metadata model/reference_metadata.json",
+    ".venv/bin/python -m unittest discover -s eval -p 'test_*.py' -v",
+    ".venv/bin/python model/residual_experiment.py"
+  ],
+  "scope": "Weather reconstruction and prediction accuracy; no sensor, grid-curtailment or plant measurements."
+}

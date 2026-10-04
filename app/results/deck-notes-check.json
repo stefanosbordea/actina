@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "slide": 1,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "\u03a3\u03c4\u03ad\u03c6\u03b1\u03bd\u03bf\u03c2 \u039c\u03c0\u03bf\u03c1\u03c4\u03ad\u03b1\u03c2",
+      "seconds": 45
+    },
+    {
+      "slide": 2,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Andreas Nikolaides",
+      "seconds": 65
+    },
+    {
+      "slide": 3,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "\u03a3\u03c4\u03ad\u03c6\u03b1\u03bd\u03bf\u03c2 \u039c\u03c0\u03bf\u03c1\u03c4\u03ad\u03b1\u03c2",
+      "seconds": 55
+    },
+    {
+      "slide": 4,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Loucas Louka",
+      "seconds": 70
+    },
+    {
+      "slide": 5,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "\u03a3\u03c4\u03ad\u03c6\u03b1\u03bd\u03bf\u03c2 \u039c\u03c0\u03bf\u03c1\u03c4\u03ad\u03b1\u03c2",
+      "seconds": 80
+    },
+    {
+      "slide": 6,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Loucas Louka",
+      "seconds": 120
+    },
+    {
+      "slide": 7,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Loucas Louka",
+      "seconds": 100
+    },
+    {
+      "slide": 8,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Loucas Louka",
+      "seconds": 70
+    },
+    {
+      "slide": 9,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Cleopas Cleopa",
+      "seconds": 80
+    },
+    {
+      "slide": 10,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "\u03a3\u03c4\u03ad\u03c6\u03b1\u03bd\u03bf\u03c2 \u039c\u03c0\u03bf\u03c1\u03c4\u03ad\u03b1\u03c2",
+      "seconds": 55
+    },
+    {
+      "slide": 11,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Andreas Nikolaides",
+      "seconds": 55
+    },
+    {
+      "slide": 12,
+      "visual_xml_unchanged_except_generated_ids": true,
+      "final_render_pixel_equal": true,
+      "native_notes_match_markdown": true,
+      "presenter": "Cleopas Cleopa",
+      "seconds": 35
+    }
+  ],
+  "native_charts_byte_identical": 3,
+  "spoken_words": 1504,
+  "plan_seconds": 830,
+  "included_demo_or_fallback_seconds": 90,
+  "official_limit_seconds": 900,
+  "remaining_seconds": 70,
+  "human_rehearsal_performed": false
+}
