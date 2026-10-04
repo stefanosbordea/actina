@@ -1,0 +1,387 @@
+{
+  "schema": 1,
+  "experiment": "ActinaBench F1 001",
+  "checked_at_utc": "2026-10-04T07:13:57.666998+00:00",
+  "status": "PASS",
+  "mismatches": [],
+  "checks": {
+    "prediction_files": 12,
+    "prediction_rows": 42798,
+    "selected_scores": 12,
+    "default_scores": 12,
+    "monthly_scores": 66,
+    "threshold_scores": 304,
+    "original_reference_scores": 2,
+    "input_hashes": 4
+  },
+  "method": "Independent Python standard-library CSV/Decimal calculation; no import or execution of run.py, model loading, or training. Decimal comparisons reproduce saved decisions; reported floating metrics compared within 1e-14. Metrics recomputed from complete files, not copied from their summaries.",
+  "scope": "Historical retrospective audit of the already-inspected original test; not independent future holdout evidence.",
+  "reported_result_sha256": "6d9b6980ae9a027df34e5037b96223a366f7b974c1b8adabc7e265ad3e90d930",
+  "protocol_sha256": "3d402c5216f2fd3010e58e279e1677391a639bb8e87336babbb3e76790144a4b",
+  "evaluator_sha256": "bb454176ee75952a75dc750815f21c2cddad327ba768ef5f56b96a4f4847036e",
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+  },
+  "prediction_sha256": {
+    "result-retry1/predictions/validation-persistence.csv": "a469598c9d07a2c38242e866a118f9824d9ded8ead4b2da98e31d73c782f5e9c",
+    "result-retry1/predictions/validation-calibrated_persistence.csv": "951db72ae8877e5cadbfc1e676f2f29f651e0858ccaf7256f12020a666150390",
+    "result-retry1/predictions/validation-purged_regression.csv": "a5688e23a1b40157ae9e8232f738f8e4dd87414e768d9aac2ddbd013716b6c27",
+    "result-retry1/predictions/validation-direct_classifier.csv": "3d687f077a6e797a550094672cc9b1cff697ff72599fce9dcef2ee5243737ad1",
+    "result-retry1/predictions/validation-history_classifier.csv": "8abfc79d8f9908c859d75030713e288f48f26629c939682112f0206ae0a57f02",
+    "result-retry1/predictions/validation-deep_classifier.csv": "76cf6db27b8ec6ed094ceded510a44838ecaeeeec7b2f3a6ef2ea97e2b884a4c",
+    "result-retry1/predictions/test-persistence.csv": "4c78ac5b06c286ccbc9c8d9218b80ea0bc6fb6eb5c086c82483082fc3c7acafc",
+    "result-retry1/predictions/test-calibrated_persistence.csv": "202e1e7301ccff736f17dd71b1d0b97fbd4da4e2827bcf27ca8ab2bd7c93195d",
+    "result-retry1/predictions/test-purged_regression.csv": "50a7dab55e0299bba94817e1d98631383980c99b1f5b106ef1255e7055cbd561",
+    "result-retry1/predictions/test-direct_classifier.csv": "7b9da05fbaa5ec6a60c77f2e388e5378043546ae89a70422cb2a08f00fea74d5",
+    "result-retry1/predictions/test-history_classifier.csv": "7ade015cd405fa34d8a3f7f3ff1938ed5c867b1da20e2140c27ca4f65e197b20",
+    "result-retry1/predictions/test-deep_classifier.csv": "4581f016002c766269b38e264606dfbbc71c7d8b409d5ab67fdfe2c4e2e89b1a"
+  },
+  "input_coverage": {
+    "data/features.csv": {
+      "rows": 17832,
+      "hourly_increasing": true,
+      "unique": true
+    },
+    "data/paphos_weather_data.csv": {
+      "rows": 17880,
+      "hourly_increasing": true,
+      "unique": true
+    },
+    "eval/cv_predictions.csv": {
+      "rows": 3566,
+      "hourly_increasing": true,
+      "unique": true
+    },
+    "eval/test_predictions.csv": {
+      "rows": 3567,
+      "hourly_increasing": true,
+      "unique": true
+    }
+  },
+  "split_verification": {
+    "validation": {
+      "train_hours": 10675,
+      "evaluation_hours": 3566,
+      "purged_hours": 24,
+      "latest_training_target": "2025-12-04 18:00:00"
+    },
+    "test": {
+      "train_hours": 14241,
+      "evaluation_hours": 3567,
+      "purged_hours": 24,
+      "latest_training_target": "2026-05-02 08:00:00"
+    }
+  },
+  "original_model_reference": {
+    "validation": {
+      "source": "eval/cv_predictions.csv",
+      "decision": "predicted > 600 W/m\u00b2",
+      "overall": {
+        "hours": 3566,
+        "tp": 241,
+        "fp": 55,
+        "fn": 65,
+        "tn": 3205,
+        "precision": 0.8141891891891891,
+        "recall": 0.7875816993464052,
+        "f1": 0.8006644518272426
+      },
+      "monthly": [
+        {
+          "month": "2025-12",
+          "hours": 629,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 629,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        {
+          "month": "2026-01",
+          "hours": 744,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 744,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        {
+          "month": "2026-02",
+          "hours": 672,
+          "tp": 18,
+          "fp": 7,
+          "fn": 19,
+          "tn": 628,
+          "precision": 0.72,
+          "recall": 0.4864864864864865,
+          "f1": 0.5806451612903226
+        },
+        {
+          "month": "2026-03",
+          "hours": 744,
+          "tp": 79,
+          "fp": 21,
+          "fn": 29,
+          "tn": 615,
+          "precision": 0.79,
+          "recall": 0.7314814814814815,
+          "f1": 0.7596153846153846
+        },
+        {
+          "month": "2026-04",
+          "hours": 720,
+          "tp": 138,
+          "fp": 21,
+          "fn": 16,
+          "tn": 545,
+          "precision": 0.8679245283018868,
+          "recall": 0.8961038961038961,
+          "f1": 0.8817891373801917
+        },
+        {
+          "month": "2026-05",
+          "hours": 57,
+          "tp": 6,
+          "fp": 6,
+          "fn": 1,
+          "tn": 44,
+          "precision": 0.5,
+          "recall": 0.8571428571428571,
+          "f1": 0.631578947368421
+        }
+      ]
+    },
+    "test": {
+      "source": "eval/test_predictions.csv",
+      "decision": "predicted > 600 W/m\u00b2",
+      "overall": {
+        "hours": 3567,
+        "tp": 965,
+        "fp": 24,
+        "fn": 45,
+        "tn": 2533,
+        "precision": 0.9757330637007078,
+        "recall": 0.9554455445544554,
+        "f1": 0.9654827413706853
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "hours": 687,
+          "tp": 162,
+          "fp": 12,
+          "fn": 22,
+          "tn": 491,
+          "precision": 0.9310344827586207,
+          "recall": 0.8804347826086957,
+          "f1": 0.9050279329608939
+        },
+        {
+          "month": "2026-06",
+          "hours": 720,
+          "tp": 217,
+          "fp": 2,
+          "fn": 12,
+          "tn": 489,
+          "precision": 0.9908675799086758,
+          "recall": 0.9475982532751092,
+          "f1": 0.96875
+        },
+        {
+          "month": "2026-07",
+          "hours": 744,
+          "tp": 237,
+          "fp": 3,
+          "fn": 7,
+          "tn": 497,
+          "precision": 0.9875,
+          "recall": 0.9713114754098361,
+          "f1": 0.9793388429752066
+        },
+        {
+          "month": "2026-08",
+          "hours": 744,
+          "tp": 195,
+          "fp": 5,
+          "fn": 3,
+          "tn": 541,
+          "precision": 0.975,
+          "recall": 0.9848484848484849,
+          "f1": 0.9798994974874372
+        },
+        {
+          "month": "2026-09",
+          "hours": 672,
+          "tp": 154,
+          "fp": 2,
+          "fn": 1,
+          "tn": 515,
+          "precision": 0.9871794871794872,
+          "recall": 0.9935483870967742,
+          "f1": 0.9903536977491961
+        }
+      ]
+    }
+  },
+  "recomputed_results": {
+    "validation": {
+      "persistence": {
+        "cutoff": 600.0,
+        "hours": 3566,
+        "tp": 244,
+        "fp": 62,
+        "fn": 62,
+        "tn": 3198,
+        "precision": 0.7973856209150327,
+        "recall": 0.7973856209150327,
+        "f1": 0.7973856209150327
+      },
+      "calibrated_persistence": {
+        "cutoff": 590.0,
+        "hours": 3566,
+        "tp": 256,
+        "fp": 66,
+        "fn": 50,
+        "tn": 3194,
+        "precision": 0.7950310559006211,
+        "recall": 0.8366013071895425,
+        "f1": 0.8152866242038217
+      },
+      "purged_regression": {
+        "cutoff": 600.0,
+        "hours": 3566,
+        "tp": 251,
+        "fp": 61,
+        "fn": 55,
+        "tn": 3199,
+        "precision": 0.8044871794871795,
+        "recall": 0.8202614379084967,
+        "f1": 0.8122977346278317
+      },
+      "direct_classifier": {
+        "cutoff": 0.33999999999999997,
+        "hours": 3566,
+        "tp": 291,
+        "fp": 83,
+        "fn": 15,
+        "tn": 3177,
+        "precision": 0.7780748663101604,
+        "recall": 0.9509803921568627,
+        "f1": 0.8558823529411764
+      },
+      "history_classifier": {
+        "cutoff": 0.5499999999999999,
+        "hours": 3566,
+        "tp": 278,
+        "fp": 67,
+        "fn": 28,
+        "tn": 3193,
+        "precision": 0.8057971014492754,
+        "recall": 0.9084967320261438,
+        "f1": 0.8540706605222734
+      },
+      "deep_classifier": {
+        "cutoff": 0.57,
+        "hours": 3566,
+        "tp": 281,
+        "fp": 137,
+        "fn": 25,
+        "tn": 3123,
+        "precision": 0.6722488038277512,
+        "recall": 0.9183006535947712,
+        "f1": 0.7762430939226519
+      }
+    },
+    "test": {
+      "persistence": {
+        "cutoff": 600.0,
+        "hours": 3567,
+        "tp": 985,
+        "fp": 20,
+        "fn": 25,
+        "tn": 2537,
+        "precision": 0.9800995024875622,
+        "recall": 0.9752475247524752,
+        "f1": 0.9776674937965261
+      },
+      "calibrated_persistence": {
+        "cutoff": 590.0,
+        "hours": 3567,
+        "tp": 992,
+        "fp": 29,
+        "fn": 18,
+        "tn": 2528,
+        "precision": 0.9715964740450539,
+        "recall": 0.9821782178217822,
+        "f1": 0.9768586903003447
+      },
+      "purged_regression": {
+        "cutoff": 600.0,
+        "hours": 3567,
+        "tp": 970,
+        "fp": 24,
+        "fn": 40,
+        "tn": 2533,
+        "precision": 0.9758551307847082,
+        "recall": 0.9603960396039604,
+        "f1": 0.9680638722554891
+      },
+      "direct_classifier": {
+        "cutoff": 0.33999999999999997,
+        "hours": 3567,
+        "tp": 995,
+        "fp": 37,
+        "fn": 15,
+        "tn": 2520,
+        "precision": 0.9641472868217055,
+        "recall": 0.9851485148514851,
+        "f1": 0.9745347698334965
+      },
+      "history_classifier": {
+        "cutoff": 0.5499999999999999,
+        "hours": 3567,
+        "tp": 984,
+        "fp": 29,
+        "fn": 26,
+        "tn": 2528,
+        "precision": 0.9713721618953604,
+        "recall": 0.9742574257425742,
+        "f1": 0.9728126544735541
+      },
+      "deep_classifier": {
+        "cutoff": 0.57,
+        "hours": 3567,
+        "tp": 957,
+        "fp": 33,
+        "fn": 53,
+        "tn": 2524,
+        "precision": 0.9666666666666667,
+        "recall": 0.9475247524752475,
+        "f1": 0.957
+      }
+    }
+  },
+  "selected_on_validation": "direct_classifier",
+  "methods_strictly_improving_all_three_test_metrics_over_persistence": [],
+  "initial_failed_attempt": {
+    "log": "attempts/01-path-error.txt",
+    "log_sha256": "234ab6083d9faf70c6050eb9589dd77104d87d886bcd5b780804eb189a5c3bc1",
+    "failure": "Incorrect ROOT parents[4] resolved features.csv outside the repository; changed to parents[3] before successful retry.",
+    "training_started": false
+  },
+  "limits": [
+    "Validation thresholds and method selection are fitted decisions, not independent validation performance.",
+    "Test outcomes were already known when this experiment was designed.",
+    "The 24-hour purge enforces timestamp ordering; actual input-availability timestamps are absent.",
+    "No schedule, recovered-solar or plant-benefit claim follows from classification scores."
+  ],
+  "verification_command": "python3 app/experiments/f1-001/check_audit.py",
+  "verification_script_sha256": "084018d466b91af5e4f2f87418ed98d7ae80c0dc69f5a037fe28a0eea0e86e4a"
+}

@@ -18,6 +18,12 @@ Open `http://127.0.0.1:8527/` in a browser. All charts, fonts and input files ar
 
 The supplied `eval/schedule_hourly.csv` at commit `2a093ab` has a forecast column equal to persistence in all 7,104 rows. The website keeps those supplied plans unchanged and distinguishes them from the LightGBM forecast. Confirmation of the intended scheduler export is pending.
 
+## ActinaBench
+
+Open `/benchmark.html` for the full original forecast comparison and six fixed improvement experiments, including a neural classifier. Both periods, all monthly/hourly errors and downloadable slide figures are included. No candidate improves F1, precision and recall together over test persistence. Original model files remain untouched.
+
+See [the experiment](experiments/f1-001/README.md) and [remaining delivery work](handoff/DELIVERY-STATUS.md). Repackage retained results with `python3 app/tools/package_benchmark.py` from the repository root.
+
 ## Existing review workspace
 
 ```sh

@@ -72,10 +72,11 @@ def benchmark(root=ROOT):
         path = root / 'eval' / filename
         source[f'eval/{filename}'] = hashlib.sha256(path.read_bytes()).hexdigest()
         rows = read_rows(path)
-        months, days = defaultdict(list), defaultdict(list)
+        months, days, hours = defaultdict(list), defaultdict(list), defaultdict(list)
         for row in rows:
             months[row['target_time'][:7]].append(row)
             days[row['target_time'][:10]].append(row)
+            hours[row['target_time'][11:13]].append(row)
         daily = []
         for date, group in sorted(days.items()):
             daily.append({'date': date, 'complete_24_hour_day': len(group) == 24, **compare(group)})
@@ -85,12 +86,13 @@ def benchmark(root=ROOT):
             'target_start': rows[0]['target_time'], 'target_end': rows[-1]['target_time'],
             **compare(rows),
             'monthly': [{'month': month, **compare(group)} for month, group in sorted(months.items())],
+            'hourly': [{'hour': hour, **compare(group)} for hour, group in sorted(hours.items())],
             'daily': daily,
             'largest_model_regressions': sorted(full_days, key=lambda day: (-day['model_minus_persistence_mae_w_m2'], day['date']))[:10],
             'largest_model_improvements': sorted(full_days, key=lambda day: (day['model_minus_persistence_mae_w_m2'], day['date']))[:10],
         })
     return {
-        'benchmark': 'ActinaBench', 'version': 1,
+        'benchmark': 'ActinaBench', 'version': 2,
         'definition': {
             'scope': 'Paired evaluation of every retained row in each original split; no fitting, parameter search or scheduler execution.',
             'positive_class': 'Actual radiation strictly greater than 600 W/m²',

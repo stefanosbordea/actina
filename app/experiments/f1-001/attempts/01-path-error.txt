@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-001/run.py", line 190, in <module>
+    main()
+    ~~~~^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-001/run.py", line 110, in main
+    frame, base, history, targets, splits = inputs()
+                                            ~~~~~~^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-001/run.py", line 50, in inputs
+    frame = pd.read_csv(ROOT / 'data/features.csv', index_col=0, parse_dates=True)
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 872, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1643, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1907, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/io/common.py", line 930, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/data/features.csv'

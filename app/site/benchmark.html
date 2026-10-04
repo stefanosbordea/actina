@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0e11"><title>ActinaBench — Forecast evaluation</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./site.css"><link rel="stylesheet" href="./benchmark.css">
+  <script src="./benchmark-data.js" defer></script><script src="./benchmark.mjs" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#comparison">Skip to results</a>
+  <header class="site-header"><a class="brand" href="./">Aktina</a><nav aria-label="Main"><a href="./">Daily schedule</a><a href="https://github.com/stefanosbordea/actina/tree/stefanos-model/app/experiments/f1-001">Experiment files</a></nav></header>
+  <main>
+    <section class="introduction"><h1>ActinaBench</h1><div><p>How well do the forecasts identify sunny hours?</p><p class="scope">Every retained prediction. Both periods. All six experiments.</p></div></section>
+    <p id="bench-error" class="load-error" role="alert" hidden>The results could not load. Restore benchmark-data.js beside this page and reload.</p>
+    <div id="bench-results" hidden>
+      <section id="comparison" class="bench-section" aria-labelledby="comparison-title">
+        <header class="bench-heading"><div><h2 id="comparison-title">Original model</h2><p id="period"></p></div><div class="period-picker" role="group" aria-label="Evaluation period"><button type="button" data-split="test" aria-pressed="true">Test</button><button type="button" data-split="validation" aria-pressed="false">Validation</button></div></header>
+        <p id="verdict" class="verdict" aria-live="polite"></p>
+        <div class="metric-comparison" id="metric-comparison"></div>
+        <details class="evidence"><summary>False calls and missed hours</summary><div id="confusion" class="confusion"></div></details>
+      </section>
+      <section class="bench-section" aria-labelledby="errors-title">
+        <header class="bench-heading"><div><h2 id="errors-title">Where errors occur</h2><p>Mean absolute error in W/m². Lower is better.</p></div></header>
+        <div class="bench-legend"><span>LightGBM</span><span>Same as yesterday</span></div>
+        <div class="error-panels"><section><h3>By month</h3><div id="monthly-errors"></div></section><section><h3>By hour</h3><div id="hourly-errors"></div></section></div>
+      </section>
+      <section class="bench-section" aria-labelledby="experiment-title">
+        <header class="bench-heading"><div><h2 id="experiment-title">Six fixed experiments</h2><p>Selected on validation, then measured on the full original test.</p></div></header>
+        <p class="experiment-verdict">The direct classifier was selected on validation. On test, it catches more sunny hours but makes more false calls than persistence. No candidate improves F1, precision and recall together.</p>
+        <div class="table-scroll experiment-table" tabindex="0" role="region" aria-label="All experimental results"><table><caption id="experiment-caption"></caption><thead><tr><th scope="col">Method</th><th scope="col">F1</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">False calls</th><th scope="col">Missed</th></tr></thead><tbody id="experiment-rows"></tbody></table></div>
+        <p class="bench-note">False surplus calls can increase operating costs. Higher recall alone is not a reason to replace the current model or plan.</p>
+      </section>
+      <details class="evidence"><summary>Method and downloads</summary><div class="evidence-content">
+        <section><h3>What is measured</h3><p>A positive hour has actual radiation strictly above 600 W/m². Precision measures how often a positive prediction is right; recall measures how many positive hours are found. F1 combines the two. This is not a measurement of grid curtailment.</p><p>Every row in Stefanos’s original prediction files is included, including incomplete boundary days. Forecast origin and target are 24 hours apart.</p></section>
+        <section><h3>Limits</h3><p>Original validation was used for early stopping. The experiments use a 24-hour gap before each evaluation period and choose decision cutoffs on validation only. This test was already inspected before the experiments: results are retrospective, and a fresh holdout is needed.</p><p>The original model and scheduler are preserved. The experiments produce sunny-hour classifications, not a replacement plant schedule.</p></section>
+        <section><h3>Reproduce and inspect</h3><p><a href="./benchmark-results.json" download>Original forecast results, every day</a><br><a href="./experiment-results.json" download>Six-method experiment report</a><br><a href="./experiment-results.csv" download>Results table</a><br><a href="./feature-importance.csv" download>Original model feature importance</a><br><a href="https://github.com/stefanosbordea/actina/tree/stefanos-model/app/experiments/f1-001">Protocol, predictions, models and checks</a></p></section>
+        <section><h3>Figures for slides</h3><p><a href="./figures/test-classification.svg" download>F1, precision and recall</a><br><a href="./figures/monthly-error.svg" download>Monthly forecast error</a><br><a href="./figures/hourly-error.svg" download>Hourly forecast error</a></p></section>
+      </div></details>
+    </div>
+  </main>
+  <footer><a class="brand" href="./">Aktina</a><p>Evaluation: Loukas Louka<br>Original forecast and scheduler: Stefanos</p><a href="./">Back to the schedule</a></footer>
+  <noscript><p class="load-error">Enable JavaScript to compare results, or <a href="./benchmark-results.json">download the report</a>.</p></noscript>
+</body>
+</html>

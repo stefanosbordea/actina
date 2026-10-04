@@ -36,10 +36,12 @@ class BenchmarkTests(unittest.TestCase):
         result=benchmark()
         self.assertEqual([s['model']['hours'] for s in result['splits']], [3566,3567])
         for split in result['splits']:
+            self.assertEqual([r['hour'] for r in split['hourly']], [f'{h:02d}' for h in range(24)])
             for method in ('model','persistence'):
                 self.assertEqual(sum(d[method]['hours'] for d in split['daily']),split[method]['hours'])
                 for count in ('true_positive','false_positive','false_negative','true_negative'):
                     self.assertEqual(sum(d[method][count] for d in split['monthly']),split[method][count])
+                    self.assertEqual(sum(d[method][count] for d in split['hourly']),split[method][count])
                 weighted=math.fsum(d[method]['mae_w_m2']*d[method]['hours'] for d in split['daily'])/split[method]['hours']
                 self.assertAlmostEqual(weighted,split[method]['mae_w_m2'])
 
