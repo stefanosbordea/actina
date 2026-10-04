@@ -1,0 +1,9 @@
+*
+!site
+!site/**
+!web
+!web/public
+!web/public/**
+!build.mjs
+!package.json
+!vercel.json
