@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "output_sha256": "97735f367d70db91bf92daca51b37ff9da34be6d4fcdbd5b0d9e0a276f080806",
+  "source_ui_commit_for_new_shots": "80747b7",
+  "new_shots_visually_checked": [
+    {
+      "frame": 1440,
+      "time_seconds": 48,
+      "file": "render/frames/01.png",
+      "content": "Original forecast; all seven methods; complete test period; lower precision, recall and F1 than previous-day reference."
+    },
+    {
+      "frame": 1680,
+      "time_seconds": 56,
+      "file": "render/frames/02.png",
+      "content": "Direct classifier; all seven methods; complete test period; precision/F1 loss and recall gain; 37 false calls and 15 misses."
+    }
+  ],
+  "findings": "New exported shots remain legible and show the intended UI states, with no added crop, caption, voice or branding. Original 1600\u00d7900 capture detail remains the resolution limit.",
+  "v1_preservation": {
+    "files_checked": 34,
+    "unchanged": true
+  },
+  "full_decode": "passed",
+  "frames": 1800,
+  "duration_seconds": 60,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "audio_tracks": 0,
+  "bridgeclip_fallback": null,
+  "network_attempts": 0
+}

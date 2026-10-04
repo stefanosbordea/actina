@@ -1,0 +1,2 @@
+[swscaler @ 0x791c7ec000] deprecated pixel format used, make sure you did set range correctly
+[out_#0:0 @ 0x791cc4ce40] 100 buffers queued in out_#0:0, something may be wrong.

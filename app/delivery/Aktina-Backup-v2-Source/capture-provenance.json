@@ -1,0 +1,53 @@
+{
+  "kind": "actual-interface screenshots; no live interaction recording",
+  "captures": [
+    {
+      "capture": "01-home.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/01-home.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "11c6270a7ea759d94ec2a1705371ea37e20822164b2b248ed28cdba2ef83d648"
+    },
+    {
+      "capture": "02-summer.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/02-summer.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "28eb71399994031e3ad8eaffca776e11e3627df5708db6302bdd113fe03846ec"
+    },
+    {
+      "capture": "03-summer-cost.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/03-summer-cost.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "af6d7ec2e1f7a5ba2f9b5a7db09fe718f25d58d8effef084a5c42b8454ea4ba8"
+    },
+    {
+      "capture": "04-winter.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/04-winter.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "52e99ea7a400a1c3fda8546d8d48d073fcca2fdac08a3486d775aa4cc837151c"
+    },
+    {
+      "capture": "05-winter-cost.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/05-winter-cost.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "f8d4316efb79c01283b06694d43884c9ae544a64a96884db0193a3e0d6f83a01"
+    },
+    {
+      "capture": "06-change.jpg",
+      "source": "app/delivery/Aktina-Backup-Source/captures/06-change.jpg",
+      "source_ui_commit": "5b9c24f",
+      "sha256": "cd1b59de511c7416295b807adaeda4a1e4b9b407fe8c52992e0917522e4abf5d"
+    },
+    {
+      "capture": "07-benchmark.jpg",
+      "source": "../benchmark-video-original.jpg",
+      "source_ui_commit": "80747b7",
+      "sha256": "d3ccb14baa2f2d2cd18a066574bad57318e0a8c0e7c152aa7c0fa65ba89474ea"
+    },
+    {
+      "capture": "08-experiments.jpg",
+      "source": "../benchmark-video-candidate.jpg",
+      "source_ui_commit": "80747b7",
+      "sha256": "44475cb428a92606a7f5d0a1c3db6d92ebe31c2fcf23ad9781efddb8da6ebb10"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ Open `/benchmark.html` for the full original forecast comparison and six fixed i
 
 See [the experiment](experiments/f1-001/README.md) and [remaining delivery work](handoff/DELIVERY-STATUS.md). Repackage retained results with `python3 app/tools/package_benchmark.py` from the repository root.
 
-The [silent 60-second Aktina backup](delivery/Aktina-Backup.mp4) shows the current demo and full-period evaluation. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-Source/README.md) are included.
+The [silent 60-second Aktina backup, version 2](delivery/Aktina-Backup-v2.mp4) shows the supplied demo and rebuilt ActinaBench, including the original forecast and direct classifier against the previous-day reference. It uses actual screenshots; [source, checks and reproduction instructions](delivery/Aktina-Backup-v2-Source/README.md) are included. The [first walkthrough](delivery/Aktina-Backup.mp4) and [its source](delivery/Aktina-Backup-Source/README.md) remain unchanged.
 
 ## Existing review workspace
 

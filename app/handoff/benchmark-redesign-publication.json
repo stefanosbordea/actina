@@ -1,0 +1,42 @@
+{
+  "verified_at_utc": "2026-10-04T08:05:21.285069+00:00",
+  "url": "https://aquashift-pafos-2026.vercel.app/benchmark.html",
+  "source_commit": "80747b7201602da4d19c29dc5528f193996e18a5",
+  "assets": [
+    {
+      "path": "benchmark.html",
+      "http": 200,
+      "sha256": "77148d8635ce40c5cdc09560dc1fb52fa0dfcc1478abac8204b0758a23b5e889"
+    },
+    {
+      "path": "benchmark.css",
+      "http": 200,
+      "sha256": "3ec16d0a9068d625d27a1a4bba7dc0fbf4e2278a612550cffc88d50c0ab1a415"
+    },
+    {
+      "path": "benchmark.mjs",
+      "http": 200,
+      "sha256": "8a82f9b7f045ef90b62bd69b72904bb9200e5fa18c7103bc492bcb2ab6d3dce2"
+    },
+    {
+      "path": "benchmark-data.js",
+      "http": 200,
+      "sha256": "f054376b4d8ad0dc0443e01a87628d7838a74a01fe32010920709d537e3eb955"
+    },
+    {
+      "path": "benchmark-results.json",
+      "http": 200,
+      "sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084"
+    },
+    {
+      "path": "experiment-results.json",
+      "http": 200,
+      "sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93"
+    },
+    {
+      "path": "experiment-results.csv",
+      "http": 200,
+      "sha256": "f6ae4084acb5c3b821972be5747ab88ecdb949f4ea86763e54080b3c28bb2193"
+    }
+  ]
+}
