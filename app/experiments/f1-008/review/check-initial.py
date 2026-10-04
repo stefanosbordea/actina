@@ -35,14 +35,6 @@ def rank(r):
     m=r['metrics'];f=[ratio(m[s],'f1') for s in BASES]
     return min(f),sum(f,Fraction())/2,min(ratio(m[s],'precision') for s in BASES),min(ratio(m[s],'recall') for s in BASES),-r['changed']
 def decide(b,p,policy):return b if policy['kind']=='control' else (b and p>policy['lower']) or (not b and p>policy['upper'])
-def verify_replay(saved,replay):
-    saved=np.asarray(saved);replay=np.asarray(replay)
-    assert saved.shape==replay.shape and np.isfinite(replay).all()
-    error=float(np.max(abs(replay-saved)))
-    assert error<=1e-15,error
-    # libm rounding may vary across platforms. Keep every threshold decision exact.
-    for threshold in range(21):assert np.array_equal(replay>threshold/20,saved>threshold/20),threshold
-    return error
 def count(truth,pred):
     pairs=list(zip(truth,pred));tp=sum(a and b for a,b in pairs);fp=sum(not a and b for a,b in pairs);fn=sum(a and not b for a,b in pairs);tn=sum(not a and not b for a,b in pairs)
     return dict(hours=len(pairs),tp=tp,fp=fp,fn=fn,tn=tn)
@@ -126,8 +118,8 @@ def check():
                 model_path=OUT/'models'/f'{stage}-{arm}.txt';model=lgb.Booster(model_file=str(model_path))
                 assert model.feature_name()==list(x.columns)
                 replay=model.predict(x.iloc[indices],num_threads=2,validate_features=True)
-                error=verify_replay(p,replay)
-                replays.append({'stage':stage,'arm':arm,'rows':len(p),'maximum_probability_error':error,'all_grid_and_default_decisions_exact':True,'model_sha256':sha(model_path),'objective':model.params['objective'],'trees':model.num_trees()})
+                assert np.array_equal(replay,np.array(p)),(stage,arm,float(np.max(abs(replay-p))))
+                replays.append({'stage':stage,'arm':arm,'rows':len(p),'maximum_probability_error':0,'model_sha256':sha(model_path),'objective':model.params['objective'],'trees':model.num_trees()})
             else:
                 prior=old/'predictions'/f'{stage}-larger.csv' if arm=='weather_ecmwf' else EXP.parent/'f1-007/result/predictions'/f'{stage}-consensus_larger.csv'
                 prior_rows=rows(prior);assert [r['feature_time'] for r in prior_rows]==names and p==[float(r['probability']) for r in prior_rows]
@@ -169,7 +161,7 @@ def check():
         'joined_feature_rows':len(current),'features':len(report['features']),'training_labels_checked':labels_checked,'prediction_rows_checked':sum(len(p) for p in all_pred.values()),
         'grid_pairs_checked':grid_pairs,'metric_records_checked':metric_records,'saved_model_replays':replays,'reused_probability_arms_checked':4,'satellite_missing':missing,
         'selected_arm':chosen,'test_gate_passed':report['test_gate']['passes_frozen_gate'],'test_comparisons':report['test_gate']['comparisons'],'transitions':transitions,
-        'tolerances':{'identities_timestamps_labels_decisions_and_reused_probabilities':0,'model_replay_probability_absolute':1e-15,'reported_metric_float_absolute':1e-15,'brier_absolute':1e-14,'point_error_aggregation_absolute':1e-10},
+        'tolerances':{'identities_timestamps_labels_decisions_probabilities':0,'reported_metric_float_absolute':1e-15,'brier_absolute':1e-14,'point_error_aggregation_absolute':1e-10},
         'no_fitting_performed':True,'source_and_history_scope':'Reconstructs008 additions and reuses pinned006 base feature bytes;006 strict-past history independently verified previously.'}
 
 if __name__=='__main__':

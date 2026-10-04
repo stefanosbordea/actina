@@ -1,0 +1,9 @@
+test_changed_probability_is_rejected (test_replay.ReplayTests.test_changed_probability_is_rejected) ... ok
+test_invalid_probability_is_rejected (test_replay.ReplayTests.test_invalid_probability_is_rejected) ... ok
+test_roundoff_crossing_frozen_threshold_is_rejected (test_replay.ReplayTests.test_roundoff_crossing_frozen_threshold_is_rejected) ... ok
+test_roundoff_without_decision_change (test_replay.ReplayTests.test_roundoff_without_decision_change) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
