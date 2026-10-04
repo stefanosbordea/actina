@@ -38,6 +38,8 @@ This is a rolling-origin retrospective evaluation: later origins can use earlier
 
 The run completed with six fits, two threads, no new dependencies and no changes to the original model/data/evaluation files. The separate standard-library checker reconstructed all 89,160 history values, 42,798 saved prediction rows, 5,202 threshold rows and 36 comparison rows. Its first attempt stopped on a timestamp text-format mismatch (`T` versus a space); that script and log remain intact. The retry compares parsed timestamps and passes without modifying fitted results.
 
+All six saved LightGBM models were subsequently reloaded and used for prediction from the retained feature table. All 21,399 probability predictions matched exactly on the development host; selected-threshold and default-threshold decisions also matched. `review/replay_models.py` reproduces that check without fitting. `review/model-replay.json` retains the model, feature and prediction identities. Independent count/reference and chronology reviews also pass.
+
 The test had already been inspected in earlier experiments. Historical NWP publication and operational availability of archived weather/residual inputs remain unverified. Weather and SARAH3 are estimates, not established local ground-sensor measurements. No new significance, curtailment recovery or savings claim follows. The competition pack and supplied scheduler remain unchanged.
 
 Run, from the repository root, into a new output directory:

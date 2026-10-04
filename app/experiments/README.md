@@ -33,7 +33,7 @@ The raw analogue's MAE reduction survives this reference substitution but narrow
 
 All eight methods, both periods, the full original reference, the common-hour original reference and the common-hour satellite reference are retained in the [reference comparison](reference-sensitivity-001/README.md). Validation is materially harder: fixed day2 F1 is **80.708%** against satellite estimates, versus **90.586%** against the original reference on identical available hours. The favorable test season is not the whole performance record. Satellite estimates are another reference, not ground-station truth; agreement does not prove recovered curtailment or plant savings.
 
-## Evidence and next test
+## Completed evidence
 
 | Work | Result and retained evidence |
 | --- | --- |
@@ -44,11 +44,8 @@ All eight methods, both periods, the full original reference, the common-hour or
 | [005: constrained correction](f1-005/README.md) | Reusable function lowers numerical test error while exactly preserving NWP event calls. Satellite-validation error worsens; independent audit checks 7,133 hours and all 30 metric records. |
 | [006: event classifier with past errors](f1-006/README.md) | Three fixed fits; validation-selected classifier passes the original-reference test gate by one recovered event, but satellite test reverses the gain. No replacement recommendation. |
 | [Reference substitution](reference-sensitivity-001/README.md) | Scores every fixed method on a different reference; no fitting or reselection. Independent recomputation checks all 48 method/period/reference comparisons. |
-| [Prospective capture](prospective-001/README.md) | Future forecasts captured on 4 October before the declared target periods. Outcomes are not available yet. |
 
-The prospective test uses two previously fixed 24-hour sets. Satellite retrieval becomes eligible on **8 October and 9 October at 09:00 UTC** respectively. The raw forecast and two fixed analogue variants are locked before those target intervals. Exact timestamps, hashes, training memberships and source errors are retained. These two short sets test transfer to a live capture; they cannot establish year-round superiority.
-
-That separate follow-up does **not** block competition delivery. The [review pack](../delivery/Aktina-Competition-Pack.zip), current site, slides and silent video are already prepared from completed evidence. Experiments 005 and 006 are separate research artifacts and have not been wired into the supplied scheduler or presented as operating gains.
+The [review pack](../delivery/Aktina-Competition-Pack.zip), current site, slides and silent video are already prepared from completed evidence for the **6 October competition deadline**. Experiments 005 and 006 are separate research artifacts and have not been wired into the supplied scheduler or presented as operating gains. The scheduled future-forecast task was deleted at the user's request. Its existing captures remain as audit records; no scheduled follow-up or future result is a delivery dependency.
 
 ## Research direction
 

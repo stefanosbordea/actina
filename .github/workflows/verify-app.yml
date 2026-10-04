@@ -35,6 +35,7 @@ jobs:
           python app/experiments/reference-sensitivity-001/review.py
           python app/experiments/f1-005/review/check.py
           python app/experiments/f1-006/review/check.py
+          python app/experiments/f1-006/review/replay_models.py
           python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-006/check.py'); print(json.dumps(audit['main']()))"
           python -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-005/review/paired-bootstrap-review.py'); print(json.dumps(audit['main']()['checks']))"
           node app/tools/test_demo.mjs
