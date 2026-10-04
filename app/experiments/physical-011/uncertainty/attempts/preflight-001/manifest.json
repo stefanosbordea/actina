@@ -1,0 +1,9 @@
+{
+  "reason": "Exact missing-day fixture caught avoidable fractional tail-mass rounding before historical analysis. Integer tenths preserve the same CVaR definition.",
+  "sha256": {
+    "check.py": "b8026e7712ddbc780f5d0d303504a92e6539a3370988c22a48308e9ab3149870",
+    "run.log": "dd11e9eed79b556e92be6c4642c0f4c3ecddf2a63bbcb5187dbc86d467100605",
+    "receipt.json": "95c30a0218a3ea65f21f2f9c84b529c0d485e7c3958d44cc02a0187d24ba82f9",
+    "PROTOCOL.md": "cb41d17b89d39c8f27a8e681e90e18b9f480a1aeed4aeaccdcece1cd9594604b"
+  }
+}

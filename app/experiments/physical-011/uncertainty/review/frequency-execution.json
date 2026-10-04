@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/uncertainty/review/check-frequency.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T10:53:36.103762+00:00",
+  "completed_at_utc": "2026-10-04T10:53:46.027376+00:00",
+  "wall_seconds": 9.918016499999794,
+  "exit_code": 0,
+  "sha256": {
+    "check-frequency.py": "e1fe980b0b1861f37b88d3b45ca81b0b8096150b793a31cb68b91f323efc9e84",
+    "frequency-check.log": "83922cf4e31133cc366d1b38309e4d1d5876d5e16a1bf14643e4beff738d65df",
+    "frequency-result.json": "3ce34e9ab9457f182f0f869399492eeec683e5e2ee29f3e46375882815913b42"
+  }
+}

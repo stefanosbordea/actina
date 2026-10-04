@@ -78,6 +78,34 @@ jobs:
           Path('app/build/release-check/model010-replay.json').write_text(json.dumps(paired, indent=2))
           print(json.dumps(paired))
           PY
+      - name: Check water-scheduling fixtures and retained evidence
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s app/experiments/physical-011 -p test_optimizer.py -v
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          import runpy
+          experiment = Path('app/experiments/physical-011')
+          checked = 0
+          for base, manifest in [(Path('.'), experiment / 'inputs.json'),
+                                 (experiment / 'result', experiment / 'result/outputs.json')]:
+              for name, digest in json.loads(manifest.read_text()).items():
+                  assert hashlib.sha256((base / name).read_bytes()).hexdigest() == digest, name
+                  checked += 1
+          fixtures = runpy.run_path(str(experiment / 'headroom/check.py'))['fixtures']()
+          weighted = runpy.run_path(str(experiment / 'uncertainty/check.py'))['fixtures']()
+          result = dict(status='PASS', retained_file_hashes=checked,
+                        perfect_information_fixtures=fixtures, weighted_tail_fixtures=weighted,
+                        scope='Analytical fixtures and retained evidence identity, not a new historical run.')
+          Path('app/build/release-check/physical011-fixtures.json').write_text(json.dumps(result, indent=2))
+          print(json.dumps(result))
+          PY
       - name: Preserve verification evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

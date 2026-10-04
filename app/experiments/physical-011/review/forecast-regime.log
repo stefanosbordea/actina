@@ -1,0 +1,140 @@
+{
+  "validation": {
+    "horizons": 150,
+    "bank_horizons": 64,
+    "bank_ratio": {
+      "min": 0.37309027777777776,
+      "q25": 0.5911024305555556,
+      "median": 0.6802083333333333,
+      "q75": 0.7647569444444443,
+      "max": 0.9487847222222222
+    },
+    "forecast_ratio": {
+      "min": 0.1873263888888889,
+      "q25": 0.48263888888888895,
+      "median": 0.6377604166666666,
+      "q75": 0.9095920138888889,
+      "max": 1.26875
+    },
+    "below_bank_min": 15,
+    "above_bank_max": 29,
+    "nearest_bank_ratio_gap": {
+      "min": 0.0,
+      "q25": 0.0017795138888889173,
+      "median": 0.007291666666666613,
+      "q75": 0.04466145833333335,
+      "max": 0.31996527777777783
+    },
+    "latest_bank_source_age_hours": {
+      "min": 1.0,
+      "q25": 895.0,
+      "median": 1789.0,
+      "q75": 2683.0,
+      "max": 3577.0
+    },
+    "months": {
+      "2025-12": {
+        "horizons": 27,
+        "median_ratio": 0.44218749999999996,
+        "below_bank_min": 7,
+        "above_bank_max": 0
+      },
+      "2026-01": {
+        "horizons": 31,
+        "median_ratio": 0.4913194444444444,
+        "below_bank_min": 5,
+        "above_bank_max": 0
+      },
+      "2026-02": {
+        "horizons": 28,
+        "median_ratio": 0.6390625,
+        "below_bank_min": 2,
+        "above_bank_max": 0
+      },
+      "2026-03": {
+        "horizons": 31,
+        "median_ratio": 0.8600694444444443,
+        "below_bank_min": 0,
+        "above_bank_max": 4
+      },
+      "2026-04": {
+        "horizons": 30,
+        "median_ratio": 1.096875,
+        "below_bank_min": 0,
+        "above_bank_max": 24
+      },
+      "2026-05": {
+        "horizons": 3,
+        "median_ratio": 0.7053819444444445,
+        "below_bank_min": 1,
+        "above_bank_max": 1
+      }
+    }
+  },
+  "test": {
+    "horizons": 149,
+    "bank_horizons": 64,
+    "bank_ratio": {
+      "min": 0.615625,
+      "q25": 0.8172743055555556,
+      "median": 0.9317708333333333,
+      "q75": 1.0925347222222221,
+      "max": 1.26875
+    },
+    "forecast_ratio": {
+      "min": 0.27552083333333327,
+      "q25": 1.2098958333333332,
+      "median": 1.3291666666666666,
+      "q75": 1.3987847222222223,
+      "max": 1.4725694444444444
+    },
+    "below_bank_min": 1,
+    "above_bank_max": 95,
+    "nearest_bank_ratio_gap": {
+      "min": 2.220446049250313e-16,
+      "q25": 0.004340277777777679,
+      "median": 0.06076388888888862,
+      "q75": 0.13055555555555554,
+      "max": 0.3401041666666667
+    },
+    "latest_bank_source_age_hours": {
+      "min": 1.0,
+      "q25": 889.0,
+      "median": 1777.0,
+      "q75": 2665.0,
+      "max": 3553.0
+    },
+    "months": {
+      "2026-05": {
+        "horizons": 29,
+        "median_ratio": 1.3152777777777778,
+        "below_bank_min": 1,
+        "above_bank_max": 21
+      },
+      "2026-06": {
+        "horizons": 30,
+        "median_ratio": 1.4205729166666665,
+        "below_bank_min": 0,
+        "above_bank_max": 30
+      },
+      "2026-07": {
+        "horizons": 31,
+        "median_ratio": 1.3986111111111112,
+        "below_bank_min": 0,
+        "above_bank_max": 31
+      },
+      "2026-08": {
+        "horizons": 31,
+        "median_ratio": 1.2616319444444446,
+        "below_bank_min": 0,
+        "above_bank_max": 13
+      },
+      "2026-09": {
+        "horizons": 28,
+        "median_ratio": 1.0895833333333331,
+        "below_bank_min": 0,
+        "above_bank_max": 0
+      }
+    }
+  }
+}

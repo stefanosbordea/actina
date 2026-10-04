@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/physical-011/review/check-portable.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T10:43:11.430045+00:00",
+  "completed_at_utc": "2026-10-04T10:43:11.733786+00:00",
+  "wall_seconds": 0.303078540993738,
+  "exit_code": 0,
+  "repair": "First checker unnecessarily required identical ZIP member ordering. Replaced with equal member names. Values and timestamps are still checked exactly. No source/result/export mutation. First checker and failure retained.",
+  "files_sha256": {
+    "check-portable.py": "f1a8e3d2daf2eff2a2031f294b9237f2bbcca98265bb454a76e37aef185a02a4",
+    "check-portable-attempt1.py": "2f2dee837b56c9a55073a9c24611f55b709a376c44cd9f90d2a5fe31ed57805e",
+    "portable-check-002.log": "bcc333ff9468ceea6c982129aa7425bb5b3dff73f0ca454dbb000a7a8a95d03f",
+    "portable-result.json": "af1c0d79ed03817614ff22437a949d4239ff24d7cd0d8fba2500776b86b0cdd5"
+  }
+}

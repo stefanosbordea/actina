@@ -1,0 +1,11 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/physical-011/export_portable_banks.py",
+  "actual_exit_code": 0,
+  "tool_chunk": "310cc9",
+  "utility_sha256": "f164dec191e3475c192160e8a7508c94870a788ca429d84c234da9ff512cfbda",
+  "receipt_sha256": "0a6e3edbab8c3c0f9135cd5f59fb4b26cbc32962fd74ce690e9978522a783506",
+  "log_sha256": "6cfe30adbec448adb197f7b83b715b459648a36ee617b7bf573e9f8470e20e15",
+  "original_inputs_outputs_unchanged": true,
+  "no_unpickling": true,
+  "no_optimization_or_scoring_rerun": true
+}

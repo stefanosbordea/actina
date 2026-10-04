@@ -1,0 +1,48 @@
+{
+  "recorded_at_utc": "2026-10-04T10:41:25.961089+00:00",
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/physical-011/export_portable_banks.py"
+  ],
+  "utility_sha256": "f164dec191e3475c192160e8a7508c94870a788ca429d84c234da9ff512cfbda",
+  "purpose": "Metadata-only portability export. Original object member is never loaded. No optimizer or scoring is invoked.",
+  "target_source_sha256": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+  "stages": {
+    "validation": {
+      "original_sha256": "458ba5fa4d4d042af0e34af1741c958591473530a34c96d9bf1886d7da070a75",
+      "portable_sha256": "f302fb9dc0af8edf5458677964e7157019e0edda40f9de868f525df0b6cc3d40",
+      "source_positions_shape": [
+        64,
+        24
+      ],
+      "numerical_members_unchanged": [
+        "residuals",
+        "permutations",
+        "source_positions",
+        "weather",
+        "satellite",
+        "nwp"
+      ],
+      "timestamp_dtype": "<U19",
+      "timestamps_reconstructed_from_pinned_rows": 1536
+    },
+    "test": {
+      "original_sha256": "db4729b31ac7d9444a011c991621d1afe8105a106dfc258db0ba70b68dc022f0",
+      "portable_sha256": "f4e8cfe122aa44bd062d0cdf45ea626825f193e7fc21d56ace3106ecad8ee618",
+      "source_positions_shape": [
+        64,
+        24
+      ],
+      "numerical_members_unchanged": [
+        "residuals",
+        "permutations",
+        "source_positions",
+        "weather",
+        "satellite",
+        "nwp"
+      ],
+      "timestamp_dtype": "<U19",
+      "timestamps_reconstructed_from_pinned_rows": 1536
+    }
+  }
+}

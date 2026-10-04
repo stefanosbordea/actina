@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/physical-011/review/check-portable.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T10:42:51.451703+00:00",
+  "completed_at_utc": "2026-10-04T10:42:51.778423+00:00",
+  "wall_seconds": 0.32559683299041353,
+  "exit_code": 1,
+  "files_sha256": {
+    "check-portable.py": "2f2dee837b56c9a55073a9c24611f55b709a376c44cd9f90d2a5fe31ed57805e",
+    "portable-check.log": "c7ccfa0cee324034af4fba6c6e9f659963f8b1f669616d40a3b50b2fa211e2da"
+  }
+}

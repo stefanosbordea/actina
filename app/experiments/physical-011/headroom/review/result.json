@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": 38766,
+  "primary_days": {
+    "validation": 139,
+    "test": 144
+  },
+  "independent_explicit_inventory_ipm_solves": 1132,
+  "native_daily_gaps": 4528,
+  "summaries_checked": 32,
+  "maximum_independent_optimum_difference": 9.094947017729282e-13,
+  "maximum_reconstructed_saved_primal_error": 9.094947017729282e-13,
+  "maximum_gap_replay_error": 1.8189894035458565e-12,
+  "signed_negative_gaps_retained": 20,
+  "minimum_saved_signed_gap": -1.8189894035458565e-12,
+  "separate_oracles": {
+    "reference_days": 566,
+    "different_plans_above_1e_6_m3": 267,
+    "energy_oracle_cost_penalty_max_eur": 431.2849000000002,
+    "cost_oracle_energy_penalty_max_kwh": 9.094947017729282e-13
+  },
+  "immutable_files": 15,
+  "solver": "HiGHS interior point, explicit inventory variables, one thread",
+  "solver_warnings": [
+    "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+  ],
+  "conclusion": "Saved bounds and gaps are numerically verified in their own units. They use complete realized references and cannot be issued forecasts or guaranteed attainable gains. Cost-optimal and energy-optimal schedules remain separate.",
+  "source_report_sha256": "786aa0181b2710d18d09809ac6e7ec0dbf83109e634fc6b69d3d08dacbcd8f49",
+  "code_sha256": "29cfee0f81f3abe7feac54a5e2d3caa89ef5e6ba70e7de9b0f0109fc81e2a983",
+  "completed_at_utc": "2026-10-04T10:46:21.495005+00:00",
+  "wall_seconds": 6.5290152079978725
+}

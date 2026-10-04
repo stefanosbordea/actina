@@ -1,0 +1,1 @@
+{"status": "PASS", "fixtures": {"status": "PASS", "checks": "Expanded integer weights, fractional tails, negative losses, ties and omitted days"}, "seed": 20261004, "draws_per_period_and_block": 5000, "scope": "Post-result exploratory sensitivity. No selection, multiplicity, seasonal or future-availability correction. Frequencies are not posterior probabilities."}

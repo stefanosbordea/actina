@@ -1,0 +1,47 @@
+F....F
+======================================================================
+FAIL: test_fractional_negative_tied_tail (__main__.PhysicalFixtures.test_fractional_negative_tied_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/test_optimizer.py", line 9, in test_fractional_negative_tied_tail
+    self.assertEqual(cvar(np.full(64,-3.)), -3.)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: -3.0000000000000004 != -3.0
+
+======================================================================
+FAIL: test_zero_pv_keeps_q0_and_no_negative_grid (__main__.PhysicalFixtures.test_zero_pv_keeps_q0_and_no_negative_grid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/test_optimizer.py", line 31, in test_zero_pv_keeps_q0_and_no_negative_grid
+    np.testing.assert_array_equal(q,q0)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 1128, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         verbose=verbose, header='Arrays are not equal',
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         strict=strict)
+                         ^^^^^^^^^^^^^^
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 3 / 24 (12.5%)
+Mismatch at indices:
+ [0]: 1.0141987078994419e-06 (ACTUAL), 1.0141992698394109e-06 (DESIRED)
+ [15]: 259.99999908580133 (ACTUAL), 259.9999990358008 (DESIRED)
+ [16]: 119.99999989999996 (ACTUAL), 119.99999994999995 (DESIRED)
+Max absolute difference among violations: 5.00005513e-08
+Max relative difference among violations: 5.54072543e-07
+ ACTUAL: array([1.014199e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+       0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+       0.000000e+00, 0.000000e+00, 5.000000e+02, 5.000000e+02,...
+ DESIRED: array([1.014199e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+       0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00,
+       0.000000e+00, 0.000000e+00, 5.000000e+02, 5.000000e+02,...
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.248s
+
+FAILED (failures=2)
