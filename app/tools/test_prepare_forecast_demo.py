@@ -31,13 +31,22 @@ class ForecastPackageTests(unittest.TestCase):
             incoming = list(csv.DictReader(handle))
         with (demo.ROOT / demo.FEATURES).open() as handle:
             features = list(csv.DictReader(handle))
-        for row, original, feature in zip(self.rows, incoming, features):
+        with (demo.ROOT / demo.CORRECTION / 'result/validation-decisions.csv').open() as handle:
+            correction = list(csv.DictReader(handle))
+        with (demo.ROOT / demo.BASE / 'validation-decisions.csv').open() as handle:
+            base = list(csv.DictReader(handle))
+        for row, original, feature, corrected, anchor in zip(self.rows, incoming, features, correction, base):
             self.assertEqual(row['v2'], float(original['predicted']))
             self.assertEqual(row['raw_v2'], float(original['forecast']))
             self.assertEqual(row['nwp_cloud'], float(feature['nwp_cloud']))
             self.assertEqual(row['raw_v2'], float(feature['nwp_radiation']))
+            self.assertEqual(row['v2_refit'], float(corrected['base_prediction']))
+            self.assertAlmostEqual(row['v2_refit'], float(anchor['base_prediction']), places=11)
+            self.assertEqual(row['event_019'], int(corrected['expanded_call']))
+            self.assertEqual(row['event_019'], float(corrected['expanded_probability']) > .49)
         self.assertTrue(any(r['raw_v2'] != r['ecmwf_day2'] for r in self.rows))
         self.assertTrue(any(r['v2'] != r['raw_v2'] for r in self.rows))
+        self.assertTrue(any(r['v2'] != r['v2_refit'] for r in self.rows))
 
     def test_full_period_confusion_counts_match_retained_evidence(self):
         expected = {
@@ -45,6 +54,7 @@ class ForecastPackageTests(unittest.TestCase):
             'v1': (241, 55, 65, 3205), 'persistence': (244, 62, 62, 3198),
             'raw_v2': (253, 34, 53, 3226), 'ecmwf_day2': (268, 21, 38, 3239),
             'event_008': (271, 21, 35, 3239),
+            'event_019': (270, 17, 36, 3243),
         }
         for name, counts in expected.items():
             metric = self.metrics[name]
@@ -54,6 +64,10 @@ class ForecastPackageTests(unittest.TestCase):
         self.assertNotIn('mae_w_m2', self.metrics['event_008'])
         self.assertGreater(self.metrics['event_008']['f1'], self.metrics['v2_562']['f1'])
         self.assertLess(self.metrics['v2_562']['precision'], self.metrics['v2_600']['precision'])
+        self.assertAlmostEqual(self.metrics['event_019']['mae_w_m2'], 18.700675310908366, places=10)
+        self.assertAlmostEqual(self.metrics['v2_600']['mae_w_m2'], 18.69734271860889, places=10)
+        self.assertGreater(self.metrics['event_019']['f1'], self.metrics['event_008']['f1'])
+        self.assertLess(self.metrics['event_019']['recall'], self.metrics['event_008']['recall'])
 
     def test_event_boundary_is_strict_and_research_remains_binary(self):
         score = demo.scores([600, 600.01], [True, True])
@@ -64,9 +78,22 @@ class ForecastPackageTests(unittest.TestCase):
 
     def test_source_tampering_stops_packaging(self):
         real_digest = demo.digest
-        with patch.object(demo, 'digest', side_effect=lambda path: '0' * 64 if path.name == 'cv_predictions_v2.csv' else real_digest(path)):
-            with self.assertRaisesRegex(ValueError, 'hash mismatch'):
-                demo.prepare()
+        for filename in ('cv_predictions_v2.csv', 'review.json', 'completion.json', 'summary.json', 'validation-decisions.csv'):
+            with self.subTest(filename=filename), patch.object(demo, 'digest', side_effect=lambda path: '0' * 64 if path.name == filename else real_digest(path)):
+                with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                    demo.prepare()
+
+    def test_correction_cannot_be_paired_with_another_curve_or_event_rule(self):
+        real_loader = demo.load_rows
+        for key, value, message in [('base_prediction', '999', 'curve differs'), ('expanded_call', '1', 'frozen threshold')]:
+            def corrupt(path, time_key):
+                rows = real_loader(path, time_key)
+                if path == demo.ROOT / demo.CORRECTION / 'result/validation-decisions.csv':
+                    rows[min(rows)][key] = value
+                return rows
+            with self.subTest(key=key), patch.object(demo, 'load_rows', side_effect=corrupt):
+                with self.assertRaisesRegex(ValueError, message):
+                    demo.prepare()
 
     def test_timestamp_corruption_stops_packaging(self):
         real_loader = demo.load_rows

@@ -1,0 +1,16 @@
+feature,gain_importance,split_importance
+v2_margin,133349.58110421896,349
+day1_minus_v2,64.98735301196575,15
+day1_cloud,184.97620010375977,13
+v2_solar_ratio,0.0,0
+target_hour_sin,0.0,0
+target_hour_cos,0.0,0
+target_season_sin,3.741379976272583,1
+target_season_cos,118.14031028747559,12
+ecmwf_minus_v2,3096.3114077337086,231
+gfs_minus_v2,1508.4772617816925,82
+forecast_disagreement,331.75922879576683,70
+past_v2_bias,1.9661701135337353,13
+past_v2_mae,0.0,0
+past_ecmwf_bias,114.1676697731018,15
+past_ecmwf_mae,8.340939998626709,2

@@ -1,0 +1,53 @@
+{
+  "seed": 17017,
+  "replicates": 2000,
+  "target_day_blocks": 150,
+  "comparisons": {
+    "core_minus_base_refit": {
+      "lower_025": 0.003259824781939358,
+      "upper_975": 0.04737902478787653,
+      "undefined_replicates": 0
+    },
+    "core_minus_supplied_v2_600": {
+      "lower_025": 0.003259824781939358,
+      "upper_975": 0.04737902478787653,
+      "undefined_replicates": 0
+    },
+    "core_minus_supplied_v2_562": {
+      "lower_025": -0.009974922132222919,
+      "upper_975": 0.04437014793925736,
+      "undefined_replicates": 0
+    },
+    "core_minus_fixed008": {
+      "lower_025": -0.01779729280293246,
+      "upper_975": 0.024224796323543393,
+      "undefined_replicates": 0
+    },
+    "expanded_minus_core": {
+      "lower_025": -0.003444913316689155,
+      "upper_975": 0.007867222379067947,
+      "undefined_replicates": 0
+    },
+    "expanded_minus_base_refit": {
+      "lower_025": 0.006678694022129914,
+      "upper_975": 0.04733498055170156,
+      "undefined_replicates": 0
+    },
+    "expanded_minus_supplied_v2_600": {
+      "lower_025": 0.006678694022129914,
+      "upper_975": 0.04733498055170156,
+      "undefined_replicates": 0
+    },
+    "expanded_minus_supplied_v2_562": {
+      "lower_025": -0.008249293495133054,
+      "upper_975": 0.046712791522218765,
+      "undefined_replicates": 0
+    },
+    "expanded_minus_fixed008": {
+      "lower_025": -0.01606066891149089,
+      "upper_975": 0.026215471126736497,
+      "undefined_replicates": 0
+    }
+  },
+  "limit": "Descriptive paired historical-day intervals, without repeated-validation or selection-bias correction."
+}

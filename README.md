@@ -9,7 +9,7 @@ Start with the [model map](docs/MODEL-MAP.md) for ownership, inputs and version 
 | Work | Location |
 |---|---|
 | Stefanos's original model, data and outputs | [model/](model/), [data/](data/), [eval/](eval/) |
-| Stefanos's new v2 source | [nwp-features at 85097a5](https://github.com/stefanosbordea/actina/tree/85097a560769ad8a1459ce55f0b3a4c301202405) |
+| Stefanos's new v2 source | [Merged v2 source](model/train_modelv2.py) |
 | Received v2 validation and comparison | [V2 handoff](app/handoff/v2-validation-2026-10-04/README.md) |
 | V2 curve and event comparisons | [Forecast view](app/site/forecast.html) |
 | Separate event-model research, including 008 | [Experiment index](app/experiments/README.md) |
@@ -24,8 +24,8 @@ python3 -m http.server 8527 --bind 127.0.0.1 --directory app/dist
 
 Open `http://127.0.0.1:8527/`. The build copies packaged site assets into `app/dist`. It does not run training, evaluation or scheduling.
 
-As of 4 October 2026, the published v2 comparison uses the fixed **>600 W/m²** event threshold. No new v2 test predictions have been received. The later validation-only threshold scan is retained separately. Work on direct extensions of Stefanos's v2 has resumed at the user's request, with no automatic model replacement. [Current version status](docs/MODEL-MAP.md#current-evaluation-status).
+As of 4 October 2026, the forecast page defaults to **V2 + event correction (019)**. On the same 3,566 validation hours, F1 is **91.062%**, versus **90.635%** for 008 and **88.364%** for supplied v2. Compared with 008 it has four fewer false alarms and one additional miss. This is a historical validation improvement, not proven superiority on new data. [Model lineage and evidence](docs/MODEL-MAP.md#current-evaluation-status).
 
-`main`, `stefanos-model` and `nwp-features` are separate branches. The v2 source link above pins the handoff commit. Reading or evaluating that handoff does not merge it into another branch.
+Stefanos's `nwp-features` commit `85097a5` is merged into `stefanos-model`. Its seven added files are preserved byte-for-byte. `main` remains a separate branch. The small correction is kept under [app/experiments/v2-019/](app/experiments/v2-019/README.md), with the earlier failures and independent audits retained.
 
 The demo uses historical files and illustrative plant, demand and price assumptions. It has no plant-control connection and establishes no measured operating savings.

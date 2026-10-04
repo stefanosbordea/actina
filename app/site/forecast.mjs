@@ -8,25 +8,28 @@
   $('forecast-reload').addEventListener('click', () => window.location.reload());
   try {
     const data = window.AKTINA_FORECAST;
-    if (!data || data.schema !== 1 || data.coverage.hours !== 3566 || data.days.length !== 150 || data.metrics.length !== 7) throw Error('Incomplete validation data');
+    if (!data || data.schema !== 2 || data.coverage.hours !== 3566 || data.days.length !== 150 || data.metrics.length !== 8) throw Error('Incomplete validation data');
     const allRows = data.days.flatMap(day => day.rows);
-    const expectedMethods = ['v2_600', 'v2_562', 'v1', 'persistence', 'raw_v2', 'ecmwf_day2', 'event_008'];
+    const expectedMethods = ['v2_600', 'v2_562', 'v1', 'persistence', 'raw_v2', 'ecmwf_day2', 'event_008', 'event_019'];
     if (allRows.length !== data.coverage.hours || new Set(allRows.map(row => row.time)).size !== 3566 ||
         data.metrics.some((metric, index) => metric.id !== expectedMethods[index] || metric.hours !== 3566 || metric.tp + metric.fp + metric.fn + metric.tn !== 3566) ||
         data.days.some(day => !day.rows.length || day.rows.some((row, index) => row.time.slice(0, 10) !== day.date || row.hour < 0 || row.hour > 23 || (index > 0 && row.hour !== day.rows[index - 1].hour + 1))) ||
-        allRows.some(row => ['actual', 'v2', 'raw_v2', 'ecmwf_day2', 'v1', 'persistence', 'nwp_cloud'].some(key => !Number.isFinite(row[key])) || row.nwp_cloud < 0 || row.nwp_cloud > 100 || ![0, 1].includes(row.event_008))) throw Error('Invalid validation rows');
+        allRows.some(row => ['actual', 'v2', 'v2_refit', 'raw_v2', 'ecmwf_day2', 'v1', 'persistence', 'nwp_cloud'].some(key => !Number.isFinite(row[key])) || row.nwp_cloud < 0 || row.nwp_cloud > 100 || ![0, 1].includes(row.event_008) || ![0, 1].includes(row.event_019))) throw Error('Invalid validation rows');
     const days = data.days;
     let dayIndex = Math.max(0, days.findLastIndex(day => day.rows.length === 24));
     let hour = 12;
     let weather = 'raw_v2';
-    let method = 'v2_600';
+    let method = 'event_019';
     let geometry;
-    const eventCall = row => method === 'event_008' ? Boolean(row.event_008) : row.v2 > (method === 'v2_562' ? 562 : 600);
+    const eventCall = row => method === 'event_008' || method === 'event_019' ? Boolean(row[method]) : row.v2 > (method === 'v2_562' ? 562 : 600);
+    const curveKey = () => method === 'v2_600' || method === 'v2_562' ? 'v2' : 'v2_refit';
+    const curveLabel = () => method === 'event_008' ? 'V2 refit (reference)' : curveKey() === 'v2' ? 'Original v2' : 'V2 refit';
     const selection = () => days[dayIndex].rows.find(row => row.hour === hour);
     const methodNotes = {
+      event_019: '4 fewer false alarms than 008, 1 extra missed hour. Prototype validation.',
       v2_600: 'Original v2 event rule. The forecast must exceed 600 W/m².',
       v2_562: 'Threshold selected on these validation hours. More events found, with more false calls. The radiation curve is unchanged.',
-      event_008: 'Separate research comparator. These are yes/no calls, not a radiation curve. Its rule was selected on validation.'
+      event_008: 'Separate research comparator. V2 refit is shown as a reference curve. The 008 rule was selected on validation.'
     };
     $('forecast-date').min = days[0].date;
     $('forecast-date').max = days.at(-1).date;
@@ -59,13 +62,14 @@
 
     function renderPlot() {
       const rows = days[dayIndex].rows;
+      const curve = curveKey();
       const width = Math.max(280, Math.round($('forecast-plot').getBoundingClientRect().width || 960));
       const height = width < 600 ? 248 : 330;
       const left = width < 600 ? 36 : 46;
       const right = width - 14;
       const top = 18;
       const bottom = height - 27;
-      const values = rows.flatMap(row => [row.actual, row.v2, row[weather]]);
+      const values = rows.flatMap(row => [row.actual, row[curve], row[weather]]);
       const floor = Math.min(0, Math.floor(Math.min(...values) / 100) * 100);
       const ceiling = Math.max(800, Math.ceil(Math.max(...values) / 200) * 200);
       const x = value => left + (right - left) * value / 23;
@@ -78,11 +82,11 @@
       }
       [0, 6, 12, 18, 23].forEach(value => svg.push(`<text x="${x(value)}" y="${height - 5}" text-anchor="${value === 0 ? 'start' : value === 23 ? 'end' : 'middle'}">${String(value).padStart(2, '0')}</text>`));
       svg.push(`<line class="forecast-threshold" x1="${left}" y1="${y(600)}" x2="${right}" y2="${y(600)}"/>`);
-      svg.push(`<path class="forecast-line line-weather" data-curve="${weather}" d="${path(weather)}"/><path class="forecast-line line-v2" data-curve="v2" d="${path('v2')}"/><path class="forecast-line line-actual" data-curve="actual" d="${path('actual')}"/>`);
+      svg.push(`<path class="forecast-line line-weather" data-curve="${weather}" d="${path(weather)}"/><path class="forecast-line line-v2" data-curve="${curve}" d="${path(curve)}"/><path class="forecast-line line-actual" data-curve="actual" d="${path('actual')}"/>`);
       const row = selection();
       svg.push(`<line class="forecast-cursor" x1="${x(hour)}" x2="${x(hour)}" y1="${top}" y2="${bottom}"/>`);
-      [['actual', 'actual'], ['v2', 'v2'], [weather, 'weather']].forEach(([key, name]) => svg.push(`<circle class="forecast-point ${name}" cx="${x(hour)}" cy="${y(row[key])}" r="3.5"/>`));
-      $('forecast-plot').innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="forecast-chart-title forecast-chart-description"><title id="forecast-chart-title">Solar radiation on ${days[dayIndex].date}</title><desc id="forecast-chart-description">Actual weather, Stefanos v2 and ${labels[weather]}. ${rows.length} retained target hours. Use the inspect time slider for exact values.</desc>${svg.join('')}</svg>`;
+      [['actual', 'actual'], [curve, 'v2'], [weather, 'weather']].forEach(([key, name]) => svg.push(`<circle class="forecast-point ${name}" cx="${x(hour)}" cy="${y(row[key])}" r="3.5"/>`));
+      $('forecast-plot').innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="forecast-chart-title forecast-chart-description"><title id="forecast-chart-title">Solar radiation on ${days[dayIndex].date}</title><desc id="forecast-chart-description">Actual weather, ${curveLabel()} and ${labels[weather]}. ${rows.length} retained target hours. Use the inspect time slider for exact values.</desc>${svg.join('')}</svg>`;
     }
 
     function renderEvents() {
@@ -127,9 +131,11 @@
       text('forecast-day-coverage', `${day.rows.length} hours, fixed UTC+03`);
       text('weather-legend', labels[weather]);
       text('reading-weather-label', labels[weather]);
+      text('model-legend', curveLabel());
+      text('reading-v2-label', curveLabel());
       const row = selection();
       text('reading-cloud', `${row.nwp_cloud.toFixed(0)}%`);
-      [['reading-actual', 'actual'], ['reading-v2', 'v2'], ['reading-weather', weather]].forEach(([id, key]) => {
+      [['reading-actual', 'actual'], ['reading-v2', curveKey()], ['reading-weather', weather]].forEach(([id, key]) => {
         $(id).replaceChildren(document.createTextNode(row[key].toFixed(1)));
         const unit = document.createElement('small');
         unit.textContent = 'W/m²';
@@ -164,7 +170,7 @@
     $('event-method').addEventListener('change', event => {
       if (!Object.hasOwn(methodNotes, event.target.value)) return;
       method = event.target.value;
-      renderEvents();
+      render();
     });
     $('forecast-hour').addEventListener('input', event => { hour = Number(event.target.value); render(); });
     $('forecast-plot').addEventListener('pointerdown', event => {

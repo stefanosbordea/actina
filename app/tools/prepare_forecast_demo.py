@@ -11,6 +11,8 @@ HANDOFF = Path('app/handoff/v2-validation-2026-10-04')
 CALIBRATION = Path('app/handoff/v2-calibration-2026-10-04/validation-selection.json')
 FEATURES = Path('app/experiments/v2-016/inputs/validation-features.csv')
 FEATURE_MANIFEST = FEATURES.with_name('manifest.json')
+CORRECTION = Path('app/experiments/v2-019')
+BASE = Path('app/experiments/v2-016/result')
 SOURCES = {
     'incoming': HANDOFF / 'inputs/cv_predictions_v2.csv',
     'retained_original': Path('eval/cv_predictions.csv'),
@@ -103,6 +105,39 @@ def prepare(root=ROOT):
     for relative in (report_path, manifest_path, CALIBRATION, FEATURES, FEATURE_MANIFEST):
         source_records.append({'path': str(relative), 'sha256': digest(root / relative)})
 
+    audit_path = CORRECTION / 'review/review.json'
+    require(digest(root / audit_path) == 'c823b66f6c24b51e076d7d3139bbab41bf83c53fadda944e162bf6a1be6a4f9e',
+            'Correction audit hash mismatch')
+    require(digest(root / CORRECTION / 'result/completion.json') == '1acb8b4bfb31c9e5882acd4e75a29681bba907c8a35330698ed1ac33f788cc02',
+            'Correction completion hash mismatch')
+    audit = json.loads((root / audit_path).read_text())
+    completion = json.loads((root / CORRECTION / 'result/completion.json').read_text())
+    lock = json.loads((root / CORRECTION / 'lock.json').read_text())
+    correction = json.loads((root / CORRECTION / 'result/summary.json').read_text())
+    freeze = json.loads((root / CORRECTION / 'result/decision-freeze.json').read_text())
+    base_freeze = json.loads((root / BASE / 'policy-freeze.json').read_text())
+    require(audit['status'] == 'PASS' and completion['status'] == correction['status'] == 'completed',
+            'Event correction has not passed its audit')
+    require(digest(root / CORRECTION / 'lock.json') == audit['lock_sha256'] ==
+            '6980b53364ae337cb9926549f7081e9c829bb629f83272b39c07ed538c8d6330', 'Event correction lock mismatch')
+    for name in ('summary.json', 'validation-decisions.csv', 'decision-freeze.json', 'head-freeze.json',
+                 'expanded-final.json', 'day-bootstrap.json'):
+        relative = CORRECTION / 'result' / name
+        require(digest(root / relative) == completion['output_sha256'][name], f'{relative}: correction hash mismatch')
+        source_records.append({'path': str(relative), 'sha256': digest(root / relative)})
+    require(digest(root / CORRECTION / 'result/validation-decisions.csv') == freeze['validation_decisions_sha256'],
+            'Correction decisions differ from pre-scoring freeze')
+    for name in ('validation-decisions.csv', 'final-base.txt', 'policy-freeze.json'):
+        relative = BASE / name
+        require(digest(root / relative) == lock['source_sha256'][str(relative)], f'{relative}: base source hash mismatch')
+        if name != 'policy-freeze.json':
+            require(digest(root / relative) == base_freeze['frozen_prediction_files_sha256'][name], 'Base prediction freeze mismatch')
+        source_records.append({'path': str(relative), 'sha256': digest(root / relative)})
+    for relative in (audit_path, CORRECTION / 'lock.json', CORRECTION / 'result/completion.json'):
+        source_records.append({'path': str(relative), 'sha256': digest(root / relative)})
+    cutoff_019 = correction['selected_training_thresholds']['expanded']['threshold']
+    require(cutoff_019 == audit['thresholds']['expanded'] == .49, 'Unexpected event correction threshold')
+
     selection = json.loads((root / SOURCES['classifier_policy']).read_text())
     require(selection['selected_augmented_arm'] == 'consensus_two_source', 'Unexpected research comparator')
     policy = selection['policies']['consensus_two_source']['policy']
@@ -115,8 +150,10 @@ def prepare(root=ROOT):
     weather = load_rows(root / SOURCES['retained_raw_control'], 'feature_time')
     research = load_rows(root / SOURCES['classifier'], 'feature_time')
     features = load_rows(root / FEATURES, 'time')
+    corrected = load_rows(root / CORRECTION / 'result/validation-decisions.csv', 'origin')
+    base = load_rows(root / BASE / 'validation-decisions.csv', 'origin')
     origins = sorted(v2)
-    require(all(set(rows) == set(v2) for rows in (v1, weather, research, features)), 'Validation timestamp sets differ')
+    require(all(set(rows) == set(v2) for rows in (v1, weather, research, features, corrected, base)), 'Validation timestamp sets differ')
     require(origins[0] == '2025-12-04 19:00:00' and origins[-1] == '2026-05-02 08:00:00',
             'Unexpected validation boundaries')
     days = {}
@@ -142,8 +179,16 @@ def prepare(root=ROOT):
         require(bit(event['nwp_positive']) == (archived > 600), 'Research weather control mismatch')
         expected = probability > (policy['lower'] if archived > 600 else policy['upper'])
         require(bit(event['predicted_positive']) == expected, 'Research call differs from frozen policy')
+        refit = number(corrected[origin]['base_prediction'])
+        require(math.isclose(refit, number(base[origin]['base_prediction']), rel_tol=0, abs_tol=1e-12),
+                'Correction curve differs from its frozen v2 refit')
+        corrected_probability = number(corrected[origin]['expanded_probability'])
+        require(0 <= corrected_probability <= 1, 'Correction probability out of range')
+        corrected_call = bit(corrected[origin]['expanded_call'])
+        require(corrected_call == (corrected_probability > cutoff_019), 'Correction call differs from frozen threshold')
         row = {'time': target, 'hour': int(target[11:13]), 'actual': actual,
                'v2': number(incoming['predicted']), 'raw_v2': number(incoming['forecast']),
+               'v2_refit': refit, 'event_019': corrected_call,
                'v1': number(original['predicted']), 'persistence': number(incoming['baseline']),
                'ecmwf_day2': archived, 'event_008': bit(event['predicted_positive']), 'nwp_cloud': cloud}
         rows.append(row)
@@ -158,25 +203,31 @@ def prepare(root=ROOT):
         ('raw_v2', 'Supplied weather, day 1', 'raw_v2', 600, 'v2 CSV forecast column, weather model unpinned', 'supplied_raw_forecast'),
         ('ecmwf_day2', 'ECMWF, day 2', 'ecmwf_day2', 600, 'Separate model-pinned archive', 'retained_raw_forecast'),
         ('event_008', 'Two-source event model', None, None, 'Separate research comparator, f1-008/consensus_two_source', 'f1_008_consensus_two_source'),
+        ('event_019', 'V2 + event correction', 'v2_refit', cutoff_019, '019 expanded, prototype validation', None),
     ]
     metrics = []
     for key, label, field, cutoff, note, report_key in methods:
         points = [row[field] for row in rows] if field else None
-        calls = [value > cutoff for value in points] if points is not None else [row['event_008'] for row in rows]
+        calls = [row[key] for row in rows] if key in ('event_008', 'event_019') else [value > cutoff for value in points]
         result = scores(actual, calls, points)
         if report_key:
             verify_scores(result, report['matched']['metrics'][report_key])
         if key == 'v2_562':
             verify_scores(result, calibration['selected'])
+        if key == 'event_019':
+            verify_scores(result, correction['metrics']['expanded'])
+            verify_scores(result, audit['metrics']['expanded'])
+            verify_scores(scores(actual, [value > 600 for value in points], points), correction['metrics']['base_refit'])
         metrics.append(dict(id=key, label=label, threshold=cutoff, note=note, **result))
     verify_scores(metrics[0], calibration['original_threshold'])
-    verify_scores(metrics[-1], calibration['frozen_classifier'])
+    verify_scores(metrics[6], calibration['frozen_classifier'])
     return {
-        'schema': 1,
+        'schema': 2,
         'coverage': {'hours': len(rows), 'days': len(days), 'first': rows[0]['time'], 'last': rows[-1]['time'],
                      'clock': 'Recovered fixed UTC+03:00 source labels', 'truth_threshold': 600},
         'source': {'branch': manifest['branch'], 'commit': manifest['git_commit'], 'files': source_records,
                    'v2_threshold': threshold, 'research_policy': policy,
+                   'correction_threshold': cutoff_019,
                    'upstream_features_sha256': feature_manifest['original_sources']['data/featuresv2.csv']['sha256']},
         'metrics': metrics,
         'days': [{'date': date, 'rows': values} for date, values in days.items()],

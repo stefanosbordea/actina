@@ -1,6 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" fill="none" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" id="still" viewBox="0 0 1100 600" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Solar power becomes stored drinking water</title>
-  <desc id="desc">An isometric solar array feeds a compact desalination module, connected by illuminated blue pipes to a translucent water reservoir.</desc>
+  <desc id="desc">Concept animation. Solar energy travels to a desalination module, then water flows into storage. The reservoir level is illustrative and fixed. No live measurements are shown.</desc>
+  <style>
+    .energy-flow,.water-flow{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-dasharray:5 20;animation:flow 6s linear infinite}
+    .energy-flow{stroke-width:3.5;opacity:.9}
+    .water-flow{stroke-width:4;animation-duration:8s;opacity:.85}
+    .feed-flow{animation-delay:-2s;opacity:.6}
+    .tank-ripple{fill:none;stroke:#e8faff;stroke-width:1.4;transform-origin:880px 291px;animation:ripple 5s ease-out infinite}
+    .tank-ripple.second{animation-delay:-2.5s}
+    @keyframes flow{to{stroke-dashoffset:-100}}
+    @keyframes ripple{0%{transform:scale(.7);opacity:0}20%{opacity:.5}100%{transform:scale(1);opacity:0}}
+    :root:target .energy-flow,:root:target .water-flow,:root:target .tank-ripple{display:none;animation:none}
+    @media(prefers-reduced-motion:reduce){
+      .energy-flow,.water-flow,.tank-ripple{display:none;animation-play-state:paused}
+      #play:target .energy-flow,#play:target .water-flow,#play:target .tank-ripple{display:inline;animation-play-state:running}
+    }
+  </style>
   <defs>
     <linearGradient id="cell" x1="0" y1="0" x2="180" y2="126" gradientUnits="userSpaceOnUse">
       <stop stop-color="#132338"/><stop offset=".48" stop-color="#0d1726"/><stop offset="1" stop-color="#1a3348"/>
@@ -62,6 +77,7 @@
     </g>
   </defs>
 
+  <g id="play">
   <ellipse cx="864" cy="388" rx="235" ry="194" fill="url(#waterGlow)"/>
   <ellipse cx="168" cy="111" rx="125" ry="110" fill="url(#sunGlow)"/>
 
@@ -79,6 +95,9 @@
     <path d="m681 399 73 42 75-43" stroke="url(#pipe)" stroke-width="4.5"/>
     <path d="m683 395 71 41 71-41" stroke="#a1edff" stroke-width="1" opacity=".55"/>
     <path d="m994 412 61 35-62 36" stroke="url(#pipe)" stroke-width="3.5"/>
+    <path class="energy-flow" pathLength="100" d="m202 373 70 40 104-60 98 57 41-24"/>
+    <path class="water-flow feed-flow" pathLength="100" d="m399 495 76-44 50 29 45-26"/>
+    <path class="water-flow" pathLength="100" d="m681 399 73 42 17-15v-39"/>
   </g>
 
   <!-- Solar array: metal frames, cell grids and angled supports. -->
@@ -135,6 +154,8 @@
   <path d="M762 200v219c0 36 53 65 118 65s118-29 118-65V200" fill="url(#glass)" stroke="#5796b0" stroke-opacity=".62" stroke-width="1.2"/>
   <path d="M764 291v127c0 35 52 63 116 63s116-28 116-63V291" fill="url(#water)"/>
   <ellipse cx="880" cy="291" rx="116" ry="64" fill="#389dcc" fill-opacity=".15" stroke="#73dfff" stroke-opacity=".65" stroke-width="1.1"/>
+  <ellipse class="tank-ripple" cx="880" cy="291" rx="112" ry="60"/>
+  <ellipse class="tank-ripple second" cx="880" cy="291" rx="112" ry="60"/>
   <path d="M779 306c18 22 57 37 101 37 43 0 82-15 101-37" stroke="#8bdeef" stroke-opacity=".25"/>
   <path d="M777 274c23-20 61-31 100-31" stroke="#abedff" stroke-opacity=".38" stroke-linecap="round"/>
   <path d="M763 364c0 36 52 65 117 65s117-29 117-65" stroke="#4aafd5" stroke-opacity=".16"/>
@@ -156,4 +177,5 @@
     <circle cx="399" cy="495" r="2.5" opacity=".75"/>
   </g>
   <circle cx="376" cy="353" r="2.5" fill="#ffce77"/>
+  </g>
 </svg>

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "app/handoff/v2-integration-2026-10-04/verify.py"
+  ],
+  "started_at_utc": "2026-10-04T13:43:26.671715+00:00",
+  "completed_at_utc": "2026-10-04T13:43:27.570230+00:00",
+  "wall_seconds": 0.8985271249994184,
+  "exit_code": 0,
+  "log_sha256": "f5d2f0bf09397e6ff0d23d934b6f3c66a7049638cda4c3936f85c9acd23f38e7"
+}

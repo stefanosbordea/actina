@@ -29,7 +29,7 @@ test('demo controls redraw real values, preserve accessible hourly data, and han
   assert.equal($('home-demo-outcome').textContent,'Reserve holds'); assert.equal($('home-demo-values').rows.length,25);
   const original = $('home-demo-chart').innerHTML, input = document.querySelector('[name="home-demo-case"][value="demand"]');
   input.checked=true;input.dispatchEvent(new w.Event('change'));
-  assert.equal($('home-demo-minimum').textContent,'668 m³'); assert.match($('home-demo-detail').textContent,/132 m³ below reserve; 288 m³ below/);assert.notEqual($('home-demo-chart').innerHTML,original);
+  assert.equal($('home-demo-minimum').textContent,'668 m³'); assert.match($('home-demo-detail').textContent,/132 m³ below reserve\. 288 m³ below/);assert.notEqual($('home-demo-chart').innerHTML,original);
   assert.match($('home-demo-source').textContent,/ceebcc105842c026/);assert.match($('home-demo-chart').getAttribute('aria-label'),/Reserve breached/);
   $('home-demo-open').click();await Promise.resolve();assert.deepEqual(opened,['demand']);assert.equal($('home-demo-open').disabled,false);
  } finally {w.close();}
@@ -48,8 +48,40 @@ test('mobile section menu closes on Escape with focus return, and on section sel
  try {
   setupHomeDemo({document,onOpen:()=>{}});menu.open=true;menu.querySelector('a').focus();document.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));
   assert.equal(menu.open,false);assert.equal(document.activeElement,menu.querySelector('summary'));
-  menu.open=true;menu.querySelector('a').click();assert.equal(menu.open,false);assert.equal(menu.querySelectorAll('a').length,3);
+  menu.open=true;menu.querySelector('a').click();assert.equal(menu.open,false);assert.equal(menu.querySelectorAll('a').length,4);
  } finally {w.close();}
+});
+
+test('concept animation respects reduced motion by default and allows an explicit play override', () => {
+ const dom=new JSDOM(read('index.html')),w=dom.window,document=w.document;let changed;
+ const preference={matches:true,addEventListener:(event,fn)=>{assert.equal(event,'change');changed=fn;}};
+ w.matchMedia=()=>preference;
+ try {
+  setupHomeDemo({document,onOpen:()=>{}});
+  const image=document.getElementById('home-flow-diagram'),button=document.getElementById('home-flow-toggle'),before=document.getElementById('home-demo-values').innerHTML;
+  assert.equal(button.hidden,false);assert.equal(image.getAttribute('src'),'solar-water.svg#still');assert.equal(button.getAttribute('aria-label'),'Play diagram animation');
+  preference.matches=false;changed();assert.equal(image.getAttribute('src'),'solar-water.svg');
+  preference.matches=true;changed();assert.equal(image.getAttribute('src'),'solar-water.svg#still');
+  button.click();assert.equal(image.getAttribute('src'),'solar-water.svg#play');assert.equal(button.getAttribute('aria-label'),'Pause diagram animation');
+  preference.matches=false;changed();preference.matches=true;changed();assert.equal(image.getAttribute('src'),'solar-water.svg#play');
+  button.click();assert.equal(image.getAttribute('src'),'solar-water.svg#still');assert.equal(button.getAttribute('aria-label'),'Play diagram animation');
+  preference.matches=false;changed();assert.equal(image.getAttribute('src'),'solar-water.svg#still');
+  assert.equal(document.getElementById('home-demo-values').innerHTML,before);
+ } finally {w.close();}
+});
+
+test('workspace home links verified v2 forecasts and keeps the simulation label out of the border', () => {
+ const dom=new JSDOM(read('index.html')),document=dom.window.document;
+ try {
+  assert.equal(document.querySelectorAll('#product-home a[href="../forecast.html"]').length,3);
+  assert.equal(document.querySelector('.home-demo-controls legend').textContent,'Scenario');
+  assert.equal(document.querySelector('.home-demo-controls').querySelectorAll('input[type=radio]').length,3);
+  assert.doesNotMatch(document.getElementById('product-home').textContent,/Test the same plan/);
+  const svg=read('solar-water.svg');
+  assert.match(svg,/id="still"/);assert.match(svg,/:root:target/);assert.match(svg,/@media\(prefers-reduced-motion:reduce\)/);
+  assert.match(svg,/id="play"/);assert.match(svg,/#play:target .energy-flow/);assert.match(svg,/animation-play-state:running/);
+  assert.match(svg,/class="energy-flow"/);assert.match(svg,/class="water-flow"/);assert.match(svg,/level is illustrative and fixed/);
+ } finally {dom.window.close();}
 });
 test('failed full-review handoff restores the action and reports the failure', async () => {
  const dom=new JSDOM(read('index.html')),w=dom.window,document=w.document;

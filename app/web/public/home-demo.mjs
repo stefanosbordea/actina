@@ -18,6 +18,23 @@ export function setupHomeDemo({document, onOpen}) {
  let selected = 'original', current = original, width = 0;
  const chart = $('home-demo-chart'), inputs = [...document.querySelectorAll('[name="home-demo-case"]')];
  const menu = $('home-menu');
+ const motionPreference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+ const diagram = $('home-flow-diagram'), motionToggle = $('home-flow-toggle');
+ let motionChoice = null;
+ function updateMotion() {
+  const paused = motionChoice === 'pause' || (motionChoice === null && (motionPreference?.matches ?? false));
+  diagram.setAttribute('src', `solar-water.svg${paused ? '#still' : motionChoice === 'play' ? '#play' : ''}`);
+  motionToggle.hidden = false;
+  motionToggle.setAttribute('aria-label', paused ? 'Play diagram animation' : 'Pause diagram animation');
+  motionToggle.title = motionToggle.getAttribute('aria-label');
+  motionToggle.querySelector('path').setAttribute('d', paused ? 'm7 4 9 6-9 6Z' : 'M7 5v10M13 5v10');
+ }
+ motionToggle.addEventListener('click', () => {
+  motionChoice = diagram.getAttribute('src').endsWith('#still') ? 'play' : 'pause';
+  updateMotion();
+ });
+ motionPreference?.addEventListener('change', updateMotion);
+ updateMotion();
  menu.addEventListener('click', event => { if (event.target.closest('a')) menu.open = false; });
  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.open) { event.preventDefault(); menu.open = false; menu.querySelector('summary').focus(); } });
  function draw() {
@@ -33,9 +50,9 @@ export function setupHomeDemo({document, onOpen}) {
   const t = current.totals, deficit = t.max_reserve_deficit_m3;
   $('home-demo-outcome').textContent = t.unmet_m3 > 0 ? 'Water demand unmet' : deficit > 0 ? 'Reserve breached' : 'Reserve holds';
   $('home-demo-minimum').textContent = `${format(t.min_storage_m3)} m³`;
-  $('home-demo-detail').textContent = selected === 'original' ? 'Demand met. End-of-day target met.' : `${selected === 'outage' ? 'Production paused 12:00–14:00. ' : ''}${format(deficit)} m³ below reserve; ${format(t.terminal_deficit_m3)} m³ below the end-of-day target.`;
+  $('home-demo-detail').textContent = selected === 'original' ? 'Demand and end-of-day target met.' : `${selected === 'outage' ? 'Outage 12:00–14:00. ' : ''}${format(deficit)} m³ below reserve. ${format(t.terminal_deficit_m3)} m³ below the end-of-day target.`;
   $('home-demo').dataset.finding = String(deficit > 0 || t.unmet_m3 > 0);
-  chart.setAttribute('aria-label', `${$('home-demo-outcome').textContent}. Lowest inventory ${format(t.min_storage_m3)} cubic metres; reserve 800 cubic metres. Hourly values are available below.`);
+  chart.setAttribute('aria-label', `${$('home-demo-outcome').textContent}. Lowest inventory ${format(t.min_storage_m3)} cubic metres. Reserve 800 cubic metres. Hourly values are available below.`);
   const baseline = inventory(original);
   $('home-demo-values').innerHTML = inventory(current).map((value,hour) => `<tr><th scope="row">${String(hour).padStart(2,'0')}:00</th><td>${format(baseline[hour])}</td><td>${format(value)}</td></tr>`).join('');
   draw();

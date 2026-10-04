@@ -1,0 +1,50 @@
+{
+  "features": [
+    "v2_margin",
+    "day1_minus_v2",
+    "day1_cloud",
+    "v2_solar_ratio",
+    "target_hour_sin",
+    "target_hour_cos",
+    "target_season_sin",
+    "target_season_cos",
+    "ecmwf_minus_v2",
+    "gfs_minus_v2",
+    "forecast_disagreement"
+  ],
+  "coefficients": [
+    3.8590695235070993,
+    0.8298533897383661,
+    -0.3083204332100983,
+    -0.4202102610280036,
+    0.1049474693499599,
+    -0.3379147484280346,
+    -0.22786489601744137,
+    -0.3844009085027705,
+    2.44673379186226,
+    0.6205155575778324,
+    0.2040932419759474
+  ],
+  "intercept": -0.1449018115973762,
+  "classes": [
+    false,
+    true
+  ],
+  "iterations": 48,
+  "parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 0,
+    "solver": "lbfgs",
+    "tol": 1e-08,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

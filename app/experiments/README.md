@@ -1,8 +1,21 @@
 # Aktina forecast research
 
-**4 October 2026. Research results. No model replacement.** Stefanos's original `model/`, `data/` and `eval/` remain unchanged. The website still presents the supplied demonstration. These experiments are separate and retain unsuccessful candidates.
+**4 October 2026.** The historical forecast view now defaults to the audited v2-based correction in 019. The supplied schedule is retained. Stefanos's original source files remain intact, and his seven `nwp-features` additions are explicitly merged into `stefanos-model`.
 
-**Version note:** The experiments below use the earlier supplied files. Stefanos's new `nwp-features` v2 was separately evaluated on 4 October across all 3,566 validation hours. F1 is **88.364%**, versus **85.329%** for the raw forecast in his new CSV and **80.066%** for the original model. The earlier pinned ECMWF day2 control is a different forecast and scores **90.084%**. [Full validation comparison](../handoff/v2-validation-2026-10-04/README.md). No source substitution or model replacement was made.
+## Direct v2 extension
+
+019 reaches **91.062% validation F1**, against **90.635%** for 008 and **88.364%** for supplied v2 on the same 3,566 hours. It has four fewer false alarms and one additional miss than 008. The paired-day interval against 008 includes zero, and validation has been reused. This is an observed historical gain, not proof on unseen data.
+
+| Experiment | Result |
+|---|---|
+| [016](v2-016/README.md) | Chronology-safe refit of Stefanos's v2 plus small correction heads. Logistic F1 89.333%, 26 false alarms. Gate failed. |
+| [017](v2-017/README.md) | Additional ECMWF/GFS information. Expanded F1 90.429%, 26 false alarms. Gate failed. |
+| [018](v2-018/README.md) | Strictly past error context. Expanded F1 90.461%, 27 false alarms. Gate failed. |
+| [019](v2-019/README.md) | Fixed logistic correction on v2-based features. Expanded F1 91.062%, 17 false alarms. Observed validation gate passed, with one more miss than 008. |
+
+Each experiment retains its frozen protocol, failed arms, predictions, fitted parameters, execution receipts and independent replay. 019 changes event decisions, not the numerical radiation forecast or operating costs. [Model map](../../docs/MODEL-MAP.md).
+
+The earlier experiments below are a separate research sequence using the earlier supplied files. Their test periods and references must not be confused with the v2 validation comparison.
 
 ## What improved
 

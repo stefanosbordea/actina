@@ -1,0 +1,12 @@
+feature,gain_importance,split_importance
+v2_margin,133367.96925228834,355
+day1_minus_v2,74.06849305331707,16
+day1_cloud,215.15340042114258,16
+v2_solar_ratio,0.0,0
+target_hour_sin,0.0,0
+target_hour_cos,0.0,0
+target_season_sin,0.0,0
+target_season_cos,140.52774024009705,16
+ecmwf_minus_v2,3114.8075012515765,232
+gfs_minus_v2,1520.2903637886047,83
+forecast_disagreement,329.32882794737816,70

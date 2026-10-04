@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '24'
@@ -58,6 +59,28 @@ jobs:
           node app/tools/test_benchmark_ui.mjs
           node app/tools/test_forecast_demo.mjs
           node app/build.mjs
+      - name: Replay v2 correction evidence
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python -m unittest discover -s app/experiments/v2-017 -p test_run.py -v
+          python -m unittest discover -s app/experiments/v2-018 -p test_run.py -v
+          python -m unittest discover -s app/experiments/v2-019 -p test_run.py -v
+          python - <<'PYCODE'
+          import json
+          import runpy
+          from pathlib import Path
+          for version in ('017', '018', '019'):
+              result = runpy.run_path(f'app/experiments/v2-{version}/review/review.py')['audit']()
+              Path(f'app/build/release-check/model{version}-replay.json').write_text(json.dumps(result, indent=2))
+              print(version, result['status'])
+          result = runpy.run_path('app/experiments/v2-018/review/prefix-mutation.py')['audit']()
+          Path('app/build/release-check/model018-prefix.json').write_text(json.dumps(result, indent=2))
+          print('018 prefix', result['status'])
+          PYCODE
       - name: Replay saved neural and daily forecasts
         env:
           OMP_NUM_THREADS: '2'

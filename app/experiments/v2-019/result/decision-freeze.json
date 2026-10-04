@@ -1,0 +1,7 @@
+{
+  "frozen_at_utc": "2026-10-04T13:33:43.143913+00:00",
+  "head_freeze_sha256": "39cdbc93e8d10951251beaca6bdfd8360b0cccd5391daa8a4aa7b97e7090d377",
+  "validation_decisions_sha256": "50f9ee53ebbad1d04de286964c740297e0defa29c630c947ccc1d7052bd18c70",
+  "context_sha256": "a31ea9cedc1a6eee67cad384a04229cde7bb23f1af72c203002bbd8c7c70198b",
+  "note": "Predictions fixed before full-reference scoring. Context includes strictly past validation observations."
+}

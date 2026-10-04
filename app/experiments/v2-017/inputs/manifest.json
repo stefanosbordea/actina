@@ -1,0 +1,43 @@
+{
+  "source_sha256": {
+    "app/experiments/v2-016/lock.json": "979a3ad8381496671a77c140168a62bbab86d967fa85c91481c2f469dac163dd",
+    "app/experiments/v2-016/result/completion.json": "251c115b9c2c0e8874417b8216f58fc2d3359cf1d3a461ab420b60eed8ba34f2",
+    "app/experiments/v2-016/result/base-oof.csv": "63963f3d270fd3566227356f1292dedf38952a56e9517b9ce781e6a351098369",
+    "app/experiments/v2-016/inputs/validation-features.csv": "bce5dc92e2bc7c99b40c2fea4987ac0c08a7d23a3128b57ea4655c3e5f06c515",
+    "app/experiments/v2-016/result/validation-decisions.csv": "731012afe968e520071ebfc5c5d054316874d9ec85940e0dee3b7a16c536154f",
+    "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+    "app/experiments/nwp-alternative-001/result/radiation-only.csv": "8ecdaee979277ad2a417311a7cbf4e5a93da2ca33724931873224c7c3d519359",
+    "app/experiments/nwp-archive-001/archive.json": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+    "app/experiments/nwp-alternative-001/result/response.json": "e41f4d3fbc498d4fb6e6be7706af3090904124291c2528cf55d2e9c9a4f14d19",
+    "app/experiments/nwp-archive-001/requests.json": "02648d9f186c3141c79c54f3805f779cc12df31bebfbf6d3626fb35e878075e2",
+    "app/experiments/nwp-alternative-001/result/request.json": "a860421ce683916839355b9172a9c154c6e2a56fd108294a4855bacfca6c1926",
+    "app/experiments/f1-004/geometry.py": "6a59a4aa25a6169c930dc4031122df383b6cc0f51cd0ffc8da603dd9d1cf6a74",
+    "app/experiments/v2-016/inputs/cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "app/experiments/v2-016/inputs/original-validation.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "app/experiments/v2-016/inputs/fixed008-validation.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66"
+  },
+  "files": {
+    "cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "excluded-oof-origins.csv": "1f1a8085b5377eeed119b8eef485e237041d6e3eb2a9f7f7b0641dc509b3aef1",
+    "fixed008-validation.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "original-validation.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "train.csv": "b6a53e8cf4bdcd21d123329040356fab109eaf8c362512b21ebdb0f8911f167e",
+    "validation.csv": "05f4420d1e476d0e7d697320b772f42ca6833cab8fa6b01477a0d29c88388c65"
+  },
+  "train_rows": 10675,
+  "excluded_oof_rows": 1824,
+  "validation_rows": 3566,
+  "fold_sizes": {
+    "1": 384,
+    "2": 2208,
+    "3": 2160,
+    "4": 2184,
+    "5": 2208,
+    "6": 1531
+  },
+  "requests": {
+    "ecmwf": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+    "gfs": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-15&end_date=2026-09-28&hourly=shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=gfs_global&timezone=GMT&timeformat=unixtime"
+  },
+  "checks": "Direct epoch radiation equality, target +24h, fixed+03 labels, solar reconstruction and original weather-feature identity all passed. No outcome metrics computed."
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_at_utc": "2026-10-04T13:24:57.551598+00:00",
+  "head_freeze_sha256": "b0f0ebc72a02c36b4db63271d561fd7eb094c2161a1cd945e28e041f5b0f8c49",
+  "prediction_sha256": {
+    "validation-decisions.csv": "b7b3fbace54e4da8070a00b77ca4e70e9dcd74d2c35001435da0af693063d15d",
+    "validation-context.csv": "a31ea9cedc1a6eee67cad384a04229cde7bb23f1af72c203002bbd8c7c70198b",
+    "validation-context-coverage.csv": "34f22ec689d172c6b9e2d58a6c863bf46a0a212b6ac7f32770c57c4df3360126"
+  },
+  "note": "Each context used only t in [origin\u2212336h,origin). Full validation scoring starts after this freeze."
+}
