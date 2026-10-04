@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-012/review/check.py", line 218, in <module>
+    equal(bank['distance_m3'][d], distance, 'every scalar distance')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-012/review/check.py", line 51, in equal
+    check(a.shape == b.shape and np.allclose(a, b, rtol=0, atol=tolerance, equal_nan=True), label)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-012/review/check.py", line 25, in check
+    raise AssertionError(label)
+AssertionError: every scalar distance
