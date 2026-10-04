@@ -1,0 +1,10 @@
+{
+  "command": "python3 app/experiments/f1-010/validation_budget.py",
+  "exit_code": 0,
+  "tool_chunk": "4eba34",
+  "input_sha256": "70abddd1fc6fa8712923cca472297040326ca2cdeaa49e8ffdb13618a0001bcf",
+  "script_sha256": "fb5d3a95de45b458770ea2fc00d88fc35d9c2d1569ce75042a6449639d0748b5",
+  "result_sha256": "78f73692ab8f926b3ecd8a67afaf6532170a802afc4b6c37567a0060ef77246b",
+  "log_sha256": "c733537032efe232da62d436f44a866bdbed13232b7ac4924b6a7955eb179cb0",
+  "purpose": "Post-run validation-only count-budget ceiling. No fit, tuning or test diagnostic."
+}

@@ -1,0 +1,14 @@
+{
+  "policies": {
+    "min": {
+      "kind": "control"
+    },
+    "mean": {
+      "kind": "control"
+    }
+  },
+  "frozen_at_utc": "2026-10-04T10:22:49.562648+00:00",
+  "protocol_sha256": "ce014afdfca37458c3f3429bbbe07f62befcb3f1c053c2dfae5bf3ef1bd5b1da",
+  "code_sha256": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+  "validation_prediction_sha256": "70abddd1fc6fa8712923cca472297040326ca2cdeaa49e8ffdb13618a0001bcf"
+}

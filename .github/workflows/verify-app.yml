@@ -52,7 +52,7 @@ jobs:
           node app/tools/test_demo.mjs
           node app/tools/test_benchmark_ui.mjs
           node app/build.mjs
-      - name: Replay saved Bernstein quantile networks
+      - name: Replay saved neural and daily forecasts
         env:
           OMP_NUM_THREADS: '2'
           OPENBLAS_NUM_THREADS: '1'
@@ -61,6 +61,8 @@ jobs:
         run: |
           python -m unittest discover -s app/experiments/f1-009 -p test_bqn.py -v
           python -m unittest discover -s app/experiments/f1-009/review -p test_replay.py -v
+          python -m unittest discover -s app/experiments/f1-010 -p test_policy.py -v
+          python -m unittest discover -s app/experiments/f1-010/review -p test_portable.py -v
           python - <<'PY'
           import json
           from pathlib import Path
@@ -73,6 +75,9 @@ jobs:
           saved = json.loads(Path('app/experiments/f1-009/review/uncertainty-result.json').read_text())
           assert sensitivity == saved
           print('Paired day-block uncertainty replay PASS')
+          paired = runpy.run_path('app/experiments/f1-010/review/portable.py')['main']()
+          Path('app/build/release-check/model010-replay.json').write_text(json.dumps(paired, indent=2))
+          print(json.dumps(paired))
           PY
       - name: Preserve verification evidence
         if: always()

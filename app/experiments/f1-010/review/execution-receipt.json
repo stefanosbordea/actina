@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 <AquaShift .venv>/bin/python app/experiments/f1-010/review/check.py > app/experiments/f1-010/review/check.log 2>&1",
+  "actual_python": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "exit_code": 0,
+  "tool_wall_seconds": 9.872111875,
+  "checker_wall_seconds": 9.465573833003873,
+  "completed_at_utc": "2026-10-04T10:30:00.950487+00:00",
+  "protocol_sha256": "ce014afdfca37458c3f3429bbbe07f62befcb3f1c053c2dfae5bf3ef1bd5b1da",
+  "experiment_report_sha256": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3",
+  "files": {
+    "check.py": "e39e89ad2e964154762b5501ce32441e76cfa2edd9f4d285254e45e9bfea2dae",
+    "check.log": "56bdb36e833269d253def55b5946073bfc11b9adb14a751c48c37d19b7d23ff5",
+    "result.json": "f9788e79e0d1f6984c0370dad5a0e06e72b60dda3307ff50c4c6152efb728885"
+  },
+  "scope": "Independent reconstruction and saved-model replay. No fit, network, policy selection change or source mutation."
+}

@@ -1,0 +1,554 @@
+[
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.05
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.1
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.2
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.3
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3566,
+        "tp": 268,
+        "fp": 21,
+        "fn": 38,
+        "tn": 3239,
+        "precision": 0.9273356401384083,
+        "recall": 0.8758169934640523,
+        "f1": 0.9008403361344538,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3419,
+        "tp": 255,
+        "fp": 16,
+        "fn": 37,
+        "tn": 3111,
+        "precision": 0.940959409594096,
+        "recall": 0.8732876712328768,
+        "f1": 0.9058614564831261,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3419,
+        "tp": 228,
+        "fp": 43,
+        "fn": 66,
+        "tn": 3082,
+        "precision": 0.8413284132841329,
+        "recall": 0.7755102040816326,
+        "f1": 0.8070796460176991,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9273356401384083,
+          "control": 0.9273356401384083,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.8758169934640523,
+          "control": 0.8758169934640523,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9008403361344538,
+          "control": 0.9008403361344538,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.8413284132841329,
+          "control": 0.8413284132841329,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.7755102040816326,
+          "control": 0.7755102040816326,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.8070796460176991,
+          "control": 0.8070796460176991,
+          "status": "equal"
+        }
+      ]
+    }
+  }
+]

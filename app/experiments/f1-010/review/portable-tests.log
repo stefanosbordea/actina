@@ -1,0 +1,13 @@
+test_default_threshold_crossing_is_rejected (test_portable.PortableTests.test_default_threshold_crossing_is_rejected) ... ok
+test_excessive_probability_error_is_rejected (test_portable.PortableTests.test_excessive_probability_error_is_rejected) ... ok
+test_import_does_not_execute_audit (test_portable.PortableTests.test_import_does_not_execute_audit) ... ok
+test_invalid_probability_is_rejected (test_portable.PortableTests.test_invalid_probability_is_rejected) ... ok
+test_no_available_pair_stays_no_action (test_portable.PortableTests.test_no_available_pair_stays_no_action) ... ok
+test_ranked_pair_change_is_rejected_even_without_a_swap (test_portable.PortableTests.test_ranked_pair_change_is_rejected_even_without_a_swap) ... ok
+test_roundoff_without_decision_change (test_portable.PortableTests.test_roundoff_without_decision_change) ... ok
+test_strict_margin_crossing_is_rejected (test_portable.PortableTests.test_strict_margin_crossing_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+OK

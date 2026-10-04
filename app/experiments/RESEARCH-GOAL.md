@@ -23,6 +23,7 @@ Selective prediction, ensemble disagreement, noisy-label learning and safe polic
 - 007: joint-reference soft targets. Recall/F1 gains, precision regressions. Rejected.
 - 008: GFS plus separate correction thresholds. Five of six metrics improve, weather precision regresses. Rejected.
 - 009: published Bernstein quantile network adaptation, independently audited. All six event point scores improve slightly against raw NWP. Numerical-error and 008 tradeoffs prevent an overall upgrade claim.
-- 010: common-issuance paired corrections with separate reference heads. Implementation and measurement are in progress. The prior-art review identifies the proposed application contribution and its limits.
+- 010: common-issuance paired corrections with separate reference heads. Completed and independently audited. Both arms retain the raw forecast, with no improvement. The fixed daily call count prevents this mechanism from repairing most validation misses.
+- 011: daily solar-to-water scheduling under separate reference trajectories. Implementation is in progress. The proposed policy minimizes the worse reference's tail of daily cost regret against a solar-aware raw-forecast schedule. A shuffled-trajectory comparison preserves hourly distributions. Water demand, plant capacity, storage bounds and end storage stay identical across plans. It is an illustrative simulation until plant and curtailment data exist.
 
 Protect Stefanos's original `model/`, `data/` and `eval/`. Publish verified work on the authorized `stefanos-model` branch as Loukas Louka. Send Stefanos concise factual progress updates when authorized. Never report a failed comparison as an upgrade. No future-forecast automation or unattended-work claim substitutes for work running now.

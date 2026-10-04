@@ -1,0 +1,18 @@
+{
+  "frozen_at_utc": "2026-10-04T10:22:43.855508+00:00",
+  "inputs_sha256": "5ac2715a0ba6afb6e985869bafc95857f7de6c989f5a7d7bdfaab38559c9cd85",
+  "pinned_files": 22,
+  "preflight": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-010/test_policy.py",
+    "exit_code": 0,
+    "tests": 7,
+    "log_sha256": "133ccf4735bda7f64d74f3d94b681559f3151dad3bcbc21f22c32648b41c4281"
+  },
+  "first_preflight": {
+    "exit_code": 1,
+    "passed": 6,
+    "errors": 1,
+    "directory": "attempts/preflight-001",
+    "cause": "Raw DatetimeIndex.asi8 units differ across pandas timestamp resolutions. Replaced unit assumption with direct one-hour Timedelta comparison before fitting."
+  }
+}

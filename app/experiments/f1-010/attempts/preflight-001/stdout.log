@@ -1,0 +1,17 @@
+E......
+======================================================================
+ERROR: test_common_issue_replaces_later_state (__main__.PairTests.test_common_issue_replaces_later_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-010/test_policy.py", line 75, in test_common_issue_replaces_later_state
+    x, meta = run.issue_features(f, t, raw)
+              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-010/run.py", line 39, in issue_features
+    if not np.all(target == origin + pd.Timedelta(hours=24)) or not np.all(np.diff(target.asi8) == 3600000000000): raise ValueError('Target chronology')
+                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Target chronology
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.561s
+
+FAILED (errors=1)
