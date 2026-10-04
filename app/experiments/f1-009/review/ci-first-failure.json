@@ -1,0 +1,11 @@
+{
+  "run_id": 37195533719,
+  "url": "https://github.com/stefanosbordea/actina/actions/runs/37195533719",
+  "head_sha": "e48933eaee7dc00f97084f73515ca50e93197ff1",
+  "status": "completed",
+  "conclusion": "failure",
+  "retrieved_at_utc": "2026-10-04T10:39:05.699541+00:00",
+  "command": "gh run view 37195533719 --log-failed",
+  "fetch_exit_code": 0,
+  "log_sha256": "401c41ae3f53446ed5e969cd2e5b77f8e8a6d82300d13cbb02fe4388c544e1ee"
+}

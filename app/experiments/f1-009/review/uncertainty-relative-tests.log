@@ -1,0 +1,6 @@
+test_relative_source_preserves_all_analysis_values (test_uncertainty_path.RelativeRunpyTests.test_relative_source_preserves_all_analysis_values) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.970s
+
+OK

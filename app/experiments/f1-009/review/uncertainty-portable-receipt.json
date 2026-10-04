@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-04T10:41:03.095360+00:00",
+  "completed_at_utc": "2026-10-04T10:41:04.656443+00:00",
+  "test_command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/f1-009/review",
+    "-p",
+    "test_uncertainty_path.py",
+    "-v"
+  ],
+  "test_exit_code": 0,
+  "test_count": 1,
+  "relative_runpy_invocation": "runpy.run_path('app/experiments/f1-009/review/test_uncertainty_path.py')['replay_and_compare']()",
+  "analysis_values_identical": true,
+  "only_changed_result_field": "inputs_sha256.f1-009/review/uncertainty.py",
+  "original_result_and_receipt_unchanged": true,
+  "sha256": {
+    "uncertainty.py": "cf4592c42559dabdcc574a07400d70f4e103d8a2909763ac58fc48d52362b3a3",
+    "test_uncertainty_path.py": "5c1fc0095b92efa275724ce32e2b39321239ad4f9e6231ad10e9987ec1fe5e2d",
+    "uncertainty-relative-tests.log": "9f3c433fdb79f73bee51108facc8000ed4bdb18e99eee2fb1dd04aea13bb39c8",
+    "uncertainty-portable-result.json": "a5d50fa5e237318857622df442c10c236f810281bc513006e4bfbb0cf173b5a0",
+    "uncertainty-result.json": "e6a3c64ca469b67f3c57b1516ed1e6c8578c454a04091ca9670ea81b6edb74fe",
+    "uncertainty-receipt.json": "2c06076ab4163bef32b3d75780e74e02cd50ec90a67d055ea2e6a389e4f75ce9"
+  }
+}

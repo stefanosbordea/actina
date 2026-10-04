@@ -31,7 +31,7 @@ def scores(counts):
 def main():
     paths = [EXP / 'result/predictions/test-joint.csv',
              EXP.parent / 'f1-008/result/predictions/test-consensus_two_source.csv',
-             HERE / 'uncertainty-protocol.md', Path(__file__).resolve()]
+             HERE / 'uncertainty-protocol.md', Path(__file__)]
     identities = {str(p.relative_to(EXP.parent)): sha(p) for p in paths}
     new, old = map(read, paths[:2])
     assert len(new) == len(old) == 3567

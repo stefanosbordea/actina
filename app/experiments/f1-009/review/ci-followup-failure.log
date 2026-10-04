@@ -1,0 +1,88 @@
+verify	Replay saved neural and daily forecasts	﻿2026-10-04T10:39:47.9966819Z ##[group]Run python -m unittest discover -s app/experiments/f1-009 -p test_bqn.py -v
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9967335Z ^[[36;1mpython -m unittest discover -s app/experiments/f1-009 -p test_bqn.py -v^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9967769Z ^[[36;1mpython -m unittest discover -s app/experiments/f1-009/review -p test_replay.py -v^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9968222Z ^[[36;1mpython -m unittest discover -s app/experiments/f1-010 -p test_policy.py -v^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9968651Z ^[[36;1mpython -m unittest discover -s app/experiments/f1-010/review -p test_portable.py -v^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9969013Z ^[[36;1mpython - <<'PY'^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9969200Z ^[[36;1mimport json^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9969389Z ^[[36;1mfrom pathlib import Path^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9969596Z ^[[36;1mimport runpy^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9969862Z ^[[36;1maudit = runpy.run_path('app/experiments/f1-009/review/check.py')^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9970153Z ^[[36;1mresult = audit['check']()^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9970537Z ^[[36;1mPath('app/build/release-check/model009-replay.json').write_text(json.dumps(result, indent=2))^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9970955Z ^[[36;1mprint(json.dumps(result))^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9971528Z ^[[36;1msensitivity = runpy.run_path('app/experiments/f1-009/review/uncertainty.py')['main']()^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9972031Z ^[[36;1msaved = json.loads(Path('app/experiments/f1-009/review/uncertainty-result.json').read_text())^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9972395Z ^[[36;1massert sensitivity == saved^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9972667Z ^[[36;1mprint('Paired day-block uncertainty replay PASS')^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9973029Z ^[[36;1mpaired = runpy.run_path('app/experiments/f1-010/review/portable.py')['main']()^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9973504Z ^[[36;1mPath('app/build/release-check/model010-replay.json').write_text(json.dumps(paired, indent=2))^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9973867Z ^[[36;1mprint(json.dumps(paired))^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:47.9974067Z ^[[36;1mPY^[[0m
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0031434Z shell: /usr/bin/bash -e {0}
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0031653Z env:
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0031891Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0032243Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0032577Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0032867Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0033156Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0033460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0033725Z   OMP_NUM_THREADS: 2
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0033905Z   OPENBLAS_NUM_THREADS: 1
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0034086Z   MKL_NUM_THREADS: 1
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0034260Z   PYTHONDONTWRITEBYTECODE: 1
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.0034458Z ##[endgroup]
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.3680195Z test_bernstein_and_censoring (test_bqn.BQNTests.test_bernstein_and_censoring) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6433471Z test_gradient_weather_and_joint_away_from_kinks (test_bqn.BQNTests.test_gradient_weather_and_joint_away_from_kinks) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6442214Z test_missing_reference_and_train_only_scaler (test_bqn.BQNTests.test_missing_reference_and_train_only_scaler) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6445822Z test_pinball_uses_separate_reference_losses (test_bqn.BQNTests.test_pinball_uses_separate_reference_losses) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6446369Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6446645Z ----------------------------------------------------------------------
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6446960Z Ran 4 tests in 0.340s
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6447506Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:48.6447582Z OK
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0257106Z test_changed_coefficient_is_rejected (test_replay.ReplayTests.test_changed_coefficient_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0258220Z test_changed_probability_is_rejected (test_replay.ReplayTests.test_changed_probability_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0326526Z test_crossing_any_frozen_threshold_is_rejected (test_replay.ReplayTests.test_crossing_any_frozen_threshold_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0327734Z test_invalid_values_are_rejected (test_replay.ReplayTests.test_invalid_values_are_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0333425Z test_last_bit_coefficient_and_probability_roundoff (test_replay.ReplayTests.test_last_bit_coefficient_and_probability_roundoff) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0334109Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0334387Z ----------------------------------------------------------------------
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0334799Z Ran 5 tests in 0.008s
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0334953Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.0335052Z OK
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5049267Z test_common_issue_replaces_later_state (test_policy.PairTests.test_common_issue_replaces_later_state) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5833686Z test_every_margin_preserves_count (test_policy.PairTests.test_every_margin_preserves_count) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5834933Z test_full_count_identity_and_mask_exception (test_policy.PairTests.test_full_count_identity_and_mask_exception) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5836944Z test_min_and_mean_disagree (test_policy.PairTests.test_min_and_mean_disagree) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5839638Z test_no_pair_and_validation (test_policy.PairTests.test_no_pair_and_validation) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5842341Z test_ties_earliest_added_then_removed (test_policy.PairTests.test_ties_earliest_added_then_removed) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5844711Z test_undefined_metrics_never_qualify (test_policy.PairTests.test_undefined_metrics_never_qualify) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5845203Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5845469Z ----------------------------------------------------------------------
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5851798Z Ran 7 tests in 0.098s
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5871556Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.5871705Z OK
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7528631Z test_default_threshold_crossing_is_rejected (test_portable.PortableTests.test_default_threshold_crossing_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7529526Z test_excessive_probability_error_is_rejected (test_portable.PortableTests.test_excessive_probability_error_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7606230Z test_import_does_not_execute_audit (test_portable.PortableTests.test_import_does_not_execute_audit) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7607353Z test_invalid_probability_is_rejected (test_portable.PortableTests.test_invalid_probability_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7608456Z test_no_available_pair_stays_no_action (test_portable.PortableTests.test_no_available_pair_stays_no_action) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7609723Z test_ranked_pair_change_is_rejected_even_without_a_swap (test_portable.PortableTests.test_ranked_pair_change_is_rejected_even_without_a_swap) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7610987Z test_roundoff_without_decision_change (test_portable.PortableTests.test_roundoff_without_decision_change) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7612236Z test_strict_margin_crossing_is_rejected (test_portable.PortableTests.test_strict_margin_crossing_is_rejected) ... ok
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7612784Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7613065Z ----------------------------------------------------------------------
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7613360Z Ran 8 tests in 0.008s
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7613476Z 
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:49.7613557Z OK
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0289256Z {"status": "PASS", "checker_sha256": "a27f837b029722d3e63aa25f25d951f81054b5abd828493f6897001bd0674699", "prior_independent_policy_oracle_sha256": "d6e787afe3808b04852be377053d64318d914fc2470a4328ffea1e01bfa06350", "report_sha256": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237", "inputs_and_outputs_unchanged": true, "feature_rows": 17832, "features": 27, "purged_training_rows": 24916, "prediction_rows": 14266, "quantile_values": 727566, "grid_pairs_checked": 242, "event_metric_records": 774, "distribution_metric_records": 30, "saved_model_replays": [{"stage": "validation", "arm": "weather", "rows": 3566, "model_sha256": "6a268b45349fdca68cef9536a09ee24b3b8fd2839973409b5acce4f1cecc62d4", "coefficient_absolute_tolerance_internal_units": 1e-12, "all_grid_and_default_decisions_identical": true, "iterations": 200, "optimizer_success": false}, {"stage": "validation", "arm": "joint", "rows": 3566, "model_sha256": "a76bdba335ca7eafbb18c32bdc7e5e92ed36bf12c495e448ca603dd8c766b438", "coefficient_absolute_tolerance_internal_units": 1e-12, "all_grid_and_default_decisions_identical": true, "iterations": 200, "optimizer_success": false}, {"stage": "test", "arm": "weather", "rows": 3567, "model_sha256": "7937d5cdc8e6cdc539987f73c42d4b72c2c8c1c31fb5d0a090f7b9e37a1dbb69", "coefficient_absolute_tolerance_internal_units": 1e-12, "all_grid_and_default_decisions_identical": true, "iterations": 200, "optimizer_success": false}, {"stage": "test", "arm": "joint", "rows": 3567, "model_sha256": "1670039b800d702ffc91a86308bb4ff505b69d8b1dff5906d1ce60bfba5e6da7", "coefficient_absolute_tolerance_internal_units": 1e-12, "all_grid_and_default_decisions_identical": true, "iterations": 200, "optimizer_success": false}], "maximum_errors": {"coefficients": 2.220446049250313e-16, "quantiles": 6.821210263296962e-13, "probability": 1.0658141036401503e-14, "zero_mass": 6.661338147750939e-16, "median": 4.547473508864641e-13, "mean": 5.684341886080801e-13, "lower": 5.684341886080801e-13, "upper": 6.821210263296962e-13, "objective": 1.734723475976807e-18}, "gradient_coordinates_checked": 1338, "maximum_gradient_error": 9.787930882465545e-12, "selected_arm": "joint", "transitions": {"validation-weather": {"added": 0, "removed": 0}, "validation-joint": {"added": 2, "removed": 1}, "test-weather": {"added": 0, "removed": 0}, "test-joint": {"added": 2, "removed": 1}}, "test_gate": {"passes_frozen_gate": true, "all_six_strictly_improved": true, "comparisons": [{"basis": "weather_full", "metric": "precision", "candidate": 0.9851337958374629, "control": 0.9851190476190477, "status": "improved"}, {"basis": "weather_full", "metric": "recall", "candidate": 0.9841584158415841, "control": 0.9831683168316832, "status": "improved"}, {"basis": "weather_full", "metric": "f1", "candidate": 0.9846458642892522, "control": 0.9841427155599604, "status": "improved"}, {"basis": "satellite_common", "metric": "precision", "candidate": 0.9577039274924471, "control": 0.9576612903225806, "status": "improved"}, {"basis": "satellite_common", "metric": "recall", "candidate": 0.9753846153846154, "control": 0.9743589743589743, "status": "improved"}, {"basis": "satellite_common", "metric": "f1", "candidate": 0.9664634146341463, "control": 0.9659379766141332, "status": "improved"}]}, "comparison_008": {"passes_frozen_gate": false, "all_six_strictly_improved": false, "comparisons": [{"basis": "weather_full", "metric": "precision", "candidate": 0.9851337958374629, "control": 0.9841740850642928, "status": "improved"}, {"basis": "weather_full", "metric": "recall", "candidate": 0.9841584158415841, "control": 0.9851485148514851, "status": "regressed"}, {"basis": "weather_full", "metric": "f1", "candidate": 0.9846458642892522, "control": 0.9846610588817417, "status": "regressed"}, {"basis": "satellite_common", "metric": "precision", "candidate": 0.9577039274924471, "control": 0.9587939698492463, "status": "regressed"}, {"basis": "satellite_common", "metric": "recall", "candidate": 0.9753846153846154, "control": 0.9784615384615385, "status": "regressed"}, {"basis": "satellite_common", "metric": "f1", "candidate": 0.9664634146341463, "control": 0.9685279187817258, "status": "regressed"}]}, "no_fitting_performed": true, "limitations": ["All four fits stopped at the fixed 200-iteration budget; no optimizer convergence claim.", "Previously inspected retrospective references and decision thresholds; no fresh holdout or live publication proof.", "Reuses pinned 008 features whose source joins and strict-past histories were independently audited previously.", "Independent polynomial arithmetic allows 1e-8 W/m\u00b2, coefficients 1e-12 internal kW/m\u00b2 and inversion 1e-11 absolute. Memberships and decisions at all 21 frozen grid thresholds are exact."]}
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0518332Z Traceback (most recent call last):
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0523912Z   File "<stdin>", line 8, in <module>
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0524700Z   File "app/experiments/f1-009/review/uncertainty.py", line 35, in main
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0525351Z     identities = {str(p.relative_to(EXP.parent)): sha(p) for p in paths}
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0526202Z                       ~~~~~~~~~~~~~^^^^^^^^^^^^
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0526911Z   File "/opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/pathlib/__init__.py", line 490, in relative_to
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0527618Z     raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.0528292Z ValueError: 'app/experiments/f1-009/review/uncertainty.py' is not in the subpath of '/home/runner/work/actina/actina/app/experiments'
+verify	Replay saved neural and daily forecasts	2026-10-04T10:39:54.1679797Z ##[error]Process completed with exit code 1.

@@ -71,9 +71,8 @@ jobs:
           result = audit['check']()
           Path('app/build/release-check/model009-replay.json').write_text(json.dumps(result, indent=2))
           print(json.dumps(result))
-          sensitivity = runpy.run_path('app/experiments/f1-009/review/uncertainty.py')['main']()
-          saved = json.loads(Path('app/experiments/f1-009/review/uncertainty-result.json').read_text())
-          assert sensitivity == saved
+          sensitivity = runpy.run_path('app/experiments/f1-009/review/test_uncertainty_path.py')['replay_and_compare']()
+          Path('app/build/release-check/model009-uncertainty-replay.json').write_text(json.dumps(sensitivity, indent=2))
           print('Paired day-block uncertainty replay PASS')
           paired = runpy.run_path('app/experiments/f1-010/review/portable.py')['main']()
           Path('app/build/release-check/model010-replay.json').write_text(json.dumps(paired, indent=2))
