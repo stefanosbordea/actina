@@ -1,0 +1,102 @@
+{
+  "model_status": "Independent provisional reference; replaceable by Stefanos's reviewed model",
+  "estimator": "LightGBM LGBMRegressor; 100 trees, other learning defaults; no hyperparameter search",
+  "seed": 20260930,
+  "feature_names": [
+    "hour_sin",
+    "hour_cos",
+    "year_sin",
+    "year_cos",
+    "month",
+    "shortwave_radiation_lag2",
+    "cloud_cover_lag2",
+    "temperature_2m_lag2",
+    "relative_humidity_2m_lag2",
+    "et0_fao_evapotranspiration_lag2",
+    "precipitation_lag2",
+    "shortwave_radiation_lag3",
+    "cloud_cover_lag3",
+    "temperature_2m_lag3",
+    "relative_humidity_2m_lag3",
+    "et0_fao_evapotranspiration_lag3",
+    "precipitation_lag3",
+    "shortwave_radiation_at_issue",
+    "cloud_cover_at_issue",
+    "temperature_2m_at_issue",
+    "relative_humidity_2m_at_issue",
+    "et0_fao_evapotranspiration_at_issue",
+    "precipitation_at_issue",
+    "issue_day_radiation_mean",
+    "issue_day_radiation_max",
+    "issue_day_cloud_mean"
+  ],
+  "features_count": 26,
+  "train_rows": 17444,
+  "train_first_target": "2024-07-04T00:00:00+03:00",
+  "train_last_target": "2026-06-30T23:00:00+03:00",
+  "train_target_before": "2026-07-01",
+  "validation_rows": 720,
+  "validation_start": "2026-06-01",
+  "validation_model_last_target": "2026-05-31T23:00:00+03:00",
+  "test_rows": 2208,
+  "test_first_target": "2026-07-01T00:00:00+03:00",
+  "test_last_target": "2026-09-30T23:00:00+03:00",
+  "threshold_w_m2": 600,
+  "threshold_selection": "June validation only; closest to600 with precision>=0.90, recall>=0.70, >=50 positives; else highest F0.5",
+  "threshold_validation": [
+    {
+      "threshold_w_m2": 400,
+      "precision": 0.9931506849315068,
+      "recall": 0.9863945578231292,
+      "f0_5": 0.9917920656634747,
+      "predicted_positive": 292,
+      "actual_positive": 294
+    },
+    {
+      "threshold_w_m2": 500,
+      "precision": 1.0,
+      "recall": 0.995850622406639,
+      "f0_5": 0.9991673605328892,
+      "predicted_positive": 240,
+      "actual_positive": 241
+    },
+    {
+      "threshold_w_m2": 600,
+      "precision": 0.9864864864864865,
+      "recall": 0.9563318777292577,
+      "f0_5": 0.9803043867502239,
+      "predicted_positive": 222,
+      "actual_positive": 229
+    },
+    {
+      "threshold_w_m2": 700,
+      "precision": 0.9887640449438202,
+      "recall": 0.9887640449438202,
+      "f0_5": 0.9887640449438202,
+      "predicted_positive": 178,
+      "actual_positive": 178
+    }
+  ],
+  "forecast_issue": "18:00 Asia/Nicosia on the preceding local date",
+  "persistence": "Latest same local hour: preceding day for targethours00\u201318; day-2 for19\u201323; source<=18:00issue",
+  "climatology": "Mean for target local hour and month from training targets only",
+  "model_sha256": "9d4bccda373e7fcd09499820a8e6de78720ee6efb7cfaada1754eca382e09cb2",
+  "predictions_sha256": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+  "weather_sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+  "leakage_audit": {
+    "all_weather_source_times_at_or_before_issue": true,
+    "training_targets_before_test": true,
+    "test_tuning": false,
+    "target_day_realized_weather_features": false,
+    "latest_feature_time_minus_issue_seconds_max": 0.0,
+    "caveat": "Temporal cutoff audit only. IFS historical values are revised model reconstruction; original issue-time publication vintages were not available or tested."
+  },
+  "limitations": [
+    "Retrospective gridded-weather experiment; not operational forecast validation.",
+    "Radiation threshold is a solar availability proxy, not observed grid surplus or curtailment.",
+    "No target-day NWP forecast input; no actual metered plant or grid data.",
+    "Water demand, electricity tariffs and emissions belong to separate illustrative scenarios."
+  ],
+  "persistence_day2": "Older same local hour two dates earlier, retained secondary control",
+  "control_revision": "Independent review requested stronger causal persistence. Frozen checkpoint and threshold unchanged; no retraining or test tuning."
+}

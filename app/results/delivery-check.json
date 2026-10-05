@@ -1,0 +1,38 @@
+{
+  "completed_at_utc": "2026-10-01T22:16:39.385542+00:00",
+  "pdf_pages": {
+    "AquaShift-Executive-Summary.pdf": 2,
+    "AquaShift-Technical-Proposal.pdf": 7,
+    "AquaShift-Business-Model-Canvas.pdf": 1
+  },
+  "visual_review": "All2executive,7technical,1canvas pages and12deckslides reviewed; video frames checked with captions",
+  "local_launcher_exit_status": 0,
+  "schedule_export": {
+    "method": "Actual CUA browser download",
+    "day": "2026-07-15",
+    "tank_m3": 4000,
+    "hourly_rows": 24
+  },
+  "artifact_sha256": {
+    "delivery/AquaShift-Pafos-2026.pptx": "15fd5e88a1b7583808297d8f56c06a89dbfde03523689ecb57e06e5c29495205",
+    "delivery/AquaShift-90s-Backup.mp4": "3f301b307c8d4fdab0ebad69d4e4f10fa0d4dd38535fa7f08e7d9c447710180c",
+    "delivery/AquaShift-Schedule-2026-07-15.csv": "ff9f4147f5bf876cdbc3c8ca4ea7a040ffdc36af24bb5cd8a5aba1e3ff938f88",
+    "delivery/build_documents.py": "1c3da799923373a4868ade259eda5ff953d5c6c3c03ed37ae9a147d48ca7cd34",
+    "delivery/AquaShift-Business-Model-Canvas.pdf": "bb59c2b9899aeddbd02a74f6e1b34a95872b6fe1a68659ca2ef84c362d751a39",
+    "delivery/AquaShift-Executive-Summary.pdf": "561deb06f9d4ca0da701025a28e6f2bae578347a814b9d73e5e20e45261d9076",
+    "delivery/AquaShift-Speaker-Notes.md": "baf21163ee5589c173c58cfb15da4e44b7f0ac45e0114b61b8e0fedfaa191a9e",
+    "delivery/AquaShift-Technical-Proposal.pdf": "878e06fe9301e0ba111d1179e5af13d8633324d2844bf7b9c6cfb0c392aac814",
+    "delivery/Prediction-improvement-notes.md": "e9f523de6e2fc700e20310bf046e7ea2f9ae76e4a70fbcf54fe92246f57260ad",
+    "delivery/Submission-readiness.md": "5f75cef7bd0be624a5d772c39cae5254f1ca80e26858fdc6dcc2317c692acc1f",
+    "delivery/AquaShift-Backup-Captions.srt": "1b0337742349931beeb815f250d62daf5f02b74db73ac800e88b0eabe169d0c6",
+    "delivery/Your-part-and-team-handoff.md": "7342e183b6261f4e78e169f9742eee838323d8b08bf5cbf9c1bfce3c6db5116a",
+    "delivery/demo-frames/schedule-clean.png": "1a37d0609302702f06eb80f1a56b54f61a0a531a7e38b27cc781065c6331f249",
+    "delivery/demo-frames/sites-clean.png": "877773c387f0dbd1cbfd5a67874c20788cfbecdf8bda77a95fa47cb940325d55",
+    "delivery/demo-frames/forecast-chart-clean.png": "f01fd7d2718fbd2ecc03f15c1637125faf0f06b961069bdca530f374ca969ebc",
+    "delivery/demo-frames/forecast-evidence-clean.png": "906a4ff31503392dcb94751dafffe4859aafd23ab035bc0cc9216ab0d03589cb",
+    "delivery/demo-frames/handoff-clean.png": "d6c70615cb7c5ea893454cedcd5cfae44ff5f6ade17055e1150e62f067bc004a",
+    "delivery/demo-frames/grid-clean.png": "da201d99d17aaa460ca43824af8f50db6fd6927d13141c94acdc4d51e522b1bb",
+    "delivery/demo-frames/small-tank-clean.png": "ccd74459acbff8c0293eeb0fcfa9ed78c9b740660667d7c01f55c0d3dd45f07b"
+  },
+  "submissions_or_messages_sent": false
+}

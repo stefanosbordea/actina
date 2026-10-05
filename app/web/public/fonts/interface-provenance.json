@@ -1,0 +1,26 @@
+[
+  {
+    "family": "Sora",
+    "file": "Sora-Latin.woff2",
+    "source": "https://fonts.gstatic.com/s/sora/v17/xMQ9uFFYT72X5wkB_18qmnndmSdSnh2BAfO5mnuyOo1lfiQwV6-xo6eeIw.woff2",
+    "css_source": "https://fonts.googleapis.com/css2?family=Sora:wght@400..700&display=swap",
+    "bytes": 25240,
+    "sha256": "3902474d3ece89c8580d5ef3325cf58753e6e45a86f9957b4dacc4fce2e7fde1",
+    "license": "SIL Open Font License 1.1",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sora/OFL.txt",
+    "license_sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+    "weight": "400 700"
+  },
+  {
+    "family": "Inter",
+    "file": "Inter-Latin.woff2",
+    "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+    "css_source": "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap",
+    "bytes": 48432,
+    "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+    "license": "SIL Open Font License 1.1",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "license_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "weight": "400 700"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "completed_at_utc": "2026-10-01T23:45:21.595870+00:00",
+  "source_and_output_sha256": {
+    "eval/evaluate.py": "21bc9739af264f82ab716589da8794045fd2f8f7ff2261d6f76539340b191f4e",
+    "eval/test_evaluation.py": "3214f55900d17e1324c3f8f17c98864a2f51de9355c255814a9da41faf49a1a7",
+    "results/metrics.json": "3a187e830b16f7874165dc106a00733a11112a907e422f6dab919bc9190f0f5d",
+    "results/evaluation_manifest.json": "118677121a2bb6ca3928b04eea1b7b78897b1698ee96de455f4d547f8ca8c84e",
+    "results/charts/forecast_first_test_day.png": "a8f2bd6079df042a3518362b9ae67316dcac2c6f3cbbac3a02ae8a69c65b1e30"
+  },
+  "executed": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "eval/evaluate.py"
+      ],
+      "exit_status": 0,
+      "rows": 2208,
+      "days": 92,
+      "metrics_unchanged": true,
+      "record": "results/evaluation_manifest.json",
+      "stdout_scope": "Root foreground session59563 completed; numeric results match retained earlier evaluation."
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "eval.test_evaluation"
+      ],
+      "exit_status": 0,
+      "tests": 28,
+      "stdout": "Ran 28 tests in 0.688s; OK",
+      "scope": "Root foreground session85000 completed."
+    }
+  ],
+  "independent_review": "results/forecast-handoff-independent-review.json",
+  "chart_review": "First-day chart visually checked; nominal study issue wording; monochrome controls; no clipping observed."
+}

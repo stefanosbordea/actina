@@ -1,0 +1,26 @@
+{
+  "status": "STOPPED_BY_USER",
+  "at_utc": "2026-10-02T04:15:39.540060+00:00",
+  "method": "Inspect live command identity before terminating only task-owned producers/declared idle guards. Never signal an old PID without its task command match.",
+  "live_owned_before": [],
+  "closures": [],
+  "live_owned_after": [],
+  "partial_native_frame_counts": {
+    "overview": 216,
+    "storage": 185,
+    "evening": 0
+  },
+  "last_native_frame": {
+    "overview": "frame-0216.png",
+    "storage": "frame-0185.png",
+    "evening": null
+  },
+  "native_total_saved": 401,
+  "native_completion": "Incomplete; no combined648 PASS, no candidate composition or promotion. Fresh frame185 probe exited0 before STOP.",
+  "fresh_frame185_probe_receipt_sha256": "86331d8e9644bdffde80210c6f99b53217b2bb2a4269defbb37cef3df3812444",
+  "canonical_movie_sha256": "a8bb7c874649498ed135e6d189afb46d81f2d4ce8505930a0f4e2bb746e8e04a",
+  "canonical_movie_unchanged": true,
+  "composer_sha256": "cf03954c78c8db8f024fee30d5e1d9b35103e42b9e251c3bda6d33aa468aba1b",
+  "canonical_candidate_promoted": false,
+  "original_failures_preserved": true
+}

@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-02T00:45:19.778323+00:00",
+  "status": "PASS",
+  "scope": "Independent read-only pure/VM/JSDOM behavior review on exact frozen public assets; root rendered browser QA is separate.",
+  "source_sha256": {
+    "core.mjs": "c45eb385d3cafe53a11c0ab4c4e0388f9300f1d557284dea40083bf1f300d37b",
+    "data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+    "manifest.json": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+    "pilot-builder.mjs": "fd834945dd4291112b5bf1bd68b729a0fb6bf2709930ca9589cc16653247a9d3",
+    "pilot-ui.mjs": "7992685e7579199b59271a43e15e74acb2ecb8fdba83d897c638b320bd6838da",
+    "pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+    "vendor/LICENSE-papaparse.txt": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+    "vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+    "workspace.css": "7fee52ed29cbf699946548a2a616737c3081f0f51aecfd7a13b188744b924e02",
+    "workspace.js": "769cc2b2a25e20f09438b4837ea217414b11289f34eb6da4a614a0e478e08346"
+  },
+  "unchanged_before_after": true,
+  "matches_worker_freeze_exactly": true,
+  "actual_probe": {
+    "argv": [
+      "node",
+      "--experimental-vm-modules",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/builder-cloud-independent-review/probe.mjs"
+    ],
+    "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+    "env": {
+      "TMPDIR": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02"
+    },
+    "exit_code": 0,
+    "combined_checks": 14,
+    "log_basename": "final-85-probe.log",
+    "log_sha256": "340ee2aadf50308ce03e1531ead02ac75445e0a49bafbfaed99fa7cd583f3242",
+    "probe_sha256": "4fa0e909c22045db60b28b399f67b78c6b652377c9580f619a40ca8862c4069f",
+    "checks": [
+      {
+        "name": "new payload strips only target cloud and exactly preserves original canonical bytes",
+        "pass": true
+      },
+      {
+        "name": "all daylight and cloud scores match Python on exact common targets",
+        "pass": true
+      },
+      {
+        "name": "strict daylight/cloud boundary and missing values stay paired and unknown",
+        "pass": true
+      },
+      {
+        "name": "imported target clouds cannot override retained diagnostics",
+        "pass": true
+      },
+      {
+        "name": "blank builder has no source/capacity defaults and preserves accepted intake",
+        "pass": true
+      },
+      {
+        "name": "generated UTF-8 identity, source uncertainty, reset and malicious/prototype labels preserved",
+        "pass": true
+      },
+      {
+        "name": "121 absolute DST slots paginate losslessly; cutoff/latest navigate only known readings; missing gap preserved",
+        "pass": true
+      },
+      {
+        "name": "paging and generated declaration do not fetch, persist or alter reference capacity/context",
+        "pass": true
+      },
+      {
+        "name": "new invalid Apply cancels older pending valid Apply and preserves exact accepted report",
+        "pass": true
+      },
+      {
+        "name": "cancelled digest rejection cannot overwrite newer blocked status or accepted intake",
+        "pass": true
+      },
+      {
+        "name": "paired MAE/RMSE are shown and all three control RMSE columns exported consistently",
+        "pass": true
+      },
+      {
+        "name": "empty imported daylight scope remains selected, emits null scores and never falls back to frozen predictions",
+        "pass": true
+      },
+      {
+        "name": "multiple assets/units use explicit limits, reject duplicates without changing intake, retain Unicode hashes and stream-local paging",
+        "pass": true
+      },
+      {
+        "name": "newer valid Apply wins async generation and clears stale stream options; older completion cannot replace it",
+        "pass": true
+      }
+    ]
+  },
+  "worker_suite_observed": {
+    "tests": 85,
+    "passed": 85,
+    "failures": 0,
+    "rerun_by_this_reviewer": false,
+    "log": "web/workspace-tests-builder-cloud.log",
+    "log_sha256": "865481bce2eb7c61953d0e351f8401366901243f78b654f7eed0b43598000fdb",
+    "declared_command": {
+      "command": "TMPDIR=/Volumes/CARMIX-WORK/AquaShift-web-next-2026-10-02/tmp npm test",
+      "workdir": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/web",
+      "exit_code": 0,
+      "tests": 85,
+      "log": "workspace-tests-builder-cloud.log"
+    }
+  },
+  "independent_enrichment": {
+    "status": "PASS",
+    "old_sha256": "159a5a9e37a86685099efb53777645f866ff239bce83239ccf65b8a5709de885",
+    "new_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "strip_only_cloud_exact_bytes_equal": true,
+    "added_rows": 2208,
+    "cloud_days": 92,
+    "all2208_target_cloud_values_match_canonical_weather": true,
+    "canonical_weather_sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+    "method": "Exact values joined by normalized absolute target timestamps; stripping only target cloud also reproduces immutable first71 ZIP payload bytes."
+  },
+  "resolved_cases": [
+    {
+      "priority": "P2",
+      "origin": "Reviewer reproduced on previous frozen revision",
+      "case": "Pending valid Apply survived newer invalid Apply and cleared accepted intake",
+      "current": "Every Apply attempt invalidates pending generation before validation; deferred-digest probe preserves identical readiness export."
+    },
+    {
+      "priority": "P2",
+      "origin": "Worker reproduced related stale rejection",
+      "case": "Cancelled digest rejection overwrote newer blocked status",
+      "current": "Reviewer rejected obsolete digest; newer status and accepted readiness export remain identical."
+    },
+    {
+      "priority": "P2",
+      "origin": "Root rendered QA",
+      "case": "Old disabled selector labels remained after declaration reset",
+      "current": "Reviewer confirms zero selector options after winning valid Apply, with no accepted readings until fresh import."
+    }
+  ],
+  "current_findings": [],
+  "diagnostic_contract": {
+    "daylight": "Canonical actual >20 W/m\u00b2",
+    "cloud_bins": [
+      "[0,20)",
+      "[20,60)",
+      "[60,101)"
+    ],
+    "daylight_rows": 1200,
+    "counts": [
+      1090,
+      92,
+      18
+    ],
+    "role": "Canonical realized target weather; candidate cloud ignored; every comparator uses identical target rows.",
+    "empty_daylight": "Imported input remains selected; no frozen fallback; null error scores and blank numeric export cells.",
+    "confidence": "No stratum confidence intervals or future-performance claim inferred."
+  },
+  "limitations": [
+    "VM/JSDOM does not verify pixels, native browser layout or human usability.",
+    "Synthetic observations do not certify origin, quality, safety, authority or field detection performance.",
+    "No new network beyond canonical startup fetches, storage writes, primary model/scheduler edits or deployment performed."
+  ]
+}

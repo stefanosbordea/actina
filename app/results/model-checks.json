@@ -1,0 +1,88 @@
+{
+  "scope": "functional checks and explicitly illustrative/synthetic fixtures; no operational claim",
+  "command": ".venv/bin/python -m unittest model.test_scheduler model.test_sites -v",
+  "exit_status": 0,
+  "tests_passed": 18,
+  "scheduler": {
+    "totals": {
+      "water_produced_m3": 2880.0,
+      "water_demand_m3": 2880.0,
+      "unmet_demand_m3": 0.0,
+      "energy_kwh": 9792.0,
+      "baseline_energy_kwh": 9792.0,
+      "energy_saving_kwh": 0.0,
+      "cost_eur": 988.992,
+      "baseline_cost_eur": 1319.88,
+      "cost_saving_eur": 330.88800000000015,
+      "cost_saving_percent": 25.069551777434324,
+      "scheduled_solar_proxy_share_pct": 100.0,
+      "baseline_solar_proxy_share_pct": 29.166666666666668,
+      "predicted_solar_proxy_share_pct": 100.0,
+      "forecast_surplus_precision_pct": 100.0,
+      "false_positive_forecast_hours": 0,
+      "predicted_surplus_hours": 7,
+      "actual_surplus_hours": 7,
+      "safety_violations": 0,
+      "safety_minimum_m3": 800.0,
+      "tank_capacity_m3": 4000.0,
+      "unit_capacity_m3_hour": 500.0,
+      "demand_m3_hour": 120.0,
+      "initial_storage_m3": 2000.0,
+      "final_storage_m3": 2000.0,
+      "min_storage_m3": 800.0,
+      "max_storage_m3": 2960.0,
+      "baseline_co2_kg": 6364.8,
+      "schedule_co2_kg": 6364.8,
+      "co2_saving_kg": 0.0,
+      "conditional_co2_saving_kg": 0.0
+    },
+    "assumptions": [
+      "Illustrative one-unit scale, not a representation of an operating Paphos plant.",
+      "Demand assumption: 100 m\u00b3/h + 20 seasonal uplift + 2 per forecast degree above 30\u00b0C, scaled 1; forecast temperature 28\u00b0C.",
+      "Actual target-day radiation and temperature do not enter the optimization or water demand.",
+      "Clock tariff scenario: \u20ac101/MWh 10\u201316, \u20ac183/MWh 17\u201322, \u20ac130/MWh otherwise; not a billed tariff or forecast.",
+      "3.4 kWh/m\u00b3 fixed specific energy; equal total water and equal initial/final storage for both schedules.",
+      "Storage minimum 20%, start/end 50%; evenly distributed hourly flows. No ramp/minimum-run/maintenance model.",
+      "Radiation threshold marks high-radiation weather only; grid surplus and curtailment are not observed.",
+      "At constant 0.65 kg CO\u2082/kWh scenario intensity, equal energy gives zero carbon saving.",
+      "Conditional avoided emissions use displacement share 0; valid only if additional renewable power actually displaces grid power and would otherwise spill. This is a scenario, not measured carbon.",
+      "SciPy linprog with HiGHS performs linear optimization; it is adopted upstream software, not an invented AI scheduler."
+    ]
+  },
+  "sites": {
+    "irrigation": {
+      "eto_mm": 5.0,
+      "effective_rain_mm": 0.0,
+      "soil_available_mm": 0.0,
+      "net_need_mm": 3.5,
+      "recommended_m3": 20.588235294117652,
+      "timer_m3": 30.0,
+      "water_difference_m3": 9.411764705882348,
+      "water_difference_pct": 31.372549019607828
+    },
+    "detector": {
+      "alerts": 4,
+      "no_leak_false_alarms": 0,
+      "injected_leak_hours": 4,
+      "detected_injected_hours": 4,
+      "synthetic_leak_volume_m3": 1.2,
+      "training_days": 28,
+      "scope": "synthetic meter fixture"
+    },
+    "assumptions": [
+      "Retrospective ET0 weather illustration; no evaluated demand/soil forecast or operational irrigation controller.",
+      "Crop coefficient, 80% effective rainfall, irrigation efficiency, soil reserve and fixed 6 mm timer are scenario inputs.",
+      "The soil reserve is assumed plant-available water in millimetres, not a measured soil sensor.",
+      "Water difference is against the chosen fixed timer; hot or dry scenarios can require MORE water.",
+      "All meter readings are synthetic; the four-hour 0.3 m\u00b3/h leak is an injected demonstration fixture.",
+      "IsolationForest is adopted scikit-learn software, trained only on 28 synthetic normal history days; the query and injected labels are held out.",
+      "Night alerts use hours 00\u201304 and 23. This demonstration does not establish field accuracy, detection lead time or real water savings."
+    ]
+  },
+  "source_sha256": {
+    "model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+    "model/test_scheduler.py": "0f7f091a8b2a12c4644749b834b70d043a1b63c9a551798cf9f07b99ffafc851",
+    "model/sites.py": "fdcc2be7d08c28db802753bac8fc710ee6adaed5a99e000e153a376da456af4c",
+    "model/test_sites.py": "063d528024e9307c4f3230c4881753d448795c39f81a6bde17ee6ee8d4c1b31b"
+  }
+}

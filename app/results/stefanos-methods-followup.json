@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-02T14:57:18.890442+00:00",
+  "purpose": "Two-work primary-source handoff for Stefanos; Loucas independent evaluation only.",
+  "status": "Read-only research complete. No dependency installation, model execution, training, scheduling changes or external message.",
+  "selection": {
+    "works": 2,
+    "not_inspected": "PyPES 2025 methods/code were not opened; no claim is made about their availability or applicability."
+  },
+  "actionable_handoff": {
+    "first_example": {
+      "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/lvof.py#L390-L412",
+      "task": "Use the author CSV schema and baseline/flexible load comparison as an independently checkable reporting example; keep source units and baseline identity explicit.",
+      "sample": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/timeseries/AWT_nominal/santabarbara/SummerWeekday.csv"
+    },
+    "stefanos_decision": "Choose applicable pump, flushing, water-quality and electrical constraints using actual plant information; parameter selection and model/scheduler changes remain his work.",
+    "loucas_support": "Review supplied plans against declared constraints and report missing checks, delivered water, terminal inventory and energy assumptions. Do not infer plant feasibility from storage replay alone.",
+    "no_claims": [
+      "No new algorithm or novelty established.",
+      "No Cyprus plant calibration, recovered-curtailment benefit or operating approval established."
+    ]
+  },
+  "works": [
+    {
+      "title": "Valuing energy flexibility from water systems",
+      "article_url": "https://www.nature.com/articles/s44221-024-00316-4",
+      "doi": "10.1038/s44221-024-00316-4",
+      "scope": {
+        "article": "Previously inspected abstract/preview only; full article methods not accessed in this follow-up.",
+        "code": "Author repository inventory; full README, LICENSE, requirements, environment and CITATION files; lvof.py lines 1-23, 89-218, 296-438 and 915-977. No application execution.",
+        "data": "Both selected 96-row CSVs parsed; radar/costing JSON and 17-row SCE billing CSV parsed."
+      },
+      "repository": {
+        "url": "https://github.com/we3lab/valuing-flexibility-from-water",
+        "commit": "e44a77360218b5f7ef61bb728a32c94ec976a479",
+        "committed_at": "2025-08-04T18:10:57Z",
+        "inventory": {
+          "truncated": false,
+          "blobs": 345,
+          "python_files": [
+            "init.py",
+            "marimonotebook/init.py",
+            "marimonotebook/lvof.py"
+          ]
+        }
+      },
+      "license": {
+        "verified": "Apache-2.0 repository LICENSE",
+        "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/LICENSE",
+        "scope": "Repository license checked; retain its terms/notices for reuse. Separate journal full-text reuse terms were not inferred."
+      },
+      "entrypoints": {
+        "documented_launch": "cd marimonotebook && marimo run lvof.py",
+        "executed": false,
+        "loaders": [
+          "get_ts_data(case_name, system_type, representative_day): lines 390-397",
+          "get_radar_data(...): lines 399-405",
+          "get_costing_data(case_name, system_type): lines 408-412"
+        ],
+        "plots": [
+          "plot_timeseries: lines 115-175",
+          "plot_radar: lines 177 onward",
+          "plot_contour: lines 296-388"
+        ],
+        "dependency_manifest": {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/requirements.txt",
+          "versions": [
+            "marimo==0.5.0",
+            "pandas==2.2.2",
+            "numpy==1.26.4",
+            "matplotlib==3.8.4"
+          ]
+        }
+      },
+      "datasets": [
+        {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/timeseries/AWT_nominal/santabarbara/SummerWeekday.csv",
+          "rows": 96,
+          "cadence_minutes": 15,
+          "represented_date": "2023-07-03",
+          "columns": [
+            "DateTime",
+            "baseline_grid_to_plant_kW",
+            "baseline_treatment_flow_m3_hr",
+            "flexible_grid_to_plant_kW",
+            "flexible_treatment_flow_m3_hr",
+            "electricity_TOU",
+            "electricity_demand1",
+            "electricity_demand2"
+          ],
+          "kind": "Published modeled case output; not Cyprus observations."
+        },
+        {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/timeseries/AWT_curtailed/santabarbara/SummerWeekday.csv",
+          "rows": 96,
+          "kind": "Separate author case output. The curtailed name must not be relabeled as measured EAC solar curtailment."
+        },
+        {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/casestudies/santabarbara/AWT_nominal/Annualized/radar.json",
+          "keys": [
+            "rte",
+            "ed_normalized",
+            "p_normalized"
+          ]
+        },
+        {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/marimonotebook/costing/santabarbara/AWT_nominal.json",
+          "kind": "Precomputed annualized and representative-day financial/flexibility metrics."
+        },
+        {
+          "url": "https://github.com/we3lab/valuing-flexibility-from-water/blob/e44a77360218b5f7ef61bb728a32c94ec976a479/paperdata/ratesdata/sce_billing.csv",
+          "rows": 17,
+          "kind": "Southern California Edison TOU 8 E, explicitly labeled 2021 rates; dollars and demand-charge components, not a Cyprus tariff."
+        }
+      ],
+      "limits": [
+        "Inspected code loads and plots results; it does not reproduce their original optimization.",
+        "plot_timeseries normalizes both curves to mean baseline power. Its plot is not an absolute-energy saving calculation.",
+        "plot_contour line 322 adds 10000 to annualized_benefit before subtracting O&M; the inspected code does not explain that constant. Do not transplant the finance calculation without resolving it.",
+        "environment.yml pins older packages, includes Linux-specific packages and a local prefix; requirements.txt and generated Marimo version differ from that environment. No runtime compatibility claim."
+      ],
+      "retained_source_hashes": {
+        "README.md": {
+          "bytes": 3142,
+          "sha256": "a25c65e830dfe43e6c5be0f769e84db8f3821a6f8d74c8e167276ebf8f519c03"
+        },
+        "LICENSE": {
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        "requirements.txt": {
+          "bytes": 59,
+          "sha256": "43aeee36ff758ac8453f6f0f4ce02e0074d90e08112bb2c06245f32461e47abe"
+        },
+        "environment.yml": {
+          "bytes": 2770,
+          "sha256": "2bb47bd1414e9d2378ae4ac8dd2c433da3200a50118c054ea48811ee5f03cf39"
+        },
+        "CITATION.cff": {
+          "bytes": 822,
+          "sha256": "b6627a9ad97314cba00e68cc93ce87cb3624d1f4f6190da0917f04b2d59e1e56"
+        },
+        "marimonotebook/lvof.py": {
+          "bytes": 35563,
+          "sha256": "46cfd7dc7823276259ff106c3bb3b77363fead9c7e62b28e9297e55539d97187"
+        },
+        "marimonotebook/timeseries/AWT_nominal/santabarbara/SummerWeekday.csv": {
+          "bytes": 10035,
+          "sha256": "6cddea97166415904cb759e34bbd033081963797785748abdda6a0f7b8b7d545"
+        },
+        "marimonotebook/timeseries/AWT_curtailed/santabarbara/SummerWeekday.csv": {
+          "bytes": 9832,
+          "sha256": "ec0bb869f2707070fa40296af348004c4d0bda032aeba79141e99e6f3670b995"
+        },
+        "marimonotebook/casestudies/santabarbara/AWT_nominal/Annualized/radar.json": {
+          "bytes": 101,
+          "sha256": "c323e9db277d87a57ee9f84d4026cea230c5813757c2a41d8bb0f3e2729ea8cf"
+        },
+        "marimonotebook/costing/santabarbara/AWT_nominal.json": {
+          "bytes": 1115,
+          "sha256": "bb24bb4776eb82ff4253feb5beab86335676d8ad1f74ecd4606938dcccb57c75"
+        },
+        "paperdata/ratesdata/sce_billing.csv": {
+          "bytes": 1127,
+          "sha256": "322d2331b33682c6eece6aaf3cdf759a3eef6a3c7d97356326c1661c94e8b6fc"
+        }
+      }
+    },
+    {
+      "title": "Stochastic Power-Water Coordination: Unlocking Flexibility in Hybrid RO Desalination Plants via Variable-Speed Pumps and Tank Mixing",
+      "authors": [
+        "Rongxing Hu",
+        "Charalambos Konstantinou"
+      ],
+      "article_url": "https://arxiv.org/html/2601.07295v1",
+      "version": "2601.07295v1",
+      "submitted_at_utc": "2026-01-12T08:05:15Z",
+      "scope": {
+        "paper": "Full official HTML sections II-A–E, III-A–D, IV-A–E, Tables I–II, conclusion and references read by independent researcher.",
+        "data": "Reference 35 author repository inventory plus workbook XML: all basic_info populated text/numeric cells, all 24 prediction values per series, scenario description/probabilities and sheet structure. Embedded artwork not inspected. No optimization run."
+      },
+      "paper_license": {
+        "verified": "arXiv perpetual non-exclusive distribution license",
+        "url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+        "limit": "Not a software license or a general grant to relicense the paper."
+      },
+      "method_constraints": {
+        "II-A/B": [
+          "Variable-speed pump head/efficiency and RO operating/recovery limits."
+        ],
+        "II-C_and_29_42": [
+          "Flush water/energy, minimum off-time, tank volume/salt balance and terminal inventory/quality."
+        ],
+        "II-E": [
+          "Reactive power, voltage and line limits."
+        ],
+        "III": [
+          "Piecewise linear MILP and two-step stochastic scheduling with fixed commitment."
+        ]
+      },
+      "study_limits": [
+        "Numerical 33-bus case with 1 MW PV, 1800 m3 tank and 1400 m3/day demand; not Cyprus calibration.",
+        "Negligible mixing time and approximated hourly outflow TDS; IV-A simplification comparison excludes tank/network."
+      ],
+      "repository": {
+        "url": "https://github.com/rxhu89/paper_desali_flex",
+        "commit": "27c45708ecaaaf19b831b1b4c7d6d471c0d8a484",
+        "committed_at": "2026-01-11T10:22:25Z",
+        "inventory": {
+          "truncated": false,
+          "blobs": 1,
+          "path": "desali_flex_params_data_upload.xlsx"
+        },
+        "code_availability": "No solver/driver source in this exact repository tree.",
+        "license": "No LICENSE file in tree; GitHub metadata license is null. Data redistribution/reuse license not established."
+      },
+      "dataset": {
+        "url": "https://github.com/rxhu89/paper_desali_flex/blob/27c45708ecaaaf19b831b1b4c7d6d471c0d8a484/desali_flex_params_data_upload.xlsx",
+        "bytes": 25393,
+        "sha256": "5c9e606a6849755e964d00611d9bbbbc426b964a1425061171dd7cd55def8520",
+        "sheets": [
+          {
+            "name": "basic_info",
+            "populated_row_elements": 48
+          },
+          {
+            "name": "PV_data",
+            "populated_row_elements": 26
+          },
+          {
+            "name": "energy_price_data",
+            "populated_row_elements": 26
+          },
+          {
+            "name": "water_demand",
+            "populated_row_elements": 26
+          },
+          {
+            "name": "uncertainty_scenarios",
+            "populated_row_elements": 57
+          }
+        ],
+        "usable_locations": {
+          "basic_info": "Units C3/C4 time step/horizon; E38 tank size; L29:L32 shutdown/restart water and energy; E20:E37 and neighboring cells contain pump/RO assumptions.",
+          "PV_data": "B3:B26: 24 hourly prediction values in kW.",
+          "energy_price_data": "B3:B26: 24 hourly buying-price values in $/kWh.",
+          "water_demand": "B3:B26: 24 hourly demand values in m3; sum 1400 within floating-point precision.",
+          "uncertainty_scenarios": "A1: 2000 generated scenarios reduced to 10; B5:K5 probabilities; hourly PV/price scenario tables below."
+        },
+        "scope_limit": "Declared simulation inputs and scenario construction, not measured plant forecasts or an empirical uncertainty calibration."
+      },
+      "concrete_benefit": "An exact parameter checklist and case-input workbook for Stefanos to inspect before proposing physical constraints; independent review can expose unsupported operating claims."
+    }
+  ],
+  "aquashift_comparison": {
+    "evidence": [
+      {
+        "path": "web/public/plan-resilience.mjs",
+        "lines": [
+          153
+        ],
+        "sha256": "f312c9bef19e0acf18331177b1fc23fede29bd5be7fd95030dd114527a116101"
+      },
+      {
+        "path": "web/public/plan-revision.mjs",
+        "lines": [
+          87
+        ],
+        "sha256": "af26c55b719e4775471f010c37580176c96c1ba5024045f01d63e63e777b95ac"
+      },
+      {
+        "path": "model/scheduler.py",
+        "lines": [
+          12,
+          35,
+          37
+        ],
+        "sha256": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048"
+      }
+    ],
+    "verified_gap": "Current replay explicitly excludes ramp, minimum-run, quality, pressure, grid permission and electrical feasibility. Revision energy uses a declared constant specific energy. Tank volume checks do not validate these omitted constraints.",
+    "next_evidence_needed": [
+      "Operator-approved pump/RO limits and transition costs.",
+      "Delivered-water quality and mixing assumptions.",
+      "Actual grid connection/curtailment permission and tariffs.",
+      "Independent plant observations for validation."
+    ]
+  },
+  "provenance": {
+    "retrieval": "Official journal/arXiv, author-linked GitHub, public GitHub API and pinned raw files only. GitHub web fetch failures were followed by ordinary public HTTPS retrieval.",
+    "local_source_cache": "build/stefanos-methods-followup/",
+    "reproducibility": "Pinned commit URLs and SHA-256 identify the inspected repository bytes. No claims of an executed author example."
+  },
+  "verification": {
+    "identity_checks": "Passed: 12 retained author source files and 3 referenced local source files match recorded SHA-256. JSON parses.",
+    "independent_review": {
+      "reviewer": "roadmap_reconciliation",
+      "result": "Passed; no correction requested.",
+      "scope": "Hu full-paper methods, numerical assumptions and AquaShift gap comparison.",
+      "excluded": "Repository/workbook bytes, exact submission time and first-work code findings were verified by the collecting researcher, not independently repeated."
+    }
+  }
+}

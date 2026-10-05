@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "completed_at": "2026-10-02T15:53:26.761Z",
+  "command": "node --experimental-vm-modules results/reviews-sheet-independent-review.mjs",
+  "exit_status": 0,
+  "runner_sha256": "f831660a6b106c3c0149249f3a790246bbb289fc411d65840e428ebf6a79bd25",
+  "checked_source_sha256": {
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "web/public/workspace.css": "574cb9d088aa1936f7f072826411a50a57d0774390a1dc8d63043562850e1712",
+    "web/public/index.html": "1a08b960b09805bb4b1cc8373f08233363caff0c8dd62de1a9f092755f01fad9",
+    "web/public/vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+    "web/public/workspace.js": "08b32bfcd4cd22258af63089adbaaec37e80c98e0890a843a20f8a814afd5eec",
+    "web/public/core.mjs": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+    "web/public/pilot-ui.mjs": "746655b86e40d8d00e62b651c55921426df485d860bb926f02d6c7f88222343c",
+    "web/public/pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "web/public/pilot-builder.mjs": "fd834945dd4291112b5bf1bd68b729a0fb6bf2709930ca9589cc16653247a9d3",
+    "web/public/storage-frontier.mjs": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+    "web/public/resilience-ui.mjs": "a78474ecda566338f08e4573fad7e265b45944730d44fb528001f8e56272c53c",
+    "web/public/plan-resilience.mjs": "8eff0c83adb43d342863465c0c5f1dfaf4762d3273203a0a4e4b81e02bb90663",
+    "web/public/observation-restart.mjs": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+    "web/public/reconciliation-ui.mjs": "b20569dfa7525735156f9c3d645e532090b76f90a22b77cf2db22ee6101d30e6",
+    "web/public/observation-reconciliation.mjs": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+    "web/public/plan-revision-ui.mjs": "be0c706393bd2635f78d9eb4ff7a94d1fae82ed28a215c6f0169ce0e468516e9",
+    "web/public/plan-revision.mjs": "af26c55b719e4775471f010c37580176c96c1ba5024045f01d63e63e777b95ac",
+    "web/public/manifest.json": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+    "web/public/research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e"
+  },
+  "probes": [
+    {
+      "name": "context relocation and unassessed state",
+      "status": "PASS",
+      "detail": "Review selectors move into Change plan, restore outside Reviews, preserve selected date, and omit the unavailable tested column without false zero values."
+    },
+    {
+      "name": "current reviewer recovery",
+      "status": "PASS",
+      "detail": "Missing reviewer reveals both collapsed ancestors and focuses the required field."
+    },
+    {
+      "name": "returned template and metric preservation",
+      "status": "PASS",
+      "detail": "Template is available without opening assumptions; returned results retain four primary and four water-balance rows."
+    },
+    {
+      "name": "returned context isolation",
+      "status": "PASS",
+      "detail": "Global selection remains hidden on Returned revision and restores on Current plan and other routes."
+    },
+    {
+      "name": "returned export error recovery",
+      "status": "PASS",
+      "detail": "Missing reviewer, missing reason and invalid author each reveal error status inside the previously closed decision panel; invalid reviews never export. Required missing fields receive focus."
+    },
+    {
+      "name": "changed assumptions invalidate results",
+      "status": "PASS",
+      "detail": "Changing specific energy clears both result tables and disables review export."
+    },
+    {
+      "name": "unknown observations remain visible",
+      "status": "PASS",
+      "detail": "At the early cutoff the closed evidence disclosure does not hide the explicit 16 unknown comparisons."
+    },
+    {
+      "name": "known departures remain visible",
+      "status": "PASS",
+      "detail": "Later cutoff produces actual explanation findings; visible summary matches retained comparison coverage while full evidence stays collapsed."
+    },
+    {
+      "name": "revoked observation evidence clears",
+      "status": "PASS",
+      "detail": "Changing selected tank invalidates the comparison and removes the previous visible finding."
+    }
+  ],
+  "failure": null,
+  "scope": [
+    "Narrow independent JSDOM behavior probes; no browser launched.",
+    "No source, production test, mathematical engine or fixture edits.",
+    "DOM visibility checks cover hidden attributes and collapsed details; no pixel or browser-layout claim.",
+    "No full verifier or suite run."
+  ]
+}

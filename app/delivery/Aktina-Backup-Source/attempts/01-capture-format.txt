@@ -1,0 +1,5 @@
+Initial render invocation exited 1 during capture preflight, before composition or BridgeClip export.
+
+ValueError: Expected an actual 1600×900 PNG: app/build/aktina-backup/captures/01-home.png
+
+Inspection found JPEG content in files named .png. The compositor now checks decoded image dimensions and format, retaining identical JPEG bytes with a .jpg extension. It also rejects duplicate captures; the first home/summer pair was identical and was reported for recapture before encoding.

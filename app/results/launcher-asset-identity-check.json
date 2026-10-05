@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "tests_run": 10,
+  "completed_at_utc": "2026-10-02T00:45:49.536435+00:00",
+  "reproduction": "python3 tests/test_serve_workspace.py",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "server_script_sha256": "fedeec9aa40919399b6226eed96b83e624d2933aaf71976c0a57cde329804365",
+  "test_script_sha256": "7edaf5c1eaa5fd45f016c0092748f9d457dec7c62abba8cc244b670c327729cf",
+  "headers_config_sha256": "c74e8563813380c348149d48c3367080ac00e99e10b11c6095e733d7e2babd85",
+  "public_asset_sha256": {
+    "web/public/core.mjs": "c45eb385d3cafe53a11c0ab4c4e0388f9300f1d557284dea40083bf1f300d37b",
+    "web/public/data.json": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+    "web/public/index.html": "fe7308a105700f9b314fa94af19d9bc970da211a88dd24b5933dcef0e0451382",
+    "web/public/manifest.json": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+    "web/public/pilot-builder.mjs": "fd834945dd4291112b5bf1bd68b729a0fb6bf2709930ca9589cc16653247a9d3",
+    "web/public/pilot-ui.mjs": "7992685e7579199b59271a43e15e74acb2ecb8fdba83d897c638b320bd6838da",
+    "web/public/pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "web/public/research.json": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+    "web/public/vendor/LICENSE-papaparse.txt": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+    "web/public/vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+    "web/public/workspace.css": "7fee52ed29cbf699946548a2a616737c3081f0f51aecfd7a13b188744b924e02",
+    "web/public/workspace.js": "769cc2b2a25e20f09438b4837ea217414b11289f34eb6da4a614a0e478e08346"
+  },
+  "probes": [
+    {
+      "name": "foreign server; missing workspace headers",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58420",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58420 is in use. Choose another port with --port. No running service was changed."
+    },
+    {
+      "name": "local symlink rejected before binding",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/tmp-video/aquashift-port-owdm8b7p/workspace copy with spaces/scripts/serve_workspace.py",
+        "--port",
+        "8510",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stderr": "Workspace assets could not be verified: Unsafe public asset: outside-link.txt"
+    },
+    {
+      "name": "matching workspace reused",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58422",
+        "--no-browser"
+      ],
+      "exit_status": 0,
+      "stdout": "AquaShift is already available: http://127.0.0.1:58422",
+      "stderr": ""
+    },
+    {
+      "name": "occupied service missing Pilot asset",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58437",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58437 is in use. Choose another port with --port. No running service was changed."
+    },
+    {
+      "name": "missing local builder refuses occupied service reuse",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/tmp-video/aquashift-port-0tc46mlt/workspace copy with spaces/scripts/serve_workspace.py",
+        "--port",
+        "58445",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stderr": "Workspace assets could not be verified: Required public workspace assets are missing"
+    },
+    {
+      "name": "missing local builder refuses new service start",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/tmp-video/aquashift-port-iclwlo7m/workspace copy with spaces/scripts/serve_workspace.py",
+        "--port",
+        "58446",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stderr": "Workspace assets could not be verified: Required public workspace assets are missing",
+      "port_rebind_after_refusal": "PASS"
+    },
+    {
+      "name": "redirect refused without following",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58447",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58447 is in use. Choose another port with --port. No running service was changed."
+    },
+    {
+      "name": "stale CSS; unchanged manifest",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58449",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58449 is in use. Choose another port with --port. No running service was changed."
+    },
+    {
+      "name": "stale JavaScript; unchanged manifest",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58461",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58461 is in use. Choose another port with --port. No running service was changed."
+    },
+    {
+      "name": "stale Pilot; unchanged manifest",
+      "arguments": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/serve_workspace.py",
+        "--port",
+        "58475",
+        "--no-browser"
+      ],
+      "exit_status": 1,
+      "stdout": "",
+      "stderr": "Port 58475 is in use. Choose another port with --port. No running service was changed."
+    }
+  ],
+  "scope": "Ephemeral loopback subprocesses only; no browser opened. Existing services untouched; only owned test subprocesses cleaned up.",
+  "executed_environment": {
+    "TMPDIR": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/tmp-video"
+  },
+  "executed_command": [
+    "python3",
+    "-B",
+    "tests/test_serve_workspace.py"
+  ],
+  "missing_builder_checks": {
+    "local_workspace_reuse": "refused before occupied service reuse; owned existing process remained alive",
+    "new_service_start": "refused before binding; selected loopback port successfully rebound after refusal"
+  }
+}

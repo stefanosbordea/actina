@@ -1,0 +1,44 @@
+AquaShift — team review
+
+Open: https://aquashift-pafos-2026.vercel.app
+Watch: AquaShift-Concept-and-Prototype.mp4
+Read: AquaShift-Executive-Summary.pdf
+
+The idea: make drinking water with electricity that would otherwise be curtailed,
+then store water for later. Loucas's original concept and philosophy; Stefanos's
+AquaShift roadmap and pitch develop the team plan.
+
+STORAGE UPDATE
+Scenarios now compares all five tanks across the same 62 report days.
+At 4,000→8,000 m³: +2,652 kWh of retrospective timing overlap, €0 tariff change.
+Open the daily differences to inspect the source evidence. September is unknown.
+The export includes every paired case and source-file identity.
+
+TRY THIS
+Choose July 15 and a 4,000 m³ tank. Inspect midday production and evening storage.
+Compare 500 versus 8,000 m³ tanks. Check Evaluation, then Evidence. The EAC report
+window is sourced context; overlap is not a claim of recovered electricity.
+Pilot inputs separately checks declared observation files, units and gaps;
+the example is invented, and an earlier review time withholds later readings.
+
+HANDOFF
+Your primary forecast and scheduler are still yours. The included model and
+plans are independent references. Bring your CSV to Data & model handoff;
+keep model timing and source provenance with it. Loucas's workspace checks
+performance, controls and water constraints, then retains a review record.
+
+THE RESULT
+The reference has lower RMSE but higher MAE than safe persistence. Assumed
+clock prices account for the scheduling cost difference; no additional AI
+tariff saving is established. Plant/grid recovery and customer savings need
+a pilot with spare plant capacity and usable storage.
+
+FILES
+Technical brief: 3 pages. Business canvas: 1 page. Editable deck: 12 slides.
+Blender-Scene-Source/: three packed editable scenes and reproduction notes.
+Research-for-Stefanos.txt: four focused reads; full references in data/.
+README.md: setup and reproduction. results/: executed checks and limits.
+
+Andreas Nikolaides and Cleopas Cleopa handle the business case and pitch.
+Loucas and Stefanos review technical material. AI assistance is disclosed.
+No contacts, signatures or submission declarations have been filled in.

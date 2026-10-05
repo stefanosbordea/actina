@@ -1,0 +1,201 @@
+{
+  "forecast": {
+    "model": {
+      "rows": 72,
+      "mae": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "bias": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "mse": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "rmse_decimal": "1"
+    },
+    "baseline": {
+      "rows": 72,
+      "mae": {
+        "numerator": "10",
+        "denominator": "1"
+      },
+      "bias": {
+        "numerator": "10",
+        "denominator": "1"
+      },
+      "mse": {
+        "numerator": "100",
+        "denominator": "1"
+      },
+      "rmse_decimal": "10"
+    },
+    "coverage": {
+      "expected_hours": 72,
+      "supplied_hours": 72,
+      "matched_hours": 72,
+      "missing_count": 0,
+      "unmatched_count": 0
+    }
+  },
+  "demo": {
+    "coverage": {
+      "selected_dates": [
+        "2026-07-01",
+        "2026-07-03"
+      ],
+      "expected_hours": 48,
+      "forecast_hours": 48,
+      "schedule_hours": 48,
+      "matched_hours": 48
+    },
+    "support": {
+      "hours": 48,
+      "electricity_kwh": {
+        "normal": {
+          "numerator": "480",
+          "denominator": "1"
+        },
+        "aquashift": {
+          "numerator": "480",
+          "denominator": "1"
+        },
+        "delta": {
+          "numerator": "0",
+          "denominator": "1"
+        }
+      },
+      "cost_eur": {
+        "normal": {
+          "numerator": "96",
+          "denominator": "1"
+        },
+        "aquashift": {
+          "numerator": "94",
+          "denominator": "1"
+        },
+        "delta": {
+          "numerator": "-2",
+          "denominator": "1"
+        }
+      },
+      "forecast_flagged_electricity_kwh": {
+        "normal": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "aquashift": {
+          "numerator": "30",
+          "denominator": "1"
+        },
+        "delta": {
+          "numerator": "10",
+          "denominator": "1"
+        }
+      }
+    },
+    "days": [
+      {
+        "date": "2026-07-01",
+        "totals": {
+          "hours": 24,
+          "electricity_kwh": {
+            "normal": {
+              "numerator": "240",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "240",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "cost_eur": {
+            "normal": {
+              "numerator": "48",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "47",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "-1",
+              "denominator": "1"
+            }
+          },
+          "forecast_flagged_electricity_kwh": {
+            "normal": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "15",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "5",
+              "denominator": "1"
+            }
+          }
+        }
+      },
+      {
+        "date": "2026-07-03",
+        "totals": {
+          "hours": 24,
+          "electricity_kwh": {
+            "normal": {
+              "numerator": "240",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "240",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "cost_eur": {
+            "normal": {
+              "numerator": "48",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "47",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "-1",
+              "denominator": "1"
+            }
+          },
+          "forecast_flagged_electricity_kwh": {
+            "normal": {
+              "numerator": "10",
+              "denominator": "1"
+            },
+            "aquashift": {
+              "numerator": "15",
+              "denominator": "1"
+            },
+            "delta": {
+              "numerator": "5",
+              "denominator": "1"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "water_comparability": "not_established",
+  "forecast_attribution": "not_established",
+  "lineage": "caller_declared"
+}

@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-01T23:48:52.148Z",
+  "node_version": "v24.19.0",
+  "reproduction": "node web/check_pilot_cli.mjs",
+  "scope": "Executed CLI in a relocated minimal folder with spaces; no Git, node_modules, package.json or public dataset assets. All inputs are synthetic fixtures.",
+  "input_sha256": {
+    "web/review_pilot.mjs": "f2c08864298f4ba79acb039d701ea153a58206796480bec933a96ca12d0ff683",
+    "web/public/pilot.mjs": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+    "web/public/vendor/papaparse.min.js": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+    "web/vendor/provenance.json": "b1a82f3da19d9c893f2c4f402d2de0bf4c239d1bd66a083f7d8cf030acb45965",
+    "web/fixtures/pilot-synthetic-declaration.json": "1d88542ce94a43a078176ccefa5f13abcb6a68c79098077e2d68b44f75b4fd6c",
+    "web/fixtures/pilot-synthetic-observations.csv": "8e1ea1d7c6b96f811d3cfc17b2776cb2c1fd1abaaa58d4f24440708c5494316a",
+    "web/fixtures/pilot-late-review-declaration.json": "ded4095014cb8b9a04f93a991909dbd433e32773575f88830bf62d3e291ab7f2",
+    "web/fixtures/pilot-wrong-unit.csv": "0747bf4ab5a8ad822b318409eb274b58d69337183ae9a8b3ac2c587e00fbcd61",
+    "web/check_pilot_cli.mjs": "1fdb84c65f6a98d8bdea17325cf3399a1e2002621158f2a9074adb9910b67c26"
+  },
+  "checks": [
+    {
+      "name": "gap",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "web/fixtures/pilot-synthetic-observations.csv",
+        "--output",
+        "results/gap.json"
+      ],
+      "exit_status": 0,
+      "readiness": "NEEDS_REVIEW",
+      "validation_status": "PARTIAL",
+      "known_slots": 15,
+      "expected_slots": 16,
+      "report_sha256": "a16b153d877626eabb98a9cff67d066dcf469d2fc0a3b40af6ddaf02d769b736"
+    },
+    {
+      "name": "late",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-late-review-declaration.json",
+        "--observations",
+        "web/fixtures/pilot-synthetic-observations.csv",
+        "--output",
+        "results/late.json"
+      ],
+      "exit_status": 0,
+      "readiness": "NEEDS_REVIEW",
+      "validation_status": "PARTIAL",
+      "known_slots": 8,
+      "expected_slots": 16,
+      "report_sha256": "2a5af45a5bc48dacedaf42a32ec9575b79c3d67b71fa9335c314ca2c40154257"
+    },
+    {
+      "name": "wrong-unit",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "web/fixtures/pilot-wrong-unit.csv",
+        "--output",
+        "results/wrong-unit.json"
+      ],
+      "exit_status": 1,
+      "readiness": "BLOCKED",
+      "validation_status": "BLOCKED",
+      "known_slots": 0,
+      "expected_slots": 0,
+      "report_sha256": "119a0039130fa89fb2658d0a306da45c5690515aa26ed4ad52a46d85b99aa477"
+    },
+    {
+      "name": "numeric-complete",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "complete.csv",
+        "--output",
+        "results/numeric-complete.json"
+      ],
+      "exit_status": 0,
+      "readiness": "COMPLETE",
+      "validation_status": "COMPLETE",
+      "known_slots": 16,
+      "expected_slots": 16,
+      "report_sha256": "9d9bd717d8a6608902d3f1c5c83e8db00fdb0f004a6250a776889f5b07c313d0"
+    },
+    {
+      "name": "below-reserve",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "below-reserve.csv",
+        "--output",
+        "results/below-reserve.json"
+      ],
+      "exit_status": 0,
+      "readiness": "NEEDS_REVIEW",
+      "validation_status": "COMPLETE",
+      "known_slots": 16,
+      "expected_slots": 16,
+      "report_sha256": "bd63c72dc79bd75ec312527ea1192fc65943e7001d1605e8e202ac33e0180236"
+    },
+    {
+      "name": "bom",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "bom.csv",
+        "--output",
+        "results/bom.json"
+      ],
+      "exit_status": 0,
+      "readiness": "NEEDS_REVIEW",
+      "validation_status": "PARTIAL",
+      "known_slots": 15,
+      "expected_slots": 16,
+      "report_sha256": "67078f6c7086387b7cc2f81f8911ed576e0462d20bafdf922c33dd90a65ab4cd"
+    },
+    {
+      "name": "invalid-utf8",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "invalid-utf8.csv",
+        "--output",
+        "results/invalid-utf8.json"
+      ],
+      "exit_status": 1,
+      "readiness": "BLOCKED",
+      "validation_status": null,
+      "known_slots": null,
+      "expected_slots": null,
+      "report_sha256": "d7325a106445bd84a44610064d546da50cf07e6dca70ad0a0de8445e51edb4df"
+    },
+    {
+      "name": "oversized-declaration",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "oversized-declaration.json",
+        "--observations",
+        "web/fixtures/pilot-synthetic-observations.csv",
+        "--output",
+        "results/oversized-declaration.json"
+      ],
+      "exit_status": 1,
+      "readiness": "BLOCKED",
+      "validation_status": null,
+      "known_slots": null,
+      "expected_slots": null,
+      "report_sha256": "ed1baba2922e1274a0a51623b2949cf3f2b7d8c372edf4431d1ecfa663546ef0"
+    },
+    {
+      "name": "oversized-observations",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "oversized-observations.csv",
+        "--output",
+        "results/oversized-observations.json"
+      ],
+      "exit_status": 1,
+      "readiness": "BLOCKED",
+      "validation_status": null,
+      "known_slots": null,
+      "expected_slots": null,
+      "report_sha256": "4e8dcdc22594906bd6c4219deece4156726e65a31acec81f4af4b057397cb75e"
+    },
+    {
+      "name": "existing-output-preserved",
+      "exit_status": 1,
+      "original_report_sha256": "a16b153d877626eabb98a9cff67d066dcf469d2fc0a3b40af6ddaf02d769b736"
+    },
+    {
+      "name": "vendor-tamper",
+      "arguments": [
+        "node",
+        "web/review_pilot.mjs",
+        "--contract",
+        "web/fixtures/pilot-synthetic-declaration.json",
+        "--observations",
+        "web/fixtures/pilot-synthetic-observations.csv",
+        "--output",
+        "results/vendor-tamper.json"
+      ],
+      "exit_status": 1,
+      "readiness": "BLOCKED",
+      "validation_status": null,
+      "known_slots": null,
+      "expected_slots": null,
+      "report_sha256": "bdefe231e15f64860f045a49e6a67de79af3d916e4ee17b0a8a9489dbf6d05e9"
+    }
+  ],
+  "temporary_tree_removed": true,
+  "limitations": [
+    "Numeric observational review only; no authenticated telemetry, safety certification, dispatch permission or model/scheduler change."
+  ]
+}

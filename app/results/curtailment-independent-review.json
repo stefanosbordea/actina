@@ -1,0 +1,256 @@
+{
+  "status": "PASS \u2014 displayed source fields match both exports",
+  "checked_at_utc": "2026-10-01T23:19:16.592522+00:00",
+  "reproducing_command": "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/check_curtailment_report_sources.py --pdf-dir /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/research",
+  "exit_status": 0,
+  "method": "pdfplumber direct word positions x0 in(170,250), top in(100,445); dates, Group1 windows, main estimated energies and reported percentages compared independently against JSON and CSV; Group2 windows checked against JSON (CSV exports Group1 only); no importer functions reused",
+  "checked_dates": [
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03",
+    "2026-07-04",
+    "2026-07-05",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-11",
+    "2026-07-12",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-25",
+    "2026-07-26",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-22",
+    "2026-08-23",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-29",
+    "2026-08-30",
+    "2026-08-31"
+  ],
+  "source_and_input_sha256": {
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/research/EAC-distribution-curtailments-2026-07.pdf": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/research/EAC-distribution-curtailments-2026-08.pdf": "b269c30d623497d496d3225e8334d72f60547fa1a3314b305faeedcb2b76c62d",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/data/eac_curtailment_days.json": "cf6b5a56cf867a5147f11ae3ee08b911f9e6106db14e87ba2d6bf7e874d3380c",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/data/eac_curtailment_days.csv": "965d1f4289b8aaa5998dc878bb3b5432ce2a535c55b0366f884bdf059458a14b",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/data/grid-reports/eac-report-sources.json": "24693d7eb558789f0998aa58b1e2f7ac1be1958f96c8f8dd108e27f1a0e454f5",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/check_curtailment_report_sources.py": "6a4b5e230653e74d0ac4dcec003e55c5fcb5f5d94f826aa5a021b729901c6846"
+  },
+  "full_page_visual_review": [
+    "August25",
+    "August29",
+    "August30"
+  ],
+  "reason_text_variants": [
+    "\u039b\u03cc\u03b3\u03bf\u03c2 \u03a0\u03b5\u03c1\u03b9\u03ba\u03bf\u03c0\u03ae\u03c2: \u03a0\u03b5\u03c1\u03b9\u03bf\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2 \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u0391\u03a0\u0395 \u03bb\u03bf\u03b3\u03c9 \u03c7\u03b1\u03bc\u03b7\u03bb\u03ae\u03c2 \u03c6\u03cc\u03c1\u03c4\u03b9\u03c3\u03b7\u03c2 \u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03b9\u03ba\u03bf\u03cd \u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2"
+  ],
+  "source_arithmetic_discrepancies": [
+    {
+      "date": "2026-07-02",
+      "reported_percent": 31.79,
+      "ratio_percent": 31.778365566280787,
+      "ratio_interval_from_displayed_precision": [
+        31.776102227641996,
+        31.780628982669487
+      ],
+      "reported_percent_interval": [
+        31.785,
+        31.794999999999998
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-03",
+      "reported_percent": 32.85,
+      "ratio_percent": 32.83450704225352,
+      "ratio_interval_from_displayed_precision": [
+        32.82696708325999,
+        32.84204965662969
+      ],
+      "reported_percent_interval": [
+        32.845,
+        32.855000000000004
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-04",
+      "reported_percent": 57.13,
+      "ratio_percent": 57.11172246239594,
+      "ratio_interval_from_displayed_precision": [
+        57.10891584344129,
+        57.11452918162817
+      ],
+      "reported_percent_interval": [
+        57.125,
+        57.135000000000005
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-07",
+      "reported_percent": 21.62,
+      "ratio_percent": 21.59338267305181,
+      "ratio_interval_from_displayed_precision": [
+        21.590976550905317,
+        21.59578889042804
+      ],
+      "reported_percent_interval": [
+        21.615000000000002,
+        21.625
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-08",
+      "reported_percent": 30.02,
+      "ratio_percent": 30.002617703152463,
+      "ratio_interval_from_displayed_precision": [
+        30.00018697530056,
+        30.005048521904975
+      ],
+      "reported_percent_interval": [
+        30.015,
+        30.025
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-09",
+      "reported_percent": 34.07,
+      "ratio_percent": 34.06090996239216,
+      "ratio_interval_from_displayed_precision": [
+        34.05843856576643,
+        34.06338145014103
+      ],
+      "reported_percent_interval": [
+        34.065,
+        34.075
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-07-11",
+      "reported_percent": 57.64,
+      "ratio_percent": 57.6270014178511,
+      "ratio_interval_from_displayed_precision": [
+        57.6242759574652,
+        57.62972697248976
+      ],
+      "reported_percent_interval": [
+        57.635,
+        57.645
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-08-03",
+      "reported_percent": 28.38,
+      "ratio_percent": 28.371879199377606,
+      "ratio_interval_from_displayed_precision": [
+        28.36960942058454,
+        28.374149058438682
+      ],
+      "reported_percent_interval": [
+        28.375,
+        28.384999999999998
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-08-14",
+      "reported_percent": 14.75,
+      "ratio_percent": 14.739285008888011,
+      "ratio_interval_from_displayed_precision": [
+        14.736452289840761,
+        14.74211786781226
+      ],
+      "reported_percent_interval": [
+        14.745,
+        14.755
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-08-17",
+      "reported_percent": 31.16,
+      "ratio_percent": 31.137724550898206,
+      "ratio_interval_from_displayed_precision": [
+        31.13447977236175,
+        31.14096949001559
+      ],
+      "reported_percent_interval": [
+        31.155,
+        31.165
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    },
+    {
+      "date": "2026-08-25",
+      "reported_percent": 9.49,
+      "ratio_percent": 9.435470973932514,
+      "ratio_interval_from_displayed_precision": [
+        9.415292353823089,
+        9.455650400815626
+      ],
+      "reported_percent_interval": [
+        9.485,
+        9.495000000000001
+      ],
+      "cause": "Unknown source arithmetic discrepancy; imported values faithfully retained"
+    }
+  ],
+  "scope": "Main EAC report fields only. Separate Ripple/IoT values excluded; not all-PV totals, not Paphos plant allocation or recovered energy",
+  "ripple_iot_visual_checks": {
+    "2026-08-29": {
+      "main_mwh": 805.8,
+      "ripple_mwh": 230.1,
+      "iot_mwh": 88.6
+    },
+    "2026-08-30": {
+      "main_mwh": 1796.1,
+      "ripple_mwh": 567.6,
+      "iot_mwh": 727.0
+    }
+  }
+}

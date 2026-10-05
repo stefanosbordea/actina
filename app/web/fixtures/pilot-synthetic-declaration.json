@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "label": "Synthetic observation intake example",
+  "source_kind": "synthetic_fixture",
+  "source_label": "Bundled invented QA data; no plant meter",
+  "timezone": "Europe/Nicosia",
+  "window": {
+    "start": "2026-07-01T10:00:00+03:00",
+    "end": "2026-07-01T14:00:00+03:00"
+  },
+  "cadence_minutes": 60,
+  "assets": [
+    {
+      "asset_id": "tank-demo",
+      "label": "Illustrative tank",
+      "measurements": [
+        {
+          "measurement": "tank_storage_m3",
+          "unit": "m3",
+          "min": 0,
+          "max": 4000
+        }
+      ],
+      "tank_reserve_m3": 800
+    },
+    {
+      "asset_id": "unit-demo",
+      "label": "Illustrative desalination unit",
+      "measurements": [
+        {
+          "measurement": "unit_load_kw",
+          "unit": "kW",
+          "min": 0,
+          "max": 1700
+        },
+        {
+          "measurement": "production_rate_m3_h",
+          "unit": "m3/h",
+          "min": 0,
+          "max": 500
+        }
+      ]
+    },
+    {
+      "asset_id": "grid-demo",
+      "label": "Operator signal example",
+      "measurements": [
+        {
+          "measurement": "available_power_kw",
+          "unit": "kW",
+          "min": 0,
+          "max": 1700
+        }
+      ]
+    }
+  ]
+}

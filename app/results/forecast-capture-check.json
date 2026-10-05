@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-02T00:26:59.011238+00:00",
+  "status": "PASS",
+  "scope": "Supplied-file local capture and byte verification only; no source authentication or timestamp attestation.",
+  "sources": {
+    "scripts/record_forecast_handoff.py": {
+      "bytes": 8403,
+      "sha256": "8ee0256c6b37f0378df60b75533e58dbe67dbac5d81f4f33e2ebe64c83d80db5"
+    },
+    "tests/test_forecast_capture.py": {
+      "bytes": 12784,
+      "sha256": "3221cc3a71b886b25d5e2b35cd0bf5fa661785a33aac7e6e6a988898daa0f165"
+    }
+  },
+  "runtime": {
+    "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "dependencies": "Python standard library only"
+  },
+  "unit_tests": {
+    "count": 24,
+    "exit_code": 0,
+    "passed": true
+  },
+  "runs": [
+    {
+      "label": "stdlib-tests-strict",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_forecast_capture.py",
+        "-v"
+      ],
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+      "env": {
+        "TMPDIR": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/tmp",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log_basename": "stdlib-tests-strict.log",
+      "log_sha256": "41286e52cd69732865afb3b3049f1194cf509fc1d6ffe909cad8e22e94c3c95b"
+    },
+    {
+      "label": "strict-capture",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/record_forecast_handoff.py",
+        "capture",
+        "--predictions",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-predictions.csv",
+        "--weather",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-weather.csv",
+        "--features",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-features.csv",
+        "--metadata",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-metadata.json",
+        "--output",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/strict-synthetic-capture"
+      ],
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log_basename": "strict-capture.log",
+      "log_sha256": "949afac21beba96010cd73803b9685140f4952942b99227c0488ddfba5445bcd"
+    },
+    {
+      "label": "strict-verify",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/record_forecast_handoff.py",
+        "verify",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/strict-synthetic-capture"
+      ],
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log_basename": "strict-verify.log",
+      "log_sha256": "6e11d03fa0bd9e1c8438bd54a493b7f830f131c8035754a07664bc126130818b"
+    },
+    {
+      "label": "strict-duplicate-output",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/record_forecast_handoff.py",
+        "capture",
+        "--predictions",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-predictions.csv",
+        "--weather",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-weather.csv",
+        "--features",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-features.csv",
+        "--metadata",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/synthetic-fixtures/synthetic-metadata.json",
+        "--output",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/strict-synthetic-capture"
+      ],
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_basename": "strict-duplicate-output.log",
+      "log_sha256": "f9345ac896880429649a13c9d5af37ef0d80d1ac6abd24a1ded64cd514c3e67c"
+    },
+    {
+      "label": "strict-tampered-copy",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/scripts/record_forecast_handoff.py",
+        "verify",
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/forecast-capture-check/strict-synthetic-tampered-copy"
+      ],
+      "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_basename": "strict-tampered-copy.log",
+      "log_sha256": "fce573eb0111e3c9571075bcedc38826074561d39d10c8029c37fa2c8a663c24"
+    }
+  ],
+  "fixture_kind": "Clearly synthetic; no private communications or real forecasts captured.",
+  "fixtures": {
+    "predictions": {
+      "basename": "synthetic-predictions.csv",
+      "bytes": 52,
+      "sha256": "d12fc1d7fa385ead871bae0a34288e0242dc8a25e5acc234349e522e81d8df34",
+      "base64": "77u/dGltZSxwcmVkaWN0ZWQNCjIwMjYtMTAtMDNUMDA6MDA6MDArMDM6MDAsMTIzLjUNCg=="
+    },
+    "weather": {
+      "basename": "synthetic-weather.csv",
+      "bytes": 53,
+      "sha256": "f29f0245a0f27c4a7626ace6f7c4cf8f67d39de00d67c6d6f2aaeab517ad7d62",
+      "base64": "77u/dGltZSxjbG91ZF9jb3Zlcg0KMjAyNi0xMC0wMlQxMjowMDowMCswMzowMCwyMS4wDQo="
+    },
+    "features": {
+      "basename": "synthetic-features.csv",
+      "bytes": 43,
+      "sha256": "9af4a129ee7cde9074643f768f2fde13119e76cc7768fa77871879d4a960a24c",
+      "base64": "dGltZSxsYWcNCjIwMjYtMTAtMDNUMDA6MDA6MDArMDM6MDAsMTAwLjANCg=="
+    },
+    "metadata": {
+      "basename": "synthetic-metadata.json",
+      "bytes": 66,
+      "sha256": "5491098d649e698a9f70ebba67b81e8eec79c7eeaec31fb4a328cb70639dcf4d",
+      "base64": "eyJzb3VyY2Vfa2luZCI6InN5bnRoZXRpYyB0ZXN0IGZpeHR1cmUiLCJ0cmFpbmluZyI6InVudmVyaWZpZWQifQ0K"
+    }
+  },
+  "capture_manifest": {
+    "schema": 1,
+    "tool": "AquaShift supplied-file capture",
+    "scope": "Local first-observed capture times only; not original NWP publication, forecast issue or training times. No source authentication or timestamp attestation.",
+    "capture_started_at_utc": "2026-10-02T00:26:58.828660+00:00",
+    "capture_finished_at_utc": "2026-10-02T00:26:58.831063+00:00",
+    "read_semantics": "One bounded raw read per supplied role; hashes and payloads use that snapshot.",
+    "provenance_status": {
+      "source": "unverified",
+      "training": "unverified",
+      "feature_timing": "unverified"
+    },
+    "roles": {
+      "predictions": {
+        "basename": "synthetic-predictions.csv",
+        "bytes": 52,
+        "sha256": "d12fc1d7fa385ead871bae0a34288e0242dc8a25e5acc234349e522e81d8df34",
+        "payload": "payloads/d12fc1d7fa385ead871bae0a34288e0242dc8a25e5acc234349e522e81d8df34.bin",
+        "first_observed_here_at_utc": "2026-10-02T00:26:58.829532+00:00"
+      },
+      "weather": {
+        "basename": "synthetic-weather.csv",
+        "bytes": 53,
+        "sha256": "f29f0245a0f27c4a7626ace6f7c4cf8f67d39de00d67c6d6f2aaeab517ad7d62",
+        "payload": "payloads/f29f0245a0f27c4a7626ace6f7c4cf8f67d39de00d67c6d6f2aaeab517ad7d62.bin",
+        "first_observed_here_at_utc": "2026-10-02T00:26:58.829984+00:00"
+      },
+      "features": {
+        "basename": "synthetic-features.csv",
+        "bytes": 43,
+        "sha256": "9af4a129ee7cde9074643f768f2fde13119e76cc7768fa77871879d4a960a24c",
+        "payload": "payloads/9af4a129ee7cde9074643f768f2fde13119e76cc7768fa77871879d4a960a24c.bin",
+        "first_observed_here_at_utc": "2026-10-02T00:26:58.830476+00:00"
+      },
+      "metadata": {
+        "basename": "synthetic-metadata.json",
+        "bytes": 66,
+        "sha256": "5491098d649e698a9f70ebba67b81e8eec79c7eeaec31fb4a328cb70639dcf4d",
+        "payload": "payloads/5491098d649e698a9f70ebba67b81e8eec79c7eeaec31fb4a328cb70639dcf4d.bin",
+        "first_observed_here_at_utc": "2026-10-02T00:26:58.830870+00:00"
+      }
+    }
+  },
+  "capture_manifest_sha256": "11d5b70d3de4150cf7a5ef62cd7966c4f512a38533ed7f1e11b12b276c453e0b",
+  "controls": {
+    "exact_BOM_and_CRLF": true,
+    "snapshot_mutation_after_original_read": true,
+    "existing_output_preserved": true,
+    "atomic_exclusive_final_manifest": true,
+    "incomplete_capture_rejected_and_not_reused": true,
+    "tamper_and_missing_payload_rejected": true,
+    "symlink_and_traversal_rejected": true,
+    "byte_limits_and_nonregular_input_rejected": true,
+    "no_backdate_option": true,
+    "strict_integer_schema": true,
+    "unknown_manifest_or_role_claims_rejected": true,
+    "exact_tool_and_read_semantics_required": true
+  },
+  "limits": {
+    "file_bytes": 26214400,
+    "combined_role_bytes": 52428800,
+    "manifest_bytes": 131072
+  },
+  "timing_limits": [
+    "Local capture times come from the machine clock and can be changed by the operator.",
+    "First observed here does not establish original provider publication or forecast issue time.",
+    "capture_finished_at_utc records completion of payload writing before final manifest publication.",
+    "Source identity, model training and feature availability remain unverified.",
+    "Verification compares bytes with an unsigned supplied manifest; jointly changed manifest and payloads cannot be authenticated."
+  ],
+  "filesystem_limits": [
+    "A complete manifest is atomically published through an exclusive hard link; the filesystem must support hard links.",
+    "New directories are reserved exclusively before reading inputs. Any failure leaves a partial directory and never reuses it.",
+    "No guarantee against power loss, hostile concurrent local replacement or a modified tool is claimed."
+  ],
+  "reproduction": "Use the listed fixtures base64 to reconstruct exact bytes; run the recorded argv with project/external paths adapted to existing directories. Output directories must be new.",
+  "unchanged_scope": [
+    "No fetch, network, model fitting, scheduler, prediction semantics validation, issue-time inference, sending or automation."
+  ],
+  "history": [
+    {
+      "scope": "Original 20-test capture version, superseded by strict schema/claim checks",
+      "receipt_sha256": "421c171e84eac647d7ebe126bbd6cf1e7396b2bfe400e551e79fc5139c8d1ada",
+      "external_basename": "forecast-capture-check-pre-strict.json"
+    }
+  ]
+}

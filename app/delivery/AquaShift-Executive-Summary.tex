@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=19mm]{geometry}
+\usepackage[T1]{fontenc}\usepackage{tgheros,textcomp}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor,tikz,hyperref}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{navy}{HTML}{171717}\definecolor{teal}{HTML}{242424}
+\definecolor{gold}{HTML}{A0A0A0}\definecolor{pale}{HTML}{F2F2F2}
+\definecolor{muted}{HTML}{626262}
+\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={AquaShift executive summary},pdfauthor={Loucas Louka; AquaShift team}}
+\pagestyle{empty}\setlength{\parindent}{0pt}\setlength{\parskip}{7pt}
+\color{navy}
+\begin{document}
+{\small\color{teal} AQUASHIFT \hfill PAFOS 2.0 / TEAM REVIEW DRAFT}
+\vspace{12mm}
+
+{\fontsize{35}{39}\selectfont\bfseries Make water with\par surplus solar.}
+
+\vspace{3mm}
+{\large Cyprus curtails solar generation while water production needs electricity.\par Make drinking water during that window; store it for Paphos's later demand.}
+
+\vspace{8mm}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,line cap=round,line join=round]
+\fill[pale,rounded corners=1mm] (0,0) rectangle (17.2,5.3);
+\fill[gold] (1.3,4.25) circle (.32);
+\foreach \a in {0,45,...,315}{\draw[gold,line width=1pt] (1.3,4.25) ++(\a:.43)--++(\a:.18);}
+\foreach \i in {0,1,2}{\foreach \j in {0,1}{\fill[navy] (0.7+\i*.64,2.65+\j*.47) rectangle ++(.56,.38);}}
+\draw[muted,line width=2pt] (.65,2.52)--(2.67,2.52);
+\node[font=\bfseries\small] at (1.65,1.65) {Solar};
+\draw[gold,line width=2.6pt,->] (2.85,2.95)--(4.0,2.95);
+\fill[white,rounded corners=0mm] (4.15,2.15) rectangle (7.1,3.75);
+\draw[teal,line width=1.3pt,rounded corners=0mm] (4.15,2.15) rectangle (7.1,3.75);
+\foreach \i in {0,1,2}{\fill[teal!15] (4.53+\i*.72,2.45) rectangle ++(.5,1.0);\draw[teal] (4.53+\i*.72,2.45) rectangle ++(.5,1.0);}
+\node[font=\bfseries\small] at (5.6,1.65) {Desalination};
+\node[font=\scriptsize,text=muted] at (5.6,1.16) {Seawater to drinking water};
+\draw[teal,line width=2.6pt,->] (7.35,2.95)--(8.45,2.95);
+\fill[white] (8.75,2.12) rectangle (11.17,4.0);
+\fill[teal!25] (8.75,2.12) rectangle (11.17,3.32);
+\draw[teal,line width=1.3pt] (8.75,4)--(8.75,2.12) arc[start angle=180,end angle=360,x radius=1.21,y radius=.2]--(11.17,4);
+\draw[teal,line width=1.3pt] (9.96,4) ellipse (1.21 and .22);
+\draw[teal!55] (8.75,3.32)--(11.17,3.32);
+\node[font=\bfseries\small] at (9.96,1.65) {Water tank};
+\draw[teal,line width=2.6pt,->] (11.45,2.95)--(12.55,2.95);
+\foreach \i in {0,1}{\fill[white] (12.85+\i*1.4,2.25) rectangle ++(1.05,1.05);\draw[navy,line width=1.2pt] (12.7+\i*1.4,3.3)--++(.675,.65)--++(.675,-.65);\draw[navy] (12.85+\i*1.4,3.3)--++(0,-1.05)--++(1.05,0)--++(0,1.05);\fill[gold!75] (13.08+\i*1.4,2.7) rectangle ++(.2,.26);}
+\node[font=\bfseries\small] at (14.05,1.65) {Use it later};
+\node[font=\scriptsize,text=muted] at (8.6,.5) {The tank shifts water production in time; spare plant capacity makes the shift possible.};
+\end{tikzpicture}
+
+\vspace{6mm}
+\begin{minipage}[t]{.48\linewidth}
+{\large\bfseries What we have}\par
+An operations workspace and a local experiment. A machine-learning radiation reference identifies sunny hours. Pick a day and tank size; inspect production, storage and forecast errors. Compare plans with 62 reported grid windows and record a review.
+
+The sunny-hour flag is a proxy. Actual curtailed electricity absorbed remains unmeasured.
+\end{minipage}\hfill
+\begin{minipage}[t]{.47\linewidth}
+{\large\bfseries What we need}\par
+A water operator's demand, tank and plant limits, plus grid curtailment signals. Test whether extra daytime production can safely absorb otherwise lost electricity and reduce operating costs while maintaining water supply.
+
+Grid serves water operators. Sites, a separate garden and leak demo, offers a smaller pilot route. Pricing still needs customer evidence.
+\end{minipage}
+
+\vfill
+\hrule height .5pt\vspace{3mm}
+{\footnotesize Original concept and philosophy: Loucas Louka. Roadmap development: Stefanos. Technical work: Loucas and Stefanos. Business: Andreas Nikolaides and Cleopas Cleopa.\par
+Codex assisted the implementation and drafts; the team must review them. Sources: Stefanos's 30 September roadmap and pitch; retained prototype results; \href{https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx}{EAC's July and August 2026 curtailment reports}.}
+\end{document}

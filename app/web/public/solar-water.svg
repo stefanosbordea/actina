@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Solar power becomes stored drinking water</title>
+  <desc id="desc">An isometric solar array feeds a compact desalination module, connected by illuminated blue pipes to a translucent water reservoir.</desc>
+  <defs>
+    <linearGradient id="cell" x1="0" y1="0" x2="180" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132338"/><stop offset=".48" stop-color="#0d1726"/><stop offset="1" stop-color="#1a3348"/>
+    </linearGradient>
+    <linearGradient id="cellSheen" x1="0" y1="0" x2="180" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76c8ee" stop-opacity=".2"/><stop offset=".5" stop-color="#93d5ef" stop-opacity="0"/><stop offset="1" stop-color="#4781a2" stop-opacity=".13"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="-14" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9cabb7"/><stop offset=".18" stop-color="#c2d1d7"/><stop offset=".36" stop-color="#576673"/><stop offset=".7" stop-color="#25323e"/><stop offset="1" stop-color="#667886"/>
+    </linearGradient>
+    <linearGradient id="base" x1="486" y1="372" x2="689" y2="468" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#252c35"/><stop offset="1" stop-color="#141b23"/>
+    </linearGradient>
+    <linearGradient id="power" x1="280" y1="300" x2="518" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#db902b"/><stop offset=".55" stop-color="#ffc96b"/><stop offset="1" stop-color="#faf0c0"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="421" y1="460" x2="1050" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1455a6"/><stop offset=".4" stop-color="#298cfa"/><stop offset=".7" stop-color="#70e8ff"/><stop offset="1" stop-color="#2587b8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="762" y1="298" x2="998" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#46c3f4" stop-opacity=".16"/><stop offset=".2" stop-color="#5ac9f2" stop-opacity=".035"/><stop offset=".64" stop-color="#3eabda" stop-opacity=".055"/><stop offset=".89" stop-color="#93e9ff" stop-opacity=".16"/><stop offset="1" stop-color="#3a9bc2" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="water" x1="880" y1="273" x2="880" y2="486" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#53d8ff" stop-opacity=".2"/><stop offset=".5" stop-color="#1489d1" stop-opacity=".2"/><stop offset="1" stop-color="#0d3864" stop-opacity=".58"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="757" y1="186" x2="1002" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5597ae"/><stop offset=".46" stop-color="#b6edff"/><stop offset="1" stop-color="#326178"/>
+    </linearGradient>
+    <radialGradient id="sunGlow">
+      <stop stop-color="#ffc96b" stop-opacity=".18"/><stop offset=".45" stop-color="#ffc96b" stop-opacity=".055"/><stop offset="1" stop-color="#ffc96b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="waterGlow">
+      <stop stop-color="#218dda" stop-opacity=".1"/><stop offset="1" stop-color="#218dda" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sun" x1="142" y1="80" x2="179" y2="115" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe2a0"/><stop offset="1" stop-color="#d68b26"/>
+    </linearGradient>
+    <g id="solarPanel">
+      <path d="M69 50V91M195-22V23M69 77 195 5" stroke="#536370" stroke-width="3"/>
+      <path d="m55 100 28-16m98-53 28-16" stroke="#76828d" stroke-width="3"/>
+      <path d="M0 0v5l69 50 126-72v-5L69 50Z" fill="#263444" stroke="#778894" stroke-width=".8"/>
+      <g transform="matrix(.7 -.4 .55 .4 0 0)">
+        <rect width="180" height="126" rx="2" fill="#6e8a9b"/>
+        <rect x="3" y="3" width="174" height="120" fill="url(#cell)"/>
+        <path d="M32 3v120M61 3v120M90 3v120M119 3v120M148 3v120M3 33h174M3 63h174M3 93h174" stroke="#4a7695" stroke-width="1.15"/>
+        <path d="M6 17h168M6 48h168M6 78h168M6 108h168" stroke="#366783" stroke-width=".6" opacity=".65"/>
+        <path d="M3 3h174v120H3Z" fill="url(#cellSheen)"/>
+        <path d="M4 4h172M4 4v118" stroke="#aad1df" stroke-width="1.2" opacity=".7"/>
+      </g>
+    </g>
+    <g id="membrane">
+      <rect x="0" y="-13" width="130" height="26" rx="11" fill="url(#metal)" stroke="#94a9b5" stroke-width=".8"/>
+      <path d="M13-12v24M109-12v24" stroke="#263947" stroke-width="4"/>
+      <path d="M15-11v22M111-11v22" stroke="#8a9daa" stroke-width="1"/>
+      <path d="M21-8h80" stroke="#e0f0f5" stroke-width="1.2" opacity=".55"/>
+      <ellipse cx="128" cy="0" rx="7" ry="12" fill="#263b48" stroke="#a7c1cb"/>
+      <ellipse cx="128" cy="0" rx="3.5" ry="6.5" fill="#122a39" stroke="#46a9d3"/>
+      <path d="M129 0h10" stroke="#5fc3e6" stroke-width="4"/>
+    </g>
+  </defs>
+
+  <ellipse cx="864" cy="388" rx="235" ry="194" fill="url(#waterGlow)"/>
+  <ellipse cx="168" cy="111" rx="125" ry="110" fill="url(#sunGlow)"/>
+
+  <!-- Ground plane and the two physical connections. -->
+  <g stroke="#a6bccb" stroke-opacity=".065" stroke-width="1">
+    <path d="m38 428 248 143 764-442M90 458 764 68M218 532 951 109M378 573 688 394M59 350l392 226M165 289l440 254M323 198l725 419M475 110l568 328"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="m202 373 70 40 104-60 98 57 41-24" stroke="#e3a543" stroke-width="10" opacity=".065"/>
+    <path d="m202 373 70 40 104-60 98 57 41-24" stroke="url(#power)" stroke-width="2.4"/>
+    <path d="m329 287 47 27v39M320 445l56-32v-60" stroke="#dfaa54" stroke-width="1.4" opacity=".65"/>
+    <path d="m399 495 76-44 50 29 45-26" stroke="#2c8df4" stroke-width="11" opacity=".075"/>
+    <path d="m399 495 76-44 50 29 45-26" stroke="url(#pipe)" stroke-width="3.5"/>
+    <path d="m681 399 73 42 75-43" stroke="#279fff" stroke-width="13" opacity=".075"/>
+    <path d="m681 399 73 42 75-43" stroke="url(#pipe)" stroke-width="4.5"/>
+    <path d="m683 395 71 41 71-41" stroke="#a1edff" stroke-width="1" opacity=".55"/>
+    <path d="m994 412 61 35-62 36" stroke="url(#pipe)" stroke-width="3.5"/>
+  </g>
+
+  <!-- Solar array: metal frames, cell grids and angled supports. -->
+  <use href="#solarPanel" x="199" y="221"/>
+  <use href="#solarPanel" x="64" y="299"/>
+  <use href="#solarPanel" x="203" y="379"/>
+  <circle cx="160" cy="95" r="20" fill="url(#sun)"/>
+  <circle cx="160" cy="95" r="28" stroke="#efb85f" stroke-opacity=".2"/>
+  <g stroke="#e7b763" stroke-linecap="round">
+    <path d="m142 131-18 54m60-55 27 45m-61-15-17 48" stroke-width="1.3" opacity=".38"/>
+    <path d="m121 103-8 3m69-49 4-8m11 54 9 3M158 59l-1-9" opacity=".5"/>
+  </g>
+
+  <!-- Desalination skid and its pressure vessels. -->
+  <path d="m474 403 139 80 116-67-140-80Z" fill="#0a0d12" opacity=".6"/>
+  <path d="m480 395 136 78v21l-136-78Z" fill="#151e27" stroke="#46515b" stroke-width=".8"/>
+  <path d="m616 473 106-62v21l-106 62Z" fill="#10171f" stroke="#4f6674" stroke-width=".8"/>
+  <path d="m480 395 106-62 136 78-106 62Z" fill="url(#base)" stroke="#677d8c" stroke-width="1"/>
+  <path d="m495 396 91-52 121 69-91 52Z" stroke="#627989" stroke-opacity=".35"/>
+  <g stroke="#647685" stroke-width="3">
+    <path d="M515 319v75m66-113v76m113-6v62m-65-25v64"/>
+    <path d="m515 376 66-38 113 65m-179-61 113 65 66-38"/>
+  </g>
+  <g stroke="#acc1cc" stroke-width=".8" opacity=".7">
+    <path d="M513 319v75m66-113v76m113-6v62m-65-25v64"/>
+  </g>
+  <use href="#membrane" transform="matrix(.82 .475 0 1 580 269)"/>
+  <use href="#membrane" transform="matrix(.82 .475 0 1 548 287)"/>
+  <use href="#membrane" transform="matrix(.82 .475 0 1 516 305)"/>
+  <path d="m511 305-12-7v43l61 35m-14-89-47 27m78-45-78 45" stroke="#477189" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m630 371 63-36v48l-26 15" stroke="#60b4d6" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="m663 351 30 17" stroke="#60b4d6" stroke-width="3.5"/>
+
+  <!-- Motor, pump and a small local control enclosure. -->
+  <path d="m520 380 29-17 45 26-29 17Z" fill="#485a68" stroke="#7f96a5"/>
+  <path d="M520 380v25l45 26v-25Z" fill="#24333f" stroke="#5a7181"/>
+  <path d="m565 406 29-17v25l-29 17Z" fill="#142c3b" stroke="#54798e"/>
+  <path d="m526 386 31 18m-31-11 31 18m-31-11 31 18" stroke="#7a8c98" stroke-width="1.5"/>
+  <ellipse cx="584" cy="410" rx="12" ry="16" fill="#264b61" stroke="#75b9d1" transform="rotate(28 584 410)"/>
+  <ellipse cx="584" cy="410" rx="5" ry="7" fill="#102a3b" stroke="#4898c2" transform="rotate(28 584 410)"/>
+  <path d="M584 424v18l-14 8m16-54v-22" stroke="#609ab8" stroke-width="4" stroke-linecap="round"/>
+  <path d="m447 328 27-16 35 20-27 16Z" fill="#455361" stroke="#738391"/>
+  <path d="M447 328v59l35 20v-59Z" fill="#202c37" stroke="#70808e"/>
+  <path d="m482 348 27-16v59l-27 16Z" fill="#111d27" stroke="#586d7c"/>
+  <path d="m455 342 18 10v14l-18-10Z" fill="#102635" stroke="#315c73"/>
+  <path d="m459 350 10 6" stroke="#8ce0f4" stroke-width="1.5"/>
+  <path d="m455 369 18 10m-18-5 11 6" stroke="#657987" stroke-width="1.2"/>
+  <path d="M502 387v16l-16 9" stroke="#ddac60" stroke-width="2"/>
+
+  <!-- Reservoir: outer shell, water volume, surface and restrained structural rims. -->
+  <ellipse cx="880" cy="428" rx="128" ry="74" fill="#070b10" opacity=".8"/>
+  <path d="M756 416v10c0 40 55 73 124 73s124-33 124-73v-10" fill="#101d28" stroke="#365b70"/>
+  <ellipse cx="880" cy="416" rx="124" ry="71" fill="#102535" stroke="#537b8e"/>
+  <path d="M762 200v219c0 36 53 65 118 65s118-29 118-65V200" fill="url(#glass)" stroke="#5796b0" stroke-opacity=".62" stroke-width="1.2"/>
+  <path d="M764 291v127c0 35 52 63 116 63s116-28 116-63V291" fill="url(#water)"/>
+  <ellipse cx="880" cy="291" rx="116" ry="64" fill="#389dcc" fill-opacity=".15" stroke="#73dfff" stroke-opacity=".65" stroke-width="1.1"/>
+  <path d="M779 306c18 22 57 37 101 37 43 0 82-15 101-37" stroke="#8bdeef" stroke-opacity=".25"/>
+  <path d="M777 274c23-20 61-31 100-31" stroke="#abedff" stroke-opacity=".38" stroke-linecap="round"/>
+  <path d="M763 364c0 36 52 65 117 65s117-29 117-65" stroke="#4aafd5" stroke-opacity=".16"/>
+  <path d="M763 418c0 36 52 65 117 65s117-29 117-65" stroke="#68c7e8" stroke-opacity=".62"/>
+  <ellipse cx="880" cy="200" rx="118" ry="66" fill="#0e1a23" fill-opacity=".65" stroke="url(#rim)" stroke-width="2.3"/>
+  <ellipse cx="880" cy="200" rx="108" ry="58" stroke="#68b3ce" stroke-opacity=".22"/>
+  <path d="M768 217v195M991 217v194" stroke="#a0dded" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M790 243v186m9-181v174" stroke="#8cddf4" stroke-opacity=".11" stroke-width="3"/>
+  <path d="M962 246v185" stroke="#8ee6ff" stroke-opacity=".22" stroke-width="1.5"/>
+  <path d="M762 200c0 36 53 66 118 66s118-30 118-66" stroke="#8dd3e7" stroke-opacity=".68" stroke-width="1.1"/>
+  <path d="M762 204c0 36 53 66 118 66s118-30 118-66" stroke="#244b61" stroke-width="2"/>
+  <path d="m751 438 20-12v-40" stroke="#60c4eb" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="771" cy="387" rx="8" ry="11" fill="#153f54" stroke="#8bddf3" transform="rotate(-28 771 387)"/>
+  <path d="M771 387v33" stroke="#77dfff" stroke-width="3"/>
+  <ellipse cx="1000" cy="415" rx="7" ry="10" fill="#14374a" stroke="#60b7d6" transform="rotate(28 1000 415)"/>
+
+  <g fill="#96e5fa">
+    <circle cx="754" cy="441" r="3"/>
+    <circle cx="399" cy="495" r="2.5" opacity=".75"/>
+  </g>
+  <circle cx="376" cy="353" r="2.5" fill="#ffce77"/>
+</svg>

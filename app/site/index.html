@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0e11">
+  <meta name="description" content="Explore Aktina’s solar forecasts, desalination schedules and water storage using historical Paphos weather.">
+  <title>Aktina — Solar to water</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./site.css">
+  <script src="./data.js" defer></script>
+  <script src="./site.mjs" type="module"></script>
+</head>
+<body data-state="loading">
+  <a class="skip" href="#day-review">Skip to the schedule</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 16 5l12 21M10 21h12M16 5v9"/></svg><span>Aktina</span></a>
+    <nav aria-label="Main"><a href="#about">About the model</a><a href="./benchmark.html">ActinaBench</a><a href="./workspace/#reviews">Review<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></nav>
+  </header>
+  <main>
+    <section class="introduction" aria-labelledby="purpose">
+      <h1 id="purpose">Use more daylight.<br>Store water for later.</h1>
+      <div><p>Solar forecasts and desalination schedules, in one view. Explore when water is produced and how the tank supplies demand through the day.</p><p class="scope">Historical Paphos weather. Illustrative plant and prices.</p></div>
+    </section>
+    <section id="boot" class="boot" role="status" aria-live="polite"><span class="boot-mark" aria-hidden="true"></span><p>Opening the schedule</p></section>
+    <section id="load-error" class="load-error" role="alert" hidden><h2>The schedule could not open.</h2><p id="error-message">The data file is missing. Restore data.js beside this page and reload.</p><button type="button" id="reload">Reload page</button></section>
+    <section id="day-review" class="day-review" aria-labelledby="review-heading" hidden>
+      <header class="review-header">
+        <div><h2 id="review-heading">A day in Paphos</h2><p id="day-description" aria-live="polite" aria-atomic="true">Forecast, production and stored water.</p></div>
+        <div class="day-picker"><button type="button" id="previous-day" aria-label="Previous available day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 5-5 5 5 5"/></svg></button><label for="day">Choose a day</label><input id="day" type="date" required><button type="button" id="next-day" aria-label="Next available day"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg></button></div>
+      </header>
+      <p id="date-error" class="date-error" role="alert" hidden></p>
+      <nav class="example-days" aria-label="Showcase days">
+        <button type="button" data-date="2026-07-03" aria-pressed="false"><span>Clear summer</span><time datetime="2026-07-03">3 Jul 2026</time></button>
+        <button type="button" data-date="2025-12-10" aria-pressed="false"><span>Cloudy winter</span><time datetime="2025-12-10">10 Dec 2025</time></button>
+        <button type="button" data-date="2026-03-16" aria-pressed="false"><span>Changing weather</span><time datetime="2026-03-16">16 Mar 2026</time></button>
+      </nav>
+      <div class="instrument" aria-label="Linked hourly charts">
+        <section class="chart-section" aria-labelledby="sun-title">
+          <div class="chart-heading"><div><h3 id="sun-title">Sun <span>W/m²</span></h3><div class="legend"><span class="actual">Actual</span><span class="forecast">LightGBM forecast</span></div></div><p id="sun-reading" class="chart-reading"></p></div>
+          <div id="sun-chart" class="plot"></div>
+          <p id="forecast-error" class="forecast-error"></p>
+        </section>
+        <section class="chart-section" aria-labelledby="production-title">
+          <div class="chart-heading"><div><h3 id="production-title">Water production <span>m³ per hour</span></h3><div class="legend"><span class="flat">Flat</span><span class="aktina">Aktina</span></div></div><p id="production-reading" class="chart-reading"></p></div>
+          <div id="production-chart" class="plot"></div>
+          <p id="schedule-status" class="schedule-status"></p>
+        </section>
+        <section class="chart-section" aria-labelledby="tank-title">
+          <div class="chart-heading"><div><h3 id="tank-title">Stored water <span>m³</span></h3><p class="chart-note">At the end of each hour</p></div><p id="tank-reading" class="chart-reading"></p></div>
+          <div id="tank-chart" class="plot"></div>
+        </section>
+        <div class="hour-control"><label for="hour">Inspect hour <output id="hour-label" for="hour">12:00–13:00</output></label><input id="hour" type="range" min="0" max="23" value="12" step="1" aria-label="Inspect hour across all charts"><span>Cyprus local time</span></div>
+      </div>
+      <section class="accounting" aria-labelledby="cost-title">
+        <div class="accounting-heading"><h3 id="cost-title">Daily modelled costs</h3><p id="surplus-summary"></p></div>
+        <dl class="costs"><div><dt>Flat production</dt><dd id="flat-cost"></dd></div><div><dt>Aktina</dt><dd id="aktina-cost"></dd></div><div class="cost-change"><dt id="difference-label">Lower daily cost</dt><dd><span id="cost-difference"></span><small id="cost-percent"></small></dd></div></dl>
+        <p id="comparison-note" class="comparison-note"></p>
+        <dl class="water-accounting"><div><dt>Demand</dt><dd id="water-demand"></dd></div><div><dt>Production, flat / Aktina</dt><dd id="water-production"></dd></div><div><dt>Tank, start / end</dt><dd id="water-storage"></dd></div></dl>
+      </section>
+      <details id="about" class="evidence"><summary>Model, assumptions and hourly data</summary>
+        <div class="evidence-content">
+          <section><h3>What this shows</h3><p>Forecast: a LightGBM model trained on two years of Paphos weather from Open-Meteo, predicting the day ahead. Plan: the supplied Aktina scheduler output. These are historical results, not a connection to a working plant.</p><p id="forecast-provenance"></p><p>Plant, demand, storage and electricity prices are illustrative assumptions. A radiation threshold labels the lower-price hours; it does not measure curtailed electricity.</p></section>
+          <section><h3>Cost and storage assumptions</h3><dl id="assumptions" class="assumptions"></dl><p>Hourly cost = production × 3.4 ÷ 1,000 × electricity price. Price is determined by actual radiation. Daily costs compare the supplied plans; production and ending water can differ. Tank levels are supplied end-of-hour values.</p></section>
+          <section class="source"><h3>Source</h3><p><a id="source-repository" href="https://github.com/stefanosbordea/actina">stefanosbordea/actina</a><br><a href="./schedule_hourly.csv" download>Download the supplied schedule</a></p><dl><dt>Commit</dt><dd id="source-commit"></dd><dt>Schedule SHA-256</dt><dd id="source-hash"></dd></dl></section>
+          <section class="hourly-data"><h3>Hourly data <span id="table-date"></span></h3><p>Time identifies the hour’s start. Tank is measured at its end. Plan input is the forecast column from the supplied schedule.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Hourly data, scroll horizontally for all columns"><table><caption class="visually-hidden">Selected day’s source values</caption><thead><tr><th scope="col">Hour</th><th scope="col">Actual<br>W/m²</th><th scope="col">LightGBM<br>W/m²</th><th scope="col">Plan input<br>W/m²</th><th scope="col">Demand<br>m³</th><th scope="col">Flat<br>m³</th><th scope="col">Aktina<br>m³</th><th scope="col">Tank<br>m³</th></tr></thead><tbody id="hourly-rows"></tbody></table></div></section>
+        </div>
+      </details>
+    </section>
+  </main>
+  <footer><a class="brand" href="./">Aktina</a><p>Concept and product: Loukas Louka<br>Forecast and scheduler: Stefanos</p><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
+  <noscript><p class="load-error">Enable JavaScript to explore the charts. The supplied schedule remains available as a CSV file.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "kind": "synthetic_matched_water_proof",
+  "arithmetic": "Python Fraction, exact rational arithmetic",
+  "scope": "Fixed supplied analytical traces only. No plant, solar, electrical or field-benefit claim.",
+  "results": {
+    "flat": {
+      "initial_m3": "2",
+      "capacity_m3": "4",
+      "reserve_m3": "1",
+      "demand_m3_h": "2",
+      "target_m3": "2",
+      "produced_m3": "4",
+      "delivered_m3": "4",
+      "unserved_m3": "0",
+      "spilled_m3": "0",
+      "end_m3": "2",
+      "minimum_m3": "2",
+      "maximum_m3": "2",
+      "hourly_mean_rates_m3_h": [
+        "2",
+        "2"
+      ],
+      "extrema": [
+        {
+          "elapsed_h": "0",
+          "stock_m3": "2"
+        },
+        {
+          "elapsed_h": "1",
+          "stock_m3": "2"
+        },
+        {
+          "elapsed_h": "2",
+          "stock_m3": "2"
+        }
+      ]
+    },
+    "triangle": {
+      "initial_m3": "2",
+      "capacity_m3": "4",
+      "reserve_m3": "1",
+      "demand_m3_h": "2",
+      "target_m3": "2",
+      "produced_m3": "4",
+      "delivered_m3": "4",
+      "unserved_m3": "0",
+      "spilled_m3": "0",
+      "end_m3": "2",
+      "minimum_m3": "3/2",
+      "maximum_m3": "5/2",
+      "hourly_mean_rates_m3_h": [
+        "2",
+        "2"
+      ],
+      "extrema": [
+        {
+          "elapsed_h": "0",
+          "stock_m3": "2"
+        },
+        {
+          "elapsed_h": "1/2",
+          "stock_m3": "3/2"
+        },
+        {
+          "elapsed_h": "1",
+          "stock_m3": "2"
+        },
+        {
+          "elapsed_h": "3/2",
+          "stock_m3": "5/2"
+        },
+        {
+          "elapsed_h": "2",
+          "stock_m3": "2"
+        }
+      ]
+    }
+  }
+}

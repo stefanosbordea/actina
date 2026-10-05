@@ -1,0 +1,91 @@
+{
+  "input_sha256": {
+    "model/scheduler.py": "0eb27cf63bcaf9e4c9923bfcaae4918d895be3f5afe5fc544917c704f69b5517",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+    "eval/schedule_hourly.csv": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20"
+  },
+  "rows": 7104,
+  "runs": {
+    "unchanged-model": {
+      "exit_code": 0,
+      "script_sha256": "0eb27cf63bcaf9e4c9923bfcaae4918d895be3f5afe5fc544917c704f69b5517",
+      "source_change": null,
+      "output_sha256": "c545422bc9cea15e6ec46bea233fced361e11ace46622426dd6afdb82fd574f7",
+      "comparison_to_provided": {
+        "actual": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "forecast": {
+          "matching_rows": 9,
+          "different_rows": 7095,
+          "max_absolute_difference": 507.15710006432414
+        },
+        "demand": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "flat": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "aktina": {
+          "matching_rows": 6635,
+          "different_rows": 469,
+          "max_absolute_difference": 300.0
+        },
+        "tank": {
+          "matching_rows": 6035,
+          "different_rows": 1069,
+          "max_absolute_difference": 780.0
+        }
+      },
+      "stdout": "Winter\u2013spring: flat \u20ac0.598/m\u00b3, Aktina \u20ac0.576/m\u00b3, saving 3.6%. lowest tank 800 m\u00b3\nSummer: flat \u20ac0.543/m\u00b3, Aktina \u20ac0.488/m\u00b3, saving 10.0%. lowest tank 800 m\u00b3\n"
+    },
+    "persistence-control": {
+      "exit_code": 0,
+      "script_sha256": "0fef4c4fd1368220940631d32af1503c47c3c340b7887abb5d6c418af20454ac",
+      "source_change": "Only forecast selector: day[\"predicted\"] to day[\"baseline\"]",
+      "output_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+      "comparison_to_provided": {
+        "actual": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "forecast": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "demand": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "flat": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "aktina": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        },
+        "tank": {
+          "matching_rows": 7104,
+          "different_rows": 0,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "stdout": "Winter\u2013spring: flat \u20ac0.598/m\u00b3, Aktina \u20ac0.576/m\u00b3, saving 3.6%. lowest tank 800 m\u00b3\nSummer: flat \u20ac0.543/m\u00b3, Aktina \u20ac0.488/m\u00b3, saving 10.2%. lowest tank 800 m\u00b3\n"
+    }
+  },
+  "original_inputs_unchanged": true
+}

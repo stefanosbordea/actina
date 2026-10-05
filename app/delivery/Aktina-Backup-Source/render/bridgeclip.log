@@ -1,0 +1,15 @@
+BridgeClip export 0%
+BridgeClip export 12%
+BridgeClip export 24%
+BridgeClip export 35%
+BridgeClip export 47%
+BridgeClip export 58%
+BridgeClip export 70%
+BridgeClip export 82%
+BridgeClip export 93%
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/scripts/export_bridgeclip_showcase.py", line 180, in <module>
+    main()
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/scripts/export_bridgeclip_showcase.py", line 143, in main
+    raise ValueError("BridgeClip export did not preserve the requested picture, clock, or audio track")
+ValueError: BridgeClip export did not preserve the requested picture, clock, or audio track

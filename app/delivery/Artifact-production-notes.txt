@@ -1,0 +1,93 @@
+AQUASHIFT ARTIFACTS: EDITING AND REBUILDING
+
+Everyday editing
+Open AquaShift-Pafos-2026.pptx in PowerPoint to edit the slides, native charts
+and speaker notes. No Codex runtime, Python, Blender or build folder is needed
+for that. The PDFs and MP4 likewise open in ordinary readers and players.
+After editing notes, update AquaShift-Speaker-Notes.md to keep the two copies
+consistent. The timing is a plan, not a completed human rehearsal.
+
+Checking the delivered notes
+From the extracted AquaShift folder, run:
+  python3 scripts/check_deck_notes.py
+This uses Python's standard library and the delivered PPTX/Markdown only.
+It checks twelve matching notes, presenters, the 830-second plan, word count,
+canvas presentation cue and relevant evidence limitations. It does not render
+slides or claim a visual review. It prints a result without changing any file.
+To save a new receipt, add:
+  --receipt results/deck-notes-current.json
+
+Historical visual checks
+results/deck_check.json and results/deck-notes-check.json record the actual
+earlier build, all-slide rendering and visual comparison. They remain the
+historical records for the delivered deck. The source scripts were later
+adjusted for relocation; that adjustment did not rebuild the deck or repeat
+the recorded visual review. Prior source snapshots remain on the authoring
+host under build/deck-source-at-validation, outside the handoff.
+For an optional fresh comparison, supply all three paths explicitly:
+  python3 scripts/check_deck_notes.py \
+    --compare-deck /absolute/path/to/earlier.pptx \
+    --before-previews /absolute/path/to/earlier-preview-folder \
+    --after-previews /absolute/path/to/current-preview-folder \
+    --receipt results/deck-notes-new-visual-review.json
+The preview folders need slide-01.png through slide-12.png. This mode also
+requires Pillow. Earlier decks/previews are not included in this package.
+
+Rebuilding the deck from source
+This is an optional authoring workflow, separate from editing in PowerPoint.
+The repository location is derived from each script's own location. Rebuilding
+still requires an installed Codex artifact runtime with @oai/artifact-tool,
+the Presentations skill's helper/validator files, Node, Python and Arial.
+The tested skill version is 26.904.11930. These tools are not in the handoff.
+
+The deck scripts accept these environment settings:
+  RUNTIME_NODE_MODULES: Codex runtime's Node node_modules directory
+  RUNTIME_NODE: Node executable used by the presentation helpers
+  RUNTIME_PYTHON: Python executable used by the presentation validators
+  AQUASHIFT_PRESENTATIONS_SKILL: Presentations skill directory
+  AQUASHIFT_ARTIFACT_TOOL_FILE: optional full artifact_tool.mjs path
+Defaults use the current user's usual Codex cache/plugin directories; they
+are not a promise that those dependencies are installed on another machine.
+RUNTIME_NODE defaults to the Node executable running the script. Python's
+default is the sibling Codex dependencies/python/bin/python3 executable.
+
+Example configuration; replace the paths with your actual installed tools:
+  export RUNTIME_NODE_MODULES="/absolute/path/to/dependencies/node/node_modules"
+  export RUNTIME_NODE="/absolute/path/to/dependencies/node/bin/node"
+  export RUNTIME_PYTHON="/absolute/path/to/dependencies/python/bin/python3"
+  export AQUASHIFT_PRESENTATIONS_SKILL="/absolute/path/to/skills/presentations"
+
+First prepare the local model dependencies using requirements.txt, then run:
+  .venv/bin/python scripts/deck_data.py
+This derives build/deck-data.json from the retained evidence and scenario;
+it does not train a model. Then run:
+  "$RUNTIME_NODE" scripts/deck.mjs build/rebuilt/AquaShift-Pafos-2026.pptx
+  "$RUNTIME_NODE" scripts/render_deck.mjs \
+    build/rebuilt/AquaShift-Pafos-2026.pptx build/rebuilt-previews
+The builder also rewrites delivery/AquaShift-Speaker-Notes.md. Keep a copy of
+any manual notes edits before rebuilding. Inspect all twelve rendered slides
+before replacing the delivered deck or creating a new visual-review receipt.
+
+Blender scenes and finished film
+The delivered 90-second MP4 now has quiet original instrumental music only;
+the spoken voice was removed at the operator's request. Pictures, on-screen
+text, caption file and timing are unchanged: the compressed video stream
+was copied byte for byte. results/video-no-voice.json records the edit,
+full decode and audio checks. The earlier narrated film and its historical
+receipt are preserved outside the handoff package. The composition source
+below describes the original narrated authoring workflow.
+delivery/Blender-Scene-Source contains editable, self-contained .blend scenes.
+Its README explains regeneration with Blender 5.2.2 LTS. The scenes need no
+external assets. Large native render sequences are not included.
+scripts/build_professional_video.py is the original host-specific composition
+source. It expects the existing mounted /Volumes/CARMIX-WORK authoring folder,
+its render-monochrome frame sequences, Pillow, NumPy, FFmpeg/FFprobe at the
+configured Homebrew paths, macOS fonts and the native macOS Samantha voice.
+It is not a one-command portable rebuild on a different host. Reconfigure
+those paths and regenerate the Blender frames first. Do not create an ordinary
+folder in place of a missing mounted volume. The included app captures and
+finished MP4 remain usable without that volume or those production tools.
+
+PDF source
+The delivered .tex files are editable. Re-export uses a LaTeX compiler;
+scripts/export_latex.py expects Tectonic. The finished PDFs need no compiler.

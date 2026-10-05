@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-02T11:53:12.357849+00:00",
+  "baseline_commit": "283a5e4",
+  "status": "PASS",
+  "scope": "Primary reference model/training and scheduler files, weather, forecasts, 460 frozen schedules and report inputs unchanged during storage/product integration. This records file identity, not team authorship or field validation.",
+  "files": [
+    {
+      "path": "model/train.py",
+      "sha256": "21118d488c17314239702b077c2d5192e2b287492b51a2fd4f673877e76354d5",
+      "bytes": 14126,
+      "unchanged": true
+    },
+    {
+      "path": "model/scheduler.py",
+      "sha256": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+      "bytes": 10949,
+      "unchanged": true
+    },
+    {
+      "path": "model/sites.py",
+      "sha256": "fdcc2be7d08c28db802753bac8fc710ee6adaed5a99e000e153a376da456af4c",
+      "bytes": 5026,
+      "unchanged": true
+    },
+    {
+      "path": "model/reference_metadata.json",
+      "sha256": "f99ee6df8af68dba7f3650d2c4be74c2b1790811fc3118716a14d143951de78f",
+      "bytes": 4059,
+      "unchanged": true
+    },
+    {
+      "path": "data/test_predictions.csv",
+      "sha256": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+      "bytes": 271017,
+      "unchanged": true
+    },
+    {
+      "path": "data/paphos_weather.csv",
+      "sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+      "bytes": 1011213,
+      "unchanged": true
+    },
+    {
+      "path": "web/public/data.json",
+      "sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+      "bytes": 965798,
+      "unchanged": true
+    },
+    {
+      "path": "web/public/research.json",
+      "sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "bytes": 198538,
+      "unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "model.test_scheduler",
+    "model.test_sites",
+    "eval.test_evaluation",
+    "-v"
+  ],
+  "exit_status": 0,
+  "completed_at_utc": "2026-10-01T22:06:09.663239+00:00",
+  "scope": "37 behavior tests; illustrative and retrospective prototype, not field validation",
+  "log_sha256": "969e480013b98e7b7dbb41fa3d558c62629398eed6a5d11a02c6cb005956802b"
+}

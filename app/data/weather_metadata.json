@@ -1,0 +1,41 @@
+{
+  "retrieved_at_utc": "2026-10-01T21:45:15.390675+00:00",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.7754&longitude=32.4245&start_date=2024-06-30&end_date=2026-09-30&hourly=shortwave_radiation%2Ccloud_cover%2Ctemperature_2m%2Crelative_humidity_2m%2Cet0_fao_evapotranspiration%2Cprecipitation&models=ecmwf_ifs&timezone=UTC",
+  "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+  "source": "Open-Meteo historical API, ECMWF IFS gridded historical reconstruction",
+  "model": "ecmwf_ifs",
+  "requested_coordinates": [
+    34.7754,
+    32.4245
+  ],
+  "returned_coordinates": [
+    34.76274,
+    32.468353
+  ],
+  "elevation_m": 74.0,
+  "units": {
+    "time": "iso8601",
+    "shortwave_radiation": "W/m\u00b2",
+    "cloud_cover": "%",
+    "temperature_2m": "\u00b0C",
+    "relative_humidity_2m": "%",
+    "et0_fao_evapotranspiration": "mm",
+    "precipitation": "mm"
+  },
+  "requested_local_start": "2024-07-01",
+  "requested_local_end": "2026-09-30",
+  "rows": 19728,
+  "first_time": "2024-07-01T00:00:00+03:00",
+  "last_time": "2026-09-30T23:00:00+03:00",
+  "timezone": "Asia/Nicosia",
+  "raw_timezone": "GMT",
+  "raw_sha256": "943391391ddf6c6e11b03353110b236afff4ae18b7eda162479cf695a0c79424",
+  "csv_sha256": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262",
+  "attribution": "Weather data by Open-Meteo and ECMWF. CC BY 4.0; API used for non-commercial prototype.",
+  "limitations": [
+    "Gridded model estimates, not Paphos sensor measurements.",
+    "Historical reconstruction is not a forecast archive or original publication vintage.",
+    "Shortwave radiation is the preceding-hour mean; it is not measured grid curtailment.",
+    "IFS upgrades can affect comparability across dates."
+  ]
+}

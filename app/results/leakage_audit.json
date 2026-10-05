@@ -1,0 +1,8 @@
+{
+  "all_weather_source_times_at_or_before_issue": true,
+  "training_targets_before_test": true,
+  "test_tuning": false,
+  "target_day_realized_weather_features": false,
+  "latest_feature_time_minus_issue_seconds_max": 0.0,
+  "caveat": "Temporal cutoff audit only. IFS historical values are revised model reconstruction; original issue-time publication vintages were not available or tested."
+}

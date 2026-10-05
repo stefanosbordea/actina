@@ -1,0 +1,144 @@
+:root {
+  color-scheme: dark;
+  color: #f6f6f7;
+  background: #0d0e11;
+  --canvas: #0d0e11;
+  --surface: #14161a;
+  --surface-raised: #1a1c21;
+  --line: #2a2d34;
+  --rule: #424751;
+  --ink: #f6f6f7;
+  --muted: #a9a9b2;
+  --soft: #1a1c21;
+  --accent: #2f7bf6;
+  --accent-strong: #1a5fdf;
+  --water: #29abe2;
+  --solar: #ffb800;
+}
+body, .shell > main { color: var(--ink); background: var(--canvas); }
+.appbar { background: #08090b; border-bottom: 1px solid var(--line); }
+.project-name, .environment, .about > summary, .project-label, .sidebar-bottom { color: var(--muted); }
+.environment { border-color: var(--rule); }
+.about > div, .skip-link, .navigation-group, .review-command-bar { color: var(--ink); background: var(--surface-raised); border-color: var(--line); box-shadow: 0 12px 32px #0004; }
+.navigation { color: var(--ink); background: var(--surface); border-color: var(--line); }
+.navigation button, .navigation button[data-workspace], .navigation-group button { color: var(--muted); }
+.navigation button:hover, .navigation-group button:hover { color: var(--ink); background: var(--surface-raised); }
+.navigation button.active, .navigation button[aria-current=page], .navigation button[data-workspace]:is(.active,[aria-selected=true],[aria-expanded=true]), .navigation-group button:is(.active,[aria-current=page]) { color: var(--ink); background: #162541; }
+.navigation-group button { border-color: var(--line); }
+.navigation-group button:is(.active,[aria-current=page]) { border-left-color: var(--accent); }
+.shell :where(button,select,textarea), .shell input:not([type=range]):not([type=checkbox]), .shell .revision-file-action { color: var(--ink); background: var(--surface-raised); border-color: var(--rule); }
+.shell :where(button,.revision-file-action):hover { color: var(--ink); background: #23262d; border-color: #606675; }
+.shell :where(button):active { background: var(--surface); }
+.shell :where(button,select,textarea):disabled, .shell input:not([type=range]):not([type=checkbox]):disabled, .shell .revision-file-action:has(input:disabled) { color: #8b8f99; background: var(--surface); border-color: var(--line); }
+.shell :is(input,textarea)::placeholder { color: #8b8f99; }
+.shell input::file-selector-button { color: var(--ink); background: var(--surface-raised); border-color: var(--rule); }
+.shell .file-label input[type=file] { background: transparent; }
+.shell :is(label,summary), .shell .builder-asset legend { color: var(--muted); }
+.shell summary:hover { color: var(--ink); }
+.shell summary::marker { color: var(--muted); }
+.shell :is(input[type=range],input[type=checkbox]) { accent-color: var(--accent); }
+:where(button,input,select,textarea,a,summary,[tabindex]):focus-visible { outline-color: var(--accent); }
+.navigation :focus-visible, .navigation-group :focus-visible, .navigation button[data-workspace].active:focus-visible, .review-profile :focus-visible, .appbar :focus-visible { outline-color: var(--accent); }
+.shell .revision-file-action:focus-within { outline-color: var(--accent); }
+.shell :is(.assessment-edit,.assessment-run,.sequence-toolbar > button,.revision-entry > button,.revision-open-primary,#review-form button[type=submit],#revision-review-export,#roadmap-compare), .shell .review-verdict > button, .shell :is(.review-decision,.revision-decision):not(.review-tool-panel) > summary { color: var(--ink); background: var(--accent-strong); border-color: var(--accent-strong); }
+.shell :is(.assessment-edit,.assessment-run,.sequence-toolbar > button,.revision-entry > button,.revision-open-primary,#review-form button[type=submit],#revision-review-export,#roadmap-compare):hover, .shell .review-verdict > button:hover, .shell :is(.review-decision,.revision-decision):not(.review-tool-panel) > summary:hover { background: var(--accent-strong); border-color: var(--accent); }
+.shell :is(.assessment-edit,.assessment-run,.sequence-toolbar > button,.revision-entry > button,.revision-open-primary,#review-form button[type=submit],#revision-review-export,#roadmap-compare):disabled, .shell .review-verdict > button:disabled { color: #8b8f99; background: var(--surface); border-color: var(--line); }
+.shell [role=tab] { color: var(--muted); background: transparent; border-color: transparent; }
+.shell [role=tab]:hover { color: var(--ink); background: transparent; border-bottom-color: var(--rule); }
+.shell [role=tab][aria-selected=true] { color: var(--ink); border-bottom-color: var(--accent); }
+.shell [role=tab]:disabled { color: #8b8f99; background: transparent; border-bottom-color: transparent; cursor: not-allowed; }
+.workspace-header-tools > button { background: transparent; border-color: var(--line); }
+.workspace-header-tools > button:hover { background: var(--surface-raised); border-color: var(--rule); }
+.current-review-workbench, #review-revision { background: transparent; }
+.review-change-label { color: var(--muted); background: var(--surface-raised); border-color: var(--rule); }
+.review-plan-selection > summary:hover .review-change-label { color: var(--ink); border-color: var(--accent); }
+#revision-service-detail, .trace-note { color: var(--muted); }
+.review-verdict[data-finding=true] { border-color: var(--solar); }
+.review-profile { color: var(--ink); background: transparent; border: 0; border-radius: 0; }
+.review-profile :is(.review-panel-heading,.review-energy-heading) > span, .review-profile :is(.legend,.review-plot-note,.review-boundary-values span,.review-boundary-values small,.micro,.subtle,.scope-note,.review-detail-hint), .review-profile > :is(.review-impact,.revision-impact-strip) :is(dt,small) { color: var(--muted); }
+.review-profile > :is(.review-impact,.revision-impact-strip) dd { color: var(--ink); }
+.review-profile :is(summary,label) { color: var(--muted); }
+.review-profile .review-time-control, .review-profile > :is(.review-impact,.revision-impact-strip) { border-color: var(--line); }
+.shell .boundary-navigation button { color: var(--ink); background: var(--surface-raised); border-color: var(--rule); }
+.shell .boundary-navigation button:hover { background: #23262d; border-color: #606675; }
+.shell .boundary-navigation button:disabled { color: #8b8f99; background: var(--surface); border-color: var(--line); }
+.review-profile .chart svg, :is(#review-energy-chart,#revision-energy-chart) { background: transparent; }
+.review-actions[open] > summary { background: var(--surface-raised); }
+.review-command-bar button { color: var(--muted); background: transparent; border-color: transparent; }
+.review-command-bar button:hover, .review-command-bar button:is([aria-expanded=true],[aria-selected=true],.active) { color: var(--ink); background: #242832; border-color: var(--line); }
+.shell th { color: var(--muted); background: var(--surface-raised); border-color: var(--rule); }
+.shell tr:hover td { background: var(--surface-raised); }
+.shell :is(code,#export-preview-panel) { color: var(--ink); background: var(--surface-raised); }
+.scope-note { border-color: var(--rule); }
+.shell .asset-buttons button.selected { color: var(--ink); background: var(--accent-strong); border-color: var(--accent-strong); }
+.shell .hour-strip button { color: var(--ink); border-color: var(--line); background: linear-gradient(to top,#263e62 0 var(--fill),var(--surface) var(--fill) 100%); }
+.shell .hour-strip button.selected { color: var(--ink); outline-color: var(--accent); }
+#resilience-matrix button { border-color: var(--rule); }
+#resilience-matrix .case-held { color: var(--ink); background: var(--surface-raised); }
+#resilience-matrix .case-deficit { color: var(--ink); background: repeating-linear-gradient(135deg,#353941,#353941 2px,var(--surface-raised) 2px,var(--surface-raised) 6px); }
+#resilience-matrix .case-unserved { color: var(--canvas); background: #d6d8df; }
+#resilience-matrix button[aria-pressed=true], #resilience-matrix button:focus-visible { outline-color: var(--accent); }
+.workspace-loader { color: var(--ink); background: #08090b; }
+.workspace-loader p, .workspace-load-home { color: var(--muted); }
+.workspace-loader progress { background-image: linear-gradient(90deg,var(--line) 30%,var(--accent) 50%,var(--line) 70%); }
+.workspace-load-home:hover { color: var(--ink); }
+
+/* Colour follows each chart's quantity; supplied controls retain distinct strokes and legends. */
+.shell .chart { --chart-primary: var(--accent); --chart-secondary: #d0d4dc; --chart-tertiary: #7e8ca5; --chart-fourth: var(--solar); --plot-background: var(--canvas); }
+.shell .review-profile .chart { --plot-background: var(--canvas); }
+.shell :is(#review-inventory-chart,#revision-inventory-chart,#storage-chart,#compare-storage,#production-chart,#compare-production,#resilience-chart,#sequence-chart,#meter-chart,#irrigation-chart) { --chart-primary: var(--water); }
+.shell :is(#review-energy-chart,#revision-energy-chart,#daily-overlap-chart,#frontier-chart,#roadmap-power,#grid-month-chart) { --chart-primary: var(--solar); --chart-fourth: var(--accent); }
+.shell .chart svg text { fill: var(--muted); }
+.shell .chart svg rect[fill=white] { fill: var(--plot-background); }
+.shell .chart svg line[stroke="#ddd"] { stroke: var(--line); }
+.shell .chart svg line[stroke="#777"] { stroke: #737e90; }
+.shell .chart svg line[stroke="#92989f"] { stroke: #8d9db4; }
+.shell .chart svg path[stroke="#333"] { stroke: var(--muted); }
+.shell .chart svg :is(polyline,polygon,circle)[stroke="#111"] { stroke: var(--chart-primary); }
+.shell .chart svg :is(polyline,polygon,circle)[stroke="#666"], .shell .chart svg :is(polyline,polygon,circle)[stroke="#989da3"] { stroke: var(--chart-secondary); }
+.shell .chart svg :is(polyline,polygon,circle)[stroke="#999"], .shell .chart svg :is(polyline,polygon,circle)[stroke="#aaa"] { stroke: var(--chart-tertiary); }
+.shell .chart svg :is(polyline,polygon,circle)[stroke="#444"] { stroke: var(--chart-fourth); }
+.shell .chart svg :is(rect,circle)[fill="#111"] { fill: var(--chart-primary); }
+.shell .chart svg :is(rect,circle)[fill="#bbb"], .shell .chart svg circle[fill="#666"], .shell .chart svg circle[fill="#989da3"] { fill: var(--chart-secondary); }
+.shell .chart svg circle[fill="#999"], .shell .chart svg circle[fill="#aaa"] { fill: var(--chart-tertiary); }
+.shell .chart svg circle[fill="#444"] { fill: var(--chart-fourth); }
+.shell .chart svg circle[fill=white] { fill: var(--plot-background); }
+.shell .chart svg polygon[fill="#111"] { fill: var(--chart-primary); fill-opacity: .1; }
+.shell .chart svg polygon:has(+ polyline[stroke="#989da3"]) { fill: var(--chart-secondary); }
+.shell .chart svg rect[fill="#e5e5e5"], .shell .chart svg .finding-window rect { fill: var(--solar); fill-opacity: .12; }
+.shell .chart svg .finding-window path { stroke: var(--solar); }
+.shell .chart .legend span { --series: var(--chart-primary) !important; }
+.shell .chart .legend span:not([style]):nth-child(n+2), .shell .chart .legend span[style*="#666"], .shell .chart .legend span[style*="#989da3"] { --series: var(--chart-secondary) !important; }
+.shell .chart .legend span[style*="#999"], .shell .chart .legend span[style*="#aaa"] { --series: var(--chart-tertiary) !important; }
+.shell .chart .legend span[style*="#444"] { --series: var(--chart-fourth) !important; }
+.shell .chart .legend span[style*="#111"] { --series: var(--chart-primary) !important; }
+.shell .chart:has(svg rect[fill="#e5e5e5"]) .legend span:not([style]), .shell .chart .legend .finding-legend { --series: var(--solar) !important; }
+.shell .chart .legend .finding-legend::before { background: color-mix(in srgb,var(--solar) 25%,transparent); border: 1px solid var(--solar); }
+.shell .chart:has(svg rect[fill="#e5e5e5"]) .legend span:not([style]):not(.finding-legend)::before { width: 12px; height: 9px; margin-bottom: 0; background: color-mix(in srgb,var(--solar) 25%,transparent); border: 1px solid var(--solar); }
+#topology svg text { fill: var(--ink); }
+#topology svg > text[fill="#666"] { fill: var(--muted); }
+#topology svg > path { stroke: var(--rule); }
+#topology :is(rect,circle)[stroke="#222"], #topology rect[stroke="#777"] { stroke: #747d8d; }
+#topology rect[fill="#fff"], #topology rect[fill="#f7f7f7"], #topology circle[fill="#eee"] { fill: var(--surface-raised); }
+#topology rect[fill="#222"] { fill: var(--accent-strong); }
+#topology rect[fill="#ddd"] { fill: var(--water); fill-opacity: .3; }
+#topology .asset-node.selected > rect:first-child { stroke: var(--accent); stroke-width: 2; }
+#topology .asset-node:focus { outline-color: var(--accent); }
+
+@media (min-width: 961px) {
+  .navigation-group { background: transparent; box-shadow: none; }
+}
+@media (max-width: 700px) {
+  .review-profile { border-inline: 0; border-radius: 0; }
+}
+@media print {
+  :root { color-scheme: light; --canvas: #fff; --surface: #fff; --surface-raised: #f2f3f5; --line: #c9cdd3; --rule: #9ca3ad; --ink: #111; --muted: #484e58; --water: #006f99; --solar: #855b00; }
+  .appbar, .navigation, .skip-link, .workspace-loader { display: none !important; }
+  .shell { display: block; }
+  .shell > main { padding: 0; }
+  .shell .chart { --chart-secondary: #555; --chart-tertiary: #777; }
+  .shell .review-profile { break-inside: avoid; }
+  .shell .chart svg { print-color-adjust: exact; }
+  #resilience-matrix .case-deficit { background: repeating-linear-gradient(135deg,var(--line),var(--line) 2px,var(--surface-raised) 2px,var(--surface-raised) 6px); }
+  #resilience-matrix .case-unserved { color: var(--ink); background: var(--surface-raised); border: 2px solid var(--ink); }
+}

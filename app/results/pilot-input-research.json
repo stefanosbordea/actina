@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-01T23:49:57.965781+00:00",
+  "scope": "Primary-source input research only. No plant contact, live control, new forecast or scheduler implementation; no actual Paphos plant capacity or permission established.",
+  "sources": [
+    {
+      "id": "EAC-DSO-PV-procedure",
+      "title": "Curtailment Procedure for Photovoltaic (PV) Generation — Information for Consumers & Producers",
+      "authority": "Electricity Authority of Cyprus, Distribution System Operator",
+      "url": "https://www.eac.com.cy/EN/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/Photovoltaic_Disconnection_Process_EN.pdf",
+      "retrieval": {
+        "url": "https://www.eac.com.cy/EN/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/Photovoltaic_Disconnection_Process_EN.pdf",
+        "effective_url": "https://www.eac.com.cy/EN/RegulatedActivities/Distribution/DistributionSystemOperation/Documents/Photovoltaic_Disconnection_Process_EN.pdf",
+        "status": 200,
+        "retrieved_at_utc": "2026-10-01T23:44:25.391580+00:00",
+        "bytes": 126481,
+        "sha256": "8262271320f339144e74302ce33b8c5ea947eb7fceb27315d022ca6e6ce2b076",
+        "last_modified_header": "Thu, 04 Dec 2025 09:21:04 GMT",
+        "path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-input-research/EAC-PV-curtailment-procedure.pdf"
+      },
+      "printed_date": null,
+      "date_evidence": "No printed publication/revision date found. PDF creation/modification metadata: 2025-12-04 11:13:06 EET; HTTP Last-Modified is retrieval metadata, not proof of publication date.",
+      "pages_reviewed": [
+        1,
+        2,
+        3
+      ],
+      "method": "Full text extraction and visual inspection of all three pages.",
+      "supports": [
+        "Curtailment stages depend on network conditions and installation classification/connection terms.",
+        "Some earlier zero-export stages retain self-consumption; the emergency fourth stage stops all PV production, including zero-export installations.",
+        "TSOC makes final curtailment coordination/decisions using real-time conditions; stages can change dynamically."
+      ],
+      "limits": [
+        "Simplified general process, not a particular asset’s connection agreement, valid load authorization, plant power allocation or live dispatch signal.",
+        "Irradiance and public curtailment reports do not by themselves establish usable otherwise-curtailed electricity at a desalination asset."
+      ]
+    },
+    {
+      "id": "DuPont-FilmTec-Rev20",
+      "title": "FilmTec Reverse Osmosis/Nanofiltration Membranes Technical Manual",
+      "authority": "DuPont Water Solutions, membrane OEM",
+      "url": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-Manual-45-D01504-en.pdf",
+      "retrieval": {
+        "name": "DuPont-FilmTec-technical-manual.pdf",
+        "url": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-Manual-45-D01504-en.pdf",
+        "effective_url": "https://www.dupont.com/content/dam/water/amer/us/en/water/public/documents/en/RO-NF-FilmTec-Manual-45-D01504-en.pdf",
+        "status": 200,
+        "retrieved_at_utc": "2026-10-01T23:43:19.297979+00:00",
+        "bytes": 9554575,
+        "sha256": "eb7c8d7f7829e2652fa26896b53618c82cd7d05037f759a3a1c9b647f681fa97",
+        "content_type": "application/pdf",
+        "last_modified_header": "Tue, 01 Sep 2026 10:07:24 GMT",
+        "path": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/pilot-input-research/DuPont-FilmTec-technical-manual.pdf"
+      },
+      "printed_version": "Form No. 45-D01504-en, Rev. 20, August 2026",
+      "pages_reviewed_text": [
+        123,
+        124,
+        125,
+        126
+      ],
+      "pages_reviewed_visually": [
+        123,
+        125
+      ],
+      "sections": [
+        "5.2.3 Typical Start-Up Sequence",
+        "5.3 Operation Start-Up",
+        "5.4 RO and NF Systems Shut-down",
+        "5.5 Adjustment of Operation Parameters"
+      ],
+      "method": "Current official PDF downloaded; operation text extracted; revision/footer and relevant startup/shutdown pages visually inspected.",
+      "supports": [
+        "Minimize frequent starts/stops and increase pressure smoothly; operating conditions and protection limits matter.",
+        "Startup/shutdown can consume flush water, discard permeate and require preservation and conductivity checks.",
+        "Production adjustment depends on actual design and feed composition/temperature."
+      ],
+      "limits": [
+        "Generic FilmTec guidance; the actual Paphos train and membrane identity are unknown. It is not an approved site SOP, potable-water release standard or brine-discharge permit.",
+        "Initial startup examples are not a site-approved minimum run time or routine ramp/flush duration. No numeric plant constraints are imported from these examples."
+      ]
+    }
+  ],
+  "supporting_existing_operator_record": {
+    "source_manifest": "data/grid-reports/eac-report-sources.json",
+    "path": "data/grid-reports/originals/EAC-distribution-curtailments-2026-07.pdf",
+    "sha256": "5bd86c071323c2595f71188411882fe86d1c5429475c0c118b2fde553eee81a4",
+    "printed_page": 15,
+    "event_date": "2026-07-15",
+    "published_date": null,
+    "observed": "Group 1 non-priority curtailment window 10:00–14:15; TSOC instruction marked yes, reason low loading. The main report energy fields are estimated day energy 2691.5 MWh and estimated curtailed energy 331.7 MWh. These are not plant allocations or a claim that all day energy was curtailed.",
+    "limits": "Retrospective estimated report fields, not site allocations, measured recoverable power, national totals or dispatch permission. The printed times lack explicit UTC offsets.",
+    "main_report_energy_fields": {
+      "estimated_day_energy_mwh": 2691.5,
+      "estimated_curtailed_mwh": 331.7,
+      "field_scope": "Main report fields retained separately from Ripple/IoT estimates; Group 1 identifies the reported window, not a proven energy allocation to that group or a desalination site."
+    }
+  },
+  "excluded_capacity_evidence": {
+    "url": "https://www.gov.cy/moa-wdd/en/documents/desalination-plants/",
+    "authority": "Cyprus Water Development Department",
+    "observed": "Search index displayed a 2026-02-03 page date alongside Paphos construction-in-progress text expecting completion by the end of 2019.",
+    "retrieval_limit": "Direct request returned HTTP 403; no live page body was obtained.",
+    "decision": "Do not treat the indexed nominal capacity or construction text as current plant operation, spare capacity or installed train proof."
+  },
+  "proposed_contract": {
+    "basis": "Engineering proposal inferred from the source constraints; these field names are not mandated by the sources. Obtain an operator-approved envelope and a short, calibrated observation window before any plant-specific performance claim.",
+    "common": [
+      "asset_id / train_id / electrical_connection_id",
+      "interval_start and interval_end with explicit UTC offsets; Europe/Nicosia display context",
+      "observed_at, first_available_at, source_id and quality_flag",
+      "constraint_version, approving_role and valid_from / valid_until"
+    ],
+    "field_groups": [
+      {
+        "group": "Grid state and permitted additional load",
+        "fields": [
+          "resource / connection and instruction identity",
+          "current PV/curtailment/export state and instruction validity",
+          "permitted_additional_load_kw with source/authority",
+          "measured available power and counterfactual-curtailment method, if actually available"
+        ],
+        "purpose": "Separate legal/physical load availability from irradiance. A reviewer-declared power reading grants no dispatch permission."
+      },
+      {
+        "group": "Actual train envelope",
+        "fields": [
+          "available trains and current committed production",
+          "operator-approved spare production, minimum/maximum accepted-product flow",
+          "measured electrical-load/production curve with feed temperature/salinity context",
+          "approved ramp, minimum on/off periods and maximum starts"
+        ],
+        "purpose": "Check that flexible production exists within the actual plant envelope. No numeric defaults, capacities or coordinates are assumed."
+      },
+      {
+        "group": "Startup, shutdown and losses",
+        "fields": [
+          "approved sequence and interlock status",
+          "flush duration/water volume/electricity and off-spec product discard",
+          "restart/preservation requirements"
+        ],
+        "purpose": "Represent water and energy consumed outside accepted production; generic first-start guidance is not a routine site operating limit."
+      },
+      {
+        "group": "Usable water and service",
+        "fields": [
+          "measured usable initial inventory",
+          "approved usable minimum/maximum/reserve and terminal inventory",
+          "withdrawal/delivery series",
+          "accepted-product release flag and storage quality/age limits"
+        ],
+        "purpose": "Keep water service comparable. Nameplate tank volume and gross permeate are not automatically usable potable inventory."
+      },
+      {
+        "group": "Water quality and concentrate",
+        "fields": [
+          "feed temperature and conductivity/salinity with instrument identity",
+          "permeate quality/release measurements and approved acceptance criteria reference",
+          "concentrate flow/salinity and approved discharge constraints reference",
+          "sensor calibration and laboratory availability times"
+        ],
+        "purpose": "Actual quality and permit constraints must come from the operator and site records; the generic manual supplies neither local potable certification nor a discharge permit."
+      },
+      {
+        "group": "Stefanos forecast handoff",
+        "fields": [
+          "forecast_issue_time and target interval",
+          "prediction / model_version",
+          "each feature input first_available_at",
+          "archived original issued weather-forecast vintage"
+        ],
+        "purpose": "Allow future blind evaluation without hindsight release-time assumptions. Preserve the frozen historical test; validate future changes on a new untouched period."
+      },
+      {
+        "group": "Measured outcomes and matched comparison",
+        "fields": [
+          "electrical meter kWh",
+          "accepted water / delivered water / usable inventory",
+          "actual billed tariff and startup/flush costs",
+          "allocated otherwise-curtailed energy measurement or explicit counterfactual method"
+        ],
+        "purpose": "Compare equal water service and inventory. Sunny flags, favorable tariffs and aggregate curtailment estimates alone establish neither recovered kWh nor carbon savings."
+      }
+    ],
+    "unknown_handling": "Missing, delayed, expired or unauthenticated inputs remain unknown. Do not replace them with zero, forecasts labeled as telemetry or permission inferred from weather.",
+    "small_next_step": "Collect one short read-only observation window plus the approved operating envelope, identify any genuinely spare train/production capacity, and review numeric consistency and first-available times. No automatic control or operational readiness is implied."
+  },
+  "unresolved": [
+    "Actual asset/train identity and operational capacity",
+    "Permission and electrical connection conditions for absorbing otherwise-curtailed electricity",
+    "Site-approved ramp/start/stop/flush and quality/discharge requirements",
+    "Measured usable water inventory and calibrated observation provenance"
+  ],
+  "no_document_expansion": true,
+  "wording_correction": {
+    "corrected_at_utc": "2026-10-01T23:59:04.702606+00:00",
+    "prior_receipt_sha256": "dcca156ee97dca3d08c0c0b56c7119f5409345b2a2822483f63137dc939704b1",
+    "basis": "July 15 retained main report field names and values; corrected ambiguous group-energy wording. No model/data change."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-01T23:01:05.427183+00:00",
+  "command": ".venv/bin/python -m unittest eval.test_curtailment_overlap",
+  "exit_code": 0,
+  "tests_passed": 5,
+  "checks": [
+    "quarter-hour weighting and duration conservation",
+    "empty windows represent no matched interval, not measured absence",
+    "disjoint windows preserve gap",
+    "overlapping/reversed/cross-midnight windows rejected",
+    "invalid energy lengths/nonfinite/negative rejected"
+  ],
+  "source_sha256": "c8b6a3896719954975ba1762be3c2eeefaa4efa7c48fd1f2a26afd1743c6f03d"
+}

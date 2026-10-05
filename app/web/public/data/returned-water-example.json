@@ -1,0 +1,2490 @@
+{
+  "schema": 1,
+  "kind": "fixed_plan_revision_review",
+  "createdAt": "2026-10-03T00:52:36.084Z",
+  "reviewer": "Loucas",
+  "decision": "Needs team review",
+  "reason": "Analytical example; inspect the paired service finding before interpreting the supplied solar comparison.",
+  "declared_author": "Analytical fixture, not a teammate or plant handoff",
+  "source_review": "Not reviewed",
+  "case_file": {
+    "name": "subhour-hidden-case.json",
+    "sha256": "0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96",
+    "text": "﻿{\r\n  \"schema\": 1,\r\n  \"kind\": \"fixed_plan_revision_case\",\r\n  \"assessment\": {\r\n    \"schema\": 1,\r\n    \"kind\": \"fixed_plan_consequence_assessment\",\r\n    \"planLabel\": \"Illustrative service comparison\",\r\n    \"identity\": {\r\n      \"data_sha256\": \"ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557\"\r\n    },\r\n    \"inputs\": {\r\n      \"times\": [\r\n        \"2026-06-30T21:00:00.000Z\",\r\n        \"2026-06-30T22:00:00.000Z\",\r\n        \"2026-06-30T23:00:00.000Z\",\r\n        \"2026-07-01T00:00:00.000Z\",\r\n        \"2026-07-01T01:00:00.000Z\",\r\n        \"2026-07-01T02:00:00.000Z\",\r\n        \"2026-07-01T03:00:00.000Z\",\r\n        \"2026-07-01T04:00:00.000Z\",\r\n        \"2026-07-01T05:00:00.000Z\",\r\n        \"2026-07-01T06:00:00.000Z\",\r\n        \"2026-07-01T07:00:00.000Z\",\r\n        \"2026-07-01T08:00:00.000Z\",\r\n        \"2026-07-01T09:00:00.000Z\",\r\n        \"2026-07-01T10:00:00.000Z\",\r\n        \"2026-07-01T11:00:00.000Z\",\r\n        \"2026-07-01T12:00:00.000Z\",\r\n        \"2026-07-01T13:00:00.000Z\",\r\n        \"2026-07-01T14:00:00.000Z\",\r\n        \"2026-07-01T15:00:00.000Z\",\r\n        \"2026-07-01T16:00:00.000Z\",\r\n        \"2026-07-01T17:00:00.000Z\",\r\n        \"2026-07-01T18:00:00.000Z\",\r\n        \"2026-07-01T19:00:00.000Z\",\r\n        \"2026-07-01T20:00:00.000Z\"\r\n      ],\r\n      \"production\": [\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        2,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0\r\n      ],\r\n      \"demand\": [\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        4,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0,\r\n        0\r\n      ],\r\n      \"capacity\": 2,\r\n      \"reserve\": 0,\r\n      \"initial\": 0,\r\n      \"target\": 0\r\n    }\r\n  },\r\n  \"unit_capacity_m3_h\": 4,\r\n  \"specific_energy_kwh_m3\": 1\r\n}\r\n"
+  },
+  "proposal_file": {
+    "name": "subhour-hidden-return.csv",
+    "sha256": "f75764f2bf8afc79d59156031e444ac07e2c92b915c9fbf5963716c048c41222",
+    "text": "case_sha256,time,production_m3\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-06-30T21:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-06-30T22:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-06-30T23:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T00:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T01:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T02:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T03:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T04:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T05:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T06:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T07:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T08:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T09:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T10:00:00.000Z,2\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T11:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T12:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T13:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T14:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T15:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T16:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T17:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T18:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T19:00:00.000Z,0\r\n0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96,2026-07-01T20:00:00.000Z,0\r\n"
+  },
+  "comparison": {
+    "schema": 1,
+    "kind": "fixed_plan_revision_comparison",
+    "case_identity": {
+      "name": "subhour-hidden-case.json",
+      "sha256": "0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96"
+    },
+    "proposal_identity": {
+      "name": "subhour-hidden-return.csv",
+      "sha256": "f75764f2bf8afc79d59156031e444ac07e2c92b915c9fbf5963716c048c41222"
+    },
+    "revision_case": {
+      "schema": 1,
+      "kind": "fixed_plan_revision_case",
+      "assessment": {
+        "schema": 1,
+        "kind": "fixed_plan_consequence_assessment",
+        "planLabel": "Illustrative service comparison",
+        "identity": {
+          "data_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557"
+        },
+        "inputs": {
+          "times": [
+            "2026-06-30T21:00:00.000Z",
+            "2026-06-30T22:00:00.000Z",
+            "2026-06-30T23:00:00.000Z",
+            "2026-07-01T00:00:00.000Z",
+            "2026-07-01T01:00:00.000Z",
+            "2026-07-01T02:00:00.000Z",
+            "2026-07-01T03:00:00.000Z",
+            "2026-07-01T04:00:00.000Z",
+            "2026-07-01T05:00:00.000Z",
+            "2026-07-01T06:00:00.000Z",
+            "2026-07-01T07:00:00.000Z",
+            "2026-07-01T08:00:00.000Z",
+            "2026-07-01T09:00:00.000Z",
+            "2026-07-01T10:00:00.000Z",
+            "2026-07-01T11:00:00.000Z",
+            "2026-07-01T12:00:00.000Z",
+            "2026-07-01T13:00:00.000Z",
+            "2026-07-01T14:00:00.000Z",
+            "2026-07-01T15:00:00.000Z",
+            "2026-07-01T16:00:00.000Z",
+            "2026-07-01T17:00:00.000Z",
+            "2026-07-01T18:00:00.000Z",
+            "2026-07-01T19:00:00.000Z",
+            "2026-07-01T20:00:00.000Z"
+          ],
+          "production": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "demand": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "capacity": 2,
+          "reserve": 0,
+          "initial": 0,
+          "target": 0
+        }
+      },
+      "unit_capacity_m3_h": 4,
+      "specific_energy_kwh_m3": 1
+    },
+    "original": {
+      "inputs": {
+        "times": [
+          "2026-06-30T21:00:00.000Z",
+          "2026-06-30T22:00:00.000Z",
+          "2026-06-30T23:00:00.000Z",
+          "2026-07-01T00:00:00.000Z",
+          "2026-07-01T01:00:00.000Z",
+          "2026-07-01T02:00:00.000Z",
+          "2026-07-01T03:00:00.000Z",
+          "2026-07-01T04:00:00.000Z",
+          "2026-07-01T05:00:00.000Z",
+          "2026-07-01T06:00:00.000Z",
+          "2026-07-01T07:00:00.000Z",
+          "2026-07-01T08:00:00.000Z",
+          "2026-07-01T09:00:00.000Z",
+          "2026-07-01T10:00:00.000Z",
+          "2026-07-01T11:00:00.000Z",
+          "2026-07-01T12:00:00.000Z",
+          "2026-07-01T13:00:00.000Z",
+          "2026-07-01T14:00:00.000Z",
+          "2026-07-01T15:00:00.000Z",
+          "2026-07-01T16:00:00.000Z",
+          "2026-07-01T17:00:00.000Z",
+          "2026-07-01T18:00:00.000Z",
+          "2026-07-01T19:00:00.000Z",
+          "2026-07-01T20:00:00.000Z"
+        ],
+        "production": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "demand": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "capacity": 2,
+        "reserve": 0,
+        "initial": 0,
+        "target": 0
+      },
+      "result": {
+        "schema": 1,
+        "start_hour": 0,
+        "end_hour": 24,
+        "rows": [
+          {
+            "hour": 0,
+            "time": "2026-06-30T21:00:00.000Z",
+            "end_time": "2026-06-30T22:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 1,
+            "time": "2026-06-30T22:00:00.000Z",
+            "end_time": "2026-06-30T23:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 2,
+            "time": "2026-06-30T23:00:00.000Z",
+            "end_time": "2026-07-01T00:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 3,
+            "time": "2026-07-01T00:00:00.000Z",
+            "end_time": "2026-07-01T01:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 4,
+            "time": "2026-07-01T01:00:00.000Z",
+            "end_time": "2026-07-01T02:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 5,
+            "time": "2026-07-01T02:00:00.000Z",
+            "end_time": "2026-07-01T03:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 6,
+            "time": "2026-07-01T03:00:00.000Z",
+            "end_time": "2026-07-01T04:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 7,
+            "time": "2026-07-01T04:00:00.000Z",
+            "end_time": "2026-07-01T05:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 8,
+            "time": "2026-07-01T05:00:00.000Z",
+            "end_time": "2026-07-01T06:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 9,
+            "time": "2026-07-01T06:00:00.000Z",
+            "end_time": "2026-07-01T07:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 10,
+            "time": "2026-07-01T07:00:00.000Z",
+            "end_time": "2026-07-01T08:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 11,
+            "time": "2026-07-01T08:00:00.000Z",
+            "end_time": "2026-07-01T09:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 12,
+            "time": "2026-07-01T09:00:00.000Z",
+            "end_time": "2026-07-01T10:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 2,
+            "requested_production_m3": 2,
+            "available_production_m3": 2,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 13,
+            "time": "2026-07-01T10:00:00.000Z",
+            "end_time": "2026-07-01T11:00:00.000Z",
+            "storage_start_m3": 2,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 4,
+            "delivered_m3": 2,
+            "spill_m3": 0,
+            "unmet_m3": 2,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 14,
+            "time": "2026-07-01T11:00:00.000Z",
+            "end_time": "2026-07-01T12:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 15,
+            "time": "2026-07-01T12:00:00.000Z",
+            "end_time": "2026-07-01T13:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 16,
+            "time": "2026-07-01T13:00:00.000Z",
+            "end_time": "2026-07-01T14:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 17,
+            "time": "2026-07-01T14:00:00.000Z",
+            "end_time": "2026-07-01T15:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 18,
+            "time": "2026-07-01T15:00:00.000Z",
+            "end_time": "2026-07-01T16:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 19,
+            "time": "2026-07-01T16:00:00.000Z",
+            "end_time": "2026-07-01T17:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 20,
+            "time": "2026-07-01T17:00:00.000Z",
+            "end_time": "2026-07-01T18:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 21,
+            "time": "2026-07-01T18:00:00.000Z",
+            "end_time": "2026-07-01T19:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 22,
+            "time": "2026-07-01T19:00:00.000Z",
+            "end_time": "2026-07-01T20:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 23,
+            "time": "2026-07-01T20:00:00.000Z",
+            "end_time": "2026-07-01T21:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          }
+        ],
+        "events": [
+          {
+            "type": "reserve_breach",
+            "time": "2026-07-01T10:30:00.000Z",
+            "hour": 13.5,
+            "storage_m3": 0
+          },
+          {
+            "type": "stockout",
+            "time": "2026-07-01T10:30:00.000Z",
+            "hour": 13.5,
+            "storage_m3": 0
+          }
+        ],
+        "totals": {
+          "initial_storage_m3": 0,
+          "final_storage_m3": 0,
+          "requested_production_m3": 2,
+          "available_production_m3": 2,
+          "demand_m3": 4,
+          "delivered_m3": 2,
+          "spill_m3": 0,
+          "unmet_m3": 2,
+          "min_storage_m3": 0,
+          "max_storage_m3": 2,
+          "max_reserve_deficit_m3": 0,
+          "reserve_margin_m3": 0,
+          "terminal_deficit_m3": 0,
+          "terminal_surplus_m3": 0,
+          "terminal_deviation_m3": 0,
+          "mass_balance_error_m3": 0
+        },
+        "margins": {
+          "minimum_initial_storage_m3": null,
+          "minimum_initial_status": "capacity_insufficient",
+          "maximum_demand_multiplier": 0.5,
+          "maximum_demand_status": "bounded",
+          "scope": "Bounds require all demand to be met while retaining reserve under fixed production and outage. Terminal target is excluded. Demand multiplier is relative to the original hourly demand.",
+          "joint_minimum_initial_storage_m3": null,
+          "joint_minimum_initial_status": "capacity_insufficient",
+          "joint_minimum_initial_limits": [
+            {
+              "constraint": "storage_capacity",
+              "hour": 13,
+              "time": "2026-07-01T10:00:00.000Z",
+              "interval_start_hour": 13,
+              "required_storage_m3": 4
+            }
+          ],
+          "joint_maximum_demand_multiplier": 0.5,
+          "joint_maximum_demand_status": "bounded",
+          "joint_maximum_demand_limits": [
+            {
+              "constraint": "reserve",
+              "hour": 14,
+              "time": "2026-07-01T11:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 15,
+              "time": "2026-07-01T12:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 16,
+              "time": "2026-07-01T13:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 17,
+              "time": "2026-07-01T14:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 18,
+              "time": "2026-07-01T15:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 19,
+              "time": "2026-07-01T16:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 20,
+              "time": "2026-07-01T17:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 21,
+              "time": "2026-07-01T18:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 22,
+              "time": "2026-07-01T19:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 23,
+              "time": "2026-07-01T20:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "terminal_target",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 14,
+              "time": "2026-07-01T11:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 15,
+              "time": "2026-07-01T12:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 16,
+              "time": "2026-07-01T13:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 17,
+              "time": "2026-07-01T14:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 18,
+              "time": "2026-07-01T15:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 19,
+              "time": "2026-07-01T16:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 20,
+              "time": "2026-07-01T17:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 21,
+              "time": "2026-07-01T18:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 22,
+              "time": "2026-07-01T19:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 23,
+              "time": "2026-07-01T20:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "reserve",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 13
+            },
+            {
+              "constraint": "terminal_target",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 13
+            }
+          ],
+          "joint_scope": "All demand must be met, storage must retain reserve from the restart through hour 24, and final storage must reach target. Fixed production, production multiplier and outage. Minimum starting water uses the declared demand multiplier; maximum demand multiplier scales the original hourly demand, not the current multiplier. Null denotes the named non-bounded or infeasible state, never zero headroom. Limiting-constraint ties use 1e-8 m³ for starting water and relative 1e-10 for demand multipliers. No plant feasibility or probability claim."
+        },
+        "scenario": {
+          "demand_multiplier": 1,
+          "production_multiplier": 1,
+          "initial_storage_m3": 0
+        },
+        "assumptions": [
+          "Fixed supplied production, with no rescheduling or recovery action. Source-plan unit-capacity validation is external to this replay.",
+          "Uniform hourly production and demand; outage boundaries split an hour exactly.",
+          "Excess water spills at capacity; demand exceeding available water is unmet. Storage is physical and bounded.",
+          "Restart storage and disturbances are reviewer declarations, not authenticated observations.",
+          "No ramp, minimum-run, water-quality, pressure, grid-permission or electrical-power feasibility assessment. No operating authority or recovered-energy claim."
+        ]
+      },
+      "modeled_production_energy_kwh": 2
+    },
+    "revised": {
+      "inputs": {
+        "times": [
+          "2026-06-30T21:00:00.000Z",
+          "2026-06-30T22:00:00.000Z",
+          "2026-06-30T23:00:00.000Z",
+          "2026-07-01T00:00:00.000Z",
+          "2026-07-01T01:00:00.000Z",
+          "2026-07-01T02:00:00.000Z",
+          "2026-07-01T03:00:00.000Z",
+          "2026-07-01T04:00:00.000Z",
+          "2026-07-01T05:00:00.000Z",
+          "2026-07-01T06:00:00.000Z",
+          "2026-07-01T07:00:00.000Z",
+          "2026-07-01T08:00:00.000Z",
+          "2026-07-01T09:00:00.000Z",
+          "2026-07-01T10:00:00.000Z",
+          "2026-07-01T11:00:00.000Z",
+          "2026-07-01T12:00:00.000Z",
+          "2026-07-01T13:00:00.000Z",
+          "2026-07-01T14:00:00.000Z",
+          "2026-07-01T15:00:00.000Z",
+          "2026-07-01T16:00:00.000Z",
+          "2026-07-01T17:00:00.000Z",
+          "2026-07-01T18:00:00.000Z",
+          "2026-07-01T19:00:00.000Z",
+          "2026-07-01T20:00:00.000Z"
+        ],
+        "production": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "demand": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "capacity": 2,
+        "reserve": 0,
+        "initial": 0,
+        "target": 0
+      },
+      "result": {
+        "schema": 1,
+        "start_hour": 0,
+        "end_hour": 24,
+        "rows": [
+          {
+            "hour": 0,
+            "time": "2026-06-30T21:00:00.000Z",
+            "end_time": "2026-06-30T22:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 1,
+            "time": "2026-06-30T22:00:00.000Z",
+            "end_time": "2026-06-30T23:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 2,
+            "time": "2026-06-30T23:00:00.000Z",
+            "end_time": "2026-07-01T00:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 3,
+            "time": "2026-07-01T00:00:00.000Z",
+            "end_time": "2026-07-01T01:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 4,
+            "time": "2026-07-01T01:00:00.000Z",
+            "end_time": "2026-07-01T02:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 5,
+            "time": "2026-07-01T02:00:00.000Z",
+            "end_time": "2026-07-01T03:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 6,
+            "time": "2026-07-01T03:00:00.000Z",
+            "end_time": "2026-07-01T04:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 7,
+            "time": "2026-07-01T04:00:00.000Z",
+            "end_time": "2026-07-01T05:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 8,
+            "time": "2026-07-01T05:00:00.000Z",
+            "end_time": "2026-07-01T06:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 9,
+            "time": "2026-07-01T06:00:00.000Z",
+            "end_time": "2026-07-01T07:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 10,
+            "time": "2026-07-01T07:00:00.000Z",
+            "end_time": "2026-07-01T08:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 11,
+            "time": "2026-07-01T08:00:00.000Z",
+            "end_time": "2026-07-01T09:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 12,
+            "time": "2026-07-01T09:00:00.000Z",
+            "end_time": "2026-07-01T10:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 13,
+            "time": "2026-07-01T10:00:00.000Z",
+            "end_time": "2026-07-01T11:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 2,
+            "available_production_m3": 2,
+            "demand_m3": 4,
+            "delivered_m3": 2,
+            "spill_m3": 0,
+            "unmet_m3": 2,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 14,
+            "time": "2026-07-01T11:00:00.000Z",
+            "end_time": "2026-07-01T12:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 15,
+            "time": "2026-07-01T12:00:00.000Z",
+            "end_time": "2026-07-01T13:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 16,
+            "time": "2026-07-01T13:00:00.000Z",
+            "end_time": "2026-07-01T14:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 17,
+            "time": "2026-07-01T14:00:00.000Z",
+            "end_time": "2026-07-01T15:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 18,
+            "time": "2026-07-01T15:00:00.000Z",
+            "end_time": "2026-07-01T16:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 19,
+            "time": "2026-07-01T16:00:00.000Z",
+            "end_time": "2026-07-01T17:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 20,
+            "time": "2026-07-01T17:00:00.000Z",
+            "end_time": "2026-07-01T18:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 21,
+            "time": "2026-07-01T18:00:00.000Z",
+            "end_time": "2026-07-01T19:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 22,
+            "time": "2026-07-01T19:00:00.000Z",
+            "end_time": "2026-07-01T20:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          },
+          {
+            "hour": 23,
+            "time": "2026-07-01T20:00:00.000Z",
+            "end_time": "2026-07-01T21:00:00.000Z",
+            "storage_start_m3": 0,
+            "storage_end_m3": 0,
+            "requested_production_m3": 0,
+            "available_production_m3": 0,
+            "demand_m3": 0,
+            "delivered_m3": 0,
+            "spill_m3": 0,
+            "unmet_m3": 0,
+            "reserve_deficit_m3": 0
+          }
+        ],
+        "events": [
+          {
+            "type": "reserve_breach",
+            "time": "2026-07-01T10:00:00.000Z",
+            "hour": 13,
+            "storage_m3": 0
+          },
+          {
+            "type": "stockout",
+            "time": "2026-07-01T10:00:00.000Z",
+            "hour": 13,
+            "storage_m3": 0
+          }
+        ],
+        "totals": {
+          "initial_storage_m3": 0,
+          "final_storage_m3": 0,
+          "requested_production_m3": 2,
+          "available_production_m3": 2,
+          "demand_m3": 4,
+          "delivered_m3": 2,
+          "spill_m3": 0,
+          "unmet_m3": 2,
+          "min_storage_m3": 0,
+          "max_storage_m3": 0,
+          "max_reserve_deficit_m3": 0,
+          "reserve_margin_m3": 0,
+          "terminal_deficit_m3": 0,
+          "terminal_surplus_m3": 0,
+          "terminal_deviation_m3": 0,
+          "mass_balance_error_m3": 0
+        },
+        "margins": {
+          "minimum_initial_storage_m3": 2,
+          "minimum_initial_status": "feasible",
+          "maximum_demand_multiplier": 0.5,
+          "maximum_demand_status": "bounded",
+          "scope": "Bounds require all demand to be met while retaining reserve under fixed production and outage. Terminal target is excluded. Demand multiplier is relative to the original hourly demand.",
+          "joint_minimum_initial_storage_m3": 2,
+          "joint_minimum_initial_status": "feasible",
+          "joint_minimum_initial_limits": [
+            {
+              "constraint": "reserve",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "terminal_target",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 23,
+              "time": "2026-07-01T20:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 22,
+              "time": "2026-07-01T19:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 21,
+              "time": "2026-07-01T18:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 20,
+              "time": "2026-07-01T17:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 19,
+              "time": "2026-07-01T16:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 18,
+              "time": "2026-07-01T15:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 17,
+              "time": "2026-07-01T14:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 16,
+              "time": "2026-07-01T13:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 15,
+              "time": "2026-07-01T12:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 14,
+              "time": "2026-07-01T11:00:00.000Z",
+              "interval_start_hour": 0
+            }
+          ],
+          "joint_maximum_demand_multiplier": 0.5,
+          "joint_maximum_demand_status": "bounded",
+          "joint_maximum_demand_limits": [
+            {
+              "constraint": "reserve",
+              "hour": 14,
+              "time": "2026-07-01T11:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 15,
+              "time": "2026-07-01T12:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 16,
+              "time": "2026-07-01T13:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 17,
+              "time": "2026-07-01T14:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 18,
+              "time": "2026-07-01T15:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 19,
+              "time": "2026-07-01T16:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 20,
+              "time": "2026-07-01T17:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 21,
+              "time": "2026-07-01T18:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 22,
+              "time": "2026-07-01T19:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 23,
+              "time": "2026-07-01T20:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "reserve",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            },
+            {
+              "constraint": "terminal_target",
+              "hour": 24,
+              "time": "2026-07-01T21:00:00.000Z",
+              "interval_start_hour": 0
+            }
+          ],
+          "joint_scope": "All demand must be met, storage must retain reserve from the restart through hour 24, and final storage must reach target. Fixed production, production multiplier and outage. Minimum starting water uses the declared demand multiplier; maximum demand multiplier scales the original hourly demand, not the current multiplier. Null denotes the named non-bounded or infeasible state, never zero headroom. Limiting-constraint ties use 1e-8 m³ for starting water and relative 1e-10 for demand multipliers. No plant feasibility or probability claim."
+        },
+        "scenario": {
+          "demand_multiplier": 1,
+          "production_multiplier": 1,
+          "initial_storage_m3": 0
+        },
+        "assumptions": [
+          "Fixed supplied production, with no rescheduling or recovery action. Source-plan unit-capacity validation is external to this replay.",
+          "Uniform hourly production and demand; outage boundaries split an hour exactly.",
+          "Excess water spills at capacity; demand exceeding available water is unmet. Storage is physical and bounded.",
+          "Restart storage and disturbances are reviewer declarations, not authenticated observations.",
+          "No ramp, minimum-run, water-quality, pressure, grid-permission or electrical-power feasibility assessment. No operating authority or recovered-energy claim."
+        ]
+      },
+      "modeled_production_energy_kwh": 2
+    },
+    "changes": {
+      "available_production_m3": 0,
+      "delivered_m3": 0,
+      "unmet_m3": 0,
+      "spill_m3": 0,
+      "final_storage_m3": 0,
+      "max_reserve_deficit_m3": 0,
+      "terminal_deficit_m3": 0,
+      "terminal_deviation_m3": 0,
+      "modeled_production_energy_kwh": 0
+    },
+    "water_service": {
+      "schema": 1,
+      "kind": "modeled_paired_water_service",
+      "status": "regression_detected",
+      "criteria": {
+        "delivery_no_worse": false,
+        "reserve_no_worse": true,
+        "end_stock_no_lower": true
+      },
+      "horizon": {
+        "start_epoch": 1782853200000,
+        "start_hour": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        },
+        "end_hour": {
+          "value": 24,
+          "exact": {
+            "numerator": "24",
+            "denominator": "1"
+          }
+        },
+        "duration_hours": {
+          "value": 24,
+          "exact": {
+            "numerator": "24",
+            "denominator": "1"
+          }
+        }
+      },
+      "delivery": {
+        "interval_count": 1,
+        "duration_hours": {
+          "value": 0.5,
+          "exact": {
+            "numerator": "1",
+            "denominator": "2"
+          }
+        },
+        "shifted_shortfall_m3": {
+          "value": 1,
+          "exact": {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        },
+        "max_added_unserved_rate_m3_h": {
+          "value": 2,
+          "exact": {
+            "numerator": "2",
+            "denominator": "1"
+          }
+        },
+        "first": {
+          "start_hour": {
+            "value": 13,
+            "exact": {
+              "numerator": "13",
+              "denominator": "1"
+            }
+          },
+          "end_hour": {
+            "value": 13.5,
+            "exact": {
+              "numerator": "27",
+              "denominator": "2"
+            }
+          },
+          "original_unserved_rate_m3_h": {
+            "value": 0,
+            "exact": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "revised_unserved_rate_m3_h": {
+            "value": 2,
+            "exact": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "added_unserved_rate_m3_h": {
+            "value": 2,
+            "exact": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        },
+        "maximum": {
+          "start_hour": {
+            "value": 13,
+            "exact": {
+              "numerator": "13",
+              "denominator": "1"
+            }
+          },
+          "end_hour": {
+            "value": 13.5,
+            "exact": {
+              "numerator": "27",
+              "denominator": "2"
+            }
+          },
+          "original_unserved_rate_m3_h": {
+            "value": 0,
+            "exact": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "revised_unserved_rate_m3_h": {
+            "value": 2,
+            "exact": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          },
+          "added_unserved_rate_m3_h": {
+            "value": 2,
+            "exact": {
+              "numerator": "2",
+              "denominator": "1"
+            }
+          }
+        }
+      },
+      "reserve": {
+        "interval_count": 0,
+        "duration_hours": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        },
+        "max_added_deficit_m3": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        },
+        "first": null,
+        "maximum": null
+      },
+      "end_stock": {
+        "original_m3": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        },
+        "revised_m3": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        },
+        "delta_m3": {
+          "value": 0,
+          "exact": {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        }
+      },
+      "scope": [
+        "Finite binary64 effective rates, volumes and elapsed-hour endpoints are interpreted as exact rationals under the declared uniform-rate model.",
+        "Delivery compares unserved rates almost everywhere; reserve compares clipped physical stock pointwise; final stock is a separate non-regression condition.",
+        "Touching positive-duration pieces are grouped for interval counts, including isolated zero contacts. Delivery witnesses retain a constant-rate subinterval; reserve witnesses retain a grouped span and its earliest maximum.",
+        "Numeric values are rounded display approximations. Null means an exact nonzero quantity is outside finite nonzero numeric display range, not unknown evidence; exact fractions remain authoritative.",
+        "No modeled regression is relative to the supplied original. Both plans may still undersupply demand or breach reserve and target requirements.",
+        "No forecast or schedule is generated. This model does not establish actual service, pressure, water quality, flow-rate or ramp feasibility, plant authorization or recovered solar."
+      ]
+    },
+    "scope": [
+      "Independent evaluation of supplied production; no schedule generation, model training or dispatch.",
+      "Both plans use identical starting water, remaining times, demand, disturbances, capacity, reserve and terminal target. The past prefix is unchanged.",
+      "Energy is produced water times the declared constant specific energy, including spilled production. Less service is not credited as savings.",
+      "File hashes identify supplied bytes; authorship and source authority remain reviewer declarations. Historical observation provenance is retained, not renewed.",
+      "A revision may have different production and end storage. Reserve, unmet demand, spill and target shortfall are reported separately; no operating approval is inferred."
+    ]
+  },
+  "scope": "Illustrative matched-case evaluation. No forecast, schedule optimization or plant authorization.",
+  "solar_file": {
+    "name": "subhour-hidden-solar.json",
+    "sha256": "f9d330ed8066097dd5978f653d4e4653fca8baa0cee96ba209d7b450261cd616",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"plant_solar_allocation\",\n  \"case_sha256\": \"0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96\",\n  \"source_kind\": \"illustrative_scenario\",\n  \"source_label\": \"Explicit illustrative plant allocation\",\n  \"plant_mapping\": \"Analytical unit\",\n  \"power_basis\": \"total_plant_eligible_solar\",\n  \"interval_semantics\": \"constant_power\",\n  \"review_as_of\": \"2026-07-01T22:00:00.000Z\",\n  \"intervals\": [\n    {\n      \"start\": \"2026-06-30T21:00:00.000Z\",\n      \"end\": \"2026-06-30T22:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-06-30T22:00:00.000Z\",\n      \"end\": \"2026-06-30T23:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-06-30T23:00:00.000Z\",\n      \"end\": \"2026-07-01T00:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T00:00:00.000Z\",\n      \"end\": \"2026-07-01T01:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T01:00:00.000Z\",\n      \"end\": \"2026-07-01T02:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T02:00:00.000Z\",\n      \"end\": \"2026-07-01T03:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T03:00:00.000Z\",\n      \"end\": \"2026-07-01T04:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T04:00:00.000Z\",\n      \"end\": \"2026-07-01T05:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T05:00:00.000Z\",\n      \"end\": \"2026-07-01T06:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T06:00:00.000Z\",\n      \"end\": \"2026-07-01T07:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T07:00:00.000Z\",\n      \"end\": \"2026-07-01T08:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T08:00:00.000Z\",\n      \"end\": \"2026-07-01T09:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T09:00:00.000Z\",\n      \"end\": \"2026-07-01T10:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T10:00:00.000Z\",\n      \"end\": \"2026-07-01T11:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 2\n    },\n    {\n      \"start\": \"2026-07-01T11:00:00.000Z\",\n      \"end\": \"2026-07-01T12:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T12:00:00.000Z\",\n      \"end\": \"2026-07-01T13:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T13:00:00.000Z\",\n      \"end\": \"2026-07-01T14:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T14:00:00.000Z\",\n      \"end\": \"2026-07-01T15:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T15:00:00.000Z\",\n      \"end\": \"2026-07-01T16:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T16:00:00.000Z\",\n      \"end\": \"2026-07-01T17:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T17:00:00.000Z\",\n      \"end\": \"2026-07-01T18:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T18:00:00.000Z\",\n      \"end\": \"2026-07-01T19:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T19:00:00.000Z\",\n      \"end\": \"2026-07-01T20:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    },\n    {\n      \"start\": \"2026-07-01T20:00:00.000Z\",\n      \"end\": \"2026-07-01T21:00:00.000Z\",\n      \"available_at\": \"2026-06-30T21:00:00.000Z\",\n      \"power_kw\": 0\n    }\n  ]\n}\n"
+  },
+  "solar_comparison": {
+    "schema": 1,
+    "kind": "conditional_solar_allocation_comparison",
+    "status": "complete",
+    "allocation": {
+      "schema": 1,
+      "kind": "plant_solar_allocation",
+      "case_sha256": "0f1c891aba9dbceb6a37d946709638fb5bc1a65764b736f7d879e17e91fe6b96",
+      "source_kind": "illustrative_scenario",
+      "source_label": "Explicit illustrative plant allocation",
+      "plant_mapping": "Analytical unit",
+      "power_basis": "total_plant_eligible_solar",
+      "interval_semantics": "constant_power",
+      "review_as_of": "2026-07-01T22:00:00.000Z",
+      "intervals": [
+        {
+          "start": "2026-06-30T21:00:00.000Z",
+          "end": "2026-06-30T22:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-06-30T22:00:00.000Z",
+          "end": "2026-06-30T23:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-06-30T23:00:00.000Z",
+          "end": "2026-07-01T00:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T00:00:00.000Z",
+          "end": "2026-07-01T01:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T01:00:00.000Z",
+          "end": "2026-07-01T02:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T02:00:00.000Z",
+          "end": "2026-07-01T03:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T03:00:00.000Z",
+          "end": "2026-07-01T04:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T04:00:00.000Z",
+          "end": "2026-07-01T05:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T05:00:00.000Z",
+          "end": "2026-07-01T06:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T06:00:00.000Z",
+          "end": "2026-07-01T07:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T07:00:00.000Z",
+          "end": "2026-07-01T08:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T08:00:00.000Z",
+          "end": "2026-07-01T09:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T09:00:00.000Z",
+          "end": "2026-07-01T10:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T10:00:00.000Z",
+          "end": "2026-07-01T11:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 2
+        },
+        {
+          "start": "2026-07-01T11:00:00.000Z",
+          "end": "2026-07-01T12:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T12:00:00.000Z",
+          "end": "2026-07-01T13:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T13:00:00.000Z",
+          "end": "2026-07-01T14:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T14:00:00.000Z",
+          "end": "2026-07-01T15:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T15:00:00.000Z",
+          "end": "2026-07-01T16:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T16:00:00.000Z",
+          "end": "2026-07-01T17:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T17:00:00.000Z",
+          "end": "2026-07-01T18:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T18:00:00.000Z",
+          "end": "2026-07-01T19:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T19:00:00.000Z",
+          "end": "2026-07-01T20:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        },
+        {
+          "start": "2026-07-01T20:00:00.000Z",
+          "end": "2026-07-01T21:00:00.000Z",
+          "available_at": "2026-06-30T21:00:00.000Z",
+          "power_kw": 0
+        }
+      ]
+    },
+    "coverage": {
+      "horizon_hours": 24,
+      "known_hours": 24,
+      "unknown_hours": 0,
+      "late_hours": 0
+    },
+    "known_totals": {
+      "original_load_kwh": 2,
+      "revised_load_kwh": 2,
+      "original_solar_kwh": 0,
+      "revised_solar_kwh": 2,
+      "original_other_kwh": 2,
+      "revised_other_kwh": 0,
+      "allocated_solar_kwh": 2,
+      "original_unused_solar_kwh": 2,
+      "revised_unused_solar_kwh": 0,
+      "delta_load_kwh": 0,
+      "delta_solar_kwh": 2,
+      "delta_other_kwh": -2
+    },
+    "totals": {
+      "original_load_kwh": 2,
+      "revised_load_kwh": 2,
+      "original_solar_kwh": 0,
+      "revised_solar_kwh": 2,
+      "original_other_kwh": 2,
+      "revised_other_kwh": 0,
+      "allocated_solar_kwh": 2,
+      "original_unused_solar_kwh": 2,
+      "revised_unused_solar_kwh": 0,
+      "delta_load_kwh": 0,
+      "delta_solar_kwh": 2,
+      "delta_other_kwh": -2
+    },
+    "full_load_totals": {
+      "original_load_kwh": 2,
+      "revised_load_kwh": 2,
+      "delta_load_kwh": 0
+    },
+    "rows": [
+      {
+        "start": "2026-06-30T21:00:00.000Z",
+        "end": "2026-06-30T22:00:00.000Z",
+        "start_epoch_ms": 1782853200000,
+        "end_epoch_ms": 1782856800000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-06-30T22:00:00.000Z",
+        "end": "2026-06-30T23:00:00.000Z",
+        "start_epoch_ms": 1782856800000,
+        "end_epoch_ms": 1782860400000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-06-30T23:00:00.000Z",
+        "end": "2026-07-01T00:00:00.000Z",
+        "start_epoch_ms": 1782860400000,
+        "end_epoch_ms": 1782864000000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T00:00:00.000Z",
+        "end": "2026-07-01T01:00:00.000Z",
+        "start_epoch_ms": 1782864000000,
+        "end_epoch_ms": 1782867600000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T01:00:00.000Z",
+        "end": "2026-07-01T02:00:00.000Z",
+        "start_epoch_ms": 1782867600000,
+        "end_epoch_ms": 1782871200000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T02:00:00.000Z",
+        "end": "2026-07-01T03:00:00.000Z",
+        "start_epoch_ms": 1782871200000,
+        "end_epoch_ms": 1782874800000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T03:00:00.000Z",
+        "end": "2026-07-01T04:00:00.000Z",
+        "start_epoch_ms": 1782874800000,
+        "end_epoch_ms": 1782878400000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T04:00:00.000Z",
+        "end": "2026-07-01T05:00:00.000Z",
+        "start_epoch_ms": 1782878400000,
+        "end_epoch_ms": 1782882000000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T05:00:00.000Z",
+        "end": "2026-07-01T06:00:00.000Z",
+        "start_epoch_ms": 1782882000000,
+        "end_epoch_ms": 1782885600000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T06:00:00.000Z",
+        "end": "2026-07-01T07:00:00.000Z",
+        "start_epoch_ms": 1782885600000,
+        "end_epoch_ms": 1782889200000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T07:00:00.000Z",
+        "end": "2026-07-01T08:00:00.000Z",
+        "start_epoch_ms": 1782889200000,
+        "end_epoch_ms": 1782892800000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T08:00:00.000Z",
+        "end": "2026-07-01T09:00:00.000Z",
+        "start_epoch_ms": 1782892800000,
+        "end_epoch_ms": 1782896400000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T09:00:00.000Z",
+        "end": "2026-07-01T10:00:00.000Z",
+        "start_epoch_ms": 1782896400000,
+        "end_epoch_ms": 1782900000000,
+        "duration_hours": 1,
+        "original_power_kw": 2,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T10:00:00.000Z",
+        "end": "2026-07-01T11:00:00.000Z",
+        "start_epoch_ms": 1782900000000,
+        "end_epoch_ms": 1782903600000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 2,
+        "status": "known",
+        "solar_power_kw": 2,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 2
+      },
+      {
+        "start": "2026-07-01T11:00:00.000Z",
+        "end": "2026-07-01T12:00:00.000Z",
+        "start_epoch_ms": 1782903600000,
+        "end_epoch_ms": 1782907200000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T12:00:00.000Z",
+        "end": "2026-07-01T13:00:00.000Z",
+        "start_epoch_ms": 1782907200000,
+        "end_epoch_ms": 1782910800000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T13:00:00.000Z",
+        "end": "2026-07-01T14:00:00.000Z",
+        "start_epoch_ms": 1782910800000,
+        "end_epoch_ms": 1782914400000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T14:00:00.000Z",
+        "end": "2026-07-01T15:00:00.000Z",
+        "start_epoch_ms": 1782914400000,
+        "end_epoch_ms": 1782918000000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T15:00:00.000Z",
+        "end": "2026-07-01T16:00:00.000Z",
+        "start_epoch_ms": 1782918000000,
+        "end_epoch_ms": 1782921600000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T16:00:00.000Z",
+        "end": "2026-07-01T17:00:00.000Z",
+        "start_epoch_ms": 1782921600000,
+        "end_epoch_ms": 1782925200000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T17:00:00.000Z",
+        "end": "2026-07-01T18:00:00.000Z",
+        "start_epoch_ms": 1782925200000,
+        "end_epoch_ms": 1782928800000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T18:00:00.000Z",
+        "end": "2026-07-01T19:00:00.000Z",
+        "start_epoch_ms": 1782928800000,
+        "end_epoch_ms": 1782932400000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T19:00:00.000Z",
+        "end": "2026-07-01T20:00:00.000Z",
+        "start_epoch_ms": 1782932400000,
+        "end_epoch_ms": 1782936000000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      },
+      {
+        "start": "2026-07-01T20:00:00.000Z",
+        "end": "2026-07-01T21:00:00.000Z",
+        "start_epoch_ms": 1782936000000,
+        "end_epoch_ms": 1782939600000,
+        "duration_hours": 1,
+        "original_power_kw": 0,
+        "revised_power_kw": 0,
+        "status": "known",
+        "solar_power_kw": 0,
+        "original_solar_kwh": 0,
+        "revised_solar_kwh": 0
+      }
+    ],
+    "scope": [
+      "Same plant-eligible solar profile and interval support for both supplied plans. Source, plant mapping and allocation authority are reviewer declarations.",
+      "Conditional simultaneous use is the integral of min(modeled plant power, declared eligible solar power), with both rates constant between explicit boundaries. Point readings, interval averages and regional curtailment are not accepted as this profile.",
+      "Modeled power is effective production times declared constant specific energy, with exact outage splits and energy for spilled water included. Other electricity is the load not matched to this allocation; its actual source is unknown.",
+      "Profile availability is checked at its declared review cutoff, which may be retrospective. Missing, null and later-available intervals remain unknown. Partial totals use only identical known intervals for both plans.",
+      "Solar-use difference is conditional on the profile; it is not measured recovery, causal avoided curtailment, verified renewable procurement, money, carbon or operating permission. Check water service, reserve, spill, final storage and total electricity alongside it."
+    ],
+    "difference_envelope": {
+      "status": "bounded",
+      "delta_solar_kwh": {
+        "lower": 2,
+        "upper": 2
+      },
+      "delta_other_kwh": {
+        "lower": -2,
+        "upper": -2
+      },
+      "width_kwh": 0,
+      "contributions": [
+        {
+          "start": "2026-06-30T21:00:00.000Z",
+          "end": "2026-06-30T22:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-06-30T22:00:00.000Z",
+          "end": "2026-06-30T23:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-06-30T23:00:00.000Z",
+          "end": "2026-07-01T00:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T00:00:00.000Z",
+          "end": "2026-07-01T01:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T01:00:00.000Z",
+          "end": "2026-07-01T02:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T02:00:00.000Z",
+          "end": "2026-07-01T03:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T03:00:00.000Z",
+          "end": "2026-07-01T04:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T04:00:00.000Z",
+          "end": "2026-07-01T05:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T05:00:00.000Z",
+          "end": "2026-07-01T06:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T06:00:00.000Z",
+          "end": "2026-07-01T07:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T07:00:00.000Z",
+          "end": "2026-07-01T08:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T08:00:00.000Z",
+          "end": "2026-07-01T09:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T09:00:00.000Z",
+          "end": "2026-07-01T10:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T10:00:00.000Z",
+          "end": "2026-07-01T11:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 2,
+            "upper": 2
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 2
+          }
+        },
+        {
+          "start": "2026-07-01T11:00:00.000Z",
+          "end": "2026-07-01T12:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T12:00:00.000Z",
+          "end": "2026-07-01T13:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T13:00:00.000Z",
+          "end": "2026-07-01T14:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T14:00:00.000Z",
+          "end": "2026-07-01T15:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T15:00:00.000Z",
+          "end": "2026-07-01T16:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T16:00:00.000Z",
+          "end": "2026-07-01T17:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T17:00:00.000Z",
+          "end": "2026-07-01T18:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T18:00:00.000Z",
+          "end": "2026-07-01T19:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T19:00:00.000Z",
+          "end": "2026-07-01T20:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        },
+        {
+          "start": "2026-07-01T20:00:00.000Z",
+          "end": "2026-07-01T21:00:00.000Z",
+          "status": "known",
+          "method": "constant_power",
+          "delta_solar_kwh": {
+            "lower": 0,
+            "upper": 0
+          },
+          "width_kwh": 0,
+          "constraints": {
+            "power_kw": 0
+          }
+        }
+      ],
+      "scope": [
+        "Returned minus original under one shared nonnegative plant-eligible solar trace. Independent source intervals remain intact, including across midnight; no within-interval energy is invented.",
+        "Timely declared constant power, energy and power limits constrain the comparison. Missing and late evidence uses load-only limits; late numeric values are ignored. Partial absolute solar totals remain unknown.",
+        "Energy without a power limit gives closed infimum/supremum bounds under arbitrarily high finite power. Some endpoints may be limiting values rather than attainable traces; a zero endpoint does not establish an achievable tie.",
+        "Range widths attribute unresolved modeled differences to whole source intervals or contiguous missing gaps. They are not expected information value, promised resolution or a minimum measurement cadence.",
+        "No forecast, schedule, authenticated plant allocation, measured recovery or operating permission is established. Water service, spill, production and final inventory remain separate outcomes."
+      ]
+    }
+  }
+}

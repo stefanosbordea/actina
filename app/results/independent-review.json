@@ -1,0 +1,131 @@
+{
+  "scope": "Independent retrospective frozen-model review; no operational or measured plant/grid benefit",
+  "rows": 2208,
+  "days": 92,
+  "threshold_w_m2": 600,
+  "latest_persistence_rule": "Same local hour one date earlier for target hours00\u201318; two dates earlier for19\u201323, all source times<=prior18:00issue",
+  "regression": {
+    "frozen_model": {
+      "mae": 8.812139833169894,
+      "rmse": 17.941774340867905
+    },
+    "older_day2_persistence": {
+      "mae": 9.578351449275363,
+      "rmse": 21.649202130761097
+    },
+    "latest_available_persistence": {
+      "mae": 7.638134057971015,
+      "rmse": 19.433076818601865
+    },
+    "train_only_climatology": {
+      "mae": 17.26422342466911,
+      "rmse": 29.26909196743712
+    }
+  },
+  "latest_available_persistence_bootstrap": {
+    "mae_difference_model_minus_control_w_m2": 1.1740057751988797,
+    "mae_difference_95_ci": [
+      0.17830909711507387,
+      2.0661147144407064
+    ],
+    "improvement_percent": -15.370321681821084,
+    "improvement_percent_95_ci": [
+      -31.354850701011234,
+      -2.0787372466083185
+    ]
+  },
+  "proxy_confusion": {
+    "model": {
+      "tp": 601,
+      "fp": 11,
+      "tn": 1590,
+      "fn": 6,
+      "precision": 0.9820261437908496,
+      "recall": 0.9901153212520593,
+      "f1": 0.9860541427399507,
+      "flagged": 612,
+      "actual_positive": 607
+    },
+    "latest_available_persistence": {
+      "tp": 600,
+      "fp": 10,
+      "tn": 1591,
+      "fn": 7,
+      "precision": 0.9836065573770492,
+      "recall": 0.9884678747940692,
+      "f1": 0.9860312243221035,
+      "flagged": 610,
+      "actual_positive": 607
+    }
+  },
+  "matched_schedule_scenarios": {
+    "frozen_model": {
+      "days": 92,
+      "total_water_m3": 264960.0,
+      "total_energy_kwh": 900864.0,
+      "total_scenario_cost_eur": 90987.264,
+      "mean_actual_high_radiation_energy_share_pct": 95.75030193236717,
+      "total_safety_violations": 0,
+      "max_terminal_storage_error_m3": 0.0
+    },
+    "latest_available_persistence": {
+      "days": 92,
+      "total_water_m3": 264960.0,
+      "total_energy_kwh": 900864.0,
+      "total_scenario_cost_eur": 90987.264,
+      "mean_actual_high_radiation_energy_share_pct": 95.65972222222223,
+      "total_safety_violations": 0,
+      "max_terminal_storage_error_m3": 0.0
+    },
+    "price_only": {
+      "days": 92,
+      "total_water_m3": 264960.0,
+      "total_energy_kwh": 900864.0,
+      "total_scenario_cost_eur": 90987.264,
+      "mean_actual_high_radiation_energy_share_pct": 94.75392512077296,
+      "total_safety_violations": 0,
+      "max_terminal_storage_error_m3": 0.0
+    },
+    "train_only_climatology": {
+      "days": 92,
+      "total_water_m3": 264960.0,
+      "total_energy_kwh": 900864.0,
+      "total_scenario_cost_eur": 90987.264,
+      "mean_actual_high_radiation_energy_share_pct": 94.75392512077296,
+      "total_safety_violations": 0,
+      "max_terminal_storage_error_m3": 0.0
+    }
+  },
+  "forecast_attribution": {
+    "frozen_model": {
+      "total_scenario_cost_saving_vs_price_only_eur": 0.0,
+      "max_absolute_daily_cost_difference_eur": 0.0,
+      "actual_high_radiation_share_difference_vs_price_only_percentage_points": 0.9963768115942023
+    },
+    "latest_available_persistence": {
+      "total_scenario_cost_saving_vs_price_only_eur": 0.0,
+      "max_absolute_daily_cost_difference_eur": 0.0,
+      "actual_high_radiation_share_difference_vs_price_only_percentage_points": 0.9057971014492748
+    },
+    "train_only_climatology": {
+      "total_scenario_cost_saving_vs_price_only_eur": 0.0,
+      "max_absolute_daily_cost_difference_eur": 0.0,
+      "actual_high_radiation_share_difference_vs_price_only_percentage_points": 0.0
+    }
+  },
+  "verdicts": [
+    "The frozen model does not beat the stronger latest-available persistence baseline on this test period.",
+    "No material AI cost benefit is established: scenario clock tariffs drive the saving; forecasts only rank production inside tied tariff hours.",
+    "Changes in high-radiation allocation are weather-proxy outcomes, not actual curtailed energy or carbon.",
+    "Source-time checks are theoretical temporal cutoffs, not certification of original historical publication vintages."
+  ],
+  "command": ".venv/bin/python results/independent-review.py",
+  "source_sha256": {
+    "results/independent-review.py": "0eed2779f86353a5ed4cf8a6ba951c2be8d834e262ca24c857ed0fa402c60699",
+    "model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+    "model/train.py": "21118d488c17314239702b077c2d5192e2b287492b51a2fd4f673877e76354d5",
+    "eval/evaluate.py": "53e3b4f1dd37ada1023daf6a7a5a446ace9715537a7b1e5d4959db95d790038e",
+    "data/test_predictions.csv": "e4ad1865258a40d4013e1a90bf7ce0afb8ff0d6fa24823c1c117d79ee8c34c3c",
+    "data/paphos_weather.csv": "fa4f76d3e787e7fff7da1a19524ceccc12a94d9d8df65995e6b5b6b6b3463262"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "kind": "measured_run_review",
+  "case_file": {
+    "name": "lower-electricity-by-draining-stock-case.json",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"fixed_plan_execution_case\",\n  \"input\": {\n    \"times\": [\n      \"2026-07-01T00:00:00.000Z\",\n      \"2026-07-01T01:00:00.000Z\",\n      \"2026-07-01T02:00:00.000Z\",\n      \"2026-07-01T03:00:00.000Z\",\n      \"2026-07-01T04:00:00.000Z\",\n      \"2026-07-01T05:00:00.000Z\",\n      \"2026-07-01T06:00:00.000Z\",\n      \"2026-07-01T07:00:00.000Z\",\n      \"2026-07-01T08:00:00.000Z\",\n      \"2026-07-01T09:00:00.000Z\",\n      \"2026-07-01T10:00:00.000Z\",\n      \"2026-07-01T11:00:00.000Z\",\n      \"2026-07-01T12:00:00.000Z\",\n      \"2026-07-01T13:00:00.000Z\",\n      \"2026-07-01T14:00:00.000Z\",\n      \"2026-07-01T15:00:00.000Z\",\n      \"2026-07-01T16:00:00.000Z\",\n      \"2026-07-01T17:00:00.000Z\",\n      \"2026-07-01T18:00:00.000Z\",\n      \"2026-07-01T19:00:00.000Z\",\n      \"2026-07-01T20:00:00.000Z\",\n      \"2026-07-01T21:00:00.000Z\",\n      \"2026-07-01T22:00:00.000Z\",\n      \"2026-07-01T23:00:00.000Z\"\n    ],\n    \"production\": [\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10,\n      10\n    ],\n    \"demand\": 10,\n    \"capacity\": 400,\n    \"reserve\": 0,\n    \"initial\": 100,\n    \"target\": 100,\n    \"startHour\": 0\n  },\n  \"unit_capacity_m3_h\": 20,\n  \"specific_energy_kwh_m3\": 3.4,\n  \"identity\": {\n    \"data_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\n  }\n}\n",
+    "sha256": "0de33ce87f9587b63203c701d3c7f28f8def978dfda58a57a1ab55d4934bcc2d"
+  },
+  "measurement_file": {
+    "name": "lower-electricity-by-draining-stock-measurements.json",
+    "text": "{\n  \"schema\": 1,\n  \"kind\": \"plant_execution_measurements\",\n  \"case_sha256\": \"0de33ce87f9587b63203c701d3c7f28f8def978dfda58a57a1ab55d4934bcc2d\",\n  \"source_kind\": \"illustrative_scenario\",\n  \"source_label\": \"Frozen independent analytical example\",\n  \"plant_mapping\": \"Synthetic unit; gross load and net tank inflow\",\n  \"tank_mapping\": \"Synthetic tank; all boundaries explicitly declared\",\n  \"electricity_basis\": \"gross_plant_load\",\n  \"review_as_of\": \"2026-07-02T02:00:00.000Z\",\n  \"streams\": [\n    {\n      \"role\": \"energy\",\n      \"unit\": \"kWh\",\n      \"semantics\": \"interval_total\",\n      \"readings\": [\n        {\n          \"start\": \"2026-07-01T00:00:00.000Z\",\n          \"end\": \"2026-07-02T00:00:00.000Z\",\n          \"available_at\": \"2026-07-02T00:00:00.000Z\",\n          \"lower\": 680,\n          \"upper\": 680\n        }\n      ]\n    },\n    {\n      \"role\": \"produced\",\n      \"unit\": \"m3\",\n      \"semantics\": \"interval_total\",\n      \"readings\": [\n        {\n          \"start\": \"2026-07-01T00:00:00.000Z\",\n          \"end\": \"2026-07-02T00:00:00.000Z\",\n          \"available_at\": \"2026-07-02T00:00:00.000Z\",\n          \"lower\": 200,\n          \"upper\": 200\n        }\n      ]\n    },\n    {\n      \"role\": \"delivered\",\n      \"unit\": \"m3\",\n      \"semantics\": \"interval_total\",\n      \"readings\": [\n        {\n          \"start\": \"2026-07-01T00:00:00.000Z\",\n          \"end\": \"2026-07-02T00:00:00.000Z\",\n          \"available_at\": \"2026-07-02T00:00:00.000Z\",\n          \"lower\": 240,\n          \"upper\": 240\n        }\n      ]\n    }\n  ],\n  \"declared_zero\": [\n    \"other_inflow\",\n    \"other_outflow\",\n    \"spill\"\n  ],\n  \"tank\": [\n    {\n      \"time\": \"2026-07-01T00:00:00.000Z\",\n      \"available_at\": \"2026-07-01T00:00:00.000Z\",\n      \"lower\": 100,\n      \"upper\": 100\n    },\n    {\n      \"time\": \"2026-07-02T00:00:00.000Z\",\n      \"available_at\": \"2026-07-02T00:00:00.000Z\",\n      \"lower\": 60,\n      \"upper\": 60\n    }\n  ]\n}\n",
+    "sha256": "2762496d74b7074157f7d30ee777de159791a1f56452d6c1447787e9c01995f2"
+  },
+  "createdAt": "2026-10-02T21:21:24.322Z",
+  "results": {
+    "modeled": {
+      "energy": 816,
+      "produced": 240,
+      "delivered": 240,
+      "spill": 0,
+      "other_inflow": 0,
+      "other_outflow": 0,
+      "initial_storage": 100,
+      "final_storage": 100
+    },
+    "measured": {
+      "energy": {
+        "lower": 680,
+        "upper": 680
+      },
+      "produced": {
+        "lower": 200,
+        "upper": 200
+      },
+      "delivered": {
+        "lower": 240,
+        "upper": 240
+      },
+      "other_inflow": {
+        "lower": 0,
+        "upper": 0
+      },
+      "other_outflow": {
+        "lower": 0,
+        "upper": 0
+      },
+      "spill": {
+        "lower": 0,
+        "upper": 0
+      },
+      "initial_storage": {
+        "lower": 100,
+        "upper": 100
+      },
+      "final_storage": {
+        "lower": 60,
+        "upper": 60
+      }
+    },
+    "differences": {
+      "energy": {
+        "lower": -136,
+        "upper": -136
+      },
+      "produced": {
+        "lower": -40,
+        "upper": -40
+      },
+      "delivered": {
+        "lower": 0,
+        "upper": 0
+      },
+      "other_inflow": {
+        "lower": 0,
+        "upper": 0
+      },
+      "other_outflow": {
+        "lower": 0,
+        "upper": 0
+      },
+      "spill": {
+        "lower": 0,
+        "upper": 0
+      },
+      "initial_storage": {
+        "lower": 0,
+        "upper": 0
+      },
+      "final_storage": {
+        "lower": -40,
+        "upper": -40
+      }
+    },
+    "coverage": {
+      "energy": {
+        "status": "complete",
+        "semantics": "interval_total",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 680,
+          "upper": 680
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "produced": {
+        "status": "complete",
+        "semantics": "interval_total",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 200,
+          "upper": 200
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "delivered": {
+        "status": "complete",
+        "semantics": "interval_total",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 240,
+          "upper": 240
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "other_inflow": {
+        "status": "declared_zero",
+        "semantics": "declared_zero",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 0,
+          "upper": 0
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "other_outflow": {
+        "status": "declared_zero",
+        "semantics": "declared_zero",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 0,
+          "upper": 0
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "spill": {
+        "status": "declared_zero",
+        "semantics": "declared_zero",
+        "known_hours": 24,
+        "known_support": {
+          "lower": 0,
+          "upper": 0
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "initial_storage": {
+        "status": "complete",
+        "semantics": "tank_boundary",
+        "known_hours": null,
+        "known_support": {
+          "lower": 100,
+          "upper": 100
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      },
+      "final_storage": {
+        "status": "complete",
+        "semantics": "tank_boundary",
+        "known_hours": null,
+        "known_support": {
+          "lower": 60,
+          "upper": 60
+        },
+        "late_records": 0,
+        "unknown_records": 0
+      }
+    },
+    "water_balance": {
+      "status": "compatible",
+      "residual_m3": {
+        "lower": 0,
+        "upper": 0
+      }
+    },
+    "volume_stock_comparison": {
+      "status": "different"
+    },
+    "issues": [],
+    "scope": [
+      "Measured interval totals and explicitly continuous counters cover one frozen 24-hour modeled reference. Different role partitions do not imply an hourly allocation.",
+      "Bounds are caller-declared ranges, not confidence intervals or authenticated meter accuracy. Shared cumulative endpoints cancel once; other bounds are combined conservatively without an independence claim.",
+      "Compatibility means declared bounds permit agreement, not proven equality, actual demand satisfaction, tank safety between readings, pressure or water quality.",
+      "Gross plant electricity is distinct from grid imports or solar use. A lower energy total alone establishes no matched-water benefit, curtailment recovery or causal saving. No restoration energy is assumed.",
+      "Mappings, no-reset and zero-flow declarations are caller statements. Hashes bind file identity, not provenance, historical issuance or plant operating permission. The caller must verify retained raw-file hashes."
+    ]
+  },
+  "note": {
+    "reviewer": "Loucas",
+    "decision": "Hold for correction",
+    "reason": "Illustrative test: 136 kWh less electricity comes with 40 m³ less production and 40 m³ less final tank stock; delivered water is unchanged. Compare equal water volumes and ending stock before claiming a saving."
+  }
+}

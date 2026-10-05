@@ -1,0 +1,55 @@
+{
+  "source_sha256": "de6523c664823072ae4d271fc674d67448ea8c437c561f2803a5a0293491f0a2",
+  "native_model_sha256": "f6bf1930dfb1f7d05e1cb9e99361e2914e8a6b2657a7c6e2798c641c679ff74c",
+  "lightgbm_version": "4.7.0",
+  "trees": 148,
+  "test_hours": 3567,
+  "test_max_absolute_difference_w_m2": 1.1368683772161603e-13,
+  "matches_retained_test_at_1e_minus_8": true,
+  "importance": [
+    {
+      "feature": "shortwave_radiation",
+      "gain": 10163960797.405273,
+      "gain_share": 0.8985506476572397,
+      "splits": 1092
+    },
+    {
+      "feature": "radiation_yesterday",
+      "gain": 1047539036.5717773,
+      "gain_share": 0.09260827530917913,
+      "splits": 1136
+    },
+    {
+      "feature": "temperature_2m",
+      "gain": 30070895.739501953,
+      "gain_share": 0.0026584343821220483,
+      "splits": 653
+    },
+    {
+      "feature": "cloud_cover",
+      "gain": 23274024.36694336,
+      "gain_share": 0.0020575531611501416,
+      "splits": 538
+    },
+    {
+      "feature": "relative_humidity_2m",
+      "gain": 20997323.106933594,
+      "gain_share": 0.0018562801109602905,
+      "splits": 490
+    },
+    {
+      "feature": "month",
+      "gain": 19666955.385253906,
+      "gain_share": 0.0017386682073171026,
+      "splits": 341
+    },
+    {
+      "feature": "hour",
+      "gain": 5996694.903808594,
+      "gain_share": 0.0005301411720316406,
+      "splits": 190
+    }
+  ],
+  "interpretation": "Training split-gain importance, not causal importance or a held-out contribution estimate.",
+  "evaluator_sha256": "da7c2df3137a75e4d3769a8f3e1a5d1d75911f2746274ccfc24a5b480fb5c40e"
+}
