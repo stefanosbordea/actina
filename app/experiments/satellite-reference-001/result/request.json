@@ -1,0 +1,4 @@
+{
+  "started_at_utc": "2026-10-04T09:01:58.131871+00:00",
+  "url": "https://satellite-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-10-01&hourly=shortwave_radiation&models=eumetsat_sarah3&timezone=GMT&timeformat=unixtime"
+}

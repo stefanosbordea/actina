@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "mismatches": [],
+  "checks": {
+    "joined_feature_rows": 17832,
+    "prediction_files": 14,
+    "prediction_rows": 49931,
+    "full_scores": 28,
+    "monthly_scores": 154,
+    "validation_combinations": 368,
+    "training_memberships": 2,
+    "comparison_rows": 28
+  },
+  "report_sha256": "c01c619bfb5d66d138414613328f75e720d05332aae0c48f8247b47bc30ae464",
+  "protocol_sha256": "a31cd52672ebbe36c221c822fb8d085bee86e11d972e5fbb8457229938af76c7",
+  "code_sha256": "8ed6b1c8df954352f2f93ed42831db99c56065d242092dcee7d502ee5d1f738a",
+  "checker_sha256": "b87c244a4377f2db67da41cc985886823792554b899c4e3043b075b1a32350d6",
+  "reused_checker_sha256": "9b03a5b7695dcdd356fe0b2e5efb237cc65547271f3e4529a6fcda013927d127",
+  "archive_sha256": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+  },
+  "run_log_sha256": "70b00982d6cb7c006b2a619b9df4d704c15b7a1d07d8113b010a6da1035c15b2",
+  "split_missingness": {
+    "validation": {
+      "hours": 3566,
+      "evaluation_cloud_missing": 129,
+      "training_cloud_missing": 0,
+      "training_excluded": 0
+    },
+    "test": {
+      "hours": 3567,
+      "evaluation_cloud_missing": 0,
+      "training_cloud_missing": 129,
+      "training_excluded": 0
+    }
+  },
+  "reference_csv_parser_residual": {
+    "values": 2054,
+    "maximum_absolute_w_m2": 1.1368683772161603e-13,
+    "classification_changes": 0
+  },
+  "numeric_check_tolerance_absolute": 1e-09,
+  "selected_method": "classifier_nwp",
+  "selected_passes_numerical_promotion": false,
+  "all_methods_numerical_gate": {
+    "persistence": false,
+    "original": false,
+    "nwp_day2": true,
+    "nwp_calibrated": true,
+    "classifier_base": false,
+    "classifier_nwp": false,
+    "residual_nwp": true
+  },
+  "release_recommendation": false,
+  "independent_future_evidence": false,
+  "interpretation": "Per-method numerical passes do not change the frozen validation winner or establish live archive availability."
+}

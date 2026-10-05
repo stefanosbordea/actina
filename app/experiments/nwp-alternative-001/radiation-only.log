@@ -1,0 +1,17 @@
+{
+  "status": "RADIATION_ONLY_READY",
+  "prepared_at_utc": "2026-10-04T09:57:31.473571+00:00",
+  "rows": 17832,
+  "missing_radiation": 0,
+  "invalid_radiation": 0,
+  "excluded_column": "All cloud values; eight out-of-range raw percentages preserved separately.",
+  "original_two_variable_intake_status": "FAILED",
+  "scores_computed": 0,
+  "models_fitted": 0,
+  "extra_data_requests": 0,
+  "source_raw_sha256": "e41f4d3fbc498d4fb6e6be7706af3090904124291c2528cf55d2e9c9a4f14d19",
+  "source_diagnostic_join_sha256": "6a201331af1ef8d8220251397cad86b1eccde0bf6b337f55c051442fd8039644",
+  "radiation_only_protocol_sha256": "3319c52cc2b966e219a405bb6276ff6e2b1ba6dc24a82e7c7d0efdca14785bec",
+  "script_sha256": "f83f896dff507616d9032df2258334028425ed89043c76d4ef1069053eb822a7",
+  "radiation_only_csv_sha256": "8ecdaee979277ad2a417311a7cbf4e5a93da2ca33724931873224c7c3d519359"
+}

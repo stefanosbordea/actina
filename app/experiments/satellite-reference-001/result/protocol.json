@@ -1,0 +1,34 @@
+{
+  "declared_at_utc": "2026-10-04T09:01:58.129259+00:00",
+  "url": "https://satellite-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-10-01&hourly=shortwave_radiation&models=eumetsat_sarah3&timezone=GMT&timeformat=unixtime",
+  "parameters": {
+    "latitude": "34.7744",
+    "longitude": "32.4229",
+    "start_date": "2024-09-13",
+    "end_date": "2026-10-01",
+    "hourly": "shortwave_radiation",
+    "models": "eumetsat_sarah3",
+    "timezone": "GMT",
+    "timeformat": "unixtime"
+  },
+  "script_sha256": "c7a1e45d76a8d9ab102c743652a7241502aa2670a494f6254af1caa1be8233ad",
+  "protocol_sha256": "a63f78569ffed0c23140dc945e354cef043618e2d1979f39a5ba84ac1816bff7",
+  "known_availability_samples": [
+    {
+      "date": "2025-12-10",
+      "raw_sha256": "087d5d7ae4bf594f0d61e77a8bf73c99f48b4f3d8fdd23f04375d72b05bfafd2",
+      "receipt_sha256": "ba13a8dbbf8fcf927054280dae365bb2b316f2be76f0a3fcdfe06c51f5284623"
+    },
+    {
+      "date": "2026-07-03",
+      "raw_sha256": "d2f47f4cc8e5e1f4eb15a4c7f110c5448cd9bb5062aa120dee6e85469861fdd3",
+      "receipt_sha256": "ac86fe48b2d4e94b8ce88129b77f884454c462b11ba6bedf2320df6b127e7f82"
+    },
+    {
+      "date": "2026-10-01",
+      "raw_sha256": "c8a1d9f8060c67c0e4d17817a3f2fe0dffdd14f904fdfa88ccc98bc84307ded8",
+      "receipt_sha256": "6d9fcf34ac1afff411dab6e1d8583cd94129fd0cdcb2c986cee4844faef06167"
+    }
+  ],
+  "scope": "Full fixed period, no forecast scoring or target replacement"
+}

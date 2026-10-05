@@ -1,0 +1,8 @@
+test_bernstein_and_censoring (test_bqn.BQNTests.test_bernstein_and_censoring) ... ok
+test_gradient_weather_and_joint_away_from_kinks (test_bqn.BQNTests.test_gradient_weather_and_joint_away_from_kinks) ... ok
+test_missing_reference_and_train_only_scaler (test_bqn.BQNTests.test_missing_reference_and_train_only_scaler) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.404s
+
+OK

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "app/experiments/prospective-001/analogue-001/review-lock-v2.py"
+  ],
+  "started_at_utc": "2026-10-04T09:17:34.164400+00:00",
+  "finished_at_utc": "2026-10-04T09:17:35.868284+00:00",
+  "exit_status": 0,
+  "log_sha256": "20d959614036366c029afc7fd97f4bc6673870ba8a5b15815696d55dc9e3fa4c"
+}

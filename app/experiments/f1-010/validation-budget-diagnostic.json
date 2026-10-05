@@ -1,0 +1,33 @@
+{
+  "source_sha256": "70abddd1fc6fa8712923cca472297040326ca2cdeaa49e8ffdb13618a0001bcf",
+  "script_sha256": "fb5d3a95de45b458770ea2fc00d88fc35d9c2d1569ce75042a6449639d0748b5",
+  "scope": "Validation-only hindsight ceiling. No training, candidate or threshold selection uses this diagnostic.",
+  "references": {
+    "weather_complete_days": {
+      "complete_days": 150,
+      "hours": 3600,
+      "positive_calls": 289,
+      "positive_truth": 306,
+      "tp": 268,
+      "fp": 21,
+      "fn": 38,
+      "days_with_both_false_alarm_and_miss": 3,
+      "maximum_tp_with_one_perfect_pair_per_day": 271,
+      "maximum_tp_with_arbitrary_count_preserving_reordering": 271,
+      "unavoidable_fn_from_daily_count_budget": 35
+    },
+    "satellite_complete_available_days": {
+      "complete_days": 141,
+      "hours": 3384,
+      "positive_calls": 271,
+      "positive_truth": 290,
+      "tp": 228,
+      "fp": 43,
+      "fn": 62,
+      "days_with_both_false_alarm_and_miss": 5,
+      "maximum_tp_with_one_perfect_pair_per_day": 233,
+      "maximum_tp_with_arbitrary_count_preserving_reordering": 233,
+      "unavoidable_fn_from_daily_count_budget": 57
+    }
+  }
+}

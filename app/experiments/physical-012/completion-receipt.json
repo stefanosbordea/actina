@@ -1,0 +1,462 @@
+{
+  "completed_at_utc": "2026-10-04T11:02:14.804502+00:00",
+  "status": "PASS",
+  "checks": {
+    "unchanged_pinned_inputs": 29,
+    "verified_output_files": 23,
+    "verified_prescoring_plan_files": 17,
+    "npz_no_pickle": true,
+    "exact_recency_reproductions": 598,
+    "original_primary_memberships": true
+  },
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "release": "27.0.0",
+    "cpu": "Apple M1",
+    "physical_memory_bytes": 8589934592,
+    "hardware_observation_tool_chunk": "4b57d0"
+  },
+  "npz": [
+    {
+      "path": "app/experiments/physical-012/result/test/bank.npz",
+      "members": {
+        "pool_source_positions": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "int64"
+        },
+        "pool_source_target_time": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "<U19"
+        },
+        "pool_source_days": {
+          "shape": [
+            584
+          ],
+          "dtype": "<U10"
+        },
+        "pool_nwp": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_weather": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_satellite": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_residuals": {
+          "shape": [
+            2,
+            584,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_descriptor": {
+          "shape": [
+            584,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "recency_pool_indices": {
+          "shape": [
+            64
+          ],
+          "dtype": "int64"
+        },
+        "conditional_pool_indices": {
+          "shape": [
+            149,
+            64
+          ],
+          "dtype": "int64"
+        },
+        "distance_m3": {
+          "shape": [
+            149,
+            584
+          ],
+          "dtype": "float64"
+        },
+        "target_descriptor": {
+          "shape": [
+            149,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "permutations": {
+          "shape": [
+            24,
+            64
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    {
+      "path": "app/experiments/physical-012/result/test/plans.npz",
+      "members": {
+        "production": {
+          "shape": [
+            149,
+            6,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "raw_forecast_ghi": {
+          "shape": [
+            149,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "target_positions": {
+          "shape": [
+            149,
+            24
+          ],
+          "dtype": "int64"
+        },
+        "methods": {
+          "shape": [
+            6
+          ],
+          "dtype": "<U20"
+        }
+      }
+    },
+    {
+      "path": "app/experiments/physical-012/result/test/scenario-replay.npz",
+      "members": {
+        "unclipped_ghi": {
+          "shape": [
+            149,
+            2,
+            2,
+            2,
+            64,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "cost_eur": {
+          "shape": [
+            149,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        },
+        "grid_kwh": {
+          "shape": [
+            149,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        },
+        "unused_pv_kwh": {
+          "shape": [
+            149,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "path": "app/experiments/physical-012/result/validation/bank.npz",
+      "members": {
+        "pool_source_positions": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "int64"
+        },
+        "pool_source_target_time": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "<U19"
+        },
+        "pool_source_days": {
+          "shape": [
+            444
+          ],
+          "dtype": "<U10"
+        },
+        "pool_nwp": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_weather": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_satellite": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_residuals": {
+          "shape": [
+            2,
+            444,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "pool_descriptor": {
+          "shape": [
+            444,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "recency_pool_indices": {
+          "shape": [
+            64
+          ],
+          "dtype": "int64"
+        },
+        "conditional_pool_indices": {
+          "shape": [
+            150,
+            64
+          ],
+          "dtype": "int64"
+        },
+        "distance_m3": {
+          "shape": [
+            150,
+            444
+          ],
+          "dtype": "float64"
+        },
+        "target_descriptor": {
+          "shape": [
+            150,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "permutations": {
+          "shape": [
+            24,
+            64
+          ],
+          "dtype": "int64"
+        }
+      }
+    },
+    {
+      "path": "app/experiments/physical-012/result/validation/plans.npz",
+      "members": {
+        "production": {
+          "shape": [
+            150,
+            6,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "raw_forecast_ghi": {
+          "shape": [
+            150,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "target_positions": {
+          "shape": [
+            150,
+            24
+          ],
+          "dtype": "int64"
+        },
+        "methods": {
+          "shape": [
+            6
+          ],
+          "dtype": "<U20"
+        }
+      }
+    },
+    {
+      "path": "app/experiments/physical-012/result/validation/scenario-replay.npz",
+      "members": {
+        "unclipped_ghi": {
+          "shape": [
+            150,
+            2,
+            2,
+            2,
+            64,
+            24
+          ],
+          "dtype": "float64"
+        },
+        "cost_eur": {
+          "shape": [
+            150,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        },
+        "grid_kwh": {
+          "shape": [
+            150,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        },
+        "unused_pv_kwh": {
+          "shape": [
+            150,
+            2,
+            2,
+            6,
+            2,
+            64
+          ],
+          "dtype": "float64"
+        }
+      }
+    }
+  ],
+  "hashes": {
+    "app/experiments/physical-012/run-receipt.json": "647f03bf0a2959ec578bbfc07c70aec9bc5dab54983d1eb395708873266bf034",
+    "app/experiments/physical-012/preflight-receipt.json": "925b3f7c619418d2985edc1dc39ed890ab1636751cdfe0e83fca6b151ad970f9",
+    "app/experiments/physical-012/inputs.json": "5d64139c49bf802d1225310a6a6a7333fd92d590d9d4c0bcfe754f1cc589475f",
+    "app/experiments/physical-012/result/report.json": "7257d6034c9d1b6143d09ad705365ab5cbe34693a26c0922c181b06189377a73",
+    "app/experiments/physical-012/result/outputs.json": "21ef853a3b9cabbee1748cb02db2764bbffb41a43abae58e8b36c8a4f30c6598",
+    "app/experiments/physical-012/README.md": "17be829a1d0ef0616e8fb93b28953f909d655ffaf63739b729834fc408c84307",
+    "app/experiments/physical-012/review/result.json": "a6c8edba03861233219f3266a43f09206a4413e047df225cc60d4b77495e2b1f",
+    "app/experiments/physical-012/review/execution-002.json": "76675ed4fddf0e90207d5334123718edd25b4350c3cdecfc10c4dd5360682a2e",
+    "app/experiments/physical-012/review/check.py": "9868b7db43f33b0ddad2748a7d81d3f6434321df61aa66bd30521d39290bc347",
+    "app/experiments/README.md": "e11077732653daa0ee05d4838b39a997371d3cc613509673993a2cf1d74880e1",
+    "app/experiments/RESEARCH-GOAL.md": "b73f2774d2ffad51216d8ff88a4c371ae13260150321b8946a0750435c8cc6ad"
+  },
+  "independent_numerical_review": {
+    "status": "PASS",
+    "checks": 714332,
+    "exit_code": 0,
+    "result": "app/experiments/physical-012/review/result.json",
+    "execution_receipt": "app/experiments/physical-012/review/execution-002.json",
+    "initial_checker_failure_retained": true,
+    "candidate_source_changed": false
+  },
+  "finalized_at_utc": "2026-10-04T11:07:02.346169+00:00",
+  "commit_file_set": [
+    "app/experiments/physical-012/PROTOCOL.md",
+    "app/experiments/physical-012/README.md",
+    "app/experiments/physical-012/completion-receipt.json",
+    "app/experiments/physical-012/descriptor-fixtures.json",
+    "app/experiments/physical-012/inputs.json",
+    "app/experiments/physical-012/preflight-001.log",
+    "app/experiments/physical-012/preflight-002.log",
+    "app/experiments/physical-012/preflight-receipt.json",
+    "app/experiments/physical-012/result/outputs.json",
+    "app/experiments/physical-012/result/planning-freeze.json",
+    "app/experiments/physical-012/result/report.json",
+    "app/experiments/physical-012/result/solver-records.jsonl",
+    "app/experiments/physical-012/result/test/bank.npz",
+    "app/experiments/physical-012/result/test/daily-outcomes.csv",
+    "app/experiments/physical-012/result/test/evaluation-membership.csv",
+    "app/experiments/physical-012/result/test/plan-metadata.csv",
+    "app/experiments/physical-012/result/test/plans.npz",
+    "app/experiments/physical-012/result/test/pool-membership.csv",
+    "app/experiments/physical-012/result/test/recency-reproduction.csv",
+    "app/experiments/physical-012/result/test/retrieval.csv",
+    "app/experiments/physical-012/result/test/scenario-replay.npz",
+    "app/experiments/physical-012/result/test/schedules.csv",
+    "app/experiments/physical-012/result/validation/bank.npz",
+    "app/experiments/physical-012/result/validation/daily-outcomes.csv",
+    "app/experiments/physical-012/result/validation/evaluation-membership.csv",
+    "app/experiments/physical-012/result/validation/plan-metadata.csv",
+    "app/experiments/physical-012/result/validation/plans.npz",
+    "app/experiments/physical-012/result/validation/pool-membership.csv",
+    "app/experiments/physical-012/result/validation/recency-reproduction.csv",
+    "app/experiments/physical-012/result/validation/retrieval.csv",
+    "app/experiments/physical-012/result/validation/scenario-replay.npz",
+    "app/experiments/physical-012/result/validation/schedules.csv",
+    "app/experiments/physical-012/retrieval.py",
+    "app/experiments/physical-012/review/README.md",
+    "app/experiments/physical-012/review/check-001.log",
+    "app/experiments/physical-012/review/check-002.log",
+    "app/experiments/physical-012/review/check-attempt1.py",
+    "app/experiments/physical-012/review/check.py",
+    "app/experiments/physical-012/review/execution-001.json",
+    "app/experiments/physical-012/review/execution-002.json",
+    "app/experiments/physical-012/review/prefreeze.json",
+    "app/experiments/physical-012/review/result.json",
+    "app/experiments/physical-012/review/water-exact.csv",
+    "app/experiments/physical-012/run-receipt.json",
+    "app/experiments/physical-012/run.log",
+    "app/experiments/physical-012/run.py",
+    "app/experiments/physical-012/test_retrieval.py",
+    "app/experiments/README.md",
+    "app/experiments/RESEARCH-GOAL.md"
+  ],
+  "package_review": {
+    "experiment_files": 47,
+    "index_files": 2,
+    "largest_file": "app/experiments/physical-012/result/test/scenario-replay.npz",
+    "largest_file_bytes": 8827644,
+    "no_symlinks_environment_files_or_cache": true,
+    "no_private_message_or_customer_files": true,
+    "credential_pattern_scan": "No private-key or common access-token pattern found in text files",
+    "retained_failures": "Independent checker attempt 1 is required audit evidence, not temporary output",
+    "local_absolute_paths": "Actual execution receipts retain local command and working-directory paths",
+    "no_staging_commit_or_push_performed": true
+  }
+}

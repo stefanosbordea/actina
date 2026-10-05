@@ -1,0 +1,22 @@
+{
+  "started_at_utc": "2026-10-04T11:44:56.262701+00:00",
+  "command": [
+    "app/experiments/f1-013/run.py",
+    "--out",
+    "app/experiments/f1-013/result"
+  ],
+  "status": "VERIFYING_INPUTS",
+  "outcome_scoring_started": false,
+  "mode": "experiment",
+  "total_runtime_budget_seconds": 1800,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2"
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3"
+  }
+}

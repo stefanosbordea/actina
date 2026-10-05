@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013/review/math-check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T11:24:13.881786+00:00",
+  "completed_at_utc": "2026-10-04T11:24:17.005266+00:00",
+  "wall_seconds": 3.1230318330053706,
+  "exit_code": 0,
+  "sha256": {
+    "math-check.py": "d4b0fccbebc8a11b4db76427d7a66eda71c9b43596b21e5d2006a69305773c79",
+    "math-check-001.log": "bc7f6196b8b4732e801d70e25d333eb6dcc18f8f80e77b6df7c2d88f5e853cf2",
+    "math-result.json": "8e48e4d8f5a963ef623b2b68a002333c86d00a881f50d5e634cf70227381841d"
+  }
+}

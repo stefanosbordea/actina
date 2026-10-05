@@ -1,0 +1,36 @@
+{
+  "started_at_utc": "2026-10-04T12:44:51.607433+00:00",
+  "pre_execution_protocol_sha256": "ff14d45b77c71b63c3f1c64979b570c268bee6b2d34cd8a30c8dc787f3a4c3b9",
+  "runs": [
+    {
+      "command": [
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "app/handoff/v2-calibration-2026-10-04",
+        "-p",
+        "test_threshold.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.09327049999956216,
+      "log_sha256": "5148ad842879714bec85525fc09563eb729da5b98f7c59266cdc758b35959693"
+    },
+    {
+      "command": [
+        "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+        "app/handoff/v2-calibration-2026-10-04/threshold.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.20386724999934813,
+      "log_sha256": "1d0f29471fadd49969e6b809f90b7bcd070577e1612583c10b6e65b28a4105ea"
+    }
+  ],
+  "completed_at_utc": "2026-10-04T12:44:51.905235+00:00",
+  "output_sha256": {
+    "validation-selection.json": "1bcd3b9c31cf2615b4fa70634678766bd7cc908699c77a11faa8d8ff5fc60594",
+    "validation-table.csv": "72d0c7a26a6a0454a81180aaae5ecf761e66ae8e28ae9f7faa63fb30ce4aba7e"
+  }
+}

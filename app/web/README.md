@@ -1,10 +1,10 @@
-# AquaShift public operations workspace
+# Aktina review workspace
 
-Production: https://aquashift-pafos-2026.vercel.app
+Production: https://aktina-pafos-2026.vercel.app/workspace/
 
 This browser workspace evaluates supplied plans and evidence for Loucas’s concept: use otherwise curtailed solar to make drinking water, then store water. Stefanos’s model and scheduler remain replaceable team work. There is no live plant connection.
 
-The root URL opens the product home page: the solar-to-water idea, a real workspace preview, three usage paths and concise answers about files and evidence. Existing workspace links remain available. Reference data loads on entry to the workspace. The opening screen follows actual loading and verification; it adds no artificial delay. Self-contained handoff and observation intake remain available while that reference loads or if its verification fails. IBM Plex Sans and Mono are served locally under the SIL Open Font License; pinned source hashes and the license are in `public/fonts/`.
+The workspace URL opens its home page: the solar-to-water idea, a real workspace preview, three usage paths and concise answers about files and evidence. Existing workspace links remain available. Reference data loads on entry to the workspace. The opening screen follows actual loading and verification; it adds no artificial delay. Self-contained handoff and observation intake remain available while that reference loads or if its verification fails. IBM Plex Sans and Mono are served locally under the SIL Open Font License; pinned source hashes and the license are in `public/fonts/`.
 
 ## Working areas
 
@@ -29,7 +29,7 @@ Forecast imports are analysis inputs only. A schedule import can be explicitly s
 
 ## Reproduce
 
-From the AquaShift directory:
+From the `app/` directory:
 
 ```sh
 .venv/bin/python web/generate.py
@@ -77,7 +77,7 @@ Observation CSV columns are exactly `time,available_at,asset_id,measurement,valu
 
 Missing readings and readings first available after the chosen cutoff remain distinct unknown slots. A reading below the declared reserve requires review, even with complete numeric coverage. Source kind, labels and bounds are unverified declarations. These are timestamped point observations; no interval energy, water balance, calibration, quality, safety or curtailed-energy recovery is inferred. Available power grants no dispatch permission. Forecasts, cumulative meters and undeclared extra fields are unsupported; rejection does not prove a reading is false. Limits: 20 assets, 31-day window, 100,000 measurement slots, 256 KB declaration and 10 MB CSV. Pilot inputs stay in memory and disappear on reload; no reference model or plan is rewritten. Previous/Next move through 96 declared slots without compressing missing time; Latest goes to the latest reading known at the selected cutoff, not a withheld late row. Paging does not truncate review or observation exports.
 
-`public/pilot.mjs` exports `validatePilotContract(input)`, `validatePilot(contract,csvText,Papa,reviewOverride?)` and `pilotRecord(contract,report,identity)`. Coverage is `BLOCKED`, `PARTIAL` or `COMPLETE`; `reviewRequired` separately marks gaps or below-reserve observations. The offline wrapper uses this same validator with the retained parser, requires Node 20+, hashes original bytes and preserves existing report files. From the AquaShift directory:
+`public/pilot.mjs` exports `validatePilotContract(input)`, `validatePilot(contract,csvText,Papa,reviewOverride?)` and `pilotRecord(contract,report,identity)`. Coverage is `BLOCKED`, `PARTIAL` or `COMPLETE`; `reviewRequired` separately marks gaps or below-reserve observations. The offline wrapper uses this same validator with the retained parser, requires Node 20+, hashes original bytes and preserves existing report files. From the `app/` directory:
 
 ```sh
 node web/review_pilot.mjs --contract web/fixtures/pilot-synthetic-declaration.json --observations web/fixtures/pilot-synthetic-observations.csv --output results/my-pilot-review.json
@@ -105,7 +105,7 @@ Reviews → Returned revision → Solar use compares the original/returned pair 
 The JSON contract is `plant_solar_allocation` schema 1, bound to `case_sha256`, with `power_basis: total_plant_eligible_solar`. Each `[start,end)` interval needs explicit-offset timestamps and `available_at`. Two meanings are supported:
 
 - `interval_semantics: constant_power` declares nonnegative `power_kw` or null throughout each interval. The evaluator splits at production, solar and outage boundaries and integrates the lesser of modeled load and supplied power.
-- `interval_semantics: interval_energy` declares nonnegative `energy_kwh` and an upper `power_cap_kw`, each nullable. The energy belongs to the entire interval; it is never prorated across plan hours or outages. AquaShift bounds each plan's possible use and jointly bounds their difference under the **same** unknown solar timing. Feasible energy cannot exceed the power limit times the duration.
+- `interval_semantics: interval_energy` declares nonnegative `energy_kwh` and an upper `power_cap_kw`, each nullable. The energy belongs to the entire interval; it is never prorated across plan hours or outages. Aktina bounds each plan's possible use and jointly bounds their difference under the **same** unknown solar timing. Feasible energy cannot exceed the power limit times the duration.
 
 `review_as_of` determines which values were available; a retrospective cutoff is permitted. Intervals must be within the remaining horizon and cannot overlap. Missing, null and later-available periods remain unknown; partial results cover only common known intervals. Unknown specific energy prevents electricity calculations. Source identity, caps and plant eligibility remain declarations.
 

@@ -1,0 +1,10 @@
+test_changed_coefficient_is_rejected (test_replay.ReplayTests.test_changed_coefficient_is_rejected) ... ok
+test_changed_probability_is_rejected (test_replay.ReplayTests.test_changed_probability_is_rejected) ... ok
+test_crossing_any_frozen_threshold_is_rejected (test_replay.ReplayTests.test_crossing_any_frozen_threshold_is_rejected) ... ok
+test_invalid_values_are_rejected (test_replay.ReplayTests.test_invalid_values_are_rejected) ... ok
+test_last_bit_coefficient_and_probability_roundoff (test_replay.ReplayTests.test_last_bit_coefficient_and_probability_roundoff) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

@@ -1,0 +1,34 @@
+{
+  "train": {
+    "v2": {
+      "minimum": 336,
+      "maximum": 336,
+      "zero_windows": 0,
+      "partial_windows": 0,
+      "rows": 10675
+    },
+    "ecmwf": {
+      "minimum": 45,
+      "maximum": 336,
+      "zero_windows": 0,
+      "partial_windows": 291,
+      "rows": 10675
+    }
+  },
+  "validation": {
+    "v2": {
+      "minimum": 312,
+      "maximum": 336,
+      "zero_windows": 0,
+      "partial_windows": 359,
+      "rows": 3566
+    },
+    "ecmwf": {
+      "minimum": 336,
+      "maximum": 336,
+      "zero_windows": 0,
+      "partial_windows": 0,
+      "rows": 3566
+    }
+  }
+}

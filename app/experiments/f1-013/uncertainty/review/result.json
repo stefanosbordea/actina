@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": 7550,
+  "interval_rows": 120,
+  "paired_draws": 20000,
+  "undefined_draws": 0,
+  "exact_zero_raw_intervals": 24,
+  "maximum_percentile_difference": 0.0,
+  "elapsed_seconds": 3.1587402919999477,
+  "source_sha256": "b17fac79fc1246670da983f1adb34429d3ae3b094136454c60aa3c72664f8f18",
+  "checker_sha256": "94ba9f20f4bccdbd937511691cc7a7e431d9d5ca421f086fef4be548d411d5ae",
+  "input_lock_sha256": "4bb5d0dad1e5bd40103ddec67d0bb41f0ab952c17f3a70b5c097c57741cf2f2a",
+  "result_manifest_sha256": "e084cc5822c034d1cbda0901f0f5f280e5999a40d1c064111033b135a54a030c",
+  "scope": "All daily counts, calendar IDs, saved draw weights, exact pooled ratios and intervals independently reconstructed without production helpers."
+}

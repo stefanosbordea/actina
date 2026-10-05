@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "output_sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "nb_read_frames": "1320"
+      }
+    ],
+    "format": {
+      "duration": "44.000000",
+      "size": "6545580"
+    }
+  },
+  "full_decode": "passed",
+  "audio_streams": 0,
+  "frames": [
+    {
+      "file": "render/qa-frames/01.png",
+      "at_seconds": 3.0,
+      "sha256": "10ac27c0839eb3542cf0e70fa027bae51d93ffa2e20d1685790d4fd1450acfaf",
+      "source_capture": "captures/01-home.jpg"
+    },
+    {
+      "file": "render/qa-frames/02.png",
+      "at_seconds": 10.5,
+      "sha256": "4b23549d4de30f2f08a48fd7546411938ed835aeda555cbb2908a4e4de889b68",
+      "source_capture": "captures/02-summer.jpg"
+    },
+    {
+      "file": "render/qa-frames/03.png",
+      "at_seconds": 18.0,
+      "sha256": "a30bfa76d9b06bd53fd18b8f65b9b6b60715527ab3b26dad6392196cbd321cae",
+      "source_capture": "captures/03-summer-cost.jpg"
+    },
+    {
+      "file": "render/qa-frames/04.png",
+      "at_seconds": 25.0,
+      "sha256": "484dcf9044e30759798e36401a15b165ecea12ae6cb3f1eb6421a8e99bd2553e",
+      "source_capture": "captures/04-winter.jpg"
+    },
+    {
+      "file": "render/qa-frames/05.png",
+      "at_seconds": 32.0,
+      "sha256": "d05f97e6f67d79548a29af6fd69c3b17f634f54a3f82168f59f811f8c0ed8c50",
+      "source_capture": "captures/05-winter-cost.jpg"
+    },
+    {
+      "file": "render/qa-frames/06.png",
+      "at_seconds": 39.5,
+      "sha256": "e858ff71e3e51292bc3a0da908059d829466bbffffb3b5a3fa448aa539c5526e",
+      "source_capture": "captures/06-change.jpg"
+    }
+  ],
+  "prior_v2_files_unchanged": 25,
+  "check_sha256": "e8dbf1e071d5a1f3d9bccd761ce8a835c4f6d372d10f19a337431d3ca26a00d1",
+  "commands": [
+    [
+      "ffprobe",
+      "-v",
+      "error",
+      "-count_frames",
+      "-show_entries",
+      "format=duration,size:stream=codec_type,codec_name,width,height,r_frame_rate,nb_read_frames",
+      "-of",
+      "json",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-xerror",
+      "-nostdin",
+      "-protocol_whitelist",
+      "file,pipe,fd",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-f",
+      "null",
+      "-"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "3.0",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/01.png"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "10.5",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/02.png"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "18.0",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/03.png"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "25.0",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/04.png"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "32.0",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/05.png"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-nostdin",
+      "-n",
+      "-ss",
+      "39.5",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-frames:v",
+      "1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/qa-frames/06.png"
+    ]
+  ],
+  "scope": "Media identity, decode, clock and extracted frames; human visual inspection recorded separately."
+}

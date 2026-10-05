@@ -1,0 +1,8 @@
+test_corrupt_exact_saved_failure_refused (test_diagnostic.DiagnosticTests.test_corrupt_exact_saved_failure_refused) ... ok
+test_overlapping_guards_are_not_arbitrarily_assigned (test_diagnostic.DiagnosticTests.test_overlapping_guards_are_not_arbitrarily_assigned) ... ok
+test_reference_conflict_requires_individual_opportunities (test_diagnostic.DiagnosticTests.test_reference_conflict_requires_individual_opportunities) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE_AND_INDEPENDENTLY_CHECKED",
+  "recorded_at_utc": "2026-10-04T10:44:15.985005+00:00",
+  "original_run_receipt_sha256": "41180923e33c399668daf3a9b9a872ecfdfd785c741c42ded02360d852361602",
+  "independent_review": {
+    "result_sha256": "2db992ced748dc621ab28ab1a9f33cb6e12d9a94f0ec2aebdebcaafc931dc13e",
+    "execution_receipt_sha256": "44945878692f7d00a8551a901b8d73174d18a4bf6586334527c3b839d650fb6b",
+    "actual_exit_code": 0,
+    "checks": 197353,
+    "scenario_values": 1837056,
+    "water_plans": 1196
+  },
+  "portable_review": {
+    "result_sha256": "af1c0d79ed03817614ff22437a949d4239ff24d7cd0d8fba2500776b86b0cdd5",
+    "execution_receipt_sha256": "5687bc2623e6a37aeb22c0088362fd77fb104b0370c72400c96dec1cd5feb779",
+    "actual_exit_code": 0
+  },
+  "readme_sha256": "72626d3d4686acea1daca1df92dba6bd2a02e3fad8e336dfbec9e6b0ac991ef5",
+  "outcome": "Coherent hypothesis unsupported. Both candidates fail validation regret risk. Shuffled passes separate eight-axis aggregate gate. No product replacement.",
+  "original_sources_outputs_changed": false
+}

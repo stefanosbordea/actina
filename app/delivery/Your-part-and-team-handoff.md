@@ -1,28 +1,26 @@
-# Your part, in plain English
+# Your part in Aktina
 
-AquaShift uses electricity that would otherwise be curtailed to make drinking water, then stores the water for later. It needs a plant with spare production capacity, a usable tank and permission to coordinate with the grid. A sunny day alone does not prove that electricity was available to recover.
+Aktina explores using available solar electricity to make drinking water earlier, then storing the water for later demand. Spare plant capacity, tank space and a verified electricity allocation are needed; sunny weather alone does not establish recoverable curtailment.
 
-Under Stefanos's September 30 roadmap, **he builds the primary prediction model and the plant/tank scheduling assumptions. You check the predictions and resulting plans, explain the evidence, and make them usable in the dashboard.** Andreas Nikolaides and Cleopas Cleopa handle the business case and pitch.
+Stefanos owns the primary forecast model and scheduler. Loukas owns evaluation, feature/filter feedback, integration and the usable demo. Andreas Nikolaides and Cleopas Cleopa contribute the business case and pitch. The current collaboration also includes separate prediction experiments; these preserve Stefanos's original files.
 
-## What you now have
+## What is ready
 
-The [online workspace](https://aquashift-pafos-2026.vercel.app) connects the unit, tank, historical weather, plan, forecast checks, source reports and review records. It has a working independent reference while Stefanos prepares his handoff. That reference is not presented as his work.
+- [Aktina](https://aktina-pafos-2026.vercel.app/) presents the supplied schedule with a date picker, actual/forecast radiation, water production, tank levels and stated tariff assumptions.
+- [AktinaBench](https://aktina-pafos-2026.vercel.app/benchmark.html) compares the original model, persistence and six fixed experiments. Validation and test remain separate; every month and hour is included. Predictions, confusion counts, MAE/RMSE and slide figures are downloadable.
+- [The review workspace](https://aktina-pafos-2026.vercel.app/workspace/#reviews) supports supplied-file checks, fixed-plan water accounting and reproducible review exports. Its retained reference experiment is separate from Stefanos's model.
+- [The silent 60-second backup](Aktina-Backup-v2.mp4) shows the actual supplied demo and rebuilt benchmark. It is a screenshot walkthrough; its captures retain the earlier benchmark spelling. Version 1 and both editable sources remain available.
 
-Evaluation means checking whether a prediction helps. Compare the same hours with a competent simple forecast; count errors; check that the model never used information unavailable when the prediction was made. Then check whether a better prediction changes useful decisions while maintaining the same water service and tank limits.
+## What the evaluation says
 
-The current reference loses to safe persistence on average absolute error: 8.812 versus 7.638 W/m². It has lower RMSE, 17.942 versus 19.433. This finding says nothing about a model Stefanos has not supplied.
+Evaluation checks the same timestamps against a useful simple forecast, counts misses and false surplus predictions, and checks what information was available when each forecast was issued. It then distinguishes forecast accuracy from useful changes in the water plan.
 
-The default scenario makes 2,880 m³ with 9,792 kWh. Its lower assumed tariff cost comes from the schedule, with €0 extra saving attributable to the model over price-only scheduling. The dated EAC windows let you inspect when that load falls relative to reported curtailment. They do not measure recovered solar electricity.
+On the full original test, persistence has lower MAE and higher F1, precision and recall than the original model. The validation-selected direct classifier recovers more surplus-labelled hours, with more false positives than persistence. No tested candidate improves all three classification metrics together. The roadmap prioritizes precision because false surplus predictions can increase costs. These are retrospective results on already inspected periods, not proof of future performance.
 
-## What to inspect when you wake
+The supplied schedule is reproduced byte for byte when the scheduler selects persistence. Running the unchanged scheduler with the model forecast produces a different plan, changing 469 production hours. Both reproductions are retained in [the schedule report](../handoff/scheduler-reproduction/README.md). The site keeps the supplied export until Stefanos confirms the intended replacement; its displayed cost is not attributed to the model.
 
-1. Open Operations: July 15, tank 4,000 m³. Inspect hour 13 and evening hour 20; the tank should fill and later supply demand.
-2. Compare tank sizes in Scenarios. Water service and terminal rules stay fixed.
-3. Open Evaluation and Evidence. The controls and source limits should be understandable without a sales claim.
-4. Watch the 90-second concept/prototype film. Review the one-page summary, three-page brief, business canvas and editable deck.
+## Next handoff
 
-When Stefanos supplies predictions, import his CSV and retain the issue-time/training provenance. Compare it with the same controls. Review his schedule against water balance, storage and capacity before treating it as an operational recommendation.
+Stefanos is preparing Aktina v2; no new model handoff has been received. When it arrives, retain its exact files and timing declarations, rerun the same full-period comparisons, review changed plans against the same water constraints, and integrate the agreed export. Keep the current baseline losses visible.
 
-Your meaningful contribution is the evidence and decision workflow: make it possible to tell which predictions help, whether the plan supplies water, and what the operator should inspect next. The research note also gives Stefanos concrete papers on forecast provenance, variable-speed pumping and safe desalination flexibility.
-
-The documents retain your original concept and philosophy, Stefanos's roadmap contribution and the team's roles. Codex assistance is disclosed. Loucas approved the WhatsApp handoff on 2 October. Competition submission remains pending.
+Finish the current-name submission documents, confirm member details and lead contact, then rehearse twice: once live and once with the silent backup. See [delivery status](../handoff/DELIVERY-STATUS.md) and [submission readiness](Submission-readiness.md). No competition submission or human rehearsal is claimed complete.

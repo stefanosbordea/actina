@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "-m",
+    "unittest",
+    "test_decision.py",
+    "test_runner.py",
+    "-v"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013",
+  "exit_code": 0,
+  "source_stable": true,
+  "file_sha256": {
+    "PROTOCOL.md": "d0e4b6c800d905866ce8759e38923869e2ad754345389ecc8582bd51ea5c42ea",
+    "decision.py": "8812e5dbe66a8f1d389103d0a4ab9945540e21335319067fb431e0f8dcdd7f30",
+    "test_decision.py": "a388cd5652470a544b3b7b834feaec2c3c7d0271df46f296f931012f4daa46b7",
+    "run.py": "91b606347e542f9b98a5b66c31f0ca8f2075214825fe6c444e0c606541536e2b",
+    "test_runner.py": "0704e8be014a3489a9fd2f993eb35e3cc11902354b368306b85c1f4ddbdd0c09"
+  },
+  "elapsed_seconds": 0.596477875000005,
+  "completed_at_utc": "2026-10-04T11:42:44.979743+00:00",
+  "log": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013/review/runner-preflight-001.log",
+  "log_sha256": "764d105c701aa9319cdd61e8c960fdb42cb891af36d0551336f8c7826adf12a3",
+  "scope": "Production synthetic tests independently executed. No historical candidate generation or observed outcome read."
+}

@@ -1,0 +1,21 @@
+Forecast viewer: Incomplete validation data
+Forecast viewer: Invalid validation rows
+Forecast viewer: Invalid validation rows
+Forecast viewer: Invalid validation rows
+Forecast viewer: Invalid validation rows
+✔ 019 is the default, with its matching refit curve and all validation scores (153.296458ms)
+✔ the tuned threshold changes only event calls and global scores, not a curve (42.26575ms)
+✔ 008 stays binary and labels the refit as a reference, even after original v2 (27.983667ms)
+✔ both partial boundary days retain their actual hours without changing scores (31.851083ms)
+✔ weather selection and hour inspection display exact joined values including cloud (70.380959ms)
+✔ invalid dates are rejected and next/previous controls restore the expected day (28.099375ms)
+✔ malformed or incomplete data fail closed instead of publishing partial scores (92.454083ms)
+✔ home links the standalone view without changing the supplied plan entry point (0.613125ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1658.153958

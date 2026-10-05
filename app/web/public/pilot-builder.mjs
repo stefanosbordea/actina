@@ -32,6 +32,6 @@ export function setupPilotBuilder({$,download,onApply,invalidatePending}){
  function checked(){const value=draft(),r=validatePilotContract(value);if(r.issues.length){$('builder-status').textContent=`Draft blocked / ${r.issues.map(i=>`${i.field}: ${i.message}`).join(' ')} Accepted intake remains unchanged.`;return null;}return {value,text:JSON.stringify(value,null,2)+'\n'};}
  $('builder-add-asset').onclick=addAsset;
  $('pilot-builder-form').onsubmit=async e=>{e.preventDefault();invalidatePending();const candidate=checked();if(!candidate)return;try{const applied=await onApply(candidate.value,candidate.text);if(applied)$('builder-status').textContent='Declaration applied numerically. Prior observations were cleared; import readings for these declared assets.';}catch(e){$('builder-status').textContent=`${e.message} Accepted intake remains unchanged.`;}};
- $('builder-export').onclick=()=>{const candidate=checked();if(!candidate)return;download('aquashift-form-source-declaration.json',candidate.text,'application/json');$('builder-status').textContent='Declaration export ready. Accepted intake remains unchanged until you apply a valid declaration.';};
+ $('builder-export').onclick=()=>{const candidate=checked();if(!candidate)return;download('aktina-form-source-declaration.json',candidate.text,'application/json');$('builder-status').textContent='Declaration export ready. Accepted intake remains unchanged until you apply a valid declaration.';};
  addAsset();
 }

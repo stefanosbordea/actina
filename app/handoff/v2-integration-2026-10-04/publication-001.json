@@ -1,0 +1,1486 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-04T13:49:10.280646+00:00",
+  "completed_at_utc": "2026-10-04T13:49:42.643476+00:00",
+  "checker_sha256": "78d7d8f8de1b9a5022cc92fb667a1854358dc5d5f0d92c9834c3f32a7ed2ec3c",
+  "scope": "Published static bytes, not browser interaction or model accuracy.",
+  "files_per_alias": 82,
+  "records": [
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark-data.js",
+      "path": "benchmark-data.js",
+      "expected_sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/benchmark-data.js",
+      "observed_sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark-results.json",
+      "path": "benchmark-results.json",
+      "expected_sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/benchmark-results.json",
+      "observed_sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark.css",
+      "path": "benchmark.css",
+      "expected_sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/benchmark.css",
+      "observed_sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark.html",
+      "path": "benchmark.html",
+      "expected_sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/benchmark.html",
+      "observed_sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/benchmark.mjs",
+      "path": "benchmark.mjs",
+      "expected_sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/benchmark.mjs",
+      "observed_sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/data.js",
+      "path": "data.js",
+      "expected_sha256": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/data.js",
+      "observed_sha256": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/experiment-results.csv",
+      "path": "experiment-results.csv",
+      "expected_sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/experiment-results.csv",
+      "observed_sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/experiment-results.json",
+      "path": "experiment-results.json",
+      "expected_sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/experiment-results.json",
+      "observed_sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/favicon.svg",
+      "path": "favicon.svg",
+      "expected_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/favicon.svg",
+      "observed_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/feature-importance.csv",
+      "path": "feature-importance.csv",
+      "expected_sha256": "8c5b164dea3b05487a0f81716f65ae8b5231cbc89048270d2fa53dadccc50884",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/feature-importance.csv",
+      "observed_sha256": "8c5b164dea3b05487a0f81716f65ae8b5231cbc89048270d2fa53dadccc50884",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/figures/hourly-error.svg",
+      "path": "figures/hourly-error.svg",
+      "expected_sha256": "be37aa78ae8fe7c8e9e451a7044efc4d083fffe1dfd1dde522336393b9fa6199",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/figures/hourly-error.svg",
+      "observed_sha256": "be37aa78ae8fe7c8e9e451a7044efc4d083fffe1dfd1dde522336393b9fa6199",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/figures/monthly-error.svg",
+      "path": "figures/monthly-error.svg",
+      "expected_sha256": "7a687ac4160af6ee4cf5c775c4cff4c52f1d47351ed8f9f8cc542e0ecc101cfa",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/figures/monthly-error.svg",
+      "observed_sha256": "7a687ac4160af6ee4cf5c775c4cff4c52f1d47351ed8f9f8cc542e0ecc101cfa",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/figures/test-classification.svg",
+      "path": "figures/test-classification.svg",
+      "expected_sha256": "3f85a15f9b15fe2084a6f71bd2358a134782a8238ec3c950c345b91a67432ab1",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/figures/test-classification.svg",
+      "observed_sha256": "3f85a15f9b15fe2084a6f71bd2358a134782a8238ec3c950c345b91a67432ab1",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/fonts/IBMPlexSans-Medium.woff2",
+      "path": "fonts/IBMPlexSans-Medium.woff2",
+      "expected_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/fonts/IBMPlexSans-Medium.woff2",
+      "observed_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/fonts/IBMPlexSans-Regular.woff2",
+      "path": "fonts/IBMPlexSans-Regular.woff2",
+      "expected_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/fonts/IBMPlexSans-Regular.woff2",
+      "observed_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/fonts/LICENSE.txt",
+      "path": "fonts/LICENSE.txt",
+      "expected_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/fonts/LICENSE.txt",
+      "observed_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/forecast-data.js",
+      "path": "forecast-data.js",
+      "expected_sha256": "1ccf8dd4ee3a2916d14a1f2a99013a1c36896d9bd158608fbbcea31c39a5476c",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/forecast-data.js",
+      "observed_sha256": "1ccf8dd4ee3a2916d14a1f2a99013a1c36896d9bd158608fbbcea31c39a5476c",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/forecast.css",
+      "path": "forecast.css",
+      "expected_sha256": "b0b78032885df6919b1948cbd17ed7242b7fec63e57b45f17e7412fc683fcf04",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/forecast.css",
+      "observed_sha256": "b0b78032885df6919b1948cbd17ed7242b7fec63e57b45f17e7412fc683fcf04",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/forecast.html",
+      "path": "forecast.html",
+      "expected_sha256": "f16b8543cb73ea7377e5b05f5ab4bf3b9060ecb778d9c4adce902d61c020b4fb",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/forecast.html",
+      "observed_sha256": "f16b8543cb73ea7377e5b05f5ab4bf3b9060ecb778d9c4adce902d61c020b4fb",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/forecast.mjs",
+      "path": "forecast.mjs",
+      "expected_sha256": "e55b78c1c6dcfb99a9c29bb942ed80c2a60779c6e9ed94178f874ef738c0b61a",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/forecast.mjs",
+      "observed_sha256": "e55b78c1c6dcfb99a9c29bb942ed80c2a60779c6e9ed94178f874ef738c0b61a",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/index.html",
+      "path": "index.html",
+      "expected_sha256": "10c06570e1b0d17c61aad4a9fe4447dffbef2faa5768d8a2fa53c27a16865381",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/index.html",
+      "observed_sha256": "10c06570e1b0d17c61aad4a9fe4447dffbef2faa5768d8a2fa53c27a16865381",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/mark.svg",
+      "path": "mark.svg",
+      "expected_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/mark.svg",
+      "observed_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/research-results.json",
+      "path": "research-results.json",
+      "expected_sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/research-results.json",
+      "observed_sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/schedule_hourly.csv",
+      "path": "schedule_hourly.csv",
+      "expected_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/schedule_hourly.csv",
+      "observed_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/site.css",
+      "path": "site.css",
+      "expected_sha256": "23852db46c260173c1781591c612057907a95bec328c9576b655fb275390fdd1",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/site.css",
+      "observed_sha256": "23852db46c260173c1781591c612057907a95bec328c9576b655fb275390fdd1",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/site.mjs",
+      "path": "site.mjs",
+      "expected_sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/site.mjs",
+      "observed_sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/analysis-layouts.mjs",
+      "path": "workspace/analysis-layouts.mjs",
+      "expected_sha256": "9292290eb5bfbfda01a64368ecd78fec6705475027513096bcb358fd2ce8e3c9",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/analysis-layouts.mjs",
+      "observed_sha256": "9292290eb5bfbfda01a64368ecd78fec6705475027513096bcb358fd2ce8e3c9",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/brand.html",
+      "path": "workspace/brand.html",
+      "expected_sha256": "2cde8eea237706b98d7b0ce3f9680c6e55bb789f0215a8385a3dc588aec1bd94",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/brand.html",
+      "observed_sha256": "2cde8eea237706b98d7b0ce3f9680c6e55bb789f0215a8385a3dc588aec1bd94",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/core.mjs",
+      "path": "workspace/core.mjs",
+      "expected_sha256": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/core.mjs",
+      "observed_sha256": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/data/returned-water-example.json",
+      "path": "workspace/data/returned-water-example.json",
+      "expected_sha256": "e432aed1b0de0ee6725165a3191bed9f52efa3999e7904992d113644332a92e5",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/data/returned-water-example.json",
+      "observed_sha256": "e432aed1b0de0ee6725165a3191bed9f52efa3999e7904992d113644332a92e5",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/data.json",
+      "path": "workspace/data.json",
+      "expected_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/data.json",
+      "observed_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/execution-review-ui.mjs",
+      "path": "workspace/execution-review-ui.mjs",
+      "expected_sha256": "a01f6561be2631afc3823c12f4b239debedfe2ab49ee2877701fb54dc9d1f4e4",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/execution-review-ui.mjs",
+      "observed_sha256": "a01f6561be2631afc3823c12f4b239debedfe2ab49ee2877701fb54dc9d1f4e4",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/execution-review.mjs",
+      "path": "workspace/execution-review.mjs",
+      "expected_sha256": "c0846ad539b812d87fa8371cc08cbb3adef9c469562a22d4e6a120fc1ae367f3",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/execution-review.mjs",
+      "observed_sha256": "c0846ad539b812d87fa8371cc08cbb3adef9c469562a22d4e6a120fc1ae367f3",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/favicon.svg",
+      "path": "workspace/favicon.svg",
+      "expected_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/favicon.svg",
+      "observed_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexMono-Regular.woff2",
+      "path": "workspace/fonts/IBMPlexMono-Regular.woff2",
+      "expected_sha256": "ba204497f16b6d334cee9d1e963a831b73e3a56e1d6300a8489d18df7214b350",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexMono-Regular.woff2",
+      "observed_sha256": "ba204497f16b6d334cee9d1e963a831b73e3a56e1d6300a8489d18df7214b350",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Medium.woff2",
+      "path": "workspace/fonts/IBMPlexSans-Medium.woff2",
+      "expected_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Medium.woff2",
+      "observed_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Regular.woff2",
+      "path": "workspace/fonts/IBMPlexSans-Regular.woff2",
+      "expected_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Regular.woff2",
+      "observed_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Inter-Latin.woff2",
+      "path": "workspace/fonts/Inter-Latin.woff2",
+      "expected_sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Inter-Latin.woff2",
+      "observed_sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Inter-OFL.txt",
+      "path": "workspace/fonts/Inter-OFL.txt",
+      "expected_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Inter-OFL.txt",
+      "observed_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/LICENSE.txt",
+      "path": "workspace/fonts/LICENSE.txt",
+      "expected_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/LICENSE.txt",
+      "observed_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Sora-Latin.woff2",
+      "path": "workspace/fonts/Sora-Latin.woff2",
+      "expected_sha256": "3902474d3ece89c8580d5ef3325cf58753e6e45a86f9957b4dacc4fce2e7fde1",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Sora-Latin.woff2",
+      "observed_sha256": "3902474d3ece89c8580d5ef3325cf58753e6e45a86f9957b4dacc4fce2e7fde1",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Sora-OFL.txt",
+      "path": "workspace/fonts/Sora-OFL.txt",
+      "expected_sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/Sora-OFL.txt",
+      "observed_sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/interface-provenance.json",
+      "path": "workspace/fonts/interface-provenance.json",
+      "expected_sha256": "603a0e3140f55c9e04208b0c94f80c3e0d058c0ba1bb3431679c56f37d39f60d",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/interface-provenance.json",
+      "observed_sha256": "603a0e3140f55c9e04208b0c94f80c3e0d058c0ba1bb3431679c56f37d39f60d",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/provenance.json",
+      "path": "workspace/fonts/provenance.json",
+      "expected_sha256": "b01a93c57c6791d7785b996e6ae95d522d060dfaea3493af09a29318027fa280",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/fonts/provenance.json",
+      "observed_sha256": "b01a93c57c6791d7785b996e6ae95d522d060dfaea3493af09a29318027fa280",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/forecast-decision.mjs",
+      "path": "workspace/forecast-decision.mjs",
+      "expected_sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/forecast-decision.mjs",
+      "observed_sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/home-demo.mjs",
+      "path": "workspace/home-demo.mjs",
+      "expected_sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/home-demo.mjs",
+      "observed_sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/home-reference.mjs",
+      "path": "workspace/home-reference.mjs",
+      "expected_sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/home-reference.mjs",
+      "observed_sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/home.css",
+      "path": "workspace/home.css",
+      "expected_sha256": "904f587fbb0347bc1617ae95921c25c8f0c4e5cd30a8b7cb4e76fffc5f5b48ce",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/home.css",
+      "observed_sha256": "904f587fbb0347bc1617ae95921c25c8f0c4e5cd30a8b7cb4e76fffc5f5b48ce",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/index.html",
+      "path": "workspace/index.html",
+      "expected_sha256": "4630cd1f4b3ded3755fc50eb335958050377037beee63d07624eee31c9b59e7d",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/index.html",
+      "observed_sha256": "4630cd1f4b3ded3755fc50eb335958050377037beee63d07624eee31c9b59e7d",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/manifest.json",
+      "path": "workspace/manifest.json",
+      "expected_sha256": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/manifest.json",
+      "observed_sha256": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/mark.svg",
+      "path": "workspace/mark.svg",
+      "expected_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/mark.svg",
+      "observed_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/mobile.css",
+      "path": "workspace/mobile.css",
+      "expected_sha256": "63299bb270bbd4511030a2fc8fd4ca6dc7e3879cd75b90a6233686d6ebba63f8",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/mobile.css",
+      "observed_sha256": "63299bb270bbd4511030a2fc8fd4ca6dc7e3879cd75b90a6233686d6ebba63f8",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/observation-reconciliation.mjs",
+      "path": "workspace/observation-reconciliation.mjs",
+      "expected_sha256": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/observation-reconciliation.mjs",
+      "observed_sha256": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/observation-restart.mjs",
+      "path": "workspace/observation-restart.mjs",
+      "expected_sha256": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/observation-restart.mjs",
+      "observed_sha256": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/paired-water-service.mjs",
+      "path": "workspace/paired-water-service.mjs",
+      "expected_sha256": "cb3b6b03a7902f0299735b46346ed926ace52bb248fa2a917aa1b3a5ab2d8caa",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/paired-water-service.mjs",
+      "observed_sha256": "cb3b6b03a7902f0299735b46346ed926ace52bb248fa2a917aa1b3a5ab2d8caa",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/pilot-builder.mjs",
+      "path": "workspace/pilot-builder.mjs",
+      "expected_sha256": "d55aa5face3e6dc7e2012c037d9732b571f085bd44723acc29cc80e7e8b9e7d9",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/pilot-builder.mjs",
+      "observed_sha256": "d55aa5face3e6dc7e2012c037d9732b571f085bd44723acc29cc80e7e8b9e7d9",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/pilot-ui.mjs",
+      "path": "workspace/pilot-ui.mjs",
+      "expected_sha256": "7e2ec803c01530539e97557d3e42d0f4b8db30086dd1833d4738a35f65e42a7b",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/pilot-ui.mjs",
+      "observed_sha256": "7e2ec803c01530539e97557d3e42d0f4b8db30086dd1833d4738a35f65e42a7b",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/pilot.mjs",
+      "path": "workspace/pilot.mjs",
+      "expected_sha256": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/pilot.mjs",
+      "observed_sha256": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/plan-resilience.mjs",
+      "path": "workspace/plan-resilience.mjs",
+      "expected_sha256": "80b97314565f2c659716e1b4b784095feb31c58f3a3408d2bd3f3ad9fdd91f37",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/plan-resilience.mjs",
+      "observed_sha256": "80b97314565f2c659716e1b4b784095feb31c58f3a3408d2bd3f3ad9fdd91f37",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/plan-revision-ui.mjs",
+      "path": "workspace/plan-revision-ui.mjs",
+      "expected_sha256": "d5070db16f3ab25f9d4ae904fa67109dc17d4ff5dede29c3e11020074f6afe1f",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/plan-revision-ui.mjs",
+      "observed_sha256": "d5070db16f3ab25f9d4ae904fa67109dc17d4ff5dede29c3e11020074f6afe1f",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/plan-revision.mjs",
+      "path": "workspace/plan-revision.mjs",
+      "expected_sha256": "793795ced9937bca01d802b1ccabb6a6cbd1cf25d3204a223e56adbe5a5bbc16",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/plan-revision.mjs",
+      "observed_sha256": "793795ced9937bca01d802b1ccabb6a6cbd1cf25d3204a223e56adbe5a5bbc16",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/plan-sequence-ui.mjs",
+      "path": "workspace/plan-sequence-ui.mjs",
+      "expected_sha256": "da4a39936acfb9239a6604a724c9f67dd644c9f2a3d32feeea0aed6c172742ff",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/plan-sequence-ui.mjs",
+      "observed_sha256": "da4a39936acfb9239a6604a724c9f67dd644c9f2a3d32feeea0aed6c172742ff",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/plan-sequence.mjs",
+      "path": "workspace/plan-sequence.mjs",
+      "expected_sha256": "c277e51efb6c593e91b1f0919f402c135752ab085bb0946ada2dc47a5d979bbe",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/plan-sequence.mjs",
+      "observed_sha256": "c277e51efb6c593e91b1f0919f402c135752ab085bb0946ada2dc47a5d979bbe",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/reconciliation-ui.mjs",
+      "path": "workspace/reconciliation-ui.mjs",
+      "expected_sha256": "ee8b21f6d79089302606780d0166a21604a18d3fe01b6b4de072df2ff54164d0",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/reconciliation-ui.mjs",
+      "observed_sha256": "ee8b21f6d79089302606780d0166a21604a18d3fe01b6b4de072df2ff54164d0",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/research.json",
+      "path": "workspace/research.json",
+      "expected_sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/research.json",
+      "observed_sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/resilience-ui.mjs",
+      "path": "workspace/resilience-ui.mjs",
+      "expected_sha256": "fe12bd44f739ba87294cbd0cb017d3c4aa2da4043660dffeecc0956b5efa9ebd",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/resilience-ui.mjs",
+      "observed_sha256": "fe12bd44f739ba87294cbd0cb017d3c4aa2da4043660dffeecc0956b5efa9ebd",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/roadmap-handoff-ui.mjs",
+      "path": "workspace/roadmap-handoff-ui.mjs",
+      "expected_sha256": "d3d3d43a152ee0bd293a305ace526f7d8b7ab4527856dee7ec9fbe93fe40ac1f",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/roadmap-handoff-ui.mjs",
+      "observed_sha256": "d3d3d43a152ee0bd293a305ace526f7d8b7ab4527856dee7ec9fbe93fe40ac1f",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/roadmap-handoff.mjs",
+      "path": "workspace/roadmap-handoff.mjs",
+      "expected_sha256": "6abc7273545f997c673ecc6cc8d36146da13747a236b7e99bd8466dbf167c2da",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/roadmap-handoff.mjs",
+      "observed_sha256": "6abc7273545f997c673ecc6cc8d36146da13747a236b7e99bd8466dbf167c2da",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/sequence-revision.mjs",
+      "path": "workspace/sequence-revision.mjs",
+      "expected_sha256": "25616966d535405271195630d28ace14801ae45b3dbb3be6b121e7e0a408f9c5",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/sequence-revision.mjs",
+      "observed_sha256": "25616966d535405271195630d28ace14801ae45b3dbb3be6b121e7e0a408f9c5",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/solar-allocation.mjs",
+      "path": "workspace/solar-allocation.mjs",
+      "expected_sha256": "cfd3733c04cc769852e9dfb644aa58a4ae8d7d0dea2f75339c2a7101ada2a2e9",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/solar-allocation.mjs",
+      "observed_sha256": "cfd3733c04cc769852e9dfb644aa58a4ae8d7d0dea2f75339c2a7101ada2a2e9",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/solar-timing-bounds.mjs",
+      "path": "workspace/solar-timing-bounds.mjs",
+      "expected_sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/solar-timing-bounds.mjs",
+      "observed_sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/solar-water.svg",
+      "path": "workspace/solar-water.svg",
+      "expected_sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/solar-water.svg",
+      "observed_sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/storage-frontier.mjs",
+      "path": "workspace/storage-frontier.mjs",
+      "expected_sha256": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/storage-frontier.mjs",
+      "observed_sha256": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/temporal-water.mjs",
+      "path": "workspace/temporal-water.mjs",
+      "expected_sha256": "755b20b63910c05a258a248a5c172d8eea2eb31ee46f91e3cdb9280be55171fd",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/temporal-water.mjs",
+      "observed_sha256": "755b20b63910c05a258a248a5c172d8eea2eb31ee46f91e3cdb9280be55171fd",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/theme.css",
+      "path": "workspace/theme.css",
+      "expected_sha256": "ad4b0803a5b9f2cf4850bd2283b7a174098e72a20aeb122ec7adc03f16cafc69",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/theme.css",
+      "observed_sha256": "ad4b0803a5b9f2cf4850bd2283b7a174098e72a20aeb122ec7adc03f16cafc69",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/typography.css",
+      "path": "workspace/typography.css",
+      "expected_sha256": "9dbef9a34e6edeb138aef5faa7e7742c69c817d69b8d17b938be3b3e5577adf8",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/typography.css",
+      "observed_sha256": "9dbef9a34e6edeb138aef5faa7e7742c69c817d69b8d17b938be3b3e5577adf8",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/vendor/LICENSE-papaparse.txt",
+      "path": "workspace/vendor/LICENSE-papaparse.txt",
+      "expected_sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/vendor/LICENSE-papaparse.txt",
+      "observed_sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/vendor/papaparse.min.js",
+      "path": "workspace/vendor/papaparse.min.js",
+      "expected_sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/vendor/papaparse.min.js",
+      "observed_sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/workspace-preview-mobile.png",
+      "path": "workspace/workspace-preview-mobile.png",
+      "expected_sha256": "aef67f9689612ab26772a8b31b6d79013be1f4ea90b5e48e65fbda5a3e54322a",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/workspace-preview-mobile.png",
+      "observed_sha256": "aef67f9689612ab26772a8b31b6d79013be1f4ea90b5e48e65fbda5a3e54322a",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/workspace-preview.png",
+      "path": "workspace/workspace-preview.png",
+      "expected_sha256": "ababac4ffa879556282ab481b4dce827259fed5ef2068a70c549b264a123a9ba",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/workspace-preview.png",
+      "observed_sha256": "ababac4ffa879556282ab481b4dce827259fed5ef2068a70c549b264a123a9ba",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/workspace.css",
+      "path": "workspace/workspace.css",
+      "expected_sha256": "2f9909db5b3fdc7e1826bcbdf0e2b74572ef671004d627f8254c2a1ac1cddc8c",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/workspace.css",
+      "observed_sha256": "2f9909db5b3fdc7e1826bcbdf0e2b74572ef671004d627f8254c2a1ac1cddc8c",
+      "matches": true
+    },
+    {
+      "url": "https://aktina-pafos-2026.vercel.app/workspace/workspace.js",
+      "path": "workspace/workspace.js",
+      "expected_sha256": "6dac29d3eb5cc2c4d8fc89258527979c66f0e00ff99fbafe843b923049ab96c0",
+      "status": 200,
+      "final_url": "https://aktina-pafos-2026.vercel.app/workspace/workspace.js",
+      "observed_sha256": "6dac29d3eb5cc2c4d8fc89258527979c66f0e00ff99fbafe843b923049ab96c0",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark-data.js",
+      "path": "benchmark-data.js",
+      "expected_sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/benchmark-data.js",
+      "observed_sha256": "f213b0332a390c0efe48fefb6750e080409222873fb3460f87c79a4debf8cff5",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark-results.json",
+      "path": "benchmark-results.json",
+      "expected_sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/benchmark-results.json",
+      "observed_sha256": "d35370b7b7cc2297d3a83867352574de26fbb5be8a1d3baed94c4d2612459084",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark.css",
+      "path": "benchmark.css",
+      "expected_sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/benchmark.css",
+      "observed_sha256": "f8f07d0254bdf8b74f55b3fa784dacc0544fcfb373724ec6fea8e8a331e8a0fb",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark.html",
+      "path": "benchmark.html",
+      "expected_sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/benchmark.html",
+      "observed_sha256": "5d13030f8e754afa13a27aa343600e6a6e4f85c6a4448cdf07204dc88155a50e",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/benchmark.mjs",
+      "path": "benchmark.mjs",
+      "expected_sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/benchmark.mjs",
+      "observed_sha256": "6f656900bbdf58f1d28125c80a9df22e9495f1c07d793eedeb576ffee54117d8",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/data.js",
+      "path": "data.js",
+      "expected_sha256": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/data.js",
+      "observed_sha256": "9818cc139fede28f83c09ddbd1c359d1e7fb4fa6ffd7148edf23ca39a15253e5",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/experiment-results.csv",
+      "path": "experiment-results.csv",
+      "expected_sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/experiment-results.csv",
+      "observed_sha256": "a5f8ac882197b7644a7412b70f3e0440200845964db57f5b6be7ea6f43306a7d",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/experiment-results.json",
+      "path": "experiment-results.json",
+      "expected_sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/experiment-results.json",
+      "observed_sha256": "d9a939565265a5990b2410bfea09c277e97fe4a6b7bfbc65832d955a065cfe93",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/favicon.svg",
+      "path": "favicon.svg",
+      "expected_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/favicon.svg",
+      "observed_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/feature-importance.csv",
+      "path": "feature-importance.csv",
+      "expected_sha256": "8c5b164dea3b05487a0f81716f65ae8b5231cbc89048270d2fa53dadccc50884",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/feature-importance.csv",
+      "observed_sha256": "8c5b164dea3b05487a0f81716f65ae8b5231cbc89048270d2fa53dadccc50884",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/figures/hourly-error.svg",
+      "path": "figures/hourly-error.svg",
+      "expected_sha256": "be37aa78ae8fe7c8e9e451a7044efc4d083fffe1dfd1dde522336393b9fa6199",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/figures/hourly-error.svg",
+      "observed_sha256": "be37aa78ae8fe7c8e9e451a7044efc4d083fffe1dfd1dde522336393b9fa6199",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/figures/monthly-error.svg",
+      "path": "figures/monthly-error.svg",
+      "expected_sha256": "7a687ac4160af6ee4cf5c775c4cff4c52f1d47351ed8f9f8cc542e0ecc101cfa",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/figures/monthly-error.svg",
+      "observed_sha256": "7a687ac4160af6ee4cf5c775c4cff4c52f1d47351ed8f9f8cc542e0ecc101cfa",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/figures/test-classification.svg",
+      "path": "figures/test-classification.svg",
+      "expected_sha256": "3f85a15f9b15fe2084a6f71bd2358a134782a8238ec3c950c345b91a67432ab1",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/figures/test-classification.svg",
+      "observed_sha256": "3f85a15f9b15fe2084a6f71bd2358a134782a8238ec3c950c345b91a67432ab1",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/fonts/IBMPlexSans-Medium.woff2",
+      "path": "fonts/IBMPlexSans-Medium.woff2",
+      "expected_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/fonts/IBMPlexSans-Medium.woff2",
+      "observed_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/fonts/IBMPlexSans-Regular.woff2",
+      "path": "fonts/IBMPlexSans-Regular.woff2",
+      "expected_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/fonts/IBMPlexSans-Regular.woff2",
+      "observed_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/fonts/LICENSE.txt",
+      "path": "fonts/LICENSE.txt",
+      "expected_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/fonts/LICENSE.txt",
+      "observed_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/forecast-data.js",
+      "path": "forecast-data.js",
+      "expected_sha256": "1ccf8dd4ee3a2916d14a1f2a99013a1c36896d9bd158608fbbcea31c39a5476c",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/forecast-data.js",
+      "observed_sha256": "1ccf8dd4ee3a2916d14a1f2a99013a1c36896d9bd158608fbbcea31c39a5476c",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/forecast.css",
+      "path": "forecast.css",
+      "expected_sha256": "b0b78032885df6919b1948cbd17ed7242b7fec63e57b45f17e7412fc683fcf04",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/forecast.css",
+      "observed_sha256": "b0b78032885df6919b1948cbd17ed7242b7fec63e57b45f17e7412fc683fcf04",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/forecast.html",
+      "path": "forecast.html",
+      "expected_sha256": "f16b8543cb73ea7377e5b05f5ab4bf3b9060ecb778d9c4adce902d61c020b4fb",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/forecast.html",
+      "observed_sha256": "f16b8543cb73ea7377e5b05f5ab4bf3b9060ecb778d9c4adce902d61c020b4fb",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/forecast.mjs",
+      "path": "forecast.mjs",
+      "expected_sha256": "e55b78c1c6dcfb99a9c29bb942ed80c2a60779c6e9ed94178f874ef738c0b61a",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/forecast.mjs",
+      "observed_sha256": "e55b78c1c6dcfb99a9c29bb942ed80c2a60779c6e9ed94178f874ef738c0b61a",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/index.html",
+      "path": "index.html",
+      "expected_sha256": "10c06570e1b0d17c61aad4a9fe4447dffbef2faa5768d8a2fa53c27a16865381",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/index.html",
+      "observed_sha256": "10c06570e1b0d17c61aad4a9fe4447dffbef2faa5768d8a2fa53c27a16865381",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/mark.svg",
+      "path": "mark.svg",
+      "expected_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/mark.svg",
+      "observed_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/research-results.json",
+      "path": "research-results.json",
+      "expected_sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/research-results.json",
+      "observed_sha256": "b88c682aa83273ad6239672b994b028ef05fde2c071c1ff294cfb204bb24726f",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/schedule_hourly.csv",
+      "path": "schedule_hourly.csv",
+      "expected_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/schedule_hourly.csv",
+      "observed_sha256": "9dc00d7c015478864bb8259ba22ac6f7a32cc356300e23c4cd5f1e0add86de20",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/site.css",
+      "path": "site.css",
+      "expected_sha256": "23852db46c260173c1781591c612057907a95bec328c9576b655fb275390fdd1",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/site.css",
+      "observed_sha256": "23852db46c260173c1781591c612057907a95bec328c9576b655fb275390fdd1",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/site.mjs",
+      "path": "site.mjs",
+      "expected_sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/site.mjs",
+      "observed_sha256": "f4f3e40c39df349a092fb04f575cdc18b39cbff5f2810ff751443774d85abb71",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/analysis-layouts.mjs",
+      "path": "workspace/analysis-layouts.mjs",
+      "expected_sha256": "9292290eb5bfbfda01a64368ecd78fec6705475027513096bcb358fd2ce8e3c9",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/analysis-layouts.mjs",
+      "observed_sha256": "9292290eb5bfbfda01a64368ecd78fec6705475027513096bcb358fd2ce8e3c9",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/brand.html",
+      "path": "workspace/brand.html",
+      "expected_sha256": "2cde8eea237706b98d7b0ce3f9680c6e55bb789f0215a8385a3dc588aec1bd94",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/brand.html",
+      "observed_sha256": "2cde8eea237706b98d7b0ce3f9680c6e55bb789f0215a8385a3dc588aec1bd94",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/core.mjs",
+      "path": "workspace/core.mjs",
+      "expected_sha256": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/core.mjs",
+      "observed_sha256": "145c3f4bc8e5b6a73ab47ee8b0ac9cac8f78ebbdf0f66ca2bc7eb3567b829de1",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/data/returned-water-example.json",
+      "path": "workspace/data/returned-water-example.json",
+      "expected_sha256": "e432aed1b0de0ee6725165a3191bed9f52efa3999e7904992d113644332a92e5",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/data/returned-water-example.json",
+      "observed_sha256": "e432aed1b0de0ee6725165a3191bed9f52efa3999e7904992d113644332a92e5",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/data.json",
+      "path": "workspace/data.json",
+      "expected_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/data.json",
+      "observed_sha256": "ceebcc105842c02650e92548a5b34ab119a12e3dab80c1370ba71d6ce78b3557",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/execution-review-ui.mjs",
+      "path": "workspace/execution-review-ui.mjs",
+      "expected_sha256": "a01f6561be2631afc3823c12f4b239debedfe2ab49ee2877701fb54dc9d1f4e4",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/execution-review-ui.mjs",
+      "observed_sha256": "a01f6561be2631afc3823c12f4b239debedfe2ab49ee2877701fb54dc9d1f4e4",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/execution-review.mjs",
+      "path": "workspace/execution-review.mjs",
+      "expected_sha256": "c0846ad539b812d87fa8371cc08cbb3adef9c469562a22d4e6a120fc1ae367f3",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/execution-review.mjs",
+      "observed_sha256": "c0846ad539b812d87fa8371cc08cbb3adef9c469562a22d4e6a120fc1ae367f3",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/favicon.svg",
+      "path": "workspace/favicon.svg",
+      "expected_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/favicon.svg",
+      "observed_sha256": "d7e9e3c7dbe9abc86b0ecc83f52c0d29f8bd050d221de03510e49fe7d5a99736",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexMono-Regular.woff2",
+      "path": "workspace/fonts/IBMPlexMono-Regular.woff2",
+      "expected_sha256": "ba204497f16b6d334cee9d1e963a831b73e3a56e1d6300a8489d18df7214b350",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexMono-Regular.woff2",
+      "observed_sha256": "ba204497f16b6d334cee9d1e963a831b73e3a56e1d6300a8489d18df7214b350",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Medium.woff2",
+      "path": "workspace/fonts/IBMPlexSans-Medium.woff2",
+      "expected_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Medium.woff2",
+      "observed_sha256": "5660f8a658f8bb50dbc005232f885eadffd2bc1c235c4f6fbb63469d1f9cde6d",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Regular.woff2",
+      "path": "workspace/fonts/IBMPlexSans-Regular.woff2",
+      "expected_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/IBMPlexSans-Regular.woff2",
+      "observed_sha256": "ba711a3085ff9f27440b6b9c4550cfc47c97bf36591d5da958b975bb3add8c1a",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Inter-Latin.woff2",
+      "path": "workspace/fonts/Inter-Latin.woff2",
+      "expected_sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Inter-Latin.woff2",
+      "observed_sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Inter-OFL.txt",
+      "path": "workspace/fonts/Inter-OFL.txt",
+      "expected_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Inter-OFL.txt",
+      "observed_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/LICENSE.txt",
+      "path": "workspace/fonts/LICENSE.txt",
+      "expected_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/LICENSE.txt",
+      "observed_sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Sora-Latin.woff2",
+      "path": "workspace/fonts/Sora-Latin.woff2",
+      "expected_sha256": "3902474d3ece89c8580d5ef3325cf58753e6e45a86f9957b4dacc4fce2e7fde1",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Sora-Latin.woff2",
+      "observed_sha256": "3902474d3ece89c8580d5ef3325cf58753e6e45a86f9957b4dacc4fce2e7fde1",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Sora-OFL.txt",
+      "path": "workspace/fonts/Sora-OFL.txt",
+      "expected_sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/Sora-OFL.txt",
+      "observed_sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/interface-provenance.json",
+      "path": "workspace/fonts/interface-provenance.json",
+      "expected_sha256": "603a0e3140f55c9e04208b0c94f80c3e0d058c0ba1bb3431679c56f37d39f60d",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/interface-provenance.json",
+      "observed_sha256": "603a0e3140f55c9e04208b0c94f80c3e0d058c0ba1bb3431679c56f37d39f60d",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/provenance.json",
+      "path": "workspace/fonts/provenance.json",
+      "expected_sha256": "b01a93c57c6791d7785b996e6ae95d522d060dfaea3493af09a29318027fa280",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/fonts/provenance.json",
+      "observed_sha256": "b01a93c57c6791d7785b996e6ae95d522d060dfaea3493af09a29318027fa280",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/forecast-decision.mjs",
+      "path": "workspace/forecast-decision.mjs",
+      "expected_sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/forecast-decision.mjs",
+      "observed_sha256": "1ba6a0ca53ed429e661bb5ee9abaa29342fa1438e4a504536f429191417a2526",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/home-demo.mjs",
+      "path": "workspace/home-demo.mjs",
+      "expected_sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/home-demo.mjs",
+      "observed_sha256": "a133583db4089b9b812905248442f11c58f3bce82ca2a8498a2fbc4b35260254",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/home-reference.mjs",
+      "path": "workspace/home-reference.mjs",
+      "expected_sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/home-reference.mjs",
+      "observed_sha256": "b4ee217fe07c383e4ddc4484856c1128f227cbb255ecd1464b2ccff5b8d5193f",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/home.css",
+      "path": "workspace/home.css",
+      "expected_sha256": "904f587fbb0347bc1617ae95921c25c8f0c4e5cd30a8b7cb4e76fffc5f5b48ce",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/home.css",
+      "observed_sha256": "904f587fbb0347bc1617ae95921c25c8f0c4e5cd30a8b7cb4e76fffc5f5b48ce",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/index.html",
+      "path": "workspace/index.html",
+      "expected_sha256": "4630cd1f4b3ded3755fc50eb335958050377037beee63d07624eee31c9b59e7d",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/index.html",
+      "observed_sha256": "4630cd1f4b3ded3755fc50eb335958050377037beee63d07624eee31c9b59e7d",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/manifest.json",
+      "path": "workspace/manifest.json",
+      "expected_sha256": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/manifest.json",
+      "observed_sha256": "98e85660c2319340e5fd644d9ab6ee2c460cd9b7522c001ee3560f1c5d53ac51",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/mark.svg",
+      "path": "workspace/mark.svg",
+      "expected_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/mark.svg",
+      "observed_sha256": "6b8e63e329c582be9f30ee0f93447308852e8933309c11e30cf24e57f9a5a698",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/mobile.css",
+      "path": "workspace/mobile.css",
+      "expected_sha256": "63299bb270bbd4511030a2fc8fd4ca6dc7e3879cd75b90a6233686d6ebba63f8",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/mobile.css",
+      "observed_sha256": "63299bb270bbd4511030a2fc8fd4ca6dc7e3879cd75b90a6233686d6ebba63f8",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/observation-reconciliation.mjs",
+      "path": "workspace/observation-reconciliation.mjs",
+      "expected_sha256": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/observation-reconciliation.mjs",
+      "observed_sha256": "8a8a47332813875622fee97846f8fbe02c33a75d554a9c2d19c8e90345e53162",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/observation-restart.mjs",
+      "path": "workspace/observation-restart.mjs",
+      "expected_sha256": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/observation-restart.mjs",
+      "observed_sha256": "c8d7cd4c8b15f7c86a4bb8035cb3d21b2cd32a8b530f759ef282f3267a1dfaca",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/paired-water-service.mjs",
+      "path": "workspace/paired-water-service.mjs",
+      "expected_sha256": "cb3b6b03a7902f0299735b46346ed926ace52bb248fa2a917aa1b3a5ab2d8caa",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/paired-water-service.mjs",
+      "observed_sha256": "cb3b6b03a7902f0299735b46346ed926ace52bb248fa2a917aa1b3a5ab2d8caa",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot-builder.mjs",
+      "path": "workspace/pilot-builder.mjs",
+      "expected_sha256": "d55aa5face3e6dc7e2012c037d9732b571f085bd44723acc29cc80e7e8b9e7d9",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot-builder.mjs",
+      "observed_sha256": "d55aa5face3e6dc7e2012c037d9732b571f085bd44723acc29cc80e7e8b9e7d9",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot-ui.mjs",
+      "path": "workspace/pilot-ui.mjs",
+      "expected_sha256": "7e2ec803c01530539e97557d3e42d0f4b8db30086dd1833d4738a35f65e42a7b",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot-ui.mjs",
+      "observed_sha256": "7e2ec803c01530539e97557d3e42d0f4b8db30086dd1833d4738a35f65e42a7b",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot.mjs",
+      "path": "workspace/pilot.mjs",
+      "expected_sha256": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/pilot.mjs",
+      "observed_sha256": "7cf0429538e4a8783de7ba4c50ae95a606a4207291444ad3eb74e5ce515491d9",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-resilience.mjs",
+      "path": "workspace/plan-resilience.mjs",
+      "expected_sha256": "80b97314565f2c659716e1b4b784095feb31c58f3a3408d2bd3f3ad9fdd91f37",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-resilience.mjs",
+      "observed_sha256": "80b97314565f2c659716e1b4b784095feb31c58f3a3408d2bd3f3ad9fdd91f37",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-revision-ui.mjs",
+      "path": "workspace/plan-revision-ui.mjs",
+      "expected_sha256": "d5070db16f3ab25f9d4ae904fa67109dc17d4ff5dede29c3e11020074f6afe1f",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-revision-ui.mjs",
+      "observed_sha256": "d5070db16f3ab25f9d4ae904fa67109dc17d4ff5dede29c3e11020074f6afe1f",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-revision.mjs",
+      "path": "workspace/plan-revision.mjs",
+      "expected_sha256": "793795ced9937bca01d802b1ccabb6a6cbd1cf25d3204a223e56adbe5a5bbc16",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-revision.mjs",
+      "observed_sha256": "793795ced9937bca01d802b1ccabb6a6cbd1cf25d3204a223e56adbe5a5bbc16",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-sequence-ui.mjs",
+      "path": "workspace/plan-sequence-ui.mjs",
+      "expected_sha256": "da4a39936acfb9239a6604a724c9f67dd644c9f2a3d32feeea0aed6c172742ff",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-sequence-ui.mjs",
+      "observed_sha256": "da4a39936acfb9239a6604a724c9f67dd644c9f2a3d32feeea0aed6c172742ff",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-sequence.mjs",
+      "path": "workspace/plan-sequence.mjs",
+      "expected_sha256": "c277e51efb6c593e91b1f0919f402c135752ab085bb0946ada2dc47a5d979bbe",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/plan-sequence.mjs",
+      "observed_sha256": "c277e51efb6c593e91b1f0919f402c135752ab085bb0946ada2dc47a5d979bbe",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/reconciliation-ui.mjs",
+      "path": "workspace/reconciliation-ui.mjs",
+      "expected_sha256": "ee8b21f6d79089302606780d0166a21604a18d3fe01b6b4de072df2ff54164d0",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/reconciliation-ui.mjs",
+      "observed_sha256": "ee8b21f6d79089302606780d0166a21604a18d3fe01b6b4de072df2ff54164d0",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/research.json",
+      "path": "workspace/research.json",
+      "expected_sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/research.json",
+      "observed_sha256": "04f88ad470a3b94b12ef588a45c7e46056cd115b6fe6d7c1889d6a020b971b5e",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/resilience-ui.mjs",
+      "path": "workspace/resilience-ui.mjs",
+      "expected_sha256": "fe12bd44f739ba87294cbd0cb017d3c4aa2da4043660dffeecc0956b5efa9ebd",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/resilience-ui.mjs",
+      "observed_sha256": "fe12bd44f739ba87294cbd0cb017d3c4aa2da4043660dffeecc0956b5efa9ebd",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/roadmap-handoff-ui.mjs",
+      "path": "workspace/roadmap-handoff-ui.mjs",
+      "expected_sha256": "d3d3d43a152ee0bd293a305ace526f7d8b7ab4527856dee7ec9fbe93fe40ac1f",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/roadmap-handoff-ui.mjs",
+      "observed_sha256": "d3d3d43a152ee0bd293a305ace526f7d8b7ab4527856dee7ec9fbe93fe40ac1f",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/roadmap-handoff.mjs",
+      "path": "workspace/roadmap-handoff.mjs",
+      "expected_sha256": "6abc7273545f997c673ecc6cc8d36146da13747a236b7e99bd8466dbf167c2da",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/roadmap-handoff.mjs",
+      "observed_sha256": "6abc7273545f997c673ecc6cc8d36146da13747a236b7e99bd8466dbf167c2da",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/sequence-revision.mjs",
+      "path": "workspace/sequence-revision.mjs",
+      "expected_sha256": "25616966d535405271195630d28ace14801ae45b3dbb3be6b121e7e0a408f9c5",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/sequence-revision.mjs",
+      "observed_sha256": "25616966d535405271195630d28ace14801ae45b3dbb3be6b121e7e0a408f9c5",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-allocation.mjs",
+      "path": "workspace/solar-allocation.mjs",
+      "expected_sha256": "cfd3733c04cc769852e9dfb644aa58a4ae8d7d0dea2f75339c2a7101ada2a2e9",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-allocation.mjs",
+      "observed_sha256": "cfd3733c04cc769852e9dfb644aa58a4ae8d7d0dea2f75339c2a7101ada2a2e9",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-timing-bounds.mjs",
+      "path": "workspace/solar-timing-bounds.mjs",
+      "expected_sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-timing-bounds.mjs",
+      "observed_sha256": "60e71fbf6a673c8b264c9a0396333fa7b9f145bfe5926a8e5d13dd8354cb1ceb",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-water.svg",
+      "path": "workspace/solar-water.svg",
+      "expected_sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/solar-water.svg",
+      "observed_sha256": "6e369bdc599e759c5dc377be49bff9df2265d8ede1c8b037439b6bb991cb454f",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/storage-frontier.mjs",
+      "path": "workspace/storage-frontier.mjs",
+      "expected_sha256": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/storage-frontier.mjs",
+      "observed_sha256": "2b385978a3c94501c8f63fd711bb4de28d6c9ed27e77f8d480f498d5eb69b3ab",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/temporal-water.mjs",
+      "path": "workspace/temporal-water.mjs",
+      "expected_sha256": "755b20b63910c05a258a248a5c172d8eea2eb31ee46f91e3cdb9280be55171fd",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/temporal-water.mjs",
+      "observed_sha256": "755b20b63910c05a258a248a5c172d8eea2eb31ee46f91e3cdb9280be55171fd",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/theme.css",
+      "path": "workspace/theme.css",
+      "expected_sha256": "ad4b0803a5b9f2cf4850bd2283b7a174098e72a20aeb122ec7adc03f16cafc69",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/theme.css",
+      "observed_sha256": "ad4b0803a5b9f2cf4850bd2283b7a174098e72a20aeb122ec7adc03f16cafc69",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/typography.css",
+      "path": "workspace/typography.css",
+      "expected_sha256": "9dbef9a34e6edeb138aef5faa7e7742c69c817d69b8d17b938be3b3e5577adf8",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/typography.css",
+      "observed_sha256": "9dbef9a34e6edeb138aef5faa7e7742c69c817d69b8d17b938be3b3e5577adf8",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/vendor/LICENSE-papaparse.txt",
+      "path": "workspace/vendor/LICENSE-papaparse.txt",
+      "expected_sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/vendor/LICENSE-papaparse.txt",
+      "observed_sha256": "99aa68e4b42758b09828a46515f70369e5463458ab7a990189f641af2b8d9b4e",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/vendor/papaparse.min.js",
+      "path": "workspace/vendor/papaparse.min.js",
+      "expected_sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/vendor/papaparse.min.js",
+      "observed_sha256": "4d5d2d6e3282b66aafaa5e6de8ca3ae06f8d3440111ae99c6a30f6c00cfac33e",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace-preview-mobile.png",
+      "path": "workspace/workspace-preview-mobile.png",
+      "expected_sha256": "aef67f9689612ab26772a8b31b6d79013be1f4ea90b5e48e65fbda5a3e54322a",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace-preview-mobile.png",
+      "observed_sha256": "aef67f9689612ab26772a8b31b6d79013be1f4ea90b5e48e65fbda5a3e54322a",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace-preview.png",
+      "path": "workspace/workspace-preview.png",
+      "expected_sha256": "ababac4ffa879556282ab481b4dce827259fed5ef2068a70c549b264a123a9ba",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace-preview.png",
+      "observed_sha256": "ababac4ffa879556282ab481b4dce827259fed5ef2068a70c549b264a123a9ba",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace.css",
+      "path": "workspace/workspace.css",
+      "expected_sha256": "2f9909db5b3fdc7e1826bcbdf0e2b74572ef671004d627f8254c2a1ac1cddc8c",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace.css",
+      "observed_sha256": "2f9909db5b3fdc7e1826bcbdf0e2b74572ef671004d627f8254c2a1ac1cddc8c",
+      "matches": true
+    },
+    {
+      "url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace.js",
+      "path": "workspace/workspace.js",
+      "expected_sha256": "6dac29d3eb5cc2c4d8fc89258527979c66f0e00ff99fbafe843b923049ab96c0",
+      "status": 200,
+      "final_url": "https://aquashift-pafos-2026.vercel.app/workspace/workspace.js",
+      "observed_sha256": "6dac29d3eb5cc2c4d8fc89258527979c66f0e00ff99fbafe843b923049ab96c0",
+      "matches": true
+    }
+  ]
+}

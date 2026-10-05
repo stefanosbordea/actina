@@ -1,0 +1,273 @@
+verify	Verify retained model demo	﻿2026-10-04T10:11:56.9703387Z ##[group]Run python -m unittest discover -s app/tools -p "test_*.py" -v
+verify	Verify retained model demo	2026-10-04T10:11:56.9703970Z ^[[36;1mpython -m unittest discover -s app/tools -p "test_*.py" -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9704453Z ^[[36;1mpython -m unittest discover -s app/tests -p test_review_pack.py -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9704887Z ^[[36;1mpython app/experiments/f1-001/check_audit.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9705433Z ^[[36;1mpython -m unittest discover -s app/experiments/prospective-001 -p test_capture.py -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9706132Z ^[[36;1mpython -m unittest discover -s app/experiments/prospective-001/evaluation -p test_evaluate.py -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9706837Z ^[[36;1mpython -m unittest discover -s app/experiments/reference-sensitivity-001 -p test_check.py -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9707725Z ^[[36;1mpython app/experiments/reference-sensitivity-001/review.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9708134Z ^[[36;1mpython app/experiments/f1-005/review/check.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9708488Z ^[[36;1mpython app/experiments/f1-006/review/check.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9708899Z ^[[36;1mpython app/experiments/f1-006/review/replay_models.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9709334Z ^[[36;1mpython app/experiments/nwp-alternative-001/review/check.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9709734Z ^[[36;1mpython app/experiments/f1-007/review/check.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9710172Z ^[[36;1mpython -m unittest discover -s app/experiments/f1-008 -p test_policy.py -v^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9710628Z ^[[36;1mpython app/experiments/f1-008/review/check.py^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9711226Z ^[[36;1mpython -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-006/check.py'); print(json.dumps(audit['main']()))"^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9712236Z ^[[36;1mpython -c "import json, runpy; audit = runpy.run_path('app/experiments/f1-005/review/paired-bootstrap-review.py'); print(json.dumps(audit['main']()['checks']))"^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9712950Z ^[[36;1mnode app/tools/test_demo.mjs^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9713252Z ^[[36;1mnode app/tools/test_benchmark_ui.mjs^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9713558Z ^[[36;1mnode app/build.mjs^[[0m
+verify	Verify retained model demo	2026-10-04T10:11:56.9777611Z shell: /usr/bin/bash -e {0}
+verify	Verify retained model demo	2026-10-04T10:11:56.9777867Z env:
+verify	Verify retained model demo	2026-10-04T10:11:56.9778142Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Verify retained model demo	2026-10-04T10:11:56.9778592Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib/pkgconfig
+verify	Verify retained model demo	2026-10-04T10:11:56.9779050Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Verify retained model demo	2026-10-04T10:11:56.9779624Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Verify retained model demo	2026-10-04T10:11:56.9780014Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.7/x64
+verify	Verify retained model demo	2026-10-04T10:11:56.9780394Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.7/x64/lib
+verify	Verify retained model demo	2026-10-04T10:11:56.9780721Z ##[endgroup]
+verify	Verify retained model demo	2026-10-04T10:11:57.0519919Z test_absent_positive_class_is_not_perfect_f1 (test_benchmark_predictions.BenchmarkTests.test_absent_positive_class_is_not_perfect_f1) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.1444869Z test_all_rows_retained_and_group_totals_reconcile (test_benchmark_predictions.BenchmarkTests.test_all_rows_retained_and_group_totals_reconcile) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.1447813Z test_strict_threshold_confusion_matrix (test_benchmark_predictions.BenchmarkTests.test_strict_threshold_confusion_matrix) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.1458735Z test_timestamp_validation_and_target_alignment (test_benchmark_predictions.BenchmarkTests.test_timestamp_validation_and_target_alignment) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.2523244Z test_cloudy_day_has_no_discount_and_respects_given_bounds (test_prepare_demo.DemoDataTests.test_cloudy_day_has_no_discount_and_respects_given_bounds) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.2525758Z test_distinguishes_supplied_forecast_from_model (test_prepare_demo.DemoDataTests.test_distinguishes_supplied_forecast_from_model) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.2830237Z test_retained_input_identity_and_complete_days (test_prepare_demo.DemoDataTests.test_retained_input_identity_and_complete_days) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.2832621Z test_summer_costs_and_equal_water (test_prepare_demo.DemoDataTests.test_summer_costs_and_equal_water) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.2834046Z 
+verify	Verify retained model demo	2026-10-04T10:11:57.2834888Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:11:57.2835778Z Ran 8 tests in 0.231s
+verify	Verify retained model demo	2026-10-04T10:11:57.2836072Z 
+verify	Verify retained model demo	2026-10-04T10:11:57.2836221Z OK
+verify	Verify retained model demo	2026-10-04T10:11:57.3967840Z test_archive_is_complete_current_and_excludes_historical_artifacts (test_review_pack.ReviewPackTests.test_archive_is_complete_current_and_excludes_historical_artifacts) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4092790Z test_audio_or_changed_video_is_rejected (test_review_pack.ReviewPackTests.test_audio_or_changed_video_is_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4174600Z test_changed_deck_is_rejected (test_review_pack.ReviewPackTests.test_changed_deck_is_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4260067Z test_changed_notes_are_rejected (test_review_pack.ReviewPackTests.test_changed_notes_are_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4348409Z test_check_does_not_write_an_archive (test_review_pack.ReviewPackTests.test_check_does_not_write_an_archive) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4464893Z test_stale_document_video_cue_is_rejected (test_review_pack.ReviewPackTests.test_stale_document_video_cue_is_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4567012Z test_stale_offline_build_is_rejected (test_review_pack.ReviewPackTests.test_stale_offline_build_is_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4628781Z test_symlink_site_is_rejected (test_review_pack.ReviewPackTests.test_symlink_site_is_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:57.4629657Z 
+verify	Verify retained model demo	2026-10-04T10:11:57.4630138Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:11:57.4630833Z Ran 8 tests in 0.083s
+verify	Verify retained model demo	2026-10-04T10:11:57.4631100Z 
+verify	Verify retained model demo	2026-10-04T10:11:57.4631257Z OK
+verify	Verify retained model demo	2026-10-04T10:11:58.9734970Z {
+verify	Verify retained model demo	2026-10-04T10:11:58.9735469Z   "status": "PASS",
+verify	Verify retained model demo	2026-10-04T10:11:58.9735882Z   "mismatches": [],
+verify	Verify retained model demo	2026-10-04T10:11:58.9736229Z   "checks": {
+verify	Verify retained model demo	2026-10-04T10:11:58.9736569Z     "prediction_files": 12,
+verify	Verify retained model demo	2026-10-04T10:11:58.9736978Z     "prediction_rows": 42798,
+verify	Verify retained model demo	2026-10-04T10:11:58.9737625Z     "selected_scores": 12,
+verify	Verify retained model demo	2026-10-04T10:11:58.9738055Z     "default_scores": 12,
+verify	Verify retained model demo	2026-10-04T10:11:58.9738450Z     "monthly_scores": 66,
+verify	Verify retained model demo	2026-10-04T10:11:58.9738835Z     "threshold_scores": 304,
+verify	Verify retained model demo	2026-10-04T10:11:58.9739322Z     "original_reference_scores": 2,
+verify	Verify retained model demo	2026-10-04T10:11:58.9739795Z     "input_hashes": 4
+verify	Verify retained model demo	2026-10-04T10:11:58.9740139Z   },
+verify	Verify retained model demo	2026-10-04T10:11:58.9740555Z   "selected_on_validation": "direct_classifier"
+verify	Verify retained model demo	2026-10-04T10:11:58.9741467Z }
+verify	Verify retained model demo	2026-10-04T10:11:59.0844032Z test_all_rows_nulls_and_strict_threshold_retained (test_capture.CaptureTests.test_all_rows_nulls_and_strict_threshold_retained) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0864980Z test_bad_units_values_and_offset_rejected (test_capture.CaptureTests.test_bad_units_values_and_offset_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0882646Z test_duplicate_missing_unordered_and_nonhourly_timestamps_rejected (test_capture.CaptureTests.test_duplicate_missing_unordered_and_nonhourly_timestamps_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0902699Z test_exact_and_fractional_capture_boundaries (test_capture.CaptureTests.test_exact_and_fractional_capture_boundaries) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0921225Z test_existing_output_refused_before_network_without_mutation (test_capture.CaptureTests.test_existing_output_refused_before_network_without_mutation) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0942985Z test_network_failure_is_retained_and_attempt_cannot_be_reused (test_capture.CaptureTests.test_network_failure_is_retained_and_attempt_cannot_be_reused) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0956196Z test_selected_null_never_changes_membership (test_capture.CaptureTests.test_selected_null_never_changes_membership) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0967774Z test_target_missing_duplicate_and_naive_completion_rejected (test_capture.CaptureTests.test_target_missing_duplicate_and_naive_completion_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.0968893Z 
+verify	Verify retained model demo	2026-10-04T10:11:59.0969292Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:11:59.0969886Z Ran 8 tests in 0.015s
+verify	Verify retained model demo	2026-10-04T10:11:59.0970110Z 
+verify	Verify retained model demo	2026-10-04T10:11:59.0970255Z OK
+verify	Verify retained model demo	2026-10-04T10:11:59.2234893Z test_early_attempt_never_loads_inputs_or_network_and_cannot_overwrite (test_evaluate.EvaluationTests.test_early_attempt_never_loads_inputs_or_network_and_cannot_overwrite) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.9216970Z test_exact_archive_member_set_and_duplicate_guard (test_evaluate.EvaluationTests.test_exact_archive_member_set_and_duplicate_guard) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.9928941Z test_frozen_chain_and_corruption (test_evaluate.EvaluationTests.test_frozen_chain_and_corruption) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.9931047Z test_gate_before_and_exact_boundary_for_both_sets (test_evaluate.EvaluationTests.test_gate_before_and_exact_boundary_for_both_sets) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.9939154Z test_hand_derived_strict_threshold_metrics_and_inclusive_intervals (test_evaluate.EvaluationTests.test_hand_derived_strict_threshold_metrics_and_inclusive_intervals) ... ok
+verify	Verify retained model demo	2026-10-04T10:11:59.9951649Z test_integrity_failure_prevents_request_after_time_gate (test_evaluate.EvaluationTests.test_integrity_failure_prevents_request_after_time_gate) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2567978Z test_member_hashes_are_checked_even_with_a_new_archive_hash (test_evaluate.EvaluationTests.test_member_hashes_are_checked_even_with_a_new_archive_hash) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2575934Z test_no_candidate_specific_or_duplicate_target_subset (test_evaluate.EvaluationTests.test_no_candidate_specific_or_duplicate_target_subset) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2585433Z test_null_and_absent_reference_are_different_original_rows_retained (test_evaluate.EvaluationTests.test_null_and_absent_reference_are_different_original_rows_retained) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2728420Z test_offline_http_workflow_keeps_complete_incomplete_and_invalid_attempts (test_evaluate.EvaluationTests.test_offline_http_workflow_keeps_complete_incomplete_and_invalid_attempts) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2743172Z test_partial_null_invalid_probability_and_interval_are_integrity_failures (test_evaluate.EvaluationTests.test_partial_null_invalid_probability_and_interval_are_integrity_failures) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2751317Z test_reference_rejects_duplicates_invalid_units_numbers_and_clock (test_evaluate.EvaluationTests.test_reference_rejects_duplicates_invalid_units_numbers_and_clock) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2758492Z test_undefined_metrics_and_empty_intersection (test_evaluate.EvaluationTests.test_undefined_metrics_and_empty_intersection) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.2766704Z test_unknown_forecast_remains_unknown_for_every_candidate (test_evaluate.EvaluationTests.test_unknown_forecast_remains_unknown_for_every_candidate) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.3759107Z test_working_inputs_can_change_or_be_absent_without_changing_frozen_predictions (test_evaluate.EvaluationTests.test_working_inputs_can_change_or_be_absent_without_changing_frozen_predictions) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.3760485Z 
+verify	Verify retained model demo	2026-10-04T10:12:00.3760913Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:12:00.3761491Z Ran 15 tests in 1.154s
+verify	Verify retained model demo	2026-10-04T10:12:00.3761717Z 
+verify	Verify retained model demo	2026-10-04T10:12:00.3761839Z OK
+verify	Verify retained model demo	2026-10-04T10:12:00.4593751Z test_absent_reference_hour_does_not_become_null (test_check.SensitivityTests.test_absent_reference_hour_does_not_become_null) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4600374Z test_changed_control_membership_or_target_rejected (test_check.SensitivityTests.test_changed_control_membership_or_target_rejected) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4606709Z test_no_overwrite (test_check.SensitivityTests.test_no_overwrite) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4612011Z test_null_reference_never_hides_missing_forecast (test_check.SensitivityTests.test_null_reference_never_hides_missing_forecast) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4614093Z test_null_spans_preserve_nonadjacent_hours (test_check.SensitivityTests.test_null_spans_preserve_nonadjacent_hours) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4620878Z test_original_serialization_allowance_is_narrow_and_reported (test_check.SensitivityTests.test_original_serialization_allowance_is_narrow_and_reported) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4625818Z test_same_subset_isolates_reference_change (test_check.SensitivityTests.test_same_subset_isolates_reference_change) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4628595Z test_scenario_default_uses_probability_not_median_or_selected (test_check.SensitivityTests.test_scenario_default_uses_probability_not_median_or_selected) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4630853Z test_strict_reference_boundary_and_undefined_scores (test_check.SensitivityTests.test_strict_reference_boundary_and_undefined_scores) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:00.4631866Z 
+verify	Verify retained model demo	2026-10-04T10:12:00.4632295Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:12:00.4632943Z Ran 9 tests in 0.004s
+verify	Verify retained model demo	2026-10-04T10:12:00.4633205Z 
+verify	Verify retained model demo	2026-10-04T10:12:00.4633350Z OK
+verify	Verify retained model demo	2026-10-04T10:12:00.8146791Z {"status": "PASS", "comparisons_recomputed": 48, "frozen_inputs_verified": 22, "report_sha256": "883faf552e5f6588d683e02ccbcbf1f91b87c03fc2173f2bb00e1d7eea417595", "review_script_sha256": "5032a8fc335b15bdc8e978e1d0b372292e6dd42a96a3d154d71859afdd47b68e"}
+verify	Verify retained model demo	2026-10-04T10:12:01.7327953Z {"status": "PASS", "checks": 247573, "matched_hours": 7133, "scenario_values": 456512, "metric_rows": 30, "coverage": {"validation": {"original_hours": 3566, "satellite_common_hours": 3419, "missing_reference_hours": 147}, "test": {"original_hours": 3567, "satellite_common_hours": 3517, "missing_reference_hours": 50}}}
+verify	Verify retained model demo	2026-10-04T10:12:02.3738806Z {"status": "PASS", "checks": 246952, "saved_prediction_rows_verified": 42798, "comparison_rows_verified": 36, "default_metric_rows_verified": 12, "selected_method": "larger", "threshold": 0.5411745121421931}
+verify	Verify retained model demo	2026-10-04T10:12:03.3291517Z {
+verify	Verify retained model demo	2026-10-04T10:12:03.3291960Z   "status": "PASS",
+verify	Verify retained model demo	2026-10-04T10:12:03.3292684Z   "scope": "Saved models replayed against retained feature rows; no fit or selection.",
+verify	Verify retained model demo	2026-10-04T10:12:03.3293181Z   "lightgbm_version": "4.7.0",
+verify	Verify retained model demo	2026-10-04T10:12:03.3293440Z   "checks": [
+verify	Verify retained model demo	2026-10-04T10:12:03.3293639Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3293853Z       "split": "validation",
+verify	Verify retained model demo	2026-10-04T10:12:03.3294111Z       "method": "small",
+verify	Verify retained model demo	2026-10-04T10:12:03.3294351Z       "hours": 3566,
+verify	Verify retained model demo	2026-10-04T10:12:03.3294659Z       "max_probability_abs_error": 2.168404344971009e-19,
+verify	Verify retained model demo	2026-10-04T10:12:03.3295081Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3295378Z     },
+verify	Verify retained model demo	2026-10-04T10:12:03.3295560Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3295766Z       "split": "validation",
+verify	Verify retained model demo	2026-10-04T10:12:03.3296013Z       "method": "medium",
+verify	Verify retained model demo	2026-10-04T10:12:03.3296239Z       "hours": 3566,
+verify	Verify retained model demo	2026-10-04T10:12:03.3296908Z       "max_probability_abs_error": 2.710505431213761e-20,
+verify	Verify retained model demo	2026-10-04T10:12:03.3297586Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3297893Z     },
+verify	Verify retained model demo	2026-10-04T10:12:03.3298083Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3298284Z       "split": "validation",
+verify	Verify retained model demo	2026-10-04T10:12:03.3298535Z       "method": "larger",
+verify	Verify retained model demo	2026-10-04T10:12:03.3298768Z       "hours": 3566,
+verify	Verify retained model demo	2026-10-04T10:12:03.3299056Z       "max_probability_abs_error": 2.710505431213761e-20,
+verify	Verify retained model demo	2026-10-04T10:12:03.3299428Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3299718Z     },
+verify	Verify retained model demo	2026-10-04T10:12:03.3299903Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3300110Z       "split": "test",
+verify	Verify retained model demo	2026-10-04T10:12:03.3300359Z       "method": "small",
+verify	Verify retained model demo	2026-10-04T10:12:03.3300585Z       "hours": 3567,
+verify	Verify retained model demo	2026-10-04T10:12:03.3300845Z       "max_probability_abs_error": 0.0,
+verify	Verify retained model demo	2026-10-04T10:12:03.3301189Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3301476Z     },
+verify	Verify retained model demo	2026-10-04T10:12:03.3301680Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3301876Z       "split": "test",
+verify	Verify retained model demo	2026-10-04T10:12:03.3302096Z       "method": "medium",
+verify	Verify retained model demo	2026-10-04T10:12:03.3302334Z       "hours": 3567,
+verify	Verify retained model demo	2026-10-04T10:12:03.3302590Z       "max_probability_abs_error": 0.0,
+verify	Verify retained model demo	2026-10-04T10:12:03.3302929Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3303225Z     },
+verify	Verify retained model demo	2026-10-04T10:12:03.3303401Z     {
+verify	Verify retained model demo	2026-10-04T10:12:03.3303586Z       "split": "test",
+verify	Verify retained model demo	2026-10-04T10:12:03.3303807Z       "method": "larger",
+verify	Verify retained model demo	2026-10-04T10:12:03.3304037Z       "hours": 3567,
+verify	Verify retained model demo	2026-10-04T10:12:03.3304325Z       "max_probability_abs_error": 1.3552527156068805e-20,
+verify	Verify retained model demo	2026-10-04T10:12:03.3304696Z       "selected_and_default_decisions_match": true
+verify	Verify retained model demo	2026-10-04T10:12:03.3305149Z     }
+verify	Verify retained model demo	2026-10-04T10:12:03.3305337Z   ],
+verify	Verify retained model demo	2026-10-04T10:12:03.3305530Z   "input_sha256": {
+verify	Verify retained model demo	2026-10-04T10:12:03.3305986Z     "result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+verify	Verify retained model demo	2026-10-04T10:12:03.3306688Z     "result/features.csv": "f0cc88f0068a7b81185dde4e5f9e09f268a405a99d6d34119eeddb7231a87908",
+verify	Verify retained model demo	2026-10-04T10:12:03.3307708Z     "result/predictions/validation-small.csv": "07f6ac02f6688da01791b9bd3196e8f16f303bce1384bb1d0bda2c3917b920c0",
+verify	Verify retained model demo	2026-10-04T10:12:03.3308569Z     "result/models/validation-small.txt": "1da28bd2ddc3c9d8c0b17abb18111ac8fc07d09ecdd06cf178de005947f16c04",
+verify	Verify retained model demo	2026-10-04T10:12:03.3309420Z     "result/predictions/validation-medium.csv": "1bd21f572c7a9f26be4d6b9599b492e0b079ab8b3ed708cccb4a766bef50a380",
+verify	Verify retained model demo	2026-10-04T10:12:03.3310277Z     "result/models/validation-medium.txt": "d39f5ab40146b6e9161dc97efcac9f0729b4e02178c35fbcd0446eba0886136b",
+verify	Verify retained model demo	2026-10-04T10:12:03.3311100Z     "result/predictions/validation-larger.csv": "68f9739fc0e561532bcb2fb748d934902e148ed84e3a8866c7f1d464824d4dbd",
+verify	Verify retained model demo	2026-10-04T10:12:03.3311935Z     "result/models/validation-larger.txt": "23cab5a78d0bcc08980fda1978fcafab3f89ab1120333cdadc240daa4b459264",
+verify	Verify retained model demo	2026-10-04T10:12:03.3312741Z     "result/predictions/test-small.csv": "3cfefb241130cc754337435d1e2c1941903ce8655c2633552481c9e1b6624c2c",
+verify	Verify retained model demo	2026-10-04T10:12:03.3313501Z     "result/models/test-small.txt": "a33cd5e6644aec477583e01465477ff16eef9556c2145f4f133a7dcdc61ea2a5",
+verify	Verify retained model demo	2026-10-04T10:12:03.3314264Z     "result/predictions/test-medium.csv": "e72f36100e4bf502f292cec76d9e9300a8c283d6e12d4ab71c45eda1157974e2",
+verify	Verify retained model demo	2026-10-04T10:12:03.3315042Z     "result/models/test-medium.txt": "cce71352bcd2659f97e1fec374fd09a648f119b2d8e34b9254b7be4647c0dec7",
+verify	Verify retained model demo	2026-10-04T10:12:03.3315806Z     "result/predictions/test-larger.csv": "1449eca471b6ef341d3017379a343673129b0b25df26d379ebf221c34ef7d534",
+verify	Verify retained model demo	2026-10-04T10:12:03.3316568Z     "result/models/test-larger.txt": "a99d135dfb80217d4ab25eaedcb824945f49dfe81356b938b11022721c18d8d0"
+verify	Verify retained model demo	2026-10-04T10:12:03.3317065Z   },
+verify	Verify retained model demo	2026-10-04T10:12:03.3317610Z   "code_sha256": "d2be039d8f80864cdbb15dbb93d8437f7636d5167b1cb7c9e0002cbe9693e4b3"
+verify	Verify retained model demo	2026-10-04T10:12:03.3318041Z }
+verify	Verify retained model demo	2026-10-04T10:12:04.1469573Z {
+verify	Verify retained model demo	2026-10-04T10:12:04.1470272Z   "status": "PASS",
+verify	Verify retained model demo	2026-10-04T10:12:04.1470914Z   "checks": 250121,
+verify	Verify retained model demo	2026-10-04T10:12:04.1471742Z   "original_files_and_sources_unchanged": true,
+verify	Verify retained model demo	2026-10-04T10:12:04.1473153Z   "raw_gfs_hours": 17856,
+verify	Verify retained model demo	2026-10-04T10:12:04.1473915Z   "raw_satellite_hours": 17976,
+verify	Verify retained model demo	2026-10-04T10:12:04.1474648Z   "joined_hours": 17832,
+verify	Verify retained model demo	2026-10-04T10:12:04.1475206Z   "gfs_padding_hours": 24,
+verify	Verify retained model demo	2026-10-04T10:12:04.1475685Z   "gfs_radiation_missing": 0,
+verify	Verify retained model demo	2026-10-04T10:12:04.1476097Z   "gfs_cloud_invalid_hours": 8,
+verify	Verify retained model demo	2026-10-04T10:12:04.1476541Z   "original_cloud_intake_status": "FAILED",
+verify	Verify retained model demo	2026-10-04T10:12:04.1477027Z   "radiation_only_schema_status": "PASS",
+verify	Verify retained model demo	2026-10-04T10:12:04.1477782Z   "satellite_coverage": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1478154Z     "all_feature_targets": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1478528Z       "hours": 17832,
+verify	Verify retained model demo	2026-10-04T10:12:04.1478841Z       "missing": 197
+verify	Verify retained model demo	2026-10-04T10:12:04.1479138Z     },
+verify	Verify retained model demo	2026-10-04T10:12:04.1479428Z     "validation_training": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1479776Z       "hours": 10675,
+verify	Verify retained model demo	2026-10-04T10:12:04.1480082Z       "missing": 0
+verify	Verify retained model demo	2026-10-04T10:12:04.1480371Z     },
+verify	Verify retained model demo	2026-10-04T10:12:04.1480643Z     "test_training": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1480965Z       "hours": 14241,
+verify	Verify retained model demo	2026-10-04T10:12:04.1481278Z       "missing": 147
+verify	Verify retained model demo	2026-10-04T10:12:04.1481571Z     }
+verify	Verify retained model demo	2026-10-04T10:12:04.1481827Z   },
+verify	Verify retained model demo	2026-10-04T10:12:04.1482097Z   "returned_grid": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1482401Z     "GFS": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1482691Z       "latitude": 34.734787,
+verify	Verify retained model demo	2026-10-04T10:12:04.1483041Z       "longitude": 32.460938,
+verify	Verify retained model demo	2026-10-04T10:12:04.1483400Z       "elevation": 71.0
+verify	Verify retained model demo	2026-10-04T10:12:04.1483706Z     },
+verify	Verify retained model demo	2026-10-04T10:12:04.1483970Z     "SARAH3": {
+verify	Verify retained model demo	2026-10-04T10:12:04.1484270Z       "latitude": 34.75,
+verify	Verify retained model demo	2026-10-04T10:12:04.1484600Z       "longitude": 32.4,
+verify	Verify retained model demo	2026-10-04T10:12:04.1484926Z       "elevation": 71.0
+verify	Verify retained model demo	2026-10-04T10:12:04.1485395Z     }
+verify	Verify retained model demo	2026-10-04T10:12:04.1485652Z   },
+verify	Verify retained model demo	2026-10-04T10:12:04.1486251Z   "check_sha256": "b8917bb5dc96654aec0e31bdaede1b5f643f57b32ff04b04efb4f4cd1337304c",
+verify	Verify retained model demo	2026-10-04T10:12:04.1486709Z   "network_requests": 0,
+verify	Verify retained model demo	2026-10-04T10:12:04.1486942Z   "fits": 0,
+verify	Verify retained model demo	2026-10-04T10:12:04.1487279Z   "forecast_scores": 0,
+verify	Verify retained model demo	2026-10-04T10:12:04.1487509Z   "limits": [
+verify	Verify retained model demo	2026-10-04T10:12:04.1488101Z     "Retained bytes and local request receipts establish reconstruction, not independent authentication of provider history.",
+verify	Verify retained model demo	2026-10-04T10:12:04.1489039Z     "Nominal previous_day2 does not verify historical publication/initialization vintage or real-time availability.",
+verify	Verify retained model demo	2026-10-04T10:12:04.1489904Z     "Different model families and satellite-derived products are not proven statistically independent truth.",
+verify	Verify retained model demo	2026-10-04T10:12:04.1490786Z     "Source-label UTC+03 is fixed; returned grids differ from requested coordinates; radiation is a preceding-hour mean."
+verify	Verify retained model demo	2026-10-04T10:12:04.1491331Z   ]
+verify	Verify retained model demo	2026-10-04T10:12:04.1491521Z }
+verify	Verify retained model demo	2026-10-04T10:12:06.8349566Z {
+verify	Verify retained model demo	2026-10-04T10:12:06.8350091Z   "status": "PASS",
+verify	Verify retained model demo	2026-10-04T10:12:06.8350557Z   "checks": 726104,
+verify	Verify retained model demo	2026-10-04T10:12:06.8350869Z   "training_labels": 24916,
+verify	Verify retained model demo	2026-10-04T10:12:06.8351220Z   "prediction_rows": 64197,
+verify	Verify retained model demo	2026-10-04T10:12:06.8351551Z   "metric_rows": 126,
+verify	Verify retained model demo	2026-10-04T10:12:06.8351852Z   "threshold_rows": 10692,
+verify	Verify retained model demo	2026-10-04T10:12:06.8352205Z   "model_replays": 6,
+verify	Verify retained model demo	2026-10-04T10:12:06.8352664Z   "maximum_model_probability_error": 1.1102230246251565e-16,
+verify	Verify retained model demo	2026-10-04T10:12:06.8353144Z   "selected_families": {
+verify	Verify retained model demo	2026-10-04T10:12:06.8353508Z     "weather": "weather_larger",
+verify	Verify retained model demo	2026-10-04T10:12:06.8353899Z     "consensus": "consensus_larger"
+verify	Verify retained model demo	2026-10-04T10:12:06.8354240Z   },
+verify	Verify retained model demo	2026-10-04T10:12:06.8354774Z   "code_sha256": "be626e409b089ee5b7b7c5d731a4af6eb11533a7b3f9439f39b3e0870c2dd501",
+verify	Verify retained model demo	2026-10-04T10:12:06.8355632Z   "protocol_sha256": "f6950483c4bc3864c4a902d9b1e230681011c634d02bd7474c025cec4aa461fc",
+verify	Verify retained model demo	2026-10-04T10:12:06.8356548Z   "runner_sha256": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+verify	Verify retained model demo	2026-10-04T10:12:06.8357695Z   "report_sha256": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281",
+verify	Verify retained model demo	2026-10-04T10:12:06.8358313Z   "immutable_paths_verified": 66,
+verify	Verify retained model demo	2026-10-04T10:12:06.8359890Z   "scope": "Independent numerical reconstruction, cumulative threshold oracle, fixed UTC joins and stored-tree replay; no refit. Timestamp availability is not verified provider publication availability. Shared reference errors and inspected-test selection remain unresolved."
+verify	Verify retained model demo	2026-10-04T10:12:06.8361720Z }
+verify	Verify retained model demo	2026-10-04T10:12:07.3732833Z test_corrects_miss_and_false_alarm_on_both_references (test_policy.PolicyTests.test_corrects_miss_and_false_alarm_on_both_references) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:07.3735153Z test_missing_satellite_not_relabelled_negative (test_policy.PolicyTests.test_missing_satellite_not_relabelled_negative) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:07.3866915Z test_perfect_control_is_retained_even_with_endpoint_scores (test_policy.PolicyTests.test_perfect_control_is_retained_even_with_endpoint_scores) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:07.4032757Z test_perfect_satellite_control_rejects_weather_only_gain (test_policy.PolicyTests.test_perfect_satellite_control_rejects_weather_only_gain) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:07.4034772Z test_separate_directions_and_strict_boundaries (test_policy.PolicyTests.test_separate_directions_and_strict_boundaries) ... ok
+verify	Verify retained model demo	2026-10-04T10:12:07.4035635Z 
+verify	Verify retained model demo	2026-10-04T10:12:07.4036013Z ----------------------------------------------------------------------
+verify	Verify retained model demo	2026-10-04T10:12:07.4036596Z Ran 5 tests in 0.051s
+verify	Verify retained model demo	2026-10-04T10:12:07.4036826Z 
+verify	Verify retained model demo	2026-10-04T10:12:07.4036961Z OK
+verify	Verify retained model demo	2026-10-04T10:12:09.7504781Z Traceback (most recent call last):
+verify	Verify retained model demo	2026-10-04T10:12:09.7509778Z   File "/home/runner/work/actina/actina/app/experiments/f1-008/review/check.py", line 169, in <module>
+verify	Verify retained model demo	2026-10-04T10:12:09.7511057Z     result=check();save(HERE/'result.json',result);print(json.dumps(result,indent=2))
+verify	Verify retained model demo	2026-10-04T10:12:09.7512219Z   File "/home/runner/work/actina/actina/app/experiments/f1-008/review/check.py", line 121, in check
+verify	Verify retained model demo	2026-10-04T10:12:09.7513696Z     assert np.array_equal(replay,np.array(p)),(stage,arm,float(np.max(abs(replay-p))))
+verify	Verify retained model demo	2026-10-04T10:12:09.7514471Z            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+verify	Verify retained model demo	2026-10-04T10:12:09.7515250Z AssertionError: ('validation', 'weather_two_source', 2.168404344971009e-19)
+verify	Verify retained model demo	2026-10-04T10:12:09.9369917Z ##[error]Process completed with exit code 1.

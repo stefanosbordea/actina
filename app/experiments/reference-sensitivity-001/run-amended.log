@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE_REFERENCE_SENSITIVITY_NOT_MODEL_PROMOTION",
+  "coverage": {
+    "validation": {
+      "original_hours": 3566,
+      "scored_hours": 3419,
+      "unscored_hours": 147,
+      "scored_fraction": 0.9587773415591699,
+      "unscored_fraction": 0.04122265844083006,
+      "unscored_spans": [
+        {
+          "first_valid_time_utc": "2026-02-13T00:00:00+00:00",
+          "last_valid_time_utc": "2026-02-14T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-03-15T00:00:00+00:00",
+          "last_valid_time_utc": "2026-03-19T00:00:00+00:00",
+          "hours": 97
+        },
+        {
+          "first_valid_time_utc": "2026-03-31T00:00:00+00:00",
+          "last_valid_time_utc": "2026-04-01T00:00:00+00:00",
+          "hours": 25
+        }
+      ]
+    },
+    "test": {
+      "original_hours": 3567,
+      "scored_hours": 3517,
+      "unscored_hours": 50,
+      "scored_fraction": 0.9859826184468741,
+      "unscored_fraction": 0.014017381553125876,
+      "unscored_spans": [
+        {
+          "first_valid_time_utc": "2026-07-01T00:00:00+00:00",
+          "last_valid_time_utc": "2026-07-02T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-07-20T00:00:00+00:00",
+          "last_valid_time_utc": "2026-07-21T00:00:00+00:00",
+          "hours": 25
+        }
+      ]
+    }
+  }
+}

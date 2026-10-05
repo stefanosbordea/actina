@@ -1,0 +1,26 @@
+{
+  "frozen_at_utc": "2026-10-04T13:06:01.740627+00:00",
+  "purpose": "One bounded chronology-safe v2 configuration refit and two fixed event corrections. No validation-selected corrections or test scoring.",
+  "sha256": {
+    "PROTOCOL.md": "d5e70a67a510a269002b4355a211f7eb2e2259b6710e1bcafc7a625ef50be5d2",
+    "RESEARCH.md": "4f355227a2ff4329aa8f17829246e7a464292d0cce2ac4db12333bc80edf4cfb",
+    "audit-source.py": "953b8fadc0ccd9d27d2f4b1e8b68044129030dd22fe973ffc7735832a2516749",
+    "inputs/cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "inputs/download_nwp.py": "4ee8a336a3dfcaa1c2cfecdb933cefe598e5b0e43a84052a8dada9e8a54863a6",
+    "inputs/features_v2.py": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+    "inputs/fixed008-validation.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "inputs/manifest.json": "b97f7de73bf5f6b53ac95c5327aca27fa07a7e172a88cbb32017cfd68109ed91",
+    "inputs/original-validation.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "inputs/retained-day2-validation.csv": "e18b428248163e5e6f84f192c4460e563bb7aae302e277ba68339d4be77bdf05",
+    "inputs/source-audit.json": "59c971d74913df18f6b984fdb8140fefa85e58241109729d6f43d2eff168c19a",
+    "inputs/train.csv": "64751284dc885eb8bf01206599f19193250fab30aa2f0549e32b5ad30a173bbb",
+    "inputs/train_modelv2.py": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+    "inputs/validation-features.csv": "bce5dc92e2bc7c99b40c2fea4987ac0c08a7d23a3128b57ea4655c3e5f06c515",
+    "preflight-receipt.json": "6bb337ea2251724dba012f9239de256ca9f40c6f70b3c01d9e0879276413cd25",
+    "prepare.py": "326fa20c950b361e384ca1d541ad9da4412e214b645263d33e0ab1bce209998e",
+    "run.py": "f9c2d2d28b1da2b84489d7fe11b89ca5eb632ecf3b59fdf54ae5128302da9fe3",
+    "test_run.py": "aac350cbd18350f278356471fb11d7111c1257823e83343d17be4bb64e9de732"
+  },
+  "threads": 2,
+  "wall_budget_seconds": 1800
+}

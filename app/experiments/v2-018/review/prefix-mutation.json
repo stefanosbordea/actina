@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "source_sha256": "49c516b4434d48ded77e08644a9dcc15e22f01a9d3e37363af8c1bbc9fcedc92",
+  "context_source_sha256": "9dbc18902f9fc29175baff94fe7b4275ff6ac976d6240e49abc96759eba30c36",
+  "model_sha256": "e4e6b0703c28fe77eab29f6139f6b3017d96f928098f8e5b0272162f4b8572f2",
+  "checks": [
+    {
+      "origin": "2025-12-04 19:00:00",
+      "altered_current_or_future_observations": 3565,
+      "maximum_feature_change": 0,
+      "probability_change": 0,
+      "call_unchanged": true
+    },
+    {
+      "origin": "2025-12-05 19:00:00",
+      "altered_current_or_future_observations": 3541,
+      "maximum_feature_change": 0,
+      "probability_change": 0,
+      "call_unchanged": true
+    },
+    {
+      "origin": "2026-01-15 11:00:00",
+      "altered_current_or_future_observations": 2565,
+      "maximum_feature_change": 0,
+      "probability_change": 0,
+      "call_unchanged": true
+    },
+    {
+      "origin": "2026-02-26 03:00:00",
+      "altered_current_or_future_observations": 1565,
+      "maximum_feature_change": 0,
+      "probability_change": 0,
+      "call_unchanged": true
+    },
+    {
+      "origin": "2026-04-29 15:00:00",
+      "altered_current_or_future_observations": 65,
+      "maximum_feature_change": 0,
+      "probability_change": 0,
+      "call_unchanged": true
+    }
+  ],
+  "fits_executed": 0,
+  "test_files_read": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "MATCHED_EXISTING004_FULL_DEFAULT_METRICS",
+  "checked_method_split_records": 16,
+  "comparison_sha256": "376b95f01ebb46af86e0cd788b96c5934d2c8754629cc752bce1672a58780b38",
+  "report_sha256": "883faf552e5f6588d683e02ccbcbf1f91b87c03fc2173f2bb00e1d7eea417595",
+  "counts": "exact",
+  "metric_comparison_tolerance": "relative1e-12/absolute1e-12 for floating aggregation only; no label tolerance",
+  "finished_at_utc": "2026-10-04T09:10:57.440024+00:00"
+}

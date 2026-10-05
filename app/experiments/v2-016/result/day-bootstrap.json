@@ -1,0 +1,48 @@
+{
+  "seed": 16016,
+  "replicates": 2000,
+  "target_day_blocks": 150,
+  "comparisons": {
+    "logistic_minus_base_refit": {
+      "lower_025": -0.0025545845448128545,
+      "upper_975": 0.025024555302984315,
+      "undefined_replicates": 0
+    },
+    "logistic_minus_supplied_v2_600": {
+      "lower_025": -0.0025545845448128545,
+      "upper_975": 0.025024555302984315,
+      "undefined_replicates": 0
+    },
+    "logistic_minus_supplied_v2_562": {
+      "lower_025": -0.019094122057228498,
+      "upper_975": 0.02488981915115624,
+      "undefined_replicates": 0
+    },
+    "logistic_minus_fixed008": {
+      "lower_025": -0.04076732031277691,
+      "upper_975": 0.01648445613330654,
+      "undefined_replicates": 0
+    },
+    "boosted_minus_base_refit": {
+      "lower_025": -0.010764588631502122,
+      "upper_975": 0.01835902730072057,
+      "undefined_replicates": 0
+    },
+    "boosted_minus_supplied_v2_600": {
+      "lower_025": -0.010764588631502122,
+      "upper_975": 0.01835902730072057,
+      "undefined_replicates": 0
+    },
+    "boosted_minus_supplied_v2_562": {
+      "lower_025": -0.026149045991535946,
+      "upper_975": 0.017323662636061703,
+      "undefined_replicates": 0
+    },
+    "boosted_minus_fixed008": {
+      "lower_025": -0.04701940392853585,
+      "upper_975": 0.009121480841015842,
+      "undefined_replicates": 0
+    }
+  },
+  "scope": "Paired descriptive day-block intervals on reused validation, without selection-bias correction."
+}

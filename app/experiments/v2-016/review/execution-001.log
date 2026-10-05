@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/v2-016/review/review.py", line 246, in <module>
+    report = audit()
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/v2-016/review/review.py", line 89, in audit
+    assert all(b-a == DAY for a,b in zip(data.index, data.index[1:]))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

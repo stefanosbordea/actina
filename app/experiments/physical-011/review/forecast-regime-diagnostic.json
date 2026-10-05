@@ -1,0 +1,165 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T10:46:25.729990+00:00",
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/physical-011/review/forecast_regime_diagnostic.py"
+  ],
+  "code_sha256": "f4920059702619509906ea976edcecc695dea01f01ff347ff321ed881e6a7be8",
+  "descriptor": "Sum of illustrative raw-forecast PV kWh across24 one-hour intervals divided by fixed9792kWh production demand.",
+  "source_sha256": {
+    "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+    "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+    "app/experiments/physical-011/inputs.json": "af4d294032736377ba050d5b4eae764dfb1376caa29f163ef5664564cf36fd9a",
+    "app/experiments/physical-011/result/planning-freeze.json": "0dcfe26e4ef8c4c364419c90246ba864c69516d63134206d33b95ebd0f59bcb8",
+    "app/experiments/physical-011/result/validation/bank.npz": "458ba5fa4d4d042af0e34af1741c958591473530a34c96d9bf1886d7da070a75",
+    "app/experiments/physical-011/result/validation/plans.npz": "dd5190f75c290446cdca3222dfe414dbaafa61151ac8e77659dd48684fa89a56",
+    "app/experiments/physical-011/result/validation/plan-metadata.csv": "7230050297eb56e2601d6c902fe8cfee6ee52d0b6a5ff2fc184a0c572cac0767",
+    "app/experiments/physical-011/result/test/bank.npz": "db4729b31ac7d9444a011c991621d1afe8105a106dfc258db0ba70b68dc022f0",
+    "app/experiments/physical-011/result/test/plans.npz": "b9de9db20f5e4b9a0377987971029ec5e51d5d6150c1826bb7b42eb18f680fca",
+    "app/experiments/physical-011/result/test/plan-metadata.csv": "0e03cbe0e491b769e563ad64b79d61addfcfdbcab38a2101adf60fdb59e20599"
+  },
+  "stages": {
+    "validation": {
+      "horizons": 150,
+      "bank_horizons": 64,
+      "bank_ratio": {
+        "min": 0.37309027777777776,
+        "q25": 0.5911024305555556,
+        "median": 0.6802083333333333,
+        "q75": 0.7647569444444443,
+        "max": 0.9487847222222222
+      },
+      "forecast_ratio": {
+        "min": 0.1873263888888889,
+        "q25": 0.48263888888888895,
+        "median": 0.6377604166666666,
+        "q75": 0.9095920138888889,
+        "max": 1.26875
+      },
+      "below_bank_min": 15,
+      "above_bank_max": 29,
+      "nearest_bank_ratio_gap": {
+        "min": 0.0,
+        "q25": 0.0017795138888889173,
+        "median": 0.007291666666666613,
+        "q75": 0.04466145833333335,
+        "max": 0.31996527777777783
+      },
+      "latest_bank_source_age_hours": {
+        "min": 1.0,
+        "q25": 895.0,
+        "median": 1789.0,
+        "q75": 2683.0,
+        "max": 3577.0
+      },
+      "months": {
+        "2025-12": {
+          "horizons": 27,
+          "median_ratio": 0.44218749999999996,
+          "below_bank_min": 7,
+          "above_bank_max": 0
+        },
+        "2026-01": {
+          "horizons": 31,
+          "median_ratio": 0.4913194444444444,
+          "below_bank_min": 5,
+          "above_bank_max": 0
+        },
+        "2026-02": {
+          "horizons": 28,
+          "median_ratio": 0.6390625,
+          "below_bank_min": 2,
+          "above_bank_max": 0
+        },
+        "2026-03": {
+          "horizons": 31,
+          "median_ratio": 0.8600694444444443,
+          "below_bank_min": 0,
+          "above_bank_max": 4
+        },
+        "2026-04": {
+          "horizons": 30,
+          "median_ratio": 1.096875,
+          "below_bank_min": 0,
+          "above_bank_max": 24
+        },
+        "2026-05": {
+          "horizons": 3,
+          "median_ratio": 0.7053819444444445,
+          "below_bank_min": 1,
+          "above_bank_max": 1
+        }
+      }
+    },
+    "test": {
+      "horizons": 149,
+      "bank_horizons": 64,
+      "bank_ratio": {
+        "min": 0.615625,
+        "q25": 0.8172743055555556,
+        "median": 0.9317708333333333,
+        "q75": 1.0925347222222221,
+        "max": 1.26875
+      },
+      "forecast_ratio": {
+        "min": 0.27552083333333327,
+        "q25": 1.2098958333333332,
+        "median": 1.3291666666666666,
+        "q75": 1.3987847222222223,
+        "max": 1.4725694444444444
+      },
+      "below_bank_min": 1,
+      "above_bank_max": 95,
+      "nearest_bank_ratio_gap": {
+        "min": 2.220446049250313e-16,
+        "q25": 0.004340277777777679,
+        "median": 0.06076388888888862,
+        "q75": 0.13055555555555554,
+        "max": 0.3401041666666667
+      },
+      "latest_bank_source_age_hours": {
+        "min": 1.0,
+        "q25": 889.0,
+        "median": 1777.0,
+        "q75": 2665.0,
+        "max": 3553.0
+      },
+      "months": {
+        "2026-05": {
+          "horizons": 29,
+          "median_ratio": 1.3152777777777778,
+          "below_bank_min": 1,
+          "above_bank_max": 21
+        },
+        "2026-06": {
+          "horizons": 30,
+          "median_ratio": 1.4205729166666665,
+          "below_bank_min": 0,
+          "above_bank_max": 30
+        },
+        "2026-07": {
+          "horizons": 31,
+          "median_ratio": 1.3986111111111112,
+          "below_bank_min": 0,
+          "above_bank_max": 31
+        },
+        "2026-08": {
+          "horizons": 31,
+          "median_ratio": 1.2616319444444446,
+          "below_bank_min": 0,
+          "above_bank_max": 13
+        },
+        "2026-09": {
+          "horizons": 28,
+          "median_ratio": 1.0895833333333331,
+          "below_bank_min": 0,
+          "above_bank_max": 0
+        }
+      }
+    }
+  },
+  "no_reference_values_or_outcomes_used": true,
+  "no_fitting_or_new_scheduling": true,
+  "limitation": "Nominal archive timestamps satisfy issue chronology, but historical publication availability is unverified. Forecast coverage alone does not establish residual-law shift or explain outcome differences."
+}

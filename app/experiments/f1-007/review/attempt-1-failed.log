@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-007/review/check.py", line 257, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-007/review/check.py", line 227, in main
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'

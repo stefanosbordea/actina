@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "app/experiments/f1-013/uncertainty",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.34337782859802246
+  },
+  {
+    "command": [
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+      "app/experiments/f1-013/uncertainty/paired.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.7259831428527832
+  }
+]

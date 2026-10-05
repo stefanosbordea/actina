@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-u",
+    "app/experiments/f1-013/run.py",
+    "--out",
+    "app/experiments/f1-013/result"
+  ],
+  "started_at_utc": "2026-10-04T11:44:55.852907+00:00",
+  "status": "COMPLETE",
+  "exit_code": 0,
+  "elapsed_seconds": 11.90548120799997,
+  "finished_at_utc": "2026-10-04T11:45:07.760138+00:00"
+}

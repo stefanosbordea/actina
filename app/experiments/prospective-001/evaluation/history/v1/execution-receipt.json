@@ -1,0 +1,36 @@
+{
+  "status": "OFFLINE_VERIFIED_NO_FUTURE_REFERENCE",
+  "recorded_at_utc": "2026-10-04T09:14:27.962454+00:00",
+  "tests": {
+    "command": "python3 -m unittest discover -s app/experiments/prospective-001/evaluation -p test_evaluate.py -v > app/experiments/prospective-001/evaluation/test-run-final-002.log 2>&1",
+    "exit_code": 0,
+    "tests": 12,
+    "failures": 0
+  },
+  "actual_early_invocation": {
+    "command": "python3 app/experiments/prospective-001/evaluation/evaluate.py --target-set primary --output app/experiments/prospective-001/evaluation/early-refusal-001 > app/experiments/prospective-001/evaluation/early-refusal-run.log 2>&1",
+    "exit_code": 1,
+    "status": "REFUSED_EARLY",
+    "script_sha256_at_invocation": "e8965af6c412df8c4093443c2a4844137bce135ba42e73e70ba231e758159895",
+    "no_network_evidence": [
+      "Production gate executes before load_frozen and urllib.request.urlopen.",
+      "Offline network-spy test asserts zero calls for the early production run path.",
+      "Actual attempt contains request/failure receipts only; no URL, HTTP response or assessment."
+    ],
+    "later_code_change": "After this actual refusal, CLI handling was amended to return exit 2 for an incomplete future assessment; the refusal path was unchanged. The final 12-test suite passed after that amendment."
+  },
+  "files_sha256": {
+    "PROTOCOL.md": "46f60449efec769e87005568cbea45a8c10b7b1b802be58281b0dc6841a38888",
+    "input-lock.json": "0b223e0d99316c63db6e1f5b08e989249802f20d2d3a5af951c0236c14fa8bc3",
+    "evaluate.py": "c91b9794797d04cb476270e5eb09ea3acf001d12d70541480bfac47613027641",
+    "test_evaluate.py": "d178f504856e6d9c35e1b1087b916784d596d4362d53ba69a1b479669688329b",
+    "README.md": "8ad8617a6b39ee492bb39e27b01d310dd2a029213e1dc3dc2bdd4c711a816227",
+    "test-run.log": "2d6f6a6ed2f5cdce2f0a7ed5d8661685db7e79895fe55ddffa3d2402496d3891",
+    "test-run-final.log": "f853ea4be96cb690b84b6dff706507c5f84ac5303a177783c166b3e15dd9b4db",
+    "test-run-final-002.log": "7aaa35fb7ff4086da7dd1f5b3e8673be8d978b19e11f0ce46c4174e04a2f06eb",
+    "early-refusal-run.log": "143c1f33375ba41d8addef63325eeb19c5628b171e7de521c3d188c320ca7bd0",
+    "early-refusal-001/request.json": "fb8fdfc4dd3c6849cdf024c17b7643ed9ec812645b4ccbf5412bc58c5b03496d",
+    "early-refusal-001/failure.json": "45fc7bf7da7f7993bfa18cb527586da5a7c24235e9ea1266e314057d88b25eb6"
+  },
+  "scope": "Fixture tests only. Future reference not fetched, no forecasting accuracy measured, no model fitting or selection."
+}

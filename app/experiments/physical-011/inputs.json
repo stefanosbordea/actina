@@ -1,0 +1,13 @@
+{
+  "app/model/scheduler.py": "91cebe2a09031b88a843b9cf0b52a5afb13e025ec099a3174a7d885de3701048",
+  "app/experiments/f1-008/result/features.csv": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12",
+  "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+  "app/experiments/reference-training-001/result/joined-reference.csv": "23d2fa0170de78d701cd247a43aa30a460368c53afb25ddc9ec11cd71a1504c6",
+  "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+  "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+  "app/experiments/research-2026-10-04/physical-decision-study.md": "f464c4471099f4c6c0355de52f2b5e7fd8305a58434bcc912f3dd8586e2ef228",
+  "app/experiments/physical-011/PROTOCOL.md": "44685544f59fc4fe2c73364aaf1979f5473fd4c6f51bf9f7c959ee307ac25820",
+  "app/experiments/physical-011/optimizer.py": "4931d0c86dcd296b0c43e88a8418766b8ba1491677ba89beb7e7301bdb0a78db",
+  "app/experiments/physical-011/run.py": "83058b9bb7e5e8bb94a62d49870d49026ce3139f80f16bed6195b7329595067a",
+  "app/experiments/physical-011/test_optimizer.py": "0ed590c621a696a80e57cc5ecc2772eaabbda54ecd22907f43c17cdb08c3fe67"
+}

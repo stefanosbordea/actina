@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "status": "RADIATION_ONLY_READY_WITH_RETAINED_TWO_VARIABLE_FAILURE",
+  "receipt_written_at_utc": "2026-10-04T09:58:13.239810+00:00",
+  "data_requests": 1,
+  "fits": 0,
+  "scores": 0,
+  "attempts": [
+    {
+      "command": "python3 -B app/experiments/nwp-alternative-001/fetch.py --output app/experiments/nwp-alternative-001/result",
+      "exit_status": 1,
+      "wall_seconds": 2.834196167,
+      "reason": "Eight finite cloud percentages outside0..100; rawHTTP200 response retained."
+    },
+    {
+      "command": "python3 -B app/experiments/nwp-alternative-001/diagnose.py",
+      "exit_status": 0,
+      "wall_seconds": 0.268793875
+    },
+    {
+      "command": "python3 -B app/experiments/nwp-alternative-001/radiation_only.py",
+      "exit_status": 0,
+      "wall_seconds": 0.044053125
+    }
+  ],
+  "original_files_unchanged": true,
+  "artifact_sha256": {
+    "PROTOCOL.md": "6f3b720391b0c3fcad427ba97748d6a419c5522127d689aae1cdbb6191a6373f",
+    "inputs.json": "69c53d8154f9232b6905cf1c317e82d61895f4bd0e7524be72f7f062fd267fb8",
+    "fetch.py": "7a7d33f486d3b7b50aa1dca52c1be82700ff06c08852770280d73f814916767d",
+    "run.log": "e402aaa812648153e1f76e9d674dbf4cf859c6bc356fbb694fec6387e45b5461",
+    "result/request.json": "a860421ce683916839355b9172a9c154c6e2a56fd108294a4855bacfca6c1926",
+    "result/response.json": "e41f4d3fbc498d4fb6e6be7706af3090904124291c2528cf55d2e9c9a4f14d19",
+    "result/response-metadata.json": "44c4a594f9d20257ed8999f5d2dfcf026806cafadd54ac6a588aade90d00698f",
+    "result/failure.json": "f046eea0594039fc0401e1bc7f1b0a490c253e113a7990c53bce6bdf36d22978",
+    "result/integrity.json": "42bb039d9207c665d5b5b91e3e1074b6b1324be2424356f5f1e6278ffdc0d261",
+    "diagnose.py": "0fd5a58fc0cc05bad1fb874158410cd8e4e3ecd28c6c0f2c39b43582217da9ed",
+    "diagnose.log": "06af8094c2a56bcded610df51ccf9c6a88e529da96d4203524f58118a648b062",
+    "result/diagnostic.json": "4d132aab10bb727fec79b8e1e99bc4ab6a1bf373f8d66042e20bea900bb8b958",
+    "result/diagnostic-join.csv": "6a201331af1ef8d8220251397cad86b1eccde0bf6b337f55c051442fd8039644",
+    "result/quality-flags.csv": "e5e816554f13a6ed8015e248d1ad7c0872b24a6d61871bdb4b330a2e7172801c",
+    "RADIATION-ONLY.md": "3319c52cc2b966e219a405bb6276ff6e2b1ba6dc24a82e7c7d0efdca14785bec",
+    "radiation_only.py": "f83f896dff507616d9032df2258334028425ed89043c76d4ef1069053eb822a7",
+    "radiation-only.log": "1312b10097e6e5923d639b9f1bbe7b694cbf892c6aecc53a161d8a346b20ef7e",
+    "result/radiation-only.csv": "8ecdaee979277ad2a417311a7cbf4e5a93da2ca33724931873224c7c3d519359",
+    "result/radiation-only-receipt.json": "1312b10097e6e5923d639b9f1bbe7b694cbf892c6aecc53a161d8a346b20ef7e"
+  }
+}

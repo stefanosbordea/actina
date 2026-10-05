@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/f1-013/review/core-check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "exit_code": 1,
+  "elapsed_seconds": 10.282918125000037,
+  "completed_at_utc": "2026-10-04T11:39:36.532540+00:00",
+  "log": "app/experiments/f1-013/review/core-check-001.log",
+  "log_sha256": "24d95e4a741de1e48ddb99c38fc016f50e8640a060c7b196dd7de22dd103dcf5"
+}

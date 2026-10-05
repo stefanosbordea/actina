@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "purpose": "Validation-only supplied v2 event threshold tuning",
+  "model_id": "Stefanos nwp-features model v2",
+  "sources": {
+    "files": {
+      "app/handoff/v2-calibration-2026-10-04/threshold.py": "f3191bfbee54fc903c7650140b9fde8670de5b512ddff39b9b06e62e0b95c42c",
+      "app/handoff/v2-calibration-2026-10-04/test_threshold.py": "0ea74657173afc4c7f29b7266be0ad2c7082eb028bd7253fbf4d816cdeecf7f2",
+      "app/tools/benchmark_predictions.py": "2c9a0069582233d9fa8b1a9ea800bc0ad02b5839a041aca6ff76faeef0bf0bfd",
+      "app/tools/compare_prediction_versions.py": "68e2d4114c8cb542deb4521d382416090ccbee582dc56f94b5768db653351139",
+      "app/handoff/v2-validation-2026-10-04/inputs/cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+      "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+      "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+      "app/experiments/f1-008/result/validation-selection.json": "2e09ea387909cf3c26b145e61089b6142351cda4c1a8ffa7a0f01ff021525c6c"
+    },
+    "protocol_sha256": "ff14d45b77c71b63c3f1c64979b570c268bee6b2d34cd8a30c8dc787f3a4c3b9"
+  },
+  "incoming": {
+    "path": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/handoff/v2-validation-2026-10-04/inputs/cv_predictions_v2.csv",
+    "sha256": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "bytes": 190454,
+    "timestamp_basis": "feature",
+    "rows": 3566,
+    "forecast_column": true,
+    "target_start": "2025-12-05 19:00:00",
+    "target_end": "2026-05-03 08:00:00"
+  },
+  "command": [
+    "app/handoff/v2-calibration-2026-10-04/threshold.py"
+  ],
+  "started_at_utc": "2026-10-04T12:44:51.759098+00:00",
+  "completed_at_utc": "2026-10-04T12:44:51.897759+00:00",
+  "truth_rule": "actual > 600 W/m\u00b2",
+  "prediction_rule": "predicted > selected threshold W/m\u00b2",
+  "grid": {
+    "start": 500,
+    "stop": 650,
+    "step": 1,
+    "candidates": 151
+  },
+  "tie_rule": "Highest exact F1, then closest to 600, then higher threshold",
+  "validation_hours": 3566,
+  "target_start": "2025-12-05 19:00:00",
+  "target_end": "2026-05-03 08:00:00",
+  "selected": {
+    "threshold_w_m2": 562,
+    "tp": 287,
+    "fp": 51,
+    "fn": 19,
+    "tn": 3209,
+    "precision": 0.849112426035503,
+    "recall": 0.9379084967320261,
+    "f1": 0.8913043478260869,
+    "f1_exact": "41/46",
+    "mae_w_m2_unchanged": 18.697342718608887
+  },
+  "original_threshold": {
+    "threshold_w_m2": 600,
+    "tp": 262,
+    "fp": 25,
+    "fn": 44,
+    "tn": 3235,
+    "precision": 0.9128919860627178,
+    "recall": 0.8562091503267973,
+    "f1": 0.8836424957841484,
+    "f1_exact": "524/593",
+    "mae_w_m2_unchanged": 18.697342718608887
+  },
+  "frozen_classifier": {
+    "model_id": "f1-008/consensus_two_source",
+    "tp": 271,
+    "fp": 21,
+    "fn": 35,
+    "tn": 3239,
+    "precision": 0.928082191780822,
+    "recall": 0.8856209150326797,
+    "f1": 0.9063545150501672,
+    "f1_exact": "271/299"
+  },
+  "comparison_with_008": {
+    "v2_minus_classifier_f1": -0.015050167224080268,
+    "v2_minus_classifier_f1_exact": "-9/598"
+  },
+  "demo_status": "Unchanged. This calibration does not select or modify the team demo.",
+  "regression_unchanged": {
+    "mae_w_m2": 18.697342718608887,
+    "rmse_w_m2": 44.7696775531062,
+    "bias_w_m2": -2.396097223632857
+  },
+  "limits": [
+    "No model training or test-file reading occurred.",
+    "This selects an event threshold on reused validation, not a fresh holdout result.",
+    "The radiation curve is unchanged. Event tuning does not improve its MAE.",
+    "ActinaBench format v2 is separate from Stefanos model v2."
+  ],
+  "validation_table_sha256": "72d0c7a26a6a0454a81180aaae5ecf761e66ae8e28ae9f7faa63fb30ce4aba7e"
+}

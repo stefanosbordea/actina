@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "checker_sha256": "4083d7ce4ee61b3900486ca49daa877c3d8cabb180d0c8c02fb4091a7ae0274f",
+  "prior_independent_policy_oracle_sha256": "9fba28d749e18eb6a74d3a5a620e6b28309212478ba7724c2bfcf1c924c52153",
+  "report_sha256": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+  "inputs_and_outputs_unchanged": true,
+  "feature_rows": 17832,
+  "features": 27,
+  "purged_training_rows": 24916,
+  "prediction_rows": 14266,
+  "quantile_values": 727566,
+  "grid_pairs_checked": 242,
+  "event_metric_records": 774,
+  "distribution_metric_records": 30,
+  "saved_model_replays": [
+    {
+      "stage": "validation",
+      "arm": "weather",
+      "rows": 3566,
+      "model_sha256": "6a268b45349fdca68cef9536a09ee24b3b8fd2839973409b5acce4f1cecc62d4",
+      "coefficients_exact": true,
+      "all_frozen_decisions_identical": true,
+      "iterations": 200,
+      "optimizer_success": false
+    },
+    {
+      "stage": "validation",
+      "arm": "joint",
+      "rows": 3566,
+      "model_sha256": "a76bdba335ca7eafbb18c32bdc7e5e92ed36bf12c495e448ca603dd8c766b438",
+      "coefficients_exact": true,
+      "all_frozen_decisions_identical": true,
+      "iterations": 200,
+      "optimizer_success": false
+    },
+    {
+      "stage": "test",
+      "arm": "weather",
+      "rows": 3567,
+      "model_sha256": "7937d5cdc8e6cdc539987f73c42d4b72c2c8c1c31fb5d0a090f7b9e37a1dbb69",
+      "coefficients_exact": true,
+      "all_frozen_decisions_identical": true,
+      "iterations": 200,
+      "optimizer_success": false
+    },
+    {
+      "stage": "test",
+      "arm": "joint",
+      "rows": 3567,
+      "model_sha256": "1670039b800d702ffc91a86308bb4ff505b69d8b1dff5906d1ce60bfba5e6da7",
+      "coefficients_exact": true,
+      "all_frozen_decisions_identical": true,
+      "iterations": 200,
+      "optimizer_success": false
+    }
+  ],
+  "maximum_errors": {
+    "coefficients": 0.0,
+    "quantiles": 6.821210263296962e-13,
+    "probability": 1.0658141036401503e-14,
+    "zero_mass": 2.220446049250313e-16,
+    "median": 4.547473508864641e-13,
+    "mean": 4.547473508864641e-13,
+    "lower": 5.684341886080801e-13,
+    "upper": 6.821210263296962e-13,
+    "objective": 1.734723475976807e-18
+  },
+  "gradient_coordinates_checked": 1338,
+  "maximum_gradient_error": 8.071500499223783e-12,
+  "selected_arm": "joint",
+  "transitions": {
+    "validation-weather": {
+      "added": 0,
+      "removed": 0
+    },
+    "validation-joint": {
+      "added": 2,
+      "removed": 1
+    },
+    "test-weather": {
+      "added": 0,
+      "removed": 0
+    },
+    "test-joint": {
+      "added": 2,
+      "removed": 1
+    }
+  },
+  "test_gate": {
+    "passes_frozen_gate": true,
+    "all_six_strictly_improved": true,
+    "comparisons": [
+      {
+        "basis": "weather_full",
+        "metric": "precision",
+        "candidate": 0.9851337958374629,
+        "control": 0.9851190476190477,
+        "status": "improved"
+      },
+      {
+        "basis": "weather_full",
+        "metric": "recall",
+        "candidate": 0.9841584158415841,
+        "control": 0.9831683168316832,
+        "status": "improved"
+      },
+      {
+        "basis": "weather_full",
+        "metric": "f1",
+        "candidate": 0.9846458642892522,
+        "control": 0.9841427155599604,
+        "status": "improved"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "precision",
+        "candidate": 0.9577039274924471,
+        "control": 0.9576612903225806,
+        "status": "improved"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "recall",
+        "candidate": 0.9753846153846154,
+        "control": 0.9743589743589743,
+        "status": "improved"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "f1",
+        "candidate": 0.9664634146341463,
+        "control": 0.9659379766141332,
+        "status": "improved"
+      }
+    ]
+  },
+  "comparison_008": {
+    "passes_frozen_gate": false,
+    "all_six_strictly_improved": false,
+    "comparisons": [
+      {
+        "basis": "weather_full",
+        "metric": "precision",
+        "candidate": 0.9851337958374629,
+        "control": 0.9841740850642928,
+        "status": "improved"
+      },
+      {
+        "basis": "weather_full",
+        "metric": "recall",
+        "candidate": 0.9841584158415841,
+        "control": 0.9851485148514851,
+        "status": "regressed"
+      },
+      {
+        "basis": "weather_full",
+        "metric": "f1",
+        "candidate": 0.9846458642892522,
+        "control": 0.9846610588817417,
+        "status": "regressed"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "precision",
+        "candidate": 0.9577039274924471,
+        "control": 0.9587939698492463,
+        "status": "regressed"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "recall",
+        "candidate": 0.9753846153846154,
+        "control": 0.9784615384615385,
+        "status": "regressed"
+      },
+      {
+        "basis": "satellite_common",
+        "metric": "f1",
+        "candidate": 0.9664634146341463,
+        "control": 0.9685279187817258,
+        "status": "regressed"
+      }
+    ]
+  },
+  "no_fitting_performed": true,
+  "limitations": [
+    "All four fits stopped at the fixed 200-iteration budget; no optimizer convergence claim.",
+    "Previously inspected retrospective references and decision thresholds; no fresh holdout or live publication proof.",
+    "Reuses pinned 008 features whose source joins and strict-past histories were independently audited previously.",
+    "Independent polynomial arithmetic allows 1e-8 W/m\u00b2 and inversion 1e-11 absolute; coefficients, memberships and every frozen/default event are exact."
+  ]
+}

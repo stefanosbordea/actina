@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "exact_raw_replays": 299,
+  "exact_archived_numeric_outcomes": 56160,
+  "changed_inputs": [
+    {
+      "period": "validation",
+      "day": "2026-05-02",
+      "method": "mapped_recency_robust",
+      "changed_hours": [
+        11,
+        12
+      ],
+      "maximum_production_difference_m3": 4.3076473191548193e-13
+    },
+    {
+      "period": "validation",
+      "day": "2026-05-02",
+      "method": "mapped_recency_pooled",
+      "changed_hours": [
+        11,
+        12
+      ],
+      "maximum_production_difference_m3": 4.3076473191548193e-13
+    }
+  ],
+  "checker_sha256": "9405067de2e8de448085aefc9af98598f39119f44f71b2eeb6372839de139ce3"
+}

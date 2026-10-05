@@ -1,0 +1,82 @@
+bootstrap 0 of 20000
+bootstrap 5000 of 20000
+bootstrap 10000 of 20000
+bootstrap 15000 of 20000
+{
+  "analogue_raw_minus_nwp_day2": {
+    "mae": {
+      "observed_difference": -1.8846369498177733,
+      "percentile_95_interval": [
+        -2.065437491275923,
+        -1.6932938856015785
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "rmse": {
+      "observed_difference": -0.6753349797318293,
+      "percentile_95_interval": [
+        -1.4793949180218338,
+        -0.10399416964350741
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "f1": {
+      "observed_difference": -0.00048744067140171765,
+      "percentile_95_interval": [
+        -0.002027738414206187,
+        0.0009867666279177456
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "precision": {
+      "observed_difference": -0.0009763320590873148,
+      "percentile_95_interval": [
+        -0.004056697362546774,
+        0.001975897662958803
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "recall": {
+      "observed_difference": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    }
+  },
+  "analogue_raw_minus_global_residual": {
+    "brier": {
+      "observed_difference": -0.0008915547466358288,
+      "percentile_95_interval": [
+        -0.0018521234226440157,
+        3.998243876443819e-05
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "interval_width_90": {
+      "observed_difference": -9.758887019904648,
+      "percentile_95_interval": [
+        -13.972564507002069,
+        -5.228079679595253
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    },
+    "interval_coverage_90": {
+      "observed_difference": 0.020185029436501245,
+      "percentile_95_interval": [
+        0.006711409395973145,
+        0.03398528594959693
+      ],
+      "defined_replicates": 20000,
+      "undefined_replicates": 0
+    }
+  }
+}

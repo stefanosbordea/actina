@@ -1,0 +1,91 @@
+{
+  "status": "METRICS_PASS_FREQUENCY_DIFFERENCE",
+  "checks": 466,
+  "rational_weighted_fixtures": 270,
+  "maximum_fixture_error": 0.0,
+  "expanded_calendar_draws": 20000,
+  "paired_comparisons": 8,
+  "maximum_point_or_interval_error": 2.750688565811288e-12,
+  "strict_all_axis_frequency_differences": [
+    {
+      "split": "validation",
+      "block_days": 1,
+      "method": "coherent",
+      "expanded_fraction": 0.0326,
+      "saved_fraction": 0.0328,
+      "difference": -0.00020000000000000573
+    },
+    {
+      "split": "validation",
+      "block_days": 1,
+      "method": "shuffled",
+      "expanded_fraction": 0.546,
+      "saved_fraction": 0.5468,
+      "difference": -0.0007999999999999119
+    },
+    {
+      "split": "validation",
+      "block_days": 7,
+      "method": "coherent",
+      "expanded_fraction": 0.0886,
+      "saved_fraction": 0.0888,
+      "difference": -0.00020000000000000573
+    },
+    {
+      "split": "validation",
+      "block_days": 7,
+      "method": "shuffled",
+      "expanded_fraction": 0.5204,
+      "saved_fraction": 0.5222,
+      "difference": -0.0018000000000000238
+    }
+  ],
+  "calendar_groups": [
+    {
+      "split": "validation",
+      "block_days": 1,
+      "draws": 5000,
+      "empty_draws": 0,
+      "primary_count_range": [
+        126,
+        149
+      ]
+    },
+    {
+      "split": "validation",
+      "block_days": 7,
+      "draws": 5000,
+      "empty_draws": 0,
+      "primary_count_range": [
+        117,
+        150
+      ]
+    },
+    {
+      "split": "test",
+      "block_days": 1,
+      "draws": 5000,
+      "empty_draws": 0,
+      "primary_count_range": [
+        135,
+        149
+      ]
+    },
+    {
+      "split": "test",
+      "block_days": 7,
+      "draws": 5000,
+      "empty_draws": 0,
+      "primary_count_range": [
+        133,
+        149
+      ]
+    }
+  ],
+  "immutable_files": 7,
+  "interpretation": "Marginal percentile intervals and strict-improvement frequencies are exploratory sensitivity results. Shared calendar resamples retain excluded dates before masking. They neither correct prior selection nor authenticate future availability or physical field benefits.",
+  "source_report_sha256": "9a10b984a0553c054b1a3375577b2c4d45a3a8412f12b7b75514d66148d65fed",
+  "code_sha256": "a196b9cf50c73cc08ec6de9ee8bdf96b5139caaeb7c644f480c936dc3a9112e8",
+  "completed_at_utc": "2026-10-04T10:50:06.287652+00:00",
+  "wall_seconds": 2.714887334004743
+}

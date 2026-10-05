@@ -1,0 +1,43 @@
+# Physical 014: exact event calls through a fixed water scheduler
+
+Prospective design fixed on 2026-10-04 before reading any 013 event outcomes or executing historical 014 schedules. Source hashes are frozen separately after analytical fixtures and review. The unchanged [design proposal](../research-2026-10-04/forecast-water-link.md) records alternatives and primary papers. This is an exploratory historical interface experiment, not a numerical-forecast calibration or field-savings claim.
+
+## Intervention and controls
+
+Consume `f1-013/result/{validation,test}/calls.npz` only after both are identified by its `planning-freeze.json`. Require exact methods `raw_nwp`, `recency_robust`, `recency_pooled`, `conditional_robust`, `conditional_pooled`, Boolean calls shaped (150 or 149, 5, 24), and identical target positions to physical 012. Conditional robust remains primary. Every arm is retained regardless of results.
+
+For each raw binary64 forecast f and corrected bit x, use `max(f, nextafter(float64(600), +infinity))` for a true bit and `min(f, float64(600))` otherwise. The positive boundary is exactly `0x1.2c00000000001p+9`, one `2^-43` W/m² step above 600. A consistent raw value stays unchanged. This is a nearest representable class-consistent interface. The open positive class has no attained real-valued nearest point, hence the explicit binary64 choice. No learned margin, probability, scenario reweighting, new irradiance predictor or calibration is introduced. Save numeric arrays and verify strict `>600` bits after round trip. Do not use the app display's `>=600` threshold.
+
+Pass each mapped 24-vector through the pinned 011 `pv` and point `solve` with no risk anchor. Copy all six physical 012 controls unchanged: tariff context, raw point, recency coherent, recency shuffled, conditional coherent and conditional shuffled. The two conditional controls are mandatory, neither is selected after outcomes. Tariff context is not a principal comparator. Reproduce all 299 raw-point controls before scoring, recording exact equality and maximum differences. A difference above the existing 1e-6 m³ audit tolerance fails the run. Score the original archived controls. When the mapped forecast equals raw bit for bit, copy its archived raw plan exactly and record that identity. Repeated projected inputs are not used to change or select policies.
+
+## Unchanged information, physics and numerics
+
+Keep all 150 validation and 149 test padded horizons, common issue D−1 00:00 fixed UTC+03, endpoints D00–D23, physical interval D−1 23:00 through D23:00 and leads 24–47 hours. Source pools stay at the original cutoffs 2025-12-04 and 2026-05-02. No within-period update. Check raw forecasts and target positions against the original 17,832 source endpoints and pinned 012 metadata. Historical publication availability remains unverified.
+
+Demand is 120 m³/h, production 0–500 m³/h, tank capacity 4,000 m³, reserve 800 m³ and initial/final stock 2,000 m³. Specific energy is 3.4 kWh/m³, so every plan supplies 2,880 m³ and uses 9,792 kWh of nominal desalination energy. Hourly flows are uniform. Keep `PV=min(1700,1.7*max(GHI,0))`, unlimited grid backup, no export credit and grid imports `max(3.4*q-PV,0)`. The tariff remains €101/MWh for endpoint hours 10–16, €183 for 17–22 and €130 otherwise. It is illustrative. No ramp, flushing, salinity, variable efficiency, maintenance or plant authorization is claimed.
+
+Import the exact 011 optimizer, SHA256 `4931d0c86dcd296b0c43e88a8418766b8ba1491677ba89beb7e7301bdb0a78db`. Preserve the €1e-5 action floor, primary and L1 caps, HiGHS dual-simplex method, one solver thread, fixed ordering and tie rules. Keep all solve statuses, objective caps and numerical residuals. Preserve exact rational water replay beside the existing 1e-6 m³ tolerance. Never clip or repair a plan, omit a failed horizon, or relabel a below-resolution difference as exact zero.
+
+## Freeze and scoring
+
+`inputs.json` pins this protocol, code, fixtures, proposal, 011 optimizer, 012 and 013 input manifests and their transitive source identities, planning freezes and consumed arrays. It also pins later scoring sources and archived masks and outcomes, whose bytes may be hashed before planning but whose values are opened only after the 014 planning freeze. No 013 outcome table is a runtime input. Refuse changed hashes or an existing output directory.
+
+Produce all ten methods on all 299 horizons before loading evaluation references or masks. Preserve 2,990 plans, including 1,196 candidate records, exact event bits, raw and mapped GHI, PV, production, stock, clocks and all water audits. Save a planning manifest before any scoring and verify it again after scoring. Analytical fixtures may run before freezing, historical schedules may not.
+
+Primary physical scoring retains exactly the 139 validation and 144 test complete original-period days with both references available. Weather-only sensitivity retains 148 complete days per period. Reconstruct and match the original 012 exclusion ledger. Keep partial and missing-reference plans and reasons. Independently recompute costs for every archived control and compare them with its saved daily ledger within 1e-9 in the corresponding units, recording exact equality and all discrepancies.
+
+Report all daily grid cost, grid energy, unused PV, peak import, water, stock and plant-energy values separately for weather and satellite. For every candidate versus each of the five non-tariff controls, report paired cost and grid differences, mean, fractional CVaR90, extrema, worse/equal/better counts and below-resolution flags. Distinguish CVaR of daily regret from the difference of cost CVaRs. Every mean/CVaR grid-cost/grid-energy combination across both references is one of the eight aggregate axes.
+
+The aggregate gate requires all eight axes no worse and at least one strict gain. The risk gate requires nonpositive CVaR90 daily cost regret under both references with at least one strict gain. An operational recommendation requires identical water service and both gates against every non-tariff control in both periods. Preserve raw-control-only gains and every stronger-control regression separately. No winner is selected from the four arms.
+
+The `below_resolution` diagnostic flags use 1e-5 euros for costs and 1e-5 kWh for grid energy. These are numerical reporting thresholds, not meter or plant resolution. Only the euro action floor belongs to the optimizer. Neither reporting flag changes a strict sign, gate or selected plan.
+
+Additionally report original-hour continuous MAE/RMSE and exact event counts/P/R/F1 for mapped forecasts, raw NWP, Stefanos's original forecast and persistence. Retain 3,566 validation and 3,567 test hours, and common masks of 3,419 and 3,517 hours. Weather-full, weather-common and satellite-common remain separate. Mapping bits must reproduce the saved 013 calls on every padded hour. Undefined observed metrics remain null, and are unassessable in any event admission comparison. These diagnostics are separate from physical gates. An event improvement cannot imply water benefit and a physical gate cannot erase an event regression.
+
+## Tests, execution and limitations
+
+Fixtures cover 600 and adjacent floats, additions/removals, exact no-change identity, nonfinite/negative/malformed input refusal, NPZ round trips, inherited water and fractional-tail behavior, analytical solar allocation, fixed-plan PV perturbation bounds, exact rational water residuals, gate distinctions, and source-hash refusal. Historical independent review must replay all joins, projected forecasts, decisions, masks, controls, water, energy and pairwise metrics without relying on the production mapping or aggregate helpers.
+
+Use installed Python, NumPy and SciPy. Serialize solves, at most two environment threads and one solver thread. Freeze a 30-minute process budget, save a nonzero incomplete receipt on any failure or timeout, and never score incomplete plans. Record command, timestamps, actual exit, wall and CPU time and platform-correct peak RSS. Execution requires explicit `--execute-historical`, the source lock and a fresh output path. No historical schedule is executed by import, a fixture or input freezing.
+
+An outcome is the effect of this specified binary-to-continuous interface on the illustrative model. It is not a unique implication of the event forecast. Previously inspected periods prevent fresh-holdout claims. Estimated radiation references, publication clocks and plant assumptions retain their existing limitations. This experiment does not automatically change the product, original model, deck or communications.

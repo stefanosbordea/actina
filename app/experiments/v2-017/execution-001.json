@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/v2-017/run.py",
+    "--out",
+    "result"
+  ],
+  "pid": 58130,
+  "started_at_utc": "2026-10-04T13:14:31.472115+00:00",
+  "lock_sha256": "612fa78a72adbb0f195ca7e00071fd03f2f8d81fc4cdef6c108b5bd750813da9",
+  "exit_code": 0,
+  "wall_seconds": 3.5197563749998153,
+  "completed_at_utc": "2026-10-04T13:14:34.989722+00:00",
+  "log_sha256": "1d2d97de5cd0c47fddf1674c058a715f00466847711b8d451f320f9476ff4bb5"
+}

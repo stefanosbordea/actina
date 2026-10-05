@@ -1,0 +1,21 @@
+{
+  "frozen_at_utc": "2026-10-04T10:37:51.450917+00:00",
+  "input_lock_sha256": "af4d294032736377ba050d5b4eae764dfb1376caa29f163ef5664564cf36fd9a",
+  "pinned_files": 11,
+  "preflight": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/physical-011/test_optimizer.py",
+    "exit_code": 0,
+    "tests": 8,
+    "log_sha256": "a6a6ce3d94c31d0b1f25d16890bb8e7d75f8b212864bd562a0e74c37c1ecd462"
+  },
+  "retained_first_failure": {
+    "directory": "attempts/preflight-001",
+    "exit_code": 1,
+    "tests": 6,
+    "failures": 2,
+    "causes": [
+      "Constant negative CVaR differed by one ULP with fractional float weights. Integer tenths now implement the same finite empirical definition.",
+      "Numerically negligible zeroPV correction replaced the baseline. Fixed1e-5EUR action floor now returns baseline exactly and records the optimum gap separately from the primary cap."
+    ]
+  }
+}

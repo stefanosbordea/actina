@@ -1,0 +1,95 @@
+{
+  "frozen_at_utc": "2026-10-04T09:04:11.643624+00:00",
+  "protocol_sha256": "6d0493b8ab22067b71bc0c5f64b6212c5a2c32d0fff9dcd5e3b59d65008553d3",
+  "inputs": {
+    "app/experiments/f1-004/result/predictions/validation-original.csv": {
+      "bytes": 322008,
+      "sha256": "b8c2ba3fe185dd851c55e01cde42ba285042a52d2074953eda3d8b0043cba50a"
+    },
+    "app/experiments/f1-004/result/predictions/validation-persistence.csv": {
+      "bytes": 273883,
+      "sha256": "66fbc1e65de029a13c6bd963481e6696d78ab2ef17ba78786dfda9e4e3d938a0"
+    },
+    "app/experiments/f1-004/result/predictions/validation-nwp_day2.csv": {
+      "bytes": 273946,
+      "sha256": "64ce602a2450587977c3ab1896b48c078a1d0b5eadd0a386d6717e681dab8f89"
+    },
+    "app/experiments/f1-004/result/predictions/validation-median_bias.csv": {
+      "bytes": 273946,
+      "sha256": "64ce602a2450587977c3ab1896b48c078a1d0b5eadd0a386d6717e681dab8f89"
+    },
+    "app/experiments/f1-004/result/predictions/validation-ridge_bias.csv": {
+      "bytes": 308031,
+      "sha256": "4a1cc62c6030f936a4d8696f202a4691e75a1964cec4356fe833b92ceae4a5b4"
+    },
+    "app/experiments/f1-004/result/predictions/validation-global_residual.csv": {
+      "bytes": 353159,
+      "sha256": "48cf9549c9f71f90df70fb5e151437e5544bc2499cc3ce9a97e74e7a930c2537"
+    },
+    "app/experiments/f1-004/result/predictions/validation-analogue_raw.csv": {
+      "bytes": 318974,
+      "sha256": "19d4c1958b93015f5d489af770c556262e069444e7aab8a5d189691ab513ad32"
+    },
+    "app/experiments/f1-004/result/predictions/validation-analogue_solar.csv": {
+      "bytes": 362282,
+      "sha256": "889915c48303538554728e3a8c88b36474c6a39183526aa2421cd553a8b37438"
+    },
+    "app/experiments/f1-004/result/predictions/test-original.csv": {
+      "bytes": 327857,
+      "sha256": "9959e90df876a4af5ffaa19a2a82caa4fae4f5cff534574be60eb36ae81a22d0"
+    },
+    "app/experiments/f1-004/result/predictions/test-persistence.csv": {
+      "bytes": 280133,
+      "sha256": "58c2250f43492a8795feabb98e754617fca9eaa17e278005a88abf4d49acf0cf"
+    },
+    "app/experiments/f1-004/result/predictions/test-nwp_day2.csv": {
+      "bytes": 280194,
+      "sha256": "7d21f402d9bc0284cae861e6738350bff8bdf0f267eaec6b9ed60781d97292a2"
+    },
+    "app/experiments/f1-004/result/predictions/test-median_bias.csv": {
+      "bytes": 280194,
+      "sha256": "7d21f402d9bc0284cae861e6738350bff8bdf0f267eaec6b9ed60781d97292a2"
+    },
+    "app/experiments/f1-004/result/predictions/test-ridge_bias.csv": {
+      "bytes": 314894,
+      "sha256": "08e9884c0fa3b207615ec81b722e427bc643e6e62741e0341a7ce814243d9e6a"
+    },
+    "app/experiments/f1-004/result/predictions/test-global_residual.csv": {
+      "bytes": 342447,
+      "sha256": "22f0773e4c26139b184ad785e214a6b38d448e67f9447d747a5e329a9a776b4c"
+    },
+    "app/experiments/f1-004/result/predictions/test-analogue_raw.csv": {
+      "bytes": 318438,
+      "sha256": "44c9ea427d96c418ddf3d6f7b5066a6cb1c63b8ed287dd2e23ca888f44d124db"
+    },
+    "app/experiments/f1-004/result/predictions/test-analogue_solar.csv": {
+      "bytes": 381600,
+      "sha256": "27d120176ac6b4c9cfbee09c6d812d4e1c2382c260676b36db3fd99e778433c6"
+    },
+    "app/experiments/f1-004/result/joined-inputs.csv": {
+      "bytes": 2370237,
+      "sha256": "31522da1c79e6c8283900d62cb2b07ef934bce65515a577c414fc8e0c263a1b7"
+    },
+    "app/experiments/f1-004/PROTOCOL.md": {
+      "bytes": 9115,
+      "sha256": "cebe09579d33da67a648c9516047f173bd2a65d046f5162888a45b2b1215ab60"
+    },
+    "app/experiments/satellite-reference-001/result/response.json": {
+      "bytes": 286536,
+      "sha256": "207b57c01a0a5cb6b8b71307b905e116d25c5f9ca845940898ae6628f516666c"
+    },
+    "app/experiments/satellite-reference-001/result/protocol.json": {
+      "bytes": 1491,
+      "sha256": "d129d798e03847a6feae43135ccee84eb605a88953da50e05aa3f9e87e25e1ab"
+    },
+    "eval/cv_predictions.csv": {
+      "bytes": 173382,
+      "sha256": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69"
+    },
+    "eval/test_predictions.csv": {
+      "bytes": 173882,
+      "sha256": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+    }
+  },
+  "scoring_started": false
+}

@@ -1,0 +1,9 @@
+{
+  "purpose": "Original successful analysis evidence preserved before relative-runpy path repair. No statistical change.",
+  "sha256": {
+    "uncertainty.py": "473f2cc74dcab76b0a7546e7454a097e7603c7e8e26695ab69c184882bc08167",
+    "uncertainty-result.json": "e6a3c64ca469b67f3c57b1516ed1e6c8578c454a04091ca9670ea81b6edb74fe",
+    "uncertainty-receipt.json": "2c06076ab4163bef32b3d75780e74e02cd50ec90a67d055ea2e6a389e4f75ce9",
+    "uncertainty.log": "f98084520dc880177baf9997732cee273f125d070cc6e0124853aeffe0624732"
+  }
+}

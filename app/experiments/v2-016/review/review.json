@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "source_sha256": "a195ed8faeb0aa319289224d1b0673d86ea405dbfc5fb97787956615b1332bc5",
+  "lock_sha256": "979a3ad8381496671a77c140168a62bbab86d967fa85c91481c2f469dac163dd",
+  "original_run_exit_code": 0,
+  "validation_rows": 3566,
+  "base_oof_rows": 12499,
+  "base_models_replayed": 7,
+  "correction_models_replayed": 2,
+  "threshold_rows_checked": 362,
+  "base_folds": [
+    {
+      "fold": 1,
+      "train_rows": 3921,
+      "held_rows": 2208,
+      "trees": 121
+    },
+    {
+      "fold": 2,
+      "train_rows": 6129,
+      "held_rows": 2208,
+      "trees": 187
+    },
+    {
+      "fold": 3,
+      "train_rows": 8337,
+      "held_rows": 2160,
+      "trees": 142
+    },
+    {
+      "fold": 4,
+      "train_rows": 10497,
+      "held_rows": 2184,
+      "trees": 137
+    },
+    {
+      "fold": 5,
+      "train_rows": 12681,
+      "held_rows": 2208,
+      "trees": 145
+    },
+    {
+      "fold": 6,
+      "train_rows": 14889,
+      "held_rows": 1531,
+      "trees": 153
+    }
+  ],
+  "maximum_replay_errors": {
+    "fold1": 0.0,
+    "fold2": 0.0,
+    "fold3": 0.0,
+    "fold4": 0.0,
+    "fold5": 0.0,
+    "fold6": 0.0,
+    "final_base": 0.0,
+    "logistic": 3.3306690738754696e-16,
+    "boosted": 0.0
+  },
+  "thresholds": {
+    "logistic": 0.425,
+    "boosted": 0.385
+  },
+  "metrics": {
+    "base_refit": {
+      "tp": 262,
+      "fp": 25,
+      "fn": 44,
+      "tn": 3235,
+      "precision": 0.9128919860627178,
+      "recall": 0.8562091503267973,
+      "f1": 0.8836424957841484,
+      "f1_exact": "524/593"
+    },
+    "supplied_v2_600": {
+      "tp": 262,
+      "fp": 25,
+      "fn": 44,
+      "tn": 3235,
+      "precision": 0.9128919860627178,
+      "recall": 0.8562091503267973,
+      "f1": 0.8836424957841484,
+      "f1_exact": "524/593"
+    },
+    "supplied_v2_562": {
+      "tp": 287,
+      "fp": 51,
+      "fn": 19,
+      "tn": 3209,
+      "precision": 0.849112426035503,
+      "recall": 0.9379084967320261,
+      "f1": 0.8913043478260869,
+      "f1_exact": "41/46"
+    },
+    "supplied_raw_day1": {
+      "tp": 253,
+      "fp": 34,
+      "fn": 53,
+      "tn": 3226,
+      "precision": 0.8815331010452961,
+      "recall": 0.826797385620915,
+      "f1": 0.8532883642495784,
+      "f1_exact": "506/593"
+    },
+    "retained_raw_day2": {
+      "tp": 268,
+      "fp": 21,
+      "fn": 38,
+      "tn": 3239,
+      "precision": 0.9273356401384083,
+      "recall": 0.8758169934640523,
+      "f1": 0.9008403361344538,
+      "f1_exact": "536/595"
+    },
+    "persistence": {
+      "tp": 244,
+      "fp": 62,
+      "fn": 62,
+      "tn": 3198,
+      "precision": 0.7973856209150327,
+      "recall": 0.7973856209150327,
+      "f1": 0.7973856209150327,
+      "f1_exact": "122/153"
+    },
+    "fixed008": {
+      "tp": 271,
+      "fp": 21,
+      "fn": 35,
+      "tn": 3239,
+      "precision": 0.928082191780822,
+      "recall": 0.8856209150326797,
+      "f1": 0.9063545150501672,
+      "f1_exact": "271/299"
+    },
+    "logistic": {
+      "tp": 268,
+      "fp": 26,
+      "fn": 38,
+      "tn": 3234,
+      "precision": 0.9115646258503401,
+      "recall": 0.8758169934640523,
+      "f1": 0.8933333333333333,
+      "f1_exact": "67/75"
+    },
+    "boosted": {
+      "tp": 270,
+      "fp": 33,
+      "fn": 36,
+      "tn": 3227,
+      "precision": 0.8910891089108911,
+      "recall": 0.8823529411764706,
+      "f1": 0.8866995073891626,
+      "f1_exact": "180/203"
+    }
+  },
+  "comparisons": {
+    "logistic": {
+      "base_refit": {
+        "f1_difference": 0.009690837549184872,
+        "false_positive_difference": 1,
+        "true_positive_difference": 6,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_600": {
+        "f1_difference": 0.009690837549184872,
+        "false_positive_difference": 1,
+        "true_positive_difference": 6,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_562": {
+        "f1_difference": 0.0020289855072463947,
+        "false_positive_difference": -25,
+        "true_positive_difference": -19,
+        "higher_f1_without_more_false_positives": true
+      },
+      "fixed008": {
+        "f1_difference": -0.013021181716833863,
+        "false_positive_difference": 5,
+        "true_positive_difference": -3,
+        "higher_f1_without_more_false_positives": false
+      }
+    },
+    "boosted": {
+      "base_refit": {
+        "f1_difference": 0.0030570116050141483,
+        "false_positive_difference": 8,
+        "true_positive_difference": 8,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_600": {
+        "f1_difference": 0.0030570116050141483,
+        "false_positive_difference": 8,
+        "true_positive_difference": 8,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_562": {
+        "f1_difference": -0.004604840436924329,
+        "false_positive_difference": -18,
+        "true_positive_difference": -17,
+        "higher_f1_without_more_false_positives": false
+      },
+      "fixed008": {
+        "f1_difference": -0.019655007661004587,
+        "false_positive_difference": 12,
+        "true_positive_difference": -1,
+        "higher_f1_without_more_false_positives": false
+      }
+    }
+  },
+  "paired_f1_intervals": {
+    "logistic_minus_base_refit": [
+      -0.0025545845448128545,
+      0.025024555302984315
+    ],
+    "logistic_minus_supplied_v2_600": [
+      -0.0025545845448128545,
+      0.025024555302984315
+    ],
+    "logistic_minus_supplied_v2_562": [
+      -0.019094122057228498,
+      0.02488981915115624
+    ],
+    "logistic_minus_fixed008": [
+      -0.04076732031277691,
+      0.01648445613330654
+    ],
+    "boosted_minus_base_refit": [
+      -0.010764588631502122,
+      0.01835902730072057
+    ],
+    "boosted_minus_supplied_v2_600": [
+      -0.010764588631502122,
+      0.01835902730072057
+    ],
+    "boosted_minus_supplied_v2_562": [
+      -0.026149045991535946,
+      0.017323662636061703
+    ],
+    "boosted_minus_fixed008": [
+      -0.04701940392853585,
+      0.009121480841015842
+    ]
+  },
+  "source_and_output_hashes_verified": true,
+  "fits_executed": 0,
+  "test_files_read": false,
+  "limits": [
+    "Intermediate forward head models were not saved, so their scores were checked against retained memberships and threshold ledgers rather than replayed.",
+    "The final base and both final heads were independently replayed from saved parameters.",
+    "All intervals include zero. They do not correct repeated validation use or establish a meaningful improvement."
+  ]
+}

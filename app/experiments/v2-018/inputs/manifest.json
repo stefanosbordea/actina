@@ -1,0 +1,20 @@
+{
+  "source_sha256": {
+    "app/experiments/v2-017/inputs/train.csv": "b6a53e8cf4bdcd21d123329040356fab109eaf8c362512b21ebdb0f8911f167e",
+    "app/experiments/v2-017/inputs/validation.csv": "05f4420d1e476d0e7d697320b772f42ca6833cab8fa6b01477a0d29c88388c65",
+    "app/experiments/v2-016/result/base-oof.csv": "63963f3d270fd3566227356f1292dedf38952a56e9517b9ce781e6a351098369",
+    "app/experiments/nwp-archive-001/archive.json": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc"
+  },
+  "upstream_commit": "85097a560769ad8a1459ce55f0b3a4c301202405",
+  "upstream_weather_sha256": "fddc4a130f6c4a701521cacd6c60b4603785c335278e339a67060eff7ef14cf2",
+  "upstream_weather_file": "data/paphos_weather_datav2.csv",
+  "files": {
+    "history-predictions.csv": "f90e1afdd8f2d107c2bab0771aafb6f451d8780f0ff344969f67e9653fc6d8cd",
+    "observations-training.csv": "04a4dc429c3dce92b5b961a1edacfdf3391a54a3ae31447b35eae9025de32996",
+    "observations-validation-stream.csv": "be98587f557fbedde738e614b0bd2b1e0143b4894a431eb7fbb35d5444e8ae21"
+  },
+  "earliest_observation": "2024-09-01 00:00:00",
+  "validation_observation_stream_start": "2025-12-03 18:00:00",
+  "observation_end_exclusive": "2026-05-02 08:00:00",
+  "scope": "Only observations before the final validation decision origin are retained. No test-period observations or metrics. Source v2 forecast origin is retained for every available prediction."
+}

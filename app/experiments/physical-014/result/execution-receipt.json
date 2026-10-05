@@ -1,0 +1,31 @@
+{
+  "started_at_utc": "2026-10-04T11:57:24.716512+00:00",
+  "command": [
+    "app/experiments/physical-014/run.py",
+    "--execute-historical",
+    "--out",
+    "app/experiments/physical-014/result"
+  ],
+  "status": "COMPLETE",
+  "outcome_scoring_started": true,
+  "total_runtime_budget_seconds": 1800,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "input_lock_sha256": "f206f24740bd76b02c7803f28f0e657ee2494bfdb8b53433ba22cf391052f6f5",
+  "protocol_sha256": "1cd6eab547127056b7af0e97d30d45e004d499f3cc36b4ae7abcc82e8d718bfe",
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-04T11:57:28.693774+00:00",
+  "elapsed_seconds": 3.9773520830001416,
+  "cpu_seconds": 3.896624,
+  "peak_rss_bytes": 160350208,
+  "peak_rss_convention": "macOS bytes, Linux KiB converted to bytes"
+}

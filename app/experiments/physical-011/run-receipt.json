@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T10:42:15.862094+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/physical-011/run.py > app/experiments/physical-011/run-001.log 2>&1",
+  "actual_exit_code": 0,
+  "initial_tool_chunk": "880fc7",
+  "completion_tool_chunk": "c5a1e2",
+  "wall_seconds": 190.45413479200215,
+  "process_cpu_seconds": 131.674397,
+  "peak_rss_bytes": 177537024,
+  "peak_rss_interpretation": "Darwin resource.getrusage ru_maxrss is bytes. This is process memory, not whole-machine memory.",
+  "solver_threads": 1,
+  "all_plans_before_outcome_masks": true,
+  "horizons": 299,
+  "schedules": 1196,
+  "preflight_passed": 8,
+  "primary_ref_days": {
+    "validation": 139,
+    "test": 144
+  },
+  "frozen_input_files_unchanged": 11,
+  "frozen_output_files_unchanged": 19,
+  "evidence_sha256": {
+    "PROTOCOL.md": "44685544f59fc4fe2c73364aaf1979f5473fd4c6f51bf9f7c959ee307ac25820",
+    "optimizer.py": "4931d0c86dcd296b0c43e88a8418766b8ba1491677ba89beb7e7301bdb0a78db",
+    "run.py": "83058b9bb7e5e8bb94a62d49870d49026ce3139f80f16bed6195b7329595067a",
+    "test_optimizer.py": "0ed590c621a696a80e57cc5ecc2772eaabbda54ecd22907f43c17cdb08c3fe67",
+    "inputs.json": "af4d294032736377ba050d5b4eae764dfb1376caa29f163ef5664564cf36fd9a",
+    "freeze-receipt.json": "075b6f0e055e79ae854e117096e5dee43f370a8f7a48c9f52ca820d102e1b73b",
+    "preflight-003.log": "a6a6ce3d94c31d0b1f25d16890bb8e7d75f8b212864bd562a0e74c37c1ecd462",
+    "run-001.log": "71cbb94cb4bccd2c7f1e939452cb88bf9abfe31204994b719e4d35455a7e110e",
+    "result/planning-freeze.json": "0dcfe26e4ef8c4c364419c90246ba864c69516d63134206d33b95ebd0f59bcb8",
+    "result/report.json": "6dde63e84db9fae787a416d9bd54ee1c5f43489ffc61cf219b66c16fd2021adf",
+    "result/outputs.json": "0e36323b1c64f5d6f9874eaf5f680627ea7ace7aa0c479fc9ed682a0a3597e6c"
+  },
+  "conclusion": "Neither candidate passes validation daily-regret CVaR gate. Coherent also fails validation satellite grid-energy tail. Shuffled passes the separate eight-axis gate but is not a no-regret winner. No replacement or novelty claim.",
+  "independent_review": "Pending"
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "app/experiments/v2-017/run.py",
+    "--out",
+    "result"
+  ],
+  "started_at_utc": "2026-10-04T13:14:33.647948+00:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1"
+  },
+  "thread_cap": 2,
+  "lock_sha256": "612fa78a72adbb0f195ca7e00071fd03f2f8d81fc4cdef6c108b5bd750813da9"
+}

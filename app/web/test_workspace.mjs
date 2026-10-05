@@ -14,7 +14,7 @@ function test(name,body){
 }
 const read=name=>fs.readFileSync(new URL(`public/${name}`,import.meta.url),'utf8');
 const fixture=JSON.parse(read('data.json'));
-async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#reviews'){
+async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#reviews',reviewer='QA reviewer'){
  const dom=new JSDOM(read('index.html'),{url:'http://localhost:8788'+initialHash,runScripts:'outside-only'}),w=dom.window,downloads=[];
  Object.defineProperty(w,'crypto',{value:cryptoProvider});w.Blob=Blob;w.structuredClone=structuredClone;
  w.URL.createObjectURL=blob=>{downloads.push(blob);return 'blob:test';};w.URL.revokeObjectURL=()=>{};
@@ -30,6 +30,8 @@ async function boot(saved={},override={},cryptoProvider=webcrypto,initialHash='#
  async function importCSV(text,name='test.csv'){Object.defineProperty($('handoff-file'),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $('handoff-file').onchange();}
  async function importPlan(text,name='plan.csv'){Object.defineProperty($('schedule-file'),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $('schedule-file').onchange();}
  async function importRevision(id,text,name){if(id==='revision-solar-file'){$('revision-solar').open=true;$('revision-solar-profile').open=true;}else if(id==='revision-case-file'){$('revision-inputs').open=true;$('revision-open-case').open=true;}else if(id==='revision-proposal-file')$('revision-inputs').open=true;Object.defineProperty($(id),'files',{value:[{name,size:Buffer.byteLength(text),arrayBuffer:async()=>new TextEncoder().encode(text).buffer}],configurable:true});await $(id).onchange();}
+ // Review fixtures supply their own identity. Production fields start blank.
+ for(const id of ['reviewer','revision-reviewer','sequence-reviewer']){assert.equal($(id).value,'');assert.equal($(id).placeholder,'Reviewer name');$(id).value=reviewer;}
  return {dom,w,$,click,change,route,downloads,importCSV,importPlan,importRevision,close:()=>{w.close();modules.clear();downloads.length=0;}};
 }
 const oneRow=()=>`time,predicted\n${fixture.days[0].times[0]},0\n`;
@@ -1126,7 +1128,7 @@ async function openExecution(a,value,name='measured-review.json'){
 test('measured review reopens its own frozen plan, exposes stock draw, exports exact sources and saves independent history',async()=>{
  const a=await boot();let b;try{
   a.route('reviews');const packet=executionPacket();await openExecution(a,packet);assert.match(a.$('execution-summary').textContent,/different.*water|different.*inventory/i);assert.match(a.$('execution-outcomes').textContent,/680/);assert.doesNotMatch(a.$('execution-outcomes').textContent,/999/);assert.match(a.$('review-case-title').textContent,/0?2 Jul 2026.*200 m³.*Frozen measured-run/);assert.match(a.$('review-boundary-values').textContent,/100/);assert.equal(a.$('review-note').value,'');assert.equal(a.$('decision').value,'Needs team review');assert.match(a.$('review-inventory-chart').textContent,/Frozen plan/);assert.doesNotMatch(a.$('review-inventory-chart').textContent,/Measured/);
-  a.$('review-note').value='Hold: lower energy accompanies lower produced water and tank stock.';a.$('decision').value='Hold for correction';a.$('download-current-review').click();const exported=JSON.parse(await a.downloads.at(-1).text());assert.equal(a.$('export-status').querySelector('a').download,'aquashift-review-2026-07-02-tank-200.json');assert.equal(exported.kind,'measured_run_review');assert.equal(exported.case_file.text,packet.case_file.text);assert.equal(exported.measurement_file.text,packet.measurement_file.text);assert.equal(exported.results.water_balance.residual_m3.lower,0);assert.equal(exported.results.differences.energy.lower,-136);assert.equal(exported.results.differences.final_storage.lower,-40);assert.equal(exported.note.decision,'Hold for correction');
+  a.$('review-note').value='Hold: lower energy accompanies lower produced water and tank stock.';a.$('decision').value='Hold for correction';a.$('download-current-review').click();const exported=JSON.parse(await a.downloads.at(-1).text());assert.equal(a.$('export-status').querySelector('a').download,'aktina-review-2026-07-02-tank-200.json');assert.equal(exported.kind,'measured_run_review');assert.equal(exported.case_file.text,packet.case_file.text);assert.equal(exported.measurement_file.text,packet.measurement_file.text);assert.equal(exported.results.water_balance.residual_m3.lower,0);assert.equal(exported.results.differences.energy.lower,-136);assert.equal(exported.results.differences.final_storage.lower,-40);assert.equal(exported.note.decision,'Hold for correction');
   a.$('review-form').dispatchEvent(new a.w.Event('submit',{bubbles:true,cancelable:true}));const saved=JSON.parse(a.w.localStorage.getItem('aquashift.review.v1')).at(-1);assert.equal(saved.date,'2026-07-02');assert.equal(saved.tankCapacityM3,200);assert.equal(saved.measuredRunReview.case_file.sha256,packet.case_file.sha256);assert.match(a.$('review-history').textContent,/Measured run/);
   b=await boot();b.route('reviews');await openExecution(b,exported);assert.match(b.$('review-case-title').textContent,/0?2 Jul 2026.*200 m³/);assert.match(b.$('execution-summary').textContent,/Recalculated/);assert.equal(b.$('review-note').value,'');assert.equal(b.$('decision').value,'Needs team review');assert.equal(b.$('execution-outcomes').textContent,a.$('execution-outcomes').textContent);
   b.change('date','2026-07-03');assert.equal(b.$('execution-result').hidden,true);assert.equal(b.$('review-note').value,'');assert.match(b.$('review-case-title').textContent,/0?3 Jul 2026.*4,000 m³.*Frozen reference/);
@@ -1731,5 +1733,23 @@ test('selecting a storage reference opens Current plan and preserves the importe
   assert.equal(a.w.document.body.dataset.view,'reviews');assert.equal(a.w.document.body.dataset.reviewTab,'current');assert.equal(a.$('review-current').hidden,false);assert.equal(a.$('review-revision').hidden,true);assert.equal(a.$('tank').value,'500');assert.equal(a.$('plan-source').value,'frozen');assert.equal(a.$('date').value,day.date);
   a.route('data');a.$('analysis-task-plan').click();a.$('inspect-candidate').click();
   assert.equal(a.w.document.body.dataset.view,'operations');assert.equal(a.$('plan-source').value,'imported');assert.equal(a.$('tank').value,'4000');assert.equal(a.$('date').value,day.date);
+ }finally{a.close();}
+});
+
+
+test('public workspace starts without individual credit or a preset reviewer',async()=>{
+ const a=await boot({}, {}, webcrypto, '#reviews', '');try{
+  const publicCopy=['index.html','analysis-layouts.mjs','workspace.js','plan-revision-ui.mjs','plan-sequence-ui.mjs','data/returned-water-example.json'].map(read).join('\n');
+  assert.doesNotMatch(publicCopy,/Loucas|Loukas|Stefanos|Andreas|Cleopas|Bordea|Nikolaides|Cleopa/i);
+  assert.doesNotMatch(publicCopy,/CODE-GUIDE|code walkthrough|code handoff/i);
+  assert.equal(a.w.document.querySelector('.home-forecast-link').textContent.trim(),'Explore forecasts');
+  assert.match(a.w.document.querySelector('.about').textContent,/historical and synthetic inputs/);
+  assert.match(a.w.document.querySelector('.about').textContent,/No plant is connected/);
+  a.route('reviews');a.$('review-note').value='Inspect the plan.';a.$('download-current-review').click();
+  assert.equal(a.downloads.length,0);assert.equal(a.w.document.activeElement.id,'reviewer');
+  a.$('reviewer').value='Independent reviewer';a.$('download-current-review').click();
+  assert.equal(JSON.parse(await a.downloads.at(-1).text()).reviewer,'Independent reviewer');
+  a.$('review-tab-revision').click();await a.$('revision-example').onclick();
+  assert.equal(a.$('revision-reviewer').value,'Example reviewer');assert.equal(a.$('revision-result').hidden,false);
  }finally{a.close();}
 });

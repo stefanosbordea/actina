@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "app/experiments/satellite-reference-001/fetch.py",
+    "--output",
+    "app/experiments/satellite-reference-001/result"
+  ],
+  "started_at_utc": "2026-10-04T09:01:58.039988+00:00",
+  "finished_at_utc": "2026-10-04T09:01:58.981971+00:00",
+  "exit_status": 0,
+  "log_sha256": "cb15213e6cca6da3296119f1ffaf019eeb3790e0980b854c6d3b4f8317f7d658"
+}

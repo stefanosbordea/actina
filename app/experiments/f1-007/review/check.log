@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": 726104,
+  "training_labels": 24916,
+  "prediction_rows": 64197,
+  "metric_rows": 126,
+  "threshold_rows": 10692,
+  "model_replays": 6,
+  "maximum_model_probability_error": 0.0,
+  "selected_families": {
+    "weather": "weather_larger",
+    "consensus": "consensus_larger"
+  },
+  "code_sha256": "be626e409b089ee5b7b7c5d731a4af6eb11533a7b3f9439f39b3e0870c2dd501",
+  "protocol_sha256": "f6950483c4bc3864c4a902d9b1e230681011c634d02bd7474c025cec4aa461fc",
+  "runner_sha256": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+  "report_sha256": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281",
+  "immutable_paths_verified": 66,
+  "scope": "Independent numerical reconstruction, cumulative threshold oracle, fixed UTC joins and stored-tree replay; no refit. Timestamp availability is not verified provider publication availability. Shared reference errors and inspected-test selection remain unresolved."
+}

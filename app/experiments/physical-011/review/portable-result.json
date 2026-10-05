@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "stages": {
+    "validation": {
+      "original_sha256": "458ba5fa4d4d042af0e34af1741c958591473530a34c96d9bf1886d7da070a75",
+      "portable_sha256": "f302fb9dc0af8edf5458677964e7157019e0edda40f9de868f525df0b6cc3d40",
+      "numeric_members_equal": [
+        "residuals",
+        "permutations",
+        "source_positions",
+        "weather",
+        "satellite",
+        "nwp"
+      ],
+      "reconstructed_timestamps": 1536,
+      "object_arrays_loaded": false
+    },
+    "test": {
+      "original_sha256": "db4729b31ac7d9444a011c991621d1afe8105a106dfc258db0ba70b68dc022f0",
+      "portable_sha256": "f4e8cfe122aa44bd062d0cdf45ea626825f193e7fc21d56ace3106ecad8ee618",
+      "numeric_members_equal": [
+        "residuals",
+        "permutations",
+        "source_positions",
+        "weather",
+        "satellite",
+        "nwp"
+      ],
+      "reconstructed_timestamps": 1536,
+      "object_arrays_loaded": false
+    }
+  },
+  "code_sha256": "f1a8e3d2daf2eff2a2031f294b9237f2bbcca98265bb454a76e37aef185a02a4",
+  "source_sha256": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+  "receipt_sha256": "0a6e3edbab8c3c0f9135cd5f59fb4b26cbc32962fd74ce690e9978522a783506",
+  "completed_at_utc": "2026-10-04T10:43:11.715276+00:00",
+  "wall_seconds": 0.06056529200577643,
+  "scope": "Every numerical member is unchanged. All3072 Unicode timestamps match independently indexed pinned CSV values. Original object values remain unread. No fitting, scoring or optimizer execution."
+}

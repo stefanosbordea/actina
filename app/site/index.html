@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d0e11">
+  <meta name="theme-color" content="#000000">
   <meta name="description" content="Explore Aktina’s solar forecasts, desalination schedules and water storage using historical Paphos weather.">
   <title>Aktina — Solar to water</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -15,15 +15,16 @@
 <body data-state="loading">
   <a class="skip" href="#day-review">Skip to the schedule</a>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 16 5l12 21M10 21h12M16 5v9"/></svg><span>Aktina</span></a>
-    <nav aria-label="Main"><a href="#about">About the model</a><a href="./benchmark.html">ActinaBench</a><a href="./workspace/#reviews">Review<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></nav>
+    <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 3h6L8 29H2L14 3Zm7 7 10 19h-7l-7-13 4-6ZM12 23h9l3 6H9l3-6Z"/></svg><span>Aktina</span></a>
+    <nav aria-label="Main"><a href="#about">About</a><a href="./forecast.html">Forecasts</a><a href="./benchmark.html">AktinaBench</a><a href="./workspace/#reviews">Review<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></nav>
   </header>
   <main>
     <section class="introduction" aria-labelledby="purpose">
-      <h1 id="purpose">Use more daylight.<br>Store water for later.</h1>
-      <div><p>Solar forecasts and desalination schedules, in one view. Explore when water is produced and how the tank supplies demand through the day.</p><p class="scope">Historical Paphos weather. Illustrative plant and prices.</p></div>
+      <div class="intro-copy"><h1 id="purpose">Solar now.<br>Water later.</h1><p>Plan water production around the sun.<br>Keep the water for when it’s needed.</p><a class="primary-link" href="#day-review">Explore the schedule<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 4h10v12H5zM8 8h4M8 11h4"/></svg></a></div>
+      <figure class="solar-system"><svg viewBox="0 0 580 270" role="img" aria-labelledby="system-title system-desc"><title id="system-title">From solar power to stored water</title><desc id="system-desc">Solar supply powers desalination. A water tank holds production for later demand.</desc><defs><pattern id="water-lines" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 4h8" stroke="currentColor" stroke-opacity=".3"/></pattern></defs><g class="solar-rays" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="94" cy="124" r="35"/><path d="M94 67V46m0 135v21M37 124H16m135 0h21M54 84 39 69m95 95 15 15M54 164l-15 15m95-95 15-15"/></g><path d="M151 124h105v102h81" fill="none" stroke="currentColor" stroke-width="2"/><rect x="211" y="99" width="90" height="51" rx="3" fill="var(--ground)" stroke="currentColor" stroke-width="1.5"/><path d="m230 129 12-20m0 27 12-20m0 27 12-20m0 27 12-20" stroke="currentColor" stroke-width="2"/><path d="M359 91h125v162H359z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M360 156h123v96H360z" fill="url(#water-lines)"/><path d="M359 156h125M337 226h22m125 0h63" stroke="currentColor" stroke-width="2"/><circle cx="546" cy="226" r="3" fill="currentColor"/></svg><figcaption><span>Solar supply</span><span>Desalination</span><span>Water storage</span></figcaption></figure>
     </section>
-    <section id="boot" class="boot" role="status" aria-live="polite"><span class="boot-mark" aria-hidden="true"></span><p>Opening the schedule</p></section>
+    <section class="product-intro" aria-label="Using Aktina"><p>Follow a day in Paphos.</p><div>Compare the forecast with historical weather, inspect the supplied production plan, then see its cost and remaining water.</div><span>Historical data. Illustrative plant.</span></section>
+    <section id="boot" class="boot" role="status" aria-live="polite"><img class="boot-mark" src="./mark.svg" alt="" width="44" height="44"><p>Opening the schedule</p></section>
     <section id="load-error" class="load-error" role="alert" hidden><h2>The schedule could not open.</h2><p id="error-message">The data file is missing. Restore data.js beside this page and reload.</p><button type="button" id="reload">Reload page</button></section>
     <section id="day-review" class="day-review" aria-labelledby="review-heading" hidden>
       <header class="review-header">
@@ -38,7 +39,7 @@
       </nav>
       <div class="instrument" aria-label="Linked hourly charts">
         <section class="chart-section" aria-labelledby="sun-title">
-          <div class="chart-heading"><div><h3 id="sun-title">Sun <span>W/m²</span></h3><div class="legend"><span class="actual">Actual</span><span class="forecast">LightGBM forecast</span></div></div><p id="sun-reading" class="chart-reading"></p></div>
+          <div class="chart-heading"><div><h3 id="sun-title">Sun <span>W/m²</span></h3><div class="legend"><span class="actual">Actual</span><span class="forecast">Forecast forecast</span></div></div><p id="sun-reading" class="chart-reading"></p></div>
           <div id="sun-chart" class="plot"></div>
           <p id="forecast-error" class="forecast-error"></p>
         </section>
@@ -51,7 +52,7 @@
           <div class="chart-heading"><div><h3 id="tank-title">Stored water <span>m³</span></h3><p class="chart-note">At the end of each hour</p></div><p id="tank-reading" class="chart-reading"></p></div>
           <div id="tank-chart" class="plot"></div>
         </section>
-        <div class="hour-control"><label for="hour">Inspect hour <output id="hour-label" for="hour">12:00–13:00</output></label><input id="hour" type="range" min="0" max="23" value="12" step="1" aria-label="Inspect hour across all charts"><span>Cyprus local time</span></div>
+        <div class="hour-control"><label for="hour">Inspect hour <output id="hour-label" for="hour">12:00–13:00</output></label><input id="hour" type="range" min="0" max="23" value="12" step="1" aria-label="Inspect hour across all charts"><span>Source time UTC+03</span></div>
       </div>
       <section class="accounting" aria-labelledby="cost-title">
         <div class="accounting-heading"><h3 id="cost-title">Daily modelled costs</h3><p id="surplus-summary"></p></div>
@@ -59,17 +60,17 @@
         <p id="comparison-note" class="comparison-note"></p>
         <dl class="water-accounting"><div><dt>Demand</dt><dd id="water-demand"></dd></div><div><dt>Production, flat / Aktina</dt><dd id="water-production"></dd></div><div><dt>Tank, start / end</dt><dd id="water-storage"></dd></div></dl>
       </section>
-      <details id="about" class="evidence"><summary>Model, assumptions and hourly data</summary>
+      <details id="about" class="evidence"><summary>Assumptions and hourly data</summary>
         <div class="evidence-content">
-          <section><h3>What this shows</h3><p>Forecast: a LightGBM model trained on two years of Paphos weather from Open-Meteo, predicting the day ahead. Plan: the supplied Aktina scheduler output. These are historical results, not a connection to a working plant.</p><p id="forecast-provenance"></p><p>Plant, demand, storage and electricity prices are illustrative assumptions. A radiation threshold labels the lower-price hours; it does not measure curtailed electricity.</p></section>
-          <section><h3>Cost and storage assumptions</h3><dl id="assumptions" class="assumptions"></dl><p>Hourly cost = production × 3.4 ÷ 1,000 × electricity price. Price is determined by actual radiation. Daily costs compare the supplied plans; production and ending water can differ. Tank levels are supplied end-of-hour values.</p></section>
-          <section class="source"><h3>Source</h3><p><a id="source-repository" href="https://github.com/stefanosbordea/actina">stefanosbordea/actina</a><br><a href="./schedule_hourly.csv" download>Download the supplied schedule</a></p><dl><dt>Commit</dt><dd id="source-commit"></dd><dt>Schedule SHA-256</dt><dd id="source-hash"></dd></dl></section>
-          <section class="hourly-data"><h3>Hourly data <span id="table-date"></span></h3><p>Time identifies the hour’s start. Tank is measured at its end. Plan input is the forecast column from the supplied schedule.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Hourly data, scroll horizontally for all columns"><table><caption class="visually-hidden">Selected day’s source values</caption><thead><tr><th scope="col">Hour</th><th scope="col">Actual<br>W/m²</th><th scope="col">LightGBM<br>W/m²</th><th scope="col">Plan input<br>W/m²</th><th scope="col">Demand<br>m³</th><th scope="col">Flat<br>m³</th><th scope="col">Aktina<br>m³</th><th scope="col">Tank<br>m³</th></tr></thead><tbody id="hourly-rows"></tbody></table></div></section>
+          <section><h3>What this shows</h3><p>Review a day-ahead solar forecast alongside a supplied water-production plan. This historical example is not connected to a plant.</p><p id="forecast-provenance"></p><p>Plant, demand, storage and electricity prices are illustrative assumptions. A radiation threshold labels the lower-price hours. It does not measure curtailed electricity.</p></section>
+          <section><h3>Cost and storage assumptions</h3><dl id="assumptions" class="assumptions"></dl><p>Hourly cost = production × 3.4 ÷ 1,000 × electricity price. Price is determined by actual radiation. Daily costs compare the supplied plans. Production and ending water can differ. Tank levels are supplied end-of-hour values.</p></section>
+          <section class="source"><h3>Export</h3><p><a href="./schedule_hourly.csv" download>Download hourly schedule</a></p></section>
+          <section class="hourly-data"><h3>Hourly data <span id="table-date"></span></h3><p>Time identifies the hour’s start. Tank is measured at its end. Plan input is the forecast column from the supplied schedule.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Hourly data, scroll horizontally for all columns"><table><caption class="visually-hidden">Selected day’s source values</caption><thead><tr><th scope="col">Hour</th><th scope="col">Actual<br>W/m²</th><th scope="col">Forecast<br>W/m²</th><th scope="col">Plan input<br>W/m²</th><th scope="col">Demand<br>m³</th><th scope="col">Flat<br>m³</th><th scope="col">Aktina<br>m³</th><th scope="col">Tank<br>m³</th></tr></thead><tbody id="hourly-rows"></tbody></table></div></section>
         </div>
       </details>
     </section>
   </main>
-  <footer><a class="brand" href="./">Aktina</a><p>Concept and product: Loukas Louka<br>Forecast and scheduler: Stefanos</p><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
+  <footer><a class="brand" href="./">Aktina</a><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
   <noscript><p class="load-error">Enable JavaScript to explore the charts. The supplied schedule remains available as a CSV file.</p></noscript>
 </body>
 </html>

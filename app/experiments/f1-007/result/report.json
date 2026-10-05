@@ -1,0 +1,2042 @@
+{
+  "status": "COMPLETE",
+  "started_at_utc": "2026-10-04T09:54:45.735625+00:00",
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/f1-007/run.py",
+    "--output",
+    "app/experiments/f1-007/result"
+  ],
+  "protocol_sha256": "f6950483c4bc3864c4a902d9b1e230681011c634d02bd7474c025cec4aa461fc",
+  "code_sha256": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+  "input_sha256": {
+    "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+    "app/experiments/f1-006/run.py": "bf2656bf1c301d815a4096b650b5d6e8afa6a437391a8b60f996b52016fe899d",
+    "app/experiments/f1-006/result/features.csv": "f0cc88f0068a7b81185dde4e5f9e09f268a405a99d6d34119eeddb7231a87908",
+    "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+    "app/experiments/f1-006/result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+    "app/experiments/reference-training-001/result/joined-reference.csv": "23d2fa0170de78d701cd247a43aa30a460368c53afb25ddc9ec11cd71a1504c6",
+    "app/experiments/reference-training-001/result/report.json": "6cd31f127399f090ea99eb54db90f518723be192ec3a2269471a42aecae67f8f",
+    "app/experiments/satellite-reference-001/result/reference-full.csv": "1c95569b0b1d0d2bea3910e01e917a41dc37c7aedee3d25a7477af55bf7fc7df",
+    "app/experiments/f1-006/result/validation-training-origins.csv": "9b9022662e147c85bc9fb66c2c72310fdb0a994ba041c319add3c935a15f0319",
+    "app/experiments/f1-006/result/validation-reference-membership.csv": "ca984de165a7aa40b4c638556027cf7734025f39d97ede2c2e952688b6f515de",
+    "app/experiments/f1-006/result/predictions/validation-original.csv": "46ef7e773fc8f9087acc90ec2de35e74b727084a43029649a4c60aac7b76db27",
+    "app/experiments/f1-006/result/predictions/validation-persistence.csv": "0e034adf27f6e30cc94bf3c8ec1a542ef251097ad89a3f383a862be1ae76ed5c",
+    "app/experiments/f1-006/result/predictions/validation-nwp_day2.csv": "e9ed7ac490fa05679e8fe04ba7b48f5a9bffb639163fead1d8523b570c6d2b52",
+    "app/experiments/f1-006/result/predictions/validation-small.csv": "07f6ac02f6688da01791b9bd3196e8f16f303bce1384bb1d0bda2c3917b920c0",
+    "app/experiments/f1-006/result/predictions/validation-medium.csv": "1bd21f572c7a9f26be4d6b9599b492e0b079ab8b3ed708cccb4a766bef50a380",
+    "app/experiments/f1-006/result/predictions/validation-larger.csv": "68f9739fc0e561532bcb2fb748d934902e148ed84e3a8866c7f1d464824d4dbd",
+    "app/experiments/f1-006/result/test-training-origins.csv": "5018f6b26084475423f3484247e83a673adfc5b732ad41808bb84a0a06760b87",
+    "app/experiments/f1-006/result/test-reference-membership.csv": "7ad004adca83b52943e2622d9271bf778fb362aebf5a4ca7309c724252e935dd",
+    "app/experiments/f1-006/result/predictions/test-original.csv": "7bd6da88225defc8536d1663ea3db119111588029b57b09fd97cb9d6ee642017",
+    "app/experiments/f1-006/result/predictions/test-persistence.csv": "6c3910a02ffeed51e88a97d3f393b4a90520f5c444a2ea1c3d72707f213a7adb",
+    "app/experiments/f1-006/result/predictions/test-nwp_day2.csv": "17d322352699495351ffd22965406371253a5ff0518a8dd2ff3921d4770b834d",
+    "app/experiments/f1-006/result/predictions/test-small.csv": "3cfefb241130cc754337435d1e2c1941903ce8655c2633552481c9e1b6624c2c",
+    "app/experiments/f1-006/result/predictions/test-medium.csv": "e72f36100e4bf502f292cec76d9e9300a8c283d6e12d4ab71c45eda1157974e2",
+    "app/experiments/f1-006/result/predictions/test-larger.csv": "1449eca471b6ef341d3017379a343673129b0b25df26d379ebf221c34ef7d534"
+  },
+  "feature_source": "app/experiments/f1-006/result/features.csv",
+  "configurations": {
+    "small": {
+      "n_estimators": 200,
+      "num_leaves": 5,
+      "max_depth": 3,
+      "min_child_samples": 80
+    },
+    "medium": {
+      "n_estimators": 300,
+      "num_leaves": 9,
+      "max_depth": 4,
+      "min_child_samples": 60
+    },
+    "larger": {
+      "n_estimators": 300,
+      "num_leaves": 15,
+      "max_depth": 4,
+      "min_child_samples": 40
+    }
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "lightgbm": "4.7.0"
+  },
+  "scope": "Retrospective post-inspection experiment; reference consensus is not latent truth or physical curtailment. Historical availability is unverified.",
+  "label_rule": {
+    "paired_weather_weight": 0.5,
+    "paired_satellite_weight": 0.5,
+    "missing_satellite_weather_weight": 1,
+    "row_weight": 1
+  },
+  "splits": {
+    "validation": {
+      "hours": 3566,
+      "training_hours": 10675,
+      "satellite_available": 10675,
+      "satellite_missing": 0,
+      "paired_disagreements": 279,
+      "soft_target_counts": {
+        "0.0": 8885,
+        "0.5": 279,
+        "1.0": 1511
+      },
+      "latest_training_target": "2025-12-04 18:00:00",
+      "first_evaluation_origin": "2025-12-04 19:00:00"
+    },
+    "test": {
+      "hours": 3567,
+      "training_hours": 14241,
+      "satellite_available": 14094,
+      "satellite_missing": 147,
+      "paired_disagreements": 375,
+      "soft_target_counts": {
+        "0.0": 12096,
+        "0.5": 375,
+        "1.0": 1770
+      },
+      "latest_training_target": "2026-05-02 08:00:00",
+      "first_evaluation_origin": "2026-05-02 09:00:00"
+    }
+  },
+  "methods": {
+    "original": {
+      "validation": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 241,
+              "fp": 55,
+              "fn": 65,
+              "tn": 3205,
+              "precision": 0.8141891891891891,
+              "recall": 0.7875816993464052,
+              "f1": 0.8006644518272426,
+              "brier": 0.03365114974761638
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 233,
+              "fp": 47,
+              "fn": 59,
+              "tn": 3080,
+              "precision": 0.8321428571428572,
+              "recall": 0.797945205479452,
+              "f1": 0.8146853146853147,
+              "brier": 0.031003217315004387
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 212,
+              "fp": 68,
+              "fn": 82,
+              "tn": 3057,
+              "precision": 0.7571428571428571,
+              "recall": 0.7210884353741497,
+              "f1": 0.7386759581881533,
+              "brier": 0.04387247733255338
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 241,
+              "fp": 55,
+              "fn": 65,
+              "tn": 3205,
+              "precision": 0.8141891891891891,
+              "recall": 0.7875816993464052,
+              "f1": 0.8006644518272426,
+              "brier": 0.03365114974761638
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 233,
+              "fp": 47,
+              "fn": 59,
+              "tn": 3080,
+              "precision": 0.8321428571428572,
+              "recall": 0.797945205479452,
+              "f1": 0.8146853146853147,
+              "brier": 0.031003217315004387
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 212,
+              "fp": 68,
+              "fn": 82,
+              "tn": 3057,
+              "precision": 0.7571428571428571,
+              "recall": 0.7210884353741497,
+              "f1": 0.7386759581881533,
+              "brier": 0.04387247733255338
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 965,
+              "fp": 24,
+              "fn": 45,
+              "tn": 2533,
+              "precision": 0.9757330637007078,
+              "recall": 0.9554455445544554,
+              "f1": 0.9654827413706853,
+              "brier": 0.01934398654331371
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 949,
+              "fp": 24,
+              "fn": 45,
+              "tn": 2499,
+              "precision": 0.9753340184994861,
+              "recall": 0.954728370221328,
+              "f1": 0.9649211997966446,
+              "brier": 0.019618993460335514
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 920,
+              "fp": 53,
+              "fn": 55,
+              "tn": 2489,
+              "precision": 0.9455292908530318,
+              "recall": 0.9435897435897436,
+              "f1": 0.944558521560575,
+              "brier": 0.03070798976400341
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 965,
+              "fp": 24,
+              "fn": 45,
+              "tn": 2533,
+              "precision": 0.9757330637007078,
+              "recall": 0.9554455445544554,
+              "f1": 0.9654827413706853,
+              "brier": 0.01934398654331371
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 949,
+              "fp": 24,
+              "fn": 45,
+              "tn": 2499,
+              "precision": 0.9753340184994861,
+              "recall": 0.954728370221328,
+              "f1": 0.9649211997966446,
+              "brier": 0.019618993460335514
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 920,
+              "fp": 53,
+              "fn": 55,
+              "tn": 2489,
+              "precision": 0.9455292908530318,
+              "recall": 0.9435897435897436,
+              "f1": 0.944558521560575,
+              "brier": 0.03070798976400341
+            }
+          }
+        }
+      }
+    },
+    "persistence": {
+      "validation": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 244,
+              "fp": 62,
+              "fn": 62,
+              "tn": 3198,
+              "precision": 0.7973856209150327,
+              "recall": 0.7973856209150327,
+              "f1": 0.7973856209150327,
+              "brier": 0.034772854739203586
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 236,
+              "fp": 54,
+              "fn": 56,
+              "tn": 3073,
+              "precision": 0.8137931034482758,
+              "recall": 0.8082191780821918,
+              "f1": 0.8109965635738832,
+              "brier": 0.03217315004387248
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 218,
+              "fp": 72,
+              "fn": 76,
+              "tn": 3053,
+              "precision": 0.7517241379310344,
+              "recall": 0.7414965986394558,
+              "f1": 0.7465753424657534,
+              "brier": 0.043287510968119336
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 244,
+              "fp": 62,
+              "fn": 62,
+              "tn": 3198,
+              "precision": 0.7973856209150327,
+              "recall": 0.7973856209150327,
+              "f1": 0.7973856209150327,
+              "brier": 0.034772854739203586
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 236,
+              "fp": 54,
+              "fn": 56,
+              "tn": 3073,
+              "precision": 0.8137931034482758,
+              "recall": 0.8082191780821918,
+              "f1": 0.8109965635738832,
+              "brier": 0.03217315004387248
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 218,
+              "fp": 72,
+              "fn": 76,
+              "tn": 3053,
+              "precision": 0.7517241379310344,
+              "recall": 0.7414965986394558,
+              "f1": 0.7465753424657534,
+              "brier": 0.043287510968119336
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 985,
+              "fp": 20,
+              "fn": 25,
+              "tn": 2537,
+              "precision": 0.9800995024875622,
+              "recall": 0.9752475247524752,
+              "f1": 0.9776674937965261,
+              "brier": 0.012615643397813289
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 969,
+              "fp": 20,
+              "fn": 25,
+              "tn": 2503,
+              "precision": 0.9797775530839231,
+              "recall": 0.9748490945674044,
+              "f1": 0.9773071104387292,
+              "brier": 0.01279499573500142
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 941,
+              "fp": 48,
+              "fn": 34,
+              "tn": 2494,
+              "precision": 0.9514661274014156,
+              "recall": 0.9651282051282051,
+              "f1": 0.9582484725050916,
+              "brier": 0.023315325561558145
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 985,
+              "fp": 20,
+              "fn": 25,
+              "tn": 2537,
+              "precision": 0.9800995024875622,
+              "recall": 0.9752475247524752,
+              "f1": 0.9776674937965261,
+              "brier": 0.012615643397813289
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 969,
+              "fp": 20,
+              "fn": 25,
+              "tn": 2503,
+              "precision": 0.9797775530839231,
+              "recall": 0.9748490945674044,
+              "f1": 0.9773071104387292,
+              "brier": 0.01279499573500142
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 941,
+              "fp": 48,
+              "fn": 34,
+              "tn": 2494,
+              "precision": 0.9514661274014156,
+              "recall": 0.9651282051282051,
+              "f1": 0.9582484725050916,
+              "brier": 0.023315325561558145
+            }
+          }
+        }
+      }
+    },
+    "nwp_day2": {
+      "validation": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 268,
+              "fp": 21,
+              "fn": 38,
+              "tn": 3239,
+              "precision": 0.9273356401384083,
+              "recall": 0.8758169934640523,
+              "f1": 0.9008403361344538,
+              "brier": 0.016545148625911384
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 255,
+              "fp": 16,
+              "fn": 37,
+              "tn": 3111,
+              "precision": 0.940959409594096,
+              "recall": 0.8732876712328768,
+              "f1": 0.9058614564831261,
+              "brier": 0.015501608657502193
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 43,
+              "fn": 66,
+              "tn": 3082,
+              "precision": 0.8413284132841329,
+              "recall": 0.7755102040816326,
+              "f1": 0.8070796460176991,
+              "brier": 0.03188066686165546
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 268,
+              "fp": 21,
+              "fn": 38,
+              "tn": 3239,
+              "precision": 0.9273356401384083,
+              "recall": 0.8758169934640523,
+              "f1": 0.9008403361344538,
+              "brier": 0.016545148625911384
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 255,
+              "fp": 16,
+              "fn": 37,
+              "tn": 3111,
+              "precision": 0.940959409594096,
+              "recall": 0.8732876712328768,
+              "f1": 0.9058614564831261,
+              "brier": 0.015501608657502193
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 43,
+              "fn": 66,
+              "tn": 3082,
+              "precision": 0.8413284132841329,
+              "recall": 0.7755102040816326,
+              "f1": 0.8070796460176991,
+              "brier": 0.03188066686165546
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.5,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 993,
+              "fp": 15,
+              "fn": 17,
+              "tn": 2542,
+              "precision": 0.9851190476190477,
+              "recall": 0.9831683168316832,
+              "f1": 0.9841427155599604,
+              "brier": 0.00897112419400056
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 977,
+              "fp": 15,
+              "fn": 17,
+              "tn": 2508,
+              "precision": 0.9848790322580645,
+              "recall": 0.9828973843058351,
+              "f1": 0.9838872104733132,
+              "brier": 0.009098663633778788
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 950,
+              "fp": 42,
+              "fn": 25,
+              "tn": 2500,
+              "precision": 0.9576612903225806,
+              "recall": 0.9743589743589743,
+              "f1": 0.9659379766141332,
+              "brier": 0.019050326983224338
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 993,
+              "fp": 15,
+              "fn": 17,
+              "tn": 2542,
+              "precision": 0.9851190476190477,
+              "recall": 0.9831683168316832,
+              "f1": 0.9841427155599604,
+              "brier": 0.00897112419400056
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 977,
+              "fp": 15,
+              "fn": 17,
+              "tn": 2508,
+              "precision": 0.9848790322580645,
+              "recall": 0.9828973843058351,
+              "f1": 0.9838872104733132,
+              "brier": 0.009098663633778788
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 950,
+              "fp": 42,
+              "fn": 25,
+              "tn": 2500,
+              "precision": 0.9576612903225806,
+              "recall": 0.9743589743589743,
+              "f1": 0.9659379766141332,
+              "brier": 0.019050326983224338
+            }
+          }
+        }
+      }
+    },
+    "weather_small": {
+      "validation": {
+        "cutoff": 0.6132807024666822,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 268,
+              "fp": 21,
+              "fn": 38,
+              "tn": 3239,
+              "precision": 0.9273356401384083,
+              "recall": 0.8758169934640523,
+              "f1": 0.9008403361344538,
+              "brier": 0.011852145908579128
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 255,
+              "fp": 16,
+              "fn": 37,
+              "tn": 3111,
+              "precision": 0.940959409594096,
+              "recall": 0.8732876712328768,
+              "f1": 0.9058614564831261,
+              "brier": 0.011131206919249133
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 43,
+              "fn": 66,
+              "tn": 3082,
+              "precision": 0.8413284132841329,
+              "recall": 0.7755102040816326,
+              "f1": 0.8070796460176991,
+              "brier": 0.024222253652830424
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 270,
+              "fp": 23,
+              "fn": 36,
+              "tn": 3237,
+              "precision": 0.9215017064846417,
+              "recall": 0.8823529411764706,
+              "f1": 0.9015025041736227,
+              "brier": 0.011852145908579128
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 257,
+              "fp": 18,
+              "fn": 35,
+              "tn": 3109,
+              "precision": 0.9345454545454546,
+              "recall": 0.8801369863013698,
+              "f1": 0.9065255731922398,
+              "brier": 0.011131206919249133
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 230,
+              "fp": 45,
+              "fn": 64,
+              "tn": 3080,
+              "precision": 0.8363636363636363,
+              "recall": 0.782312925170068,
+              "f1": 0.8084358523725835,
+              "brier": 0.024222253652830424
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 268,
+              "fp": 21,
+              "fn": 38,
+              "tn": 3239,
+              "precision": 0.9273356401384083,
+              "recall": 0.8758169934640523,
+              "f1": 0.9008403361344538,
+              "brier": 0.011852145908579128
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 255,
+              "fp": 16,
+              "fn": 37,
+              "tn": 3111,
+              "precision": 0.940959409594096,
+              "recall": 0.8732876712328768,
+              "f1": 0.9058614564831261,
+              "brier": 0.011131206919249133
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 43,
+              "fn": 66,
+              "tn": 3082,
+              "precision": 0.8413284132841329,
+              "recall": 0.7755102040816326,
+              "f1": 0.8070796460176991,
+              "brier": 0.024222253652830424
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.6132807024666822,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 992,
+              "fp": 12,
+              "fn": 18,
+              "tn": 2545,
+              "precision": 0.9880478087649402,
+              "recall": 0.9821782178217822,
+              "f1": 0.9851042701092354,
+              "brier": 0.0066333371683968715
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 976,
+              "fp": 12,
+              "fn": 18,
+              "tn": 2511,
+              "precision": 0.9878542510121457,
+              "recall": 0.9818913480885312,
+              "f1": 0.9848637739656912,
+              "brier": 0.006716930349982696
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 947,
+              "fp": 41,
+              "fn": 28,
+              "tn": 2501,
+              "precision": 0.958502024291498,
+              "recall": 0.9712820512820513,
+              "f1": 0.9648497198166073,
+              "brier": 0.015495281605030685
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 998,
+              "fp": 18,
+              "fn": 12,
+              "tn": 2539,
+              "precision": 0.9822834645669292,
+              "recall": 0.9881188118811881,
+              "f1": 0.9851924975320829,
+              "brier": 0.0066333371683968715
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 982,
+              "fp": 18,
+              "fn": 12,
+              "tn": 2505,
+              "precision": 0.982,
+              "recall": 0.9879275653923542,
+              "f1": 0.9849548645937813,
+              "brier": 0.006716930349982696
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 953,
+              "fp": 47,
+              "fn": 22,
+              "tn": 2495,
+              "precision": 0.953,
+              "recall": 0.9774358974358974,
+              "f1": 0.9650632911392405,
+              "brier": 0.015495281605030685
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 992,
+              "fp": 12,
+              "fn": 18,
+              "tn": 2545,
+              "precision": 0.9880478087649402,
+              "recall": 0.9821782178217822,
+              "f1": 0.9851042701092354,
+              "brier": 0.0066333371683968715
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 976,
+              "fp": 12,
+              "fn": 18,
+              "tn": 2511,
+              "precision": 0.9878542510121457,
+              "recall": 0.9818913480885312,
+              "f1": 0.9848637739656912,
+              "brier": 0.006716930349982696
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 947,
+              "fp": 41,
+              "fn": 28,
+              "tn": 2501,
+              "precision": 0.958502024291498,
+              "recall": 0.9712820512820513,
+              "f1": 0.9648497198166073,
+              "brier": 0.015495281605030685
+            }
+          }
+        }
+      }
+    },
+    "weather_medium": {
+      "validation": {
+        "cutoff": 0.5656819845408717,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 269,
+              "fp": 20,
+              "fn": 37,
+              "tn": 3240,
+              "precision": 0.9307958477508651,
+              "recall": 0.8790849673202614,
+              "f1": 0.9042016806722689,
+              "brier": 0.011783590526749713
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 256,
+              "fp": 14,
+              "fn": 36,
+              "tn": 3113,
+              "precision": 0.9481481481481482,
+              "recall": 0.8767123287671232,
+              "f1": 0.9110320284697508,
+              "brier": 0.011032975526291592
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 42,
+              "fn": 66,
+              "tn": 3083,
+              "precision": 0.8444444444444444,
+              "recall": 0.7755102040816326,
+              "f1": 0.8085106382978723,
+              "brier": 0.024632246950791123
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 272,
+              "fp": 24,
+              "fn": 34,
+              "tn": 3236,
+              "precision": 0.918918918918919,
+              "recall": 0.8888888888888888,
+              "f1": 0.9036544850498339,
+              "brier": 0.011783590526749713
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 259,
+              "fp": 18,
+              "fn": 33,
+              "tn": 3109,
+              "precision": 0.9350180505415162,
+              "recall": 0.886986301369863,
+              "f1": 0.9103690685413005,
+              "brier": 0.011032975526291592
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 233,
+              "fp": 44,
+              "fn": 61,
+              "tn": 3081,
+              "precision": 0.8411552346570397,
+              "recall": 0.7925170068027211,
+              "f1": 0.8161120840630472,
+              "brier": 0.024632246950791123
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 269,
+              "fp": 20,
+              "fn": 37,
+              "tn": 3240,
+              "precision": 0.9307958477508651,
+              "recall": 0.8790849673202614,
+              "f1": 0.9042016806722689,
+              "brier": 0.011783590526749713
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 256,
+              "fp": 14,
+              "fn": 36,
+              "tn": 3113,
+              "precision": 0.9481481481481482,
+              "recall": 0.8767123287671232,
+              "f1": 0.9110320284697508,
+              "brier": 0.011032975526291592
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 228,
+              "fp": 42,
+              "fn": 66,
+              "tn": 3083,
+              "precision": 0.8444444444444444,
+              "recall": 0.7755102040816326,
+              "f1": 0.8085106382978723,
+              "brier": 0.024632246950791123
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.5656819845408717,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 994,
+              "fp": 14,
+              "fn": 16,
+              "tn": 2543,
+              "precision": 0.9861111111111112,
+              "recall": 0.9841584158415841,
+              "f1": 0.9851337958374629,
+              "brier": 0.006472480942786866
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 978,
+              "fp": 14,
+              "fn": 16,
+              "tn": 2509,
+              "precision": 0.9858870967741935,
+              "recall": 0.9839034205231388,
+              "f1": 0.9848942598187311,
+              "brier": 0.0065619911812452025
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 948,
+              "fp": 44,
+              "fn": 27,
+              "tn": 2498,
+              "precision": 0.9556451612903226,
+              "recall": 0.9723076923076923,
+              "f1": 0.9639044229791561,
+              "brier": 0.01590542950117933
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 995,
+              "fp": 17,
+              "fn": 15,
+              "tn": 2540,
+              "precision": 0.983201581027668,
+              "recall": 0.9851485148514851,
+              "f1": 0.9841740850642928,
+              "brier": 0.006472480942786866
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 979,
+              "fp": 17,
+              "fn": 15,
+              "tn": 2506,
+              "precision": 0.9829317269076305,
+              "recall": 0.9849094567404426,
+              "f1": 0.9839195979899498,
+              "brier": 0.0065619911812452025
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 951,
+              "fp": 45,
+              "fn": 24,
+              "tn": 2497,
+              "precision": 0.9548192771084337,
+              "recall": 0.9753846153846154,
+              "f1": 0.9649923896499238,
+              "brier": 0.01590542950117933
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 994,
+              "fp": 14,
+              "fn": 16,
+              "tn": 2543,
+              "precision": 0.9861111111111112,
+              "recall": 0.9841584158415841,
+              "f1": 0.9851337958374629,
+              "brier": 0.006472480942786866
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 978,
+              "fp": 14,
+              "fn": 16,
+              "tn": 2509,
+              "precision": 0.9858870967741935,
+              "recall": 0.9839034205231388,
+              "f1": 0.9848942598187311,
+              "brier": 0.0065619911812452025
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 948,
+              "fp": 44,
+              "fn": 27,
+              "tn": 2498,
+              "precision": 0.9556451612903226,
+              "recall": 0.9723076923076923,
+              "f1": 0.9639044229791561,
+              "brier": 0.01590542950117933
+            }
+          }
+        }
+      }
+    },
+    "weather_larger": {
+      "validation": {
+        "cutoff": 0.5411745121421931,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 271,
+              "fp": 20,
+              "fn": 35,
+              "tn": 3240,
+              "precision": 0.9312714776632303,
+              "recall": 0.8856209150326797,
+              "f1": 0.9078726968174204,
+              "brier": 0.011885072498136716
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 258,
+              "fp": 15,
+              "fn": 34,
+              "tn": 3112,
+              "precision": 0.945054945054945,
+              "recall": 0.8835616438356164,
+              "f1": 0.9132743362831859,
+              "brier": 0.011215010832498578
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 230,
+              "fp": 43,
+              "fn": 64,
+              "tn": 3082,
+              "precision": 0.8424908424908425,
+              "recall": 0.782312925170068,
+              "f1": 0.8112874779541446,
+              "brier": 0.024738215888896666
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 272,
+              "fp": 24,
+              "fn": 34,
+              "tn": 3236,
+              "precision": 0.918918918918919,
+              "recall": 0.8888888888888888,
+              "f1": 0.9036544850498339,
+              "brier": 0.011885072498136716
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 259,
+              "fp": 18,
+              "fn": 33,
+              "tn": 3109,
+              "precision": 0.9350180505415162,
+              "recall": 0.886986301369863,
+              "f1": 0.9103690685413005,
+              "brier": 0.011215010832498578
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 231,
+              "fp": 46,
+              "fn": 63,
+              "tn": 3079,
+              "precision": 0.8339350180505415,
+              "recall": 0.7857142857142857,
+              "f1": 0.809106830122592,
+              "brier": 0.024738215888896666
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 271,
+              "fp": 20,
+              "fn": 35,
+              "tn": 3240,
+              "precision": 0.9312714776632303,
+              "recall": 0.8856209150326797,
+              "f1": 0.9078726968174204,
+              "brier": 0.011885072498136716
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 258,
+              "fp": 15,
+              "fn": 34,
+              "tn": 3112,
+              "precision": 0.945054945054945,
+              "recall": 0.8835616438356164,
+              "f1": 0.9132743362831859,
+              "brier": 0.011215010832498578
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 230,
+              "fp": 43,
+              "fn": 64,
+              "tn": 3082,
+              "precision": 0.8424908424908425,
+              "recall": 0.782312925170068,
+              "f1": 0.8112874779541446,
+              "brier": 0.024738215888896666
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.5411745121421931,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 994,
+              "fp": 15,
+              "fn": 16,
+              "tn": 2542,
+              "precision": 0.9851337958374629,
+              "recall": 0.9841584158415841,
+              "f1": 0.9846458642892522,
+              "brier": 0.00681716465624261
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 978,
+              "fp": 15,
+              "fn": 16,
+              "tn": 2508,
+              "precision": 0.9848942598187311,
+              "recall": 0.9839034205231388,
+              "f1": 0.984398590840463,
+              "brier": 0.006910542922282888
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 949,
+              "fp": 44,
+              "fn": 26,
+              "tn": 2498,
+              "precision": 0.9556898288016112,
+              "recall": 0.9733333333333334,
+              "f1": 0.9644308943089431,
+              "brier": 0.016400689465834038
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 995,
+              "fp": 16,
+              "fn": 15,
+              "tn": 2541,
+              "precision": 0.9841740850642928,
+              "recall": 0.9851485148514851,
+              "f1": 0.9846610588817417,
+              "brier": 0.00681716465624261
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 979,
+              "fp": 16,
+              "fn": 15,
+              "tn": 2507,
+              "precision": 0.9839195979899498,
+              "recall": 0.9849094567404426,
+              "f1": 0.9844142785319256,
+              "brier": 0.006910542922282888
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 950,
+              "fp": 45,
+              "fn": 25,
+              "tn": 2497,
+              "precision": 0.9547738693467337,
+              "recall": 0.9743589743589743,
+              "f1": 0.9644670050761421,
+              "brier": 0.016400689465834038
+            }
+          },
+          "previous_006": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 994,
+              "fp": 15,
+              "fn": 16,
+              "tn": 2542,
+              "precision": 0.9851337958374629,
+              "recall": 0.9841584158415841,
+              "f1": 0.9846458642892522,
+              "brier": 0.00681716465624261
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 978,
+              "fp": 15,
+              "fn": 16,
+              "tn": 2508,
+              "precision": 0.9848942598187311,
+              "recall": 0.9839034205231388,
+              "f1": 0.984398590840463,
+              "brier": 0.006910542922282888
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 949,
+              "fp": 44,
+              "fn": 26,
+              "tn": 2498,
+              "precision": 0.9556898288016112,
+              "recall": 0.9733333333333334,
+              "f1": 0.9644308943089431,
+              "brier": 0.016400689465834038
+            }
+          }
+        }
+      }
+    },
+    "consensus_small": {
+      "validation": {
+        "cutoff": 0.29619714482777576,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 295,
+              "fp": 53,
+              "fn": 11,
+              "tn": 3207,
+              "precision": 0.8477011494252874,
+              "recall": 0.9640522875816994,
+              "f1": 0.9021406727828746,
+              "brier": 0.011973028299353044
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 281,
+              "fp": 47,
+              "fn": 11,
+              "tn": 3080,
+              "precision": 0.8567073170731707,
+              "recall": 0.9623287671232876,
+              "f1": 0.9064516129032258,
+              "brier": 0.011339856582211162
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 265,
+              "fp": 63,
+              "fn": 29,
+              "tn": 3062,
+              "precision": 0.8079268292682927,
+              "recall": 0.9013605442176871,
+              "f1": 0.8520900321543409,
+              "brier": 0.021413466926053032
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 280,
+              "fp": 35,
+              "fn": 26,
+              "tn": 3225,
+              "precision": 0.8888888888888888,
+              "recall": 0.9150326797385621,
+              "f1": 0.9017713365539453,
+              "brier": 0.011973028299353044
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 266,
+              "fp": 29,
+              "fn": 26,
+              "tn": 3098,
+              "precision": 0.9016949152542373,
+              "recall": 0.910958904109589,
+              "f1": 0.9063032367972743,
+              "brier": 0.011339856582211162
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 246,
+              "fp": 49,
+              "fn": 48,
+              "tn": 3076,
+              "precision": 0.8338983050847457,
+              "recall": 0.8367346938775511,
+              "f1": 0.8353140916808149,
+              "brier": 0.021413466926053032
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.29619714482777576,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1009,
+              "fp": 49,
+              "fn": 1,
+              "tn": 2508,
+              "precision": 0.9536862003780718,
+              "recall": 0.999009900990099,
+              "f1": 0.9758220502901354,
+              "brier": 0.0074474376201151505
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 993,
+              "fp": 49,
+              "fn": 1,
+              "tn": 2474,
+              "precision": 0.9529750479846449,
+              "recall": 0.9989939637826962,
+              "f1": 0.9754420432220039,
+              "brier": 0.007545560063120219
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 970,
+              "fp": 72,
+              "fn": 5,
+              "tn": 2470,
+              "precision": 0.9309021113243762,
+              "recall": 0.9948717948717949,
+              "f1": 0.961824491819534,
+              "brier": 0.014672724443942487
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1004,
+              "fp": 21,
+              "fn": 6,
+              "tn": 2536,
+              "precision": 0.9795121951219512,
+              "recall": 0.994059405940594,
+              "f1": 0.9867321867321868,
+              "brier": 0.0074474376201151505
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 988,
+              "fp": 21,
+              "fn": 6,
+              "tn": 2502,
+              "precision": 0.979187314172448,
+              "recall": 0.993963782696177,
+              "f1": 0.9865202196704943,
+              "brier": 0.007545560063120219
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 960,
+              "fp": 49,
+              "fn": 15,
+              "tn": 2493,
+              "precision": 0.9514370664023786,
+              "recall": 0.9846153846153847,
+              "f1": 0.967741935483871,
+              "brier": 0.014672724443942487
+            }
+          }
+        }
+      }
+    },
+    "consensus_medium": {
+      "validation": {
+        "cutoff": 0.35315583214112545,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 293,
+              "fp": 52,
+              "fn": 13,
+              "tn": 3208,
+              "precision": 0.8492753623188406,
+              "recall": 0.9575163398692811,
+              "f1": 0.9001536098310292,
+              "brier": 0.012157253848002347
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 279,
+              "fp": 46,
+              "fn": 13,
+              "tn": 3081,
+              "precision": 0.8584615384615385,
+              "recall": 0.9554794520547946,
+              "f1": 0.9043760129659644,
+              "brier": 0.011714228443078402
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 265,
+              "fp": 60,
+              "fn": 29,
+              "tn": 3065,
+              "precision": 0.8153846153846154,
+              "recall": 0.9013605442176871,
+              "f1": 0.8562197092084006,
+              "brier": 0.0213259836097537
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 282,
+              "fp": 32,
+              "fn": 24,
+              "tn": 3228,
+              "precision": 0.8980891719745223,
+              "recall": 0.9215686274509803,
+              "f1": 0.9096774193548387,
+              "brier": 0.012157253848002347
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 268,
+              "fp": 27,
+              "fn": 24,
+              "tn": 3100,
+              "precision": 0.9084745762711864,
+              "recall": 0.9178082191780822,
+              "f1": 0.9131175468483816,
+              "brier": 0.011714228443078402
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 244,
+              "fp": 51,
+              "fn": 50,
+              "tn": 3074,
+              "precision": 0.8271186440677966,
+              "recall": 0.8299319727891157,
+              "f1": 0.8285229202037352,
+              "brier": 0.0213259836097537
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.35315583214112545,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1008,
+              "fp": 35,
+              "fn": 2,
+              "tn": 2522,
+              "precision": 0.9664429530201343,
+              "recall": 0.998019801980198,
+              "f1": 0.9819775937652216,
+              "brier": 0.007180182092608835
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 992,
+              "fp": 35,
+              "fn": 2,
+              "tn": 2488,
+              "precision": 0.9659201557935735,
+              "recall": 0.9979879275653923,
+              "f1": 0.9816922315685305,
+              "brier": 0.007280655887616618
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 968,
+              "fp": 59,
+              "fn": 7,
+              "tn": 2483,
+              "precision": 0.9425511197663097,
+              "recall": 0.9928205128205129,
+              "f1": 0.967032967032967,
+              "brier": 0.014531586521612145
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1003,
+              "fp": 22,
+              "fn": 7,
+              "tn": 2535,
+              "precision": 0.9785365853658536,
+              "recall": 0.9930693069306931,
+              "f1": 0.9857493857493858,
+              "brier": 0.007180182092608835
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 987,
+              "fp": 22,
+              "fn": 7,
+              "tn": 2501,
+              "precision": 0.9781962338949455,
+              "recall": 0.9929577464788732,
+              "f1": 0.9855217174238642,
+              "brier": 0.007280655887616618
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 960,
+              "fp": 49,
+              "fn": 15,
+              "tn": 2493,
+              "precision": 0.9514370664023786,
+              "recall": 0.9846153846153847,
+              "f1": 0.967741935483871,
+              "brier": 0.014531586521612145
+            }
+          }
+        }
+      }
+    },
+    "consensus_larger": {
+      "validation": {
+        "cutoff": 0.561345240141561,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 268,
+              "fp": 21,
+              "fn": 38,
+              "tn": 3239,
+              "precision": 0.9273356401384083,
+              "recall": 0.8758169934640523,
+              "f1": 0.9008403361344538,
+              "brier": 0.012306986230244312
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 255,
+              "fp": 17,
+              "fn": 37,
+              "tn": 3110,
+              "precision": 0.9375,
+              "recall": 0.8732876712328768,
+              "f1": 0.9042553191489362,
+              "brier": 0.011851279182748354
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 231,
+              "fp": 41,
+              "fn": 63,
+              "tn": 3084,
+              "precision": 0.8492647058823529,
+              "recall": 0.7857142857142857,
+              "f1": 0.8162544169611308,
+              "brier": 0.0211227177888828
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3566,
+              "tp": 283,
+              "fp": 31,
+              "fn": 23,
+              "tn": 3229,
+              "precision": 0.9012738853503185,
+              "recall": 0.9248366013071896,
+              "f1": 0.9129032258064517,
+              "brier": 0.012306986230244312
+            },
+            "weather_common": {
+              "hours": 3419,
+              "tp": 269,
+              "fp": 27,
+              "fn": 23,
+              "tn": 3100,
+              "precision": 0.9087837837837838,
+              "recall": 0.9212328767123288,
+              "f1": 0.9149659863945578,
+              "brier": 0.011851279182748354
+            },
+            "satellite_common": {
+              "hours": 3419,
+              "tp": 247,
+              "fp": 49,
+              "fn": 47,
+              "tn": 3076,
+              "precision": 0.8344594594594594,
+              "recall": 0.8401360544217688,
+              "f1": 0.8372881355932204,
+              "brier": 0.0211227177888828
+            }
+          }
+        }
+      },
+      "test": {
+        "cutoff": 0.561345240141561,
+        "modes": {
+          "selected": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1000,
+              "fp": 17,
+              "fn": 10,
+              "tn": 2540,
+              "precision": 0.983284169124877,
+              "recall": 0.9900990099009901,
+              "f1": 0.986679822397632,
+              "brier": 0.007184875932703948
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 984,
+              "fp": 17,
+              "fn": 10,
+              "tn": 2506,
+              "precision": 0.983016983016983,
+              "recall": 0.9899396378269618,
+              "f1": 0.9864661654135338,
+              "brier": 0.0072854142681530966
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 956,
+              "fp": 45,
+              "fn": 19,
+              "tn": 2497,
+              "precision": 0.955044955044955,
+              "recall": 0.9805128205128205,
+              "f1": 0.9676113360323887,
+              "brier": 0.014569769739869603
+            }
+          },
+          "default_0_5": {
+            "weather_full": {
+              "hours": 3567,
+              "tp": 1004,
+              "fp": 21,
+              "fn": 6,
+              "tn": 2536,
+              "precision": 0.9795121951219512,
+              "recall": 0.994059405940594,
+              "f1": 0.9867321867321868,
+              "brier": 0.007184875932703948
+            },
+            "weather_common": {
+              "hours": 3517,
+              "tp": 988,
+              "fp": 21,
+              "fn": 6,
+              "tn": 2502,
+              "precision": 0.979187314172448,
+              "recall": 0.993963782696177,
+              "f1": 0.9865202196704943,
+              "brier": 0.0072854142681530966
+            },
+            "satellite_common": {
+              "hours": 3517,
+              "tp": 961,
+              "fp": 48,
+              "fn": 14,
+              "tn": 2494,
+              "precision": 0.9524281466798811,
+              "recall": 0.9856410256410256,
+              "f1": 0.96875,
+              "brier": 0.014569769739869603
+            }
+          }
+        }
+      }
+    }
+  },
+  "reference_sensitivity": {
+    "validation": {
+      "original_hours": 3566,
+      "common_hours": 3419,
+      "missing_hours": 147,
+      "missing_valid_times_utc": [
+        "2026-02-13 00:00:00+00:00",
+        "2026-02-13 01:00:00+00:00",
+        "2026-02-13 02:00:00+00:00",
+        "2026-02-13 03:00:00+00:00",
+        "2026-02-13 04:00:00+00:00",
+        "2026-02-13 05:00:00+00:00",
+        "2026-02-13 06:00:00+00:00",
+        "2026-02-13 07:00:00+00:00",
+        "2026-02-13 08:00:00+00:00",
+        "2026-02-13 09:00:00+00:00",
+        "2026-02-13 10:00:00+00:00",
+        "2026-02-13 11:00:00+00:00",
+        "2026-02-13 12:00:00+00:00",
+        "2026-02-13 13:00:00+00:00",
+        "2026-02-13 14:00:00+00:00",
+        "2026-02-13 15:00:00+00:00",
+        "2026-02-13 16:00:00+00:00",
+        "2026-02-13 17:00:00+00:00",
+        "2026-02-13 18:00:00+00:00",
+        "2026-02-13 19:00:00+00:00",
+        "2026-02-13 20:00:00+00:00",
+        "2026-02-13 21:00:00+00:00",
+        "2026-02-13 22:00:00+00:00",
+        "2026-02-13 23:00:00+00:00",
+        "2026-02-14 00:00:00+00:00",
+        "2026-03-15 00:00:00+00:00",
+        "2026-03-15 01:00:00+00:00",
+        "2026-03-15 02:00:00+00:00",
+        "2026-03-15 03:00:00+00:00",
+        "2026-03-15 04:00:00+00:00",
+        "2026-03-15 05:00:00+00:00",
+        "2026-03-15 06:00:00+00:00",
+        "2026-03-15 07:00:00+00:00",
+        "2026-03-15 08:00:00+00:00",
+        "2026-03-15 09:00:00+00:00",
+        "2026-03-15 10:00:00+00:00",
+        "2026-03-15 11:00:00+00:00",
+        "2026-03-15 12:00:00+00:00",
+        "2026-03-15 13:00:00+00:00",
+        "2026-03-15 14:00:00+00:00",
+        "2026-03-15 15:00:00+00:00",
+        "2026-03-15 16:00:00+00:00",
+        "2026-03-15 17:00:00+00:00",
+        "2026-03-15 18:00:00+00:00",
+        "2026-03-15 19:00:00+00:00",
+        "2026-03-15 20:00:00+00:00",
+        "2026-03-15 21:00:00+00:00",
+        "2026-03-15 22:00:00+00:00",
+        "2026-03-15 23:00:00+00:00",
+        "2026-03-16 00:00:00+00:00",
+        "2026-03-16 01:00:00+00:00",
+        "2026-03-16 02:00:00+00:00",
+        "2026-03-16 03:00:00+00:00",
+        "2026-03-16 04:00:00+00:00",
+        "2026-03-16 05:00:00+00:00",
+        "2026-03-16 06:00:00+00:00",
+        "2026-03-16 07:00:00+00:00",
+        "2026-03-16 08:00:00+00:00",
+        "2026-03-16 09:00:00+00:00",
+        "2026-03-16 10:00:00+00:00",
+        "2026-03-16 11:00:00+00:00",
+        "2026-03-16 12:00:00+00:00",
+        "2026-03-16 13:00:00+00:00",
+        "2026-03-16 14:00:00+00:00",
+        "2026-03-16 15:00:00+00:00",
+        "2026-03-16 16:00:00+00:00",
+        "2026-03-16 17:00:00+00:00",
+        "2026-03-16 18:00:00+00:00",
+        "2026-03-16 19:00:00+00:00",
+        "2026-03-16 20:00:00+00:00",
+        "2026-03-16 21:00:00+00:00",
+        "2026-03-16 22:00:00+00:00",
+        "2026-03-16 23:00:00+00:00",
+        "2026-03-17 00:00:00+00:00",
+        "2026-03-17 01:00:00+00:00",
+        "2026-03-17 02:00:00+00:00",
+        "2026-03-17 03:00:00+00:00",
+        "2026-03-17 04:00:00+00:00",
+        "2026-03-17 05:00:00+00:00",
+        "2026-03-17 06:00:00+00:00",
+        "2026-03-17 07:00:00+00:00",
+        "2026-03-17 08:00:00+00:00",
+        "2026-03-17 09:00:00+00:00",
+        "2026-03-17 10:00:00+00:00",
+        "2026-03-17 11:00:00+00:00",
+        "2026-03-17 12:00:00+00:00",
+        "2026-03-17 13:00:00+00:00",
+        "2026-03-17 14:00:00+00:00",
+        "2026-03-17 15:00:00+00:00",
+        "2026-03-17 16:00:00+00:00",
+        "2026-03-17 17:00:00+00:00",
+        "2026-03-17 18:00:00+00:00",
+        "2026-03-17 19:00:00+00:00",
+        "2026-03-17 20:00:00+00:00",
+        "2026-03-17 21:00:00+00:00",
+        "2026-03-17 22:00:00+00:00",
+        "2026-03-17 23:00:00+00:00",
+        "2026-03-18 00:00:00+00:00",
+        "2026-03-18 01:00:00+00:00",
+        "2026-03-18 02:00:00+00:00",
+        "2026-03-18 03:00:00+00:00",
+        "2026-03-18 04:00:00+00:00",
+        "2026-03-18 05:00:00+00:00",
+        "2026-03-18 06:00:00+00:00",
+        "2026-03-18 07:00:00+00:00",
+        "2026-03-18 08:00:00+00:00",
+        "2026-03-18 09:00:00+00:00",
+        "2026-03-18 10:00:00+00:00",
+        "2026-03-18 11:00:00+00:00",
+        "2026-03-18 12:00:00+00:00",
+        "2026-03-18 13:00:00+00:00",
+        "2026-03-18 14:00:00+00:00",
+        "2026-03-18 15:00:00+00:00",
+        "2026-03-18 16:00:00+00:00",
+        "2026-03-18 17:00:00+00:00",
+        "2026-03-18 18:00:00+00:00",
+        "2026-03-18 19:00:00+00:00",
+        "2026-03-18 20:00:00+00:00",
+        "2026-03-18 21:00:00+00:00",
+        "2026-03-18 22:00:00+00:00",
+        "2026-03-18 23:00:00+00:00",
+        "2026-03-19 00:00:00+00:00",
+        "2026-03-31 00:00:00+00:00",
+        "2026-03-31 01:00:00+00:00",
+        "2026-03-31 02:00:00+00:00",
+        "2026-03-31 03:00:00+00:00",
+        "2026-03-31 04:00:00+00:00",
+        "2026-03-31 05:00:00+00:00",
+        "2026-03-31 06:00:00+00:00",
+        "2026-03-31 07:00:00+00:00",
+        "2026-03-31 08:00:00+00:00",
+        "2026-03-31 09:00:00+00:00",
+        "2026-03-31 10:00:00+00:00",
+        "2026-03-31 11:00:00+00:00",
+        "2026-03-31 12:00:00+00:00",
+        "2026-03-31 13:00:00+00:00",
+        "2026-03-31 14:00:00+00:00",
+        "2026-03-31 15:00:00+00:00",
+        "2026-03-31 16:00:00+00:00",
+        "2026-03-31 17:00:00+00:00",
+        "2026-03-31 18:00:00+00:00",
+        "2026-03-31 19:00:00+00:00",
+        "2026-03-31 20:00:00+00:00",
+        "2026-03-31 21:00:00+00:00",
+        "2026-03-31 22:00:00+00:00",
+        "2026-03-31 23:00:00+00:00",
+        "2026-04-01 00:00:00+00:00"
+      ]
+    },
+    "test": {
+      "original_hours": 3567,
+      "common_hours": 3517,
+      "missing_hours": 50,
+      "missing_valid_times_utc": [
+        "2026-07-01 00:00:00+00:00",
+        "2026-07-01 01:00:00+00:00",
+        "2026-07-01 02:00:00+00:00",
+        "2026-07-01 03:00:00+00:00",
+        "2026-07-01 04:00:00+00:00",
+        "2026-07-01 05:00:00+00:00",
+        "2026-07-01 06:00:00+00:00",
+        "2026-07-01 07:00:00+00:00",
+        "2026-07-01 08:00:00+00:00",
+        "2026-07-01 09:00:00+00:00",
+        "2026-07-01 10:00:00+00:00",
+        "2026-07-01 11:00:00+00:00",
+        "2026-07-01 12:00:00+00:00",
+        "2026-07-01 13:00:00+00:00",
+        "2026-07-01 14:00:00+00:00",
+        "2026-07-01 15:00:00+00:00",
+        "2026-07-01 16:00:00+00:00",
+        "2026-07-01 17:00:00+00:00",
+        "2026-07-01 18:00:00+00:00",
+        "2026-07-01 19:00:00+00:00",
+        "2026-07-01 20:00:00+00:00",
+        "2026-07-01 21:00:00+00:00",
+        "2026-07-01 22:00:00+00:00",
+        "2026-07-01 23:00:00+00:00",
+        "2026-07-02 00:00:00+00:00",
+        "2026-07-20 00:00:00+00:00",
+        "2026-07-20 01:00:00+00:00",
+        "2026-07-20 02:00:00+00:00",
+        "2026-07-20 03:00:00+00:00",
+        "2026-07-20 04:00:00+00:00",
+        "2026-07-20 05:00:00+00:00",
+        "2026-07-20 06:00:00+00:00",
+        "2026-07-20 07:00:00+00:00",
+        "2026-07-20 08:00:00+00:00",
+        "2026-07-20 09:00:00+00:00",
+        "2026-07-20 10:00:00+00:00",
+        "2026-07-20 11:00:00+00:00",
+        "2026-07-20 12:00:00+00:00",
+        "2026-07-20 13:00:00+00:00",
+        "2026-07-20 14:00:00+00:00",
+        "2026-07-20 15:00:00+00:00",
+        "2026-07-20 16:00:00+00:00",
+        "2026-07-20 17:00:00+00:00",
+        "2026-07-20 18:00:00+00:00",
+        "2026-07-20 19:00:00+00:00",
+        "2026-07-20 20:00:00+00:00",
+        "2026-07-20 21:00:00+00:00",
+        "2026-07-20 22:00:00+00:00",
+        "2026-07-20 23:00:00+00:00",
+        "2026-07-21 00:00:00+00:00"
+      ]
+    }
+  },
+  "selection_sha256": "5a8237af0feca272d7d3c2fff49c5bf6c857635c3a822c15c5725c5bf3bcc0be",
+  "selected_families": {
+    "weather": "weather_larger",
+    "consensus": "consensus_larger"
+  },
+  "test_gates": {
+    "weather": {
+      "selected_method": "weather_larger",
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851337958374629,
+          "control": 0.9851190476190477,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9841584158415841,
+          "control": 0.9831683168316832,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9846458642892522,
+          "control": 0.9841427155599604,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9556898288016112,
+          "control": 0.9576612903225806,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9733333333333334,
+          "control": 0.9743589743589743,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9644308943089431,
+          "control": 0.9659379766141332,
+          "status": "regressed"
+        }
+      ]
+    },
+    "consensus": {
+      "selected_method": "consensus_larger",
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.983284169124877,
+          "control": 0.9851190476190477,
+          "status": "regressed"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9900990099009901,
+          "control": 0.9831683168316832,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.986679822397632,
+          "control": 0.9841427155599604,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.955044955044955,
+          "control": 0.9576612903225806,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9805128205128205,
+          "control": 0.9743589743589743,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9676113360323887,
+          "control": 0.9659379766141332,
+          "status": "improved"
+        }
+      ]
+    }
+  },
+  "recommendation": "Retain established control; retrospective research does not authorize a model or dispatch replacement.",
+  "completed_at_utc": "2026-10-04T09:54:53.089857+00:00",
+  "outputs_sha256": {
+    "comparison.csv": "e01f5c028266651bd01b394519f873206d3a39b5a30a09cdb1fac96dc50ea021",
+    "models/test-consensus_larger.txt": "d7b4f6c1ee8453ce23242713d3d4e39a8fcc26147243d3d7d3047a61d141534c",
+    "models/test-consensus_medium.txt": "5dcb57ae365cdea22ac3c074fb6840c6fe1fc07c1f6d1f01f70e897ea5d7d440",
+    "models/test-consensus_small.txt": "bfee9f290a7d36276cb572c8471d84bb1df4b5176da8d5c7da0c9560b36fe6d6",
+    "models/validation-consensus_larger.txt": "86ce4b63979d16c612ed3e402fd89b44da4e3f2c31ba4272630e7a484d3c6520",
+    "models/validation-consensus_medium.txt": "8c940ada2d562cc668ff5a4ce5489810f3d9b0aa680208d24007a8c69f009a55",
+    "models/validation-consensus_small.txt": "270916f0bac6f021bc4adad0e15a2e07e4f2c208a1151636c525f54914ba1d08",
+    "predictions/test-consensus_larger.csv": "56e0a7072028c6f41ed2ff8e96a4cdce6fbc9abc10bc706813417b72c998875a",
+    "predictions/test-consensus_medium.csv": "f925ae72a677f0824f80676c45570e3265283a86113a3e810e6db785aa2a6f0f",
+    "predictions/test-consensus_small.csv": "ca63662f69a519d06214d9b219613819d0a88e7d0ed535b101a26ab2da2ad250",
+    "predictions/test-nwp_day2.csv": "82c86e16138b84531371814255e31e801c24c9d74eae96547c36e3ea021fc5b4",
+    "predictions/test-original.csv": "415b259dd8064c5779b1482ff25e694c3e3a6d9643c503867e362410f6b8378a",
+    "predictions/test-persistence.csv": "60e3aa622ad49bffbec287b268043e181846d07228e0661628872a2d8346a017",
+    "predictions/test-weather_larger.csv": "3e1fc15198d9a50755fab83c4e500ca5ee6751735c7321170ebd63709d15faaf",
+    "predictions/test-weather_medium.csv": "550010ca65a258faa3c7077482b64acddb2bdab0c481824f6d7a75381c8fde0d",
+    "predictions/test-weather_small.csv": "beec2ca305fedadf2be11376df13b5c3f410bd48c09fc07e9e4b6f723a0b30d9",
+    "predictions/validation-consensus_larger.csv": "f5663d50ac27c1502a8b64063827079b960a33cab77bc1f473970619dd67e40e",
+    "predictions/validation-consensus_medium.csv": "c5c92506ae5838d51494d0893ecd02fb9e7aada2d08a00db9ce7338a1c48bf49",
+    "predictions/validation-consensus_small.csv": "2b7bc49cfb728fa05cc6bbdfd4f88d62883be2e1a10b30deb6c09582b8f46078",
+    "predictions/validation-nwp_day2.csv": "d84fb03cd9878f8565bd529f58c4abd1957c12e21936b10814984428bf7a2eae",
+    "predictions/validation-original.csv": "596d8f4f6b7754278b31d09bdbc016b8ab684777758d8c3e41ae886baa4fa722",
+    "predictions/validation-persistence.csv": "d1c6df6386d143c28175ff4cd028d3dae393e4d94ff74a5db3a574c3e490212d",
+    "predictions/validation-weather_larger.csv": "d1ee7e5ee613d64ed37aba04750f2cbc928ed4ae64d89f8cb46a6d6b68c0d0c0",
+    "predictions/validation-weather_medium.csv": "9da58aaeaeec51466a5ebd792fbcf714a3a7d41c2605ed20a7539aa65da9cbb3",
+    "predictions/validation-weather_small.csv": "020701da7088ed65a88a70670c8d520046e31833a1f8d1e2e0f749736e543781",
+    "test-reference-membership.csv": "7ad004adca83b52943e2622d9271bf778fb362aebf5a4ca7309c724252e935dd",
+    "test-training-labels.csv": "2cff2c7eb556cb1bcab71d70807706f4fbe964c62738fa2460fb9c099286ca1f",
+    "validation-grid-consensus_larger.json": "1f712d17f66d0f7581805bfcd53e0e856d3b608e1723201e7dd24d5a52490492",
+    "validation-grid-consensus_medium.json": "b361a4d61b15d8600f67513ba1af17aa80159d69b698651bee1615d82ff2ea80",
+    "validation-grid-consensus_small.json": "ed837067bc44f84edc1cbd7405670923a460d4b7beb98a25705d7e8041c8d1df",
+    "validation-grid-weather_larger.json": "42eb1d9d1653ab7c37173b1be989128a0e4e2e574bc091c72dee835d6a6e635f",
+    "validation-grid-weather_medium.json": "a8f240d96d80236c7cc7470c94c0b00c271c82ecdb6955fdb4bc4410d1dd903c",
+    "validation-grid-weather_small.json": "1b40de2f677a9333e5f6d8d3fc7a6f245f9873c21e9c03a3a5b97150130a9f62",
+    "validation-reference-membership.csv": "ca984de165a7aa40b4c638556027cf7734025f39d97ede2c2e952688b6f515de",
+    "validation-selection.json": "5a8237af0feca272d7d3c2fff49c5bf6c857635c3a822c15c5725c5bf3bcc0be",
+    "validation-training-labels.csv": "99e6df2abb15c4c802116791c247f60239ab1c6b359fd31840f6b4bb4cde3d10"
+  }
+}

@@ -1,21 +1,26 @@
-# Aktina delivery, 4 October
+# Aktina delivery handoff
 
-The original work split and updated demo instructions both apply. The full Grid/Sites pitch is the longer-term direction; the current supplied model and schedule cover the Grid demonstration.
+Updated 4 October 2026. The review pack now includes the current historical forecast viewer, corrected deck and notes, technical-summary LaTeX source and forecast QR assets. Shotter will handle the final presentation. No competition submission or team rehearsal is claimed.
 
-| Loukas's deliverable | State |
+| Deliverable | Current state |
 |---|---|
-| MAE, RMSE, precision, recall, F1, confusion counts | Full original validation/test results retained; no favorable-day substitution |
-| Month and hour breakdowns, slide figures | Included in ActinaBench and experiment exports |
-| Leakage and feature checks | Chronological boundary audit complete; experimental training purges 24 hours; original native model inspected against retained predictions |
-| Help improve the predictor | Six fixed experiments run, including neural network; all predictions and losses retained; no all-metric test win over persistence |
-| Date picker, sun/production/tank plots, costs | Connected to original files, with three requested showcase dates |
-| Model-to-schedule connection | Supplied export reproduced byte for byte using persistence; unchanged model-driven scheduler also reproduced separately for review |
-| Offline operation | Site data, scripts and fonts packaged locally; internet-free presentation assets |
-| Naming | Current demo and benchmark use Aktina; legacy workspace and older delivery pack still need reconciliation |
-| Updated backup video | 60-second silent Aktina screenshot walkthrough exported through BridgeClip; full decode and visual checks passed |
-| Updated submission documents | Older editable materials retained; final Aktina results and naming still need to be incorporated |
-| Rehearsal | Two rehearsals with the team remain; no rehearsal claimed |
+| [Competition pack](../delivery/Aktina-Competition-Pack.zip) | 98 verified entries, including 82 offline site assets and persistent home-animation Play/Pause. [Per-file and archive hashes](../delivery/Aktina-Competition-Pack.manifest.json) |
+| [Technical summary](../delivery/Aktina-Technical-Summary.tex) | Current standalone source, compiled in the native editor. No separate PDF generated or included |
+| [Forecast QR](../delivery/Aktina-Forecast-QR.png) | PNG, SVG, slide SVG and usage notes included. Encodes the published forecast URL |
+| [Existing PowerPoint](../delivery/Aktina-Pafos-2026.pptx) | 12 slides, four editable charts, equal team credit. Slides 6 and 11 corrected. All native notes match the source. This is a factual reference for the presentation lead |
+| Current forecast | Completed v2-based correction. Precision 94.08%, recall 88.24%, F1 91.06% on all 3,566 validation hours |
+| Evaluation evidence | Original validation/test results, all confusion counts and earlier failed experiments retained. [019 result and independent audit](../experiments/v2-019/README.md) |
+| Original source | Stefanos's v2 additions merged without rewriting them. Original source, data and outputs preserved |
+| Supplied schedule | Retained unchanged. Reproduces the persistence export. The separate model-driven scheduler output remains available for team review |
+| [Silent backup](../delivery/Aktina-Backup-Final.mp4) | 44 seconds, 1080p, 30 fps, no audio. Historical screenshots before the current forecast view. It does not demonstrate the new event correction |
+| Submission and rehearsal | Team must confirm the intended schedule, final presentation, declarations, contacts and upload. No completion is assumed |
 
-The original roadmap prioritizes precision because false surplus predictions can increase costs. A classifier with higher recall and lower precision is a tradeoff, not an automatic improvement. The 600 W/m² label is a radiation proxy, not observed curtailment.
+The current correction has four fewer false alarms than 008 and misses one extra hour. Its observed validation F1 is higher, but the paired-day interval includes zero and the validation period has been reused. This is not established superiority on unseen data. The correction changes event calls, not the refit radiation curve, supplied schedule or operating costs.
 
-Before submission: confirm the intended schedule with Stefanos, finish the current-name document pack, and rehearse the verified demo. The current website/video retain his supplied schedule. The model-driven reproduction is ready in [scheduler-reproduction](scheduler-reproduction/README.md). Keep the baseline loss visible in all evaluation claims. Any further model research remains separate from Stefanos's root files.
+The 44-second video remains the earlier schedule walkthrough. Its verified footage was not replaced or presented as a recording of the current forecast page. [Video source and verification](../delivery/Aktina-Backup-Final-Source/README.md) remain available.
+
+The pack contains no private messages, team-setting captures, private screenshots, historical PDF exports or research datasets. Its public workspace preview images remain bundled dependencies of the offline demo. The earlier proposal LaTeX sources remain review drafts and predate the new forecast comparison. Use the new technical summary for the current model result, and reconcile the proposal before submission.
+
+The previous pack and manifest are preserved in `app/build/competition-pack-before-home-motion/`. The earlier pre-019 copy remains in `app/build/competition-pack-before-019-handoff/`. The animation update changed only two offline site files. All other 95 payload entries remain byte-identical, including model data, deck, notes, LaTeX, QR assets and video. The current pack was opened after creation and every archived entry was compared with its retained source bytes. Ten packaging tests passed. The [animation pack receipt](../results/competition-pack-home-motion.json) records the new archive hash and preserves the [earlier handoff receipt](../results/competition-pack-019-handoff.json). [Packaging guide](../tools/PACKAGING.md).
+
+No plant-control connection, measured curtailment recovery or field saving is established. The schedule still uses illustrative operating and tariff assumptions. [Scheduler reproduction](scheduler-reproduction/README.md) preserves both outputs for the team to choose the intended submission version.

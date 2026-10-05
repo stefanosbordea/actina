@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "model": "ecmwf_ifs025",
+  "raw_metadata": {
+    "latitude": 34.75,
+    "longitude": 32.5,
+    "utc_offset_seconds": 0,
+    "timezone": "GMT",
+    "timezone_abbreviation": "GMT",
+    "elevation": 71.0,
+    "hourly_units": {
+      "time": "unixtime",
+      "shortwave_radiation_previous_day1": "W/m²",
+      "cloud_cover_previous_day1": "%",
+      "shortwave_radiation_previous_day2": "W/m²",
+      "cloud_cover_previous_day2": "%"
+    }
+  },
+  "raw_hours": 17904,
+  "target_hours": 17880,
+  "expected_target_hours": 17880,
+  "padding_hours": 24,
+  "first_target_utc": "2024-09-13T21:00:00+00:00",
+  "last_target_utc": "2026-09-28T20:00:00+00:00",
+  "duplicate_timestamps": 0,
+  "non_hourly_steps": 0,
+  "field_lengths": {
+    "shortwave_radiation_previous_day1": 17904,
+    "cloud_cover_previous_day1": 17904,
+    "shortwave_radiation_previous_day2": 17904,
+    "cloud_cover_previous_day2": 17904
+  },
+  "nulls_all_hours": {
+    "shortwave_radiation_previous_day1": 0,
+    "cloud_cover_previous_day1": 0,
+    "shortwave_radiation_previous_day2": 0,
+    "cloud_cover_previous_day2": 129
+  },
+  "nulls_target_hours": {
+    "shortwave_radiation_previous_day1": 0,
+    "cloud_cover_previous_day1": 0,
+    "shortwave_radiation_previous_day2": 0,
+    "cloud_cover_previous_day2": 129
+  },
+  "source_files_unchanged": true,
+  "limits": [
+    "Previous-day offsets are provider-declared lead times, not verified historical API publication times.",
+    "At target=origin+24h, day2 provides a nominal 24h margin before origin; this is not proof of live availability.",
+    "Original CSV labels have no retained UTC metadata. Fixed +03:00 is recovered from sample equality, not inferred with DST rules.",
+    "Radiation is a preceding-hour mean; cloud is instantaneous. Do not shift radiation to interval starts.",
+    "Pinned IFS 0.25 degree forecast and unpinned historical reconstruction use different grid cells and potentially related models; truth is not independent station measurement.",
+    "Archive availability does not authenticate original operational issue vintages or exclude reconstructed hindcasts.",
+    "The test period was previously inspected. This archive is exploratory model support, not a fresh holdout or claimed improvement."
+  ]
+}

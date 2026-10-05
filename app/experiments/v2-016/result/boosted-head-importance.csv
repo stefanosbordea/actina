@@ -1,0 +1,9 @@
+feature,split_importance,gain_importance
+base_margin,471,168919.43310907483
+nwp_minus_base,81,562.7709747254848
+nwp_cloud,82,892.3355402350426
+margin_cloud,3,12.11555004119873
+hour_sin,0,0.0
+hour_cos,38,67.25481876917183
+month_sin,30,154.71510503813624
+month_cos,51,252.87649149168283

@@ -1,0 +1,11 @@
+test_base_prediction_is_head_input (test_run.ChronologyAndPolicyTests.test_base_prediction_is_head_input) ... ok
+test_inner_purge_and_28_day_stop (test_run.ChronologyAndPolicyTests.test_inner_purge_and_28_day_stop) ... ok
+test_integer_probability_grid_tie (test_run.ChronologyAndPolicyTests.test_integer_probability_grid_tie) ... ok
+test_one_class_head_fails_before_fit (test_run.ChronologyAndPolicyTests.test_one_class_head_fails_before_fit) ... ok
+test_strict_events_and_counts (test_run.ChronologyAndPolicyTests.test_strict_events_and_counts) ... ok
+test_strict_target_purge (test_run.ChronologyAndPolicyTests.test_strict_target_purge) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.009s
+
+OK

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/nwp-alternative-001/review/check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "started_at_utc": "2026-10-04T10:03:15.954544+00:00",
+  "completed_at_utc": "2026-10-04T10:03:16.567752+00:00",
+  "elapsed_seconds": 0.6129292080004234,
+  "exit_status": 0,
+  "standard_library_only": true,
+  "network_requests": 0,
+  "fits": 0,
+  "sha256": {
+    "check.py": "b8917bb5dc96654aec0e31bdaede1b5f643f57b32ff04b04efb4f4cd1337304c",
+    "check.log": "47adb3302d80524b1b8dda748157827aa79feac5322fdf256ad3ccfb57ea9177",
+    "result.json": "b0e32d7b74d12f5d513b1ef142efc75f786a5596fcb93519a0efec1a8e6e91cc"
+  }
+}

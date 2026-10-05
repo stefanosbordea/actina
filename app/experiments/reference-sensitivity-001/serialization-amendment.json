@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-10-04T09:08:22.254279+00:00",
+  "original_protocol_sha256": "6d0493b8ab22067b71bc0c5f64b6212c5a2c32d0fff9dcd5e3b59d65008553d3",
+  "approved_by": "Parent reviewer before any successful scoring",
+  "reason": "Original004 control CSV serialization differs from supplied eval CSV by at most3 ULP; no strict600 decisions changed. Failed initial integrity check retained.",
+  "rule": {
+    "applies_only_to": "Cross-check between supplied original predicted field and frozen004 original point_w_m2",
+    "maximum_ulps": 4,
+    "ulp_scale": "max(math.ulp(supplied),math.ulp(saved004))",
+    "strict_gt600_event_must_match": true,
+    "scored_values": "Unchanged frozen004 point_w_m2",
+    "unchanged_exact_checks": [
+      "timestamps",
+      "joins",
+      "actual labels",
+      "saved event decisions",
+      "missingness",
+      "persistence control"
+    ]
+  },
+  "retention": "Report every numerical difference, count, maximum ULP and absolute difference; original protocol and inputs unchanged.",
+  "diagnostic_sha256": "f3cebb705d2d53ba91e1c2ec7212597f6847ec9c0eb2225b1f2006bdfcd5ded4",
+  "failed_checker_sha256": "b975953fdec02dad42d4282ecfdc829276212e5ee3edc3a411575574a53cca59"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-04T10:32:54.048916+00:00",
+  "completed_at_utc": "2026-10-04T10:33:01.367901+00:00",
+  "wall_seconds": 7.318468833997031,
+  "exit_code": 0,
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "check_invocation": "runpy.run_path('app/experiments/f1-010/review/portable.py')['main']()",
+  "test_command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/f1-010/review",
+    "-p",
+    "test_portable.py",
+    "-v"
+  ],
+  "test_exit_code": 0,
+  "test_count": 8,
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": 2,
+    "OMP_NUM_THREADS": 2,
+    "VECLIB_MAXIMUM_THREADS": 2
+  },
+  "original_files_unchanged": {
+    "app/experiments/f1-010/review/check.py": "e39e89ad2e964154762b5501ce32441e76cfa2edd9f4d285254e45e9bfea2dae",
+    "app/experiments/f1-010/review/result.json": "f9788e79e0d1f6984c0370dad5a0e06e72b60dda3307ff50c4c6152efb728885",
+    "app/experiments/f1-010/review/execution-receipt.json": "c7f083b350bcaf8a011e78643cfe202e35dccab356ae204d9991a104243ee895",
+    "app/experiments/f1-010/run.py": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+    "app/experiments/f1-010/policy.py": "83875cfeedccc6ef1e8f5f1aaf2bfb1d253ad38c8d704bcf5669d1b77d3d6187",
+    "app/experiments/f1-010/PROTOCOL.md": "ce014afdfca37458c3f3429bbbe07f62befcb3f1c053c2dfae5bf3ef1bd5b1da",
+    "app/experiments/f1-010/result/report.json": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3"
+  },
+  "checker_sha256": "1484e2ddf3bf7730c70483338480df6975c1aff994503b55270f422db831ee73",
+  "result_sha256": "831f30a8436729227d4f6e69c900b980d7b8c022de392ca65139165138dc2fde",
+  "test_log_sha256": "e3ecc5c978702f478b757b77987fe4f367e163ee001303cbf60894b0c238fa04"
+}

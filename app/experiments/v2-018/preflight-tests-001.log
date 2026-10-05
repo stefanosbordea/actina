@@ -1,0 +1,9 @@
+test_empty_and_separate_source_coverage (test_run.CausalContextTests.test_empty_and_separate_source_coverage) ... ok
+test_exact_window_boundaries (test_run.CausalContextTests.test_exact_window_boundaries) ... ok
+test_future_observations_cannot_change_features_or_call (test_run.CausalContextTests.test_future_observations_cannot_change_features_or_call) ... ok
+test_prediction_origin_is_24_hours_before_target (test_run.CausalContextTests.test_prediction_origin_is_24_hours_before_target) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.051s
+
+OK

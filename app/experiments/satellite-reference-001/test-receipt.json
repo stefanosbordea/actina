@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/satellite-reference-001",
+    "-p",
+    "test_fetch.py",
+    "-v"
+  ],
+  "exit_status": 0,
+  "finished_at_utc": "2026-10-04T09:01:50.516494+00:00",
+  "log_sha256": "5a7bf402c5a9f098f195065a55858582fdbdaf1c29c3a74dc20ffeff4c2c64c2",
+  "source_sha256": {
+    "fetch.py": "c7a1e45d76a8d9ab102c743652a7241502aa2670a494f6254af1caa1be8233ad",
+    "test_fetch.py": "d07dfa3809d1324c238ccd220fbb0e77a1ab7daeb96bfbd0bda501a969636278",
+    "PROTOCOL.md": "a63f78569ffed0c23140dc945e354cef043618e2d1979f39a5ba84ac1816bff7"
+  }
+}

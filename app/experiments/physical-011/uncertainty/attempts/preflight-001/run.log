@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/uncertainty/check.py", line 108, in <module>
+    result = main()
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/uncertainty/check.py", line 49, in main
+    checked = fixtures()
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-011/uncertainty/check.py", line 44, in fixtures
+    assert np.array_equal(statistics([1., 999., 3.], [[1, 0, 1]]), [[2., 3.]])
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

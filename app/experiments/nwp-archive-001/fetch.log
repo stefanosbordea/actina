@@ -1,0 +1,12 @@
+{
+  "raw_hours": 17904,
+  "target_hours": 17880,
+  "padding_hours": 24,
+  "nulls_target_hours": {
+    "shortwave_radiation_previous_day1": 0,
+    "cloud_cover_previous_day1": 0,
+    "shortwave_radiation_previous_day2": 0,
+    "cloud_cover_previous_day2": 129
+  },
+  "source_files_unchanged": true
+}

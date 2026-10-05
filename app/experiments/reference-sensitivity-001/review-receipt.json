@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "command": "python3 -B app/experiments/reference-sensitivity-001/review.py",
+  "working_directory": "repository root",
+  "exit_status": 0,
+  "receipt_written_at_utc": "2026-10-04T09:12:29.485981+00:00",
+  "comparisons_recomputed": 48,
+  "frozen_inputs_verified": 22,
+  "report_sha256": "883faf552e5f6588d683e02ccbcbf1f91b87c03fc2173f2bb00e1d7eea417595",
+  "review_script_sha256": "5032a8fc335b15bdc8e978e1d0b372292e6dd42a96a3d154d71859afdd47b68e",
+  "scope": "Independent metric recomputation from frozen prediction files, original origins and raw satellite response. No imports from the scored checker and no network request. UTC target keys derived from original origin plus24 hours under fixed UTC+03. Receipt records the completed command; it is not an externally attested timestamp."
+}

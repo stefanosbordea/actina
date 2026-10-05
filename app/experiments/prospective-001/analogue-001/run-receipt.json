@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "status": "LOCKED_AND_INDEPENDENTLY_RECONSTRUCTED_RESEARCH_ONLY",
+  "exit_status": 0,
+  "fixture_exit_status": 0,
+  "fixture_tests": 7,
+  "overwrite_guard": {
+    "expected_exit_status": 1,
+    "actual_exit_status": 1,
+    "retained_lock_unchanged": true
+  },
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/prospective-001/analogue-001/run.py --output app/experiments/prospective-001/analogue-001/lock-001 > app/experiments/prospective-001/analogue-001/run.log 2>&1",
+  "working_directory": "repository root",
+  "actual_shell_wall_seconds": 1.6099062499999999,
+  "thread_limits": {
+    "OMP_NUM_THREADS": 2,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "no_new_packages": true,
+  "network_used": false,
+  "future_truth_accessed": false,
+  "lock_started_at_utc": "2026-10-04T09:10:17.275452+00:00",
+  "lock_finished_at_utc": "2026-10-04T09:10:17.962142+00:00",
+  "artifacts_sha256": {
+    "PROTOCOL.md": "b21cf821cfdffa00a913e372f445d9ec77dcfb14bb7eac9f58f4fb7ff2790fca",
+    "input-identities.json": "73be720d4f9341c8da5cf8bbb951677556c39a344523839c7c3d16b74851b098",
+    "run.py": "3680e5733f4ec19be48df34d6011345eaa225a88983a23d5d989d277f5f7f039",
+    "test_adapter.py": "51c08dc300bc09b062e233d72e4361e7778298edfab4cca12a00bfb7c0a2507b",
+    "fixtures.log": "b5985bb5d4095da848c1e4e38b9358c2d452a471f0f3fb2fd143db7544944125",
+    "overwrite-guard.log": "30e36a5a0fdc17b57831fbd1e19c7d923ea230d959c6de9dadbff9a62f5e8ab9",
+    "run.log": "35ed5870fa0db22068fba2ace9f2e56e7cc8f99c8e5e2dadc6ae250ed4d4302a",
+    "lock-001/manifest.json": "e20601b627197a67a81b1e4867625de4697cb755ec5c9d2b1886f0bb3b5a8f8c",
+    "review-distance-diagnostic.json": "290fae728ae99765b6b3d35b94427b9a6d51834f2039ce143fd340d1e3cb385a",
+    "review-lock-receipt.json": "ce7c0e53c2fef0d27e723eb54796c0debd111141802082d95578354ccdcd85f1",
+    "review-lock-result.json": "d18f85253457819503304645c25a698d204106fa8d2cf1e8af773df853749ee2",
+    "review-lock-run.log": "d18f85253457819503304645c25a698d204106fa8d2cf1e8af773df853749ee2",
+    "review-lock-v2-receipt.json": "43b74afb90f7d1ff2e69bbe4c11b40e21846d41ec449939ecad9d160f4af2bcf",
+    "review-lock-v2-result.json": "20d959614036366c029afc7fd97f4bc6673870ba8a5b15815696d55dc9e3fa4c",
+    "review-lock-v2-run.log": "20d959614036366c029afc7fd97f4bc6673870ba8a5b15815696d55dc9e3fa4c",
+    "review-lock-v2.py": "55bc6af397b21e0db19580ad49787e88e389c5987411758ec8828e1a1ff65fbc",
+    "review-lock.py": "792a12290eebb104aab9e5731b2faac60a7095fe79b689310070882b18a17546"
+  },
+  "resolved_runtime_executable": "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+  "fixture_command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/prospective-001/analogue-001/test_adapter.py > app/experiments/prospective-001/analogue-001/fixtures.log 2>&1",
+  "candidate_availability_timing": {
+    "lock_finished_after_capture_seconds": 687.222444,
+    "scope": "Original prediction lead fields remain forecast-capture-relative. Candidate availability is the later analogue lock, not the earlier raw forecast capture. Prospective under the frozen before-interval rule; not available 24h before the entire first primary interval.",
+    "by_target_set": {
+      "primary": {
+        "hours": 24,
+        "first_interval_start_lead_seconds_from_lock": 85782.037858,
+        "last_interval_start_lead_seconds_from_lock": 168582.037858,
+        "first_valid_endpoint_lead_seconds_from_lock": 89382.037858,
+        "last_valid_endpoint_lead_seconds_from_lock": 172182.037858
+      },
+      "secondary": {
+        "hours": 24,
+        "first_interval_start_lead_seconds_from_lock": 172182.037858,
+        "last_interval_start_lead_seconds_from_lock": 254982.037858,
+        "first_valid_endpoint_lead_seconds_from_lock": 175782.037858,
+        "last_valid_endpoint_lead_seconds_from_lock": 258582.037858
+      }
+    }
+  },
+  "independent_reconstruction": {
+    "status": "PASS_NO_BLOCKER",
+    "exit_status": 0,
+    "command": [
+      "python3",
+      "-B",
+      "app/experiments/prospective-001/analogue-001/review-lock-v2.py"
+    ],
+    "completed_at_utc": "2026-10-04T09:17:35.848721+00:00",
+    "historical_rows": 17832,
+    "queries": 48,
+    "ordered_neighbors": 3072,
+    "scenario_values": 6144,
+    "predictions": 144,
+    "prior_attempt": "Initial independent floating-scaler reconstruction changed one near-tie order within the same64 zero-residual sources; failed audit and diagnosis retained. Saved fitted parameters independently validated, then used for exact operational reconstruction. No lock edits.",
+    "numeric_comparison": "Independent geometry/transform validation relative1e-11/absolute1e-10; apply frozen fitted parameter values and scalar operation order for exact neighbor IDs and decisions"
+  }
+}

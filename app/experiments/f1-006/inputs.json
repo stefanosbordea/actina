@@ -1,0 +1,12 @@
+{
+  "data/features.csv": "9e7a4a40858f1ef5c483a510e04600dc861d37dd572b3ca8767ef7c68c0ca606",
+  "data/paphos_weather_data.csv": "4c917e1c1be6385efefe5054abdf6851724448c547598888c7c3645eeef4e90d",
+  "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+  "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620",
+  "app/experiments/f1-003/result/joined-features.csv": "c1c042cfa151c3f3ba853c379a610a97a8975e97ca38f53ba7e774b375aea94d",
+  "app/experiments/f1-004/result/joined-inputs.csv": "31522da1c79e6c8283900d62cb2b07ef934bce65515a577c414fc8e0c263a1b7",
+  "app/experiments/f1-004/geometry.py": "6a59a4aa25a6169c930dc4031122df383b6cc0f51cd0ffc8da603dd9d1cf6a74",
+  "app/experiments/nwp-archive-001/archive.json": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+  "app/experiments/satellite-reference-001/result/reference-full.csv": "1c95569b0b1d0d2bea3910e01e917a41dc37c7aedee3d25a7477af55bf7fc7df",
+  "app/experiments/f1-006/PROTOCOL.md": "d764be04235af9dd860867a3374bf2651d8cca6cc736e2d4e94242ee3a5c7446"
+}

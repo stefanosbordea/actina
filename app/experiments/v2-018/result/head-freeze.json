@@ -1,0 +1,117 @@
+{
+  "frozen_at_utc": "2026-10-04T13:24:55.137750+00:00",
+  "lock_sha256": "45022dc166aa023e1a0d4b8675ee237c93e438f1dc50ea1a19f3865e2228563e",
+  "selected_training_thresholds": {
+    "core": {
+      "tick": 106,
+      "threshold": 0.53,
+      "tp": 1328,
+      "fp": 61,
+      "fn": 96,
+      "tn": 6598,
+      "precision": 0.9560835133189345,
+      "recall": 0.9325842696629213,
+      "f1": 0.9441876999644507,
+      "f1_exact": "2656/2813",
+      "raw_ecmwf_fp_cap": 63,
+      "eligible": true
+    },
+    "expanded": {
+      "tick": 105,
+      "threshold": 0.525,
+      "tp": 1329,
+      "fp": 60,
+      "fn": 95,
+      "tn": 6599,
+      "precision": 0.9568034557235421,
+      "recall": 0.9332865168539326,
+      "f1": 0.9448986846782794,
+      "f1_exact": "2658/2813",
+      "raw_ecmwf_fp_cap": 63,
+      "eligible": true
+    }
+  },
+  "fits": [
+    {
+      "arm": "core",
+      "fold": 3,
+      "fit_rows": 2568,
+      "held_rows": 2160,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 4,
+      "fit_rows": 4728,
+      "held_rows": 2184,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 5,
+      "fit_rows": 6912,
+      "held_rows": 2208,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 6,
+      "fit_rows": 9120,
+      "held_rows": 1531,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 3,
+      "fit_rows": 2568,
+      "held_rows": 2160,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 4,
+      "fit_rows": 4728,
+      "held_rows": 2184,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 5,
+      "fit_rows": 6912,
+      "held_rows": 2208,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 6,
+      "fit_rows": 9120,
+      "held_rows": 1531,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00"
+    }
+  ],
+  "model_sha256": {
+    "core-final.txt": "a7ce9fa345d1d55a494e335375636993f86dce3c598464399ae84db78ca8b1c8",
+    "core-fold5.txt": "191a5395b954e2641f3bba64faa5e88f55ed0b70cb47f20c61f58629afba16f9",
+    "core-fold4.txt": "a29dcfc1f00d83671e2914d81ec7549affba4d7983c5a895eeb4df032721c4a8",
+    "core-fold6.txt": "1df13e351069a8cfba65ae9e97dc2a298ba023f8d91f0973211b183112a369a2",
+    "core-fold3.txt": "25a82e94675ee5de6755557e623511ebf346b1c4e14b815fcb3ea20a33cac339",
+    "expanded-fold6.txt": "dfa792b78f5b299839fe6e4d00fb3a0efc3ab577424cd63edd9db67d74fc8b85",
+    "expanded-fold5.txt": "570a55b4015c8ce68b8da8b138402fe341161b98bc0621b2ea5427abe4d2f611",
+    "expanded-final.txt": "e4e6b0703c28fe77eab29f6139f6b3017d96f928098f8e5b0272162f4b8572f2",
+    "expanded-fold4.txt": "64dd2d21bcc1048f2be87875b14fd8d15550dae696e82a8ff898eba33cd62e89",
+    "expanded-fold3.txt": "6b5f28c39a78fa90d2a245d084567ada811f935540b45a0a44d358d2acc98212"
+  },
+  "training_context_sha256": {
+    "training-context.csv": "2b986598cdb4046188a652da51b91fefea011216afa7bcf54618e5e06a512b07",
+    "training-context-coverage.csv": "6b6ba2695bf8d7d706afae95b75723af3dc49e228dac8c9fb505ebf79fe91290"
+  },
+  "note": "Head fits and thresholds complete. Validation observation stream has not been loaded by this runner."
+}

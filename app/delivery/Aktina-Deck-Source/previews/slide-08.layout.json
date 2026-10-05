@@ -1,0 +1,888 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/fu1gfa1s",
+    "id": "fu1gfa1s",
+    "slide": 8,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FAFAFA",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/id0fu50z",
+      "id": "9",
+      "name": "slide-title",
+      "bbox": [
+        64,
+        42,
+        1152,
+        92
+      ],
+      "geometry": "rect",
+      "text": "Archived weather inputs",
+      "textPreview": "Archived weather inputs",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Archived weather inputs"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Archived weather inputs",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Arial",
+            "color": "#101010",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Archived weather inputs",
+              "fontSize": 48,
+              "typeface": "Arial",
+              "color": "#101010",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18byd4zy",
+      "id": "2",
+      "name": "slide-number",
+      "bbox": [
+        1120,
+        670,
+        96,
+        24
+      ],
+      "geometry": "rect",
+      "text": "08 / 12",
+      "textPreview": "08 / 12",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08 / 12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08 / 12",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Arial",
+            "color": "#737373",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08 / 12",
+              "fontSize": 18,
+              "typeface": "Arial",
+              "color": "#737373"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7ydoret",
+      "id": "10",
+      "bbox": [
+        68,
+        142,
+        1130,
+        52
+      ],
+      "geometry": "rect",
+      "text": "Retrospective comparison, the same 3,567 test hours",
+      "textPreview": "Retrospective comparison, the same 3,567 test hours",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Retrospective comparison, the same 3,567 test hours"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Retrospective comparison, the same 3,567 test hours",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "Arial",
+            "color": "#626262"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Retrospective comparison, the same 3,567 test hours",
+              "fontSize": 30,
+              "typeface": "Arial",
+              "color": "#626262"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/1kb6903a",
+      "id": "15",
+      "name": "Chart",
+      "bbox": [
+        60,
+        227,
+        490,
+        330
+      ],
+      "chartType": "bar"
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/5sre1gnq",
+      "id": "16",
+      "bbox": [
+        584,
+        242,
+        627,
+        264
+      ],
+      "text": "Precision | Recall | F1\nOriginal | 97.57% | 95.54% | 96.55%\nDay2 forecast | 98.51% | 98.32% | 98.41%\nRaw analogue | 98.41% | 98.32% | 98.37%",
+      "textPreview": "Precision | Recall | F1 | Original | 97.57% | 95.54% | 96.55% | Day2 forecast | 98.51% | 98.32% | 98.41% | Raw analogue | 98.41% | 98.32%...",
+      "rows": 4,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            584,
+            242,
+            205,
+            66
+          ],
+          "fillColor": "#FAFAFA"
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            789,
+            242,
+            151,
+            66
+          ],
+          "text": "Precision",
+          "textPreview": "Precision",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Precision",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Precision",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            940,
+            242,
+            138,
+            66
+          ],
+          "text": "Recall",
+          "textPreview": "Recall",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Recall",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Recall",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            1078,
+            242,
+            133,
+            66
+          ],
+          "text": "F1",
+          "textPreview": "F1",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "F1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "F1",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#626262",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            584,
+            308,
+            205,
+            66
+          ],
+          "text": "Original",
+          "textPreview": "Original",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Original",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Original",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            789,
+            308,
+            151,
+            66
+          ],
+          "text": "97.57%",
+          "textPreview": "97.57%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "97.57%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "97.57%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            940,
+            308,
+            138,
+            66
+          ],
+          "text": "95.54%",
+          "textPreview": "95.54%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "95.54%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "95.54%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            1078,
+            308,
+            133,
+            66
+          ],
+          "text": "96.55%",
+          "textPreview": "96.55%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "96.55%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "96.55%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            584,
+            374,
+            205,
+            66
+          ],
+          "text": "Day2 forecast",
+          "textPreview": "Day2 forecast",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Day2 forecast",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Day2 forecast",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            789,
+            374,
+            151,
+            66
+          ],
+          "text": "98.51%",
+          "textPreview": "98.51%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.51%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.51%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            940,
+            374,
+            138,
+            66
+          ],
+          "text": "98.32%",
+          "textPreview": "98.32%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.32%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.32%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            1078,
+            374,
+            133,
+            66
+          ],
+          "text": "98.41%",
+          "textPreview": "98.41%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.41%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.41%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            584,
+            440,
+            205,
+            66
+          ],
+          "text": "Raw analogue",
+          "textPreview": "Raw analogue",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Raw analogue",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Raw analogue",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            789,
+            440,
+            151,
+            66
+          ],
+          "text": "98.41%",
+          "textPreview": "98.41%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.41%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.41%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            940,
+            440,
+            138,
+            66
+          ],
+          "text": "98.32%",
+          "textPreview": "98.32%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.32%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.32%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            1078,
+            440,
+            133,
+            66
+          ],
+          "text": "98.37%",
+          "textPreview": "98.37%",
+          "fillColor": "#FAFAFA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "98.37%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "98.37%",
+                  "fontSize": 24,
+                  "typeface": "Arial",
+                  "color": "#141414"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n6pwfmd8",
+      "id": "13",
+      "bbox": [
+        68,
+        570,
+        1135,
+        47
+      ],
+      "geometry": "rect",
+      "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+      "textPreview": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Arial",
+            "color": "#141414",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Raw analogue lowers MAE. False alarms rise from 15 to 16.",
+              "fontSize": 28,
+              "typeface": "Arial",
+              "color": "#141414",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0jydkreh",
+      "id": "14",
+      "bbox": [
+        68,
+        641,
+        1110,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
+      "textPreview": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#626262"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Model-derived reference. Previously inspected test. Historical forecast publication time unverified.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#626262"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

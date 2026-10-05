@@ -1,0 +1,15 @@
+{
+  "app/experiments/satellite-reference-001/result/response.json": "207b57c01a0a5cb6b8b71307b905e116d25c5f9ca845940898ae6628f516666c",
+  "app/experiments/satellite-reference-001/result/reference-full.csv": "1c95569b0b1d0d2bea3910e01e917a41dc37c7aedee3d25a7477af55bf7fc7df",
+  "app/experiments/satellite-reference-001/result/request.json": "a982aee714240ca6597f4dff613d9ecb9dbef951d45e4acaa6239515763e7dda",
+  "app/experiments/satellite-reference-001/result/response-metadata.json": "2640e534a860dc7edc21aabc106dc340f426ef3c27b6c27ab7532cee511a2792",
+  "app/experiments/satellite-reference-001/result/protocol.json": "d129d798e03847a6feae43135ccee84eb605a88953da50e05aa3f9e87e25e1ab",
+  "app/experiments/satellite-reference-001/result/summary.json": "cb15213e6cca6da3296119f1ffaf019eeb3790e0980b854c6d3b4f8317f7d658",
+  "app/experiments/satellite-reference-001/fetch.py": "c7a1e45d76a8d9ab102c743652a7241502aa2670a494f6254af1caa1be8233ad",
+  "app/experiments/f1-006/result/features.csv": "f0cc88f0068a7b81185dde4e5f9e09f268a405a99d6d34119eeddb7231a87908",
+  "app/experiments/f1-006/result/feature-targets.csv": "140892e58b34a1baa6a0bbb506060a74c9be6ada134cb3b5c2ed6974208a7fca",
+  "app/experiments/f1-006/result/validation-training-origins.csv": "9b9022662e147c85bc9fb66c2c72310fdb0a994ba041c319add3c935a15f0319",
+  "app/experiments/f1-006/result/test-training-origins.csv": "5018f6b26084475423f3484247e83a673adfc5b732ad41808bb84a0a06760b87",
+  "app/experiments/f1-006/result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+  "app/experiments/reference-training-001/PROTOCOL.md": "1d13f673bc82a8054e143f7ac2fd5e7fc1786f9963d3ed1a8b5e633edafafaf0"
+}

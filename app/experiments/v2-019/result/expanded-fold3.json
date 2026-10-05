@@ -1,0 +1,58 @@
+{
+  "features": [
+    "v2_margin",
+    "day1_minus_v2",
+    "day1_cloud",
+    "v2_solar_ratio",
+    "target_hour_sin",
+    "target_hour_cos",
+    "target_season_sin",
+    "target_season_cos",
+    "ecmwf_minus_v2",
+    "gfs_minus_v2",
+    "forecast_disagreement",
+    "past_v2_bias",
+    "past_v2_mae",
+    "past_ecmwf_bias",
+    "past_ecmwf_mae"
+  ],
+  "coefficients": [
+    4.379362465424664,
+    0.587230949142215,
+    -0.2027865171972559,
+    -0.0038452842841020097,
+    0.32713540565925653,
+    -0.37565226894646486,
+    -0.8037508846197131,
+    -0.9288394152459662,
+    2.623017933726228,
+    -0.298154010888044,
+    0.20789065483872526,
+    0.06647234397941718,
+    0.008307843372265382,
+    -0.0688586215641986,
+    -0.20356813453326722
+  ],
+  "intercept": -0.9782250885996111,
+  "classes": [
+    false,
+    true
+  ],
+  "iterations": 36,
+  "parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 0,
+    "solver": "lbfgs",
+    "tol": 1e-08,
+    "verbose": 0,
+    "warm_start": false
+  }
+}

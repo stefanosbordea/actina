@@ -1,0 +1,14 @@
+{
+  "receipt_written_at_utc": "2026-10-04T10:46:34.318327+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/physical-011/headroom/check.py",
+  "exit_code": 0,
+  "exit_evidence": "Observed completed process12344 via tool write_stdin, exit0",
+  "wall_seconds_from_program": 3.6149392500083195,
+  "sha256": {
+    "PROTOCOL.md": "47d63ccc38b27a7c643573883cab9e17ce5466a97408793e3aad5ed13f954eb7",
+    "check.py": "a002511549e1b029e37627e8ac082613fb2710f9090933bc9fe6e21a37975f1b",
+    "run.log": "70ac5108cd6d99c89353e94c3df031a252e01a927024fe8626eec6ef67735076",
+    "result/report.json": "786aa0181b2710d18d09809ac6e7ec0dbf83109e634fc6b69d3d08dacbcd8f49",
+    "result/outputs.json": "4810ea9a936960cb18172471d53141bbbedb07de31cda35f7926515f47ecd0be"
+  }
+}

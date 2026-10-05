@@ -1,0 +1,139 @@
+{
+  "frozen_at_utc": "2026-10-04T13:14:34.541319+00:00",
+  "lock_sha256": "612fa78a72adbb0f195ca7e00071fd03f2f8d81fc4cdef6c108b5bd750813da9",
+  "selected_training_thresholds": {
+    "core": {
+      "tick": 111,
+      "threshold": 0.555,
+      "tp": 1306,
+      "fp": 62,
+      "fn": 118,
+      "tn": 6597,
+      "precision": 0.9546783625730995,
+      "recall": 0.9171348314606742,
+      "f1": 0.9355300859598854,
+      "f1_exact": "653/698",
+      "raw_ecmwf_fp_cap": 63,
+      "eligible": true
+    },
+    "expanded": {
+      "tick": 106,
+      "threshold": 0.53,
+      "tp": 1328,
+      "fp": 61,
+      "fn": 96,
+      "tn": 6598,
+      "precision": 0.9560835133189345,
+      "recall": 0.9325842696629213,
+      "f1": 0.9441876999644507,
+      "f1_exact": "2656/2813",
+      "raw_ecmwf_fp_cap": 63,
+      "eligible": true
+    }
+  },
+  "fits": [
+    {
+      "arm": "core",
+      "fold": 3,
+      "fit_rows": 2568,
+      "held_rows": 2160,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 4,
+      "fit_rows": 4728,
+      "held_rows": 2184,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 5,
+      "fit_rows": 6912,
+      "held_rows": 2208,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00"
+    },
+    {
+      "arm": "core",
+      "fold": 6,
+      "fit_rows": 9120,
+      "held_rows": 1531,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 3,
+      "fit_rows": 2568,
+      "held_rows": 2160,
+      "fit_target_last": "2024-12-31 23:00:00",
+      "held_origin_first": "2025-01-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 4,
+      "fit_rows": 4728,
+      "held_rows": 2184,
+      "fit_target_last": "2025-03-31 23:00:00",
+      "held_origin_first": "2025-04-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 5,
+      "fit_rows": 6912,
+      "held_rows": 2208,
+      "fit_target_last": "2025-06-30 23:00:00",
+      "held_origin_first": "2025-07-01 00:00:00"
+    },
+    {
+      "arm": "expanded",
+      "fold": 6,
+      "fit_rows": 9120,
+      "held_rows": 1531,
+      "fit_target_last": "2025-09-30 23:00:00",
+      "held_origin_first": "2025-10-01 00:00:00"
+    }
+  ],
+  "feature_names": {
+    "core": [
+      "v2_margin",
+      "day1_minus_v2",
+      "day1_cloud",
+      "v2_solar_ratio",
+      "target_hour_sin",
+      "target_hour_cos",
+      "target_season_sin",
+      "target_season_cos"
+    ],
+    "expanded": [
+      "v2_margin",
+      "day1_minus_v2",
+      "day1_cloud",
+      "v2_solar_ratio",
+      "target_hour_sin",
+      "target_hour_cos",
+      "target_season_sin",
+      "target_season_cos",
+      "ecmwf_minus_v2",
+      "gfs_minus_v2",
+      "forecast_disagreement"
+    ]
+  },
+  "frozen_files_sha256": {
+    "core-final.txt": "a9d23626b9a1ae3855cdbd307b75bd5746fdff63c54f71ee89b1b6468a0b007d",
+    "core-fold5.txt": "4ef9b55400f39d85c06bf90ae0f1c5c13ca06b727a7d780fadd9a2556fbca9b1",
+    "core-fold4.txt": "6330e84f9629718303e612ab01bb3d68408bf2e2845b58384a6cbd35794bd12e",
+    "core-fold6.txt": "40ff591e86b26d72207120324f65e3548a6ac7a845170afc306660bdd41b8cf4",
+    "core-fold3.txt": "1796ca43a53dfdd9afd3bf71dda5a3850cb93a0a390234e1ce7466030cd3d9ae",
+    "expanded-fold6.txt": "1df13e351069a8cfba65ae9e97dc2a298ba023f8d91f0973211b183112a369a2",
+    "expanded-fold5.txt": "191a5395b954e2641f3bba64faa5e88f55ed0b70cb47f20c61f58629afba16f9",
+    "expanded-final.txt": "a7ce9fa345d1d55a494e335375636993f86dce3c598464399ae84db78ca8b1c8",
+    "expanded-fold4.txt": "a29dcfc1f00d83671e2914d81ec7549affba4d7983c5a895eeb4df032721c4a8",
+    "expanded-fold3.txt": "25a82e94675ee5de6755557e623511ebf346b1c4e14b815fcb3ea20a33cac339",
+    "validation-decisions.csv": "0e7685df95f09e2d087ef1ec143221d320e8b1770f4e7be10c81d460bbe1fba4"
+  },
+  "note": "No validation outcome file has been parsed. Inadmissible arms have no event decisions."
+}

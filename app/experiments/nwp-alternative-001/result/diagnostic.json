@@ -1,0 +1,133 @@
+{
+  "status": "SOURCE_QUALITY_LIMITATION",
+  "original_strict_intake_status": "FAILED",
+  "raw_response_sha256": "e41f4d3fbc498d4fb6e6be7706af3090904124291c2528cf55d2e9c9a4f14d19",
+  "raw_bytes": 330655,
+  "raw_hours": 17856,
+  "target_hours": 17832,
+  "padding_hours": 24,
+  "exact_utc_joins": true,
+  "radiation_schema_valid": true,
+  "null_counts_all": {
+    "shortwave_radiation_previous_day2": 0,
+    "cloud_cover_previous_day2": 0
+  },
+  "null_counts_targets": {
+    "radiation": 0,
+    "cloud": 0
+  },
+  "invalid_cloud_all": 8,
+  "invalid_cloud_targets": 8,
+  "invalid_cloud_rows": [
+    {
+      "feature_time": "2024-11-08 15:00:00",
+      "target_time": "2024-11-09 15:00:00",
+      "target_epoch_utc": 1731153600,
+      "valid_time_utc": "2024-11-09T12:00:00+00:00",
+      "radiation_interval_start_utc": "2024-11-09T11:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 463.0,
+      "gfs_day2_cloud_percent_raw": 101,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-01-03 03:00:00",
+      "target_time": "2025-01-04 03:00:00",
+      "target_epoch_utc": 1735948800,
+      "valid_time_utc": "2025-01-04T00:00:00+00:00",
+      "radiation_interval_start_utc": "2025-01-03T23:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 0.0,
+      "gfs_day2_cloud_percent_raw": 101,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-01-15 15:00:00",
+      "target_time": "2025-01-16 15:00:00",
+      "target_epoch_utc": 1737028800,
+      "valid_time_utc": "2025-01-16T12:00:00+00:00",
+      "radiation_interval_start_utc": "2025-01-16T11:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 472.0,
+      "gfs_day2_cloud_percent_raw": 101,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-03-05 15:00:00",
+      "target_time": "2025-03-06 15:00:00",
+      "target_epoch_utc": 1741262400,
+      "valid_time_utc": "2025-03-06T12:00:00+00:00",
+      "radiation_interval_start_utc": "2025-03-06T11:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 650.0,
+      "gfs_day2_cloud_percent_raw": 101,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-04-22 09:00:00",
+      "target_time": "2025-04-23 09:00:00",
+      "target_epoch_utc": 1745388000,
+      "valid_time_utc": "2025-04-23T06:00:00+00:00",
+      "radiation_interval_start_utc": "2025-04-23T05:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 430.0,
+      "gfs_day2_cloud_percent_raw": 101,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-05-08 15:00:00",
+      "target_time": "2025-05-09 15:00:00",
+      "target_epoch_utc": 1746792000,
+      "valid_time_utc": "2025-05-09T12:00:00+00:00",
+      "radiation_interval_start_utc": "2025-05-09T11:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 912.0,
+      "gfs_day2_cloud_percent_raw": -1,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-05-29 15:00:00",
+      "target_time": "2025-05-30 15:00:00",
+      "target_epoch_utc": 1748606400,
+      "valid_time_utc": "2025-05-30T12:00:00+00:00",
+      "radiation_interval_start_utc": "2025-05-30T11:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 921.0,
+      "gfs_day2_cloud_percent_raw": -1,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    },
+    {
+      "feature_time": "2025-11-13 09:00:00",
+      "target_time": "2025-11-14 09:00:00",
+      "target_epoch_utc": 1763100000,
+      "valid_time_utc": "2025-11-14T06:00:00+00:00",
+      "radiation_interval_start_utc": "2025-11-14T05:00:00+00:00",
+      "gfs_day2_radiation_w_m2": 155.0,
+      "gfs_day2_cloud_percent_raw": -1,
+      "radiation_missing": 0,
+      "cloud_missing": 0,
+      "cloud_out_of_range": 1
+    }
+  ],
+  "returned_grid": {
+    "latitude": 34.734787,
+    "longitude": 32.460938,
+    "elevation": 71.0
+  },
+  "original_source_hashes_unchanged": true,
+  "scores_computed": 0,
+  "models_fitted": 0,
+  "additional_data_requests": 0,
+  "restriction": "This diagnostic join preserves invalid raw cloud values. No imputation/clipping or downstream-use approval. A separate frozen experiment must declare its feature-quality policy before scoring.",
+  "artifacts_sha256": {
+    "diagnostic-join.csv": "6a201331af1ef8d8220251397cad86b1eccde0bf6b337f55c051442fd8039644",
+    "quality-flags.csv": "e5e816554f13a6ed8015e248d1ad7c0872b24a6d61871bdb4b330a2e7172801c"
+  }
+}

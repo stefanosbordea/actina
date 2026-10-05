@@ -1,0 +1,45 @@
+{
+  "scope": "Independent hand-derived expectations saved before the historical output review. No historical outcome was used.",
+  "cvar90": [
+    {"id": "negative_constant", "losses": [-4, -4, -4], "expected": -4},
+    {"id": "fractional_tail", "losses": [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 10], "expected_fraction": "100/11"},
+    {"id": "64_ordered", "losses_range_inclusive": [0, 63], "expected_fraction": "1929/32"},
+    {"id": "ties", "losses": [7, 7, 0, -3], "expected": 7}
+  ],
+  "dependence": {
+    "production_m3_h": 120,
+    "sec_kwh_m3": 3.4,
+    "load_kw": 408,
+    "scenario_count": 2,
+    "variable_endpoint_hours": [0, 1],
+    "all_other_hours_solar_kw": 408,
+    "coherent_first_two_solar_kw": [[0, 0], [408, 408]],
+    "shuffled_first_two_solar_kw": [[0, 408], [408, 0]],
+    "hourly_price_eur_kwh": 0.13,
+    "coherent_daily_grid_kwh": [816, 0],
+    "shuffled_daily_grid_kwh": [408, 408],
+    "both_expected_daily_grid_kwh": 408,
+    "coherent_cvar90_grid_kwh": 816,
+    "shuffled_cvar90_grid_kwh": 408,
+    "both_expected_daily_cost_eur": 53.04,
+    "coherent_cvar90_cost_eur": 106.08,
+    "shuffled_cvar90_cost_eur": 53.04,
+    "interpretation": "Equal per-hour marginals preserve expected additive cost but not the daily tail. This is an algebraic counterexample, not empirical evidence for coherent forecasting."
+  },
+  "counterfactual": {
+    "schedule": "q=q0",
+    "expected_loss_every_scenario": 0,
+    "expected_cvar90_every_reference": 0,
+    "requirement": "Recompute q0 cost on that same scenario and arm. Subtracting raw-point or coherent-arm cost from a different scenario is invalid."
+  },
+  "water": {
+    "flat_rate_m3_h": 120,
+    "hours": 24,
+    "initial_m3": 2000,
+    "demand_m3_h": 120,
+    "expected_min_max_end_m3": [2000, 2000, 2000],
+    "expected_production_m3": 2880,
+    "expected_total_energy_kwh": 9792,
+    "full_demand_served_requires_grid_backup": true
+  }
+}

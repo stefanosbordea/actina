@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "Saved models replayed against retained feature rows; no fit or selection.",
+  "lightgbm_version": "4.7.0",
+  "checks": [
+    {
+      "split": "validation",
+      "method": "small",
+      "hours": 3566,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    },
+    {
+      "split": "validation",
+      "method": "medium",
+      "hours": 3566,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    },
+    {
+      "split": "validation",
+      "method": "larger",
+      "hours": 3566,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    },
+    {
+      "split": "test",
+      "method": "small",
+      "hours": 3567,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    },
+    {
+      "split": "test",
+      "method": "medium",
+      "hours": 3567,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    },
+    {
+      "split": "test",
+      "method": "larger",
+      "hours": 3567,
+      "max_probability_abs_error": 0.0,
+      "selected_and_default_decisions_match": true
+    }
+  ],
+  "input_sha256": {
+    "result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+    "result/features.csv": "f0cc88f0068a7b81185dde4e5f9e09f268a405a99d6d34119eeddb7231a87908",
+    "result/predictions/validation-small.csv": "07f6ac02f6688da01791b9bd3196e8f16f303bce1384bb1d0bda2c3917b920c0",
+    "result/models/validation-small.txt": "1da28bd2ddc3c9d8c0b17abb18111ac8fc07d09ecdd06cf178de005947f16c04",
+    "result/predictions/validation-medium.csv": "1bd21f572c7a9f26be4d6b9599b492e0b079ab8b3ed708cccb4a766bef50a380",
+    "result/models/validation-medium.txt": "d39f5ab40146b6e9161dc97efcac9f0729b4e02178c35fbcd0446eba0886136b",
+    "result/predictions/validation-larger.csv": "68f9739fc0e561532bcb2fb748d934902e148ed84e3a8866c7f1d464824d4dbd",
+    "result/models/validation-larger.txt": "23cab5a78d0bcc08980fda1978fcafab3f89ab1120333cdadc240daa4b459264",
+    "result/predictions/test-small.csv": "3cfefb241130cc754337435d1e2c1941903ce8655c2633552481c9e1b6624c2c",
+    "result/models/test-small.txt": "a33cd5e6644aec477583e01465477ff16eef9556c2145f4f133a7dcdc61ea2a5",
+    "result/predictions/test-medium.csv": "e72f36100e4bf502f292cec76d9e9300a8c283d6e12d4ab71c45eda1157974e2",
+    "result/models/test-medium.txt": "cce71352bcd2659f97e1fec374fd09a648f119b2d8e34b9254b7be4647c0dec7",
+    "result/predictions/test-larger.csv": "1449eca471b6ef341d3017379a343673129b0b25df26d379ebf221c34ef7d534",
+    "result/models/test-larger.txt": "a99d135dfb80217d4ab25eaedcb824945f49dfe81356b938b11022721c18d8d0"
+  },
+  "code_sha256": "d2be039d8f80864cdbb15dbb93d8437f7636d5167b1cb7c9e0002cbe9693e4b3"
+}

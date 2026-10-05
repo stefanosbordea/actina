@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "command": "PYTHONDONTWRITEBYTECODE=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-006/review/check.py > app/experiments/f1-006/review/check.log 2>&1",
+  "exit_status": 0,
+  "actual_shell_wall_seconds": 0.329130917,
+  "recorded_at_utc": "2026-10-04T09:42:15.106587+00:00",
+  "artifacts_sha256": {
+    "check.py": "d1ac1a41cc875dd46527508acec1ff5d8455b39c7a2cdbbee0a351aa8e18cb9c",
+    "check.log": "b0572f1c3462665655ec41fc0161b0a72064d734a87f0fe175967bc712e51e6a",
+    "result.json": "407191ce4467cfb18f32d6db3fe3c6ec255adb1d0814f80f5e7b5800df44eb67"
+  },
+  "no_fitting_or_model_inference": true,
+  "network_used": false,
+  "source_results_unchanged": true
+}

@@ -1,0 +1,200 @@
+{
+  "kind": "independent NOAA geometry fixtures",
+  "source": "https://gml.noaa.gov/grad/solcalc/solareqns.PDF",
+  "method": "Scalar Python standard library; no runner import; no refraction; six midpoints of preceding hour; fixed UTC+03; leap-year denominator based on each sample timestamp. Solar clock phase is midnight=0, noon=pi (not hour-angle phase).",
+  "absolute_tolerance": 1e-10,
+  "fixtures": [
+    {
+      "target_local_fixed_utc_plus_03": "2024-02-29 00:00:00",
+      "midpoint_coszen_samples": [
+        -0.7879197934195622,
+        -0.8047371811259926,
+        -0.8201763404569176,
+        -0.8342078077073627,
+        -0.8468047990499101,
+        -0.8579432615676371
+      ],
+      "mean_coszen": -0.8252981972212304,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 1346.6730559049215,
+      "midpoint_solar_clock_sin": -0.396054167570996,
+      "midpoint_solar_clock_cos": 0.9182271485583757
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2024-02-29 12:00:00",
+      "midpoint_coszen_samples": [
+        0.628672520241533,
+        0.6455378781738267,
+        0.6610240944389921,
+        0.6751017142689666,
+        0.6877439645259874,
+        0.6989268047148018
+      ],
+      "mean_coszen": 0.666167829394018,
+      "scale": 666.167829394018,
+      "midpoint_true_solar_minutes": 626.7574475210647,
+      "midpoint_solar_clock_sin": 0.3957160238816998,
+      "midpoint_solar_clock_cos": -0.9183729244937799
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2024-09-15 07:00:00",
+      "midpoint_coszen_samples": [
+        -0.1115895445839946,
+        -0.07626143588985873,
+        -0.04072495710621291,
+        -0.005047838753990681,
+        0.03070192042237125,
+        0.06645618296175482
+      ],
+      "mean_coszen": -0.022744278824988477,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 344.36337672738705,
+      "midpoint_solar_clock_sin": 0.9976733973101658,
+      "midpoint_solar_clock_cos": 0.06817471891832029
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2024-09-15 13:00:00",
+      "midpoint_coszen_samples": [
+        0.8394182160479173,
+        0.8449230052193182,
+        0.8488797446661851,
+        0.851280840109067,
+        0.8521216600521342,
+        0.8514005446197149
+      ],
+      "mean_coszen": 0.8480040017857228,
+      "scale": 848.0040017857228,
+      "midpoint_true_solar_minutes": 704.457177811119,
+      "midpoint_solar_clock_sin": 0.06776638102362889,
+      "midpoint_solar_clock_cos": -0.9977012165989176
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2024-12-21 08:00:00",
+      "midpoint_coszen_samples": [
+        -0.17100417862935274,
+        -0.1382803721931135,
+        -0.10572476132521598,
+        -0.07339927844151342,
+        -0.04136541810029512,
+        -0.009684120021072551
+      ],
+      "mean_coszen": -0.08990968811842721,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 401.93508902894155,
+      "midpoint_solar_clock_sin": 0.9833064822458149,
+      "midpoint_solar_clock_cos": -0.18195703331655272
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2025-01-01 00:00:00",
+      "midpoint_coszen_samples": [
+        -0.896998879342618,
+        -0.9113102506719732,
+        -0.9243137198046376,
+        -0.9359845310452939,
+        -0.9463004637058956,
+        -0.9552418743963448
+      ],
+      "mean_coszen": -0.9283582864944605,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 1357.0210819855083,
+      "midpoint_solar_clock_sin": -0.35420501573476143,
+      "midpoint_solar_clock_cos": 0.9351677960817179
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2025-03-30 07:00:00",
+      "midpoint_coszen_samples": [
+        -0.1453439617525083,
+        -0.11023298927147314,
+        -0.07484836302779191,
+        -0.03925741993416078,
+        -0.0035278894399115926,
+        0.03227223545580724
+      ],
+      "mean_coszen": -0.056823064661673084,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 334.6029583971151,
+      "midpoint_solar_clock_sin": 0.9938662433559546,
+      "midpoint_solar_clock_cos": 0.11058883450657363
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2025-06-21 13:00:00",
+      "midpoint_coszen_samples": [
+        0.964989784849918,
+        0.9709294047509565,
+        0.9754533160166515,
+        0.9785529116401736,
+        0.9802222950365632,
+        0.9804582912617359
+      ],
+      "mean_coszen": 0.9751010005926665,
+      "scale": 975.1010005926665,
+      "midpoint_true_solar_minutes": 698.3587960467596,
+      "midpoint_solar_clock_sin": 0.09428730006148459,
+      "midpoint_solar_clock_cos": -0.99554502914088
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2025-10-26 07:00:00",
+      "midpoint_coszen_samples": [
+        -0.22165353033449275,
+        -0.18682744893241487,
+        -0.15187383991300152,
+        -0.11685929407990114,
+        -0.08185051702634152,
+        -0.04691420213994983
+      ],
+      "mean_coszen": -0.13432980540435027,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 355.769877741021,
+      "midpoint_solar_clock_sin": 0.999829667207507,
+      "midpoint_solar_clock_cos": 0.018456342317093272
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2025-12-21 13:00:00",
+      "midpoint_coszen_samples": [
+        0.5137265329142935,
+        0.5191713459619499,
+        0.5231972780471189,
+        0.5257966708667755,
+        0.5269645798560578,
+        0.5266987835914404
+      ],
+      "mean_coszen": 0.5225925318729393,
+      "scale": 522.5925318729393,
+      "midpoint_true_solar_minutes": 701.8524380881855,
+      "midpoint_solar_clock_sin": 0.07910095491713699,
+      "midpoint_solar_clock_cos": -0.9968666104004071
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2026-07-03 13:00:00",
+      "midpoint_coszen_samples": [
+        0.9617730426328919,
+        0.9680866393768578,
+        0.9729827506312643,
+        0.9764520386536355,
+        0.9784878809254467,
+        0.979086382776517
+      ],
+      "mean_coszen": 0.9728114558327688,
+      "scale": 972.8114558327688,
+      "midpoint_true_solar_minutes": 695.8298187825699,
+      "midpoint_solar_clock_sin": 0.10526692222667149,
+      "midpoint_solar_clock_cos": -0.9944440029910804
+    },
+    {
+      "target_local_fixed_utc_plus_03": "2026-07-03 23:00:00",
+      "midpoint_coszen_samples": [
+        -0.3361769792525262,
+        -0.35784959275766726,
+        -0.3784171469060045,
+        -0.3978405011022079,
+        -0.4160826919028506,
+        -0.43310900337722985
+      ],
+      "mean_coszen": -0.3865793192164144,
+      "scale": 100,
+      "midpoint_true_solar_minutes": 1295.7495349457104,
+      "midpoint_solar_clock_sin": -0.5886690433918034,
+      "midpoint_solar_clock_cos": 0.808374144410977
+    }
+  ]
+}

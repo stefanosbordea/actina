@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "command": "PYTHONDONTWRITEBYTECODE=1 /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python app/experiments/f1-005/review/check.py > app/experiments/f1-005/review/check.log 2>&1",
+  "exit_status": 0,
+  "actual_shell_wall_seconds": 0.712163708,
+  "recorded_at_utc": "2026-10-04T09:39:50.797832+00:00",
+  "artifacts_sha256": {
+    "analytical-fixtures.json": "682834c138149249c8e64f7e2d643938eb7f7fc2226aa4e0f69f174598eddf72",
+    "api-fixture-result.json": "36ebf7c9eb66a54a43ed7e802dfcee42dce07088c1db727067b8f885ba45b311",
+    "check.py": "fbcc74116b404a438daf10f32b30a3b0c180179a07f0651c110579c3e1a3e306",
+    "check.log": "dd39ddf89fe3dc0b9942ed58702487364cf0fe99c954a3e90e1b9273eec11f2d",
+    "result.json": "904116c41a15084655315397344bed7482c337af5574b278cf0cdc60d954ab9d"
+  },
+  "source_code_unchanged": true,
+  "research_inputs_unchanged": true,
+  "no_fit": true,
+  "network_used": false,
+  "operational_counterexample": {
+    "source": "model/scheduler.py:46,62-66",
+    "original_points": [
+      650,
+      700
+    ],
+    "raw_corrected_points": [
+      900,
+      610
+    ],
+    "guarded_points": [
+      900,
+      610
+    ],
+    "events_both": [
+      true,
+      true
+    ],
+    "hour_ranking_reversed": true,
+    "implication": "Preserved600W/m2 calls do not guarantee preserved dispatch/cost/water trajectories."
+  }
+}

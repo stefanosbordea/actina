@@ -1,0 +1,554 @@
+[
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.0
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.05
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.1
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.2
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.3
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  },
+  {
+    "policy": {
+      "kind": "swap",
+      "margin": 0.5
+    },
+    "metrics": {
+      "weather_full": {
+        "hours": 3567,
+        "tp": 993,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2542,
+        "precision": 0.9851190476190477,
+        "recall": 0.9831683168316832,
+        "f1": 0.9841427155599604,
+        "brier": null
+      },
+      "weather_common": {
+        "hours": 3517,
+        "tp": 977,
+        "fp": 15,
+        "fn": 17,
+        "tn": 2508,
+        "precision": 0.9848790322580645,
+        "recall": 0.9828973843058351,
+        "f1": 0.9838872104733132,
+        "brier": null
+      },
+      "satellite_common": {
+        "hours": 3517,
+        "tp": 950,
+        "fp": 42,
+        "fn": 25,
+        "tn": 2500,
+        "precision": 0.9576612903225806,
+        "recall": 0.9743589743589743,
+        "f1": 0.9659379766141332,
+        "brier": null
+      }
+    },
+    "full_day_swaps": 0,
+    "original_added": 0,
+    "original_removed": 0,
+    "gate": {
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851190476190477,
+          "control": 0.9851190476190477,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9831683168316832,
+          "control": 0.9831683168316832,
+          "status": "equal"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9841427155599604,
+          "control": 0.9841427155599604,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9576612903225806,
+          "control": 0.9576612903225806,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9743589743589743,
+          "control": 0.9743589743589743,
+          "status": "equal"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9659379766141332,
+          "control": 0.9659379766141332,
+          "status": "equal"
+        }
+      ]
+    }
+  }
+]

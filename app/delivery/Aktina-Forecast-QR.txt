@@ -1,0 +1,23 @@
+AKTINA FORECAST QR
+
+https://aktina-pafos-2026.vercel.app/forecast.html
+
+Use the SVG in slides or print. Use the 1440 × 1440 PNG where SVG is unsupported.
+The optional Slide.svg is a 1920 × 1080 card.
+Keep the white border. Resize proportionally and avoid cropping or placing a logo over the code.
+
+Verification
+Generated with the macOS Core Image CIQRCodeGenerator. Error correction Q.
+37 × 37 code modules with a four-module white border.
+PNG rendered with the installed librsvg rsvg-convert, at 32 pixels per module.
+Decoded with macOS Vision VNDetectBarcodesRequest:
+- Original PNG at 1440 × 1440: exact URL confirmed.
+- SVG independently rendered at 1200 × 1200: exact URL confirmed.
+- Slide SVG rendered at 1920 × 1080: exact URL confirmed.
+The original PNG border was checked pixel by pixel for opaque white.
+No package installation, browser, deck edit or message was needed.
+
+SHA-256
+5faf4876a7b30c825e8307d8660d5401e6af468577fdb41810a16f39d050ea9f  Aktina-Forecast-QR.svg
+f2a330cf586468838ec62af5b6dc87098fdbd905e12f093dc0b905abe25df984  Aktina-Forecast-QR.png
+e8ab3e026889caf1b29371f818097472aaa6795400d9d5b60919d60bae76083d  Aktina-Forecast-QR-Slide.svg

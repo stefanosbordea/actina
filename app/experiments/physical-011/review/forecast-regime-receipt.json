@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T10:49:11.401912+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/physical-011/review/forecast_regime_diagnostic.py",
+  "actual_exit_code": 0,
+  "tool_chunk": "1d08a7",
+  "wall_seconds": 1.632405041,
+  "sha256": {
+    "forecast_regime_diagnostic.py": "f4920059702619509906ea976edcecc695dea01f01ff347ff321ed881e6a7be8",
+    "forecast-regime-diagnostic.json": "ddfb185470338bd9c8e8a298f649a389ca0ef366d244114c5e10f928adcc86c1",
+    "forecast-regime-horizons.csv": "293ba945b73d5aeacef5f466c80da3f833cd0a9e7e7c418b03455076801a9481",
+    "forecast-regime-bank.csv": "300b70b17689557f2805ff34f73a30e2bb09fb9b15c9c311834dfffdfca6485f",
+    "forecast-regime.log": "10ab6f918ceb3baf22983dbf7a4d2a3fb80b65486603d2edb3f8ea1585bad61a",
+    "forecast-regime-diagnostic.md": "8291a8eb12b88e5619a28a1174bc8aad661be2b8cad743de2c082f2d858d9b15"
+  },
+  "planned_horizons": 299,
+  "historical_bank_rows": 128,
+  "reference_values_or_outcomes_used": false,
+  "new_fits_or_schedules": false,
+  "original_inputs_unchanged": true
+}

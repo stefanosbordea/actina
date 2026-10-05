@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "app/experiments/physical-011/review/check.py"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "started_at_utc": "2026-10-04T10:41:47.525260+00:00",
+  "completed_at_utc": "2026-10-04T10:41:50.780068+00:00",
+  "wall_seconds": 3.2580190840089926,
+  "exit_code": 0,
+  "code_sha256": "401f35ee40cfe2a6468f573a684e4e103774591ea72470f4aaae8966cd04bc68",
+  "log": "check-001.log",
+  "log_sha256": "c4998aefbc80850843cc51a51062374def43e3cf11777eb79b918d17383f249c",
+  "result_sha256": "2db992ced748dc621ab28ab1a9f33cb6e12d9a94f0ec2aebdebcaafc931dc13e"
+}

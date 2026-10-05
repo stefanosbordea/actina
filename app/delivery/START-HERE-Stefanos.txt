@@ -1,44 +1,37 @@
-AquaShift — team review
+Aktina — current handoff
 
-Open: https://aquashift-pafos-2026.vercel.app
-Watch: AquaShift-Concept-and-Prototype.mp4
-Read: AquaShift-Executive-Summary.pdf
+Demo: https://aktina-pafos-2026.vercel.app/
+Current forecast: https://aktina-pafos-2026.vercel.app/forecast.html
+Evaluation: https://aktina-pafos-2026.vercel.app/benchmark.html
+Review tools: https://aktina-pafos-2026.vercel.app/workspace/#reviews
+Current files and remaining work: ../handoff/DELIVERY-STATUS.md
 
-The idea: make drinking water with electricity that would otherwise be curtailed,
-then store water for later. Loucas's original concept and philosophy; Stefanos's
-AquaShift roadmap and pitch develop the team plan.
+Your v2 source and validation predictions are merged with their original
+contents preserved. The current forecast view uses the audited correction
+of the retained v2 refit. Its 3,566-hour validation result is:
+precision 94.08%, recall 88.24%, F1 91.06%, with 17 false alarms and 36 misses.
 
-STORAGE UPDATE
-Scenarios now compares all five tanks across the same 62 report days.
-At 4,000→8,000 m³: +2,652 kWh of retrospective timing overlap, €0 tariff change.
-Open the daily differences to inspect the source evidence. September is unknown.
-The export includes every paired case and source-file identity.
+Compared with 008, it makes four fewer false alarms and misses one extra hour.
+Compared with supplied v2 at the original cutoff, it catches eight more events
+with eight fewer false alarms. Validation has been reused. The uncertainty
+interval against 008 includes zero, so this is not a proven unseen-data win.
+No new v2 test predictions were supplied or scored.
 
-TRY THIS
-Choose July 15 and a 4,000 m³ tank. Inspect midday production and evening storage.
-Compare 500 versus 8,000 m³ tanks. Check Evaluation, then Evidence. The EAC report
-window is sourced context; overlap is not a claim of recovered electricity.
-Pilot inputs separately checks declared observation files, units and gaps;
-the example is invented, and an earlier review time withholds later readings.
+The correction changes event calls, not the numeric radiation curve or the
+supplied schedule. The current curve is the separately retained v2 refit.
+Original forecast options restore your supplied curve. Source, coefficients,
+checks and limitations: ../experiments/v2-019/README.md.
 
-HANDOFF
-Your primary forecast and scheduler are still yours. The included model and
-plans are independent references. Bring your CSV to Data & model handoff;
-keep model timing and source provenance with it. Loucas's workspace checks
-performance, controls and water constraints, then retains a review record.
+The supplied schedule is reproduced using persistence. Your unchanged
+model-driven scheduler gives a different plan. Both reproductions remain in
+../handoff/scheduler-reproduction/. Confirm the intended submission schedule.
+Weather alone does not establish recoverable curtailment or plant permission.
 
-THE RESULT
-The reference has lower RMSE but higher MAE than safe persistence. Assumed
-clock prices account for the scheduling cost difference; no additional AI
-tariff saving is established. Plant/grid recovery and customer savings need
-a pilot with spare plant capacity and usable storage.
+Shotter will handle the final presentation. The existing 12-slide deck has
+factual updates for reference, with equal team credit. The technical summary
+and QR handoff support the final presentation. Review them before submission.
 
-FILES
-Technical brief: 3 pages. Business canvas: 1 page. Editable deck: 12 slides.
-Blender-Scene-Source/: three packed editable scenes and reproduction notes.
-Research-for-Stefanos.txt: four focused reads; full references in data/.
-README.md: setup and reproduction. results/: executed checks and limits.
-
-Andreas Nikolaides and Cleopas Cleopa handle the business case and pitch.
-Loucas and Stefanos review technical material. AI assistance is disclosed.
-No contacts, signatures or submission declarations have been filled in.
+Aktina-Backup-Final.mp4 is a silent 44-second historical screenshot walkthrough.
+It predates the current forecast page and does not demonstrate the new event
+correction. It is a fallback for the earlier schedule demonstration only.
+No competition upload, consent, signature or team rehearsal is claimed.

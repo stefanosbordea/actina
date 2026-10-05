@@ -7,11 +7,11 @@
 \definecolor{navy}{HTML}{171717}\definecolor{teal}{HTML}{242424}
 \definecolor{gold}{HTML}{A0A0A0}\definecolor{pale}{HTML}{F2F2F2}
 \definecolor{muted}{HTML}{626262}
-\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={AquaShift executive summary},pdfauthor={Loucas Louka; AquaShift team}}
+\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={Aktina executive summary},pdfauthor={Loukas Louka; Aktina team}}
 \pagestyle{empty}\setlength{\parindent}{0pt}\setlength{\parskip}{7pt}
 \color{navy}
 \begin{document}
-{\small\color{teal} AQUASHIFT \hfill PAFOS 2.0 / TEAM REVIEW DRAFT}
+{\small\color{teal} AKTINA \hfill PAFOS 2.0 / TEAM REVIEW DRAFT}
 \vspace{12mm}
 
 {\fontsize{35}{39}\selectfont\bfseries Make water with\par surplus solar.}
@@ -49,19 +49,19 @@
 \vspace{6mm}
 \begin{minipage}[t]{.48\linewidth}
 {\large\bfseries What we have}\par
-An operations workspace and a local experiment. A machine-learning radiation reference identifies sunny hours. Pick a day and tank size; inspect production, storage and forecast errors. Compare plans with 62 reported grid windows and record a review.
+A local demo with 296 supplied days: sun, production, tank level and illustrative cost. On 3 July, supplied production costs \texteuro2,628 versus \texteuro2,995 for flat production, with equal daily water and ending stock.
 
-The sunny-hour flag is a proxy. Actual curtailed electricity absorbed remains unmeasured.
+The supplied schedule uses persistence. Stefanos's LightGBM forecasts are shown separately. The intended final schedule awaits his confirmation.
 \end{minipage}\hfill
 \begin{minipage}[t]{.47\linewidth}
 {\large\bfseries What we need}\par
-A water operator's demand, tank and plant limits, plus grid curtailment signals. Test whether extra daytime production can safely absorb otherwise lost electricity and reduce operating costs while maintaining water supply.
+The original test favours persistence. Archived weather forecasts improve retrospective F1 to 98.41\%; residual corrections reduce MAE further but add one false alarm. No learned correction is promoted; live performance is unproven.
 
-Grid serves water operators. Sites, a separate garden and leak demo, offers a smaller pilot route. Pricing still needs customer evidence.
+A pilot needs operator limits, demand, tariffs and curtailment signals. Recovered solar and field savings remain unmeasured. Grid and the separate Sites prototype retain untested business models.
 \end{minipage}
 
 \vfill
 \hrule height .5pt\vspace{3mm}
-{\footnotesize Original concept and philosophy: Loucas Louka. Roadmap development: Stefanos. Technical work: Loucas and Stefanos. Business: Andreas Nikolaides and Cleopas Cleopa.\par
-Codex assisted the implementation and drafts; the team must review them. Sources: Stefanos's 30 September roadmap and pitch; retained prototype results; \href{https://www.eac.com.cy/EL/RegulatedActivities/Distribution/DistributionSystemOperation/Pages/res-e_curtailments.aspx}{EAC's July and August 2026 curtailment reports}.}
+{\footnotesize Concept, application and evaluation: Loukas Louka. Original model, scheduler and roadmap: Stefanos. Business: Andreas Nikolaides and Cleopas Cleopa.\par
+Evidence: \href{https://github.com/stefanosbordea/actina/tree/stefanos-model/app/handoff}{retained handoff and schedule reproduction}; \href{https://aktina-pafos-2026.vercel.app/benchmark.html}{AktinaBench}. Historical weather, illustrative plant and prices; no plant connection. Updated 4 October 2026.}
 \end{document}

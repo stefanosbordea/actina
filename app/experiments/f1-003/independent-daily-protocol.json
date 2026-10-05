@@ -1,0 +1,23 @@
+{
+  "comparison": "Predeclared fixed nwp_day2 cutoff600 versus fixed persistence600; not the validation-selected method.",
+  "purpose": "Post-run uncertainty analysis requested after point estimates were known; not part of the original selection protocol.",
+  "seed": 20261004,
+  "replicates": 20000,
+  "block": "Supplied target date under recovered fixed UTC+03; resample all149 date blocks with replacement, using identical blocks for both methods.",
+  "partial_day": "Retain the initial15-hour block. Observed estimate uses all3567hours; resampled hour counts may vary when this shorter block is drawn.",
+  "interval": "Two-sided95% percentile interval, linear interpolation of ordered bootstrap differences.",
+  "effects": [
+    "f1",
+    "precision",
+    "recall",
+    "mae",
+    "rmse"
+  ],
+  "direction": "NWP minus persistence; positive classification differences and negative errors favour NWP.",
+  "limitations": [
+    "Day blocks do not preserve cross-day weather dependence.",
+    "Intervals are marginal, not simultaneous or adjusted for comparisons.",
+    "No bootstrap fraction is interpreted as a formal hypothesis-test p-value.",
+    "This already-inspected test and unverified historical publication availability cannot establish a deployable model."
+  ]
+}

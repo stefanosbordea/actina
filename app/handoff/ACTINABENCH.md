@@ -1,4 +1,4 @@
-# ActinaBench
+# AktinaBench
 
 Evaluate every retained prediction against the same actual values and the same definition: radiation **strictly above 600 W/m²** is a positive hour.
 

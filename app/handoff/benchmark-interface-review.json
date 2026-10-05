@@ -1,0 +1,49 @@
+{
+  "checked_at_utc": "2026-10-04T08:03:26.005012+00:00",
+  "scope": "ActinaBench interface and comparison navigation; underlying results unchanged",
+  "base_commit": "718ebb9228e22203dd9756dd03a0613b524a64d4",
+  "reference": {
+    "url": "https://www.bridgebench.ai/",
+    "inspected": "Built-in browser screenshot and computed typography/background",
+    "use": "Compact application navigation and graphite surfaces; no third-party code or branding copied"
+  },
+  "design": {
+    "palette": {
+      "background": "#0d0e11",
+      "panel": "#14171d",
+      "text": "#eef2f8",
+      "muted": "#9ba6b7",
+      "selection": "#69d7eb",
+      "secondary": "#729cf6"
+    },
+    "type": "Native system sans, bundled Plex fallback",
+    "layout": "Model selection beside a precision-recall comparison; errors and exports in separate tabs. Phone layout uses a native method selector."
+  },
+  "fixes": [
+    "Period-specific statements follow the selected dataset",
+    "Previous-day forecast explicitly defined as a comparison rule",
+    "Every model retained, including original forecast and neural-network losses",
+    "Original regression errors separated from classifier scores",
+    "No page overflow at 320 or 390 pixels",
+    "Historical archive identified without implying station measurements"
+  ],
+  "checks": {
+    "ui_tests": 6,
+    "existing_demo_tests": 4,
+    "desktop_width": 1440,
+    "mobile_widths": [
+      320,
+      390
+    ],
+    "keyboard_tabs": true,
+    "model_selector": true,
+    "original_data_unchanged": true,
+    "independent_review": "One terminology finding corrected; no remaining material correctness findings"
+  },
+  "source_sha256": {
+    "app/site/benchmark.html": "77148d8635ce40c5cdc09560dc1fb52fa0dfcc1478abac8204b0758a23b5e889",
+    "app/site/benchmark.css": "3ec16d0a9068d625d27a1a4bba7dc0fbf4e2278a612550cffc88d50c0ab1a415",
+    "app/site/benchmark.mjs": "8a82f9b7f045ef90b62bd69b72904bb9200e5fa18c7103bc492bcb2ab6d3dce2",
+    "app/tools/test_benchmark_ui.mjs": "3b1ffdb2fb4f7822a149c58d79715db94dcaf86d6318c133af33899f04518015"
+  }
+}

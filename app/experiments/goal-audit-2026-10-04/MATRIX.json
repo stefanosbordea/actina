@@ -1,0 +1,146 @@
+{
+  "status": "GOAL_NOT_COMPLETE",
+  "snapshot_utc": "2026-10-04T11:18:10.805949+00:00",
+  "goal_source": "app/experiments/RESEARCH-GOAL.md",
+  "goal_sha256": "b73f2774d2ffad51216d8ff88a4c371ae13260150321b8946a0750435c8cc6ad",
+  "audit_execution_exit_code": 0,
+  "checks": 42777,
+  "evidence_sha256": "abce6e8c105f9845c20172b7b64d7bb8f3e2c9a4cc00aa6030d6a3a0ac282fa6",
+  "requirements": [
+    {
+      "id": "primary_research",
+      "status": "met",
+      "requirement": "Academic primary research tied to implementation",
+      "finding": "Full-paper method and equation records support BQN, analogue residuals, selective correction and CVaR water scheduling. The implementations and matched experiments distinguish adopted methods from the Aktina hypothesis. No novelty proof is claimed.",
+      "evidence": [
+        "app/experiments/research-2026-10-04/full-pdf-followthrough.md",
+        "app/experiments/research-2026-10-04/correction-regret-hypothesis.md",
+        "app/experiments/research-2026-10-04/physical-decision-study.md",
+        "app/experiments/research-2026-10-04/conditional-scenarios.md",
+        "app/experiments/f1-009/bqn.py",
+        "app/experiments/physical-012/run.py"
+      ]
+    },
+    {
+      "id": "reproducibility",
+      "status": "met",
+      "requirement": "Implementation, exact inputs, saved models, per-hour outcomes and failed candidates retained",
+      "finding": "Reports 001–010 and physical011–012, protocol/input locks, saved 009 models and hourly decisions exist. Independent execution receipts and failed checker or intake attempts are retained. This audit reconstructed 009 event counts without importing model or evaluator helpers.",
+      "evidence": [
+        "evidence.json",
+        "event-metrics.csv",
+        "execution-001.json",
+        "app/experiments/f1-009/review/result.json",
+        "app/experiments/physical-012/review/result.json",
+        "app/experiments/physical-012/review/execution-001.json",
+        "app/experiments/physical-012/review/execution-002.json"
+      ]
+    },
+    {
+      "id": "same_hour_event_scores",
+      "status": "met_for_predeclared_control",
+      "requirement": "Same-hour precision, recall and F1 against original, persistence and strongest archived control under both required references",
+      "finding": "Frozen 009 joint policy improves all 36 required point comparisons across validation/test, weather-full/satellite-common, three metrics and the original/persistence/ECMWF day-2 controls. All original 3566/3567 hours remain, with3419/3517 satellite-common hours. ECMWF is the designated strong control and has the highest test F1 among the fixed ECMWF, GFS and arithmetic-mean controls in008 for both references. It does not dominate every raw forecast on every metric. GFS has higher recall with lower precision, and the arithmetic mean has higher satellite-validation F1. No new per-metric oracle gate is imposed.",
+      "evidence": [
+        "event-metrics.csv",
+        "evidence.json",
+        "app/experiments/f1-009/result/validation-selection.json",
+        "app/experiments/f1-008/result/report.json"
+      ]
+    },
+    {
+      "id": "distinct_useful_mechanism",
+      "status": "unmet",
+      "requirement": "Demonstrate the useful Aktina reference-specific correction hypothesis rather than just reproduce a paper",
+      "finding": "009 meets the point-score clause but is a published BQN adaptation using joint-reference loss. The primary separate-reference paired correction in 010 selects no change. Physical 011–012 use separate reference regret, but both candidates fail validation regret gates. No retained experiment yet demonstrates the requested useful reference-separation mechanism end to end. This does not assert that a novel theorem is required.",
+      "evidence": [
+        "app/experiments/f1-009/PROTOCOL.md",
+        "app/experiments/f1-010/result/validation-selection.json",
+        "app/experiments/f1-010/result/report.json",
+        "app/experiments/physical-011/result/report.json",
+        "app/experiments/physical-012/result/report.json"
+      ]
+    },
+    {
+      "id": "ablation",
+      "status": "met",
+      "requirement": "Matched ablation separating information, objective and decision rule",
+      "finding": "008 fixes learner and compares weather-source and label arms. 009 compares weather and joint objectives. 010 compares minimum versus mean reference pair gains with shared heads and issuance. 012 reproduces 598 old schedules exactly in the two-by-two bank/dependence comparison. Negative matched outcomes remain.",
+      "evidence": [
+        "app/experiments/f1-008/result/report.json",
+        "app/experiments/f1-009/result/report.json",
+        "app/experiments/f1-010/result/report.json",
+        "app/experiments/physical-012/review/result.json"
+      ]
+    },
+    {
+      "id": "reconstruction_uncertainty",
+      "status": "met_with_limitations",
+      "requirement": "Independent reconstruction, model replay and appropriate uncertainty analysis",
+      "finding": "009 model/gradient replay and 1/7-day block sensitivity are retained. Its F1 and precision difference intervals versus raw NWP cross zero. This limits the conclusion but is not a new completion threshold. Physical 011–012 arithmetic independently reconstructs. Original 011 strict all-axis resampling frequencies do not portably replay and are unsuitable for interpretation, while interval reconstruction passes.",
+      "evidence": [
+        "app/experiments/f1-009/review/result.json",
+        "app/experiments/f1-009/review/uncertainty-result.json",
+        "app/experiments/f1-009/review/uncertainty-review.json",
+        "app/experiments/physical-011/uncertainty/review/README.md",
+        "app/experiments/physical-012/review/result.json"
+      ]
+    },
+    {
+      "id": "downstream_chain",
+      "status": "partly_met",
+      "requirement": "Accepted forecast change connected to scheduling under explicit identical plant and water-service constraints",
+      "finding": "011–012 test equal demand120 m³/h, production0–500 m³/h, capacity 4,000 m³, reserve 800 m³, starting/ending 2,000 m³ and SEC 3.4 kWh/m³. All 1,794 plans meet the declared 1e-6 m³ numerical tolerance, with maximum exact residual 1.7053e-12 m³. Those schedules consume raw NWP and historical residual scenarios, not 009 accepted predictions. A single accepted forecasting correction has therefore not been carried through the same-service scheduling comparison. Unlimited grid and omitted plant physics are disclosed, without adding a field-certification requirement.",
+      "evidence": [
+        "app/experiments/physical-012/PROTOCOL.md",
+        "app/experiments/physical-012/inputs.json",
+        "app/experiments/physical-012/run.py",
+        "app/experiments/physical-012/review/result.json",
+        "app/experiments/physical-012/review/water-exact.csv"
+      ]
+    },
+    {
+      "id": "original_protection",
+      "status": "met",
+      "requirement": "Protect Stefanos original model/data/eval",
+      "finding": "Git comparison against original 2a093aba97f6ad615c43fa7c514044342af16e3a shows no change in model/, data/ or eval/. New work is under app/.",
+      "evidence": [
+        "evidence.json"
+      ]
+    },
+    {
+      "id": "equal_deck_attribution",
+      "status": "met_current_local_deck",
+      "requirement": "Equal deck attribution",
+      "finding": "Actual slide 12 XML gives all four names identical Arial 22.5 pt regular white formatting. Creator metadata lists all four. Fresh before/after title/team renders are byte-identical. Current pack embeds the exact canonical deck. Metadata correction and refreshed pack awaited the parent commit at this snapshot. This scoped finding does not cover unchanged historical LaTeX credit.",
+      "evidence": [
+        "deck-evidence.json",
+        "publication-followup.json",
+        "app/build/team-attribution-audit-2026-10-04/receipt.json"
+      ]
+    },
+    {
+      "id": "publication",
+      "status": "met_research_and_product_with_delivery_followup",
+      "requirement": "Publish verified work on authorized branch as Loukas Louka",
+      "finding": "Local and remote stefanos-model match cb71a520ae7c8da905962dffb676fc131ea7922a. Exact-commit CI 37197704506 succeeded. Recent commits are authored Loukas Louka without trailers. Fresh 156 static responses match current dist across both aliases. Corrected deck metadata and current offline pack still require the parent commit/push recorded separately.",
+      "evidence": [
+        "evidence.json",
+        "publication-followup.json",
+        "app/results/publication/monochrome-2026-10-04.json"
+      ]
+    }
+  ],
+  "concrete_unmet": [
+    "Demonstrated utility of the distinct reference-specific forecasting correction mechanism",
+    "Same accepted forecasting correction connected to equal-service water scheduling"
+  ],
+  "delivery_followup": "Publish already-audited corrected deck metadata and offline pack. This is separate from unresolved scientific requirements.",
+  "strongest_feasible_next_step": {
+    "proposal": "Freeze one variable-count correction mechanism using issuance-available joint-reference evidence and separate reference consequences. Compare it with rawECMWF, the frozen 009 policy and a matched averaging/control rule. Remove 010 fixed-count limitation without selecting actions from realized labels.",
+    "required_connection": "Use a common issuance and declare the scheduler input before execution. A binary event flip is not a PV-energy forecast. Carry the same accepted correction into a matched water-service replay, rather than joining unrelated event and schedule wins.",
+    "falsifier": "Failure of the existing same-hour no-regression comparisons or no measured downstream benefit leaves the goal open. Preserve all losses and equality. No new significance, MAE, field-instrument or novelty-theorem gate is added.",
+    "state": "Proposal for the next frozen protocol, not implemented or scored by this audit. Root and core are reviewing a conditional joint-count route."
+  },
+  "no_new_criteria": "009 point-score gains are credited. Uncertainty limits and 008/MAE tradeoffs are reported without silently replacing the stated goal with additional admission tests."
+}

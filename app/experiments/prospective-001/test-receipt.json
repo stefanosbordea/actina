@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/prospective-001",
+    "-p",
+    "test_capture.py",
+    "-v"
+  ],
+  "finished_at_utc": "2026-10-04T08:58:30.466840+00:00",
+  "exit_status": 0,
+  "log_sha256": "bbe0af4b3871ea9e32ee0e383a8188d2270979588f09b4fe675b9cb656b736da",
+  "source_sha256": {
+    "capture.py": "9cc69f41ae54233a9e50e0391a77b59457355cb93b21055892a354cde4a15c48",
+    "test_capture.py": "3a44208300d9fb7504771879a2d25baa2789dc826d19815279887aff616e2d5a",
+    "PROTOCOL.md": "aa1e3af86dc08d0b6a4e366d9710c285b7e1324bbdbcbf63aea2fdb86488d35c"
+  },
+  "prior_check": "Initial eight-test run had one assertion failure from comparing differences of floating-point diagnostic seconds for exact equality. Actual target timestamps were correct; assertion now checks exact datetime interval duration."
+}

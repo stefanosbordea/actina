@@ -1,0 +1,71 @@
+{
+  "status": "Read-only source review and proposed experiment. No new candidate fitted, optimized or scored.",
+  "source_sha256": {
+    "app/experiments/f1-006/PROTOCOL.md": "d764be04235af9dd860867a3374bf2651d8cca6cc736e2d4e94242ee3a5c7446",
+    "app/experiments/f1-006/run.py": "bf2656bf1c301d815a4096b650b5d6e8afa6a437391a8b60f996b52016fe899d",
+    "app/experiments/f1-006/result/report.json": "24e95b8b456b6976ab862b5082924ccd7289b1c7482811ad8dd4a7ea3c534ef1",
+    "app/experiments/f1-006/result/validation-selection.json": "d4d6199060d08479ca9ce910f4a6eaf1473ead660c2c31998a751a72324877cf",
+    "app/experiments/f1-007/PROTOCOL.md": "f6950483c4bc3864c4a902d9b1e230681011c634d02bd7474c025cec4aa461fc",
+    "app/experiments/f1-007/run.py": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+    "app/experiments/f1-007/result/report.json": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281",
+    "app/experiments/f1-007/result/validation-selection.json": "5a8237af0feca272d7d3c2fff49c5bf6c857635c3a822c15c5725c5bf3bcc0be",
+    "app/experiments/f1-008/PROTOCOL.md": "92d3190129ac88149581a53741a87634cefc9b0354e166e901bdd844cfc998a2",
+    "app/experiments/f1-008/run.py": "0c0751f6f46bcdb6f2edee23302e1562b6d21622f24f061634511d2b713202ca",
+    "app/experiments/f1-008/result/report.json": "fb95ae701e16d6a9df988fc5c8ef318db03a1906d38edf58f2e3ab2751c47ac6",
+    "app/experiments/f1-008/result/validation-selection.json": "2e09ea387909cf3c26b145e61089b6142351cda4c1a8ffa7a0f01ff021525c6c",
+    "app/experiments/f1-009/PROTOCOL.md": "b266806d0e2eb83ee8d1bbd1c04982348ee84497dfb6b06ac384aad96393c6ed",
+    "app/experiments/f1-009/run.py": "d93ef6556c4dc9807504a6571f78d1af78fbc4072ca46ab50a6351c7b58241a7",
+    "app/experiments/f1-009/result/report.json": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+    "app/experiments/f1-009/result/validation-selection.json": "cc89822fac7f339296b23c7e4c22c57317148df4c08e92b4284183f2267d4cf7",
+    "app/experiments/f1-010/PROTOCOL.md": "ce014afdfca37458c3f3429bbbe07f62befcb3f1c053c2dfae5bf3ef1bd5b1da",
+    "app/experiments/f1-010/run.py": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+    "app/experiments/f1-010/result/report.json": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3",
+    "app/experiments/f1-010/result/validation-selection.json": "fb2ed4ee88919cf90a310a0fb8cec124c362bb8d413403cb202acfe13cbc5bf2",
+    "app/experiments/f1-010/README.md": "e954079d8a0fdefd66561325c20c0dcc645532b163a5d07c8ec2616bdbdb45ab",
+    "app/experiments/f1-010/validation_budget.py": "fb5d3a95de45b458770ea2fc00d88fc35d9c2d1569ce75042a6449639d0748b5",
+    "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "app/experiments/f1-009/result/predictions/validation-joint.csv": "a8129642dafcace0b9a513e7ee18985e864cc904af22056137fa8403f76ca173",
+    "app/experiments/f1-009/result/validation-reference-membership.csv": "78b8373295bbf9858c1fdcf87e362a3541b95c6e0a41f0d0636f72d09cae0749",
+    "app/experiments/f1-008/result/predictions/test-consensus_two_source.csv": "7339965abcf516738d98f504f25ba99fb89cdba286dc97cfb83f0fffe17aea0d",
+    "app/experiments/f1-009/result/predictions/test-joint.csv": "211d1497e2ed33c9957038b03e29bba85ac23a4dc9251e0167a0aff349cfa15d",
+    "app/experiments/f1-009/result/test-reference-membership.csv": "55062d47782d90f744de354a3651ee3b72a08d73e5aca46ec95e0a7fade4b91c",
+    "app/experiments/physical-012/PROTOCOL.md": "3a128ec8c8668ce402bf80ecfc6a8d699774a6ee52ae6254d117c26f2d12771b",
+    "app/experiments/physical-012/inputs.json": "5d64139c49bf802d1225310a6a6a7333fd92d590d9d4c0bcfe754f1cc589475f",
+    "app/experiments/physical-012/result/planning-freeze.json": "f1e9c530308847f795fde404be480589e6aefab39e16a102dcd7f7114b68f29d",
+    "app/experiments/physical-012/result/outputs.json": "21ef853a3b9cabbee1748cb02db2764bbffb41a43abae58e8b36c8a4f30c6598",
+    "app/experiments/physical-012/review/result.json": "a6c8edba03861233219f3266a43f09206a4413e047df225cc60d4b77495e2b1f",
+    "app/experiments/physical-012/result/validation/bank.npz": "d1198a69d425b6ebafef3109c7930a94bba5755f1309a0bb37d54c4195224c0c",
+    "app/experiments/physical-012/result/validation/plans.npz": "f3e7c9bbb181ed63eb66410b02197eafcbab05fa004f7210587a0d7131dd7f89",
+    "app/experiments/physical-012/result/validation/scenario-replay.npz": "5101b307fd3c5a91990b1e16ea3586b1cd0612bde3ecd05d9fab6976d3f9690f",
+    "app/experiments/physical-012/result/validation/plan-metadata.csv": "9ffd26293b47414778bfad3016e7c93e5614b51f1f68f74126b6e1d87d8cad9d",
+    "app/experiments/physical-012/result/test/bank.npz": "c8b1ad517a1cf9bd2dad1f62ab8e49f99cdf40fc519dea4d6d3763710c907191",
+    "app/experiments/physical-012/result/test/plans.npz": "40690642f12c512250466e3bc2b8cff11243d65c3b1541d80afa6e57a96855cc",
+    "app/experiments/physical-012/result/test/scenario-replay.npz": "559dec954f8d6fd9c9f8f1b5e6a286bd573993d6d124e82d572a14d27f9e70a7",
+    "app/experiments/physical-012/result/test/plan-metadata.csv": "92da2d266601583ac014010c28d616bf203866a424fa657a672f4b4a502228f3"
+  },
+  "primary_pdfs": [
+    {
+      "url": "https://www.jmlr.org/papers/volume15/waegeman14a/waegeman14a.pdf",
+      "read": "PDF pages 2-4 and 12-17. Printed 3527-3528, Theorems 8-9, Eq16, Algorithm1, Eq17-19."
+    },
+    {
+      "url": "https://proceedings.mlr.press/v28/dembczynski13.pdf",
+      "read": "PDF pages 2-4, sections 3-5, equations 3-8."
+    },
+    {
+      "url": "https://icml.cc/Conferences/2010/papers/589.pdf",
+      "read": "PDF pages 2-5, sections 2-4, equations 2-12."
+    }
+  ],
+  "complexity_diagnostic": {
+    "authority": "Parent agent read-only inspection of saved scenario labels. No realized-outcome scoring.",
+    "max_uncertain_hours": {
+      "validation_recency": 7,
+      "validation_conditional": 8,
+      "test_recency": 9,
+      "test_conditional": 8
+    },
+    "total_subsets_across_horizons_and_banks": 72459,
+    "execution_evidence": "Parent retaining reproducing command and output for eventual 013 input lock. No claim of local rerun by this reviewer."
+  }
+}

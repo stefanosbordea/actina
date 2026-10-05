@@ -1,0 +1,25 @@
+{
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2"
+  },
+  "command": [
+    "app/experiments/v2-016/run.py",
+    "--out",
+    "result"
+  ],
+  "started_at_utc": "2026-10-04T13:06:29.206724+00:00",
+  "lock_sha256": "979a3ad8381496671a77c140168a62bbab86d967fa85c91481c2f469dac163dd"
+}

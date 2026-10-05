@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-006/check.py", line 114, in <module>
+    result=main()
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-006/check.py", line 97, in main
+    actual=sat[r['target_time_utc']]['shortwave_radiation_w_m2']
+           ~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '2025-12-05 16:00:00+00:00'

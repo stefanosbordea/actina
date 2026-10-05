@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "app/experiments/prospective-001/capture.py",
+    "--output",
+    "app/experiments/prospective-001/capture-001"
+  ],
+  "started_at_utc": "2026-10-04T08:58:50.187928+00:00",
+  "finished_at_utc": "2026-10-04T08:58:50.753954+00:00",
+  "exit_status": 0,
+  "log_sha256": "e8c292c9424fe6e6e2a0b7080e71368edc063e34c0dc5d69bbfdc1950ef8098e"
+}

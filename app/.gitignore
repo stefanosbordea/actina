@@ -7,3 +7,5 @@ build/
 dist/
 __pycache__/
 *.pyc
+# Office creates these while a presentation is open.
+~$*

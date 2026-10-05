@@ -1,0 +1,29 @@
+{
+  "recorded_at_utc": "2026-10-04T10:23:52.308133+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-010/run.py",
+  "exit_code": 0,
+  "execution_tool_chunk": "25340c",
+  "shell_group_wall_seconds": 9.658292542,
+  "shell_group_includes": "Manifest creation immediately before the actual run",
+  "internal_wall_seconds": 5.292702416991233,
+  "process_cpu_seconds": 4.531598,
+  "peak_rss_bytes": 199606272,
+  "fit_count": 4,
+  "source_count": 17832,
+  "full_prediction_rows": 7176,
+  "original_score_rows": 7133,
+  "outcome": "Both fixed arms validation-select no-swap. No gain or product replacement.",
+  "sha256": {
+    "PROTOCOL.md": "ce014afdfca37458c3f3429bbbe07f62befcb3f1c053c2dfae5bf3ef1bd5b1da",
+    "run.py": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+    "policy.py": "83875cfeedccc6ef1e8f5f1aaf2bfb1d253ad38c8d704bcf5669d1b77d3d6187",
+    "test_policy.py": "cf2b284fa53cdbc6569c7d6e8142ceffa9eb923a0050d3d6c9138794cabacbc6",
+    "inputs.json": "5ac2715a0ba6afb6e985869bafc95857f7de6c989f5a7d7bdfaab38559c9cd85",
+    "freeze-receipt.json": "ac0a828e34a82abcc06b2ed1175966bd9fcc3d1a4cb33618ce254b1c88cd3271",
+    "preflight.log": "133ccf4735bda7f64d74f3d94b681559f3151dad3bcbc21f22c32648b41c4281",
+    "run.log": "c896eefaa9ac4fec690b02faac647d751156a6baccfaf2dd5b64c330c58dc079",
+    "result/report.json": "c62204dd08a82e50c87c7b926e780c934e11c5722d62738973fd242fff63cea3",
+    "result/validation-selection.json": "fb2ed4ee88919cf90a310a0fb8cec124c362bb8d413403cb202acfe13cbc5bf2",
+    "result/outputs.json": "353069e23a8ad3619a5404814b894c60c3dfe929cec5f555be4d4152b2a69b81"
+  }
+}

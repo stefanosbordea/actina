@@ -147,7 +147,7 @@ export function setupResilience({$,fmt,text,kpis,facts,table,lineChart,json,getC
  $('resilience-map').onchange=()=>{if(reading&&!$('resilience-map').checked){clearProof();invalidate('Mapping changed. Run assessment to replace the previous result.');text('resilience-reading-status','Mapping removed. Starting water is now an unverified scenario value.');}};
  $('resilience-reading').onchange=()=>{if(reading){clearProof();invalidate('Reading changed. Recalculate before exporting.');text('resilience-reading-status','Reading selection changed. Apply the selected reading or run with the scenario value.');}};
  function snapshot(){return record&&contextKey===key(getContext())&&(!reading||(reading.bridge?bridgeCurrent(reading.bridge):getTankReadings().some(r=>sameReading(r,reading))))?JSON.parse(JSON.stringify(record)):null;}
- $('resilience-export').onclick=()=>{const current=snapshot();if(current)json(`aquashift-${current.date}-plan-assessment.json`,current);else if(reading?.bridge)revokeBridge();};
+ $('resilience-export').onclick=()=>{const current=snapshot();if(current)json(`aktina-${current.date}-plan-assessment.json`,current);else if(reading?.bridge)revokeBridge();};
  function setScenario(scenario){
   const c=getContext();contextKey=key(c);clearProof();
   for(const [id,value] of Object.entries({'resilience-demand':100*((scenario.demand_multiplier??1)-1),'resilience-loss':100*(1-(scenario.production_multiplier??1)),'resilience-start':0,'resilience-initial':c.plan.totals.initial_storage_m3,'resilience-outage':scenario.outage?.start_hour??0,'resilience-duration':scenario.outage?.duration_hours??0}))$(id).value=String(Number(value.toFixed(10)));

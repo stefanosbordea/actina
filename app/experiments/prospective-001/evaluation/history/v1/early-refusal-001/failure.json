@@ -1,0 +1,8 @@
+{
+  "status": "REFUSED_EARLY",
+  "at_utc": "2026-10-04T09:13:48.520104+00:00",
+  "error": "ValueError: Not eligible before 2026-10-08T09:00:00+00:00",
+  "outputs_sha256": {
+    "request.json": "fb8fdfc4dd3c6849cdf024c17b7643ed9ec812645b4ccbf5412bc58c5b03496d"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "git_commit": "85097a560769ad8a1459ce55f0b3a4c301202405",
+  "branch": "nwp-features",
+  "files": {
+    "eval/cv_predictions_v2.csv": {
+      "local": "app/handoff/v2-validation-2026-10-04/inputs/cv_predictions_v2.csv",
+      "sha256": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+      "bytes": 190454
+    },
+    "model/train_modelv2.py": {
+      "local": "app/handoff/v2-validation-2026-10-04/inputs/train_modelv2.py",
+      "sha256": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+      "bytes": 1448
+    },
+    "data/features_v2.py": {
+      "local": "app/handoff/v2-validation-2026-10-04/inputs/features_v2.py",
+      "sha256": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+      "bytes": 755
+    },
+    "data/download_nwp.py": {
+      "local": "app/handoff/v2-validation-2026-10-04/inputs/download_nwp.py",
+      "sha256": "4ee8a336a3dfcaa1c2cfecdb933cefe598e5b0e43a84052a8dada9e8a54863a6",
+      "bytes": 1971
+    }
+  }
+}

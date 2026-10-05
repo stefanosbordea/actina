@@ -1,0 +1,31 @@
+test_can_add_and_remove_without_fixed_count (test_decision.ExactDecisions.test_can_add_and_remove_without_fixed_count) ... ok
+test_daily_improvement_does_not_imply_pooled_precision (test_decision.ExactDecisions.test_daily_improvement_does_not_imply_pooled_precision) ... ok
+test_dependence_matters_with_identical_marginals (test_decision.ExactDecisions.test_dependence_matters_with_identical_marginals) ... ok
+test_empty_and_prohibited_last_removal (test_decision.ExactDecisions.test_empty_and_prohibited_last_removal) ... ok
+test_exact_safeguards_reject_sub_float_violation (test_decision.ExactDecisions.test_exact_safeguards_reject_sub_float_violation) ... ok
+test_invalid_dimensions_binary_values_and_deadline (test_decision.ExactDecisions.test_invalid_dimensions_binary_values_and_deadline) ... ok
+test_permutation_repeatability_and_conflicting_references (test_decision.ExactDecisions.test_permutation_repeatability_and_conflicting_references) ... ok
+test_strict_radiation_boundary_and_bad_values (test_decision.ExactDecisions.test_strict_radiation_boundary_and_bad_values) ... ok
+test_both_periods_frozen_before_first_scoring_read (test_runner.RunnerTests.test_both_periods_frozen_before_first_scoring_read) ... COMPLETE
+ok
+test_duplicate_target_refused (test_runner.RunnerTests.test_duplicate_target_refused) ... ok
+test_exact_original_masks_and_all_comparator_daily_metrics (test_runner.RunnerTests.test_exact_original_masks_and_all_comparator_daily_metrics) ... ok
+test_forecast_identity_and_padding_are_retained (test_runner.RunnerTests.test_forecast_identity_and_padding_are_retained) ... ok
+test_input_hash_changed_refused (test_runner.RunnerTests.test_input_hash_changed_refused) ... ok
+test_missing_target_refused (test_runner.RunnerTests.test_missing_target_refused) ... ok
+test_nonfinite_scenario_refused (test_runner.RunnerTests.test_nonfinite_scenario_refused) ... ok
+test_previous_source_hash_disagreement_refused (test_runner.RunnerTests.test_previous_source_hash_disagreement_refused) ... ok
+test_runtime_failure_retained_without_scoring (test_runner.RunnerTests.test_runtime_failure_retained_without_scoring) ... ok
+test_source_cutoff_refused (test_runner.RunnerTests.test_source_cutoff_refused) ... ok
+test_source_day_identity_refused (test_runner.RunnerTests.test_source_day_identity_refused) ... ok
+test_source_reconstruction_refused (test_runner.RunnerTests.test_source_reconstruction_refused) ... ok
+test_tampered_manifest_refused (test_runner.RunnerTests.test_tampered_manifest_refused) ... ok
+test_undefined_observed_scores_remain_null (test_runner.RunnerTests.test_undefined_observed_scores_remain_null) ... ok
+test_unsorted_source_ids_refused (test_runner.RunnerTests.test_unsorted_source_ids_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.306s
+
+OK
+INPUTS_FROZEN 1 9f383f5a937f4d3d7869470889753686bb7aa18df4b46eef4a0f4e37b27a122b
+INPUTS_FROZEN 1 b4aaed9f3ad99fe69763f16d3440fe8b0a3d663542e762e0eaf5ed8fe2d33a15

@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "validation_rows": 3566,
+  "base_oof_rows": 12499,
+  "maximum_replay_errors": {
+    "fold1": 0.0,
+    "fold2": 0.0,
+    "fold3": 0.0,
+    "fold4": 0.0,
+    "fold5": 0.0,
+    "fold6": 0.0,
+    "final_base": 0.0,
+    "logistic": 3.3306690738754696e-16,
+    "boosted": 0.0
+  },
+  "comparisons": {
+    "logistic": {
+      "base_refit": {
+        "f1_difference": 0.009690837549184872,
+        "false_positive_difference": 1,
+        "true_positive_difference": 6,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_600": {
+        "f1_difference": 0.009690837549184872,
+        "false_positive_difference": 1,
+        "true_positive_difference": 6,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_562": {
+        "f1_difference": 0.0020289855072463947,
+        "false_positive_difference": -25,
+        "true_positive_difference": -19,
+        "higher_f1_without_more_false_positives": true
+      },
+      "fixed008": {
+        "f1_difference": -0.013021181716833863,
+        "false_positive_difference": 5,
+        "true_positive_difference": -3,
+        "higher_f1_without_more_false_positives": false
+      }
+    },
+    "boosted": {
+      "base_refit": {
+        "f1_difference": 0.0030570116050141483,
+        "false_positive_difference": 8,
+        "true_positive_difference": 8,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_600": {
+        "f1_difference": 0.0030570116050141483,
+        "false_positive_difference": 8,
+        "true_positive_difference": 8,
+        "higher_f1_without_more_false_positives": false
+      },
+      "supplied_v2_562": {
+        "f1_difference": -0.004604840436924329,
+        "false_positive_difference": -18,
+        "true_positive_difference": -17,
+        "higher_f1_without_more_false_positives": false
+      },
+      "fixed008": {
+        "f1_difference": -0.019655007661004587,
+        "false_positive_difference": 12,
+        "true_positive_difference": -1,
+        "higher_f1_without_more_false_positives": false
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "created_at_utc": "2026-10-04T15:33:04.592309+00:00",
+  "archive": "app/delivery/Aktina-Competition-Pack.zip",
+  "sha256": "7815bc7f16a4d535d249793fe69ea162d60d69e5c09da231aabfb9e4f1c2d678",
+  "bytes": 7869574,
+  "entries": 98,
+  "per_file_hashes_checked": 97,
+  "changed_payload_entries": [
+    "Aktina/site/workspace/home-demo.mjs",
+    "Aktina/site/workspace/solar-water.svg"
+  ],
+  "unchanged_payload_entries": 95,
+  "motion_source_sha256": {
+    "Aktina/site/workspace/home-demo.mjs": "be50be1793ecb246d65de786c6cf5e294a5c2cce37960887977d6e61abbd7789",
+    "Aktina/site/workspace/solar-water.svg": "98b66194d5d166c44a1c63e6dad938fd6e96547c5f95ce9d71bea71c0f99e1cd"
+  },
+  "previous_pack_sha256": "73fb555ea604dbebb844b045409dec3fdde30ad93e1b26e91ec5738a5b96857b",
+  "previous_pack_preserved": "app/build/competition-pack-before-home-motion",
+  "historical_receipt_preserved": "app/results/competition-pack-019-handoff.json",
+  "historical_receipt_sha256": "c808b0c36fa8dfedebe981a7747818e88f5d4e85965dd6e5f428013b784195c1",
+  "packaging_test_command": "python -B -m unittest discover -s app/tests -p test_review_pack.py -v",
+  "packaging_tests_passed": 10,
+  "packaging_test_exit_code": 0,
+  "prerequisite_check_command": "python -B app/tools/package_review_pack.py --check",
+  "prerequisite_check_exit_code": 0,
+  "builder": "app/tools/package_review_pack.py:build",
+  "builder_sha256": "d771c72855026caf1e7c9076ecee2d564a113347bd6c81444f3712cd6b59670c",
+  "private_material_or_pdf_entries": 0,
+  "unchanged_artifacts": {
+    "deck_sha256": "c3a038f3fd0308f8a5068e1428fbea9e5a8b27c59cb66491bd25088b6028be13",
+    "video_sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
+    "technical_summary_sha256": "a3c1d5fe6ec29a3794e985abe16c5235cbeefce3fa3ce657e3a6d74c20e5b07a"
+  },
+  "scope": "Only the offline home animation controller and SVG changed. All other packaged payload bytes match the previous pack. No model, deck, notes, LaTeX, QR or video change."
+}

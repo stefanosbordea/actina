@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-10-04T11:18:10.804872+00:00",
+  "static_publication_receipt": "app/results/publication/monochrome-2026-10-04.json",
+  "static_publication_sha256": "e89b165be8d16899ca45581f6a47fb5eb61446c61f6fea10f605aa50b91296c2",
+  "all156_saved_responses_match_current_dist": true,
+  "exact_research_commit_ci": {
+    "conclusion": "success",
+    "databaseId": 37197704506,
+    "headSha": "cb71a520ae7c8da905962dffb676fc131ea7922a",
+    "status": "completed",
+    "url": "https://github.com/stefanosbordea/actina/actions/runs/37197704506"
+  },
+  "deck_and_pack_current_local": {
+    "deck_sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
+    "pack_sha256": "04eff4af166a9e4482daf5666c4d5cdd54187e7f784435c393c7cbedc54a8137",
+    "embedded_deck_equals_canonical": true,
+    "attribution_receipt_sha256": "aa632b07482dad773150cb0159d11954c1ffe515b6ff8b0593858bbfc8cdacbd"
+  },
+  "scope": "Current public static-byte proof and CI are verified. Newly corrected deck metadata and refreshed offline pack were local audited changes awaiting the parent commit at this snapshot."
+}

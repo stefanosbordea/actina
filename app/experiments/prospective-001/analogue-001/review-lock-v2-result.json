@@ -1,0 +1,36 @@
+{
+  "status": "PASS_NO_BLOCKER",
+  "completed_at_utc": "2026-10-04T09:17:35.848721+00:00",
+  "review_script_sha256": "55bc6af397b21e0db19580ad49787e88e389c5987411758ec8828e1a1ff65fbc",
+  "lock_manifest_sha256": "e20601b627197a67a81b1e4867625de4697cb755ec5c9d2b1886f0bb3b5a8f8c",
+  "input_files_verified": 12,
+  "output_files_verified": 7,
+  "historical_rows_reconstructed": 17832,
+  "queries_reconstructed": 48,
+  "shared_neighbors_reconstructed": 3072,
+  "scenario_values_reconstructed": 6144,
+  "predictions_reconstructed": 144,
+  "maximum_absolute_numeric_errors": {
+    "geometry": 3.410605131648481e-13,
+    "residual": 0,
+    "mean": 1.3877787807814457e-15,
+    "std": 4.760636329592671e-13,
+    "query_geometry": 1.7053025658242404e-13,
+    "distance": 2.7755575615628914e-17,
+    "scenario": 0,
+    "median": 0,
+    "quantile": 0,
+    "prediction_csv": 0
+  },
+  "numeric_comparison": "Independent geometry/transform validation relative1e-11/absolute1e-10; apply frozen fitted parameter values and scalar operation order for exact neighbor IDs and decisions",
+  "prior_failed_audit": "review-lock-result.json retained; independently re-estimated floating parameters changed one near-tie ordering inside the same64, both zero-residual sources; diagnosis in review-distance-diagnostic.json",
+  "minimum_scenario_distance_from_event_threshold_w_m2": 0.0,
+  "minimum_capture_to_interval_start_hours": 24.019238972777778,
+  "minimum_candidate_lock_to_interval_start_hours": 23.828343849444444,
+  "minimum_candidate_lock_to_valid_endpoint_hours": 24.828343849444444,
+  "limits": [
+    "First candidate interval starts less than24h after candidate lock; capture-based lead is a distinct clock.",
+    "Archive training vintage differs from this live capture; provider issuance/publication unverified.",
+    "No future reference, accuracy, joint-trajectory claim or promotion assessed."
+  ]
+}

@@ -1,0 +1,900 @@
+{
+  "status": "PASS",
+  "fixtures": {
+    "status": "PASS",
+    "checks": "Expanded integer weights, fractional tails, negative losses, ties and omitted days"
+  },
+  "inputs_sha256": {
+    "uncertainty/PROTOCOL.md": "cb41d17b89d39c8f27a8e681e90e18b9f480a1aeed4aeaccdcece1cd9594604b",
+    "uncertainty/check.py": "6d90c9f13788c8d3d9c6ce64bf82471e2a28b6e8f71ad90325cb270be6e58015",
+    "result/validation/evaluation-membership.csv": "824ef71cf43feef0cedfd50eb370d3bf2f7a9723ea713adcd8433ef447b3142c",
+    "result/validation/daily-outcomes.csv": "b9347595efddb7436da3ea81c7a3a6b1e6edb93300fb6cfb6a1f895a361d9b46",
+    "result/test/evaluation-membership.csv": "d38bfae6b36b6ce0bcaa69b96783a4e520fe1e9d0dff3054e42659d8e56b466a",
+    "result/test/daily-outcomes.csv": "dd254b687fde924f7c206a09d941be935cac21fcf9701097bfd94eae568dec34"
+  },
+  "seed": 20261004,
+  "draws_per_period_and_block": 5000,
+  "comparisons": [
+    {
+      "split": "validation",
+      "block_days": 1,
+      "draws": 5000,
+      "empty_draws": 0,
+      "calendar_days": 150,
+      "primary_days": 139,
+      "minimum_primary_days_in_draw": 126,
+      "maximum_primary_days_in_draw": 149,
+      "comparisons": [
+        {
+          "method": "coherent",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.1123513615546017,
+              "percentile_95": [
+                -3.582266179527531,
+                -2.6490463762961767
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.4349582845591158,
+              "percentile_95": [
+                -1.4104277780060528,
+                -0.010266006216809988
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -21.62976761983373,
+              "percentile_95": [
+                -25.627182901440005,
+                -17.73381959634342
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -1.0493535693431113,
+              "percentile_95": [
+                -7.477472676401362,
+                1.0484766612216618
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.2275408571455273,
+              "percentile_95": [
+                -3.768946840150258,
+                -2.696904807648018
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.43610500981628775,
+              "percentile_95": [
+                -1.1062838937271322,
+                -0.14835830361860478
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -21.967724802002977,
+              "percentile_95": [
+                -26.817302246647227,
+                -17.436483632031777
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": 0.489207677079321,
+              "percentile_95": [
+                -0.33274079512254956,
+                1.1350044353124757
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": 0.22895722569720017,
+              "percentile_95": [
+                0.02126797266929632,
+                0.5851222056470172
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": 0.145946888893768,
+              "percentile_95": [
+                0.0,
+                0.3558392133088923
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.0328
+        },
+        {
+          "method": "shuffled",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -4.598639927192323,
+              "percentile_95": [
+                -5.359444839829233,
+                -3.8765410909326943
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.5481358644382226,
+              "percentile_95": [
+                -1.53646405712837,
+                -0.05136120460588555
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -35.49201080555213,
+              "percentile_95": [
+                -42.58891755008541,
+                -28.69422619013104
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -1.7342205384256886,
+              "percentile_95": [
+                -7.844456336084477,
+                0.19971689380874658
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -5.023151634406872,
+              "percentile_95": [
+                -6.012548440892928,
+                -4.068292511787571
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.5752516531265428,
+              "percentile_95": [
+                -1.3020634918542726,
+                -0.21797166694100276
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -38.51181520710679,
+              "percentile_95": [
+                -47.71371016027517,
+                -29.808647259244527
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -0.3842321369147612,
+              "percentile_95": [
+                -1.7466135201388397,
+                0.3779790328032725
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": 0.2984901978012324,
+              "percentile_95": [
+                0.025690471278003706,
+                0.7137153066238032
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": 1.575539592211744,
+              "percentile_95": [
+                0.0,
+                4.08833351227463
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.5468
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "block_days": 7,
+      "draws": 5000,
+      "empty_draws": 0,
+      "calendar_days": 150,
+      "primary_days": 139,
+      "minimum_primary_days_in_draw": 117,
+      "maximum_primary_days_in_draw": 150,
+      "comparisons": [
+        {
+          "method": "coherent",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.1123513615546017,
+              "percentile_95": [
+                -3.742567124315876,
+                -2.457684758086201
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.4349582845591158,
+              "percentile_95": [
+                -1.6822467248983686,
+                0.06344027540034734
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -21.62976761983373,
+              "percentile_95": [
+                -26.33974200732259,
+                -16.808511056379306
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -1.0493535693431113,
+              "percentile_95": [
+                -9.866810551749245,
+                1.2692963063342173
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.2275408571455273,
+              "percentile_95": [
+                -4.062713886642553,
+                -2.4449588239791864
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.43610500981628775,
+              "percentile_95": [
+                -1.197531233291275,
+                -0.16448393420898258
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -21.967724802002977,
+              "percentile_95": [
+                -29.291241401597176,
+                -15.436277174496855
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": 0.489207677079321,
+              "percentile_95": [
+                -3.8676245637347164,
+                1.3265754352554935
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": 0.22895722569720017,
+              "percentile_95": [
+                0.0,
+                0.5722456731347548
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": 0.145946888893768,
+              "percentile_95": [
+                0.0,
+                0.3458351312121562
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.0888
+        },
+        {
+          "method": "shuffled",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -4.598639927192323,
+              "percentile_95": [
+                -5.814544749920458,
+                -3.5762894894508848
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.5481358644382226,
+              "percentile_95": [
+                -1.7820727307827866,
+                -0.001857834761722188
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -35.49201080555213,
+              "percentile_95": [
+                -46.614225161385484,
+                -26.520853064521695
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -1.7342205384256886,
+              "percentile_95": [
+                -9.487091550794048,
+                0.15957922152813286
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -5.023151634406872,
+              "percentile_95": [
+                -6.953305402398071,
+                -3.3793190593581337
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -0.5752516531265428,
+              "percentile_95": [
+                -1.4715924188456455,
+                -0.2540806180479963
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -38.51181520710679,
+              "percentile_95": [
+                -56.37702805542012,
+                -23.970786061528035
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -0.3842321369147612,
+              "percentile_95": [
+                -4.12966858315699,
+                0.44640792131208373
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": 0.2984901978012324,
+              "percentile_95": [
+                0.0,
+                0.7040946726618946
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": 1.575539592211744,
+              "percentile_95": [
+                0.0,
+                4.768001628410327
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.5222
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "block_days": 1,
+      "draws": 5000,
+      "empty_draws": 0,
+      "calendar_days": 149,
+      "primary_days": 144,
+      "minimum_primary_days_in_draw": 135,
+      "maximum_primary_days_in_draw": 149,
+      "comparisons": [
+        {
+          "method": "coherent",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.697861829839301,
+              "percentile_95": [
+                -4.11715896730303,
+                -3.2909990008699137
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -5.327277078847587,
+              "percentile_95": [
+                -7.3871969043087535,
+                -3.4500232507628303
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -24.811895775412978,
+              "percentile_95": [
+                -28.37594218102802,
+                -21.33718800696363
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -42.17763688882815,
+              "percentile_95": [
+                -61.38303457769641,
+                -25.12453787574396
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.983330018080487,
+              "percentile_95": [
+                -4.351156072710937,
+                -3.622354942549091
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -5.088211702844376,
+              "percentile_95": [
+                -6.805281952702228,
+                -3.044251520054608
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -23.698089349349573,
+              "percentile_95": [
+                -26.551342732131165,
+                -21.029084126338667
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -34.028142116969775,
+              "percentile_95": [
+                -49.42901849282224,
+                -13.658486599914628
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": -1.0459956168431943,
+              "percentile_95": [
+                -1.3023658148829218,
+                -0.79653121105633
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": -1.1712637237903238,
+              "percentile_95": [
+                -1.8072061797395311,
+                -0.6248955177538857
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.9992
+        },
+        {
+          "method": "shuffled",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -8.657192468411315,
+              "percentile_95": [
+                -9.313676157211745,
+                -8.019600488963896
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -12.04602398874556,
+              "percentile_95": [
+                -16.060617788162553,
+                -8.320538650420392
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -64.77474227465544,
+              "percentile_95": [
+                -70.77021181349839,
+                -59.14187651323807
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -98.4056205794509,
+              "percentile_95": [
+                -139.7109738838279,
+                -62.046508468152055
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -8.389751229056966,
+              "percentile_95": [
+                -9.109729977420356,
+                -7.690786118753028
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -11.154611881751663,
+              "percentile_95": [
+                -15.168586427921156,
+                -6.6344117603236334
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -55.64961484615449,
+              "percentile_95": [
+                -61.39594487525184,
+                -50.03775310667216
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -83.77494433411084,
+              "percentile_95": [
+                -116.94328110917338,
+                -45.28945729025274
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": -2.8945886487790755,
+              "percentile_95": [
+                -4.110969000235647,
+                -1.954801873983883
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": -1.8913852911961702,
+              "percentile_95": [
+                -2.77013209048207,
+                -1.1489771313113877
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 1.0
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "block_days": 7,
+      "draws": 5000,
+      "empty_draws": 0,
+      "calendar_days": 149,
+      "primary_days": 144,
+      "minimum_primary_days_in_draw": 133,
+      "maximum_primary_days_in_draw": 149,
+      "comparisons": [
+        {
+          "method": "coherent",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.697861829839301,
+              "percentile_95": [
+                -4.470503068213949,
+                -3.0149044941931495
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -5.327277078847587,
+              "percentile_95": [
+                -7.404594749848123,
+                -3.615704218297683
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -24.811895775412978,
+              "percentile_95": [
+                -30.910775729429748,
+                -19.435847576320665
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -42.17763688882815,
+              "percentile_95": [
+                -61.006713214450684,
+                -27.395778546439082
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -3.983330018080487,
+              "percentile_95": [
+                -4.672385579980071,
+                -3.3524212983468513
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -5.088211702844376,
+              "percentile_95": [
+                -7.095426884148389,
+                -2.430300844866703
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -23.698089349349573,
+              "percentile_95": [
+                -28.42765493586898,
+                -19.49023067506143
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -34.028142116969775,
+              "percentile_95": [
+                -52.662327958241164,
+                -8.695485530652224
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": -1.0459956168431943,
+              "percentile_95": [
+                -1.309336689448456,
+                -0.7845842137031809
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": -1.1712637237903238,
+              "percentile_95": [
+                -2.054014277631355,
+                -0.4761363208332
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 0.9984
+        },
+        {
+          "method": "shuffled",
+          "axes": [
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -8.657192468411315,
+              "percentile_95": [
+                -9.369847884846825,
+                -7.981535215056672
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -12.04602398874556,
+              "percentile_95": [
+                -14.100874320017303,
+                -10.020251150404105
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -64.77474227465544,
+              "percentile_95": [
+                -70.42166012696028,
+                -59.36269499655063
+              ]
+            },
+            {
+              "reference": "weather",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -98.4056205794509,
+              "percentile_95": [
+                -121.72446023665245,
+                -77.21126106078174
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "mean",
+              "difference": -8.389751229056966,
+              "percentile_95": [
+                -9.528557313561492,
+                -7.253828764881237
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "cost_eur",
+              "statistic": "cvar90",
+              "difference": -11.154611881751663,
+              "percentile_95": [
+                -16.43713805169587,
+                -5.035130883764062
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "mean",
+              "difference": -55.64961484615449,
+              "percentile_95": [
+                -64.41785639588925,
+                -47.19668321969937
+              ]
+            },
+            {
+              "reference": "satellite",
+              "metric": "grid_kwh",
+              "statistic": "cvar90",
+              "difference": -83.77494433411084,
+              "percentile_95": [
+                -124.99782983461031,
+                -34.542666470683336
+              ]
+            }
+          ],
+          "risk": [
+            {
+              "reference": "weather",
+              "cvar90_daily_cost_regret": -2.8945886487790755,
+              "percentile_95": [
+                -4.654874876524172,
+                -1.6140749876288694
+              ]
+            },
+            {
+              "reference": "satellite",
+              "cvar90_daily_cost_regret": -1.8913852911961702,
+              "percentile_95": [
+                -3.6074127275340393,
+                -0.8470436655871127
+              ]
+            }
+          ],
+          "fraction_all_eight_axes_strictly_improved": 1.0
+        }
+      ]
+    }
+  ],
+  "scope": "Post-result exploratory sensitivity. No selection, multiplicity, seasonal or future-availability correction. Frequencies are not posterior probabilities."
+}

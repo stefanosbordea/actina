@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "report_sha256": "fb95ae701e16d6a9df988fc5c8ef318db03a1906d38edf58f2e3ab2751c47ac6",
+  "checker_sha256": "d6e787afe3808b04852be377053d64318d914fc2470a4328ffea1e01bfa06350",
+  "inputs_unchanged": true,
+  "outputs_unchanged": true,
+  "joined_feature_rows": 17832,
+  "features": 27,
+  "training_labels_checked": 24916,
+  "prediction_rows_checked": 28532,
+  "grid_pairs_checked": 484,
+  "metric_records_checked": 1536,
+  "saved_model_replays": [
+    {
+      "stage": "validation",
+      "arm": "weather_two_source",
+      "rows": 3566,
+      "maximum_probability_error": 0.0,
+      "all_grid_and_default_decisions_exact": true,
+      "model_sha256": "17e842f8d2c3c66987f9fd34792db7761786a8a296351facbaa5002666adbfd8",
+      "objective": "binary",
+      "trees": 300
+    },
+    {
+      "stage": "validation",
+      "arm": "consensus_two_source",
+      "rows": 3566,
+      "maximum_probability_error": 0.0,
+      "all_grid_and_default_decisions_exact": true,
+      "model_sha256": "75ca81fe2b3d119b522218ebc3fce4a3ac6986fd87e4186e2c9e1ec5bc79967f",
+      "objective": "cross_entropy",
+      "trees": 300
+    },
+    {
+      "stage": "test",
+      "arm": "weather_two_source",
+      "rows": 3567,
+      "maximum_probability_error": 0.0,
+      "all_grid_and_default_decisions_exact": true,
+      "model_sha256": "b898d17161d0020d31e4fe620e6dffe40ff02892bf340871d69650a10895e23b",
+      "objective": "binary",
+      "trees": 300
+    },
+    {
+      "stage": "test",
+      "arm": "consensus_two_source",
+      "rows": 3567,
+      "maximum_probability_error": 0.0,
+      "all_grid_and_default_decisions_exact": true,
+      "model_sha256": "f15cb7b4c062d460fdcd13b05c4bbc28c727d9e512fe0e440de0c60da2b7053b",
+      "objective": "cross_entropy",
+      "trees": 300
+    }
+  ],
+  "reused_probability_arms_checked": 4,
+  "satellite_missing": {
+    "validation": 147,
+    "test": 50
+  },
+  "selected_arm": "consensus_two_source",
+  "test_gate_passed": false,
+  "test_comparisons": [
+    {
+      "basis": "weather_full",
+      "metric": "precision",
+      "candidate": 0.9841740850642928,
+      "control": 0.9851190476190477,
+      "status": "regressed"
+    },
+    {
+      "basis": "weather_full",
+      "metric": "recall",
+      "candidate": 0.9851485148514851,
+      "control": 0.9831683168316832,
+      "status": "improved"
+    },
+    {
+      "basis": "weather_full",
+      "metric": "f1",
+      "candidate": 0.9846610588817417,
+      "control": 0.9841427155599604,
+      "status": "improved"
+    },
+    {
+      "basis": "satellite_common",
+      "metric": "precision",
+      "candidate": 0.9587939698492463,
+      "control": 0.9576612903225806,
+      "status": "improved"
+    },
+    {
+      "basis": "satellite_common",
+      "metric": "recall",
+      "candidate": 0.9784615384615385,
+      "control": 0.9743589743589743,
+      "status": "improved"
+    },
+    {
+      "basis": "satellite_common",
+      "metric": "f1",
+      "candidate": 0.9685279187817258,
+      "control": 0.9659379766141332,
+      "status": "improved"
+    }
+  ],
+  "transitions": {
+    "validation-weather_ecmwf": {
+      "added": 5,
+      "removed": 1,
+      "changed": 6
+    },
+    "validation-consensus_ecmwf": {
+      "added": 0,
+      "removed": 0,
+      "changed": 0
+    },
+    "validation-weather_two_source": {
+      "added": 1,
+      "removed": 1,
+      "changed": 2
+    },
+    "validation-consensus_two_source": {
+      "added": 9,
+      "removed": 6,
+      "changed": 15
+    },
+    "test-weather_ecmwf": {
+      "added": 3,
+      "removed": 0,
+      "changed": 3
+    },
+    "test-consensus_ecmwf": {
+      "added": 0,
+      "removed": 0,
+      "changed": 0
+    },
+    "test-weather_two_source": {
+      "added": 0,
+      "removed": 2,
+      "changed": 2
+    },
+    "test-consensus_two_source": {
+      "added": 5,
+      "removed": 2,
+      "changed": 7
+    }
+  },
+  "tolerances": {
+    "identities_timestamps_labels_decisions_and_reused_probabilities": 0,
+    "model_replay_probability_absolute": 1e-15,
+    "reported_metric_float_absolute": 1e-15,
+    "brier_absolute": 1e-14,
+    "point_error_aggregation_absolute": 1e-10
+  },
+  "no_fitting_performed": true,
+  "source_and_history_scope": "Reconstructs008 additions and reuses pinned006 base feature bytes;006 strict-past history independently verified previously."
+}

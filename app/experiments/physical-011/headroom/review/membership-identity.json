@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Post-run identity supplement for original period-membership CSVs consumed by the independent checker. Both match the already frozen011 input manifest. This is not a new numerical run.",
+  "files_sha256": {
+    "eval/cv_predictions.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "eval/test_predictions.csv": "64cb3523ddb50ce906b4585db4fbdbae5ec78ec2d4b5aa2ef65078f8fc563620"
+  },
+  "parent_report_sha256": "6dde63e84db9fae787a416d9bd54ee1c5f43489ffc61cf219b66c16fd2021adf",
+  "review_result_sha256": "861c0fe88f0ef54c269d2278ad62cffe597a8dc7e29a10ccc42508a4994d54a3",
+  "recorded_at_utc": "2026-10-04T10:47:16.679710+00:00"
+}

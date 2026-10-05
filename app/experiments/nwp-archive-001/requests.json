@@ -1,0 +1,93 @@
+[
+  {
+    "label": "time-check-2025-12-10",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2025-12-10&end_date=2025-12-10&hourly=shortwave_radiation,cloud_cover&timezone=auto",
+    "started_at_utc": "2026-10-04T08:42:09.402835+00:00",
+    "finished_at_utc": "2026-10-04T08:42:09.833793+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "time-check-2025-12-10.json",
+    "sha256": "1a104cb3356e74905307b601e0be26cfd71803e1018600098577845b5490605b",
+    "headers": "time-check-2025-12-10.headers.txt",
+    "headers_sha256": "8c781bea26a3bb4d2acb5878f9fbdf98f97e4f6e0bc9c879788bf42acf4f2125"
+  },
+  {
+    "label": "time-check-2026-07-03",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2026-07-03&end_date=2026-07-03&hourly=shortwave_radiation,cloud_cover&timezone=auto",
+    "started_at_utc": "2026-10-04T08:42:10.840623+00:00",
+    "finished_at_utc": "2026-10-04T08:42:11.210919+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "time-check-2026-07-03.json",
+    "sha256": "720f8f1e9c2b80ba3dca53d126ffa8f8a37a45a1e385fa865c22dc2033d5f500",
+    "headers": "time-check-2026-07-03.headers.txt",
+    "headers_sha256": "50ad381ca13cbb9fa606aca5a1375a37ee3eca5679790a0e701287b02afb9a22"
+  },
+  {
+    "label": "time-check-2025-03-30",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2025-03-30&end_date=2025-03-30&hourly=shortwave_radiation,cloud_cover&timezone=auto",
+    "started_at_utc": "2026-10-04T08:42:12.217319+00:00",
+    "finished_at_utc": "2026-10-04T08:42:12.491339+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "time-check-2025-03-30.json",
+    "sha256": "569a6d66a575a9c6065f80dd0bd994758472f67ebee64eac4e2af7f77988293a",
+    "headers": "time-check-2025-03-30.headers.txt",
+    "headers_sha256": "b09394071ff786e0aa67b0b6f53586dba8289a42b349d5818aa6a3e6f8b60f01"
+  },
+  {
+    "label": "time-check-winter-utc",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.7744&longitude=32.4229&start_date=2025-12-09&end_date=2025-12-10&hourly=shortwave_radiation,cloud_cover&timezone=GMT&timeformat=unixtime",
+    "started_at_utc": "2026-10-04T08:42:13.498842+00:00",
+    "finished_at_utc": "2026-10-04T08:42:13.896115+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "time-check-winter-utc.json",
+    "sha256": "98504246f2bda8da4e92d0c2cfa58583936ca793306d4cf88f30708f8ec6f3d1",
+    "headers": "time-check-winter-utc.headers.txt",
+    "headers_sha256": "c1e137b48cf859a2297d083380289970512b71725af90feb7d943460191c492d"
+  },
+  {
+    "label": "forecast-sample-2024-09-14",
+    "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-14&end_date=2024-09-14&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+    "started_at_utc": "2026-10-04T08:42:14.902136+00:00",
+    "finished_at_utc": "2026-10-04T08:42:15.182271+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "forecast-sample-2024-09-14.json",
+    "sha256": "bfe8f875da12c775f7927e787657f5473485698f498c20ee3bebc23d6108e32a",
+    "headers": "forecast-sample-2024-09-14.headers.txt",
+    "headers_sha256": "07d5d09e8f86f5f6c2d78081c6cc8e5e0e216e37cc392a1107b1aedf2cd82f6b"
+  },
+  {
+    "label": "forecast-sample-2026-09-28",
+    "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2026-09-28&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+    "started_at_utc": "2026-10-04T08:42:16.185913+00:00",
+    "finished_at_utc": "2026-10-04T08:42:16.579205+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "forecast-sample-2026-09-28.json",
+    "sha256": "0c6b06ff12ed6af7410c798334f798342df1bd22216a47560c8e49a28b967f35",
+    "headers": "forecast-sample-2026-09-28.headers.txt",
+    "headers_sha256": "2b0c7f51ebcea6474c330eaf607aa96ed4bbd499d04e97c058b15c2dc7f2593e"
+  },
+  {
+    "label": "archive",
+    "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=34.7744&longitude=32.4229&start_date=2024-09-13&end_date=2026-09-28&hourly=shortwave_radiation_previous_day1,cloud_cover_previous_day1,shortwave_radiation_previous_day2,cloud_cover_previous_day2&models=ecmwf_ifs025&timezone=GMT&timeformat=unixtime",
+    "started_at_utc": "2026-10-04T08:42:17.585394+00:00",
+    "finished_at_utc": "2026-10-04T08:42:19.212122+00:00",
+    "curl_exit": 0,
+    "http_status": "200",
+    "stderr": "",
+    "body": "archive.json",
+    "sha256": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc",
+    "headers": "archive.headers.txt",
+    "headers_sha256": "445a3d4977b36cf3d00a73c3c9e346c45d8ee07d30ca5c585f2eda272513abc4"
+  }
+]

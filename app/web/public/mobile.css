@@ -9,12 +9,12 @@
   #workspace-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; }
   .about > summary { display: flex; align-items: center; min-height: 44px; padding: 10px 0; }
   .about > div { top: calc(100% + 6px); right: -4px; width: min(350px, calc(100vw - 24px)); }
-  .navigation { display: none; position: fixed; inset: var(--masthead) 0 auto; z-index: 9; height: auto; max-height: calc(100dvh - var(--masthead)); padding: 12px; overflow-y: auto; color: var(--ink); background: var(--surface); border: 0; border-bottom: 1px solid var(--line); box-shadow: 0 16px 32px #0003; }
+  .navigation { display: none; position: fixed; inset: var(--masthead) 0 auto; z-index: 9; height: auto; max-height: calc(100dvh - var(--masthead)); padding: 12px; overflow-y: auto; color: var(--ink); background: var(--surface); border: 0; border-bottom: 1px solid var(--line); box-shadow: 0 16px 32px #00000033; }
   .navigation-open .navigation { display: block; }
   .navigation nav { display: flex; flex-wrap: wrap; gap: 6px; }
   .navigation button[data-workspace] { flex: 1 1 calc(25% - 6px); flex-direction: column; justify-content: center; gap: 7px; min-height: 64px; margin: 0; padding: 10px 2px; font-size: 11px; border-radius: 6px; }
   .navigation button[data-workspace] svg { display: block; width: 18px; height: 18px; }
-  .navigation button[data-workspace].active { color: var(--ink); background: var(--accent-strong); }
+  .navigation button[data-workspace].active { color: #000; background: var(--accent-strong); }
   .navigation-group { position: static; order: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; flex: 0 0 100%; width: 100%; max-width: none; max-height: none; margin: 6px 0 0; padding: 10px 0 0; overflow: visible; color: inherit; background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0; box-shadow: none; }
   .navigation-group button, .navigation-group button:is(:hover,.active,[aria-current=page]) { min-height: 44px; padding: 11px 12px; color: inherit; background: transparent; border: 0; border-radius: 4px; font-size: 13px; }
   .navigation-group button:is(:hover,.active,[aria-current=page]) { background: var(--surface-raised); }

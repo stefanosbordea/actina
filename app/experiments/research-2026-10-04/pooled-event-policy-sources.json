@@ -1,0 +1,178 @@
+{
+  "status": "Primary-PDF review and bounded proposal only. No fitting, historical candidate scoring or policy change.",
+  "created_at_utc": "2026-10-04T12:01:07.906416+00:00",
+  "primary_pdfs": [
+    {
+      "name": "koyejo2014",
+      "url": "https://papers.neurips.cc/paper/5454-consistent-binary-classification-with-generalized-performance-metrics.pdf",
+      "retrieved_at_utc": "2026-10-04T11:55:38.163310+00:00",
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "response_url": "https://proceedings.neurips.cc/paper_files/paper/2014/file/98053046e0dce5c7d946c67b96a85e18-Paper.pdf",
+      "status": 200,
+      "bytes": 529230,
+      "sha256": "c47694fbdee4f4922fcd7afd9e117580e34e349c0d49fa373fa53cff04d4c3a7",
+      "local_pdf": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/pooled-event-papers-2026-10-04/koyejo2014.pdf"
+    },
+    {
+      "name": "lipton2014",
+      "url": "https://arxiv.org/pdf/1402.1892",
+      "retrieved_at_utc": "2026-10-04T11:55:43.260899+00:00",
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "response_url": "https://arxiv.org/pdf/1402.1892",
+      "status": 200,
+      "bytes": 526984,
+      "sha256": "b2d051c0a063dccd953bd71d345cb0b64e7f93b587736fcc732e6cac0ed778fc",
+      "local_pdf": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/pooled-event-papers-2026-10-04/lipton2014.pdf"
+    },
+    {
+      "name": "narasimhan2015",
+      "url": "https://proceedings.mlr.press/v37/narasimhana15.pdf",
+      "retrieved_at_utc": "2026-10-04T11:55:44.292894+00:00",
+      "pages": [
+        5,
+        6
+      ],
+      "response_url": "https://proceedings.mlr.press/v37/narasimhana15.pdf",
+      "status": 200,
+      "bytes": 479417,
+      "sha256": "dfb9263249fb3b4dba8f92e9d2ab23733a885e9af7542ae509be6c960152fa60",
+      "local_pdf": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/pooled-event-papers-2026-10-04/narasimhan2015.pdf"
+    },
+    {
+      "name": "yan2016",
+      "url": "https://arxiv.org/pdf/1610.07116v1",
+      "retrieved_at_utc": "2026-10-04T11:55:46.063472+00:00",
+      "pages": [
+        2,
+        3,
+        7
+      ],
+      "response_url": "https://arxiv.org/pdf/1610.07116v1",
+      "status": 200,
+      "bytes": 2338506,
+      "sha256": "6de7e00b22b72102a30a893ef910b76bbffbe19aef0098c9e094dce912de7766",
+      "local_pdf": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/pooled-event-papers-2026-10-04/yan2016.pdf"
+    }
+  ],
+  "visually_inspected_pages": {
+    "koyejo2014": [
+      4
+    ],
+    "lipton2014": [
+      9
+    ],
+    "narasimhan2015": [
+      6
+    ],
+    "yan2016": [
+      7
+    ]
+  },
+  "text_read_pages": {
+    "koyejo2014": [
+      3,
+      4,
+      5
+    ],
+    "lipton2014": [
+      7,
+      8,
+      9
+    ],
+    "narasimhan2015": [
+      5,
+      6
+    ],
+    "yan2016": [
+      2,
+      3,
+      7
+    ]
+  },
+  "source_sha256": {
+    "app/experiments/f1-007/run.py": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+    "app/experiments/f1-008/run.py": "0c0751f6f46bcdb6f2edee23302e1562b6d21622f24f061634511d2b713202ca",
+    "app/experiments/f1-010/run.py": "46667682790ad82fb0783a4385839753b12c37337aae89f1c6ec658d397399ed",
+    "app/experiments/f1-010/policy.py": "83875cfeedccc6ef1e8f5f1aaf2bfb1d253ad38c8d704bcf5669d1b77d3d6187",
+    "app/experiments/f1-013/PROTOCOL.md": "b8cf31b245b5faba48d62396e5c91ca5c47925bef9f381ff348d8383729e6fc5",
+    "app/experiments/f1-013/decision.py": "8812e5dbe66a8f1d389103d0a4ab9945540e21335319067fb431e0f8dcdd7f30",
+    "app/experiments/f1-013/run.py": "64bdace9f7606d79ed2bd10769dff2e03fa0a058016e3904223ab9e4b23771c9",
+    "app/experiments/f1-013/inputs.json": "f07354b9a99a64fcea182d13380c63f061d9ca466c7fc690d8c603da39ad1f82",
+    "app/experiments/f1-013/diagnostic/run.py": "3370cd9beb23c4ae09e5681f8ff60a0ec45567c9f680c6165320de6d9b39daa7",
+    "app/experiments/f1-013/diagnostic/inputs.json": "4781c35d09b8c81d96ef61869db78a15c4280be9c93badbe7b2afe3f50a516bf",
+    "app/experiments/f1-013/diagnostic/result/summary.json": "1e92eb604f5b9e71a75d6c9c74b015714dd76b706cb77e7ba9127143cb25daae",
+    "app/experiments/f1-013/diagnostic/result/every-day.csv": "b15b83a588e2f0556fb624b93ce93d8e261a899b9d9c1533c8a6f49a0d061aa5",
+    "app/experiments/research-2026-10-04/pooled-event-policy-review.md": "4d7a8f1cd99f681e4051ead4c408099e31e5183324129390d3d4f9f608536101"
+  },
+  "analytical_checks": {
+    "command": [
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+      "-c",
+      "from fractions import Fraction as F\nimport json\n\ndef scores(t,k,m):\n return dict(precision=t/k if k else None,recall=t/m if m else None,f1=2*t/(k+m) if k+m else None)\n\ndef show(v):\n return {k:str(x) if x is not None else None for k,x in v.items()}\nraw1=scores(F(3,4),1,F(13,8))\npolicy1=scores(F(13,8),2,F(13,8))\nassert all(policy1[k]>raw1[k] for k in raw1)\nraw2=scores(F(83,4),21,F(173,8))\npolicy2=scores(F(173,8),22,F(173,8))\nassert policy2['precision'] < raw2['precision']\nassert max((F(13,8)+k)/(2+k) for k in range(21)) < raw2['precision']\nraw_credit=scores(F(5,4),2,F(5,2))\npolicy_credit=scores(F(9,4),3,F(5,2))\nassert all(policy_credit[k]>raw_credit[k] for k in raw_credit)\nassert F(1,2)+F(1,2)==1\nassert F(1,2)-F(1,2)==0\nassert F(3,2)/2<F(1)\nprint(json.dumps(dict(status='PASS',scope='Two hand-built exact-rational examples only. No historical inputs or candidate policies.',moving_raw_guard=dict(day_one_raw=show(raw1),day_one_policy=show(policy1),day_two_raw=show(raw2),day_two_policy=show(policy2),no_current_subset_can_restore_precision=True),cumulative_balances=dict(raw=show(raw_credit),policy=show(policy_credit),cumulative_TP_gain='1',cumulative_FP_saving='0',day_two_precision_falls=True)),indent=2))\n"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.03996795800003383,
+    "stdout": {
+      "status": "PASS",
+      "scope": "Two hand-built exact-rational examples only. No historical inputs or candidate policies.",
+      "moving_raw_guard": {
+        "day_one_raw": {
+          "precision": "3/4",
+          "recall": "6/13",
+          "f1": "4/7"
+        },
+        "day_one_policy": {
+          "precision": "13/16",
+          "recall": "1",
+          "f1": "26/29"
+        },
+        "day_two_raw": {
+          "precision": "83/84",
+          "recall": "166/173",
+          "f1": "332/341"
+        },
+        "day_two_policy": {
+          "precision": "173/176",
+          "recall": "1",
+          "f1": "346/349"
+        },
+        "no_current_subset_can_restore_precision": true
+      },
+      "cumulative_balances": {
+        "raw": {
+          "precision": "5/8",
+          "recall": "1/2",
+          "f1": "5/9"
+        },
+        "policy": {
+          "precision": "3/4",
+          "recall": "9/10",
+          "f1": "9/11"
+        },
+        "cumulative_TP_gain": "1",
+        "cumulative_FP_saving": "0",
+        "day_two_precision_falls": true
+      }
+    },
+    "stderr": ""
+  },
+  "retrieval_limitations": [
+    "Initial web open of unversioned arXiv1610.07116 returned an internal error. Version1 PDF downloaded successfully and was read.",
+    "One web screenshot of Koyejo page3 timed out. Full PDF downloaded and pages3-5 read, page4 rendered locally and visually inspected."
+  ],
+  "distinctions": {
+    "population_claim": false,
+    "calibration_claim": false,
+    "novelty_claim": false,
+    "observed_upgrade_claim": false,
+    "future_availability_verified": false
+  }
+}

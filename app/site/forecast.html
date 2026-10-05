@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Explore hourly solar forecasts and historical validation for Paphos.">
+  <title>Aktina — Forecasts</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./site.css">
+  <link rel="stylesheet" href="./forecast.css">
+  <script src="./forecast-data.js" defer></script>
+  <script src="./forecast.mjs" type="module"></script>
+</head>
+<body class="forecast-page" data-state="loading">
+  <a class="skip" href="#forecast-view">Skip to forecasts</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Aktina home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 3h6L8 29H2L14 3Zm7 7 10 19h-7l-7-13 4-6ZM12 23h9l3 6H9l3-6Z"/></svg><span>Aktina</span></a>
+    <nav aria-label="Main"><a href="./#day-review">Schedule</a><a href="./forecast.html" aria-current="page">Forecasts</a><a href="./benchmark.html">AktinaBench</a></nav>
+  </header>
+  <main>
+    <header class="forecast-intro"><div><h1>Forecasts</h1><p>Solar conditions, hour by hour.</p></div><p class="forecast-context">Paphos<br>Historical validation</p></header>
+    <p id="forecast-loading" class="forecast-loading" role="status">Opening forecasts</p>
+    <section id="forecast-error" class="load-error" role="alert" hidden><h2>The forecasts could not open.</h2><p>Reload the page to try again.</p><button type="button" id="forecast-reload">Reload</button></section>
+    <section id="forecast-view" aria-label="Historical forecast explorer" hidden>
+      <div class="forecast-controls">
+        <div class="forecast-date-control"><label for="forecast-date">Date</label><div><button type="button" id="forecast-previous" aria-label="Previous available day">←</button><input id="forecast-date" type="date" required><button type="button" id="forecast-next" aria-label="Next available day">→</button></div></div>
+        <label class="forecast-source-control" for="event-method">Forecast<select id="event-method"><option value="event_019">Current forecast</option><option value="v2_600">Original forecast</option><option value="v2_562">Higher sensitivity</option><option value="event_008">Research comparison</option></select></label>
+        <label class="forecast-source-control" for="forecast-source">Weather forecast<select id="forecast-source"><option value="raw_v2">Supplied weather, day 1</option><option value="ecmwf_day2">ECMWF, day 2</option></select></label>
+      </div>
+      <p id="forecast-date-error" class="forecast-date-error" role="alert" hidden></p>
+      <div class="forecast-plot-heading"><h2>Solar radiation <span>W/m²</span></h2><div class="forecast-legend" aria-label="Chart legend"><span class="legend-actual">Actual</span><span class="legend-v2" id="model-legend">Forecast</span><span class="legend-weather" id="weather-legend">Supplied weather, day 1</span></div></div>
+      <div id="forecast-plot" class="forecast-plot" aria-label="Solar radiation chart"></div>
+      <div class="forecast-hour-control"><label for="forecast-hour">Inspect time <output id="forecast-hour-label" for="forecast-hour"></output></label><input type="range" id="forecast-hour" min="0" max="23" value="12" step="1"><span id="forecast-day-coverage"></span></div>
+      <dl class="forecast-readings" aria-live="polite" aria-atomic="true"><div><dt>Actual</dt><dd id="reading-actual"></dd></div><div><dt id="reading-v2-label">Forecast</dt><dd id="reading-v2"></dd></div><div><dt id="reading-weather-label">Supplied weather, day 1</dt><dd id="reading-weather"></dd></div></dl>
+      <p class="forecast-cloud-reading">Weather input <span>Next-day cloud cover <strong id="reading-cloud"></strong></span></p>
+      <section class="forecast-events" aria-labelledby="event-heading">
+        <div class="forecast-event-heading"><div><h2 id="event-heading">High-solar hours</h2><p>Actual radiation above 600 W/m².</p></div></div>
+        <div class="forecast-strips"><div><span>Actual</span><div id="actual-events" class="event-strip" role="group" aria-label="Actual high-solar hours"></div></div><div><span>Predicted</span><div id="predicted-events" class="event-strip" role="group" aria-label="Predicted high-solar hours"></div></div></div>
+        <p id="event-reading" class="forecast-event-reading" aria-live="polite"></p>
+        <p id="event-method-note" class="forecast-note"></p>
+      </section>
+      <section class="forecast-score-section" aria-labelledby="score-heading"><div><h2 id="score-heading">Validation scores</h2><p>All <span id="score-hours">3,566</span> hours, including partial days.</p></div><dl class="forecast-scores"><div><dt>Precision</dt><dd id="score-precision"></dd></div><div><dt>Recall</dt><dd id="score-recall"></dd></div><div><dt>F1</dt><dd id="score-f1"></dd></div></dl></section>
+      <details class="forecast-detail" id="forecast-comparison"><summary>Compare forecasts</summary><div class="forecast-detail-content"><p>All forecasts are compared on the same historical hours. High solar means radiation above 600 W/m².</p><div class="forecast-table-scroll" tabindex="0" role="region" aria-label="Forecast scores, scroll horizontally for counts"><table><caption class="visually-hidden">All 3,566 validation hours</caption><thead><tr><th scope="col">Method</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col"><abbr title="True positives">TP</abbr></th><th scope="col"><abbr title="False positives">FP</abbr></th><th scope="col"><abbr title="False negatives">FN</abbr></th><th scope="col"><abbr title="True negatives">TN</abbr></th></tr></thead><tbody id="forecast-metrics"></tbody></table></div><p>Higher sensitivity finds more high-solar hours, with more false alarms. Its cutoff was selected on this validation period. These are historical comparisons, not results on new data.</p></div></details>
+      <details class="forecast-detail" id="forecast-provenance"><summary>Method and limits</summary><div class="forecast-detail-content forecast-source-grid">
+        <section><h2>Forecasts and event calls</h2><p>Current and original forecasts use distinct retained radiation curves. Higher sensitivity keeps the original curve and changes only high-solar calls. The research comparison supplies event calls only, with the current curve shown for reference.</p><p>Mean absolute radiation error is 18.700675 W/m² for the current forecast and 18.697343 W/m² for the original. Improved event detection does not mean a more accurate radiation curve.</p></section>
+        <section><h2>Historical validation</h2><p>The current forecast has four fewer false alarms and one additional missed hour than the research comparison. Its F1 difference is +0.4269 percentage points, with a 95% paired-day interval from −1.6061 to +2.6215.</p><p>These hours have been inspected repeatedly. The interval includes zero, so the observed gain does not establish superiority on new data. Past observations enter only after their target time has passed.</p></section>
+        <section><h2>Weather and timing</h2><p>The two weather forecasts are distinct historical inputs. Day 1 and day 2 are provider labels. Their availability at the original forecast time remains unverified.</p><p>“Actual” is historical weather radiation, not a measurement of curtailed power. Times use fixed UTC+03:00. Radiation is the preceding-hour mean at each label.</p></section>
+        <section><h2>Coverage</h2><p id="forecast-coverage"></p><p>This is a historical prototype, not a live forecast or plant-control system. These comparisons do not change the schedule or its costs, and do not establish measured water savings.</p></section>
+      </div></details>
+    </section>
+  </main>
+  <footer><a class="brand" href="./">Aktina</a><p>Historical forecast review</p><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Weather from Open-Meteo</a></footer>
+  <noscript><p class="load-error">Enable JavaScript to inspect the retained forecasts.</p></noscript>
+</body>
+</html>

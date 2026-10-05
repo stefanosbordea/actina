@@ -1,0 +1,32 @@
+{
+  "checked_at_utc": "2026-10-04T11:14:47.342631+00:00",
+  "pptx": "app/delivery/Aktina-Pafos-2026.pptx",
+  "sha256": "ed5de759d5928be9451bd592d7611c14a5f8f8522b59cc135d367a0480cc456d",
+  "creator": "Loukas Louka, Stefanos Bordea, Andreas Nikolaides, Cleopas Cleopa",
+  "last_modified_by": "Loukas Louka",
+  "actual_name_runs": [
+    {
+      "name": "Loukas Louka",
+      "properties": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" sz=\"2250\" b=\"0\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"Arial\" /><ns0:ea typeface=\"Arial\" /><ns0:cs typeface=\"Arial\" /></ns0:rPr>"
+    },
+    {
+      "name": "Stefanos Bordea",
+      "properties": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" sz=\"2250\" b=\"0\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"Arial\" /><ns0:ea typeface=\"Arial\" /><ns0:cs typeface=\"Arial\" /></ns0:rPr>"
+    },
+    {
+      "name": "Andreas Nikolaides",
+      "properties": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" sz=\"2250\" b=\"0\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"Arial\" /><ns0:ea typeface=\"Arial\" /><ns0:cs typeface=\"Arial\" /></ns0:rPr>"
+    },
+    {
+      "name": "Cleopas Cleopa",
+      "properties": "<ns0:rPr xmlns:ns0=\"http://schemas.openxmlformats.org/drawingml/2006/main\" sz=\"2250\" b=\"0\"><ns0:solidFill><ns0:srgbClr val=\"FFFFFF\" /></ns0:solidFill><ns0:latin typeface=\"Arial\" /><ns0:ea typeface=\"Arial\" /><ns0:cs typeface=\"Arial\" /></ns0:rPr>"
+    }
+  ],
+  "changed_zip_members": [
+    "docProps/core.xml"
+  ],
+  "render_identity": {
+    "1": true,
+    "12": true
+  }
+}

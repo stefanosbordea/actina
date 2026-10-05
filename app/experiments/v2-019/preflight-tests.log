@@ -1,0 +1,8 @@
+test_fixed_parameters_and_no_scaler (test_run.FixedLogisticTests.test_fixed_parameters_and_no_scaler) ... ok
+test_serialized_coefficients_replay_real_estimator (test_run.FixedLogisticTests.test_serialized_coefficients_replay_real_estimator) ... ok
+test_training_fp_cap_unchanged (test_run.FixedLogisticTests.test_training_fp_cap_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.092s
+
+OK

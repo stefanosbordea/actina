@@ -1,0 +1,9 @@
+test_control_and_expanded_share_core_exactly (test_run.PolicyTests.test_control_and_expanded_share_core_exactly) ... ok
+test_false_positive_cap_applies_before_ranking (test_run.PolicyTests.test_false_positive_cap_applies_before_ranking) ... ok
+test_no_admissible_tick_is_explicit (test_run.PolicyTests.test_no_admissible_tick_is_explicit) ... ok
+test_strict_target_before_origin (test_run.PolicyTests.test_strict_target_before_origin) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.032s
+
+OK

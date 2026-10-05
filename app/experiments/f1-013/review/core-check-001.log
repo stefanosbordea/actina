@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013/review/core-check.py", line 205, in <module>
+    check(coverage[field] > 0, 'missing coverage: ' + field)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-013/review/core-check.py", line 31, in check
+    raise AssertionError(label)
+AssertionError: missing coverage: tie_resolved_K

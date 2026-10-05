@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "checks": {
+    "joined_rows": 17832,
+    "prediction_rows": 49931,
+    "prediction_files": 14,
+    "full_scores": 28,
+    "monthly_scores": 154,
+    "validation_grid_scores": 368
+  },
+  "file_sha256": {
+    "checker": "fa771152d7bcc6536c9089a506eba19ca87fe166e26a772aafcac9f10dccd3f1",
+    "protocol": "a31cd52672ebbe36c221c822fb8d085bee86e11d972e5fbb8457229938af76c7",
+    "report": "c01c619bfb5d66d138414613328f75e720d05332aae0c48f8247b47bc30ae464",
+    "selection": "9114c0d313192677f6d98799644699285e26b3c2cd0d835a7163f7ba3cd1e2f8",
+    "archive": "bae187f19e9bacf6c00343666feda994bb051d7053b77f0cc53b9f75555378fc"
+  },
+  "validation_selected_method": "classifier_nwp",
+  "selected_test_metrics": {
+    "hours": 3567,
+    "tp": 1003,
+    "fp": 26,
+    "fn": 7,
+    "tn": 2531,
+    "precision": 0.9747327502429544,
+    "recall": 0.9930693069306931,
+    "f1": 0.9838155958803335,
+    "mae": null,
+    "rmse": null
+  },
+  "nwp_fixed_test_metrics": {
+    "hours": 3567,
+    "tp": 993,
+    "fp": 15,
+    "fn": 17,
+    "tn": 2542,
+    "precision": 0.9851190476190477,
+    "recall": 0.9831683168316832,
+    "f1": 0.9841427155599604,
+    "mae": 8.805719091673675,
+    "rmse": 22.80048396340563
+  },
+  "persistence_test_metrics": {
+    "hours": 3567,
+    "tp": 985,
+    "fp": 20,
+    "fn": 25,
+    "tn": 2537,
+    "precision": 0.9800995024875622,
+    "recall": 0.9752475247524752,
+    "f1": 0.9776674937965261,
+    "mae": 12.259321558732829,
+    "rmse": 40.10747056849009
+  },
+  "bootstrap": {
+    "comparison": "Predeclared fixed nwp_day2 cutoff600 versus fixed persistence600; not the validation-selected method.",
+    "purpose": "Post-run uncertainty analysis requested after point estimates were known; not part of the original selection protocol.",
+    "seed": 20261004,
+    "replicates": 20000,
+    "block": "Supplied target date under recovered fixed UTC+03; resample all149 date blocks with replacement, using identical blocks for both methods.",
+    "partial_day": "Retain the initial15-hour block. Observed estimate uses all3567hours; resampled hour counts may vary when this shorter block is drawn.",
+    "interval": "Two-sided95% percentile interval, linear interpolation of ordered bootstrap differences.",
+    "effects": {
+      "f1": {
+        "difference_nwp_minus_persistence": 0.006475221763434291,
+        "percentile_95_interval": [
+          -0.00048507721630935974,
+          0.013578744170851816
+        ],
+        "bootstrap_fraction_favouring_nwp": 0.96505
+      },
+      "precision": {
+        "difference_nwp_minus_persistence": 0.005019545131485503,
+        "percentile_95_interval": [
+          -0.001939085441055799,
+          0.012335175420561447
+        ],
+        "bootstrap_fraction_favouring_nwp": 0.9204
+      },
+      "recall": {
+        "difference_nwp_minus_persistence": 0.007920792079207928,
+        "percentile_95_interval": [
+          -0.004036326942482349,
+          0.02102102102102099
+        ],
+        "bootstrap_fraction_favouring_nwp": 0.87725
+      },
+      "mae": {
+        "difference_nwp_minus_persistence": -3.453602467059154,
+        "percentile_95_interval": [
+          -5.75501256037352,
+          -1.5239486963835167
+        ],
+        "bootstrap_fraction_favouring_nwp": 1.0
+      },
+      "rmse": {
+        "difference_nwp_minus_persistence": -17.306986605084465,
+        "percentile_95_interval": [
+          -26.693837105847653,
+          -7.599682796802419
+        ],
+        "bootstrap_fraction_favouring_nwp": 1.0
+      }
+    },
+    "direction": "NWP minus persistence; positive classification differences and negative errors favour NWP.",
+    "limitations": [
+      "Day blocks do not preserve cross-day weather dependence.",
+      "Intervals are marginal, not simultaneous or adjusted for comparisons.",
+      "No bootstrap fraction is interpreted as a formal hypothesis-test p-value.",
+      "This already-inspected test and unverified historical publication availability cannot establish a deployable model."
+    ],
+    "target_hours": 3567,
+    "blocks": 149,
+    "partial_blocks": {
+      "2026-05-03": 15
+    },
+    "resample_hour_count_range": [
+      3513,
+      3576
+    ]
+  },
+  "interpretation": [
+    "The validation-selected classifier fails the precision promotion condition. The fixed NWP control cannot be retroactively substituted as the validation winner.",
+    "The raw archived forecast supplies a useful retrospective comparison; provider archive access and nominal48hlead do not prove historical publication by the decision origin.",
+    "Fixed UTC+03 aligns retained labels; it is not a Cyprus DST clock. Radiation targets retain preceding-hour-mean semantics.",
+    "129 missing cloud hours remain in validation; test has none. Native missing handling and its indicator were declared before fitting."
+  ]
+}

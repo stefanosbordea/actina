@@ -1,0 +1,18 @@
+test_bad_headers_and_silent_extra_fields_rejected (test_compare_prediction_versions.VersionComparisonTests.test_bad_headers_and_silent_extra_fields_rejected) ... ok
+test_changed_selected_arm_or_policy_is_rejected (test_compare_prediction_versions.VersionComparisonTests.test_changed_selected_arm_or_policy_is_rejected) ... ok
+test_corrupt_saved_classifier_or_retained_control_is_rejected (test_compare_prediction_versions.VersionComparisonTests.test_corrupt_saved_classifier_or_retained_control_is_rejected) ... ok
+test_declared_target_basis_avoids_double_shift (test_compare_prediction_versions.VersionComparisonTests.test_declared_target_basis_avoids_double_shift) ... ok
+test_duplicate_nonconsecutive_and_nonfinite_rejected (test_compare_prediction_versions.VersionComparisonTests.test_duplicate_nonconsecutive_and_nonfinite_rejected) ... ok
+test_frozen_policy_strict_boundaries_and_separate_raw_sources (test_compare_prediction_versions.VersionComparisonTests.test_frozen_policy_strict_boundaries_and_separate_raw_sources) ... ok
+test_hand_calculated_threshold_counts_and_raw_column (test_compare_prediction_versions.VersionComparisonTests.test_hand_calculated_threshold_counts_and_raw_column) ... ok
+test_null_denominators_serialize_without_false_superiority (test_compare_prediction_versions.VersionComparisonTests.test_null_denominators_serialize_without_false_superiority) ... ok
+test_original_byte_hash_survives_bom_and_unnamed_index (test_compare_prediction_versions.VersionComparisonTests.test_original_byte_hash_survives_bom_and_unnamed_index) ... ok
+test_output_never_overwrites_or_writes_protected_inputs (test_compare_prediction_versions.VersionComparisonTests.test_output_never_overwrites_or_writes_protected_inputs) ... ok
+test_partial_coverage_preserves_missing_and_extra_identities (test_compare_prediction_versions.VersionComparisonTests.test_partial_coverage_preserves_missing_and_extra_identities) ... ok
+test_reject_changed_truth_or_persistence (test_compare_prediction_versions.VersionComparisonTests.test_reject_changed_truth_or_persistence) ... ok
+test_single_validation_cli_needs_no_test_file (test_compare_prediction_versions.VersionComparisonTests.test_single_validation_cli_needs_no_test_file) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.154s
+
+OK

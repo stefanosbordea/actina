@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "status": "COMPLETE",
+  "render_exit_status": 0,
+  "independent_check_exit_status": 0,
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 app/delivery/Aktina-Backup-Final-Source/render.py --bridgeclip /Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/build/bridgeclip-src --deps /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/showcase-bridgeclip/runtime/deps --output app/delivery/Aktina-Backup-Final.mp4 --work-dir app/delivery/Aktina-Backup-Final-Source/render > app/delivery/Aktina-Backup-Final-Source/render.log 2>&1",
+  "check_command": "PYTHONDONTWRITEBYTECODE=1 /Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 app/delivery/Aktina-Backup-Final-Source/check.py > app/delivery/Aktina-Backup-Final-Source/check.log 2>&1",
+  "output": {
+    "path": "app/delivery/Aktina-Backup-Final.mp4",
+    "sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
+    "bytes": 6545580,
+    "duration_seconds": 44,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 1320,
+    "audio_tracks": 0
+  },
+  "network_attempts": 0,
+  "new_dependencies_installed": false,
+  "old_v2_files_unchanged": 25,
+  "artifacts_sha256": {
+    "app/delivery/Aktina-Backup-Final-Source/render.py": "99113f5a313f583925f86e6bd15fbdd0b26d70775a4d7b28c44e74db1b432309",
+    "app/delivery/Aktina-Backup-Final-Source/check.py": "e8dbf1e071d5a1f3d9bccd761ce8a835c4f6d372d10f19a337431d3ca26a00d1",
+    "app/delivery/Aktina-Backup-Final-Source/render.log": "72f66e4bcaf26b7cd7dc6f75be4bc1c17a3cf00d9072d5b4d17af4c208242a7e",
+    "app/delivery/Aktina-Backup-Final-Source/check.log": "395b350900c068f85f61e92a91478f107b220e6acf2f099f67a5d80d39d5ff92",
+    "app/delivery/Aktina-Backup-Final-Source/capture-provenance.json": "33a476e8b2215dcf0776102c97e27bdf48cecd9d3d0d23b15a5ae2f7d2999d1d",
+    "app/delivery/Aktina-Backup-Final-Source/v2-preservation.json": "cca2b4691513117edff5de2914db41b605bd2441d4e16c314dd93760d07b476b",
+    "app/delivery/Aktina-Backup-Final-Source/render/verification.json": "5f33fa12be0441ff1525a6ca18a2ec6f8e5636ccf02b361e750924596ce77f4e",
+    "app/delivery/Aktina-Backup-Final-Source/render/independent-check.json": "d2d1a3559f8626a6adda34843f0b707d59556322f0422d6f7e6cb4e28187a0e0",
+    "app/delivery/Aktina-Backup-Final-Source/visual-review.json": "ba1e657413e77c12f2a1fc835a69282787e35207e02f80acd738ade870b1cb50",
+    "app/delivery/Aktina-Backup-Final.bridgeclip.json": "b163e244f711c1c7f93c28c9b0fcc751638d874210dff28ece4cca899b1345c3"
+  }
+}

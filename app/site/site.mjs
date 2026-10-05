@@ -29,30 +29,21 @@ function sourceDetails() {
   const a = data.assumptions;
   const forecastStatus = data.source?.schedule_forecast_status;
   $('schedule-status').textContent = forecastStatus === 'matches_persistence'
-    ? 'Schedule forecast matches yesterday’s weather; model-to-plan connection awaiting confirmation.'
+    ? 'Plan input matches previous-day weather.'
     : forecastStatus === 'matches_model'
-      ? 'The supplied plan’s forecast matches the LightGBM output.'
+      ? 'The supplied plan’s forecast matches the forecast.'
       : 'The supplied plan’s forecast source is awaiting confirmation.';
   $('forecast-provenance').textContent = forecastStatus === 'matches_persistence'
-    ? 'The sun chart shows the LightGBM predictions. The supplied schedule’s forecast column matches yesterday’s radiation. This does not establish which forecast generated the plan. Production, tank levels and costs are shown unchanged; the model-to-plan connection is awaiting confirmation.'
+    ? 'The chart shows the day-ahead forecast. The supplied plan input matches previous-day weather, so its costs do not demonstrate gains from the current forecast.'
     : forecastStatus === 'matches_model'
-      ? 'The supplied schedule’s forecast column matches the LightGBM predictions. Production and tank levels are shown unchanged from the supplied schedule.'
-      : 'The sun chart shows the LightGBM predictions. The supplied schedule’s forecast column has not been confirmed to match those predictions. Production and tank levels are shown unchanged.';
+      ? 'The supplied schedule’s forecast column matches the forecast values. Production and tank levels are shown unchanged from the supplied schedule.'
+      : 'The sun chart shows the forecast values. The supplied schedule’s forecast column has not been confirmed to match those predictions. Production and tank levels are shown unchanged.';
   $('assumptions').innerHTML = [
     ['Tank capacity', `${number(a.capacity)} m³`], ['Minimum tank level', `${number(a.reserve)} m³`],
     ['Plant electricity', `${number(a.energy, 2)} kWh/m³`], ['Lower-price condition', `Actual radiation > ${number(a.threshold)} W/m²`],
     ['Electricity price, lower / normal', `€${number(a.surplus_price)} / €${number(a.normal_price)} per MWh`],
   ].map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('');
-  $('source-commit').textContent = data.source?.commit || 'Not supplied';
-  $('source-hash').textContent = data.source?.csv_sha256 || 'Not supplied';
-  if (data.source?.repository) {
-    const repository = String(data.source.repository);
-    const url = new URL(repository.startsWith('https://') ? repository : `https://github.com/${repository}`);
-    if (url.protocol === 'https:' && url.hostname === 'github.com') {
-      $('source-repository').href = url.href;
-      $('source-repository').textContent = url.pathname.replace(/^\//, '');
-    }
-  }
+
 }
 
 function renderDay() {
@@ -80,7 +71,7 @@ function renderDay() {
   const surplus = rows.filter((row) => row.actual > a.threshold).length;
   $('surplus-summary').textContent = `${surplus} ${surplus === 1 ? 'hour' : 'hours'} above ${number(a.threshold)} W/m²`;
   const error = (field) => rows.reduce((total, row) => total + Math.abs(row[field] - row.actual), 0) / rows.length;
-  $('forecast-error').textContent = `Average absolute error over 24 hours: LightGBM ${number(error('model_forecast'))} W/m²; yesterday’s weather ${number(error('baseline'))} W/m².`;
+  $('forecast-error').textContent = `Average absolute error over 24 hours: Forecast ${number(error('model_forecast'))} W/m². Yesterday’s weather ${number(error('baseline'))} W/m².`;
   const changeText = (value) => `${value > 0 ? '+' : ''}${number(value, 1)} m³`;
   $('comparison-note').textContent = productionDifference === 0 && tankChange === 0
     ? 'Same water production and ending storage.'
@@ -98,7 +89,7 @@ function drawCharts() {
   const day = data.days[dayIndex], rows = day.rows, a = data.assumptions;
   layouts = [];
   const charts = [
-    { id: 'sun-chart', type: 'sun', max: Math.max(1200, ...rows.flatMap((row) => [row.actual, row.model_forecast])), min: Math.min(0, ...rows.flatMap((row) => [row.actual, row.model_forecast])), ticks: [0, a.threshold, 1200], label: 'Actual and LightGBM forecast solar radiation in watts per square metre. Shaded hours have actual radiation above the lower-price threshold.' },
+    { id: 'sun-chart', type: 'sun', max: Math.max(1200, ...rows.flatMap((row) => [row.actual, row.model_forecast])), min: Math.min(0, ...rows.flatMap((row) => [row.actual, row.model_forecast])), ticks: [0, a.threshold, 1200], label: 'Actual and predicted solar radiation in watts per square metre. Shaded hours have actual radiation above the lower-price threshold.' },
     { id: 'production-chart', type: 'production', max: Math.max(450, ...rows.flatMap((row) => [row.flat, row.aktina])) * 1.08, min: 0, ticks: [0, 200, 400], label: 'Hourly water production in cubic metres: flat plan and Aktina schedule.' },
     { id: 'tank-chart', type: 'tank', max: Math.max(a.capacity, day.start_tank, ...rows.map((row) => row.tank)) * 1.09, min: Math.min(0, day.start_tank, ...rows.map((row) => row.tank)), ticks: [0, a.reserve, a.capacity], label: 'Stored water in cubic metres at each hour’s end, with the minimum and capacity marked.' },
   ];

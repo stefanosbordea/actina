@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checks": 250121,
+  "original_files_and_sources_unchanged": true,
+  "raw_gfs_hours": 17856,
+  "raw_satellite_hours": 17976,
+  "joined_hours": 17832,
+  "gfs_padding_hours": 24,
+  "gfs_radiation_missing": 0,
+  "gfs_cloud_invalid_hours": 8,
+  "original_cloud_intake_status": "FAILED",
+  "radiation_only_schema_status": "PASS",
+  "satellite_coverage": {
+    "all_feature_targets": {
+      "hours": 17832,
+      "missing": 197
+    },
+    "validation_training": {
+      "hours": 10675,
+      "missing": 0
+    },
+    "test_training": {
+      "hours": 14241,
+      "missing": 147
+    }
+  },
+  "returned_grid": {
+    "GFS": {
+      "latitude": 34.734787,
+      "longitude": 32.460938,
+      "elevation": 71.0
+    },
+    "SARAH3": {
+      "latitude": 34.75,
+      "longitude": 32.4,
+      "elevation": 71.0
+    }
+  },
+  "check_sha256": "b8917bb5dc96654aec0e31bdaede1b5f643f57b32ff04b04efb4f4cd1337304c",
+  "network_requests": 0,
+  "fits": 0,
+  "forecast_scores": 0,
+  "limits": [
+    "Retained bytes and local request receipts establish reconstruction, not independent authentication of provider history.",
+    "Nominal previous_day2 does not verify historical publication/initialization vintage or real-time availability.",
+    "Different model families and satellite-derived products are not proven statistically independent truth.",
+    "Source-label UTC+03 is fixed; returned grids differ from requested coordinates; radiation is a preceding-hour mean."
+  ]
+}

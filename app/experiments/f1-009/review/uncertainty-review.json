@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-04T10:27:17.121641+00:00",
+  "source_sha256": {
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/review/uncertainty.py": "473f2cc74dcab76b0a7546e7454a097e7603c7e8e26695ab69c184882bc08167",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/review/uncertainty-protocol.md": "5c3032938ffdfb5e6c456d9101fa9748da7061f330d21aa70119206a373c6395",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/review/uncertainty-result.json": "e6a3c64ca469b67f3c57b1516ed1e6c8578c454a04091ca9670ea81b6edb74fe",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/review/uncertainty-receipt.json": "2c06076ab4163bef32b3d75780e74e02cd50ec90a67d055ea2e6a389e4f75ce9",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/review/uncertainty.log": "f98084520dc880177baf9997732cee273f125d070cc6e0124853aeffe0624732",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/result/predictions/test-joint.csv": "211d1497e2ed33c9957038b03e29bba85ac23a4dc9251e0167a0aff349cfa15d",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-008/result/predictions/test-consensus_two_source.csv": "7339965abcf516738d98f504f25ba99fb89cdba286dc97cfb83f0fffe17aea0d",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/result/report.json": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-008/result/report.json": "fb95ae701e16d6a9df988fc5c8ef318db03a1906d38edf58f2e3ab2751c47ac6",
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/f1-009/README.md": "6d6af232b355f34436062605dfc4d6f0fa9bace4c48b034055428f0d5e9e67b6"
+  },
+  "checker_sha256": "01853eca80ab7b27a0e28091259593aecf599f2b77a4ea603e5963cbc7a71b49",
+  "checker_path": "/tmp/aktina-009-uncertainty-independent.py",
+  "executed_command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python /tmp/aktina-009-uncertainty-independent.py",
+  "checks": {
+    "source_reports_and_original_receipt_hashes": true,
+    "joined_target_hours": 3567,
+    "satellite_hours": 3517,
+    "calendar_days": 149,
+    "first_partial_day_hours": 15,
+    "independent_daily_counts_exact": true,
+    "direct_paired_pooling_resamples_per_block_length": 20000,
+    "block_lengths_days": [
+      1,
+      7
+    ],
+    "circular_block_sampling_and_truncation": true,
+    "same_draws_all_methods_and_references": true,
+    "metric_difference_records": 24,
+    "all_quantiles_and_undefined_counts_exact": true,
+    "manual_linear_percentile_check_tolerance": 2e-15,
+    "undefined_fixture_preserved_nan": true,
+    "imported_main_rerun_exactly_equals_saved_json": true,
+    "readme_intervals_and_percentage_point_units": true,
+    "source_bytes_unchanged": true,
+    "no_fitting": true,
+    "no_existing_file_overwritten": true
+  },
+  "limitations": [
+    "Post-inspection marginal sensitivity intervals do not correct adaptive research or multiple comparisons.",
+    "Circular seven-day blocks retain local dependence but not longer seasonal structure.",
+    "Sampling fractions are not posterior probabilities."
+  ],
+  "findings": [],
+  "wall_seconds": 0.7020432080025785,
+  "exit_code": 0,
+  "execution_tool_chunk": "c62423",
+  "shell_wall_seconds": 1.079705583
+}

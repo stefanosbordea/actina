@@ -1,0 +1,51 @@
+{
+  "git_commit": "85097a560769ad8a1459ce55f0b3a4c301202405",
+  "capture": "Local git show and existing retained comparator files. No download or training.",
+  "original_sources": {
+    "data/featuresv2.csv": {
+      "sha256": "df9a38fa7c17ab7021c4560de77a72a6d5e9914f982739997634726414d863d9",
+      "bytes": 1412671
+    },
+    "model/train_modelv2.py": {
+      "sha256": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+      "bytes": 1448
+    },
+    "data/features_v2.py": {
+      "sha256": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+      "bytes": 755
+    },
+    "data/download_nwp.py": {
+      "sha256": "4ee8a336a3dfcaa1c2cfecdb933cefe598e5b0e43a84052a8dada9e8a54863a6",
+      "bytes": 1971
+    },
+    "eval/cv_predictions_v2.csv": {
+      "sha256": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+      "bytes": 190454
+    },
+    "eval/cv_predictions.csv": {
+      "sha256": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+      "bytes": 173382
+    },
+    "app/experiments/f1-008/result/predictions/validation-consensus_two_source.csv": {
+      "sha256": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+      "bytes": 277064
+    },
+    "app/experiments/f1-008/result/features.csv": {
+      "sha256": "6e19f901d652c32453ae0a214196140b4c94abe6855cc9e88667fd03273b7f12"
+    }
+  },
+  "files": {
+    "cv_predictions_v2.csv": "71de995691fd6cc4feda1eb5ee9da9002551c8144cbc04a7376a5e8790809982",
+    "download_nwp.py": "4ee8a336a3dfcaa1c2cfecdb933cefe598e5b0e43a84052a8dada9e8a54863a6",
+    "features_v2.py": "9f9e9830f6e447ffa2c0a1a95c781c82eafc43e890e03a80064a3aed12ae343e",
+    "fixed008-validation.csv": "7a7394433f707371ce6ce7f8ae7b0db1d8119b2805a4d9676386aaf7e2804b66",
+    "original-validation.csv": "1b4d9a3b95169c52be39551fcbd1d37df6db0a40beb9986462d87b1644d75d69",
+    "retained-day2-validation.csv": "e18b428248163e5e6f84f192c4460e563bb7aae302e277ba68339d4be77bdf05",
+    "train.csv": "64751284dc885eb8bf01206599f19193250fab30aa2f0549e32b5ad30a173bbb",
+    "train_modelv2.py": "9fc6600f3b427b620a3797e86f1edeebf0069b9b9065867911c64527a1419622",
+    "validation-features.csv": "bce5dc92e2bc7c99b40c2fea4987ac0c08a7d23a3128b57ea4655c3e5f06c515"
+  },
+  "train_rows": 16444,
+  "validation_rows": 3566,
+  "split": "Original v2 cutoff. Validation targets excluded from validation-features.csv. Test rows are not retained."
+}

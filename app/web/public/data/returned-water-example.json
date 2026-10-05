@@ -2,7 +2,7 @@
   "schema": 1,
   "kind": "fixed_plan_revision_review",
   "createdAt": "2026-10-03T00:52:36.084Z",
-  "reviewer": "Loucas",
+  "reviewer": "Example reviewer",
   "decision": "Needs team review",
   "reason": "Analytical example; inspect the paired service finding before interpreting the supplied solar comparison.",
   "declared_author": "Analytical fixture, not a teammate or plant handoff",

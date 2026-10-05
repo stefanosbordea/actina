@@ -1,0 +1,33 @@
+test_base_prediction_is_head_input (test_run.ChronologyAndPolicyTests.test_base_prediction_is_head_input) ... ok
+test_inner_purge_and_28_day_stop (test_run.ChronologyAndPolicyTests.test_inner_purge_and_28_day_stop) ... ok
+test_integer_probability_grid_tie (test_run.ChronologyAndPolicyTests.test_integer_probability_grid_tie) ... ok
+test_one_class_head_fails_before_fit (test_run.ChronologyAndPolicyTests.test_one_class_head_fails_before_fit) ... ok
+test_strict_events_and_counts (test_run.ChronologyAndPolicyTests.test_strict_events_and_counts) ... ok
+test_strict_target_purge (test_run.ChronologyAndPolicyTests.test_strict_target_purge) ... ERROR
+
+======================================================================
+ERROR: test_strict_target_purge (test_run.ChronologyAndPolicyTests.test_strict_target_purge)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/v2-016/test_run.py", line 10, in test_strict_target_purge
+    origins = pd.to_datetime(["2025-01-01 23:00", "2025-01-02 00:00", "2025-01-02 01:00"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/core/tools/datetimes.py", line 1072, in to_datetime
+    result = convert_listlike(argc, format)
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/core/tools/datetimes.py", line 435, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/lib/python3.14/site-packages/pandas/core/tools/datetimes.py", line 470, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/tslibs/strptime.pyx", line 564, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 512, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 618, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2025-01-02" doesn't match format "%Y-%m-%d %H:%M". You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.051s
+
+FAILED (errors=1)

@@ -1,0 +1,33 @@
+{
+  "status": "VERIFIED_BYTES",
+  "scope": "Local first-observed capture times only; not original NWP publication, forecast issue or training times. No source authentication or timestamp attestation.",
+  "manifest_sha256": "444ba09fdc1fa171aedc94a8cfab55aa51510811c581c3db641209acb56fa4b9",
+  "roles": {
+    "predictions": {
+      "basename": "predictions-full.csv",
+      "bytes": 12905,
+      "sha256": "44d00db6d2dd5d341e6a4ae8192cb462f287fa461afcbd8ddb52dea7361bb98c",
+      "payload": "payloads/44d00db6d2dd5d341e6a4ae8192cb462f287fa461afcbd8ddb52dea7361bb98c.bin",
+      "first_observed_here_at_utc": "2026-10-04T08:58:50.738807+00:00"
+    },
+    "weather": {
+      "basename": "response.json",
+      "bytes": 3371,
+      "sha256": "603289aad68422bec648785a5e1d7b525fc77bd15d6b01354dba49fb00ac7eff",
+      "payload": "payloads/603289aad68422bec648785a5e1d7b525fc77bd15d6b01354dba49fb00ac7eff.bin",
+      "first_observed_here_at_utc": "2026-10-04T08:58:50.739159+00:00"
+    },
+    "metadata": {
+      "basename": "capture-metadata.json",
+      "bytes": 2044,
+      "sha256": "a814999f70a3f3663f736e11b8c0c97177284e18c80f208749af5bc60cd49969",
+      "payload": "payloads/a814999f70a3f3663f736e11b8c0c97177284e18c80f208749af5bc60cd49969.bin",
+      "first_observed_here_at_utc": "2026-10-04T08:58:50.739397+00:00"
+    }
+  },
+  "provenance_status": {
+    "source": "unverified",
+    "training": "unverified",
+    "feature_timing": "unverified"
+  }
+}

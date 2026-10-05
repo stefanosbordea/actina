@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "Actual production solver tested against independent full-action synthetic oracle. No historical arrays, predictions or outcomes opened.",
+  "actual_code_sha256": "8812e5dbe66a8f1d389103d0a4ab9945540e21335319067fb431e0f8dcdd7f30",
+  "checker_sha256": "022e60d2113aca5f0c4c1d16a42fd4f09dabf7abff4c6d8ade72f7a7c2d1e702",
+  "checks": 407109,
+  "coverage": {
+    "ledger_rows": 40032,
+    "raw_fallback": 2946,
+    "count_equal": 3644,
+    "cases": 3143,
+    "tie_resolved_changes": 592,
+    "strict_gain": 3340,
+    "tie_resolved_objective": 3340,
+    "count_decrease": 114,
+    "count_increase": 2528,
+    "exhaustive_two_hour_distributions": 256,
+    "tie_resolved_tuple": 29,
+    "seeded_four_hour_distributions": 128,
+    "seeded_eight_hour_cases": 64,
+    "tie_resolved_K": 2,
+    "malformed_rejections": 10,
+    "deadline_rejections": 1
+  },
+  "completed_at_utc": "2026-10-04T11:40:38.467450+00:00",
+  "wall_seconds": 7.620092790999934,
+  "cpu_seconds": 5.42927,
+  "peak_rss_bytes": 33701888,
+  "limitations": [
+    "Finite synthetic coverage does not prove arbitrary inputs",
+    "Does not verify historical candidate generation or realized scores"
+  ]
+}

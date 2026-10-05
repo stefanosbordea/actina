@@ -1,0 +1,13 @@
+test_absent_reference_hour_does_not_become_null (test_check.SensitivityTests.test_absent_reference_hour_does_not_become_null) ... ok
+test_changed_control_membership_or_target_rejected (test_check.SensitivityTests.test_changed_control_membership_or_target_rejected) ... ok
+test_no_overwrite (test_check.SensitivityTests.test_no_overwrite) ... ok
+test_null_reference_never_hides_missing_forecast (test_check.SensitivityTests.test_null_reference_never_hides_missing_forecast) ... ok
+test_null_spans_preserve_nonadjacent_hours (test_check.SensitivityTests.test_null_spans_preserve_nonadjacent_hours) ... ok
+test_same_subset_isolates_reference_change (test_check.SensitivityTests.test_same_subset_isolates_reference_change) ... ok
+test_scenario_default_uses_probability_not_median_or_selected (test_check.SensitivityTests.test_scenario_default_uses_probability_not_median_or_selected) ... ok
+test_strict_reference_boundary_and_undefined_scores (test_check.SensitivityTests.test_strict_reference_boundary_and_undefined_scores) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK

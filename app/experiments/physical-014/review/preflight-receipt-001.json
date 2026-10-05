@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/.venv/bin/python",
+    "-m",
+    "unittest",
+    "test_link.py",
+    "-v"
+  ],
+  "cwd": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/physical-014",
+  "exit_code": 0,
+  "source_stable": true,
+  "file_sha256": {
+    "PROTOCOL.md": "1cd6eab547127056b7af0e97d30d45e004d499f3cc36b4ae7abcc82e8d718bfe",
+    "link.py": "e80f3b5dac2b49e635b7eb741eb4a0930707847852f0b27b3476ecdefc047609",
+    "run.py": "be0adbb45b821d129c996e14698616c2c6bd6c75450a7d20810fb58de9e2dadc",
+    "test_link.py": "3a1d9e52e2d5b3395843f9e2ceef71d4f402aee8781d0e1e270b262a8c8af1fc"
+  },
+  "elapsed_seconds": 1.2916404170000533,
+  "completed_at_utc": "2026-10-04T11:55:34.885489+00:00",
+  "log_sha256": "c67bd77293d17080cd090248fe2e4897d53d9c9ff72b8c356236d521e517671e",
+  "scope": "Analytical fixtures only. No historical plans or realized outcome values read."
+}

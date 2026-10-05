@@ -1,0 +1,122 @@
+{
+  "status": "COMPLETE",
+  "recorded_at_utc": "2026-10-04T09:56:02.629240+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python app/experiments/f1-007/run.py --output app/experiments/f1-007/result > app/experiments/f1-007/run.log 2>&1",
+  "exit_code": 0,
+  "fits": 6,
+  "prediction_rows": 64197,
+  "comparison_records": 126,
+  "input_count": 26,
+  "source_and_output_sha256": {
+    "PROTOCOL.md": "f6950483c4bc3864c4a902d9b1e230681011c634d02bd7474c025cec4aa461fc",
+    "inputs.json": "54eebdecf735cd5801bf0f8dbb8face048ac106378a7c3214276e1d861ac75c5",
+    "run.py": "0c2634b1dcd1b4901aee8792e126c1c6b630252976da27e7ff5f7a7691a06e55",
+    "run.log": "0c70d39f44e8bb442bc7c42d24949519dfc7f401cbbcb476692bc6beebee43b7",
+    "result/report.json": "3f91561fc5f84a8538a524962af676bea068d9199c066f85bff8f0dce8d27281",
+    "result/validation-selection.json": "5a8237af0feca272d7d3c2fff49c5bf6c857635c3a822c15c5725c5bf3bcc0be",
+    "result/comparison.csv": "e01f5c028266651bd01b394519f873206d3a39b5a30a09cdb1fac96dc50ea021",
+    "README.md": "44e5068415a5e3b2aeac370ae1f8c617d34ac5cf46e2a3c05e4ed112fc771868"
+  },
+  "test_gates": {
+    "weather": {
+      "selected_method": "weather_larger",
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.9851337958374629,
+          "control": 0.9851190476190477,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9841584158415841,
+          "control": 0.9831683168316832,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.9846458642892522,
+          "control": 0.9841427155599604,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.9556898288016112,
+          "control": 0.9576612903225806,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9733333333333334,
+          "control": 0.9743589743589743,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9644308943089431,
+          "control": 0.9659379766141332,
+          "status": "regressed"
+        }
+      ]
+    },
+    "consensus": {
+      "selected_method": "consensus_larger",
+      "passes_frozen_gate": false,
+      "all_six_strictly_improved": false,
+      "comparisons": [
+        {
+          "basis": "weather_full",
+          "metric": "precision",
+          "candidate": 0.983284169124877,
+          "control": 0.9851190476190477,
+          "status": "regressed"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "recall",
+          "candidate": 0.9900990099009901,
+          "control": 0.9831683168316832,
+          "status": "improved"
+        },
+        {
+          "basis": "weather_full",
+          "metric": "f1",
+          "candidate": 0.986679822397632,
+          "control": 0.9841427155599604,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "precision",
+          "candidate": 0.955044955044955,
+          "control": 0.9576612903225806,
+          "status": "regressed"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "recall",
+          "candidate": 0.9805128205128205,
+          "control": 0.9743589743589743,
+          "status": "improved"
+        },
+        {
+          "basis": "satellite_common",
+          "metric": "f1",
+          "candidate": 0.9676113360323887,
+          "control": 0.9659379766141332,
+          "status": "improved"
+        }
+      ]
+    }
+  },
+  "independent_review": "Pending separate review; no independent pass claimed yet.",
+  "scope": "No network, new dependencies or changes to root model/data, scheduler, UI or competition pack. No test-driven revisions."
+}

@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "status": "EXPORTED_AND_DECODED",
+  "description": "Actual-interface screenshot walkthrough; not a live interaction recording.",
+  "width": 1920,
+  "height": 1080,
+  "capture_width": 1600,
+  "capture_height": 900,
+  "scaling": "1600\u00d7900 captures upscaled to 1920\u00d71080 with Lanczos; pinned BridgeClip minimum landscape size is 1080p.",
+  "fps": 30,
+  "duration_seconds": 44,
+  "frames": 1320,
+  "audio_tracks": 0,
+  "timeline": [
+    {
+      "file": "captures/01-home.jpg",
+      "start_seconds": 0,
+      "duration_seconds": 6,
+      "sha256": "62f636ff59e771ff06498ba42906d064a970b72b2c96e23ab92d98728949426d",
+      "image_codec": "mjpeg"
+    },
+    {
+      "file": "captures/02-summer.jpg",
+      "start_seconds": 6,
+      "duration_seconds": 9,
+      "sha256": "28eb71399994031e3ad8eaffca776e11e3627df5708db6302bdd113fe03846ec",
+      "image_codec": "mjpeg"
+    },
+    {
+      "file": "captures/03-summer-cost.jpg",
+      "start_seconds": 15,
+      "duration_seconds": 6,
+      "sha256": "0ff0d15c19ef78d3164e538d9c258519828faa9b12717a29287d0808b1866ed3",
+      "image_codec": "mjpeg"
+    },
+    {
+      "file": "captures/04-winter.jpg",
+      "start_seconds": 21,
+      "duration_seconds": 8,
+      "sha256": "52e99ea7a400a1c3fda8546d8d48d073fcca2fdac08a3486d775aa4cc837151c",
+      "image_codec": "mjpeg"
+    },
+    {
+      "file": "captures/05-winter-cost.jpg",
+      "start_seconds": 29,
+      "duration_seconds": 6,
+      "sha256": "64df84eab9323db85e5fc8c3ad9495d787118ffceee80c5acb73f1d74e455039",
+      "image_codec": "mjpeg"
+    },
+    {
+      "file": "captures/06-change.jpg",
+      "start_seconds": 35,
+      "duration_seconds": 9,
+      "sha256": "cd1b59de511c7416295b807adaeda4a1e4b9b407fe8c52992e0917522e4abf5d",
+      "image_codec": "mjpeg"
+    }
+  ],
+  "output": {
+    "path": "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+    "sha256": "d36af7028c11b581de77cef890a2967ef14f188f1c915e7f0d27142f00b16da6",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "1320"
+        }
+      ],
+      "format": {
+        "duration": "44.000000",
+        "size": "6545580"
+      }
+    }
+  },
+  "adapter_sha256": "68cbf1185792b99ae51b08661d38d416395e8870bc2de838fa7460f83ade5b3c",
+  "compositor_sha256": "99113f5a313f583925f86e6bd15fbdd0b26d70775a4d7b28c44e74db1b432309",
+  "commands": [
+    [
+      "ffmpeg",
+      "-v",
+      "warning",
+      "-nostdin",
+      "-n",
+      "-protocol_whitelist",
+      "file,pipe,fd",
+      "-f",
+      "concat",
+      "-safe",
+      "0",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/sequence.ffconcat",
+      "-vf",
+      "scale=1920:1080:flags=lanczos,fps=30,format=yuv420p",
+      "-filter_threads",
+      "1",
+      "-frames:v",
+      "1320",
+      "-an",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "medium",
+      "-crf",
+      "17",
+      "-threads",
+      "2",
+      "-movflags",
+      "+faststart",
+      "-map_metadata",
+      "-1",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/screenshot-master.mp4"
+    ],
+    [
+      "/Users/kixem/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/scripts/export_bridgeclip_showcase.py",
+      "--source",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final-Source/render/screenshot-master.mp4",
+      "--output",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "--bridgeclip",
+      "/Volumes/CARMIX-WORK/AquaShift-build-preserved-2026-10-02/bridgeclip-src",
+      "--deps",
+      "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/showcase-bridgeclip/runtime/deps",
+      "--keep",
+      "0:44"
+    ],
+    [
+      "ffmpeg",
+      "-v",
+      "error",
+      "-xerror",
+      "-nostdin",
+      "-i",
+      "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/delivery/Aktina-Backup-Final.mp4",
+      "-f",
+      "null",
+      "-"
+    ]
+  ],
+  "presentation": "Six uncropped screenshots, readable holds and hard cuts; no synthetic cursor, overlays, voice, music or added branding.",
+  "verification": {
+    "full_decode": "passed",
+    "captures_unchanged": true,
+    "no_audio": true
+  }
+}

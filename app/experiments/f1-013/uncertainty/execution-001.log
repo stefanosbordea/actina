@@ -1,0 +1,8 @@
+test_missing_denominators_remain_undefined (test_paired.PairedTests.test_missing_denominators_remain_undefined) ... ok
+test_paired_identity_and_calendar_mass (test_paired.PairedTests.test_paired_identity_and_calendar_mass) ... ok
+test_pooled_counts_not_average_daily_ratios (test_paired.PairedTests.test_pooled_counts_not_average_daily_ratios) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.117s
+
+OK

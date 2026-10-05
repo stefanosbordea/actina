@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/nwp-alternative-001/fetch.py", line 115, in <module>
+    print(json.dumps(run(parser.parse_args().output),indent=2))
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/nwp-alternative-001/fetch.py", line 77, in run
+    data=json.loads(raw);hourly=inspect(data);times=hourly['time'];lookup={t:i for i,t in enumerate(times)}
+                                ~~~~~~~^^^^^^
+  File "/Users/kixem/Documents/Loucas-Stefanos-Workspace-2026-09-19/AquaShift/source/private/stefanos-2026-10-04/actina/app/experiments/nwp-alternative-001/fetch.py", line 54, in inspect
+    if any(v is not None and (type(v) not in (int,float) or not math.isfinite(v) or v<0 or (field==FIELDS[1] and v>100)) for v in values):raise ValueError('Invalid nonmissing value '+field)
+                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid nonmissing value cloud_cover_previous_day2

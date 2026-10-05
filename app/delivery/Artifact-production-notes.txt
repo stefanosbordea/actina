@@ -1,3 +1,10 @@
+HISTORICAL BUILD NOTES — SUPERSEDED DELIVERY
+
+These instructions reproduce the earlier AquaShift materials and retain their
+original filenames and settings. For current Aktina deliverables and remaining
+work, use ../README.md and ../handoff/DELIVERY-STATUS.md. The current silent
+walkthrough is Aktina-Backup-v2.mp4; its source is Aktina-Backup-v2-Source/.
+
 AQUASHIFT ARTIFACTS: EDITING AND REBUILDING
 
 Everyday editing

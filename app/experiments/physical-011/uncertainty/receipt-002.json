@@ -1,0 +1,16 @@
+{
+  "started_at_utc": "2026-10-04T10:48:10.290352+00:00",
+  "ended_at_utc": "2026-10-04T10:48:12.708622+00:00",
+  "exit_code": 0,
+  "wall_seconds": 2.4180736250127666,
+  "command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "app/experiments/physical-011/uncertainty/check.py"
+  ],
+  "sha256": {
+    "PROTOCOL.md": "cb41d17b89d39c8f27a8e681e90e18b9f480a1aeed4aeaccdcece1cd9594604b",
+    "check.py": "6d90c9f13788c8d3d9c6ce64bf82471e2a28b6e8f71ad90325cb270be6e58015",
+    "run-002.log": "165a1b61eb1b423455a576b26c3057c01b0514a67bfd4eb20999ce722090f133",
+    "result.json": "9a10b984a0553c054b1a3375577b2c4d45a3a8412f12b7b75514d66148d65fed"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-04T10:25:37.859634+00:00",
+  "completed_at_utc": "2026-10-04T10:25:51.800922+00:00",
+  "wall_seconds": 13.939812666998478,
+  "exit_code": 0,
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "check_invocation": "runpy.run_path('app/experiments/f1-009/review/check.py')['check']()",
+  "test_command": [
+    "/Volumes/CARMIX-WORK/AquaShift-video-2026-10-02/python-reference-environment/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "app/experiments/f1-009/review",
+    "-p",
+    "test_replay.py",
+    "-v"
+  ],
+  "test_exit_code": 0,
+  "test_count": 5,
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": 2,
+    "OMP_NUM_THREADS": 2,
+    "VECLIB_MAXIMUM_THREADS": 2
+  },
+  "original_files_unchanged": {
+    "app/experiments/f1-009/review/result.json": "03f3659b86c051884f7b81568303831d0347a7d12a1173819f16c94008b1d0c4",
+    "app/experiments/f1-009/review/execution-receipt.json": "d74916ca675481516ff8c073134800da28b947b0626a9172637daa431f414fbd",
+    "app/experiments/f1-009/review/check.log": "03f3659b86c051884f7b81568303831d0347a7d12a1173819f16c94008b1d0c4",
+    "app/experiments/f1-009/review/check-initial.py": "4083d7ce4ee61b3900486ca49daa877c3d8cabb180d0c8c02fb4091a7ae0274f",
+    "app/experiments/f1-009/run.py": "d93ef6556c4dc9807504a6571f78d1af78fbc4072ca46ab50a6351c7b58241a7",
+    "app/experiments/f1-009/bqn.py": "fc70f20304e9be1e0b1698a46f33bfa4336f91f6f21637c2cfe82687e88dafce",
+    "app/experiments/f1-009/PROTOCOL.md": "b266806d0e2eb83ee8d1bbd1c04982348ee84497dfb6b06ac384aad96393c6ed",
+    "app/experiments/f1-009/result/report.json": "942c41271790fe0c46676984b539a19410d74c70b6f14b517980fb19bbf4b237"
+  },
+  "checker_sha256": "a27f837b029722d3e63aa25f25d951f81054b5abd828493f6897001bd0674699",
+  "result_sha256": "c3e6c0cfccd67c33aeca84ed2665a49930a159acc3a304d898e7537986322fa7",
+  "test_log_sha256": "2fcaeb75356a91cc359bb5d77b1577b5ea5f92f702b3b26f34d2497e7f43e122"
+}

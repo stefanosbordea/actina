@@ -1,0 +1,83 @@
+{
+  "status": "VERIFIED_REFERENCE_JOIN",
+  "prepared_at_utc": "2026-10-04T09:51:19.830173+00:00",
+  "network_data_requests": 0,
+  "models_fitted": 0,
+  "scores_computed": 0,
+  "source_bytes_unchanged": true,
+  "raw_to_retained_csv_byte_identity": true,
+  "clock": "Fixed UTC+03 source labels; explicit UTC valid endpoints and preceding-hour intervals.",
+  "coverage": {
+    "all_feature_targets": {
+      "hours": 17832,
+      "available_hours": 17635,
+      "missing_hours": 197,
+      "first_valid_time_utc": "2024-09-15T21:00:00+00:00",
+      "last_valid_time_utc": "2026-09-28T20:00:00+00:00",
+      "missing_spans": [
+        {
+          "first_valid_time_utc": "2026-02-13T00:00:00+00:00",
+          "last_valid_time_utc": "2026-02-14T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-03-15T00:00:00+00:00",
+          "last_valid_time_utc": "2026-03-19T00:00:00+00:00",
+          "hours": 97
+        },
+        {
+          "first_valid_time_utc": "2026-03-31T00:00:00+00:00",
+          "last_valid_time_utc": "2026-04-01T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-07-01T00:00:00+00:00",
+          "last_valid_time_utc": "2026-07-02T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-07-20T00:00:00+00:00",
+          "last_valid_time_utc": "2026-07-21T00:00:00+00:00",
+          "hours": 25
+        }
+      ]
+    },
+    "validation_training": {
+      "hours": 10675,
+      "available_hours": 10675,
+      "missing_hours": 0,
+      "first_valid_time_utc": "2024-09-15T21:00:00+00:00",
+      "last_valid_time_utc": "2025-12-04T15:00:00+00:00",
+      "missing_spans": []
+    },
+    "test_training": {
+      "hours": 14241,
+      "available_hours": 14094,
+      "missing_hours": 147,
+      "first_valid_time_utc": "2024-09-15T21:00:00+00:00",
+      "last_valid_time_utc": "2026-05-02T05:00:00+00:00",
+      "missing_spans": [
+        {
+          "first_valid_time_utc": "2026-02-13T00:00:00+00:00",
+          "last_valid_time_utc": "2026-02-14T00:00:00+00:00",
+          "hours": 25
+        },
+        {
+          "first_valid_time_utc": "2026-03-15T00:00:00+00:00",
+          "last_valid_time_utc": "2026-03-19T00:00:00+00:00",
+          "hours": 97
+        },
+        {
+          "first_valid_time_utc": "2026-03-31T00:00:00+00:00",
+          "last_valid_time_utc": "2026-04-01T00:00:00+00:00",
+          "hours": 25
+        }
+      ]
+    }
+  },
+  "output_sha256": {
+    "provenance.json": "7a793ec710effc5a0998f343c3e9924476a8871f4c7c3f4dee27fbf9c334af16",
+    "joined-reference.csv": "23d2fa0170de78d701cd247a43aa30a460368c53afb25ddc9ec11cd71a1504c6",
+    "missing-reference.csv": "55788ee158f60ef87f005209591761935f24668e1b98c679aa754c7618d367fc"
+  }
+}
